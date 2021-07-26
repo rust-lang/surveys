@@ -2,6 +2,10 @@
 
 The following are questions we'd like to get answers to from the Rust 2021 survey *data*. While we may ask some of the questions directly to survey takers, the majority are not meant to be asked directly and will only be inferred through the answers to other questions.
 
+##  Trends
+
+It is important to watch year to year trends, so we must make sure that we have compatibility with previous years' questions.
+
 ## Demographics 
 
 While demographic information can be interesting on its own, it's even more interesting when used as a basis for cohort analysis.
@@ -25,6 +29,7 @@ While demographic information can be interesting on its own, it's even more inte
    * Is there something that they perceive about Rust that's preventing them from using the language?
 
 ## Learning Rust
+
 * How much effort do people need to put in to feel comfortable using Rust to solve a problem?
     * Note: we should avoid phrasing this in terms of calendar time since people learn at different paces.
 * How much easier is it for a certain programmers to learn Rust vs others:
@@ -39,21 +44,42 @@ While demographic information can be interesting on its own, it's even more inte
 * Which resources helped learners the most?
 
 ## Improving the language
-* Which language would you most likely want to interop with Rust?
 
-## Language Stability
+* Which language would you most likely want to interop with Rust?
+* What are people's frustrations with language, std.
+* What problems are you hitting? What problems haven't been solved yet?
+
+## Stability
+
 * How often does updating a compiler break people's code? How easy are breaking changes to deal with?
     * Care should be taken here to address how this changes if the user is using nightly vs stable.
 * How stable are people's dependencies?
     * We should not ask this in terms of number of 1.0 dependencies but rather how people perceive the stability of the dependencies they use.
     
 ## Using Rust
+
 * How long have people been using Rust?
     * We will want to qualify this perhaps ("as the main or one of the main programming languages you use").
 * How regularly do you use Rust?
     * Previously this was phrased in terms of time, but we might want to ask in relation to other languages the programmer uses: e.g., "more than any other language", "one of the top languages", etc.
+* Do users use any of the following specific kinds of coding? How often?
+    - Unsafe Rust
+    - Async Rust
+    - ...
+* What kind of development do you do?
+    - OSs
+    - Network
+    - Games
+    - User-facing Apps (GUI or console)
+    - Mobile apps
+    - Libraries supporting other users
+    - Compilers
+    - DBMS
+    - Other embedded
+    - ...
     
 ## Rust at school
+
 * Are students using Rust in their courses (if such a thing would make sense).
 
 ## Rust at work
@@ -61,7 +87,7 @@ While demographic information can be interesting on its own, it's even more inte
 We'll want to ensure we're only asking those for whom using a programming language at work even makes sense (i.e., they work in software).
 
 * What percentage of people are using Rust at work?
-* If not using Rust a work, what is preventing it's adoption? 
+* If not using Rust a work, what is preventing it's adoption? Or if it is used, preventing it being used in more places?
     * Rust was too intimidating, too hard to learn, or too complicated
         * Which parts?
     * Rust didn’t have the libraries I needed
@@ -84,6 +110,7 @@ We'll want to ensure we're only asking those for whom using a programming langua
     * We both want to know how large Rust projects at work are and what percentage of time people spend using Rust.
 
 ## Rust compiler 
+
 * What is the difference between which version of the compiler people use and which version they wish they were using (e.g., are some nightly users wishing they could just use stable?)
 * If people are using nightly, why?
     * Do all users even have a reason?
@@ -103,6 +130,7 @@ We'll want to ensure we're only asking those for whom using a programming langua
     
 
 ## Core tooling (cargo, rustdoc, etc.)
+
 * How often does each core tool break when upgraded?
 * Do you need to use nightly for any features of core tools? If so, which ones?
 * How aware are they of the documentation for these tools? (e.g., doc.rust-lang.org/rustdoc)
@@ -110,13 +138,16 @@ We'll want to ensure we're only asking those for whom using a programming langua
 
 
 ## Other Tools
+
 * Which editors/IDEs do people prefer to use
     * For those using a plugable text editor, which language server engine are they using (racer, RLS, rust-analyzer?)
-    * How happy are people with their experience?
+    * How happy are people with their experience? (Same question for core tools and compiler)
     * What are some areas which need the most improvement?
     * Which features do you have when working with other languages do you miss?
+* Which tools do you use? How often? (Tools include crates.io, rustdoc, Rustfmt, Clippy, ...)
 
 ## Platform Support
+
 * What platforms are people using to develop (i.e., dev machine) Rust?
     * Specifics: non-Windows 10, macOS m1 vs intel, docker vs native. We likely don't need to be too specific (e.g., Windows 7 vs 8 doesn't really matter)
 * How often are devs cross-compiling vs compiling for the host machine?
@@ -125,32 +156,46 @@ We'll want to ensure we're only asking those for whom using a programming langua
     * We should make sure this is very clearly distinct from the question above as it has caused confusion in the past. 
 
 ## New policies 
+
 * The compiler team would like to gauge community perception on an **opt-in** mechanism for users of the Rust compiler to optionally send information to the compiler team on certain compiler health metrics such as number of ICEs (internal compiler errors).
     * **IMPORTANT**: There is concern that merely asking a question like this could cause sufficient commotion within the community. We want to be sensitive to this, and ensure that no data will be collected without explicit user consent.
     * Re: ICEs, we could try figuring out if and how (or how often) people report ICEs
     
 ## Library support
+
 * How often do people not find a library they need for a project?
 * What domains is it particularly difficult to find good libraries for?
+* Which libraries are missing?
 
 ## Conferences
+
 * Preference of online, in-person, or mixed
 * If in conference is in-person, where would you prefer to travel?
 
 ## Open source 
+
 * How many people contribute to open source Rust projects and at what level?
 
+## Participation
+
+* How do users participate in the community? Do they participate at all? Do they attend real/virtual meetups, conferences. Use internals.r-l.o, users.r-l.o, Discord, Zulip, twitter, r/rust, read TWiR, ...
+* What blocks people from participating in the community or participating more (e.g., contributing to the project)
+
+
 ## The future
+
 * What do you perceive as the biggest opportunity for Rust in the next year?
 * What is most likely to prevent you from using Rust in the future? 
     * We want to gauge threats to Rust's future without requiring respondents to predict what is threatening the ecosystem in general.
     
 ## Rust news
+
 * How do people stay informed about what is happening in the Rust community?
 * Do people feel like they are able to keep as up-to-date as they would like to?
     * If not, what are some things that are hard to keep track of?
 
 ## Inclusivity
+
 * How welcoming does the Rust community feel to those underrepresented in tech?
 * What are some ways the Rust community feels less welcoming or easy to be a part of than other language communities?
 * If you do not have a background in low-level programming (perhaps in C or C++), how much does this impact how welcome or confident you feel in the Rust community?
