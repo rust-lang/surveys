@@ -11,9 +11,10 @@ We intend to start the survey design process by writing a design document. Start
 
 ## Requirement collection
 
-To ensure we meet the requirements of 'clients' of the survey (i.e., people who will consume the processed result data), we intend to ask the following groups of people for input (see [tracking issue](TODO)):
+To ensure we meet the requirements of 'clients' of the survey (i.e., people who will consume the processed result data), we intend to ask the following groups of people for input (see [tracking issue](https://github.com/rust-lang/surveys/issues/3)):
 
 * Core team
 * Foundation committee
-* Team leads
-* Some sub-team and WG leads (who?)
+* Rust project teams 
+* Leads of active sub-teams working groups
+* Select external teams that have shown interest in gaining insights through the survey
