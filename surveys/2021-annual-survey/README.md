@@ -2,7 +2,7 @@
 
 The 2021 edition of the annual survey.
 
-Discussion of the survey happens on [zulip](https://rust-lang.zulipchat.com/#narrow/stream/294169-t-community.2Frust-survey-2021)
+Discussion of the survey happens on [zulip](https://rust-lang.zulipchat.com/#narrow/stream/294169-t-community.2Frust-survey-2021).
 
 ## Tentative timeline
 
