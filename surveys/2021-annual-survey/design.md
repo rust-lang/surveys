@@ -2,7 +2,7 @@
 
 The following are questions we'd like to get answers to from the Rust 2021 survey *data*. While we may ask some of the questions directly to survey takers, the majority are not meant to be asked directly and will only be inferred through the answers to other questions.
 
-##  Trends
+##  Trends over time
 
 It is important to watch year to year trends, so we must make sure that we have compatibility with previous years' questions.
 
