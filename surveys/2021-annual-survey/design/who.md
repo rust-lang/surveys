@@ -1,8 +1,8 @@
 # Who is using Rust?
 
 At a high-level, there are two groups of information that we want to collect from respondents about who they are:
-* demographic information for cohort analysis
-* demographic information to better understand the overall shape of the community
+* demographic information for cohort analysis (i.e., demographic info on *survey respondents*)
+* demographic information to better understand the overall shape of the community (i.e., extrapolation on the demographic makeup of the Rust community as a whole)
 
 ## Cohort Analysis
 
@@ -33,7 +33,16 @@ Other demographic information can be collected just to better understand the sha
 
 The other demographic information includes:
 * Location
-* Preferred human language for technical communication 
+* Preferred human language for technical communication
+
+Other possible information we might consider collecting:
+* salary 
+* operating system preference
+* IDE preference
+* education level and CS specialization or not
+* gender 
+
+Demographic information can be personal, and we don't want to make survey respondents uncomfortable with the level of information being asked. When possible we should offer the respondent the possibilty to not give a response. 
 
 ## Why is the information useful?
 
