@@ -1,3 +1,4 @@
+## NOTE: This file is a scratchpad for ideas and will be removed soon
 # Themes
 
 ## Who is using Rust?
