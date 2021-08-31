@@ -15,6 +15,7 @@
 * Do people find the edition experience relatively uneventful?
 * Does Rust work well for the platform they are targeting (i.e., the compile target)?
 * Can people usually find the library their looking for? If not, what domains seemed to be the most underserved?
+* Questions which gauge attitudes to potential new features.
 
 Useful for implementers to know where to focus their work and for leadership to be aware of any major problems which need more resources.
 
