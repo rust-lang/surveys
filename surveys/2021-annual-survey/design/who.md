@@ -1,6 +1,7 @@
 # Who is using Rust?
 
 At a high-level, there are two groups of information that we want to collect from respondents about who they are:
+
 * demographic information for cohort analysis (i.e., demographic info on *survey respondents*)
 * demographic information to better understand the overall shape of the community (i.e., extrapolation on the demographic makeup of the Rust community as a whole)
 
@@ -32,20 +33,24 @@ The cohorts should include:
 Other demographic information can be collected just to better understand the shape of Rust community. While cohort analysis could also be performed based on these factors, we have a strong feeling that these indicators won't lead to interesting cohort analysis. Further investigation may prove this assumption to be incorrect however. 
 
 The other demographic information includes:
+
 * Location
 * Preferred human language for technical communication
 
 Other possible information we might consider collecting:
+
 * salary 
 * operating system preference
 * IDE preference
 * education level and CS specialization or not
 * gender 
 
-Demographic information can be personal, and we don't want to make survey respondents uncomfortable with the level of information being asked. When possible we should offer the respondent the possibilty to not give a response. 
+Demographic information can be personal, and we don't want to make survey respondents uncomfortable with the level of information being asked. When possible we should offer the respondent the possibility to not give a response. 
 
 ## Why is the information useful?
 
 As indicated above, demographic information paired with cohort analysis allows us to do analysis on subsets of the survey respondent population on various potentially interesting dimensions.
 
-In general, demographic information can also help lead to additional investigation if a particular subslice of the population is surprisingly over or under represented.
+For Rust leadership, demographic information can also help lead to additional investigation if a particular subslice of the population is surprisingly over or under represented.
+
+For Rust leadership and educators, knowing the demographics of the Rust community could be useful for targetting educational or marketing materials.

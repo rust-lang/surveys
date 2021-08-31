@@ -1,19 +1,26 @@
 # In what contexts is Rust used?
 
+We want to know where Rust is used. At the highest level that means:
 
-TODO: turn these notes in prose
-* Rust in Education
-  * Is Rust being used in education? 
-  * Is such usage growing over time? 
-  * What type of courses or educational activities are using Rust?
-* Rust at Work
-  * Is usage of Rust at work growing?
-  * What type of workloads are using Rust? (internal tooling, customer facing applications, etc.)
-  * What domains is Rust being used in?
-  * How reliant are companies on Rust (i.e., if Rust were to disappear, how impactful would that be on businesses?)
-    * Concretely, how much is Rust being used? Is it used as a primary or secondary language? 
-    * What percentage of developers in the company are using Rust and what percentage of time? 
-  * What prevents adoption of Rust at work?
-* Rust as an employable skill
-  * How hard is it to find a job in Rust? Does this change over time?
-  * How valuable do survey respondents view their Rust skills in the job market?
+* At work (including research, but excluding teaching),
+* in formal education,
+* for a hobby/fun/self-education,
+* other contexts?
+
+## At work
+
+We would like to know how many people are using Rust at work and what they are using it for. Furthermore, we would like to know how reliant companies are on Rust, or in other words how seriously companies are investing in Rust. Concrete data which could indicate this is the proportion of engineers using Rust, how much time is spent with Rust c.f. other languages or LoC of Rust being written c.f. other languages. More subjectively we could ask if Rust if a primary or first-class language (or still at the experimentation stage).
+
+We would like to know what Rust is used for (see also [purposes](./purposes.md)). Both the kin of product (internal tooling, customer facing applications, etc.) and the domain (operating systems, browsers, embedded, etc.).
+
+We would like to know what helps and hinders Rust adoption at work.
+
+Finally, we might like to know if respondents consider Rust to be an employable skill. This is intrinsically subjective, but could be useful data in conjunction with objective data such as analysis of job ads. We could also ask how hard it is to find a Rust job to understand supply and demand for Rust in the job market.
+
+This data is useful for Rust users, sponsors, and those considering using Rust at work.
+
+## In education
+
+We essentially want to know how widely Rust is being taught (or used in courses without being explicitly taught). We'd also like to know which courses, or other activities are using Rust.
+
+This is useful data for people considering learning (can I get support to learn Rust?) or using Rust (will we be able to recruit Rust engineers in the future?), and for Rust leadership to evaluate acceptance of the language in education.
