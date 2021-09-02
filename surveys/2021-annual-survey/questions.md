@@ -350,70 +350,213 @@ TODO ask about blockers for participation?
 
 ## Rust at work
 
-TODO see previous surveys
+> This section is largely in service of the [contexts](./design/contexts.md) design document.
 
-Are you using Rust at work
+### Are you using Rust at work
 
-- yes, >90% of my coding
-- yes, it's one of a number of languages I use and I use it regularly
-- yes, but I only use it occasionally
-- no, but it is likely in the future
-- no
+Select one:
+- Yes, for the majority of my coding
+- Yes, it's one of a number of languages I use and I use it regularly
+- Yes, but I only use it occasionally
+- No, but it is likely in the next year
+- No, I use other programming languages at work
+- Not applicable (i.e., I don't write software professionally, I am student, etc.)
 
+> **justification**
+>
+> We want to establish what percentage of those who could possibly use Rust in a professional setting
+> are using Rust in a professional setting. This is most interesting over time. 
+> Answers to this question should be combined with whether the respondent has ever used Rust.
+
+**TODO**: explain why the following questions are not asked
 Is Rust used in the company where you work?
 
-- yes by > 100 devs
-- yes < 100
-- yes < 50
-- yes < 20
-- yes < 10
-- yes < 5
+### To why extent is Rust currently being used by your company?
 
-How reliant on Rust is your company?
+Select one:
+- My company uses Rust for a large portion of production projects.
+- My company uses Rust for a small portion of production projects.
+- My company uses Rust only for non-production projects (e.g., tooling).
+- My company has actively experimented with Rust for use in production projects.
+- My company has actively experimented with Rust for use in non-production projects.
+- My company has seriously discussed but not experimented with using Rust.
+- My company has not seriously considered Rust for any use.
+- I am unsure whether my company has considered using or currently uses Rust.
+- I don't work for a company or my company does not develop software of any kind.
 
-- It's the companies main language tech
-- It's a large part
-- It's a small part
-- We're experimenting
-- No use
+> **justification**
+>
+> We want to establish how reliant companies are on Rust.
 
-And/or
+### In what technology domains is Rust used at your company?
 
-- Used in production across multiple projects
-- Used in production
-- Being actively developed
-- Experimented with
-- Being considered
+Select as many as apply:
+- backend application 
+- desktop application 
+- mobile application 
+- web application 
+- embedded application
+- other
 
-In what domains is Rust used at your company
+> **justification**
+>
+> We want to known roughly what technology stacks are being most often used.
+> 
+> **challenges**
+>
+> This can be ambiguous and hard to answer. For example, if you're building an operating 
+> system for a mobile phone, is that embedded, mobile, or something else.
+> We want to understand the "shape" of Rust usage, and this question only gets at that 
+> in one particular way.
 
-- server networking, desktop application, mobile application, web application, embedded, etc.
+### Do you or your company use Rust at work?
 
+Select one:
+- Yes, I work with Rust full time
+- Yes, I work with Rust part time
+- No, but my company uses Rust 
+- No
+- Not sure 
+- Not applicable 
 
+> **REMOVED**
+>
+> This question was removed from the survey, because it was not sufficient in gathering the information we wanted.
+
+### For programmers - what languages, other than Rust, do you use at work?
+
+Free form:
+
+> **REMOVED**
+>
+> While this might be an interesting question, there's not too much that is directly actionable from it.
+
+### Does your company plan to use Rust or evaluate Rust in the future?
+
+Select one:
+- Yes 
+- No
+- I don't know
+
+> **REMOVED**
+>
+> This data is better captured in other questions.
+
+### How could we make Rust more appealing to your company?
+
+Free form:
+
+> **REMOVED**
+>
+> This question is too vague and unlikely to yield any interesting answers.
+
+### How may developers at your company use Rust at work?
+
+- 1
+- 2-5
+- 6-10
+- 11-25
+- 25-100
+- More than 100
+- I don't know
+
+> **REMOVED**
+>
+> This question fails to consider companies with different sizes. One company with 100,000 developers
+> where more than 100 use Rust is different than a company with 110 developers. We can gauge the importance
+> of Rust to companies through more direct questions
+
+### Approximately how many total developers does your company employ?
+
+- under 10
+- 11-49
+- 50-99
+- 100-500
+- 100-500
+- 500-1,000
+- 1,000-10,000
+- 10,000-100,000
+- Over 100,000
+
+> This question is not that interesting on its own, but it can be used as a sort of co-hort for understanding how answers 
+> change depending on the size of the development effort at a company.
+>
+> Previously this question used "employees" instead of "developers". It is more appropriate for us to ask about the amount
+> of developers at a company vs. the amount of people employed in total.
+
+### If you summed up the size of all Rust projects at work, how big would it be?
+
+Select one:
+- Less than 1,000 lines
+- 1,000 to 10,000 lines
+- 10,000 to 100,000 lines
+- More than 100,000 lines
+- I don't know
+
+> **REMOVED**
+>
+> While this might be interesting, there's nothing generally actionable from this. We are curious if Rust is playing a bigger
+> role in professional settings over time, and this is better served by other questions.
+
+### Is your company planning on hiring Rust developers in the next year?
+
+Select one:
+- Yes
+- No
+- I don't know
+
+> **REMOVED**
+>
+> This question was likely meant to gauge if the appetite for Rust developers is growing. However,
+> hiring is a lagging indicator, and we can more easily tell if Rust is being used more or if it is 
+> getting easier to find Rust jobs from other questions.
+
+### What are some ways you or your company is using Rust at work?
+
+Free form:
+
+> **REMOVED**
+>
+> This question is extremely vague and has not really been useful in the past.
+
+### How could we make Rust more accepted at your company?
+
+Free form:
+
+> **REMOVED**
+>
+> This question is vague and has not really been useful in the past.
 
 ## Rust in education
 
-Are you taking a course which uses or teaches Rust, or have you in the past year, or are you enrolled for one in the coming year?
+> This section is largely in service of the [contexts](./design/contexts.md) design document.
 
-Where is the course or activity taught?
+### Are you taking a course or training which uses or teaches Rust, or have you in the past year, or are you enrolled for one in the coming year?
 
+Select one: 
+- Yes
+- No
+
+### Where is the course or activity taught?
+
+Select one: 
 - University or other tertiary institute
 - Bootcamp or other vocational-focussed educational institute
 - A short training course offered by your employer or a contracted third party
 
-TODO are the latter two sufficiently differentiated?
+> TODO are the latter two sufficiently differentiated?
 
-Which best describes your course or activity?
+### Which best describes your course or activity?
 
 - A programming course which only teaches Rust
 - A programming course which teaches Rust amongst other languages
-- An operating systems course which uses Rust with or without other languages
+- An computer science course (e.g., operating systems, algorithms, etc.) course which uses Rust with or without other languages
 - Other course which uses Rust
 - Individual project
 - Group project
 - Other activity
 
-Is Rust mandated for your course or activity, or did you choose it yourself?
+### Is Rust mandated for your course or activity, or did you choose it yourself?
 
 - Compulsory
 - Optional (but suggested in some way)
