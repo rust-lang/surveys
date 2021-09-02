@@ -2,6 +2,14 @@
 
 The survey platform we use is ???.
 
+## Functionality 
+
+An ideal survey platform has the following functionality:
+* One survey can consist of multiple translations
+* The data is aggregated across translations
+* Works in China 
+* Low cost and pay-as-you-go
+
 ## Survey Platform Assessments
 
 ### SurveyHero (surveyhero.com)
@@ -14,6 +22,7 @@ The survey platform we use is ???.
 * Native management of RTL text
 * Requires Business ($55/mo. Individual; $39/user/mo. Team [2 minimum])/Enterprise ($89/mo. Individual; $69/user/mo. Team) level subscription
   * Both for the translations and for the logic required for the Rust survey
+* As of 2021-09 works in China reliably (seemingly due to not being blocked and using Irish IP addresses which won't be mistaken for VPN IP addresses).
 
 ### SurveyMonkey (surveymonkey.com)
 
@@ -26,6 +35,7 @@ The survey platform we use is ???.
 * Requires Team Premier ($75/user/mo. w/ 3 user minimum & billed annually)
   * Both for translations & logic. 
   * 15,000 response max 
+* As of 2021-09 works in China somewhat reliably (might be less reliable than SurveyHero due to using Japanese and Hong Kong IP addresses which have been used by VPNs in the past).
 
 ### Qualtrics
 
