@@ -288,3 +288,57 @@ Is Rust mandated for your course or activity, or did you choose it yourself?
 - Optional (but suggested in some way)
 - Optional (completely driven by you)
 
+
+## Challenges and feedback
+
+### What do you feel are the biggest challenges or problems for the Rust project? What could we do to improve adoption?
+
+Free form
+
+> **REMOVED**
+>
+> Vague, not useful
+
+### What new things related to the Rust project are you most excited about in 20XX?
+
+Free form
+
+> **REMOVED**
+>
+> Vague, not useful
+
+### Anything else you'd like to tell us?
+
+Free form
+
+> **REMOVED**
+>
+> Vague, not useful
+
+## Contact information
+
+### Email address
+
+Free form
+
+> **REMOVED**
+>
+> We aren't going to contact anyone
+
+### What are the reasons you would like to be contacted?
+
+Select all that apply:
+
+> **REMOVED**
+>
+> We aren't going to contact anyone
+
+### If other, why would you like to be contacted?
+
+Free form
+
+> **REMOVED**
+>
+> We aren't going to contact anyone
+
+
