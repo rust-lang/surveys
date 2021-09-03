@@ -1,19 +1,138 @@
 # Survey questions
 
+### Do you use Rust?
+
+Select one:
+
+- Yes, I have used for Rust in the past three months
+- I have used Rust in the past, but not in the past three months
+- No, I have never used Rust
+
+> Rephrased answers slightly to be more precise.
+> TODO is three months the right amount of time
+> 
+> **justification**
+>
+> fundamental for cohort analysis
+
+## For previous Rust users
+
+### How long did you use Rust before you stopped?
+
+Select one:
+
+> **REMOVED**
+>
+> Not useful
+
+### How long ago did you stop using Rust:
+
+Select one:
+
+> **REMOVED**
+>
+> Not useful
+
+### Why did you stop using Rust?
+
+Select all that apply:
+
+- Rust didn't solve a problem for me
+- Rust was too intimidating, too hard to learn, or too complicated
+- Rust didn't have the libraries I need
+- Rust didn't have the tools I need
+- Rust didn't have good IDE support
+- Rust didn't support the platforms I need
+- Rust seemed too risky to use in production
+- My company doesn't use Rust
+- Switching to Rust slowed me down too much
+- I needed better interoperability between Rust and other languages
+- Other
+
+> **justification**
+>
+> Useful for understanding why people give up on Rust.
+
+### If you indicated a lack of support for platforms or architectures that you would like to target, which would those be?
+
+Free form.
+
+> **REMOVED**
+>
+> Vague, not useful
+
+### If you indicated a desire for increased interoperability, which of the following languages would you want to use with Rust?
+
+Select all that apply:
+
+> **REMOVED**
+>
+> Not useful
+
+### Please provide any additional details on why you stopped using Rust.
+
+Free form.
+
+> **REMOVED**
+>
+> Vague, not useful
+
+
+## For non-Rust users
+
+### I never used Rust because ...
+
+Select all that apply:
+
+- Rust doesn't solve a problem for me
+- Rust was too intimidating, too hard to learn, or too complicated
+- Rust doesn't have the libraries I need
+- Rust doesn't have the tools I need
+- Rust doesn't have good IDE support
+- Rust doesn't support the platforms I need
+- Rust seems too risky to use in production
+- I need better interoperability between Rust and other languages
+- My company doesn't use Rust
+- Switching to Rust would slow me down too much
+- I haven't learned Rust yet, but I want to
+- I haven't learned Rust yet, and I don't want to
+- Other
+
+> **justification**
+>
+> Useful for understanding why people don't use Rust without trying, even though they are interested enough to complete this survey.
+> TODO Given the strong bias in the sample, I'm not sure if this data is actually useful.
+
+### If you indicated a lack of support for platforms or architectures that you would like to target, which would those be?
+
+Free form.
+
+> **REMOVED**
+>
+> Vague, not useful
+
+### If you indicated a desire for increased interoperability, which of the following languages would you want to use with Rust?
+
+Select all that apply:
+
+> **REMOVED**
+>
+> Not useful
+
+### Please provide any additional details on why you never used Rust.
+
+Free form.
+
+> **REMOVED**
+>
+> Vague, not useful
+
+
 ## About you
 
 See [who](./design/who.md).
 
 The following are primarily for cohort analysis, secondarily for understanding the shape of the community.
-
-Are you a Rust user
-
-- I have used for Rust for any reason in the past three months
-- I have used Rust in the past, but not in the past three months
-- I have never used Rust
-
-TODO is three months the right amount of time
-TODO move to section about Rust?
 
 Do you identify with an underrepresented group in the technology industry?
 
