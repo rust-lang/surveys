@@ -289,6 +289,52 @@ Is Rust mandated for your course or activity, or did you choose it yourself?
 - Optional (completely driven by you)
 
 
+## Rust community
+
+### What resources do you use to keep up with the Rust ecosystem?
+
+Select all that apply:
+
+> **REMOVED**
+>
+> Integrated with 'How do you participate in the community' question
+
+
+## Rust conferences
+
+### Did you attend a Rust conference in the past year? If so, which ones?
+
+Free form
+
+> **REMOVED**
+>
+> Vague, not useful. Somewhat replaced by community participation question.
+
+### If you wanted to attend a Rust conference but couldn't, why not?
+
+Free form
+
+> **REMOVED**
+>
+> Vague, not useful.
+
+### If you are interested in attending a Rust conference, which of these regions would you travel to?
+
+Select all that apply
+
+> **REMOVED**
+>
+> Not useful.
+
+### Please provide more precise details about where you would travel to for a Rust conference.
+
+Free form
+
+> **REMOVED**
+>
+> Not useful.
+
+
 ## Challenges and feedback
 
 ### What do you feel are the biggest challenges or problems for the Rust project? What could we do to improve adoption?
