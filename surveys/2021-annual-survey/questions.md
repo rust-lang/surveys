@@ -4,7 +4,7 @@
 
 Select one:
 
-- Yes, I have used for Rust in the past three months
+- Yes, I have used Rust in the past three months
 - I have used Rust in the past, but not in the past three months
 - No, I have never used Rust
 
@@ -23,7 +23,9 @@ Select one:
 
 > **REMOVED**
 >
-> Not useful
+> Not useful. Possible uses I see are cohort analysis (did people who stopped quickly have different
+> reasons compared to those who took longer?), or tracking over time whether people spend longer
+> with Rust. However, I don't see either of these data being actionable.
 
 ### How long ago did you stop using Rust:
 
@@ -31,7 +33,7 @@ Select one:
 
 > **REMOVED**
 >
-> Not useful
+> Not useful, same reasoning as above.
 
 ### Why did you stop using Rust?
 
@@ -52,6 +54,9 @@ Select all that apply:
 > **justification**
 >
 > Useful for understanding why people give up on Rust.
+>
+> TODO should we update the answer list? I might merge the tools and IDE options, and reword
+> "Rust didn't solve a problem for me" to "I did not see any benefit to using Rust" or something similar.
 
 ### If you indicated a lack of support for platforms or architectures that you would like to target, which would those be?
 
@@ -59,7 +64,8 @@ Free form.
 
 > **REMOVED**
 >
-> Vague, not useful
+> Vague, not useful (platform support is primarily driven by supply rather than demand, there are
+> unlikely to be platforms which are unknown to us and in demand).
 
 ### If you indicated a desire for increased interoperability, which of the following languages would you want to use with Rust?
 
@@ -67,7 +73,7 @@ Select all that apply:
 
 > **REMOVED**
 >
-> Not useful
+> Not useful (support for language interop is community, rather than project, driven).
 
 ### Please provide any additional details on why you stopped using Rust.
 
@@ -75,7 +81,7 @@ Free form.
 
 > **REMOVED**
 >
-> Vague, not useful
+> Vague.
 
 
 ## For non-Rust users
@@ -109,7 +115,7 @@ Free form.
 
 > **REMOVED**
 >
-> Vague, not useful
+> Vague, not useful (see above).
 
 ### If you indicated a desire for increased interoperability, which of the following languages would you want to use with Rust?
 
@@ -117,7 +123,7 @@ Select all that apply:
 
 > **REMOVED**
 >
-> Not useful
+> Not useful (see above).
 
 ### Please provide any additional details on why you never used Rust.
 
@@ -125,7 +131,7 @@ Free form.
 
 > **REMOVED**
 >
-> Vague, not useful
+> Vague.
 
 
 ## About you
@@ -435,7 +441,7 @@ Free form
 
 > **REMOVED**
 >
-> Vague, not useful.
+> Vague. Given how unusual 2020/2021 have been, I don't think these answers will be useful.
 
 ### If you are interested in attending a Rust conference, which of these regions would you travel to?
 
@@ -443,7 +449,7 @@ Select all that apply
 
 > **REMOVED**
 >
-> Not useful.
+> Conference organisers tend to have a location in mind, rather than be looking for a location.
 
 ### Please provide more precise details about where you would travel to for a Rust conference.
 
@@ -451,7 +457,7 @@ Free form
 
 > **REMOVED**
 >
-> Not useful.
+> Not useful. The previous list is already very detailed.
 
 
 ## Challenges and feedback
@@ -462,7 +468,8 @@ Free form
 
 > **REMOVED**
 >
-> Vague, not useful
+> This is just collecting people's opinions, if we want those we are better off asking questions
+> people's specific experiences rather than asking them to 'armchair general' the Rust project.
 
 ### What new things related to the Rust project are you most excited about in 20XX?
 
@@ -470,7 +477,8 @@ Free form
 
 > **REMOVED**
 >
-> Vague, not useful
+> Vague, not useful (not actionable data; being excited about a feature is not good motivation
+> for it).
 
 ### Anything else you'd like to tell us?
 
@@ -478,7 +486,7 @@ Free form
 
 > **REMOVED**
 >
-> Vague, not useful
+> Vague
 
 ## Contact information
 
