@@ -470,6 +470,7 @@ Free form
 >
 > This is just collecting people's opinions, if we want those we are better off asking questions
 > people's specific experiences rather than asking them to 'armchair general' the Rust project.
+> See e.g., 'What is your biggest worry for the future of Rust?'
 
 ### What new things related to the Rust project are you most excited about in 20XX?
 
@@ -515,3 +516,38 @@ Free form
 > We aren't going to contact anyone
 
 
+## Your opinions about Rust
+
+> This is a new section. I think that there are some subjective questions which are worth asking
+> and I'm collecting them here. In the final survey, they may be better scattered amongst other
+> questions.
+
+### What is your biggest worry for the future of Rust?
+
+Select one:
+
+- Not enough usage in industry
+- Too much interest from industry leads to too much politics
+- Not enough users
+- Doesn't add a feature I want
+- Stagnation
+- Instability of the language
+- Superseded by an alternative
+- Becomes too complex
+- Not enough localization
+- Other
+
+> Alternative: could rephrase as a 'select all that apply' question
+>
+> **justification**
+>
+> Would be useful for leadership to understand the community's fears.
+
+> TODO Other possible questions for this section:
+> - Response to challenges (34 from 2020)
+> - upgrades breaking code (41, 42 from 2020)
+> - what is missing from the ecosystem (44 from 2020)
+> - do respondents consider Rust to be an employable skill (from contexts.md)
+> - stability - Do people feel that their code is being broken? (from experience.md)
+> - Is the perception of {compile times, binary size, artifact disk space (i.e., the target folder)} getting better or worse over time? (from experience.md)
+> - Perception of Rust's learning curve? Do people feel like Rust's learning curve is worth it? (from experience.md)
