@@ -10,7 +10,7 @@ Select one:
 
 > Rephrased answers slightly to be more precise.
 > TODO is three months the right amount of time
-> 
+>
 > **justification**
 >
 > fundamental for cohort analysis
@@ -27,7 +27,7 @@ Select one:
 > reasons compared to those who took longer?), or tracking over time whether people spend longer
 > with Rust. However, I don't see either of these data being actionable.
 
-### How long ago did you stop using Rust:
+### How long ago did you stop using Rust?
 
 Select one:
 
@@ -84,7 +84,7 @@ Free form.
 
 ## For non-Rust users
 
-### I never used Rust because ...
+### I never used Rust because...
 
 Select all that apply:
 
@@ -106,6 +106,7 @@ Select all that apply:
 >
 > Useful for understanding why people don't use Rust without trying, even though they are interested enough to complete this survey.
 > TODO Given the strong bias in the sample, I'm not sure if this data is actually useful.
+
 ### If you indicated a lack of support for platforms or architectures that you would like to target, which would those be?
 
 Free form.
@@ -120,6 +121,7 @@ Select all that apply:
 > **REMOVED**
 >
 > Not useful (see above).
+
 ### Please provide any additional details on why you never used Rust.
 
 Free form.
@@ -202,7 +204,6 @@ How long have you been programming (in any language, for fun, learning, work, an
 - < 5 years
 - < 10 year
 - > 10 years
-
 
 Which operating systems do you use regularly for software development (not just Rust)?
 
@@ -371,9 +372,10 @@ Select one:
 **TODO**: explain why the following questions are not asked
 Is Rust used in the company where you work?
 
-### To why extent is Rust currently being used by your company?
+### To what extent is Rust currently being used by your company?
 
 Select one:
+
 - My company uses Rust for a large portion of production projects.
 - My company uses Rust for a small portion of production projects.
 - My company uses Rust only for non-production projects (e.g., tooling).
@@ -391,10 +393,11 @@ Select one:
 ### In what technology domains is Rust used at your company?
 
 Select as many as apply:
-- backend application 
-- desktop application 
-- mobile application 
-- web application 
+
+- server-side application
+- desktop application
+- mobile application
+- web application
 - embedded application
 - other
 
@@ -404,20 +407,21 @@ Select as many as apply:
 > 
 > **challenges**
 >
-> This can be ambiguous and hard to answer. For example, if you're building an operating 
+> This can be ambiguous and hard to answer. For example, if you're building an operating
 > system for a mobile phone, is that embedded, mobile, or something else.
-> We want to understand the "shape" of Rust usage, and this question only gets at that 
+> We want to understand the "shape" of Rust usage, and this question only gets at that
 > in one particular way.
 
 ### Do you or your company use Rust at work?
 
 Select one:
+
 - Yes, I work with Rust full time
 - Yes, I work with Rust part time
-- No, but my company uses Rust 
+- No, but my company uses Rust
 - No
-- Not sure 
-- Not applicable 
+- Not sure
+- Not applicable
 
 > **REMOVED**
 >
@@ -434,6 +438,7 @@ Free form:
 ### Does your company plan to use Rust or evaluate Rust in the future?
 
 Select one:
+
 - Yes 
 - No
 - I don't know
@@ -450,7 +455,7 @@ Free form:
 >
 > This question is too vague and unlikely to yield any interesting answers.
 
-### How may developers at your company use Rust at work?
+### How many developers at your company use Rust at work?
 
 - 1
 - 2-5
@@ -472,11 +477,9 @@ Free form:
 - 11-49
 - 50-99
 - 100-500
-- 100-500
 - 500-1,000
 - 1,000-10,000
-- 10,000-100,000
-- Over 100,000
+- Over 10,000
 
 > This question is not that interesting on its own, but it can be used as a sort of co-hort for understanding how answers 
 > change depending on the size of the development effort at a company.
@@ -487,6 +490,7 @@ Free form:
 ### If you summed up the size of all Rust projects at work, how big would it be?
 
 Select one:
+
 - Less than 1,000 lines
 - 1,000 to 10,000 lines
 - 10,000 to 100,000 lines
@@ -501,15 +505,12 @@ Select one:
 ### Is your company planning on hiring Rust developers in the next year?
 
 Select one:
+
 - Yes
 - No
 - I don't know
 
-> **REMOVED**
->
-> This question was likely meant to gauge if the appetite for Rust developers is growing. However,
-> hiring is a lagging indicator, and we can more easily tell if Rust is being used more or if it is 
-> getting easier to find Rust jobs from other questions.
+> This question assess hiring sentiment. Although there is intrinsic uncertainty, it is easy to answer and forward looking.
 
 ### What are some ways you or your company is using Rust at work?
 
@@ -533,13 +534,15 @@ Free form:
 
 ### Are you taking a course or training which uses or teaches Rust, or have you in the past year, or are you enrolled for one in the coming year?
 
-Select one: 
+Select one:
+
 - Yes
 - No
 
 ### Where is the course or activity taught?
 
-Select one: 
+Select one:
+
 - University or other tertiary institute
 - Bootcamp or other vocational-focussed educational institute
 - A short training course offered by your employer or a contracted third party
@@ -559,9 +562,7 @@ Select one:
 ### Is Rust mandated for your course or activity, or did you choose it yourself?
 
 - Compulsory
-- Optional (but suggested in some way)
-- Optional (completely driven by you)
-
+- Optional
 
 ## Rust community
 
