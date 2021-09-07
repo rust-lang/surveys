@@ -1,19 +1,144 @@
 # Survey questions
 
+### Do you use Rust?
+
+Select one:
+
+- Yes, I have used Rust in the past three months
+- I have used Rust in the past, but not in the past three months
+- No, I have never used Rust
+
+> Rephrased answers slightly to be more precise.
+> TODO is three months the right amount of time
+> 
+> **justification**
+>
+> fundamental for cohort analysis
+
+## For previous Rust users
+
+### How long did you use Rust before you stopped?
+
+Select one:
+
+> **REMOVED**
+>
+> Not useful. Possible uses I see are cohort analysis (did people who stopped quickly have different
+> reasons compared to those who took longer?), or tracking over time whether people spend longer
+> with Rust. However, I don't see either of these data being actionable.
+
+### How long ago did you stop using Rust:
+
+Select one:
+
+> **REMOVED**
+>
+> Not useful, same reasoning as above.
+
+### Why did you stop using Rust?
+
+Select all that apply:
+
+- Rust didn't solve a problem for me
+- Rust was too intimidating, too hard to learn, or too complicated
+- Rust didn't have the libraries I need
+- Rust didn't have the tools I need
+- Rust didn't have good IDE support
+- Rust didn't support the platforms I need
+- Rust seemed too risky to use in production
+- My company doesn't use Rust
+- Switching to Rust slowed me down too much
+- I needed better interoperability between Rust and other languages
+- Other
+
+> **justification**
+>
+> Useful for understanding why people give up on Rust.
+>
+> TODO should we update the answer list? I might merge the tools and IDE options, and reword
+> "Rust didn't solve a problem for me" to "I did not see any benefit to using Rust" or something similar.
+
+### If you indicated a lack of support for platforms or architectures that you would like to target, which would those be?
+
+Free form.
+
+> **REMOVED**
+>
+> Vague, not useful (platform support is primarily driven by supply rather than demand, there are
+> unlikely to be platforms which are unknown to us and in demand).
+
+### If you indicated a desire for increased interoperability, which of the following languages would you want to use with Rust?
+
+Select all that apply:
+
+> **REMOVED**
+>
+> Not useful (support for language interop is community, rather than project, driven).
+
+### Please provide any additional details on why you stopped using Rust.
+
+Free form.
+
+> **REMOVED**
+>
+> Vague.
+
+
+## For non-Rust users
+
+### I never used Rust because ...
+
+Select all that apply:
+
+- Rust doesn't solve a problem for me
+- Rust was too intimidating, too hard to learn, or too complicated
+- Rust doesn't have the libraries I need
+- Rust doesn't have the tools I need
+- Rust doesn't have good IDE support
+- Rust doesn't support the platforms I need
+- Rust seems too risky to use in production
+- I need better interoperability between Rust and other languages
+- My company doesn't use Rust
+- Switching to Rust would slow me down too much
+- I haven't learned Rust yet, but I want to
+- I haven't learned Rust yet, and I don't want to
+- Other
+
+> **justification**
+>
+> Useful for understanding why people don't use Rust without trying, even though they are interested enough to complete this survey.
+> TODO Given the strong bias in the sample, I'm not sure if this data is actually useful.
+
+### If you indicated a lack of support for platforms or architectures that you would like to target, which would those be?
+
+Free form.
+
+> **REMOVED**
+>
+> Vague, not useful (see above).
+
+### If you indicated a desire for increased interoperability, which of the following languages would you want to use with Rust?
+
+Select all that apply:
+
+> **REMOVED**
+>
+> Not useful (see above).
+
+### Please provide any additional details on why you never used Rust.
+
+Free form.
+
+> **REMOVED**
+>
+> Vague.
+
+
 ## About you
 
 See [who](./design/who.md).
 
 The following are primarily for cohort analysis, secondarily for understanding the shape of the community.
-
-Are you a Rust user
-
-- I have used for Rust for any reason in the past three months
-- I have used Rust in the past, but not in the past three months
-- I have never used Rust
-
-TODO is three months the right amount of time
-TODO move to section about Rust?
 
 Do you identify with an underrepresented group in the technology industry?
 
@@ -288,3 +413,141 @@ Is Rust mandated for your course or activity, or did you choose it yourself?
 - Optional (but suggested in some way)
 - Optional (completely driven by you)
 
+
+## Rust community
+
+### What resources do you use to keep up with the Rust ecosystem?
+
+Select all that apply:
+
+> **REMOVED**
+>
+> Integrated with 'How do you participate in the community' question
+
+
+## Rust conferences
+
+### Did you attend a Rust conference in the past year? If so, which ones?
+
+Free form
+
+> **REMOVED**
+>
+> Vague, not useful. Somewhat replaced by community participation question.
+
+### If you wanted to attend a Rust conference but couldn't, why not?
+
+Free form
+
+> **REMOVED**
+>
+> Vague. Given how unusual 2020/2021 have been, I don't think these answers will be useful.
+
+### If you are interested in attending a Rust conference, which of these regions would you travel to?
+
+Select all that apply
+
+> **REMOVED**
+>
+> Conference organisers tend to have a location in mind, rather than be looking for a location.
+
+### Please provide more precise details about where you would travel to for a Rust conference.
+
+Free form
+
+> **REMOVED**
+>
+> Not useful. The previous list is already very detailed.
+
+
+## Challenges and feedback
+
+### What do you feel are the biggest challenges or problems for the Rust project? What could we do to improve adoption?
+
+Free form
+
+> **REMOVED**
+>
+> This is just collecting people's opinions, if we want those we are better off asking questions
+> people's specific experiences rather than asking them to 'armchair general' the Rust project.
+> See e.g., 'What is your biggest worry for the future of Rust?'
+
+### What new things related to the Rust project are you most excited about in 20XX?
+
+Free form
+
+> **REMOVED**
+>
+> Vague, not useful (not actionable data; being excited about a feature is not good motivation
+> for it).
+
+### Anything else you'd like to tell us?
+
+Free form
+
+> **REMOVED**
+>
+> Vague
+
+## Contact information
+
+### Email address
+
+Free form
+
+> **REMOVED**
+>
+> We aren't going to contact anyone
+
+### What are the reasons you would like to be contacted?
+
+Select all that apply:
+
+> **REMOVED**
+>
+> We aren't going to contact anyone
+
+### If other, why would you like to be contacted?
+
+Free form
+
+> **REMOVED**
+>
+> We aren't going to contact anyone
+
+
+## Your opinions about Rust
+
+> This is a new section. I think that there are some subjective questions which are worth asking
+> and I'm collecting them here. In the final survey, they may be better scattered amongst other
+> questions.
+
+### What is your biggest worry for the future of Rust?
+
+Select one:
+
+- Not enough usage in industry
+- Too much interest from industry leads to too much politics
+- Not enough users
+- Doesn't add a feature I want
+- Stagnation
+- Instability of the language
+- Superseded by an alternative
+- Becomes too complex
+- Not enough localization
+- Other
+
+> Alternative: could rephrase as a 'select all that apply' question
+>
+> **justification**
+>
+> Would be useful for leadership to understand the community's fears.
+
+> TODO Other possible questions for this section:
+> - Response to challenges (34 from 2020)
+> - upgrades breaking code (41, 42 from 2020)
+> - what is missing from the ecosystem (44 from 2020)
+> - do respondents consider Rust to be an employable skill (from contexts.md)
+> - stability - Do people feel that their code is being broken? (from experience.md)
+> - Is the perception of {compile times, binary size, artifact disk space (i.e., the target folder)} getting better or worse over time? (from experience.md)
+> - Perception of Rust's learning curve? Do people feel like Rust's learning curve is worth it? (from experience.md)
