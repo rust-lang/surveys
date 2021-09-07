@@ -49,7 +49,7 @@ Select all that apply:
 - My company doesn't use Rust
 - Switching to Rust slowed me down too much
 - I needed better interoperability between Rust and other languages
-- Other
+- Other [open response]
 
 > **justification**
 >
@@ -82,6 +82,27 @@ Free form.
 >
 > Vague.
 
+
+### As you have indicated that you're no longer using Rust, what prompted you to participate in this survey?
+
+Select all that apply: 
+
+- I plan to return to using Rust in the future.
+- I consider myself part of the Rust Community.
+- Specifically to provide feedback on WHY I stopped using Rust.
+- Curiosity.
+- Other [open response]
+
+> **ADDED**
+> 
+> Useful in understanding why non-users contribute; 
+> depth of Rust community connection; 
+> likelihood of returning to Rust
+
+>**SURVEY FLOW**
+>
+>Skip to ##About You section
+
 ## For non-Rust users
 
 ### I never used Rust because...
@@ -107,6 +128,22 @@ Select all that apply:
 > Useful for understanding why people don't use Rust without trying, even though they are interested enough to complete this survey.
 > TODO Given the strong bias in the sample, I'm not sure if this data is actually useful.
 
+### As you have indicated that you have not used Rust, what prompted you to participate in this survey?
+
+Select all that apply: 
+
+- I plan to use Rust in the future.
+- I consider myself part of the Rust Community.
+- Specifically to provide feedback on WHY I do not use Rust.
+- Curiosity.
+- Other [open response]
+
+> **ADDED**
+> 
+> Useful in understanding why non-users contribute; 
+> depth of Rust community connection; 
+> likelihood of returning to Rust
+
 ### If you indicated a lack of support for platforms or architectures that you would like to target, which would those be?
 
 Free form.
@@ -130,148 +167,27 @@ Free form.
 >
 > Vague.
 
-## About you
+>**SURVEY FLOW**
+>
+>Skip to ##About You section
 
-See [who](./design/who.md).
-
-The following are primarily for cohort analysis, secondarily for understanding the shape of the community.
-
-Do you identify with an underrepresented group in the technology industry?
-
-- yes
-- no
-- I prefer not to say (could just be an optional question)
-
-TODO should we ask which group?  - Can be a follow-up question that only appears to those who select "Yes"
-TODO Identify common/relevant underrepresented group categories (and include an open response)
-
-Are you a full- or part-time student?
-
-- yes
-- no
-
-TODO Does it matter in what field? Do we want a follow-up question like in employment?
-
-Are you employed full- or part-time (including paid internships)?
-
-- yes, in tech
-- yes, in finance
-- yes, in government
-- yes, in education
-- yes, other
-- no
-
-If you are employed, which category best describes the domain in which *you* work?
-
-- server networking, desktop application, mobile application, web application, embedded, etc.
-
-TODO categories
-Todo Simplify the "Are you employed?" question - make yes/no. No need for categories there when we capture categories below.
-
-Do you write or design software in your work?
-
-- yes, primarily as an IC
-- I primarily manage others who do
-- no
-
-QUERY: What is an IC?
-
-FLOW Only for those who say yes/manage above
-If you write or design software, or manage others who do so, how long have you done so professionally?
-
-- <= 5 years
-- 5 - 10 years
-- 10 - 15 years
-- 15 - 20 years
-- > 20 years
-
-Excluding Rust, which programming languages are you experienced with (TODO define level of experience)
-
-- Assembly language of any variety
-- C or C++
-- Java, Go, Objective C, C#, or similar object-oriented language
-- Haskell, Lisp, ML, or other functional language
-- Scala, Swift, Kotlin, or other modern, strongly-typed language
-- Javascript, Ruby, Python, or other dynamically-typed language
-
-TODO are these the right categories?
-TODO Second questions for each asking level of experience?
-
-How long have you been programming (in any language, for fun, learning, work, any reason)?
-
-- < 1 year
-- < 3 years
-- < 5 years
-- < 10 year
-- > 10 years
-
-Which operating systems do you use regularly for software development (not just Rust)?
-
-- *nix
-- Windows
-- Mac OS
-- other
-
-Which operating systems do you develop software for?
-
-- *nix (desktop or server)
-- Windows
-- Mac OS
-- embedded platforms
-- other
-
-TODO should we ask if people develop for cross-platform vs a specific platform?
-
-
-Where do you live?
-
-- North America
-- Central America
-- South America
-- Europe
-- Middle East
-- Africa
-- West, central, or south Asia
-- east or south-east Asia
-- Australasia or the pacific
-
-TODO are these the categories we care about? Do we want to separate China from east asia given the distinct communities?
-Note: We could use Survey Language as a proxy for separating China. This depends some on the purpose behind identifying this community and the level of accuracy needed. (Are we interested in location for future planning of events, or to identify culture/group trends?)
-
-Level of English (select all which apply)
-
-- Can have a technical conversation
-- Can understand most technical documentation
-- Can understand a technical talk (e.g., at a conference or meetup)
-- Some everyday English
-- None
-
-What is your preferred language for technical communication
-
-- English
-- Chinese
-- Hindi
-- Spanish
-- Russian
-- Japanese
-- Other
-
-TODO Should above Q be multiselection? "Languages"
-
-TODO other questions to understand the community
-  - ask community and core team, foundation
-TODO other questions for cohort analysis?
+> **Moved demographics later in survey for methodological reasons.**
+> **Some will be re-inserted where logical for controlling survy flow (skip-logic and contextual questions**
 
 ## Your Rust experience
 
 Which operating systems do you use regularly for Rust development?
 
+Select all that apply:
+
 - *nix
 - Windows
 - Mac OS
-- other
+- other [open response]
 
 Which operating systems do you develop Rust software for?
+
+Select all that apply:
 
 - *nix (desktop or server)
 - Windows
@@ -281,7 +197,9 @@ Which operating systems do you develop Rust software for?
 
 TODO should we ask if people develop for cross-platform vs a specific platform?
 
-Which tools do you use (at least once per month), either directly or in CI when doing Rust development
+Which tools do you use (at least once per month), either directly or in CI when doing Rust development?
+
+Select all that apply:
 
 - an IDE or editor with plugin doing more than syntax highlighting
 - debugger
@@ -294,6 +212,8 @@ Which tools do you use (at least once per month), either directly or in CI when 
 - code coverage
 - rustdoc
 
+> **Query** - should we expand out "CI"?**
+> **NOTE: Jasun stopped here 9/7**
 
 TODO lots more in this section:
 
@@ -701,3 +621,141 @@ Select one:
 > - stability - Do people feel that their code is being broken? (from experience.md)
 > - Is the perception of {compile times, binary size, artifact disk space (i.e., the target folder)} getting better or worse over time? (from experience.md)
 > - Perception of Rust's learning curve? Do people feel like Rust's learning curve is worth it? (from experience.md)
+
+## Demographics
+
+> For methodological purposes, the bulk of the demographics should be at the end of the survey (unless acting as filter/flow questions above)
+>  They're both easy to complete (beneficial at the end) and somewhat personal (but at this point folks are invested and we've built 'trust')
+>  Can also be problematica at start if we're asking all easy, personal questions and then get to the harder ones - easy to drop out.
+
+## About you
+
+See [who](./design/who.md).
+
+The following are primarily for cohort analysis, secondarily for understanding the shape of the community.
+
+Do you identify with an underrepresented group in the technology industry?
+
+- yes
+- no
+- I prefer not to say (could just be an optional question)
+
+TODO should we ask which group?  - Can be a follow-up question that only appears to those who select "Yes"
+TODO Identify common/relevant underrepresented group categories (and include an open response)
+
+Are you a full- or part-time student?
+
+- yes
+- no
+
+TODO Does it matter in what field? Do we want a follow-up question like in employment?
+
+Are you employed full- or part-time (including paid internships)?
+
+- yes, in tech
+- yes, in finance
+- yes, in government
+- yes, in education
+- yes, other
+- no
+
+If you are employed, which category best describes the domain in which *you* work?
+
+- server networking, desktop application, mobile application, web application, embedded, etc.
+
+TODO categories
+Todo Simplify the "Are you employed?" question - make yes/no. No need for categories there when we capture categories below.
+
+Do you write or design software in your work?
+
+- yes, primarily as an IC
+- I primarily manage others who do
+- no
+
+QUERY: What is an IC?
+
+FLOW Only for those who say yes/manage above
+If you write or design software, or manage others who do so, how long have you done so professionally?
+
+- <= 5 years
+- 5 - 10 years
+- 10 - 15 years
+- 15 - 20 years
+- > 20 years
+
+Excluding Rust, which programming languages are you experienced with (TODO define level of experience)
+
+- Assembly language of any variety
+- C or C++
+- Java, Go, Objective C, C#, or similar object-oriented language
+- Haskell, Lisp, ML, or other functional language
+- Scala, Swift, Kotlin, or other modern, strongly-typed language
+- Javascript, Ruby, Python, or other dynamically-typed language
+
+TODO are these the right categories?
+TODO Second questions for each asking level of experience?
+
+How long have you been programming (in any language, for fun, learning, work, any reason)?
+
+- < 1 year
+- < 3 years
+- < 5 years
+- < 10 year
+- > 10 years
+
+Which operating systems do you use regularly for software development (not just Rust)?
+
+- *nix
+- Windows
+- Mac OS
+- other
+
+Which operating systems do you develop software for?
+
+- *nix (desktop or server)
+- Windows
+- Mac OS
+- embedded platforms
+- other
+
+TODO should we ask if people develop for cross-platform vs a specific platform?
+
+
+Where do you live?
+
+- North America
+- Central America
+- South America
+- Europe
+- Middle East
+- Africa
+- West, central, or south Asia
+- east or south-east Asia
+- Australasia or the pacific
+
+TODO are these the categories we care about? Do we want to separate China from east asia given the distinct communities?
+Note: We could use Survey Language as a proxy for separating China. This depends some on the purpose behind identifying this community and the level of accuracy needed. (Are we interested in location for future planning of events, or to identify culture/group trends?)
+
+Level of English (select all which apply)
+
+- Can have a technical conversation
+- Can understand most technical documentation
+- Can understand a technical talk (e.g., at a conference or meetup)
+- Some everyday English
+- None
+
+What is your preferred language for technical communication
+
+- English
+- Chinese
+- Hindi
+- Spanish
+- Russian
+- Japanese
+- Other
+
+TODO Should above Q be multiselection? "Languages"
+
+TODO other questions to understand the community
+  - ask community and core team, foundation
+TODO other questions for cohort analysis?
