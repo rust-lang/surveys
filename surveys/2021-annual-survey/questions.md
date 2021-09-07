@@ -78,6 +78,61 @@ Select all that apply:
 ### Please provide any additional details on why you stopped using Rust.
 
 Free form.
+> **REMOVED**
+>
+> Vague.
+
+## For non-Rust users
+
+### I never used Rust because ...
+
+Select all that apply:
+
+- Rust doesn't solve a problem for me
+- Rust was too intimidating, too hard to learn, or too complicated
+- Rust doesn't have the libraries I need
+- Rust doesn't have the tools I need
+- Rust doesn't have good IDE support
+- Rust doesn't support the platforms I need
+- Rust seems too risky to use in production
+- I need better interoperability between Rust and other languages
+- My company doesn't use Rust
+- Switching to Rust would slow me down too much
+- I haven't learned Rust yet, but I want to
+- I haven't learned Rust yet, and I don't want to
+- Other
+
+> **justification**
+>
+> Useful for understanding why people don't use Rust without trying, even though they are interested enough to complete this survey.
+> TODO Given the strong bias in the sample, I'm not sure if this data is actually useful.
+### If you indicated a lack of support for platforms or architectures that you would like to target, which would those be?
+
+Free form.
+
+> **REMOVED**
+>
+> Vague, not useful (see above).
+### If you indicated a desire for increased interoperability, which of the following languages would you want to use with Rust?
+
+Select all that apply:
+
+> **REMOVED**
+>
+> Not useful (see above).
+### Please provide any additional details on why you never used Rust.
+
+Free form.
+
+> **REMOVED**
+>
+> Vague.
+
+## About you
+
+See [who](./design/who.md).
+
+The following are primarily for cohort analysis, secondarily for understanding the shape of the community.
 
 Do you identify with an underrepresented group in the technology industry?
 
