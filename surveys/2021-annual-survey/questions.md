@@ -78,11 +78,9 @@ Select all that apply:
 ### Please provide any additional details on why you stopped using Rust.
 
 Free form.
-
 > **REMOVED**
 >
 > Vague.
-
 
 ## For non-Rust users
 
@@ -108,7 +106,6 @@ Select all that apply:
 >
 > Useful for understanding why people don't use Rust without trying, even though they are interested enough to complete this survey.
 > TODO Given the strong bias in the sample, I'm not sure if this data is actually useful.
-
 ### If you indicated a lack of support for platforms or architectures that you would like to target, which would those be?
 
 Free form.
@@ -116,7 +113,6 @@ Free form.
 > **REMOVED**
 >
 > Vague, not useful (see above).
-
 ### If you indicated a desire for increased interoperability, which of the following languages would you want to use with Rust?
 
 Select all that apply:
@@ -124,7 +120,6 @@ Select all that apply:
 > **REMOVED**
 >
 > Not useful (see above).
-
 ### Please provide any additional details on why you never used Rust.
 
 Free form.
@@ -132,7 +127,6 @@ Free form.
 > **REMOVED**
 >
 > Vague.
-
 
 ## About you
 
@@ -146,14 +140,17 @@ Do you identify with an underrepresented group in the technology industry?
 - no
 - I prefer not to say (could just be an optional question)
 
-TODO should we ask which group? 
+TODO should we ask which group?  - Can be a follow-up question that only appears to those who select "Yes"
+TODO Identify common/relevant underrepresented group categories (and include an open response)
 
 Are you a full- or part-time student?
 
 - yes
 - no
 
-Are you employed in full- or part-time work (including paid internships)?
+TODO Does it matter in what field? Do we want a follow-up question like in employment?
+
+Are you employed full- or part-time (including paid internships)?
 
 - yes, in tech
 - yes, in finance
@@ -162,11 +159,12 @@ Are you employed in full- or part-time work (including paid internships)?
 - yes, other
 - no
 
-If you are work, which category best describes the domain in which *you* work?
+If you are employed, which category best describes the domain in which *you* work?
 
 - server networking, desktop application, mobile application, web application, embedded, etc.
 
 TODO categories
+Todo Simplify the "Are you employed?" question - make yes/no. No need for categories there when we capture categories below.
 
 Do you write or design software in your work?
 
@@ -174,12 +172,15 @@ Do you write or design software in your work?
 - I primarily manage others who do
 - no
 
+QUERY: What is an IC?
+
+FLOW Only for those who say yes/manage above
 If you write or design software, or manage others who do so, how long have you done so professionally?
 
 - <= 5 years
-- <= 10 years
-- <= 15 years
-- <= 20 years
+- 5 - 10 years
+- 10 - 15 years
+- 15 - 20 years
 - > 20 years
 
 Excluding Rust, which programming languages are you experienced with (TODO define level of experience)
@@ -192,6 +193,7 @@ Excluding Rust, which programming languages are you experienced with (TODO defin
 - Javascript, Ruby, Python, or other dynamically-typed language
 
 TODO are these the right categories?
+TODO Second questions for each asking level of experience?
 
 How long have you been programming (in any language, for fun, learning, work, any reason)?
 
@@ -233,6 +235,7 @@ Where do you live?
 - Australasia or the pacific
 
 TODO are these the categories we care about? Do we want to separate China from east asia given the distinct communities?
+Note: We could use Survey Language as a proxy for separating China. This depends some on the purpose behind identifying this community and the level of accuracy needed. (Are we interested in location for future planning of events, or to identify culture/group trends?)
 
 Level of English (select all which apply)
 
@@ -240,6 +243,7 @@ Level of English (select all which apply)
 - Can understand most technical documentation
 - Can understand a technical talk (e.g., at a conference or meetup)
 - Some everyday English
+- None
 
 What is your preferred language for technical communication
 
@@ -250,6 +254,8 @@ What is your preferred language for technical communication
 - Russian
 - Japanese
 - Other
+
+TODO Should above Q be multiselection? "Languages"
 
 TODO other questions to understand the community
   - ask community and core team, foundation
