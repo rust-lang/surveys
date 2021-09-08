@@ -1,5 +1,7 @@
 # Survey questions
 
+## Rust Usage
+
 ### Do you use Rust?
 
 Select one:
@@ -8,12 +10,14 @@ Select one:
 - I have used Rust in the past, but not in the past three months
 - No, I have never used Rust
 
-> Rephrased answers slightly to be more precise.
-> TODO is three months the right amount of time
->
 > **justification**
+> Fundamental for cohort analysis
 >
-> fundamental for cohort analysis
+> **changes**
+> Rephrased answers slightly to be more precise.
+>
+> **TODOs**
+> Is three months the right amount of time?
 
 ## For previous Rust users
 
@@ -23,9 +27,9 @@ Select one:
 
 > **REMOVED**
 >
-> Not useful. Possible uses I see are cohort analysis (did people who stopped quickly have different
+> While possible uses include cohort analysis (did people who stopped quickly have different
 > reasons compared to those who took longer?), or tracking over time whether people spend longer
-> with Rust. However, I don't see either of these data being actionable.
+> with Rust, neither of these data are actionable.
 
 ### How long ago did you stop using Rust?
 
@@ -39,24 +43,22 @@ Select one:
 
 Select all that apply:
 
-- Rust didn't solve a problem for me
+- I did not see any benefit to using Rust
 - Rust was too intimidating, too hard to learn, or too complicated
 - Rust didn't have the libraries I need
 - Rust didn't have the tools I need
-- Rust didn't have good IDE support
+- Rust didn't have good enough IDE or editor support
 - Rust didn't support the platforms I need
 - Rust seemed too risky to use in production
 - My company doesn't use Rust
-- Switching to Rust slowed me down too much
+- Switching to Rust made me less productive
 - I needed better interoperability between Rust and other languages
 - Other [open response]
 
 > **justification**
->
 > Useful for understanding why people give up on Rust.
 >
-> TODO should we update the answer list? I might merge the tools and IDE options, and reword
-> "Rust didn't solve a problem for me" to "I did not see any benefit to using Rust" or something similar.
+> TODO should we update the answer list? I might merge the tools and IDE options
 
 ### If you indicated a lack of support for platforms or architectures that you would like to target, which would those be?
 
@@ -78,14 +80,14 @@ Select all that apply:
 ### Please provide any additional details on why you stopped using Rust.
 
 Free form.
+
 > **REMOVED**
 >
 > Vague.
 
-
 ### As you have indicated that you're no longer using Rust, what prompted you to participate in this survey?
 
-Select all that apply: 
+Select all that apply:
 
 - I plan to return to using Rust in the future.
 - I consider myself part of the Rust Community.
@@ -95,13 +97,13 @@ Select all that apply:
 
 > **ADDED**
 > 
-> Useful in understanding why non-users contribute; 
-> depth of Rust community connection; 
+> Useful in understanding why non-users contribute;
+> depth of Rust community connection;
 > likelihood of returning to Rust
 
->**SURVEY FLOW**
+> **SURVEY FLOW**
 >
->Skip to ##About You section
+> Skip to ##About You section
 
 ## For non-Rust users
 
@@ -109,16 +111,16 @@ Select all that apply:
 
 Select all that apply:
 
-- Rust doesn't solve a problem for me
+- I did not see any benefit to using Rust
 - Rust was too intimidating, too hard to learn, or too complicated
 - Rust doesn't have the libraries I need
 - Rust doesn't have the tools I need
-- Rust doesn't have good IDE support
+- Rust doesn't have good enough IDE or editor support
 - Rust doesn't support the platforms I need
 - Rust seems too risky to use in production
 - I need better interoperability between Rust and other languages
 - My company doesn't use Rust
-- Switching to Rust would slow me down too much
+- Switching to Rust would make me less productive
 - I haven't learned Rust yet, but I want to
 - I haven't learned Rust yet, and I don't want to
 - Other
@@ -130,7 +132,7 @@ Select all that apply:
 
 ### As you have indicated that you have not used Rust, what prompted you to participate in this survey?
 
-Select all that apply: 
+Select all that apply:
 
 - I plan to use Rust in the future.
 - I consider myself part of the Rust Community.
@@ -139,9 +141,9 @@ Select all that apply:
 - Other [open response]
 
 > **ADDED**
-> 
-> Useful in understanding why non-users contribute; 
-> depth of Rust community connection; 
+>
+> Useful in understanding why non-users contribute;
+> depth of Rust community connection;
 > likelihood of returning to Rust
 
 ### If you indicated a lack of support for platforms or architectures that you would like to target, which would those be?
@@ -150,7 +152,8 @@ Free form.
 
 > **REMOVED**
 >
-> Vague, not useful (see above).
+> Vague, not useful (see same question for former Rust users).
+
 ### If you indicated a desire for increased interoperability, which of the following languages would you want to use with Rust?
 
 Select all that apply:
@@ -167,25 +170,23 @@ Free form.
 >
 > Vague.
 
->**SURVEY FLOW**
+> **SURVEY FLOW**
 >
->Skip to ##About You section
-
-> **Moved demographics later in survey for methodological reasons.**
-> **Some will be re-inserted where logical for controlling survy flow (skip-logic and contextual questions**
+> Skip to `## About You` section
 
 ## Your Rust experience
 
-Which operating systems do you use regularly for Rust development?
+### Which operating systems do you use regularly for Rust development as your dev machine?
 
 Select all that apply:
 
 - *nix
 - Windows
+- Windows (Windows Subsystem for Linux)
 - Mac OS
 - other [open response]
 
-Which operating systems do you develop Rust software for?
+### Which operating systems do you develop Rust software for?
 
 Select all that apply:
 
@@ -195,15 +196,14 @@ Select all that apply:
 - embedded platforms
 - other
 
-TODO should we ask if people develop for cross-platform vs a specific platform?
+> TODO should we ask if people develop for cross-platform vs a specific platform?
 
-Which tools do you use (at least once per month), either directly or in CI when doing Rust development?
+### Which tools do you use (at least once per month), either directly or in CI when doing Rust development?
 
 Select all that apply:
 
 - an IDE or editor with plugin doing more than syntax highlighting
 - debugger
-- println debugging
 - profiler
 - clippy
 - rustfmt
@@ -212,32 +212,30 @@ Select all that apply:
 - code coverage
 - rustdoc
 
-> **Query** - should we expand out "CI"?**
 > **NOTE: Jasun stopped here 9/7**
 
-TODO lots more in this section:
+> TODO lots more in this section:
+> 
+> * Stability of the language
+>   * Do people feel that their code is being broken?
+>   * How often and what is the severity of this breakage?
+>   * In general, do people feel like Rust's stability guarantees are upheld?
+>   * How often do people *need* to reach for nightly for the compiler or core tooling?
+> * The Rust compiler as a productive tool
+>   * Is the perception of {compile times, binary size, artifact disk space (i.e., the target folder)} getting better or worse over time?
+> * What are "core tools" for users (i.e., they are an indispensable part of the Rust programming experience?)
+> * How is the IDE experience with Rust?
+> * How reliable is tooling and how happy are people in general with the user experience?
+> * Do people find the edition experience relatively uneventful?
+> * Does Rust work well for the platform they are targeting (i.e., the compile target)?
+> * Can people usually find the library their looking for? If not, what domains seemed to be the most underserved?
+> * Questions which gauge attitudes to potential new features.
 
-* Stability of the language
-  * Do people feel that their code is being broken?
-  * How often and what is the severity of this breakage?
-  * In general, do people feel like Rust's stability guarantees are upheld?
-  * How often do people *need* to reach for nightly for the compiler or core tooling?
-* The Rust compiler as a productive tool
-  * Is the perception of {compile times, binary size, artifact disk space (i.e., the target folder)} getting better or worse over time?
-* What are "core tools" for users (i.e., they are an indispensable part of the Rust programming experience?)
-* How is the IDE experience with Rust?
-* How reliable is tooling and how happy are people in general with the user experience?
-* Do people find the edition experience relatively uneventful?
-* Does Rust work well for the platform they are targeting (i.e., the compile target)?
-* Can people usually find the library their looking for? If not, what domains seemed to be the most underserved?
-* Questions which gauge attitudes to potential new features.
+### Which of the following apply to you:
 
-
-Which of the following apply to you (TODO possibly multiple questions for past month, past year, ever, + would you like to do ):
-
-- I have contributed (in any way) to a crate published on crates.io TODO separate issues from PRs/other productive stuff?
+- I have contributed (in any way) to a crate published on crates.io
 - I am maintainer of a Rust project outside of the core project
-- I have contributed (in any way) to a core Rust project (part of the rust-lang GH org)
+- I have contributed (in any way) to a core Rust project (part of the rust-lang GitHub org)
 - I'm a member of a Rust team or WG
 - I've read the Rust blog
 - I've read TWiR
@@ -246,7 +244,13 @@ Which of the following apply to you (TODO possibly multiple questions for past m
 - Attended a meetup (including virtual)
 - participated in a private Rust community (e.g., work Slack, private messages)
 
-Have you tried but failed to complete any of the following?
+> **justification**
+> We'd like to get a picture of _how_ people participate in the Rust community
+>
+> TODO separate issue management, docs, etc. from code contribution?
+> TODO possibly multiple questions for past month, past year, ever, + would you like to do 
+
+### Have you tried but failed to complete any of the following?
 
 - GH issue (Rust)
 - GH PR (Rust)
@@ -255,19 +259,21 @@ Have you tried but failed to complete any of the following?
 - discuss Rust on GH rust-lang org/Zulip/internals/Discord
 - publish a crate
 
-How welcome do you feel when interacting with the Rust community in the following ways? (1/2/3/NA?) TODO in the last year
+> TODO this question seems confusing as "failing" might be hard to interpret- shall we reword it?
+>
+> How welcome do you feel when interacting with the Rust community in the following ways? (1/2/3/NA?) TODO in the last year
+>
+> - other social media (twitter, facebook, other sites 'outside' core Rust, e.g., r/programming, HN - TODO one or two answers)
+> - rust-lang GH
+> - other GH Rust project
+> - Zulip/internals/Discord
+> - users/stack overflow
+> - r/rust
+> - Rust conferences
+> - Local Rust events, e.g., meetups
 
-- other social media (twitter, facebook, other sites 'outside' core Rust, e.g., r/programming, HN - TODO one or two answers)
-- rust-lang GH
-- other GH Rust project
-- Zulip/internals/Discord
-- users/stack overflow
-- r/rust
-- Rust conferences
-- Local Rust events, e.g., meetups
-
-TODO anything more objective like asking about particular incidents or kinds of incidents?
-TODO ask about blockers for participation?
+> TODO anything more objective like asking about particular incidents or kinds of incidents?
+> TODO ask about blockers for participation?
 
 ## Rust at work
 
@@ -276,6 +282,7 @@ TODO ask about blockers for participation?
 ### Are you using Rust at work
 
 Select one:
+
 - Yes, for the majority of my coding
 - Yes, it's one of a number of languages I use and I use it regularly
 - Yes, but I only use it occasionally
@@ -289,8 +296,8 @@ Select one:
 > are using Rust in a professional setting. This is most interesting over time. 
 > Answers to this question should be combined with whether the respondent has ever used Rust.
 
-**TODO**: explain why the following questions are not asked
-Is Rust used in the company where you work?
+> **TODO**: explain why the following questions are not asked
+> Is Rust used in the company where you work?
 
 ### To what extent is Rust currently being used by your company?
 
@@ -324,7 +331,7 @@ Select as many as apply:
 > **justification**
 >
 > We want to known roughly what technology stacks are being most often used.
-> 
+>
 > **challenges**
 >
 > This can be ambiguous and hard to answer. For example, if you're building an operating
@@ -359,7 +366,7 @@ Free form:
 
 Select one:
 
-- Yes 
+- Yes
 - No
 - I don't know
 
@@ -494,7 +501,6 @@ Select all that apply:
 >
 > Integrated with 'How do you participate in the community' question
 
-
 ## Rust conferences
 
 ### Did you attend a Rust conference in the past year? If so, which ones?
@@ -528,7 +534,6 @@ Free form
 > **REMOVED**
 >
 > Not useful. The previous list is already very detailed.
-
 
 ## Challenges and feedback
 
@@ -585,7 +590,6 @@ Free form
 >
 > We aren't going to contact anyone
 
-
 ## Your opinions about Rust
 
 > This is a new section. I think that there are some subjective questions which are worth asking
@@ -625,8 +629,8 @@ Select one:
 ## Demographics
 
 > For methodological purposes, the bulk of the demographics should be at the end of the survey (unless acting as filter/flow questions above)
->  They're both easy to complete (beneficial at the end) and somewhat personal (but at this point folks are invested and we've built 'trust')
->  Can also be problematica at start if we're asking all easy, personal questions and then get to the harder ones - easy to drop out.
+> They're both easy to complete (beneficial at the end) and somewhat personal (but at this point folks are invested and we've built 'trust')
+> Can also be problematic at start if we're asking all easy, personal questions and then get to the harder ones - easy to drop out.
 
 ## About you
 
@@ -634,23 +638,28 @@ See [who](./design/who.md).
 
 The following are primarily for cohort analysis, secondarily for understanding the shape of the community.
 
-Do you identify with an underrepresented group in the technology industry?
+### Do you identify with an underrepresented group in the technology industry?
+
+Select one:
 
 - yes
 - no
-- I prefer not to say (could just be an optional question)
+- I prefer not to say
 
-TODO should we ask which group?  - Can be a follow-up question that only appears to those who select "Yes"
-TODO Identify common/relevant underrepresented group categories (and include an open response)
+> TODO could just be an optional question instead of having "I prefer not to say"
+> TODO should we ask which group?  - Can be a follow-up question that only appears to those who select "Yes"
+> TODO Identify common/relevant underrepresented group categories (and include an open response)
 
-Are you a full- or part-time student?
+### Are you a full- or part-time student?
+
+Select one:
 
 - yes
 - no
 
-TODO Does it matter in what field? Do we want a follow-up question like in employment?
+> TODO Does it matter in what field? Do we want a follow-up question like in employment?
 
-Are you employed full- or part-time (including paid internships)?
+### Are you employed full- or part-time (including paid internships)?
 
 - yes, in tech
 - yes, in finance
@@ -659,23 +668,24 @@ Are you employed full- or part-time (including paid internships)?
 - yes, other
 - no
 
-If you are employed, which category best describes the domain in which *you* work?
+### If you are employed, which category best describes the domain in which *you* work?
 
-- server networking, desktop application, mobile application, web application, embedded, etc.
+> TODO - server networking, desktop application, mobile application, web application, embedded, etc.
 
-TODO categories
-Todo Simplify the "Are you employed?" question - make yes/no. No need for categories there when we capture categories below.
+> TODO categories
+> Todo Simplify the "Are you employed?" question - make yes/no. No need for categories there when we capture categories below.
 
-Do you write or design software in your work?
+### Do you write or design software in your work?
 
 - yes, primarily as an IC
 - I primarily manage others who do
 - no
 
-QUERY: What is an IC?
+> QUERY: What is an IC?
+> 
+> FLOW Only for those who say yes/manage above
 
-FLOW Only for those who say yes/manage above
-If you write or design software, or manage others who do so, how long have you done so professionally?
+### If you write or design software, or manage others who do so, how long have you done so professionally?
 
 - <= 5 years
 - 5 - 10 years
@@ -683,7 +693,7 @@ If you write or design software, or manage others who do so, how long have you d
 - 15 - 20 years
 - > 20 years
 
-Excluding Rust, which programming languages are you experienced with (TODO define level of experience)
+### Excluding Rust, which programming languages are you experienced with (TODO define level of experience)
 
 - Assembly language of any variety
 - C or C++
@@ -692,10 +702,10 @@ Excluding Rust, which programming languages are you experienced with (TODO defin
 - Scala, Swift, Kotlin, or other modern, strongly-typed language
 - Javascript, Ruby, Python, or other dynamically-typed language
 
-TODO are these the right categories?
-TODO Second questions for each asking level of experience?
+> TODO are these the right categories?
+> TODO Second questions for each asking level of experience?
 
-How long have you been programming (in any language, for fun, learning, work, any reason)?
+### How long have you been programming (in any language, for fun, learning, work, any reason)?
 
 - < 1 year
 - < 3 years
@@ -703,14 +713,14 @@ How long have you been programming (in any language, for fun, learning, work, an
 - < 10 year
 - > 10 years
 
-Which operating systems do you use regularly for software development (not just Rust)?
+### Which operating systems do you use regularly for software development (not just Rust)?
 
 - *nix
 - Windows
 - Mac OS
 - other
 
-Which operating systems do you develop software for?
+### Which operating systems do you develop software for?
 
 - *nix (desktop or server)
 - Windows
@@ -718,10 +728,9 @@ Which operating systems do you develop software for?
 - embedded platforms
 - other
 
-TODO should we ask if people develop for cross-platform vs a specific platform?
+> TODO should we ask if people develop for cross-platform vs a specific platform?
 
-
-Where do you live?
+### Where do you live?
 
 - North America
 - Central America
@@ -733,10 +742,10 @@ Where do you live?
 - east or south-east Asia
 - Australasia or the pacific
 
-TODO are these the categories we care about? Do we want to separate China from east asia given the distinct communities?
-Note: We could use Survey Language as a proxy for separating China. This depends some on the purpose behind identifying this community and the level of accuracy needed. (Are we interested in location for future planning of events, or to identify culture/group trends?)
+> TODO are these the categories we care about? Do we want to separate China from east asia given the distinct communities?
+> Note: We could use Survey Language as a proxy for separating China. This depends some on the purpose behind identifying this community and the level of accuracy needed. (Are we interested in location for future planning of events, or to identify culture/group trends?)
 
-Level of English (select all which apply)
+### Level of English (select all which apply)
 
 - Can have a technical conversation
 - Can understand most technical documentation
@@ -744,7 +753,7 @@ Level of English (select all which apply)
 - Some everyday English
 - None
 
-What is your preferred language for technical communication
+### What is your preferred language for technical communication
 
 - English
 - Chinese
@@ -754,8 +763,8 @@ What is your preferred language for technical communication
 - Japanese
 - Other
 
-TODO Should above Q be multiselection? "Languages"
-
-TODO other questions to understand the community
-  - ask community and core team, foundation
-TODO other questions for cohort analysis?
+> TODO Should above Q be multiselection? "Languages"
+>
+> TODO other questions to understand the community
+> - ask community and core team, foundation
+> TODO other questions for cohort analysis?
