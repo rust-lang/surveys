@@ -30,6 +30,10 @@ the following questions:
       sustainable development
         * What got them involved?
         * What has got them to stay?
+    * Insufficient review capacity
+        * How much review capacity do teams have?
+        * How much review load do teams have?
+        * What is a sustainable review burden? (based on available time, volunteer vs full time maintainers)
 
 Parts of these questions will be interesting and useful to different audiences
 of the survey results. The following are audiences we explicitly want to keep
