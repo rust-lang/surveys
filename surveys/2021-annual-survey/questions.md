@@ -1,5 +1,22 @@
 # Survey questions
 
+Whether or not you use Rust Programming Language <https://rust-lang.org> today, we want to hear from you!
+
+The Rust Community Team has created this survey to help us gauge how we're doing, what can be improved, and how we can best engage with all of you as we move forward.
+
+This is your chance to have a say in the development priorities for Rust.
+
+Unless you choose to enter your email, your answers will be anonymous. Any personal data you submit as a part of this survey will be handled in accordance with our policy as described in our Frequently Asked Questions:
+
+https://github.com/rust-community/team/wiki/State-of-the-Rust-Language-Community-Survey-FAQ
+
+We estimate it will take about 10-15 minutes to complete.
+
+> TODOs:
+>
+> - Improve the data collection policy
+> - Ensure that the survey actually takes 10-15 minutes
+
 ## Rust Usage
 
 ### Do you use Rust?
@@ -7,16 +24,19 @@
 Select one:
 
 - Yes, I have used Rust in the past three months
-- I have used Rust in the past, but not in the past three months
-- No, I have never used Rust
+- I have used or tried to use Rust in the past, but not in the past three months
+- No, I have never used or tried to use Rust
 
 > **justification**
+>
 > Fundamental for cohort analysis
 >
 > **changes**
+>
 > Rephrased answers slightly to be more precise.
 >
 > **TODOs**
+>
 > Is three months the right amount of time?
 
 ## For previous Rust users
@@ -56,9 +76,12 @@ Select all that apply:
 - Other [open response]
 
 > **justification**
+>
 > Useful for understanding why people give up on Rust.
 >
-> TODO should we update the answer list? I might merge the tools and IDE options
+> **TODO**
+>
+> - What will we actually do with this information once we know it?
 
 ### If you indicated a lack of support for platforms or architectures that you would like to target, which would those be?
 
@@ -96,14 +119,14 @@ Select all that apply:
 - Other [open response]
 
 > **ADDED**
-> 
+>
+> **justification**
+>
 > Useful in understanding why non-users contribute;
-> depth of Rust community connection;
-> likelihood of returning to Rust
 
 > **SURVEY FLOW**
 >
-> Skip to ##About You section
+> Skip to `## About You` section
 
 ## For non-Rust users
 
@@ -128,7 +151,8 @@ Select all that apply:
 > **justification**
 >
 > Useful for understanding why people don't use Rust without trying, even though they are interested enough to complete this survey.
-> TODO Given the strong bias in the sample, I'm not sure if this data is actually useful.
+>
+> **TODO** Given the strong bias in the sample, I'm not sure if this data is actually useful.
 
 ### As you have indicated that you have not used Rust, what prompted you to participate in this survey?
 
@@ -142,9 +166,7 @@ Select all that apply:
 
 > **ADDED**
 >
-> Useful in understanding why non-users contribute;
-> depth of Rust community connection;
-> likelihood of returning to Rust
+> Useful in understanding why non-users contribute to the survey
 
 ### If you indicated a lack of support for platforms or architectures that you would like to target, which would those be?
 
@@ -175,6 +197,138 @@ Free form.
 > Skip to `## About You` section
 
 ## Your Rust experience
+
+### How did you get interested in Rust?
+
+Free form.
+
+> **REMOVED**
+>
+> Not actionable.
+
+### How long have you been working with Rust?
+
+Select one:
+
+> **REMOVED**
+>
+> While we very much want to understand where someone is in their Rust journey,
+> asking in terms of calendar time can give very skewed answers.
+>
+> **TODO** we should create a question that more appropriately captures how "experienced"
+> of a Rustacean the respondent is. This can be difficult to gauge since people with
+> different backgrounds will reach different stages of their Rust career at
+> different times.
+
+### How long did it take you to become productive in Rust?
+
+Select one:
+
+> **REMOVED**
+>
+> This is also very prone to wildly different interpretations that make doing something
+> with the data very difficult. The goal of this question was likely to get a gauge for
+> how difficult the Rust learning curve is, but this question does a very poor job
+> capturing that.
+
+### How many other programming languages did you know when you originally started working with Rust?
+
+Select one:
+
+> **REMOVED**
+>
+> Gauging knowledge through "number of programming languages" and how that relates to
+> how easy it is to learn Rust is likely impossible.
+
+### If you summed the size of all Rust projects you work on, how big would it be?
+
+Select one:
+
+- Less than 1,000 lines
+- 1,000 to 10,000 lines
+- 10,000 to 100,000 lines
+- 100,000 to 1,000,000 lines
+- more than 1,000,000 lines
+
+> **REMOVED**
+>
+> This information is not actionable
+
+### How often do you use Rust?
+
+Select one:
+
+- Daily or nearly so
+- Weekly or nearly so
+- Monthly or nearly so
+- Rarely
+
+> **justification**
+>
+> This can be useful demographic information as a proxy for how "important" Rust is
+> in someone's technical life.
+>
+> **TODO** should we rephrase this to not rely on calendar time? Someone who only
+> programs once a week but always uses Rust is different than someone who programs
+> daily but only uses Rust once a week
+
+### How would you rate your Rust expertise?
+
+Select 1-10 (1 = Beginner, 10 = Expert)
+
+> TODO: I'm unsure about this question
+
+### How would you rate the learning of these concepts?
+
+Options: Easy, Moderate, Tricky, Very Difficult, Still Don't Get it, N/A (haven't learned)
+
+Concepts: Enums, Modules, Ownership & Borrowing, Iterators, Traits, Generics and Trait Bounds, Lifetimes, Cargo, Macros, Unsafe, Async I/O, Pattern Matching, Collections, Closures, FFI, Concurrency
+
+> **TODO** this question usually makes great blog material, but it's really not actionable. Teachers of Rust generally have a good idea of what's difficult to teach, and Rust compiler devs have a good idea of what the papercuts are. Perhaps it should be removed.
+
+### I would use Rust more if...
+
+Select all that apply:
+
+- I did not see any benefit to using Rust
+- Rust was too intimidating, too hard to learn, or too complicated
+- Rust doesn't have the libraries I need
+- Rust doesn't have the tools I need
+- Rust doesn't have good enough IDE or editor support
+- Rust doesn't support the platforms I need
+- Rust seems too risky to use in production
+- I need better interoperability between Rust and other languages
+- My company doesn't use Rust
+- Switching to Rust would make me less productive
+- I haven't learned Rust yet, but I want to
+- I haven't learned Rust yet, and I don't want to
+- Other
+
+> **TODO** this question seems like it could be useful, but how?
+
+### If you indicated a desire for increased interoperability, which of the following languages would you want to use with Rust?
+
+- C
+- C++
+- C#
+- Clojure
+- Elm
+- Elixir
+- Erlang
+- Go
+- Haskell
+- Java
+- JavaScript
+- Objective-C
+- PHP
+- Python
+- Ruby
+- Scala
+- Swift
+
+> **justification**
+>
+> This question has led to surprising answers in the past that could help the lang team better prioritize features that make interop easier.
 
 ### Which operating systems do you use regularly for Rust development as your dev machine?
 
@@ -215,7 +369,7 @@ Select all that apply:
 > **NOTE: Jasun stopped here 9/7**
 
 > TODO lots more in this section:
-> 
+>
 > * Stability of the language
 >   * Do people feel that their code is being broken?
 >   * How often and what is the severity of this breakage?
@@ -687,6 +841,8 @@ Select one:
 
 ### If you write or design software, or manage others who do so, how long have you done so professionally?
 
+Select one:
+
 - <= 5 years
 - 5 - 10 years
 - 10 - 15 years
@@ -694,6 +850,8 @@ Select one:
 - > 20 years
 
 ### Excluding Rust, which programming languages are you experienced with (TODO define level of experience)
+
+Select all that apply:
 
 - Assembly language of any variety
 - C or C++
