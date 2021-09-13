@@ -219,6 +219,17 @@ Select one:
 > of a Rustacean the respondent is. This can be difficult to gauge since people with
 > different backgrounds will reach different stages of their Rust career at
 > different times.
+> 
+> **TODO** There are a few options for this: We can ask how experienced they believe they are (question currently below); 
+> how comfortable they are; how productive they feel; how fluent they are. 
+> Self-report questions like these are probably the most useful here, 
+> and including more than one will allow us to (potentially) combine them into a multi-item measure (more robust/accurate analysis).
+
+### How would you rate your Rust expertise?
+
+Select 1-10 (1 = Beginner, 10 = Expert)
+
+> TODO: I'm unsure about this question
 
 ### How long did it take you to become productive in Rust?
 
@@ -271,12 +282,22 @@ Select one:
 > **TODO** should we rephrase this to not rely on calendar time? Someone who only
 > programs once a week but always uses Rust is different than someone who programs
 > daily but only uses Rust once a week
+> 
+> **TODO** There are a few options on how to approach this. 
+> 
+> One is to add a reference period to the question:
+> e.g. In a typical week/month, how often do you use Rust?
+> Answers: numerical/time ranges
+> 
+> Another approach is to be more vague:
+> e.g. In a typical week/month, how often do you use Rust?
+> Answers: Always, Somtimes, Rarely, Never
+> 
+> Or we can be more open-ended:
+> e.g. In a typical week, approximately how many hours do you sepnd using Rust?
+> [Fill in number]
 
-### How would you rate your Rust expertise?
 
-Select 1-10 (1 = Beginner, 10 = Expert)
-
-> TODO: I'm unsure about this question
 
 ### How would you rate the learning of these concepts?
 
@@ -285,6 +306,8 @@ Options: Easy, Moderate, Tricky, Very Difficult, Still Don't Get it, N/A (haven'
 Concepts: Enums, Modules, Ownership & Borrowing, Iterators, Traits, Generics and Trait Bounds, Lifetimes, Cargo, Macros, Unsafe, Async I/O, Pattern Matching, Collections, Closures, FFI, Concurrency
 
 > **TODO** this question usually makes great blog material, but it's really not actionable. Teachers of Rust generally have a good idea of what's difficult to teach, and Rust compiler devs have a good idea of what the papercuts are. Perhaps it should be removed.
+> **Justification** Might not be directly applicable, but does provide verification of the perceptions of teachers/devs. 
+Plus, it demonstrates to users that you are interested in their perceptions of where the papercuts are
 
 ### I would use Rust more if...
 
@@ -340,6 +363,15 @@ Select all that apply:
 - Mac OS
 - other [open response]
 
+> TODO should we ask if people develop for cross-platform vs a specific platform?
+> **TODO** YES - see draft q below
+
+### Do you tend to develop for cross-platform or single platforms?
+
+- Cross-platform
+- Single platform
+- Both
+
 ### Which operating systems do you develop Rust software for?
 
 Select all that apply:
@@ -349,8 +381,6 @@ Select all that apply:
 - Mac OS
 - embedded platforms
 - other
-
-> TODO should we ask if people develop for cross-platform vs a specific platform?
 
 ### Which tools do you use (at least once per month), either directly or in CI when doing Rust development?
 
@@ -366,14 +396,21 @@ Select all that apply:
 - code coverage
 - rustdoc
 
-> **NOTE: Jasun stopped here 9/7**
-
 > TODO lots more in this section:
 >
 > * Stability of the language
+> ### How stable do you feel the Rust programming language is? (Could be scale, or could be assessed in relation to other languages)
+> 
 >   * Do people feel that their code is being broken?
+>   ### Has an update to the Rust language ever broken your code?
+>   ### Has an update to a Crate ever broken your code?
+>   
 >   * How often and what is the severity of this breakage?
+>   ### (Only if iindicated above) How often has your code been broken due to an update to the language/crate?
+>   
 >   * In general, do people feel like Rust's stability guarantees are upheld?
+>   ### Do your experiences with Rust meet your expectations of stability?
+>   
 >   * How often do people *need* to reach for nightly for the compiler or core tooling?
 > * The Rust compiler as a productive tool
 >   * Is the perception of {compile times, binary size, artifact disk space (i.e., the target folder)} getting better or worse over time?
@@ -402,7 +439,24 @@ Select all that apply:
 > We'd like to get a picture of _how_ people participate in the Rust community
 >
 > TODO separate issue management, docs, etc. from code contribution?
-> TODO possibly multiple questions for past month, past year, ever, + would you like to do 
+> 
+> TODO possibly multiple questions for past month, past year, ever, + would you like to do
+> POSSIBLE Approach below:
+
+> **Survey Flow Example** Following question would only appear if indicated "I have read the Rust blog."
+
+###Previously you indicated that you read the Rust blog. How often do you do so?
+
+- [frequency options]
+
+> **Survey Flow Example** Following question would only appear if indicated "I have not read the Rust blog."
+
+###Previously you indicated that you do not read the Rust blog. Why not?
+
+- I see no benefit
+- I don't have the time to do so
+- [Other options]
+
 
 ### Have you tried but failed to complete any of the following?
 
@@ -414,6 +468,13 @@ Select all that apply:
 - publish a crate
 
 > TODO this question seems confusing as "failing" might be hard to interpret- shall we reword it?
+> **Have you completed or tried to complete any of the following?**
+> 
+> **Follow-up: How difficult was it to complete [task]?**
+> 
+> **Justification** Captures not just those who tried and failed, but those who tried and succeeded.
+> Shows failure/difficulty rate compared to success rate.
+> Also overall engagement / attempted engagement in these ways.
 >
 > How welcome do you feel when interacting with the Rust community in the following ways? (1/2/3/NA?) TODO in the last year
 >
