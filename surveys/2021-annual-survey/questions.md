@@ -328,6 +328,8 @@ Select all that apply:
 - Other
 
 > **TODO** this question seems like it could be useful, but how?
+> **Justification** I think it's this question in combination with follow-up questions that really provides us with the insight. It's not just "I need better Interoperability" - it's "I need better interop with these languages.
+> This q provides the scope of the concern, while the follow-up provides the actionable. (The scope helps determine which actionable to prioritize.)
 
 ### If you indicated a desire for increased interoperability, which of the following languages would you want to use with Rust?
 
@@ -406,20 +408,49 @@ Select all that apply:
 >   ### Has an update to a Crate ever broken your code?
 >   
 >   * How often and what is the severity of this breakage?
->   ### (Only if iindicated above) How often has your code been broken due to an update to the language/crate?
+>   ### (Only if indicated above) How often has your code been broken due to an update to the language/crate?
+>   ### (Only if indicated above) When your code broke, how much effort was required to identify and repair the issue?
 >   
 >   * In general, do people feel like Rust's stability guarantees are upheld?
 >   ### Do your experiences with Rust meet your expectations of stability?
 >   
 >   * How often do people *need* to reach for nightly for the compiler or core tooling?
+>   
 > * The Rust compiler as a productive tool
 >   * Is the perception of {compile times, binary size, artifact disk space (i.e., the target folder)} getting better or worse over time?
+>   ### In your opinion, have the following aspects of Rust gotten better or worse over the past year?
+>                   Much better   Slightly Better  Remained the same  Slightly Worse   Much Worse
+>   - Compile Times
+>   
+>   - Binary Size
+>   
+>   - etc.
+>   
 > * What are "core tools" for users (i.e., they are an indispensable part of the Rust programming experience?)
+>  
+>  ###Please indicate how important (useful?) each of the following tools are when programming with Rust:
+>           Essential   Very Important  Somewhat Important  Not very important   Not important   Useless   I have no experience with this tool
+>           
+>   -[list of tools]
+>   
 > * How is the IDE experience with Rust?
-> * How reliable is tooling and how happy are people in general with the user experience?
+> * How reliable is tooling?
+> 
+> * How happy are people in general with the user experience?
+> **TODO** Are we looking at the user experience of Rust? Or the user experience with the Rust tools?
+> ###Overall, how happy/pleased are you with your Rust user experience?
+> 
 > * Do people find the edition experience relatively uneventful?
+> 
+> ###How difficult was the transition from Rust 2018 to Rust 2021?
+> 
+> ###How well does the implementation of editions work?
+> 
 > * Does Rust work well for the platform they are targeting (i.e., the compile target)?
-> * Can people usually find the library their looking for? If not, what domains seemed to be the most underserved?
+> * Can people usually find the library their looking for? 
+> > ###
+> If not, what domains seemed to be the most underserved?
+> 
 > * Questions which gauge attitudes to potential new features.
 
 ### Which of the following apply to you:
@@ -458,7 +489,7 @@ Select all that apply:
 - [Other options]
 
 
-### Have you tried but failed to complete any of the following?
+### Have you completed or tried to complete any of the following?
 
 - GH issue (Rust)
 - GH PR (Rust)
@@ -467,9 +498,7 @@ Select all that apply:
 - discuss Rust on GH rust-lang org/Zulip/internals/Discord
 - publish a crate
 
-> TODO this question seems confusing as "failing" might be hard to interpret- shall we reword it?
-> **Have you completed or tried to complete any of the following?**
-> 
+ 
 > **Follow-up: How difficult was it to complete [task]?**
 > 
 > **Justification** Captures not just those who tried and failed, but those who tried and succeeded.
@@ -488,7 +517,11 @@ Select all that apply:
 > - Local Rust events, e.g., meetups
 
 > TODO anything more objective like asking about particular incidents or kinds of incidents?
+> **Survey Flow** If they indicated feeling unwelcome above:
+> ###You indicated that you did not feel welcome in the Rust community. Are there any details about your experience that you would like to share with us?
+>
 > TODO ask about blockers for participation?
+>
 
 ## Rust at work
 
@@ -690,6 +723,7 @@ Select one:
 - A short training course offered by your employer or a contracted third party
 
 > TODO are the latter two sufficiently differentiated?
+> TODO Should there be something spcifically separating an online bootcamp/automated course from one taught by a person?
 
 ### Which best describes your course or activity?
 
@@ -932,22 +966,8 @@ Select all that apply:
 - < 10 year
 - > 10 years
 
-### Which operating systems do you use regularly for software development (not just Rust)?
+> Removed duplicate q's.
 
-- *nix
-- Windows
-- Mac OS
-- other
-
-### Which operating systems do you develop software for?
-
-- *nix (desktop or server)
-- Windows
-- Mac OS
-- embedded platforms
-- other
-
-> TODO should we ask if people develop for cross-platform vs a specific platform?
 
 ### Where do you live?
 
