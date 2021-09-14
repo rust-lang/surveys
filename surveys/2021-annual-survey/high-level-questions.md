@@ -121,6 +121,10 @@ We'll want to ensure we're only asking those for whom using a programming langua
     * Have compile times improved?
     * How long does your most complex project take to compile from scratch?
         * Do you use incremental compilation? If so, how long does this take?
+    * For the system you primarily compile Rust on, how many CPU threads do you
+      have? (Please count logical CPUs here, not cores or sockets.) To get this
+      number on Linux, run `nproc`; on macOS, run `sysctl -n hw.ncpu`; on
+      Windows, run `echo %NUMBER_OF_PROCESSORS%`.
     * Do compile times lead to a perceived drop in productivity?
     * How easy is it to improve particularly bad compile times?
     * Are bad compile times usually the case in large codebases or also in small ones?

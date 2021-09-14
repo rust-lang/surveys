@@ -366,6 +366,12 @@ Select all that apply:
 > TODO should we ask if people develop for cross-platform vs a specific platform?
 > **TODO** YES - see draft q below
 
+### On the primary machine you compile Rust code on, how many logical CPU threads do you have?
+
+Please count logical CPUs here, not cores or sockets. To get this number on
+Linux, run `nproc`; on macOS, run `sysctl -n hw.ncpu`; on Windows, run
+`echo %NUMBER_OF_PROCESSORS%`.
+
 ### Do you tend to develop for cross-platform or single platforms?
 
 - Cross-platform
