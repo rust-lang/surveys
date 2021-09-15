@@ -282,21 +282,20 @@ Select one:
 > **TODO** should we rephrase this to not rely on calendar time? Someone who only
 > programs once a week but always uses Rust is different than someone who programs
 > daily but only uses Rust once a week
-> 
+>
 > **TODO** There are a few options on how to approach this. 
-> 
+>
 > One is to add a reference period to the question:
 > e.g. In a typical week/month, how often do you use Rust?
 > Answers: numerical/time ranges
-> 
+>
 > Another approach is to be more vague:
 > e.g. In a typical week/month, how often do you use Rust?
 > Answers: Always, Somtimes, Rarely, Never
-> 
+>
 > Or we can be more open-ended:
 > e.g. In a typical week, approximately how many hours do you sepnd using Rust?
 > [Fill in number]
-
 
 
 ### How would you rate the learning of these concepts?
@@ -404,60 +403,150 @@ Select all that apply:
 - code coverage
 - rustdoc
 
-> TODO lots more in this section:
+### When I upgrade to a new **stable** version of the compiler...
+
+Select one:
+
+- I am confident my code will continue to compile and be idiomatic.
+- I am confident my code will continue to compile but it may be unidiomatic.
+- There's a chance my code may no longer compile.
+- I am confident my code is likely to break somehow.
+
+> *justification**
 >
-> * Stability of the language
-> ### How stable do you feel the Rust programming language is? (Could be scale, or could be assessed in relation to other languages)
-> 
->   * Do people feel that their code is being broken?
->   ### Has an update to the Rust language ever broken your code?
->   ### Has an update to a Crate ever broken your code?
->   
->   * How often and what is the severity of this breakage?
->   ### (Only if indicated above) How often has your code been broken due to an update to the language/crate?
->   ### (Only if indicated above) When your code broke, how much effort was required to identify and repair the issue?
->   
->   * In general, do people feel like Rust's stability guarantees are upheld?
->   ### Do your experiences with Rust meet your expectations of stability?
->   
->   * How often do people *need* to reach for nightly for the compiler or core tooling?
->   
-> * The Rust compiler as a productive tool
->   * Is the perception of {compile times, binary size, artifact disk space (i.e., the target folder)} getting better or worse over time?
->   ### In your opinion, have the following aspects of Rust gotten better or worse over the past year?
->                   Much better   Slightly Better  Remained the same  Slightly Worse   Much Worse
->   - Compile Times
->   
->   - Binary Size
->   
->   - etc.
->   
-> * What are "core tools" for users (i.e., they are an indispensable part of the Rust programming experience?)
->  
->  ###Please indicate how important (useful?) each of the following tools are when programming with Rust:
->           Essential   Very Important  Somewhat Important  Not very important   Not important   Useless   I have no experience with this tool
->           
->   -[list of tools]
->   
-> * How is the IDE experience with Rust?
-> * How reliable is tooling?
-> 
-> * How happy are people in general with the user experience?
-> **TODO** Are we looking at the user experience of Rust? Or the user experience with the Rust tools?
-> ###Overall, how happy/pleased are you with your Rust user experience?
-> 
-> * Do people find the edition experience relatively uneventful?
-> 
-> ###How difficult was the transition from Rust 2018 to Rust 2021?
-> 
-> ###How well does the implementation of editions work?
-> 
-> * Does Rust work well for the platform they are targeting (i.e., the compile target)?
-> * Can people usually find the library their looking for? 
-> > ###
-> If not, what domains seemed to be the most underserved?
-> 
-> * Questions which gauge attitudes to potential new features.
+> When want to get an impression of how stable the language feels.
+>
+> TODO: many times code stops compiling for reasons outside of the
+> Rust stability guarantee (e.g., a new warning is introduced and
+> the code uses `#![deny(warnings)]`). How can we capture that?
+
+### If your code has ever broken when upgrading to a new **stable** version of the compiler, how difficult was the upgrade?
+
+Select one:
+
+- Very difficult
+- Difficult
+- Easy enough
+- Trivial
+
+### When I upgrade to a new **nightly** version of the compiler...
+
+Select one:
+
+- I am confident my code will continue to compile and be idiomatic.
+- I am confident my code will continue to compile but it may be unidiomatic.
+- There's a chance my code may no longer compile.
+- I am confident my code is likely to break somehow.
+- I don't use nightly
+
+> *justification**
+>
+> When want to get an impression of how stable even the nightly compiler is.
+>
+> TODO: many times code stops compiling for reasons outside of the
+> Rust stability guarantee (e.g., a new warning is introduced and
+> the code uses `#![deny(warnings)]`). How can we capture that?
+
+### If your code has ever broken when upgrading to a new **nightly** version of the compiler, how difficult was the upgrade?
+
+Select one:
+
+- Very difficult
+- Difficult
+- Easy enough
+- Trivial
+- I don't use nightly
+
+### When I upgrade to a new minor version of a crate...
+
+Select one:
+
+- I am confident my code will continue to compile and be idiomatic.
+- I am confident my code will continue to compile but it may be unidiomatic.
+- There's a chance my code may no longer compile.
+- I am confident my code is likely to break somehow.
+
+> *justification**
+>
+> When want to get an impression of how stable crates tend to be.
+
+### Do you use nightly and if so why?
+
+Select one:
+
+- No
+- Yes, out of habit
+- Yes, for a particular language feature or set of language features I need
+- Yes, a dependency I use requires it
+
+### In your opinion, have the following aspects of Rust gotten better or worse over the past year?
+
+Options:
+
+- Much better
+- Better  
+- Remained the same  
+- Worse
+- Much Worse
+- Unsure
+
+Aspects:
+
+- Compile times
+- Binary size
+- The size of `target` folder
+- The number of internal compiler errors (ICEs)
+
+### Please indicate how vital to your workflow each of the following tools are when programming with Rust:
+
+Options:
+
+- Essential
+- Somewhat important
+- Not important
+- I have no experience with this tool
+
+Tools:
+
+- clippy
+- cargo
+- rustdoc
+- rustup
+- play.rust-lang.org
+- miri
+- rustfmt
+
+### Which editor or IDE setup do you use on a regular basis?
+
+Select all the apply:
+
+- VS Code with the rust-analyzer extension
+- VS Code with the rust extension (a.k.a rls)
+- VS Code without an extension for Rust
+- vim or neovim with rust-analyzer
+- vim or neovim with rls
+- vim or neovim without specific Rust support (beyond synatx highlighting)
+- IntelliJ Rust
+- Emacs
+- Sublime
+- Visual Studio
+- Xcode
+- Atom
+- CLion
+- Nano or Pico
+- Other
+
+### How would you rate Rust's IDE or editor experience?
+
+Select one:
+
+- World class!
+- Great
+- Good enough
+- Could be better
+- Terrible
+
+> TODO: how can we relate this back to other languages? Presumably C# devs might find Rust's editor experience poor but Ruby devs might like it
 
 ### Which of the following apply to you:
 
@@ -482,18 +571,17 @@ Select all that apply:
 
 > **Survey Flow Example** Following question would only appear if indicated "I have read the Rust blog."
 
-###Previously you indicated that you read the Rust blog. How often do you do so?
+### Previously you indicated that you read the Rust blog. How often do you do so?
 
 - [frequency options]
 
 > **Survey Flow Example** Following question would only appear if indicated "I have not read the Rust blog."
 
-###Previously you indicated that you do not read the Rust blog. Why not?
+### Previously you indicated that you do not read the Rust blog. Why not?
 
 - I see no benefit
 - I don't have the time to do so
 - [Other options]
-
 
 ### Have you completed or tried to complete any of the following?
 
@@ -504,9 +592,8 @@ Select all that apply:
 - discuss Rust on GH rust-lang org/Zulip/internals/Discord
 - publish a crate
 
- 
 > **Follow-up: How difficult was it to complete [task]?**
-> 
+>
 > **Justification** Captures not just those who tried and failed, but those who tried and succeeded.
 > Shows failure/difficulty rate compared to success rate.
 > Also overall engagement / attempted engagement in these ways.
@@ -527,7 +614,6 @@ Select all that apply:
 > ###You indicated that you did not feel welcome in the Rust community. Are there any details about your experience that you would like to share with us?
 >
 > TODO ask about blockers for participation?
->
 
 ## Rust at work
 
@@ -971,9 +1057,6 @@ Select all that apply:
 - < 5 years
 - < 10 year
 - > 10 years
-
-> Removed duplicate q's.
-
 
 ### Where do you live?
 
