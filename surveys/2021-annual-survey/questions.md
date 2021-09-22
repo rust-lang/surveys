@@ -23,9 +23,9 @@ We estimate it will take about 10-15 minutes to complete.
 
 Select one:
 
-- Yes, I have used Rust in the past three months [NEXT](#your-rust-experience)
-- I have used or tried to use Rust in the past, but not in the past three months [NEXT](#for-previous-rust-users)
-- No, I have never used or tried to use Rust [NEXT](#for-non-rust-users)
+- Yes, I have used Rust [NEXT](#your-rust-experience)
+- No, I don't use Rust, but I have in the past [NEXT](#for-previous-rust-users)
+- No, I have never used Rust [NEXT](#for-non-rust-users)
 
 > **justification**
 >
@@ -33,11 +33,7 @@ Select one:
 >
 > **changes**
 >
-> Rephrased answers slightly to be more precise.
->
-> **TODOs**
->
-> Is three months the right amount of time?
+> Rephrased answers slightly.
 
 ## For previous Rust users
 
