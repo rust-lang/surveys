@@ -71,7 +71,8 @@ Select all that apply:
 
 - I plan to return to using Rust in the future.
 - I consider myself part of the Rust Community.
-- Specifically to provide feedback on WHY I stopped using Rust.
+- Specifically to provide feedback on why I stopped using Rust.
+- To provide feedback on Rust in general.
 - Curiosity.
 - Other [open response]
 
