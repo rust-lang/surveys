@@ -377,7 +377,8 @@ Select all that apply:
 - *nix (desktop or server)
 - Windows
 - Mac OS
-- mobile phones
+- iOS
+- Android
 - embedded platforms (with an operating system)
 - embedded platforms (bare metal)
 - other
