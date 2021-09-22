@@ -407,7 +407,7 @@ Select one:
 - There's a chance my code may no longer compile.
 - I am confident my code will break somehow.
 
-> *justification**
+> **justification**
 >
 > When want to get an impression of how stable the language feels.
 >
@@ -435,7 +435,7 @@ Select one:
 - I am confident my code is likely to break somehow.
 - I don't use nightly
 
-> *justification**
+> **justification**
 >
 > When want to get an impression of how stable even the nightly compiler is.
 >
@@ -462,7 +462,7 @@ Select one:
 - There's a chance my code may no longer compile.
 - I am confident my code is likely to break somehow.
 
-> *justification**
+> **justification**
 >
 > When want to get an impression of how stable crates tend to be.
 
