@@ -201,9 +201,11 @@ Free form.
 
 ### How would you rate your Rust expertise?
 
-Select 1-10 (1 = Beginner, 10 = Expert)
+Select 0-4 (0 = I can't write or read Rust, 1 = I can write simple exercises in Rust, 2 = I can write useful, production-ready code but it is a struggle, 3 = I am productive writing Rust, 4 = I'm an expert)
 
-> TODO: I'm unsure about this question
+> **justification**
+>
+> Useful for cohort analysis, i.e., for other questions we can query if answers are significantly different for beginners vs advanced users.
 
 ### How did you get interested in Rust?
 
