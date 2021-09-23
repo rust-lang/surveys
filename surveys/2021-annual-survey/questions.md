@@ -375,7 +375,7 @@ Select one:
 
 - Current stable version
 - Previous stable version
-- Another specific version of stable Rust
+- Some other specific version of stable Rust
 - Beta release
 - Latest nightly
 - A specific version of nightly
@@ -461,6 +461,7 @@ Select all that apply:
 - To help test the nightly version for bugs
 - For testing in CI
 - A dependency I use requires it
+- Other
 
 > **justification**
 >
@@ -476,6 +477,7 @@ Select all that apply:
 - To adopt stabilized language features as early as possible
 - To help test the beta version for bugs
 - For testing in CI
+- Other
 
 > **justification**
 >
