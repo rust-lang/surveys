@@ -369,12 +369,13 @@ Select all that apply:
 - embedded platforms (bare metal)
 - other
 
-### Which version(s) of Rust do you use for your applications?
+### Which version(s) of Rust do you use?
 
 Select one:
 
 - Current stable version
 - Previous stable version
+- Another specific version of stable Rust
 - Beta release
 - Latest nightly
 - A specific version of nightly
