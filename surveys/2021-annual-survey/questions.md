@@ -279,23 +279,10 @@ Select one:
 > This can be useful demographic information as a proxy for how "important" Rust is
 > in someone's technical life.
 >
-> **TODO** should we rephrase this to not rely on calendar time? Someone who only
-> programs once a week but always uses Rust is different than someone who programs
-> daily but only uses Rust once a week
->
-> **TODO** There are a few options on how to approach this.
->
-> One is to add a reference period to the question:
-> e.g. In a typical week/month, how often do you use Rust?
-> Answers: numerical/time ranges
->
-> Another approach is to be more vague:
-> e.g. In a typical week/month, how often do you use Rust?
-> Answers: Always, Somtimes, Rarely, Never
->
-> Or we can be more open-ended:
-> e.g. In a typical week, approximately how many hours do you sepnd using Rust?
-> [Fill in number]
+> We deliberately use calendar time for this question to gauge how "serious" the
+> programmers use of Rust is. This does mean that we will group together, for example,
+> those who program once a week but always in Rust and those who program daily but
+> use Rust once a week.
 
 ### How would you rate the learning of these concepts?
 
