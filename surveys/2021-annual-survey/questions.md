@@ -453,14 +453,33 @@ Select one:
 
 ### If you use nightly, why?
 
-Select one:
+Select all that apply:
 
 - I don't use nightly
 - Out of habit
 - For a particular language feature or set of language features I need
+- To help test the nightly version for bugs
+- For testing in CI
 - A dependency I use requires it
 
-> TODO look at other common answers from previous surveys
+> **justification**
+>
+> We'd like to know what are the common reasons people use nightly
+> so that we can better understand where testers are coming from.
+
+### If you use beta, why?
+
+Select all that apply:
+
+- I don't use beta
+- Out of habit
+- To adopt stabilized language features as early as possible
+- To help test the beta version for bugs
+- For testing in CI
+
+> **justification**
+>
+> Same justification as the question about nightly but for beta.
 
 ### What ways do you install Rust?
 
