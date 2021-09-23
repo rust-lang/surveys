@@ -23,9 +23,9 @@ We estimate it will take about 10-15 minutes to complete.
 
 Select one:
 
-- Yes, I have used Rust in the past three months [NEXT](#your-rust-experience)
-- I have used or tried to use Rust in the past, but not in the past three months [NEXT](#for-previous-rust-users)
-- No, I have never used or tried to use Rust [NEXT](#for-non-rust-users)
+- Yes, I have used Rust [NEXT](#your-rust-experience)
+- No, I don't use Rust, but I have in the past [NEXT](#for-previous-rust-users)
+- No, I have never used Rust [NEXT](#for-non-rust-users)
 
 > **justification**
 >
@@ -33,11 +33,7 @@ Select one:
 >
 > **changes**
 >
-> Rephrased answers slightly to be more precise.
->
-> **TODOs**
->
-> Is three months the right amount of time?
+> Rephrased answers slightly.
 
 ## For previous Rust users
 
@@ -71,7 +67,8 @@ Select all that apply:
 
 - I plan to return to using Rust in the future.
 - I consider myself part of the Rust Community.
-- Specifically to provide feedback on WHY I stopped using Rust.
+- Specifically to provide feedback on why I stopped using Rust.
+- To provide feedback on Rust in general.
 - Curiosity.
 - Other [open response]
 
@@ -201,9 +198,11 @@ Free form.
 
 ### How would you rate your Rust expertise?
 
-Select 1-10 (1 = Beginner, 10 = Expert)
+Select 0-4 (0 = I can't write or read Rust, 1 = I can write simple exercises in Rust, 2 = I can write useful, production-ready code but it is a struggle, 3 = I am productive writing Rust, 4 = I'm an expert)
 
-> TODO: I'm unsure about this question
+> **justification**
+>
+> Useful for cohort analysis, i.e., for other questions we can query if answers are significantly different for beginners vs advanced users.
 
 ### How did you get interested in Rust?
 
@@ -377,7 +376,8 @@ Select all that apply:
 - *nix (desktop or server)
 - Windows
 - Mac OS
-- mobile phones
+- iOS
+- Android
 - embedded platforms (with an operating system)
 - embedded platforms (bare metal)
 - other
@@ -404,7 +404,7 @@ Select one:
 - There's a chance my code may no longer compile.
 - I am confident my code will break somehow.
 
-> *justification**
+> **justification**
 >
 > When want to get an impression of how stable the language feels.
 >
@@ -432,7 +432,7 @@ Select one:
 - I am confident my code is likely to break somehow.
 - I don't use nightly
 
-> *justification**
+> **justification**
 >
 > When want to get an impression of how stable even the nightly compiler is.
 >
@@ -459,7 +459,7 @@ Select one:
 - There's a chance my code may no longer compile.
 - I am confident my code is likely to break somehow.
 
-> *justification**
+> **justification**
 >
 > When want to get an impression of how stable crates tend to be.
 
