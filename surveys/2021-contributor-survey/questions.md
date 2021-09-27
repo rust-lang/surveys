@@ -1,12 +1,12 @@
 # Survey questions
 
-Whether or not you use Rust Programming Language <https://rust-lang.org> today,
-we want to hear from you!
+Whether or not you contribute to the Rust Project <https://rust-lang.org>
+today, we want to hear from you!
 
 The Rust Foundation has created this survey to help us identify the main
-problems negatively affecting contributors to the Rust Project to help us plan
-programs that can most effectively support the contributors and maintainers of
-the Rust Project.
+problems negatively affecting active, past, and potential contributors to the
+Rust Project to help us plan programs that can most effectively support the
+contributors and maintainers of the Rust Project.
 
 Unless you choose to enter your email, your answers will be anonymous. Any
 personal data you submit as a part of this survey will be handled in accordance
@@ -24,6 +24,7 @@ We estimate it will take about 10-15 minutes to complete.
 > - Questions to Add
 >   - What part of the project did you contribute to?
 > - Identify questions that don't need to be free-form
+> - Cross survey cohort analysis would be useful, is it possible or ethical to associate sets of answers across surveys?
 
 ## Collaboration Interview
 
@@ -34,6 +35,10 @@ We estimate it will take about 10-15 minutes to complete.
 - I have tried contributing to the Rust Project but stopped before completing any contributions. [NEXT](#for-attempted-contributors)
 - I have wanted to contribute to the Rust Project but have not been able to figure out how. [NEXT](#for-potential-contributors)
 - I have never wanted to contribute to the Rust Project. [NEXT](#for-non-contributors)
+
+> **justification**
+>
+> Fundamental for cohort analysis.
 
 ## For active contributors
 
@@ -82,15 +87,21 @@ Free Form.
 
 > **justification**
 >
+> Useful in identifying how satisified our contributors are with the work
+> they're currently doing or if we should be helping them branch out into new
+> areas / achieve new goals.
 >
+> This was one of the best received questions during the pre-survey interviews
+> and seemed to elicited thoughtful answers.
 
 ### How has your experience been contributing to the rust project so far?
 
-Free Form.
+TODO Free Form or multiple choice?
 
 > **justification**
 >
->
+> Useful sentiment analysis and gagues the severity of the problems identified
+> in the subsequent questions.
 
 ### How do you feel about leadership within the project? Your own leadership and/or that of others.
 
@@ -98,11 +109,13 @@ Free Form.
 
 > **justification**
 >
+> **TODO**
 >
+> Can this be multiple choice?
 
 ### How healthy do you feel your team is?
 
-Free Form.
+TODO Free Form or multiple choice?
 
 > **justification**
 >
@@ -110,7 +123,7 @@ Free Form.
 
 ### What do you feel your teams prospects for growth are? This includes weather or not you think your team should grow.
 
-Free Form.
+TODO Free Form or multiple choice?
 
 > **justification**
 >
@@ -118,11 +131,15 @@ Free Form.
 
 ### Are you burnt out or do you feel you're at risk of burning out?
 
-Free Form.
+- I am burnt out.
+- I am not burnt out but I have been in the past.
+- I have not been burnt out.
 
 > **justification**
 >
+> Answers a specific question we have.
 >
+> * Is burnout a major issue across the Rust Project?
 
 ### What are the biggest issues you'd like to see fixed that are negatively impacting your ability to contribute to and/or maintain Rust?
 
@@ -130,7 +147,8 @@ Free Form.
 
 > **justification**
 >
->
+> Core survey question. This directly identifies the problems the Rust
+> Foundation and Project leadership should be focused on.
 
 ### What kind of support would you like to see or expect to see from the rust foundation?
 
@@ -138,7 +156,10 @@ Free Form.
 
 > **justification**
 >
->
+> Core survey question. This indirectly identifies the problems the Rust
+> Foundation should be focused on by the suggested programs (e.g. solutions to
+> problems) people think to suggest. Also acts as input for potential ideas the
+> foundation should consider.
 
 ### What kind of support would you not like to see or not expect to see from the rust foundation?
 
@@ -146,7 +167,8 @@ Free Form.
 
 > **justification**
 >
->
+> Useful in gathering feedback on the potential programs we should avoid when
+> planning how to provide support.
 
 ### Do you have any worries about the future of Rust?
 
@@ -154,7 +176,10 @@ Free Form.
 
 > **justification**
 >
->
+> Core survey question. This indirectly identifies problems the Rust Foundation
+> should be keeping an eye on in the future.
+
+[NEXT](#end)
 
 ## For inactive contributors
 
@@ -164,20 +189,38 @@ Free Form.
 
 > **justification**
 >
->
+> Useful for identifying which paths into the project are successful for
+> getting people involved in the project. Comparing these answers with those
+> from active contributors may also help identify patterns of involvement which
+> are more or less sustainable long term.
 
 ### How long were you a contributor to the rust project?
 
+* Less than 3 months
+* 3 to 6 months
+* 1 year
+* 2-3 years
+* 3-5 years
+* 5+ years
+
 > **justification**
 >
->
+> Useful for cohort analysis, the problems faced by contributors may differ
+> substantially for new contributors vs long time maintainers.
 
 ### What kind of work did you do within the rust project?
-  * e.g. contribution work, maintainership work, reviews, coordination, organization
+
+* contribution work
+* maintainership work
+* reviews
+* coordination
+* organization
 
 > **justification**
 >
->
+> Useful for cohort analysis. Problems will likely differ based on the work
+> being done. Those contributing new code will likely face diff problems than
+> those who mainly review or coordinate work.
 
 ### What sort of work did you want to be focused on?
 
@@ -185,7 +228,8 @@ Free Form.
 
 > **justification**
 >
->
+> Useful in identifying how satisified our past contributors were with their
+> work and may help identify sources of contributor attrition.
 
 ### How was your experience been contributing to the rust project?
 
@@ -193,7 +237,8 @@ Free Form.
 
 > **justification**
 >
->
+> Useful sentiment analysis and gagues the severity of the problems identified
+> in the subsequent questions.
 
 ### What made you stop contributing?
 
@@ -201,15 +246,15 @@ Free Form.
 
 > **justification**
 >
->
+> Core survey question. Useful for identifying causes of contributor/maintainer attrition.
 
-### What are the biggest issues you'd like to see fixed that are negatively impacting your ability to contribute to and/or maintain Rust?
+### What are the biggest issues you'd like to see fixed that negatively impacted your ability to contribute to and/or maintain Rust?
 
 Free Form.
 
 > **justification**
 >
->
+> Core survey question. Useful for identifying causes of contributor/maintainer attrition.
 
 ### What kind of support would you like to see or expect to see from the rust foundation?
 
@@ -217,7 +262,10 @@ Free Form.
 
 > **justification**
 >
->
+> Core survey question. This indirectly identifies the problems the Rust
+> Foundation should be focused on by the suggested programs (e.g. solutions to
+> problems) people think to suggest. Also acts as input for potential ideas the
+> foundation should consider.
 
 ### Do you have any worries about the future of Rust?
 
@@ -225,9 +273,16 @@ Free Form.
 
 > **justification**
 >
->
+> Core survey question. This indirectly identifies problems the Rust Foundation
+> should be keeping an eye on in the future.
+
+[NEXT](#end)
 
 ## For attempted contributors
+
+TODO
+
+[NEXT](#end)
 
 ## For potential contributors
 
@@ -240,11 +295,18 @@ Free Form.
 >
 
 ### What kind of work would you like to do within the rust project?
-  * e.g. contribution work, maintainership work, reviews, coordination, organization
+
+* contribution work
+* maintainership work
+* reviews
+* coordination
+* organization
 
 > **justification**
 >
->
+> Useful for cohort analysis. Problems will likely differ based on the work
+> being done. Those contributing new code will likely face diff problems than
+> those who mainly review or coordinate work.
 
 ### What has prevented you from getting involved?
 
@@ -260,6 +322,29 @@ Free Form.
 
 > **justification**
 >
->
+> Core survey question. This indirectly identifies problems the Rust Foundation
+> should be keeping an eye on in the future.
+
+[NEXT](#end)
 
 ## For non-contributors
+
+### What has prevented you from wanting to get involved?
+
+Free Form.
+
+> **justification**
+>
+> Core survey question. Useful for identifying issues discouraging new
+> contributors.
+
+### Do you have any worries about the future of Rust?
+
+Free Form.
+
+> **justification**
+>
+> Core survey question. This indirectly identifies problems the Rust Foundation
+> should be keeping an eye on in the future.
+
+## End
