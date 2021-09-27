@@ -381,8 +381,14 @@ Aspects:
 
 - Compile times
 - Binary size
-- The size of `target` folder
+- Disk space (e.g., the size of `target` folder)
 - The number of internal compiler errors (ICEs)
+- IDE experience
+- Available tools and support
+- Async programming
+- GUI development
+- Rust language and standard library documentation
+
 
 ### Please indicate how vital to your workflow each of the following tools are when programming with Rust:
 
