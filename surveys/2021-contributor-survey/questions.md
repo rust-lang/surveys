@@ -19,12 +19,17 @@ We estimate it will take about ? minutes to complete.
 > TODOs:
 >
 > - Evaluate survey length (the interviews took ~20-30 minutes)
-> - Can the community survey FAQ be generalized for all surveys such as this or the trademark surveys?
+> - Can the community survey FAQ be generalized for all surveys such as this or
+>   the trademark surveys?
 > - Define what it means to contribute to the Rust Projects.
 > - Questions to Add
 >   - What part of the project did you contribute to?
 > - Identify questions that don't need to be free-form
-> - Cross survey cohort analysis would be useful, is it possible or ethical to associate sets of answers across surveys?
+> - Cross survey cohort analysis would be useful, is it possible or ethical to
+>   associate sets of answers across surveys?
+> - Are these questions being presented in the optimal order?
+> - Make sure none of the major cohort sections are leaving out relevant
+>   questions that are asked of the other major cohorts.
 
 ## Collaboration Interview
 
@@ -53,12 +58,12 @@ Free Form.
 
 ### How long have you been contributing to the rust project?
 
-* Less than 3 months
-* 3 to 6 months
-* 1 year
-* 2-3 years
-* 3-5 years
-* 5+ years
+- Less than 3 months
+- 3 to 6 months
+- 1 year
+- 2-3 years
+- 3-5 years
+- 5+ years
 
 > **justification**
 >
@@ -83,11 +88,11 @@ Free Form.
 
 Select all that apply:
 
-* contribution work
-* maintainership work
-* reviews
-* coordination
-* organization
+- contribution work
+- maintainership work
+- reviews
+- coordination
+- organization
 
 > **justification**
 >
@@ -119,15 +124,11 @@ TODO Free Form or multiple choice?
 
 ### How do you feel about leadership within the project? Your own leadership and/or that of others.
 
-Free Form.
+TODO Free Form or multiple choice?
 
 > **justification**
 >
 > Suggested by @manishearth. Useful for identifying problems within project governance.
->
-> **TODO**
->
-> Can this be multiple choice?
 
 ### How healthy do you feel your team/working group/project group is?
 
@@ -146,7 +147,7 @@ TODO Free Form or multiple choice?
 
 > **justification**
 >
-> Suggested by @manishearth.
+> Suggested by @manishearth. TODO
 
 ### Are you burnt out or do you feel you're at risk of burning out?
 
@@ -215,12 +216,12 @@ Free Form.
 
 ### How long were you a contributor to the rust project?
 
-* Less than 3 months
-* 3 to 6 months
-* 1 year
-* 2-3 years
-* 3-5 years
-* 5+ years
+- Less than 3 months
+- 3 to 6 months
+- 1 year
+- 2-3 years
+- 3-5 years
+- 5+ years
 
 > **justification**
 >
@@ -243,11 +244,11 @@ Free Form.
 
 ### What kind of work did you do within the rust project?
 
-* contribution work
-* maintainership work
-* reviews
-* coordination
-* organization
+- contribution work
+- maintainership work
+- reviews
+- coordination
+- organization
 
 > **justification**
 >
@@ -336,15 +337,15 @@ Free Form.
 
 > **justification**
 >
->
+> TODO
 
 ### What kind of work would you like to do within the rust project?
 
-* contribution work
-* maintainership work
-* reviews
-* coordination
-* organization
+- contribution work
+- maintainership work
+- reviews
+- coordination
+- organization
 
 > **justification**
 >
@@ -358,7 +359,7 @@ Free Form.
 
 > **justification**
 >
->
+> TODO
 
 ### Do you have any worries about the future of Rust?
 
