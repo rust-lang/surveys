@@ -527,25 +527,20 @@ Free form.
 
 > This section is largely in service of the [contexts](./design/contexts.md) design document.
 
-### Are you using Rust at work
+### Are you using Rust at work?
 
 Select one:
 
 - Yes, for the majority of my coding
 - Yes, it's one of a number of languages I use and I use it regularly
 - Yes, but I only use it occasionally
-- No, but it is likely in the next year
-- No, I use other programming languages at work
-- Not applicable (i.e., I don't write software professionally, I am student, etc.)
+- No
 
 > **justification**
 >
 > We want to establish what percentage of those who could possibly use Rust in a professional setting
 > are using Rust in a professional setting. This is most interesting over time. 
 > Answers to this question should be combined with whether the respondent has ever used Rust.
-
-> **TODO**: explain why the following questions are not asked
-> Is Rust used in the company where you work?
 
 ### To what extent is Rust currently being used by your company?
 
