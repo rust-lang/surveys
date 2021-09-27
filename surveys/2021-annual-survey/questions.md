@@ -366,6 +366,28 @@ Select all that apply:
 - From source
 - Other
 
+
+### In your opinion, how do you find the following aspects of Rust?
+
+Options:
+
+- Great
+- Good enough
+- Could be better
+- Terrible
+
+Aspects:
+
+- Compile times
+- Binary size
+- Disk space (e.g., the size of `target` folder)
+- The number of internal compiler errors (ICEs)
+- IDE experience
+- Available tools and support
+- Async programming
+- GUI development
+- Rust language and standard library documentation
+
 ### In your opinion, have the following aspects of Rust gotten better or worse over the past year?
 
 Options:
@@ -432,17 +454,6 @@ Select all the apply:
 
 > TODO: do we need to provide racer as an option here?
 
-### How would you rate Rust's IDE or editor experience?
-
-Select one:
-
-- World class!
-- Great
-- Good enough
-- Could be better
-- Terrible
-
-> TODO: how can we relate this back to other languages? Presumably C# devs might find Rust's editor experience poor but Ruby devs might like it
 
 ### For each of the challenges listed below, please indicate whether you believe there has been any change within the last year
 
