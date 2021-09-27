@@ -473,12 +473,14 @@ Select all the apply:
 
 Select all that apply:
 
-- On several occasions I have read about Rust on "news" sites (e.g., Hacker News, r/rust subreddit, This Week in Rust, the official Rust blog, etc.)
-- On several occasions I have commented on or posted about Rust on "news" sites (e.g., Hacker News, r/rust subreddit, etc.)
-- On several occasions I have participated in conversations about Rust on social media.
+- I have produced informational content about Rust (e.g., blogged, live streamed, made a YouTube video, etc.).
+- On several occasions I have consumed informational content about Rust (e.g., blogs, live streams, YouTube videos, etc.).
+- On several occasions I have read *comments* about Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
+- On several occasions I have *commented* on about Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
+- On several occasions I have read official Rust communication channels (e.g., This Week in Rust, the official Rust blog, the Rust Twitter account, etc.)
+- On several occasions I have participated in conversations about Rust on social media (Twitter, Facebook, LinkedIn, etc.)
 - I have participated in Rust community forums or chats (e.g., users.rust-lang.org, Rust Discord, a local Rust chat community, etc.)
 - I have attended a Rust meetup or conference (virtual or in-person).
-- On several occasions I have produced content about Rust (e.g., blogged, live streamed, made a YouTube video, etc.).
 
 > **justification**
 >
@@ -486,60 +488,63 @@ Select all that apply:
 > particular we can use this information to do cohort analysis on highly "active"
 > community members in comparison to less active community members.
 
-### In which of the following ways have you contributed to Rust development in the last 6 months:
+### How often do you actively contribute to the Rust project?
 
-Select all that apply:
+Options:
 
-- I have contributed (code, bug reports, feature requests, documentation, etc.) to an open source Rust project I do *not* maintain that *is not* part of the rust-lang GitHub org.
-- I maintain an open source Rust project that *is not* part of the rust-lang GitHub org.
-- I have contributed (code, bug reports, feature requests, documentation, etc.) to a Rust project that *is* part of the rust-lang GitHub org.
-- I regularly participate in chat discussion (Discord, Slack, Zulip, etc.) about the development of an open source Rust project that *is not* part of the rust-lang GitHub org.
-- I regularly participate in chat discussion (Zulip or Discord) about the development of a Rust project that *is* a part of the rust-lang GitHub org.
+- Comment on, contribute to discussion of, or provide edits to an open RFC
+- Create a new thread or comment on internals.rust-lang.org
+- Discuss Rust project  in an official chat (either Zulip or Discord)
+- Open an issue on any repo in the rust-lang GitHub org
+- Contribute code changes (including tests) to the Rust compiler (rust-lang/rust)
+- Contribute code changes (including tests) to any other project in the rust-lang GitHub org
+- Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub org.
+
+Select one:
+
+- Almost daily
+- Weekly
+- Around once a month
+- Every other month or so
+- Never or rarely but have tried
+- Never or rarely and have never even tried
+
+> **justification**
+>
+> We want to understand the nature of contribution to the Rust project both
+> to better understand the shape of community involvement and for cohort analysis.
+
+### How many open-source and non-personal Rust projects do you currently maintain?
+
+Non-personal: at least one other person also contributes and the project is meant for others and not just yourself.
+Maintain: you have review and merge privileges
+
+- 0
+- 1
+- 2-4
+- 4-10
+- More than 10
 
 > **justification**
 >
 > We would like to know the rough make up of those who are using Rust in general
 > vs those who actively participate in development of open source Rust projects.
 
-### How often do you actively contribute to official discussion (RFC thread, internals.rust-lang.org, rust-lang/rust issues, or rust-lang Zulip topics) on Rust language development?
+### How many open-source and non-personal Rust projects do you currently contribute to (not including those you maintain)?
 
-Select one:
+Non-personal: at least one other person also contributes and the project is meant for others and not just yourself.
+Contribute: you regularly provide code including tests, documentation, issues, etc.
 
-- Never
-- Less than once a month
-- About once a month
-- Weekly
-- Almost daily
-
-> **justification**
->
-> We want to ensure we understand how those who actively contribute their opinions
-> to language discussion think vs those might do not actively participate.
-
-### Have you tried to (whether successful or not) complete any of the following?
-
-Select all that apply:
-
-- Contribute a code change to the Rust compiler (rust-lang/rust).
-- Contribute a code change to any other project under the rust-lang GitHub org.
-- Regularly participate in the ongoing activity of a Rust team (e.g., chat, meeting, issue tracker, etc.)
-- Regularly contribute bug reports
-- Write an RFC
+- 0
+- 1
+- 2-4
+- 4-10
+- More than 10
 
 > **justification**
 >
-> Combined with the question below we'd like to know how many people *try*
-> to contribute to the Rust project and end up failing.
->
-> We will get much more detailed information from the contributors survey, but
-> we want to catch those who are unlikely to fill out a contributors survey
-> because they don't feel like they have contributed.
-
-### Have you ever successfully completed any of the following?
-
-Select all that apply:
-
-**SAME OPTIONS AS ABOVE**
+> We would like to know the rough make up of those who are using Rust in general
+> vs those who actively participate in development of open source Rust projects.
 
 > **Follow-up: How difficult was it to complete [task]?**
 >
@@ -670,7 +675,7 @@ Select one:
 - A short training course offered by your employer or a contracted third party
 
 > TODO are the latter two sufficiently differentiated?
-> TODO Should there be something spcifically separating an online bootcamp/automated course from one taught by a person?
+> TODO Should there be something specifically separating an online bootcamp/automated course from one taught by a person?
 
 ### Which best describes your course or activity?
 
