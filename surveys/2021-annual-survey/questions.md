@@ -469,49 +469,77 @@ Select all the apply:
 > numbers.
 
 
-### Which of the following apply to you:
+### In which of the following ways have you participated in the Rust community in the last 6 months:
 
-- I have contributed (in any way) to a crate published on crates.io
-- I am maintainer of a Rust project outside of the core project
-- I have contributed (in any way) to a core Rust project (part of the rust-lang GitHub org)
-- I'm a member of a Rust team or WG
-- I've read the Rust blog
-- I've read TWiR
-- I've read GH rust-lang org/Zulip/Discord/internals/users/r/rust (separate answers or one answer?)
-- I've written a comment/post on GH rust-lang org/Zulip/Discord/internals/users/r/rust (separate answers or one answer?)
-- Attended a meetup (including virtual)
-- participated in a private Rust community (e.g., work Slack, private messages)
+Select all that apply:
+
+- On several occasions I have read about Rust on "news" sites (e.g., Hacker News, r/rust subreddit, This Week in Rust, the official Rust blog, etc.)
+- On several occasions I have commented on or posted about Rust on "news" sites (e.g., Hacker News, r/rust subreddit, etc.)
+- On several occasions I have participated in conversations about Rust on social media.
+- I have participated in Rust community forums or chats (e.g., users.rust-lang.org, Rust Discord, a local Rust chat community, etc.)
+- I have attended a Rust meetup or conference (virtual or in-person).
+- On several occasions I have produced content about Rust (e.g., blogged, live streamed, made a YouTube video, etc.).
 
 > **justification**
-> We'd like to get a picture of _how_ people participate in the Rust community
 >
-> TODO separate issue management, docs, etc. from code contribution?
-> 
-> TODO possibly multiple questions for past month, past year, ever, + would you like to do
-> POSSIBLE Approach below:
+> We'd like to get a picture of _how_ people participate in the Rust community. In
+> particular we can use this information to do cohort analysis on highly "active"
+> community members in comparison to less active community members.
 
-> **Survey Flow Example** Following question would only appear if indicated "I have read the Rust blog."
+### In which of the following ways have you contributed to Rust development in the last 6 months:
 
-### Previously you indicated that you read the Rust blog. How often do you do so?
+Select all that apply:
 
-- [frequency options]
+- I have contributed (code, bug reports, feature requests, documentation, etc.) to an open source Rust project I do *not* maintain that *is not* part of the rust-lang GitHub org.
+- I maintain an open source Rust project that *is not* part of the rust-lang GitHub org.
+- I have contributed (code, bug reports, feature requests, documentation, etc.) to a Rust project that *is* part of the rust-lang GitHub org.
+- I regularly participate in chat discussion (Discord, Slack, Zulip, etc.) about the development of an open source Rust project that *is not* part of the rust-lang GitHub org.
+- I regularly participate in chat discussion (Zulip or Discord) about the development of a Rust project that *is* a part of the rust-lang GitHub org.
 
-> **Survey Flow Example** Following question would only appear if indicated "I have not read the Rust blog."
+> **justification**
+>
+> We would like to know the rough make up of those who are using Rust in general
+> vs those who actively participate in development of open source Rust projects.
 
-### Previously you indicated that you do not read the Rust blog. Why not?
+### How often do you actively contribute to official discussion (RFC thread, internals.rust-lang.org, rust-lang/rust issues, or rust-lang Zulip topics) on Rust language development?
 
-- I see no benefit
-- I don't have the time to do so
-- [Other options]
+Select one:
 
-### Have you completed or tried to complete any of the following?
+- Never
+- Less than once a month
+- About once a month
+- Weekly
+- Almost daily
 
-- GitHub issue (Rust)
-- GitHub PR (Rust)
-- Discuss an RFC
+> **justification**
+>
+> We want to ensure we understand how those who actively contribute their opinions
+> to language discussion think vs those might do not actively participate.
+
+### Have you tried to (whether successful or not) complete any of the following?
+
+Select all that apply:
+
+- Contribute a code change to the Rust compiler (rust-lang/rust).
+- Contribute a code change to any other project under the rust-lang GitHub org.
+- Regularly participate in the ongoing activity of a Rust team (e.g., chat, meeting, issue tracker, etc.)
+- Regularly contribute bug reports
 - Write an RFC
-- Discuss Rust on GH rust-lang org/Zulip/internals/Discord
-- Publish a crate
+
+> **justification**
+>
+> Combined with the question below we'd like to know how many people *try*
+> to contribute to the Rust project and end up failing.
+>
+> We will get much more detailed information from the contributors survey, but
+> we want to catch those who are unlikely to fill out a contributors survey
+> because they don't feel like they have contributed.
+
+### Have you ever successfully completed any of the following?
+
+Select all that apply:
+
+**SAME OPTIONS AS ABOVE**
 
 > **Follow-up: How difficult was it to complete [task]?**
 >
