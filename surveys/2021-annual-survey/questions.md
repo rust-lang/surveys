@@ -226,6 +226,15 @@ Linux, run `nproc`; on macOS, run `sysctl -n hw.ncpu`; on Windows, run
 
 Free form.
 
+> **justification**
+>
+> Question added by Josh Triplett. The answers can help tune parallel rustc:
+>
+> - When we encounter a scalability issue that starts at a certain number of CPUs, it'll be good to know what proportion of the Rust community is affected.
+> - It'll help when tuning algorithms or build systems whose memory usage may depend on the number of CPUs present.
+> - It'll help with prioritization around whether to make something go faster by throwing more CPUs at it or by optimizing on the same number of CPUs.
+> - It'll help avoid assumptions that rust developers might otherwise make about how universal the caliber of hardware they have is.
+
 ### Which operating systems do you develop Rust software for?
 
 Select all that apply:
