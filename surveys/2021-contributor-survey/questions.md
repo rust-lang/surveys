@@ -1,6 +1,6 @@
 # Survey questions
 
-Whether or not you contribute to the Rust Project <https://rust-lang.org>
+Whether or not you contribute to the Rust Project <https://github.com/rust-lang>
 today, we want to hear from you!
 
 The Rust Foundation has created this survey to help us identify the main
@@ -14,11 +14,11 @@ with our policy as described in our Frequently Asked Questions:
 
 https://github.com/rust-community/team/wiki/State-of-the-Rust-Language-Community-Survey-FAQ
 
-We estimate it will take about 10-15 minutes to complete.
+We estimate it will take about ? minutes to complete.
 
 > TODOs:
 >
-> - Ensure that the survey actually takes 10-15 minutes
+> - Evaluate survey length (the interviews took ~20-30 minutes)
 > - Can the community survey FAQ be generalized for all surveys such as this or the trademark surveys?
 > - Define what it means to contribute to the Rust Projects.
 > - Questions to Add
@@ -65,6 +65,20 @@ Free Form.
 > Useful for cohort analysis, the problems faced by contributors may differ
 > substantially for new contributors vs long time maintainers.
 
+### How are you associated with the rust project?
+
+- I am a member of a Rust Team.
+- I am a member of a Rust working group or project group.
+- I am not a member of a Rust Team, working group, or project group, but I
+  would like to be.
+- I am not a member of a Rust team, working group, or project group, and I have
+  no intention to join one.
+
+> **justification**
+>
+> Cohort analysis. Some of the subsequent questions are only relevant to
+> certain cohorts.
+
 ### What kind of work do you do within the rust project?
 
 Select all that apply:
@@ -100,7 +114,7 @@ TODO Free Form or multiple choice?
 
 > **justification**
 >
-> Useful sentiment analysis and gagues the severity of the problems identified
+> Useful for sentiment analysis and gagues the severity of the problems identified
 > in the subsequent questions.
 
 ### How do you feel about leadership within the project? Your own leadership and/or that of others.
@@ -109,25 +123,30 @@ Free Form.
 
 > **justification**
 >
+> Suggested by @manishearth. Useful for identifying problems within project governance.
+>
 > **TODO**
 >
 > Can this be multiple choice?
 
-### How healthy do you feel your team is?
+### How healthy do you feel your team/working group/project group is?
+
+*Skip if not a member of the rust project.*
 
 TODO Free Form or multiple choice?
 
 > **justification**
 >
->
+> Useful for sentiment analysis and gagues the severity of the problems identified
+> in the subsequent questions.
 
-### What do you feel your teams prospects for growth are? This includes weather or not you think your team should grow.
+### What do you feel your teams prospects for growth are? This includes whether or not you think your team should grow.
 
 TODO Free Form or multiple choice?
 
 > **justification**
 >
->
+> Suggested by @manishearth.
 
 ### Are you burnt out or do you feel you're at risk of burning out?
 
@@ -208,6 +227,20 @@ Free Form.
 > Useful for cohort analysis, the problems faced by contributors may differ
 > substantially for new contributors vs long time maintainers.
 
+### How were you associated with the rust project?
+
+- I was a member of a Rust Team.
+- I was a member of a Rust working group or project group.
+- I was not a member of a Rust Team, working group, or project group, but I
+  wanted to be.
+- I was not a member of a Rust team, working group, or project group, and I had
+  no intention of joining one.
+
+> **justification**
+>
+> Cohort analysis. Some of the subsequent questions are only relevant to
+> certain cohorts.
+
 ### What kind of work did you do within the rust project?
 
 * contribution work
@@ -237,7 +270,18 @@ Free Form.
 
 > **justification**
 >
-> Useful sentiment analysis and gagues the severity of the problems identified
+> Useful for sentiment analysis and gagues the severity of the problems identified
+> in the subsequent questions.
+
+### How healthy do you feel your team/working group/project group was?
+
+*Skip if not a member of the rust project.*
+
+TODO Free Form or multiple choice?
+
+> **justification**
+>
+> Useful for sentiment analysis and gagues the severity of the problems identified
 > in the subsequent questions.
 
 ### What made you stop contributing?
