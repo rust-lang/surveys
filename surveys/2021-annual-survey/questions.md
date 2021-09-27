@@ -455,29 +455,6 @@ Select all the apply:
 > TODO: do we need to provide racer as an option here?
 
 
-### For each of the challenges listed below, please indicate whether you believe there has been any change within the last year
-
-Options:
-
-- Got worse
-- No change
-- Slight improvement
-- Some improvement
-- A lot of improvement
-- I'm not sure
-
-Challenges:
-
-- Library support
-- IDE experience
-- Adoption level of Rust
-- Available tools and support
-- Stable language features and crates
-- Async programming options
-- GUI development
-- Rust language documentation
-- Compile times
-
 ### Which of the following apply to you:
 
 - I have contributed (in any way) to a crate published on crates.io
