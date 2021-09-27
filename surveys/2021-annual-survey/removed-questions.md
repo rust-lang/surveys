@@ -298,3 +298,24 @@ Free form
 > **REMOVED**
 >
 > We aren't going to contact anyone
+
+
+### If you don't use rustup, why not?
+
+Select all that apply:
+
+- I'm prefer using my platform's package installer (yum, apt-get, homebrew, msi installer, etc.)
+- I don't trust that rustup provides secure binaries
+- I didn't know about it
+- The network I'm on does not allow for it (e.g., firewall)
+- I tried, but it didn't work
+- Other
+
+> **REMOVED**
+>
+> We don't necessarily want everyone to use Rustup. If we do want this kind of information, we should ask more
+> specific and actionable questions. We might want to ask such questions for other tools too - there is no
+> indication that Rustup maintainers are more in need of this info than others.
+>
+> TODO: a lot of people previously reported that they *use* rustup but wish they didn't. How can we capture that here?
+> TODO: this was previously free form. Do we prefer the multiple choice?

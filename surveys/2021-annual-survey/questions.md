@@ -366,20 +366,6 @@ Select all that apply:
 - From source
 - Other
 
-### If you don't use rustup, why not?
-
-Select all that apply:
-
-- I'm prefer using my platform's package installer (yum, apt-get, homebrew, msi installer, etc.)
-- I don't trust that rustup provides secure binaries
-- I didn't know about it
-- The network I'm on does not allow for it (e.g., firewall)
-- I tried, but it didn't work
-- Other
-
-> TODO: a lot of people previously reported that they *use* rustup but wish they didn't. How can we capture that here?
-> TODO: this was previously free form. Do we prefer the multiple choice?
-
 ### In your opinion, have the following aspects of Rust gotten better or worse over the past year?
 
 Options:
