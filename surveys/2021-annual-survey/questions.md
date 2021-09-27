@@ -504,23 +504,24 @@ Select all the apply:
 > **Justification** Captures not just those who tried and failed, but those who tried and succeeded.
 > Shows failure/difficulty rate compared to success rate.
 > Also overall engagement / attempted engagement in these ways.
->
-> How welcome do you feel when interacting with the Rust community in the following ways? (1/2/3/NA?) TODO in the last year
->
-> - other social media (twitter, facebook, other sites 'outside' core Rust, e.g., r/programming, HN - TODO one or two answers)
-> - rust-lang GH
-> - other GH Rust project
-> - Zulip/internals/Discord
-> - users/stack overflow
-> - r/rust
-> - Rust conferences
-> - Local Rust events, e.g., meetups
 
-> TODO anything more objective like asking about particular incidents or kinds of incidents?
+
+### How welcome do you feel when interacting with the Rust community in the following ways?
+
+- other social media (twitter, facebook, other sites 'outside' core Rust, e.g., r/programming, HN - TODO one or two answers)
+- rust-lang GH
+- other GH Rust project
+- Zulip/internals/Discord
+- users/stack overflow
+- r/rust
+- Rust conferences
+- Local Rust events, e.g., meetups
+
 > **Survey Flow** If they indicated feeling unwelcome above:
-> ###You indicated that you did not feel welcome in the Rust community. Are there any details about your experience that you would like to share with us?
->
-> TODO ask about blockers for participation?
+
+### You indicated that you did not feel welcome in the Rust community. Are there any details about your experience that you would like to share with us?
+
+Free form.
 
 ## Rust at work
 
