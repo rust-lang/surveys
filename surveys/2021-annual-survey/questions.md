@@ -450,7 +450,7 @@ Select all the apply:
 - VS Code without an extension for Rust
 - vim or neovim with rust-analyzer
 - vim or neovim with rls
-- vim or neovim without specific Rust support (beyond synatx highlighting)
+- vim or neovim without specific Rust support (beyond syntax highlighting)
 - IntelliJ Rust
 - Emacs
 - Sublime
