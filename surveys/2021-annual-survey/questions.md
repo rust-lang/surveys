@@ -445,12 +445,8 @@ Tools:
 
 Select all the apply:
 
-- VS Code with the rust-analyzer extension
-- VS Code with the rust extension (a.k.a rls)
-- VS Code without an extension for Rust
-- vim or neovim with rust-analyzer
-- vim or neovim with rls
-- vim or neovim without specific Rust support (beyond syntax highlighting)
+- VS Code
+- vi/vim/neovim
 - IntelliJ Rust
 - Emacs
 - Sublime
@@ -458,10 +454,19 @@ Select all the apply:
 - Xcode
 - Atom
 - CLion
-- Nano or Pico
 - Other
 
-> TODO: do we need to provide racer as an option here?
+> **justification**
+>
+> It is good to know which editor is the most preferred for Rust development. This
+> can change investment strategies for further IDE development.
+>
+> Note: previously this question included different 'drivers' of the Rust IDE
+> experience (e.g., racer, rls, rust-analyzer). Development has consolidated on
+> rust-analyzer, and so it's not necessary to find out which is being used.
+> If we are curious how far along adoption of rust-analyzer is, we can ask that
+> in a separate question, though this is likely easier to find out through download
+> numbers.
 
 
 ### Which of the following apply to you:
