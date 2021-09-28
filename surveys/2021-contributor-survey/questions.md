@@ -22,6 +22,8 @@ We estimate it will take about ? minutes to complete.
 > - Can the community survey FAQ be generalized for all surveys such as this or
 >   the trademark surveys?
 > - Define what it means to contribute to the Rust Projects.
+>   - Use this definition as the multiple choice options for the "what kind of
+>     work do you do within the project?" question
 > - Questions to Add
 >   - What part of the project did you contribute to?
 > - Identify questions that don't need to be free-form
@@ -30,6 +32,8 @@ We estimate it will take about ? minutes to complete.
 > - Are these questions being presented in the optimal order?
 > - Make sure none of the major cohort sections are leaving out relevant
 >   questions that are asked of the other major cohorts.
+> - Convert free form answers into partial multiple choice with some set of
+>   known likely answers.
 
 ## Collaboration Interview
 
@@ -73,7 +77,9 @@ Free Form.
 ### How are you associated with the rust project?
 
 - I am a member of a Rust Team.
+- I am a lead of a Rust Team.
 - I am a member of a Rust working group or project group.
+- I am a lead of a Rust working group or project group.
 - I am not a member of a Rust Team, working group, or project group, but I
   would like to be.
 - I am not a member of a Rust team, working group, or project group, and I have
@@ -113,45 +119,96 @@ Free Form.
 > This was one of the best received questions during the pre-survey interviews
 > and seemed to elicited thoughtful answers.
 
-### How has your experience been contributing to the rust project so far?
+### My experience contributing to the rust project so far has been positive
 
-TODO Free Form or multiple choice?
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
 
 > **justification**
 >
 > Useful for sentiment analysis and gagues the severity of the problems identified
 > in the subsequent questions.
 
-### How do you feel about leadership within the project? Your own leadership and/or that of others.
+### I feel positive about the project leadership and governance structure.
 
-TODO Free Form or multiple choice?
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
 
 > **justification**
 >
 > Suggested by @manishearth. Useful for identifying problems within project governance.
 
-### How healthy do you feel your team/working group/project group is?
+### I feel positive about my own leadership within the project.
+
+**Skip if not a leader of a team or group**
+
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
+
+> **justification**
+>
+> Suggested by @manishearth. Useful for identifying problems within project governance.
+
+### I feel my team/working group/project group is healthy.
+
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
 
 *Skip if not a member of the rust project.*
-
-TODO Free Form or multiple choice?
 
 > **justification**
 >
 > Useful for sentiment analysis and gagues the severity of the problems identified
 > in the subsequent questions.
 
-### What do you feel your teams prospects for growth are? This includes whether or not you think your team should grow.
+### I feel my team is growing at the ideal rate.
 
-TODO Free Form or multiple choice?
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
 
 > **justification**
 >
-> Suggested by @manishearth. TODO
+> Suggested by @manishearth. Useful for identifying problems within project
+> governance and teams that could use additional support.
+>
+> TODO: this question may be useless without knowing the specific teams
+> involved which would interfere with anonymity
+
+### I think my team should grow.
+
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
+
+> **justification**
+>
+> Suggested by @manishearth. Useful for identifying problems within project
+> governance and teams that could use additional support.
+>
+> TODO: this question may be useless without knowing the specific teams
+> involved which would interfere with anonymity
 
 ### Are you burnt out or do you feel you're at risk of burning out?
 
 - I am burnt out.
+- I am at risk of burning out.
 - I am not burnt out but I have been in the past.
 - I have not been burnt out.
 
@@ -165,6 +222,8 @@ TODO Free Form or multiple choice?
 
 Free Form.
 
+TODO: add multiple choice options as well
+
 > **justification**
 >
 > Core survey question. This directly identifies the problems the Rust
@@ -173,6 +232,8 @@ Free Form.
 ### What kind of support would you like to see or expect to see from the rust foundation?
 
 Free Form.
+
+TODO: add multiple choice options as well
 
 > **justification**
 >
@@ -185,19 +246,12 @@ Free Form.
 
 Free Form.
 
+TODO: add multiple choice options as well
+
 > **justification**
 >
 > Useful in gathering feedback on the potential programs we should avoid when
 > planning how to provide support.
-
-### Do you have any worries about the future of Rust?
-
-Free Form.
-
-> **justification**
->
-> Core survey question. This indirectly identifies problems the Rust Foundation
-> should be keeping an eye on in the future.
 
 [NEXT](#end)
 
@@ -278,7 +332,11 @@ Free Form.
 
 *Skip if not a member of the rust project.*
 
-TODO Free Form or multiple choice?
+- strongly positive
+- positive
+- neutral
+- negative
+- strongly negative
 
 > **justification**
 >
@@ -311,15 +369,6 @@ Free Form.
 > Foundation should be focused on by the suggested programs (e.g. solutions to
 > problems) people think to suggest. Also acts as input for potential ideas the
 > foundation should consider.
-
-### Do you have any worries about the future of Rust?
-
-Free Form.
-
-> **justification**
->
-> Core survey question. This indirectly identifies problems the Rust Foundation
-> should be keeping an eye on in the future.
 
 [NEXT](#end)
 
@@ -361,15 +410,6 @@ Free Form.
 >
 > TODO
 
-### Do you have any worries about the future of Rust?
-
-Free Form.
-
-> **justification**
->
-> Core survey question. This indirectly identifies problems the Rust Foundation
-> should be keeping an eye on in the future.
-
 [NEXT](#end)
 
 ## For non-contributors
@@ -382,14 +422,5 @@ Free Form.
 >
 > Core survey question. Useful for identifying issues discouraging new
 > contributors.
-
-### Do you have any worries about the future of Rust?
-
-Free Form.
-
-> **justification**
->
-> Core survey question. This indirectly identifies problems the Rust Foundation
-> should be keeping an eye on in the future.
 
 ## End
