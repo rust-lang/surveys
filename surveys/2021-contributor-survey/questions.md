@@ -21,19 +21,10 @@ We estimate it will take about ? minutes to complete.
 > - Evaluate survey length (the interviews took ~20-30 minutes)
 > - Can the community survey FAQ be generalized for all surveys such as this or
 >   the trademark surveys?
-> - Define what it means to contribute to the Rust Projects.
->   - Use this definition as the multiple choice options for the "what kind of
->     work do you do within the project?" question
-> - Questions to Add
->   - What part of the project did you contribute to?
-> - Identify questions that don't need to be free-form
-> - Cross survey cohort analysis would be useful, is it possible or ethical to
->   associate sets of answers across surveys?
+> - Resolve and close open issues related to this survey on `rust-lang/surveys`
 > - Are these questions being presented in the optimal order?
 > - Make sure none of the major cohort sections are leaving out relevant
 >   questions that are asked of the other major cohorts.
-> - Convert free form answers into partial multiple choice with some set of
->   known likely answers.
 
 ## Collaboration Interview
 
@@ -196,7 +187,17 @@ Free Form.
 
 ### What are the biggest issues you'd like to see fixed that are negatively impacting your ability to contribute to and/or maintain Rust?
 
-- TODO: add multiple choice options as well
+Select all that apply:
+
+- There aren't enough experts or they aren't available to guide me through my contribution.
+- I don't have the financial resources to dedicate spare time to the project.
+- It takes too long to compile or test the project's code.
+- I don't have sufficiently powerful hardware to build or test the project's code.
+- The contribution process is difficult to navigate or poorly documented.
+- It takes too long for my PRs to get reviewed.
+- There are too many PRs to review for me to keep up with.
+- I don't have enough time to dedicate to the project to complete the work I wish to do.
+- I am having trouble recruiting new team members and reviewers for the portion of the project I maintain.
 - Other: Free Form
 
 > **justification**
@@ -206,8 +207,9 @@ Free Form.
 
 ### What kind of support would you like to see or expect to see from the Rust Foundation?
 
-- TODO: add multiple choice options as well
-- Other: Free Form
+Select all that apply:
+
+Free Form
 
 > **justification**
 >
@@ -218,8 +220,9 @@ Free Form.
 
 ### What kind of support would you not like to see or not expect to see from the Rust Foundation?
 
-- TODO: add multiple choice options as well
-- Other: Free Form
+Select all that apply:
+
+Free Form
 
 > **justification**
 >
@@ -338,7 +341,16 @@ Free Form.
 
 ### What are the biggest issues you'd like to see fixed that negatively impacted your ability to contribute to and/or maintain Rust?
 
-Free Form.
+- There aren't enough experts or they aren't available to guide me through my contribution.
+- I don't have the financial resources to dedicate spare time to the project.
+- It takes too long to compile or test the project's code.
+- I don't have sufficiently powerful hardware to build or test the project's code.
+- The contribution process is difficult to navigate or poorly documented.
+- It takes too long for my PRs to get reviewed.
+- There are too many PRs to review for me to keep up with.
+- I don't have enough time to dedicate to the project to complete the work I wish to do.
+- I am having trouble recruiting new team members and reviewers for the portion of the project I maintain.
+- Other: Free Form
 
 > **justification**
 >
@@ -346,7 +358,7 @@ Free Form.
 
 ### What kind of support would you like to see or expect to see from the Rust Foundation?
 
-Free Form.
+Free Form
 
 > **justification**
 >
@@ -354,6 +366,17 @@ Free Form.
 > Foundation should be focused on by the suggested programs (e.g. solutions to
 > problems) people think to suggest. Also acts as input for potential ideas the
 > Foundation should consider.
+
+### What kind of support would you not like to see or not expect to see from the Rust Foundation?
+
+Select all that apply:
+
+Free Form
+
+> **justification**
+>
+> Useful in gathering feedback on the potential programs we should avoid when
+> planning how to provide support.
 
 [NEXT](#end)
 
@@ -394,7 +417,13 @@ Select all that apply:
 
 ### What were the issues that prevented you from completing your contribution?
 
-- TODO: Add known possible issues
+- There aren't enough experts or they aren't available to guide me through my contribution.
+- I don't have the financial resources to dedicate spare time to the project.
+- It takes too long to compile or test the project's code.
+- I don't have sufficiently powerful hardware to build or test the project's code.
+- The contribution process is difficult to navigate or poorly documented.
+- It takes too long for my PRs to get reviewed.
+- I don't have enough time to dedicate to the project to complete the work I wish to do.
 - Other: Free Form
 
 > **justification**
@@ -440,12 +469,19 @@ Select all that apply:
 
 Select all that apply:
 
-- TODO add other known issues
+- There aren't enough experts or they aren't available to guide me through my contribution.
+- I don't have the financial resources to dedicate spare time to the project.
+- It takes too long to compile or test the project's code.
+- I don't have sufficiently powerful hardware to build or test the project's code.
+- The contribution process is difficult to navigate or poorly documented.
+- It takes too long for my PRs to get reviewed.
+- I don't have enough time to dedicate to the project to complete the work I wish to do.
 - Other: Free Form.
 
 > **justification**
 >
-> TODO
+> Core survey question. This directly identifies the problems the Rust
+> Foundation and Project leadership should be focused on.
 
 [NEXT](#end)
 
