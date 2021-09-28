@@ -51,9 +51,17 @@ We estimate it will take about ? minutes to complete.
 
 ## For active contributors
 
-### Can you tell me a bit about your background and how you got involved in the Rust project?
+### How did you get involved in the Rust Project?
 
-Free Form.
+Select all that apply:
+
+- I wanted to improve my Rust skills and learn from the experts maintaining Rust.
+- I wanted to implement features that I needed as a user of Rust.
+- I wanted to give back to the Rust community.
+- I wanted to add to my portfolio of open source work for my resume.
+- I was encouraged to contribute by an existing Rust contributor / maintainer.
+- My work assigned open source contributions to me as part of my job.
+- Other: Free form
 
 > **justification**
 >
@@ -119,7 +127,7 @@ Free Form.
 > This was one of the best received questions during the pre-survey interviews
 > and seemed to elicited thoughtful answers.
 
-### My experience contributing to the rust project so far has been positive
+### My experience contributing to the rust project so far has been positive.
 
 - strongly agree
 - agree
@@ -160,13 +168,13 @@ Free Form.
 
 ### I feel my team/working group/project group is healthy.
 
+**Skip if not a member of the rust project.**
+
 - strongly agree
 - agree
 - neither agree nor disagree
 - disagree
 - strongly disagree
-
-*Skip if not a member of the rust project.*
 
 > **justification**
 >
@@ -225,9 +233,15 @@ TODO: add multiple choice options as well
 
 ## For inactive contributors
 
-### Can you tell me a bit about your background and how you got involved in the Rust project?
+### How did you get involved in the Rust Project?
 
-Free Form.
+- I wanted to improve my Rust skills and learn from the experts maintaining Rust.
+- I wanted to implement features that I needed as a user of Rust.
+- I wanted to give back to the Rust community.
+- I wanted to add to my portfolio of open source work for my resume.
+- I was encouraged to contribute by an existing Rust contributor / maintainer.
+- My work assigned open source contributions to me as part of my job.
+- Other: Free form
 
 > **justification**
 >
@@ -253,7 +267,9 @@ Free Form.
 ### How were you associated with the rust project?
 
 - I was a member of a Rust Team.
+- I was a lead of a Rust Team.
 - I was a member of a Rust working group or project group.
+- I was a lead of a Rust working group or project group.
 - I was not a member of a Rust Team, working group, or project group, but I
   wanted to be.
 - I was not a member of a Rust team, working group, or project group, and I had
@@ -287,24 +303,28 @@ Free Form.
 > Useful in identifying how satisified our past contributors were with their
 > work and may help identify sources of contributor attrition.
 
-### How was your experience been contributing to the rust project?
+### My experience contributing to the rust project was positive.
 
-Free Form.
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
 
 > **justification**
 >
 > Useful for sentiment analysis and gagues the severity of the problems identified
 > in the subsequent questions.
 
-### How healthy do you feel your team/working group/project group was?
+### I feel my team/working group/project group was healthy.
 
-*Skip if not a member of the rust project.*
+**Skip if not a member of the rust project.**
 
-- strongly positive
-- positive
-- neutral
-- negative
-- strongly negative
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
 
 > **justification**
 >
@@ -342,7 +362,38 @@ Free Form.
 
 ## For attempted contributors
 
-TODO
+### What motivated you to get involved in the Rust Project?
+
+Select all that apply:
+
+- I wanted to improve my Rust skills and learn from the experts maintaining Rust.
+- I wanted to implement features that I needed as a user of Rust.
+- I wanted to give back to the Rust community.
+- I wanted to add to my portfolio of open source work for my resume.
+- I was encouraged to contribute by an existing Rust contributor / maintainer.
+- My work assigned open source contributions to me as part of my job.
+- Other: Free form
+
+> **justification**
+>
+> Useful in identifying paths that are causing friction and preventing new
+> contributors from getting involved.
+
+### What kind of contribution did you attempt?
+
+Select all that apply:
+
+- contribution work
+- maintainership work
+- reviews
+- coordination
+- organization
+
+> **justification**
+>
+> Useful for cohort analysis. Problems will likely differ based on the work
+> being done. Those contributing new code will likely face diff problems than
+> those who mainly review or coordinate work.
 
 [NEXT](#end)
 
