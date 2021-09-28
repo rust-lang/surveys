@@ -173,7 +173,7 @@ Free Form.
 > Useful for sentiment analysis and gagues the severity of the problems identified
 > in the subsequent questions.
 
-### I feel my team is growing at the ideal rate.
+### I feel my team should grow.
 
 - strongly agree
 - agree
@@ -189,7 +189,7 @@ Free Form.
 > TODO: this question may be useless without knowing the specific teams
 > involved which would interfere with anonymity
 
-### I think my team should grow.
+### I feel my team is growing at the ideal rate.
 
 - strongly agree
 - agree
