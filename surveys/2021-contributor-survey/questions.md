@@ -68,7 +68,7 @@ Select all that apply:
 > Useful in identifying paths into the project that are successful for future
 > contributors to follow.
 
-### How long have you been contributing to the rust project?
+### How long have you been contributing to the Rust Project?
 
 - Less than 3 months
 - 3 to 6 months
@@ -82,7 +82,7 @@ Select all that apply:
 > Useful for cohort analysis, the problems faced by contributors may differ
 > substantially for new contributors vs long time maintainers.
 
-### How are you associated with the rust project?
+### How are you associated with the Rust Project?
 
 - I am a member of a Rust Team.
 - I am a lead of a Rust Team.
@@ -98,7 +98,7 @@ Select all that apply:
 > Cohort analysis. Some of the subsequent questions are only relevant to
 > certain cohorts.
 
-### What kind of work do you do within the rust project?
+### What kind of work do you do within the Rust Project?
 
 Select all that apply:
 
@@ -127,7 +127,7 @@ Free Form.
 > This was one of the best received questions during the pre-survey interviews
 > and seemed to elicited thoughtful answers.
 
-### My experience contributing to the rust project so far has been positive.
+### My experience contributing to the Rust Project so far has been positive.
 
 - strongly agree
 - agree
@@ -168,7 +168,7 @@ Free Form.
 
 ### I feel my team/working group/project group is healthy.
 
-**Skip if not a member of the rust project.**
+**Skip if not a member of the Rust Project.**
 
 - strongly agree
 - agree
@@ -204,7 +204,7 @@ Free Form.
 > Core survey question. This directly identifies the problems the Rust
 > Foundation and Project leadership should be focused on.
 
-### What kind of support would you like to see or expect to see from the rust foundation?
+### What kind of support would you like to see or expect to see from the Rust Foundation?
 
 - TODO: add multiple choice options as well
 - Other: Free Form
@@ -214,9 +214,9 @@ Free Form.
 > Core survey question. This indirectly identifies the problems the Rust
 > Foundation should be focused on by the suggested programs (e.g. solutions to
 > problems) people think to suggest. Also acts as input for potential ideas the
-> foundation should consider.
+> Foundation should consider.
 
-### What kind of support would you not like to see or not expect to see from the rust foundation?
+### What kind of support would you not like to see or not expect to see from the Rust Foundation?
 
 - TODO: add multiple choice options as well
 - Other: Free Form
@@ -247,7 +247,7 @@ Free Form.
 > from active contributors may also help identify patterns of involvement which
 > are more or less sustainable long term.
 
-### How long were you a contributor to the rust project?
+### How long were you a contributor to the Rust Project?
 
 - Less than 3 months
 - 3 to 6 months
@@ -261,7 +261,7 @@ Free Form.
 > Useful for cohort analysis, the problems faced by contributors may differ
 > substantially for new contributors vs long time maintainers.
 
-### How were you associated with the rust project?
+### How were you associated with the Rust Project?
 
 - I was a member of a Rust Team.
 - I was a lead of a Rust Team.
@@ -277,7 +277,7 @@ Free Form.
 > Cohort analysis. Some of the subsequent questions are only relevant to
 > certain cohorts.
 
-### What kind of work did you do within the rust project?
+### What kind of work did you do within the Rust Project?
 
 - contribution work
 - maintainership work
@@ -300,7 +300,7 @@ Free Form.
 > Useful in identifying how satisified our past contributors were with their
 > work and may help identify sources of contributor attrition.
 
-### My experience contributing to the rust project was positive.
+### My experience contributing to the Rust Project was positive.
 
 - strongly agree
 - agree
@@ -315,7 +315,7 @@ Free Form.
 
 ### I feel my team/working group/project group was healthy.
 
-**Skip if not a member of the rust project.**
+**Skip if not a member of the Rust Project.**
 
 - strongly agree
 - agree
@@ -344,7 +344,7 @@ Free Form.
 >
 > Core survey question. Useful for identifying causes of contributor/maintainer attrition.
 
-### What kind of support would you like to see or expect to see from the rust foundation?
+### What kind of support would you like to see or expect to see from the Rust Foundation?
 
 Free Form.
 
@@ -353,7 +353,7 @@ Free Form.
 > Core survey question. This indirectly identifies the problems the Rust
 > Foundation should be focused on by the suggested programs (e.g. solutions to
 > problems) people think to suggest. Also acts as input for potential ideas the
-> foundation should consider.
+> Foundation should consider.
 
 [NEXT](#end)
 
@@ -422,7 +422,7 @@ Select all that apply:
 > project which we should focus on expanding if we would like to grow our
 > number of contributors.
 
-### What kind of work would you like to do within the rust project?
+### What kind of work would you like to do within the Rust Project?
 
 - contribution work
 - maintainership work
