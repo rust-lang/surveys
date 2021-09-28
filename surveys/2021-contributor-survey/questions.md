@@ -173,38 +173,6 @@ Free Form.
 > Useful for sentiment analysis and gagues the severity of the problems identified
 > in the subsequent questions.
 
-### I feel my team should grow.
-
-- strongly agree
-- agree
-- neither agree nor disagree
-- disagree
-- strongly disagree
-
-> **justification**
->
-> Suggested by @manishearth. Useful for identifying problems within project
-> governance and teams that could use additional support.
->
-> TODO: this question may be useless without knowing the specific teams
-> involved which would interfere with anonymity
-
-### I feel my team is growing at the ideal rate.
-
-- strongly agree
-- agree
-- neither agree nor disagree
-- disagree
-- strongly disagree
-
-> **justification**
->
-> Suggested by @manishearth. Useful for identifying problems within project
-> governance and teams that could use additional support.
->
-> TODO: this question may be useless without knowing the specific teams
-> involved which would interfere with anonymity
-
 ### Are you burnt out or do you feel you're at risk of burning out?
 
 - I am burnt out.
