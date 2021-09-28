@@ -471,11 +471,7 @@ Select all that apply:
 
 - There aren't enough experts or they aren't available to guide me through my contribution.
 - I don't have the financial resources to dedicate spare time to the project.
-- It takes too long to compile or test the project's code.
-- I don't have sufficiently powerful hardware to build or test the project's code.
 - The contribution process is difficult to navigate or poorly documented.
-- It takes too long for my PRs to get reviewed.
-- I don't have enough time to dedicate to the project to complete the work I wish to do.
 - Other: Free Form.
 
 > **justification**
