@@ -196,9 +196,8 @@ Free Form.
 
 ### What are the biggest issues you'd like to see fixed that are negatively impacting your ability to contribute to and/or maintain Rust?
 
-Free Form.
-
-TODO: add multiple choice options as well
+- TODO: add multiple choice options as well
+- Other: Free Form
 
 > **justification**
 >
@@ -207,9 +206,8 @@ TODO: add multiple choice options as well
 
 ### What kind of support would you like to see or expect to see from the rust foundation?
 
-Free Form.
-
-TODO: add multiple choice options as well
+- TODO: add multiple choice options as well
+- Other: Free Form
 
 > **justification**
 >
@@ -220,9 +218,8 @@ TODO: add multiple choice options as well
 
 ### What kind of support would you not like to see or not expect to see from the rust foundation?
 
-Free Form.
-
-TODO: add multiple choice options as well
+- TODO: add multiple choice options as well
+- Other: Free Form
 
 > **justification**
 >
@@ -395,17 +392,35 @@ Select all that apply:
 > being done. Those contributing new code will likely face diff problems than
 > those who mainly review or coordinate work.
 
+### What were the issues that prevented you from completing your contribution?
+
+- TODO: Add known possible issues
+- Other: Free Form
+
+> **justification**
+>
+> Core survey question. Identifies issues that are preventing contributors from
+> getting more involved in the project.
+
 [NEXT](#end)
 
 ## For potential contributors
 
 ### What motivates you to want to get involved?
 
-Free Form.
+- I want to improve my Rust skills and learn from the experts maintaining Rust.
+- I want to implement features that I need as a user of Rust.
+- I want to give back to the Rust community.
+- I want to add to my portfolio of open source work for my resume.
+- I was encouraged to contribute by an existing Rust contributor / maintainer.
+- My work assigned open source contributions to me as part of my job.
+- Other: Free form
 
 > **justification**
 >
-> TODO
+> Useful in identifying paths that are bringing new contributors into the
+> project which we should focus on expanding if we would like to grow our
+> number of contributors.
 
 ### What kind of work would you like to do within the rust project?
 
@@ -423,7 +438,10 @@ Free Form.
 
 ### What has prevented you from getting involved?
 
-Free Form.
+Select all that apply:
+
+- TODO add other known issues
+- Other: Free Form.
 
 > **justification**
 >
