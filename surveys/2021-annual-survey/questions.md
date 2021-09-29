@@ -375,19 +375,27 @@ Select all that apply:
 - From source
 - Other
 
-### If you don't use rustup, why not?
 
-Select all that apply:
+### In your opinion, how do you find the following aspects of Rust?
 
-- I'm prefer using my platform's package installer (yum, apt-get, homebrew, msi installer, etc.)
-- I don't trust that rustup provides secure binaries
-- I didn't know about it
-- The network I'm on does not allow for it (e.g., firewall)
-- I tried, but it didn't work
-- Other
+Options:
 
-> TODO: a lot of people previously reported that they *use* rustup but wish they didn't. How can we capture that here?
-> TODO: this was previously free form. Do we prefer the multiple choice?
+- Great
+- Good enough
+- Could be better
+- Seriously lacking
+
+Aspects:
+
+- Compile times
+- Binary size
+- Disk space (e.g., the size of `target` folder)
+- The number of internal compiler errors (ICEs)
+- IDE experience
+- Available tools and support
+- Async programming
+- GUI development
+- Rust language and standard library documentation
 
 ### In your opinion, have the following aspects of Rust gotten better or worse over the past year?
 
@@ -404,8 +412,14 @@ Aspects:
 
 - Compile times
 - Binary size
-- The size of `target` folder
+- Disk space (e.g., the size of `target` folders)
 - The number of internal compiler errors (ICEs)
+- IDE experience
+- Available tools and support
+- Async programming
+- GUI development
+- Rust language and standard library documentation
+
 
 ### Please indicate how vital to your workflow each of the following tools are when programming with Rust:
 
@@ -449,40 +463,6 @@ Select all the apply:
 
 > TODO: do we need to provide racer as an option here?
 
-### How would you rate Rust's IDE or editor experience?
-
-Select one:
-
-- World class!
-- Great
-- Good enough
-- Could be better
-- Terrible
-
-> TODO: how can we relate this back to other languages? Presumably C# devs might find Rust's editor experience poor but Ruby devs might like it
-
-### For each of the challenges listed below, please indicate whether you believe there has been any change within the last year
-
-Options:
-
-- Got worse
-- No change
-- Slight improvement
-- Some improvement
-- A lot of improvement
-- I'm not sure
-
-Challenges:
-
-- Library support
-- IDE experience
-- Adoption level of Rust
-- Available tools and support
-- Stable language features and crates
-- Async programming options
-- GUI development
-- Rust language documentation
-- Compile times
 
 ### Which of the following apply to you:
 
@@ -533,47 +513,43 @@ Challenges:
 > **Justification** Captures not just those who tried and failed, but those who tried and succeeded.
 > Shows failure/difficulty rate compared to success rate.
 > Also overall engagement / attempted engagement in these ways.
->
-> How welcome do you feel when interacting with the Rust community in the following ways? (1/2/3/NA?) TODO in the last year
->
-> - other social media (twitter, facebook, other sites 'outside' core Rust, e.g., r/programming, HN - TODO one or two answers)
-> - rust-lang GH
-> - other GH Rust project
-> - Zulip/internals/Discord
-> - users/stack overflow
-> - r/rust
-> - Rust conferences
-> - Local Rust events, e.g., meetups
 
-> TODO anything more objective like asking about particular incidents or kinds of incidents?
+
+### How welcome do you feel when interacting with the Rust community in the following ways?
+
+- rust-lang GitHub organization
+- Rust community GitHub projects
+- internals.rust-lang.org, Rust Discord, or Rust Zulip
+- users.rust-lang.org, Rust questions on stack overflow
+- r/rust
+- other social media (Twitter, Facebook, WeChat, and other sites 'outside' the Rust project, e.g., r/programming, Hacker News)
+- Rust conferences
+- Local Rust events, e.g., meetups
+
 > **Survey Flow** If they indicated feeling unwelcome above:
-> ###You indicated that you did not feel welcome in the Rust community. Are there any details about your experience that you would like to share with us?
->
-> TODO ask about blockers for participation?
+
+### You indicated that you did not feel welcome in the Rust community. Are there any details about your experience that you would like to share with us?
+
+Free form.
 
 ## Rust at work
 
 > This section is largely in service of the [contexts](./design/contexts.md) design document.
 
-### Are you using Rust at work
+### Are you using Rust at work?
 
 Select one:
 
 - Yes, for the majority of my coding
 - Yes, it's one of a number of languages I use and I use it regularly
 - Yes, but I only use it occasionally
-- No, but it is likely in the next year
-- No, I use other programming languages at work
-- Not applicable (i.e., I don't write software professionally, I am student, etc.)
+- No
 
 > **justification**
 >
 > We want to establish what percentage of those who could possibly use Rust in a professional setting
 > are using Rust in a professional setting. This is most interesting over time. 
 > Answers to this question should be combined with whether the respondent has ever used Rust.
-
-> **TODO**: explain why the following questions are not asked
-> Is Rust used in the company where you work?
 
 ### To what extent is Rust currently being used by your company?
 
