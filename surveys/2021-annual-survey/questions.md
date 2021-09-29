@@ -632,11 +632,10 @@ Select one:
 Select one:
 
 - University or other tertiary institute
-- Bootcamp or other vocational-focussed educational institute
-- A short training course offered by your employer or a contracted third party
+- High school or secondary school
+- Bootcamp or other vocational-focussed educational institute (paid for by you)
+- A short training course offered by your employer or a contracted third party (paid for by your employer, not by you or the government)
 
-> TODO are the latter two sufficiently differentiated?
-> TODO Should there be something spcifically separating an online bootcamp/automated course from one taught by a person?
 
 ### Which best describes your course or activity?
 
