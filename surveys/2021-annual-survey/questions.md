@@ -558,9 +558,8 @@ Select one:
 - My company uses Rust for a large portion of production projects.
 - My company uses Rust for a small portion of production projects.
 - My company uses Rust only for non-production projects (e.g., tooling).
-- My company has actively experimented with Rust for use in production projects.
-- My company has actively experimented with Rust for use in non-production projects.
-- My company has seriously discussed but not experimented with using Rust.
+- My company has actively experimented with Rust
+- My company has seriously considered, but not experimented with, using Rust.
 - My company has not seriously considered Rust for any use.
 - I am unsure whether my company has considered using or currently uses Rust.
 - I don't work for a company or my company does not develop software of any kind.
