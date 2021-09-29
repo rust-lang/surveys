@@ -374,7 +374,7 @@ Options:
 - Great
 - Good enough
 - Could be better
-- Terrible
+- Seriously lacking
 
 Aspects:
 
@@ -403,7 +403,7 @@ Aspects:
 
 - Compile times
 - Binary size
-- Disk space (e.g., the size of `target` folder)
+- Disk space (e.g., the size of `target` folders)
 - The number of internal compiler errors (ICEs)
 - IDE experience
 - Available tools and support
@@ -508,12 +508,12 @@ Select all the apply:
 
 ### How welcome do you feel when interacting with the Rust community in the following ways?
 
-- other social media (twitter, facebook, other sites 'outside' core Rust, e.g., r/programming, HN - TODO one or two answers)
-- rust-lang GH
-- other GH Rust project
-- Zulip/internals/Discord
-- users/stack overflow
+- rust-lang GitHub organization
+- Rust community GitHub projects
+- internals.rust-lang.org, Rust Discord, or Rust Zulip
+- users.rust-lang.org, Rust questions on stack overflow
 - r/rust
+- other social media (Twitter, Facebook, WeChat, and other sites 'outside' the Rust project, e.g., r/programming, Hacker News)
 - Rust conferences
 - Local Rust events, e.g., meetups
 

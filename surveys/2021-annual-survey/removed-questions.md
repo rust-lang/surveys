@@ -317,5 +317,4 @@ Select all that apply:
 > specific and actionable questions. We might want to ask such questions for other tools too - there is no
 > indication that Rustup maintainers are more in need of this info than others.
 >
-> TODO: a lot of people previously reported that they *use* rustup but wish they didn't. How can we capture that here?
-> TODO: this was previously free form. Do we prefer the multiple choice?
+> Open question: a lot of people previously reported that they *use* rustup but wish they didn't. How can we capture that here?
