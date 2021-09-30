@@ -445,12 +445,8 @@ Tools:
 
 Select all the apply:
 
-- VS Code with the rust-analyzer extension
-- VS Code with the rust extension (a.k.a rls)
-- VS Code without an extension for Rust
-- vim or neovim with rust-analyzer
-- vim or neovim with rls
-- vim or neovim without specific Rust support (beyond synatx highlighting)
+- VS Code
+- vi/vim/neovim
 - IntelliJ Rust
 - Emacs
 - Sublime
@@ -458,55 +454,97 @@ Select all the apply:
 - Xcode
 - Atom
 - CLion
-- Nano or Pico
 - Other
 
-> TODO: do we need to provide racer as an option here?
+> **justification**
+>
+> It is good to know which editor is the most preferred for Rust development. This
+> can change investment strategies for further IDE development.
+>
+> Note: previously this question included different 'drivers' of the Rust IDE
+> experience (e.g., racer, rls, rust-analyzer). Development has consolidated on
+> rust-analyzer, and so it's not necessary to find out which is being used.
+> If we are curious how far along adoption of rust-analyzer is, we can ask that
+> in a separate question, though this is likely easier to find out through download
+> numbers.
 
 
-### Which of the following apply to you:
+### In which of the following ways have you participated in the Rust community in the last 6 months:
 
-- I have contributed (in any way) to a crate published on crates.io
-- I am maintainer of a Rust project outside of the core project
-- I have contributed (in any way) to a core Rust project (part of the rust-lang GitHub org)
-- I'm a member of a Rust team or WG
-- I've read the Rust blog
-- I've read TWiR
-- I've read GH rust-lang org/Zulip/Discord/internals/users/r/rust (separate answers or one answer?)
-- I've written a comment/post on GH rust-lang org/Zulip/Discord/internals/users/r/rust (separate answers or one answer?)
-- Attended a meetup (including virtual)
-- participated in a private Rust community (e.g., work Slack, private messages)
+Select all that apply:
+
+- I have produced informational content about Rust (e.g., blogged, live streamed, made a YouTube video, etc.).
+- On several occasions I have consumed informational content about Rust (e.g., blogs, live streams, YouTube videos, etc.).
+- On several occasions I have read *comments* about Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
+- On several occasions I have *commented* on Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
+- On several occasions I have read official Rust communication channels (e.g., This Week in Rust, the official Rust blog, the Rust Twitter account, etc.)
+- On several occasions I have participated in conversations about Rust on social media (Twitter, Facebook, LinkedIn, etc.)
+- I have participated in Rust community forums or chats (e.g., users.rust-lang.org, Rust Discord, a local Rust chat community, etc.)
+- I have attended a Rust meetup or conference (virtual or in-person).
 
 > **justification**
-> We'd like to get a picture of _how_ people participate in the Rust community
 >
-> TODO separate issue management, docs, etc. from code contribution?
-> 
-> TODO possibly multiple questions for past month, past year, ever, + would you like to do
-> POSSIBLE Approach below:
+> We'd like to get a picture of _how_ people participate in the Rust community. In
+> particular we can use this information to do cohort analysis on highly "active"
+> community members in comparison to less active community members.
 
-> **Survey Flow Example** Following question would only appear if indicated "I have read the Rust blog."
+### Roughly how often do you actively contribute to the Rust project?
 
-### Previously you indicated that you read the Rust blog. How often do you do so?
+Options:
 
-- [frequency options]
+- Comment on, contribute to discussion of, or provide edits to an open RFC
+- Create a new thread or comment on internals.rust-lang.org
+- Discuss Rust project  in an official chat (either Zulip or Discord)
+- Open an issue on any repo in the rust-lang GitHub org
+- Contribute code changes (including tests) to the Rust compiler (rust-lang/rust)
+- Contribute code changes (including tests) to any other project in the rust-lang GitHub org
+- Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub org.
 
-> **Survey Flow Example** Following question would only appear if indicated "I have not read the Rust blog."
+Select one:
 
-### Previously you indicated that you do not read the Rust blog. Why not?
+- Daily
+- Weekly
+- Monthly
+- Less frequently than monthly
+- Never but have tried to
+- Never and have never tried to
 
-- I see no benefit
-- I don't have the time to do so
-- [Other options]
+> **justification**
+>
+> We want to understand the nature of contribution to the Rust project both
+> to better understand the shape of community involvement and for cohort analysis.
 
-### Have you completed or tried to complete any of the following?
+### How many open-source and non-personal Rust projects do you currently maintain?
 
-- GitHub issue (Rust)
-- GitHub PR (Rust)
-- Discuss an RFC
-- Write an RFC
-- Discuss Rust on GH rust-lang org/Zulip/internals/Discord
-- Publish a crate
+Non-personal: at least one other person also contributes and the project is meant for others and not just yourself.
+Maintain: you have review and merge privileges
+
+- 0
+- 1
+- 2-4
+- 5-10
+- More than 10
+
+> **justification**
+>
+> We would like to know the rough make up of those who are using Rust in general
+> vs those who actively participate in development of open source Rust projects.
+
+### How many open-source and non-personal Rust projects do you currently contribute to (not including those you maintain)?
+
+Non-personal: at least one other person also contributes and the project is meant for others and not just yourself.
+Contribute: you regularly provide code, tests, documentation, issues, etc.
+
+- 0
+- 1
+- 2-4
+- 5-10
+- More than 10
+
+> **justification**
+>
+> We would like to know the rough make up of those who are using Rust in general
+> vs those who actively participate in development of open source Rust projects.
 
 > **Follow-up: How difficult was it to complete [task]?**
 >
@@ -637,7 +675,7 @@ Select one:
 - A short training course offered by your employer or a contracted third party
 
 > TODO are the latter two sufficiently differentiated?
-> TODO Should there be something spcifically separating an online bootcamp/automated course from one taught by a person?
+> TODO Should there be something specifically separating an online bootcamp/automated course from one taught by a person?
 
 ### Which best describes your course or activity?
 
