@@ -659,12 +659,16 @@ Select one:
 
 > This section is largely in service of the [contexts](./design/contexts.md) design document.
 
-### Are you taking a course or training which uses or teaches Rust, or have you in the past year, or are you enrolled for one in the coming year?
+### Have you taken in the past year or are you currently taking a course or training which uses or teaches Rust?
 
 Select one:
 
-- Yes
-- No
+- Yes [NEXT](#where-is-the-course-or-activity-taught)
+- No [NEXT](#what-is-your-biggest-worry-for-the-future-of-rust)
+
+> **justification**
+>
+> This question is primarily used to funnel respondents into the more specific questions about the kinds of educational activities they've been a part of.
 
 ### Where is the course or activity taught?
 
@@ -677,18 +681,15 @@ Select one:
 
 ### Which best describes your course or activity?
 
-- A programming course which only teaches Rust
-- A programming course which teaches Rust amongst other languages
-- An computer science course (e.g., operating systems, algorithms, etc.) course which uses Rust with or without other languages
-- Other course which uses Rust
-- Individual project
-- Group project
-- Other activity
+- A course teaching exclusively how to program in Rust
+- A course teaching how to program in Rust and other languages
+- A computer science course (e.g., operating systems, algorithms, etc.) course which uses Rust (and potentially other languages)
+- Other type of course where Rust was used
 
 ### Is Rust mandated for your course or activity, or did you choose it yourself?
 
-- Compulsory
-- Optional
+- Rust was mandated
+- I choose to use Rust
 
 ## Your opinions about Rust
 
