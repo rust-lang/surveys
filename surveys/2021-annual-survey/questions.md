@@ -476,7 +476,7 @@ Select all that apply:
 - I have produced informational content about Rust (e.g., blogged, live streamed, made a YouTube video, etc.).
 - On several occasions I have consumed informational content about Rust (e.g., blogs, live streams, YouTube videos, etc.).
 - On several occasions I have read *comments* about Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
-- On several occasions I have *commented* on about Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
+- On several occasions I have *commented* on Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
 - On several occasions I have read official Rust communication channels (e.g., This Week in Rust, the official Rust blog, the Rust Twitter account, etc.)
 - On several occasions I have participated in conversations about Rust on social media (Twitter, Facebook, LinkedIn, etc.)
 - I have participated in Rust community forums or chats (e.g., users.rust-lang.org, Rust Discord, a local Rust chat community, etc.)
@@ -488,7 +488,7 @@ Select all that apply:
 > particular we can use this information to do cohort analysis on highly "active"
 > community members in comparison to less active community members.
 
-### How often do you actively contribute to the Rust project?
+### Roughly how often do you actively contribute to the Rust project?
 
 Options:
 
@@ -502,12 +502,12 @@ Options:
 
 Select one:
 
-- Almost daily
+- Daily
 - Weekly
-- Around once a month
-- Every other month or so
-- Never or rarely but have tried
-- Never or rarely and have never even tried
+- Monthly
+- Less frequently than monthly
+- Never but have tried to
+- Never and have never tried to
 
 > **justification**
 >
@@ -522,7 +522,7 @@ Maintain: you have review and merge privileges
 - 0
 - 1
 - 2-4
-- 4-10
+- 5-10
 - More than 10
 
 > **justification**
@@ -533,12 +533,12 @@ Maintain: you have review and merge privileges
 ### How many open-source and non-personal Rust projects do you currently contribute to (not including those you maintain)?
 
 Non-personal: at least one other person also contributes and the project is meant for others and not just yourself.
-Contribute: you regularly provide code including tests, documentation, issues, etc.
+Contribute: you regularly provide code, tests, documentation, issues, etc.
 
 - 0
 - 1
 - 2-4
-- 4-10
+- 5-10
 - More than 10
 
 > **justification**
