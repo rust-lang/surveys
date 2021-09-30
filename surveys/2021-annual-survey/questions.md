@@ -719,11 +719,21 @@ Select one:
 >
 > Would be useful for leadership to understand the community's fears.
 
-> TODO Other possible questions for this section:
-> - upgrades breaking code (41, 42 from 2020)
-> - what is missing from the ecosystem (44 from 2020)
-> - do respondents consider Rust to be an employable skill (from contexts.md)
-> - Perception of Rust's learning curve? Do people feel like Rust's learning curve is worth it? (from experience.md)
+### In your opinion, how easy is it for qualified applicants to find a Rust job?
+
+Select one:
+
+- Very easy
+- Easy
+- Doable
+- Challenging
+- Extremely challenging
+- I'm not sure
+
+> **justification**
+>
+> The flip side of the question asking whether the respondent's company plans on hiring Rust developers, we
+> want to know how high respondents sense demand for Rust jobs is.
 
 ## Demographics
 
