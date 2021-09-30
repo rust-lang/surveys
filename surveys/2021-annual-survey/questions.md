@@ -22,9 +22,9 @@ We estimate it will take about 10-15 minutes to complete.
 
 Select one:
 
-- Yes, I have used Rust [NEXT](#your-rust-experience)
-- No, I don't use Rust, but I have in the past [NEXT](#for-previous-rust-users)
-- No, I have never used Rust [NEXT](#for-non-rust-users)
+- Yes, I have used Rust [`NEXT`](#your-rust-experience)
+- No, I don't use Rust, but I have in the past [`NEXT`](#for-previous-rust-users)
+- No, I have never used Rust [`NEXT`](#for-non-rust-users)
 
 > **justification**
 >
@@ -663,8 +663,8 @@ Select one:
 
 Select one:
 
-- Yes [NEXT](#where-is-the-course-or-activity-taught)
-- No [NEXT](#what-is-your-biggest-worry-for-the-future-of-rust)
+- Yes [`NEXT`](#where-is-the-course-or-activity-taught)
+- No [`NEXT`](#what-is-your-biggest-worry-for-the-future-of-rust)
 
 > **justification**
 >
