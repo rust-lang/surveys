@@ -50,7 +50,7 @@ Select all that apply:
 - My company doesn't use Rust
 - Switching to Rust made me less productive
 - I needed better interoperability between Rust and other languages
-- Other [open response]
+- Other (open response)
 
 > **justification**
 >
@@ -69,7 +69,7 @@ Select all that apply:
 - Specifically to provide feedback on why I stopped using Rust.
 - To provide feedback on Rust in general.
 - Curiosity.
-- Other [open response]
+- Other (open response)
 
 > **ADDED**
 >
@@ -99,7 +99,7 @@ Select all that apply:
 - Switching to Rust would make me less productive
 - I haven't learned Rust yet, but I want to
 - I haven't learned Rust yet, and I don't want to
-- Other
+- Other (open response)
 
 > **justification**
 >
@@ -115,7 +115,7 @@ Select all that apply:
 - I consider myself part of the Rust Community.
 - Specifically to provide feedback on WHY I do not use Rust.
 - Curiosity.
-- Other [open response]
+- Other (open response)
 
 > **ADDED**
 >
@@ -178,7 +178,7 @@ Select all that apply:
 - Rust had better interoperability support with other languages
 - My company used Rust
 - Switching to Rust didn't make me less productive
-- Other
+- Other (open response)
 
 > **TODO** this question seems like it could be useful, but how?
 > **Justification** I think it's this question in combination with follow-up questions that really provides us with the insight. It's not just "I need better Interoperability" - it's "I need better interop with these languages.
@@ -216,7 +216,7 @@ Select all that apply:
 - Windows
 - Windows Subsystem for Linux
 - Mac OS
-- other [open response]
+- Other (open response)
 
 ### On the primary machine you compile Rust code on, how many logical CPU threads do you have?
 
@@ -244,9 +244,9 @@ Select all that apply:
 - Mac OS
 - iOS
 - Android
-- embedded platforms (with an operating system)
-- embedded platforms (bare metal)
-- other
+- Embedded platforms (with an operating system)
+- Embedded platforms (bare metal)
+- Other (open response)
 
 ### Which version(s) of Rust do you use?
 
@@ -260,7 +260,7 @@ Select one:
 - A specific version of nightly
 - Custom fork
 - I don't know
-- Other
+- Other (open response)
 
 ### When I upgrade to a new **stable** version of the compiler...
 
@@ -340,7 +340,7 @@ Select all that apply:
 - To help test the nightly version for bugs
 - For testing in CI
 - A dependency I use requires it
-- Other
+- Other (open response)
 
 > **justification**
 >
@@ -356,7 +356,7 @@ Select all that apply:
 - To adopt stabilized language features as early as possible
 - To help test the beta version for bugs
 - For testing in CI
-- Other
+- Other (open response)
 
 > **justification**
 >
@@ -373,8 +373,7 @@ Select all that apply:
 - Official Windows .msi installers
 - Official macOS .pkg installers
 - From source
-- Other
-
+- Other (open response)
 
 ### In your opinion, how do you find the following aspects of Rust?
 
@@ -454,7 +453,7 @@ Select all the apply:
 - Xcode
 - Atom
 - CLion
-- Other
+- Other (open response)
 
 > **justification**
 >
@@ -552,7 +551,6 @@ Contribute: you regularly provide code, tests, documentation, issues, etc.
 > Shows failure/difficulty rate compared to success rate.
 > Also overall engagement / attempted engagement in these ways.
 
-
 ### How welcome do you feel when interacting with the Rust community in the following ways?
 
 - rust-lang GitHub organization
@@ -560,7 +558,7 @@ Contribute: you regularly provide code, tests, documentation, issues, etc.
 - internals.rust-lang.org, Rust Discord, or Rust Zulip
 - users.rust-lang.org, Rust questions on stack overflow
 - r/rust
-- other social media (Twitter, Facebook, WeChat, and other sites 'outside' the Rust project, e.g., r/programming, Hacker News)
+- Other social media (Twitter, Facebook, WeChat, and other sites 'outside' the Rust project, e.g., r/programming, Hacker News)
 - Rust conferences
 - Local Rust events, e.g., meetups
 
@@ -610,12 +608,12 @@ Select one:
 
 Select as many as apply:
 
-- server-side application
-- desktop application
-- mobile application
-- web application
-- embedded application
-- other
+- Server-side application
+- Desktop application
+- Mobile application
+- Web application
+- Embedded application
+- Other (open response)
 
 > **justification**
 >
@@ -630,7 +628,7 @@ Select as many as apply:
 
 ### Approximately how many total developers does your company employ?
 
-- under 10
+- Under 10
 - 11-49
 - 50-99
 - 100-500
@@ -710,7 +708,7 @@ Select one:
 - Superseded by an alternative
 - Becomes too complex
 - Not enough localization
-- Other
+- Other (open response)
 - I'm not worried
 
 > Alternative: could rephrase as a 'select all that apply' question
@@ -767,7 +765,7 @@ Optional - Select all that apply.
 - Religious beliefs
 - Trans
 - Woman or perceived as a woman
-- Others
+- Other (open response)
 
 > **FLOW** skip the next question if answered "no"
 
@@ -794,12 +792,12 @@ Select one:
 
 ### Are you employed full- or part-time (including paid internships)?
 
-- yes, in tech
-- yes, in finance
-- yes, in government
-- yes, in education
-- yes, other
-- no
+- Yes, in tech
+- Yes, in finance
+- Yes, in government
+- Yes, in education
+- Yes, other
+- No
 
 ### If you are employed, which category best describes the domain in which *you* work?
 
@@ -883,7 +881,7 @@ Select all that apply:
 - Russian
 - Japanese
 - German
-- Other
+- Other (open response)
 
 > TODO other questions to understand the community
 > TODO ask community and core team, foundation
