@@ -596,9 +596,8 @@ Select one:
 - My company uses Rust for a large portion of production projects.
 - My company uses Rust for a small portion of production projects.
 - My company uses Rust only for non-production projects (e.g., tooling).
-- My company has actively experimented with Rust for use in production projects.
-- My company has actively experimented with Rust for use in non-production projects.
-- My company has seriously discussed but not experimented with using Rust.
+- My company has actively experimented with Rust
+- My company has seriously considered, but not experimented with, using Rust.
 - My company has not seriously considered Rust for any use.
 - I am unsure whether my company has considered using or currently uses Rust.
 - I don't work for a company or my company does not develop software of any kind.
@@ -671,11 +670,9 @@ Select one:
 Select one:
 
 - University or other tertiary institute
-- Bootcamp or other vocational-focussed educational institute
-- A short training course offered by your employer or a contracted third party
-
-> TODO are the latter two sufficiently differentiated?
-> TODO Should there be something specifically separating an online bootcamp/automated course from one taught by a person?
+- High school or secondary school
+- Bootcamp or other vocational-focussed educational institute (paid for by you)
+- A short training course offered by your employer or a contracted third party (paid for by your employer, not by you or the government)
 
 ### Which best describes your course or activity?
 
@@ -712,6 +709,7 @@ Select one:
 - Becomes too complex
 - Not enough localization
 - Other
+- I'm not worried
 
 > Alternative: could rephrase as a 'select all that apply' question
 >
