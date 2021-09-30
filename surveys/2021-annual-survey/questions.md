@@ -650,9 +650,10 @@ Select one:
 
 - Yes
 - No
-- I don't know
+- I don't know or I don't work at company that would hire software developers.
 
 > This question assess hiring sentiment. Although there is intrinsic uncertainty, it is easy to answer and forward looking.
+> It will also be interesting to see what the demand for Rust skills from companies is over time.
 
 ## Rust in education
 
