@@ -747,9 +747,11 @@ See [who](./design/who.md).
 
 The following are primarily for cohort analysis, secondarily for understanding the shape of the community.
 
-### Do you consider yourself a member of an underrepresented group in technology?
+### Do you consider yourself a member of an underrepresented or marginalized group in technology?
 
-Optional - Select all that apply. Please share only what you are comfortable sharing. This will help us understand how well our outreach efforts are going.
+Please share only what you are comfortable sharing. This will help us understand how well our outreach efforts are going.
+
+Optional - Select all that apply.
 
 - No
 - Yes, but I prefer not to say which
