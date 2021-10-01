@@ -2,7 +2,7 @@
 
 The trademark survey is aimed at gathering data about how the community wishes
 the trademark policy to function in practice to help guide the development of
-the Rust tradmark policy.
+the Rust trademark policy.
 
 Discussion of the survey happens on [TODO: get a dedicated channel / stream for trademark survey discussions?](https://rust-lang.zulipchat.com/#narrow/stream/294169-t-community.2Frust-survey-2021).
 
