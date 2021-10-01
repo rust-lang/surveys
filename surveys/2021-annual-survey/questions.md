@@ -802,7 +802,7 @@ Select one:
 Select one:
 
 - Yes
-- No
+- No [`NEXT`](#excluding-rust-which-programming-languages-are-you-experienced-with)
 
 ### If you are employed, which category best describes the domain in which *you* work?
 
@@ -870,23 +870,55 @@ Select one:
 > TODO are these the categories we care about? Do we want to separate China from east asia given the distinct communities?
 > Note: We could use Survey Language as a proxy for separating China. This depends some on the purpose behind identifying this community and the level of accuracy needed. (Are we interested in location for future planning of events, or to identify culture/group trends?)
 
-### Level of English (select all which apply)
-
-- Can have a technical conversation
-- Can understand most technical documentation
-- Can understand a technical talk (e.g., at a conference or meetup)
-- Some everyday English
-- None
-
-### What is your preferred language(s) for technical communication
+### In what ways are you comfortable communication about technical topics in English?
 
 Select all that apply:
 
+- I feel comfortable and capable of having a *spoken* technical conversation in English
+- I feel comfortable and capable of having a *written* technical conversation in English
+- I feel comfortable and capable of reading technical documentation in English
+- I feel comfortable and capable of consuming a technical talk (e.g., at a conference or meetup) in English
+- I feel comfortable and capable of consuming a written technical educational material (e.g., technical books, blog posts, etc.) in English
+
+> **justification**
+>
+> We want to understand self reported feeling of comfort and capability of communication
+> of English since a large portion of the Rust community is and likely will always be in English.
+
+### What is/are your **preferred** language(s) for the following forms of technical communication?
+
+**IMPORTANT**: The answers should reflect your **preference** and **not** what you are capable of communicating in. For example, if you feel comfortable and capable of consuming technical communication in both English and Korean, but you always prefer Korean, you should *only* answer Korean as that is your preference.
+
+Forms of communication:
+
+- *spoken* technical conversation
+- *written* technical conversation
+- technical documentation
+- technical talks
+- written technical education material
+
+**Languages**
+
+Select all that apply
+
 - English
-- Chinese
+- Mandarin Chinese
 - Hindi
 - Spanish
+- Portuguese
 - Russian
 - Japanese
+- Turkish
+- Korean
+- French
 - German
+- Vietnamese
+- Urdu
 - Other (open response)
+
+> **justification**
+>
+> We want to understand *preference* of technical communication and how that differs
+> from their abilities to consume technical communication in English.
+> The languages selected are based on all national languages that are members of
+> the top 20 most spoken languages in the world.
