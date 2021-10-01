@@ -687,7 +687,7 @@ Select one:
 ### Is Rust mandated for your course or activity, or did you choose it yourself?
 
 - Rust was mandated
-- I choose to use Rust
+- I chose to use Rust
 
 ## Your opinions about Rust
 
@@ -878,7 +878,3 @@ Select all that apply:
 - Japanese
 - German
 - Other (open response)
-
-> TODO other questions to understand the community
-> TODO ask community and core team, foundation
-> TODO other questions for cohort analysis?
