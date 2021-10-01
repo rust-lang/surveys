@@ -765,13 +765,13 @@ Optional - Select all that apply.
 - Woman or perceived as a woman
 - Other (open response)
 
-### Do you feel your belonging to an underrepresented group in technology makes it difficult for you to participate in the Rust community?
+### Do you feel your belonging to an underrepresented or marginalized group in technology makes it difficult for you to participate in the Rust community?
 
 Select one:
 
-- Yes
-- No
-- Maybe
+- Often
+- Sometimes
+- Never
 
 ### If you find it difficult to participate in the Rust community, and feel comfortable giving more details, please tell us what makes it difficult
 
