@@ -22,9 +22,9 @@ We estimate it will take about 10-15 minutes to complete.
 
 Select one:
 
-- Yes, I have used Rust [NEXT](#your-rust-experience)
-- No, I don't use Rust, but I have in the past [NEXT](#for-previous-rust-users)
-- No, I have never used Rust [NEXT](#for-non-rust-users)
+- Yes, I have used Rust [`NEXT`](#your-rust-experience)
+- No, I don't use Rust, but I have in the past [`NEXT`](#for-previous-rust-users)
+- No, I have never used Rust [`NEXT`](#for-non-rust-users)
 
 > **justification**
 >
@@ -50,7 +50,7 @@ Select all that apply:
 - My company doesn't use Rust
 - Switching to Rust made me less productive
 - I needed better interoperability between Rust and other languages
-- Other [open response]
+- Other (open response)
 
 > **justification**
 >
@@ -69,7 +69,7 @@ Select all that apply:
 - Specifically to provide feedback on why I stopped using Rust.
 - To provide feedback on Rust in general.
 - Curiosity.
-- Other [open response]
+- Other (open response)
 
 > **ADDED**
 >
@@ -99,7 +99,7 @@ Select all that apply:
 - Switching to Rust would make me less productive
 - I haven't learned Rust yet, but I want to
 - I haven't learned Rust yet, and I don't want to
-- Other
+- Other (open response)
 
 > **justification**
 >
@@ -115,7 +115,7 @@ Select all that apply:
 - I consider myself part of the Rust Community.
 - Specifically to provide feedback on WHY I do not use Rust.
 - Curiosity.
-- Other [open response]
+- Other (open response)
 
 > **ADDED**
 >
@@ -178,7 +178,7 @@ Select all that apply:
 - Rust had better interoperability support with other languages
 - My company used Rust
 - Switching to Rust didn't make me less productive
-- Other
+- Other (open response)
 
 > **TODO** this question seems like it could be useful, but how?
 > **Justification** I think it's this question in combination with follow-up questions that really provides us with the insight. It's not just "I need better Interoperability" - it's "I need better interop with these languages.
@@ -216,7 +216,7 @@ Select all that apply:
 - Windows
 - Windows Subsystem for Linux
 - Mac OS
-- other [open response]
+- Other (open response)
 
 ### On the primary machine you compile Rust code on, how many logical CPU threads do you have?
 
@@ -244,9 +244,9 @@ Select all that apply:
 - Mac OS
 - iOS
 - Android
-- embedded platforms (with an operating system)
-- embedded platforms (bare metal)
-- other
+- Embedded platforms (with an operating system)
+- Embedded platforms (bare metal)
+- Other (open response)
 
 ### Which version(s) of Rust do you use?
 
@@ -260,7 +260,7 @@ Select one:
 - A specific version of nightly
 - Custom fork
 - I don't know
-- Other
+- Other (open response)
 
 ### When I upgrade to a new **stable** version of the compiler...
 
@@ -340,7 +340,7 @@ Select all that apply:
 - To help test the nightly version for bugs
 - For testing in CI
 - A dependency I use requires it
-- Other
+- Other (open response)
 
 > **justification**
 >
@@ -356,7 +356,7 @@ Select all that apply:
 - To adopt stabilized language features as early as possible
 - To help test the beta version for bugs
 - For testing in CI
-- Other
+- Other (open response)
 
 > **justification**
 >
@@ -373,8 +373,7 @@ Select all that apply:
 - Official Windows .msi installers
 - Official macOS .pkg installers
 - From source
-- Other
-
+- Other (open response)
 
 ### In your opinion, how do you find the following aspects of Rust?
 
@@ -454,7 +453,7 @@ Select all the apply:
 - Xcode
 - Atom
 - CLion
-- Other
+- Other (open response)
 
 > **justification**
 >
@@ -552,7 +551,6 @@ Contribute: you regularly provide code, tests, documentation, issues, etc.
 > Shows failure/difficulty rate compared to success rate.
 > Also overall engagement / attempted engagement in these ways.
 
-
 ### How welcome do you feel when interacting with the Rust community in the following ways?
 
 - rust-lang GitHub organization
@@ -560,7 +558,7 @@ Contribute: you regularly provide code, tests, documentation, issues, etc.
 - internals.rust-lang.org, Rust Discord, or Rust Zulip
 - users.rust-lang.org, Rust questions on stack overflow
 - r/rust
-- other social media (Twitter, Facebook, WeChat, and other sites 'outside' the Rust project, e.g., r/programming, Hacker News)
+- Other social media (Twitter, Facebook, WeChat, and other sites 'outside' the Rust project, e.g., r/programming, Hacker News)
 - Rust conferences
 - Local Rust events, e.g., meetups
 
@@ -610,12 +608,12 @@ Select one:
 
 Select as many as apply:
 
-- server-side application
-- desktop application
-- mobile application
-- web application
-- embedded application
-- other
+- Server-side application
+- Desktop application
+- Mobile application
+- Web application
+- Embedded application
+- Other (open response)
 
 > **justification**
 >
@@ -630,7 +628,7 @@ Select as many as apply:
 
 ### Approximately how many total developers does your company employ?
 
-- under 10
+- Under 10
 - 11-49
 - 50-99
 - 100-500
@@ -650,20 +648,25 @@ Select one:
 
 - Yes
 - No
-- I don't know
+- I don't know or I don't work at company that would hire software developers.
 
 > This question assess hiring sentiment. Although there is intrinsic uncertainty, it is easy to answer and forward looking.
+> It will also be interesting to see what the demand for Rust skills from companies is over time.
 
 ## Rust in education
 
 > This section is largely in service of the [contexts](./design/contexts.md) design document.
 
-### Are you taking a course or training which uses or teaches Rust, or have you in the past year, or are you enrolled for one in the coming year?
+### Have you taken in the past year or are you currently taking a course or training which uses or teaches Rust?
 
 Select one:
 
-- Yes
-- No
+- Yes [`NEXT`](#where-is-the-course-or-activity-taught)
+- No [`NEXT`](#what-is-your-biggest-worry-for-the-future-of-rust)
+
+> **justification**
+>
+> This question is primarily used to funnel respondents into the more specific questions about the kinds of educational activities they've been a part of.
 
 ### Where is the course or activity taught?
 
@@ -676,18 +679,15 @@ Select one:
 
 ### Which best describes your course or activity?
 
-- A programming course which only teaches Rust
-- A programming course which teaches Rust amongst other languages
-- An computer science course (e.g., operating systems, algorithms, etc.) course which uses Rust with or without other languages
-- Other course which uses Rust
-- Individual project
-- Group project
-- Other activity
+- A course teaching exclusively how to program in Rust
+- A course teaching how to program in Rust and other languages
+- A computer science course (e.g., operating systems, algorithms, etc.) course which uses Rust (and potentially other languages)
+- Other type of course where Rust was used
 
 ### Is Rust mandated for your course or activity, or did you choose it yourself?
 
-- Compulsory
-- Optional
+- Rust was mandated
+- I chose to use Rust
 
 ## Your opinions about Rust
 
@@ -708,7 +708,7 @@ Select one:
 - Superseded by an alternative
 - Becomes too complex
 - Not enough localization
-- Other
+- Other (open response)
 - I'm not worried
 
 > Alternative: could rephrase as a 'select all that apply' question
@@ -717,11 +717,19 @@ Select one:
 >
 > Would be useful for leadership to understand the community's fears.
 
-> TODO Other possible questions for this section:
-> - upgrades breaking code (41, 42 from 2020)
-> - what is missing from the ecosystem (44 from 2020)
-> - do respondents consider Rust to be an employable skill (from contexts.md)
-> - Perception of Rust's learning curve? Do people feel like Rust's learning curve is worth it? (from experience.md)
+### In your opinion, how easy is it for qualified applicants to find a Rust job?
+
+Select one:
+
+- Easy
+- Doable
+- Challenging
+- I'm not sure
+
+> **justification**
+>
+> The flip side of the question asking whether the respondent's company plans on hiring Rust developers, we
+> want to know how high respondents sense demand for Rust jobs is.
 
 ## Demographics
 
@@ -735,11 +743,13 @@ See [who](./design/who.md).
 
 The following are primarily for cohort analysis, secondarily for understanding the shape of the community.
 
-### Do you consider yourself a member of an underrepresented group in technology?
+### Do you consider yourself a member of an underrepresented or marginalized group in technology?
 
-Optional - Select all that apply. Please share only what you are comfortable sharing. This will help us understand how well our outreach efforts are going.
+Please share only what you are comfortable sharing. This will help us better serve underrepresented and marginalized groups, better understand how well our outreach efforts are going, and more.
 
-- No
+Optional - Select all that apply.
+
+- No [`NEXT`](#if-you-find-it-difficult-to-participate-in-the-rust-community-and-feel-comfortable-giving-more-details-please-tell-us-what-makes-it-difficult)
 - Yes, but I prefer not to say which
 - Cultural beliefs
 - Disabled or person with disability (including physical, mental, and other)
@@ -753,9 +763,7 @@ Optional - Select all that apply. Please share only what you are comfortable sha
 - Religious beliefs
 - Trans
 - Woman or perceived as a woman
-- Others
-
-> **FLOW** skip the next question if answered "no"
+- Other (open response)
 
 ### Do you feel your belonging to an underrepresented group in technology makes it difficult for you to participate in the Rust community?
 
@@ -765,7 +773,7 @@ Select one:
 - No
 - Maybe
 
-#### If you find it difficult to participate in the Rust community, and feel comfortable giving more details, please tell us what makes it difficult
+### If you find it difficult to participate in the Rust community, and feel comfortable giving more details, please tell us what makes it difficult
 
 Free form.
 
@@ -773,19 +781,19 @@ Free form.
 
 Select one:
 
-- yes
-- no
+- Yes
+- No
 
 > TODO Does it matter in what field? Do we want a follow-up question like in employment?
 
 ### Are you employed full- or part-time (including paid internships)?
 
-- yes, in tech
-- yes, in finance
-- yes, in government
-- yes, in education
-- yes, other
-- no
+> Optional
+
+Select one:
+
+- Yes
+- No
 
 ### If you are employed, which category best describes the domain in which *you* work?
 
@@ -869,8 +877,4 @@ Select all that apply:
 - Russian
 - Japanese
 - German
-- Other
-
-> TODO other questions to understand the community
-> TODO ask community and core team, foundation
-> TODO other questions for cohort analysis?
+- Other (open response)
