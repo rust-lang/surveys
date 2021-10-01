@@ -792,11 +792,11 @@ Select one:
 
 ### Are you employed full- or part-time (including paid internships)?
 
-- Yes, in tech
-- Yes, in finance
-- Yes, in government
-- Yes, in education
-- Yes, other
+> Optional
+
+Select one:
+
+- Yes
 - No
 
 ### If you are employed, which category best describes the domain in which *you* work?
