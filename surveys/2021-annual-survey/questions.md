@@ -29,10 +29,6 @@ Select one:
 > **justification**
 >
 > Fundamental for cohort analysis
->
-> **changes**
->
-> Rephrased answers slightly.
 
 ## For previous Rust users
 
@@ -878,8 +874,7 @@ Select one:
 - east or south-east Asia
 - Australasia or the pacific
 
-> TODO are these the categories we care about? Do we want to separate China from east asia given the distinct communities?
-> Note: We could use Survey Language as a proxy for separating China. This depends some on the purpose behind identifying this community and the level of accuracy needed. (Are we interested in location for future planning of events, or to identify culture/group trends?)
+> TODO: https://github.com/rust-lang/surveys/issues/57
 
 ### In what ways are you comfortable communication about technical topics in English?
 
