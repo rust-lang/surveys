@@ -721,11 +721,9 @@ Select one:
 
 Select one:
 
-- Very easy
 - Easy
 - Doable
 - Challenging
-- Extremely challenging
 - I'm not sure
 
 > **justification**
