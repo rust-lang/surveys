@@ -747,7 +747,7 @@ The following are primarily for cohort analysis, secondarily for understanding t
 
 ### Do you consider yourself a member of an underrepresented or marginalized group in technology?
 
-Please share only what you are comfortable sharing. This will help us understand how well our outreach efforts are going.
+Please share only what you are comfortable sharing. This will help us better serve underrepresented and marginalized groups, better understand how well our outreach efforts are going, and more.
 
 Optional - Select all that apply.
 
