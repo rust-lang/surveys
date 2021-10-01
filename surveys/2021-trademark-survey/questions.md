@@ -31,15 +31,72 @@ We estimate it will take about ? minutes to complete.
 > - Resolve and close open issues related to this survey on `rust-lang/surveys`
 > - Are these questions being presented in the optimal order?
 
+## Basic principles
+
+Trademarks protect users from confusion, meaning that when they engage with a
+“Rust”- branded product or service they will be getting something with the
+qualities they expect. Someone will choose the same fast food restaurant in
+many different places because the brand signals to them that they will be
+getting food with the qualities and characteristics that they expect.
+
+Trademarks for open source software have a wrinkle not found in other types of
+products. The copyright license allows the “product” – the software – to be
+changed by others. The question becomes at what point users will be misled if
+something is called “Rust” but has different qualities and characteristics than
+what is available from the original source.
+
+This source identifying/quality assurance function is not all that trademarks
+are used for. Trademark law also covers confusion about whether the trademark
+owner is endorsing or sponsoring the user. For example, when websites include
+their customers’ logos on their websites, we understand that the customer’s
+logo is being used to signal that the owner of the logo approves of or endorses
+the product, and we take that information into account when considering the
+product. A suggestion of endorsement that is inaccurate can also be a trademark
+infringement.
+
+Trademark law always allows others to use a trademark to truthfully describe
+the product or service itself, such as “this program is written in the Rust
+language.” The Rust trademark policy would not try to stop this type of lawful
+use of the Rust trademark, or any lawful use of the Rust trademark.
+
+With that background, a trademark policy is designed to do two things: (1)
+define what, in Rust’s view, is permitted, lawful use of their trademark and
+(2) optionally, grant some limited licenses allowing the use of the RUST
+trademarks that, without the license, would be an infringing use.
+
 ## Trademark Survey
 
-### My personal belief about the Rust trademarks is:
+### The Rust Foundation should be highly protectionist about trademarks
 
-Pick as many as you agree with:
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
 
-- The Rust Foundation should be highly protectionist about them
-- Trademarks are different from copyrights, so it’s ok to exert some control over how people use them
-- The Rust Foundation should share trademarks as freely as it shares code
+> **justification**
+>
+> TODO
+
+### Trademarks are different from copyrights, so it’s ok to exert some control over how people use trademarks
+
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
+
+> **justification**
+>
+> TODO
+
+### The Rust Foundation should share trademarks as freely as it shares code
+
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
 
 > **justification**
 >
@@ -59,24 +116,81 @@ Pick as many as you agree with:
 Pick as many as you agree with:
 
 - Not at all
-- Adding new functions/syntax but not removing anything or breaking anything
 - Fixed bugs and other minor changes are ok
+- Adding new functions/syntax but not removing anything or breaking anything
 - They can change it any way they want
 
 > **justification**
 >
 > TODO
 
-### Under what circumstances can others put the Rust/Cargo logo on a website or social media site?
+### Community members can put the Rust/Cargo logo on their personal website or blog.
 
-Pick as many as you agree with:
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
 
-- Community members on their personal website or blog
-- Community members can use as a profile picture on social media
-- Commercial businesses, provided they have made a financial contribution to the Rust Foundation
-- Commercial businesses, provided they have an open source project that uses Rust
-- Anyone for any reason, as long as they link to the Rust homepage
-- If they use it, they must say they aren’t endorsed by the Rust Foundation
+> **justification**
+>
+> TODO
+
+### Community members can use the Rust/Cargo logo as a profile picture on social media.
+
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
+
+> **justification**
+>
+> TODO
+
+### Commercial businesses can use the Rust/Cargo logo on their website or social media site, provided they have made a financial contribution to the Rust Foundation.
+
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
+
+> **justification**
+>
+> TODO
+
+### Commercial businesses can use the Rust/Cargo logo on their website or social media site, provided they have an open source project that uses Rust.
+
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
+
+> **justification**
+>
+> TODO
+
+### Anyone can use the Rust/Cargo logo on their website or social media site for any reason, as long as they link to the Rust homepage.
+
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
+
+> **justification**
+>
+> TODO
+
+### Anyone can use the Rust/Cargo logo on their website or social media site, but if they use it, they must say they aren’t endorsed by the Rust Foundation.
+
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
 
 > **justification**
 >
