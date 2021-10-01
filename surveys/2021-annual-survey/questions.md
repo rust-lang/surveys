@@ -751,7 +751,7 @@ Please share only what you are comfortable sharing. This will help us better ser
 
 Optional - Select all that apply.
 
-- No
+- No [`NEXT`](#if-you-find-it-difficult-to-participate-in-the-rust-community-and-feel-comfortable-giving-more-details-please-tell-us-what-makes-it-difficult)
 - Yes, but I prefer not to say which
 - Cultural beliefs
 - Disabled or person with disability (including physical, mental, and other)
@@ -767,8 +767,6 @@ Optional - Select all that apply.
 - Woman or perceived as a woman
 - Other (open response)
 
-> **FLOW** skip the next question if answered "no"
-
 ### Do you feel your belonging to an underrepresented group in technology makes it difficult for you to participate in the Rust community?
 
 Select one:
@@ -777,7 +775,7 @@ Select one:
 - No
 - Maybe
 
-#### If you find it difficult to participate in the Rust community, and feel comfortable giving more details, please tell us what makes it difficult
+### If you find it difficult to participate in the Rust community, and feel comfortable giving more details, please tell us what makes it difficult
 
 Free form.
 
@@ -785,8 +783,8 @@ Free form.
 
 Select one:
 
-- yes
-- no
+- Yes
+- No
 
 > TODO Does it matter in what field? Do we want a follow-up question like in employment?
 
