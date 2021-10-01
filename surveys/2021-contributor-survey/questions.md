@@ -18,17 +18,11 @@ We estimate it will take about ? minutes to complete.
 
 > TODOs:
 >
-> - Evaluate survey length (the interviews took ~20-30 minutes)
-> - Can the community survey FAQ be generalized for all surveys such as this or
->   the trademark surveys?
 > - Resolve and close open issues related to this survey on `rust-lang/surveys`
-> - Are these questions being presented in the optimal order?
-> - Make sure none of the major cohort sections are leaving out relevant
->   questions that are asked of the other major cohorts.
 
 ## Collaboration Interview
 
-### Have you contributed or ever considered contributing to the official Rust project (e.g. any repo that is part of the rust-lang Github org)?
+### Have you contributed or ever considered contributing to the official Rust project (e.g. any repo that is part of the rust-lang GitHub org)?
 
 - I am an active contributor to the Rust Project. [NEXT](#for-active-contributors)
 - I was an active contributor to the Rust Project but am not any longer. [NEXT](#for-inactive-contributors)
@@ -105,9 +99,13 @@ Select all that apply:
 > being done. Those contributing new code will likely face diff problems than
 > those who mainly review or coordinate work.
 
-### What sort of work would you like to be focused on?
+### The type of work I do in the Rust project is exactly what I'd like to be working on.
 
-Free Form.
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
 
 > **justification**
 >
@@ -143,6 +141,21 @@ Free Form.
 >
 > Suggested by @manishearth. Useful for identifying problems within project governance.
 
+### I feel positive about my team/working group/project group leadership and governance structure.
+
+**Skip if not a member of the Rust Project.**
+
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
+
+> **justification**
+>
+> Useful for sentiment analysis and gagues the severity of the problems identified
+> in the subsequent questions.
+
 ### I feel positive about my own leadership within the project.
 
 **Skip if not a leader of a team or group**
@@ -156,6 +169,21 @@ Free Form.
 > **justification**
 >
 > Suggested by @manishearth. Useful for identifying problems within project governance.
+
+### I feel the Rust Project is healthy.
+
+**Skip if not a member of the Rust Project.**
+
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
+
+> **justification**
+>
+> Useful for sentiment analysis and gagues the severity of the problems identified
+> in the subsequent questions.
 
 ### I feel my team/working group/project group is healthy.
 
@@ -174,10 +202,17 @@ Free Form.
 
 ### Are you burnt out or do you feel you're at risk of burning out?
 
+Select all that apply:
+
 - I am burnt out.
 - I am at risk of burning out.
 - I am not burnt out but I have been in the past.
 - I have not been burnt out.
+
+### If you've experienced burnout, is it related to your contributions to the Rust project?
+
+- Yes
+- No
 
 > **justification**
 >
@@ -187,7 +222,7 @@ Free Form.
 
 ### What are the biggest issues you'd like to see fixed that are negatively impacting your ability to contribute to and/or maintain Rust?
 
-Select all that apply:
+Matrix: Select all that apply and indicate a severity per issue:
 
 - There aren't enough experts or they aren't available to guide me through my contribution.
 - I don't have the financial resources to dedicate spare time to the project.
@@ -207,8 +242,6 @@ Select all that apply:
 
 ### What kind of support would you like to see or expect to see from the Rust Foundation?
 
-Select all that apply:
-
 Free Form
 
 > **justification**
@@ -219,8 +252,6 @@ Free Form
 > Foundation should consider.
 
 ### What kind of support would you not like to see or not expect to see from the Rust Foundation?
-
-Select all that apply:
 
 Free Form
 
