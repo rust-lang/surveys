@@ -781,10 +781,19 @@ Free form.
 
 Select one:
 
-- Yes
 - No
+- Yes, in secondary/high school
+- Yes, in a bachelor's/undergraduate program
+- Yes, in a master's program
+- Yes, in a doctorate program
+- Yes, in a vocational program or equivalent
+- Yes, other
 
-> TODO Does it matter in what field? Do we want a follow-up question like in employment?
+> **justification**
+>
+> This will be important for cohort analysis. In particular, we want to
+> understand how students at different points in their education view
+> topics related to Rust.
 
 ### Are you employed full- or part-time (including paid internships)?
 
