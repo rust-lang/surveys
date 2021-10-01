@@ -802,7 +802,7 @@ Select one:
 Select one:
 
 - Yes
-- No [`NEXT`](#excluding-rust-which-programming-languages-are-you-experienced-with)
+- No [`NEXT`](#excluding-rust-what-is-your-experience-with-other-kinds-of-programming-languages)
 
 ### If you are employed, which category best describes the domain in which *you* work?
 
@@ -812,7 +812,7 @@ Select one:
 
 - Yes, primarily as an individual contributor (i.e., non-manager).
 - I primarily manage others who do.
-- No [`NEXT`](#excluding-rust-which-programming-languages-are-you-experienced-with)
+- No [`NEXT`](#excluding-rust-what-is-your-experience-with-other-kinds-of-programming-languages)
 
 ### How long have you worked in software professionally?
 
@@ -829,19 +829,30 @@ Select one:
 > For cohort analysis it is important to understand length of time in the software
 > industry as this can have an impact on perceptions.
 
-### Excluding Rust, which programming languages are you experienced with?
+### Excluding Rust, what is your experience with other kinds of programming languages?
 
-Select all that apply:
+Languages:
 
-- Assembly language of any variety
-- C or C++
-- Java, Go, Objective C, C#, or similar object-oriented language
-- Haskell, Lisp, ML, or other functional language
-- Scala, Swift, Kotlin, or other modern, strongly-typed language
-- Javascript, Ruby, Python, or other dynamically-typed language
+- Assembly language (of any variety)
+- Languages with manual memory management (e.g., C or C++)
+- Object oriented languages with garbage collection (e.g., Java, C#, etc.)
+- Statically typed functional programming languages (e.g., Haskell, ML)
+- Dynamically typed functional programming languages (e.g., Lisp, Clojure, etc.)
+- "Modern" statically typed languages (e.g., Swift, Kotlin, etc.)
+- Dynamically-typed languages (e.g., Javascript, Ruby, Python, etc.)
 
-> TODO are these the right categories?
-> TODO Second questions for each asking level of experience?
+Experience:
+
+- I've never used nor am I familiar with any language in this category
+- I have a basic familiarity with at least one language in this category
+- I am comfortable but do not have expertise using at least one language in this category
+- I have expertise in at least one language in this category
+
+> **justification**
+>
+> For cohort analysis it is interesting to know what other language "families"
+> respondents are familiar with. It is more illustrative which types of languages
+> respondents are familiar with than the specific language.
 
 ### How long have you been programming (in any language, for any reason)?
 
