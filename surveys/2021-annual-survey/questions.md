@@ -812,19 +812,22 @@ Select one:
 
 - Yes, primarily as an individual contributor (i.e., non-manager).
 - I primarily manage others who do.
-- No
+- No [`NEXT`](#excluding-rust-which-programming-languages-are-you-experienced-with)
 
-> **FLOW** Only for those who say yes/manage above
-
-### If you write or design software, or manage others who do so, how long have you done so professionally?
+### How long have you worked in software professionally?
 
 Select one:
 
-- <= 5 years
+- <= 1 year
+- 1 - 5 years
 - 5 - 10 years
-- 10 - 15 years
-- 15 - 20 years
+- 10 - 20 years
 - > 20 years
+
+> **justification**
+>
+> For cohort analysis it is important to understand length of time in the software
+> industry as this can have an impact on perceptions.
 
 ### Excluding Rust, which programming languages are you experienced with?
 
