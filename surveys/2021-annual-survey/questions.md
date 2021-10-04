@@ -782,7 +782,7 @@ Select one:
 - Yes, in a bachelor's/undergraduate program
 - Yes, in a master's program
 - Yes, in a doctorate program
-- Yes, in a vocational program or equivalent
+- Yes, in a vocational program
 - Yes, other
 
 > **justification**
@@ -815,7 +815,8 @@ Select one:
 Select one:
 
 - <= 1 year
-- 1 - 5 years
+- 1 - 3 years
+- 3 - 5 years
 - 5 - 10 years
 - 10 - 20 years
 - > 20 years
@@ -824,6 +825,8 @@ Select one:
 >
 > For cohort analysis it is important to understand length of time in the software
 > industry as this can have an impact on perceptions.
+>
+> The ranges of years chosen are a best attempt at capturing different "stages" in a person's professional career.
 
 ### Excluding Rust, what is your experience with other kinds of programming languages?
 
@@ -835,13 +838,13 @@ Languages:
 - Statically typed functional programming languages (e.g., Haskell, ML)
 - Dynamically typed functional programming languages (e.g., Lisp, Clojure, etc.)
 - "Modern" statically typed languages (e.g., Swift, Kotlin, etc.)
-- Dynamically-typed languages (e.g., Javascript, Ruby, Python, etc.)
+- Dynamically typed languages (e.g., Javascript, Ruby, Python, etc.)
 
 Experience:
 
 - I've never used nor am I familiar with any language in this category
 - I have a basic familiarity with at least one language in this category
-- I am comfortable but do not have expertise using at least one language in this category
+- I am comfortable using at least one language in this category
 - I have expertise in at least one language in this category
 
 > **justification**
@@ -876,7 +879,7 @@ Select one:
 
 > TODO: https://github.com/rust-lang/surveys/issues/57
 
-### In what ways are you comfortable communication about technical topics in English?
+### In what ways are you comfortable communicating about technical topics in English?
 
 Select all that apply:
 
@@ -907,10 +910,11 @@ Forms of communication:
 
 Select all that apply
 
-- English
-- Mandarin Chinese
-- Hindi
+- Chinese
 - Spanish
+- English
+- Hindi
+- Bengali
 - Portuguese
 - Russian
 - Japanese
