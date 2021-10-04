@@ -29,10 +29,6 @@ Select one:
 > **justification**
 >
 > Fundamental for cohort analysis
->
-> **changes**
->
-> Rephrased answers slightly.
 
 ## For previous Rust users
 
@@ -765,13 +761,13 @@ Optional - Select all that apply.
 - Woman or perceived as a woman
 - Other (open response)
 
-### Do you feel your belonging to an underrepresented group in technology makes it difficult for you to participate in the Rust community?
+### Do you feel your belonging to an underrepresented or marginalized group in technology makes it difficult for you to participate in the Rust community?
 
 Select one:
 
-- Yes
-- No
-- Maybe
+- Often
+- Sometimes
+- Never
 
 ### If you find it difficult to participate in the Rust community, and feel comfortable giving more details, please tell us what makes it difficult
 
@@ -781,10 +777,19 @@ Free form.
 
 Select one:
 
-- Yes
 - No
+- Yes, in secondary/high school
+- Yes, in a bachelor's/undergraduate program
+- Yes, in a master's program
+- Yes, in a doctorate program
+- Yes, in a vocational program
+- Yes, other
 
-> TODO Does it matter in what field? Do we want a follow-up question like in employment?
+> **justification**
+>
+> This will be important for cohort analysis. In particular, we want to
+> understand how students at different points in their education view
+> topics related to Rust.
 
 ### Are you employed full- or part-time (including paid internships)?
 
@@ -793,7 +798,7 @@ Select one:
 Select one:
 
 - Yes
-- No
+- No [`NEXT`](#excluding-rust-what-is-your-experience-with-other-kinds-of-programming-languages)
 
 ### If you are employed, which category best describes the domain in which *you* work?
 
@@ -803,33 +808,50 @@ Select one:
 
 - Yes, primarily as an individual contributor (i.e., non-manager).
 - I primarily manage others who do.
-- No
+- No [`NEXT`](#excluding-rust-what-is-your-experience-with-other-kinds-of-programming-languages)
 
-> **FLOW** Only for those who say yes/manage above
-
-### If you write or design software, or manage others who do so, how long have you done so professionally?
+### How long have you worked in software professionally?
 
 Select one:
 
-- <= 5 years
+- <= 1 year
+- 1 - 3 years
+- 3 - 5 years
 - 5 - 10 years
-- 10 - 15 years
-- 15 - 20 years
+- 10 - 20 years
 - > 20 years
 
-### Excluding Rust, which programming languages are you experienced with?
+> **justification**
+>
+> For cohort analysis it is important to understand length of time in the software
+> industry as this can have an impact on perceptions.
+>
+> The ranges of years chosen are a best attempt at capturing different "stages" in a person's professional career.
 
-Select all that apply:
+### Excluding Rust, what is your experience with other kinds of programming languages?
 
-- Assembly language of any variety
-- C or C++
-- Java, Go, Objective C, C#, or similar object-oriented language
-- Haskell, Lisp, ML, or other functional language
-- Scala, Swift, Kotlin, or other modern, strongly-typed language
-- Javascript, Ruby, Python, or other dynamically-typed language
+Languages:
 
-> TODO are these the right categories?
-> TODO Second questions for each asking level of experience?
+- Assembly language (of any variety)
+- Languages with manual memory management (e.g., C or C++)
+- Object oriented languages with garbage collection (e.g., Java, C#, etc.)
+- Statically typed functional programming languages (e.g., Haskell, ML)
+- Dynamically typed functional programming languages (e.g., Lisp, Clojure, etc.)
+- "Modern" statically typed languages (e.g., Swift, Kotlin, etc.)
+- Dynamically typed languages (e.g., Javascript, Ruby, Python, etc.)
+
+Experience:
+
+- I've never used nor am I familiar with any language in this category
+- I have a basic familiarity with at least one language in this category
+- I am comfortable using at least one language in this category
+- I have expertise in at least one language in this category
+
+> **justification**
+>
+> For cohort analysis it is interesting to know what other language "families"
+> respondents are familiar with. It is more illustrative which types of languages
+> respondents are familiar with than the specific language.
 
 ### How long have you been programming (in any language, for any reason)?
 
@@ -855,26 +877,58 @@ Select one:
 - east or south-east Asia
 - Australasia or the pacific
 
-> TODO are these the categories we care about? Do we want to separate China from east asia given the distinct communities?
-> Note: We could use Survey Language as a proxy for separating China. This depends some on the purpose behind identifying this community and the level of accuracy needed. (Are we interested in location for future planning of events, or to identify culture/group trends?)
+> TODO: https://github.com/rust-lang/surveys/issues/57
 
-### Level of English (select all which apply)
-
-- Can have a technical conversation
-- Can understand most technical documentation
-- Can understand a technical talk (e.g., at a conference or meetup)
-- Some everyday English
-- None
-
-### What is your preferred language(s) for technical communication
+### In what ways are you comfortable communicating about technical topics in English?
 
 Select all that apply:
 
-- English
+- I feel comfortable and capable of having a *spoken* technical conversation in English
+- I feel comfortable and capable of having a *written* technical conversation in English
+- I feel comfortable and capable of reading technical documentation in English
+- I feel comfortable and capable of consuming a technical talk (e.g., at a conference or meetup) in English
+- I feel comfortable and capable of consuming a written technical educational material (e.g., technical books, blog posts, etc.) in English
+
+> **justification**
+>
+> We want to understand self reported feeling of comfort and capability of communication
+> of English since a large portion of the Rust community is and likely will always be in English.
+
+### What is/are your **preferred** language(s) for the following forms of technical communication?
+
+**IMPORTANT**: The answers should reflect your **preference** and **not** what you are capable of communicating in. For example, if you feel comfortable and capable of consuming technical communication in both English and Korean, but you always prefer Korean, you should *only* answer Korean as that is your preference.
+
+Forms of communication:
+
+- *spoken* technical conversation
+- *written* technical conversation
+- technical documentation
+- technical talks
+- written technical education material
+
+**Languages**
+
+Select all that apply
+
 - Chinese
-- Hindi
 - Spanish
+- English
+- Hindi
+- Bengali
+- Portuguese
 - Russian
 - Japanese
+- Turkish
+- Korean
+- French
 - German
+- Vietnamese
+- Urdu
 - Other (open response)
+
+> **justification**
+>
+> We want to understand *preference* of technical communication and how that differs
+> from their abilities to consume technical communication in English.
+> The languages selected are based on all national languages that are members of
+> the top 20 most spoken languages in the world.
