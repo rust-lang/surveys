@@ -123,9 +123,33 @@ Select all that apply:
 
 ## Your Rust experience
 
+### When did you learn to program in Rust?
+
+**Note**: while you may continue to try to improve your Rust skills, for this question assume "learning to program in Rust" means spending the majority of your time with Rust consuming learning materials or coding *in order to learn* (as opposed to achieving some other goal).
+
+Select one:
+
+- I'm still *actively* trying to learn Rust
+- Within the last year
+- Between 1 to 3 years ago
+- Between 3 to 6 years ago
+- More than 6 years ago
+
+> **justification**
+>
+> Useful for cohort analysis, i.e., for other questions we can understand if *when* someone learned Rust impacts their views on things.
+>
+> The time periods used as answers try to reflect the major "epochs" of Rust history (i.e., pre-1.0, 2015 edition, 2018 edition, etc.).
+
 ### How would you rate your Rust expertise?
 
-Select 0-4 (0 = I can't write or read Rust, 1 = I can write simple exercises in Rust, 2 = I can write useful, production-ready code but it is a struggle, 3 = I am productive writing Rust, 4 = I'm an expert)
+Select one:
+
+- I can't write or read Rust
+- I can write simple programs in Rust
+- I can write useful, production-ready code but it is a struggle
+- I am productive writing Rust
+- I'm an expert
 
 > **justification**
 >
