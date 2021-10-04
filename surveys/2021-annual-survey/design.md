@@ -16,14 +16,14 @@ Parts of these questions will be interesting and useful to different audiences o
 
 * Users: those who use Rust on a somewhat regular basis for programming related work. TODO educators, etc
 * Implementers: those that create the experience of using Rust as a programming language, we might subdivide this category, e.g.,
-  - Language design
-  - Compiler
-  - Tools
-  - Crates
+  * Language design
+  * Compiler
+  * Tools
+  * Crates
 * Potential users: those (usually stakeholders for a company or non-toy software project) deciding whether their project should use Rust as the implementation language.
 * Potential learners: individuals who are deciding whether Rust is a worthwhile language to learn.
 * Rust leadership: those in some sort of leadership role in the Rust project (i.e., core team, foundation members, project team members/leads, etc.)
-* Rust sponsors: groups who are sponsoring Rust in some way. 
+* Rust sponsors: groups who are sponsoring Rust in some way.
 * The larger software industry.
 * Data processing of the survey: TODO
 

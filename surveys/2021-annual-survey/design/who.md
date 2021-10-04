@@ -13,39 +13,43 @@ Cohort analysis allows us to not only answer questions about the entire dataset 
 
 For example, cohort based on experience with different types of programming languages could allow us to find out if the experience of using Rust is markedly different for systems programmers (i.e., those who exclusively use languages like C and C++) is different than for those who use dynamically-typed languages (i.e., those who exclusively use languages like JavaScript and Python).
 
-### The cohorts 
+### The cohorts
 
 The cohorts should include:
 
 * Current user of Rust, former user of Rust, non-user of Rust
 * Types of programming languages used (i.e., extensive and current use of a programming language that fits into a given category):
-  * Systems programming (C, C++) 
+  * Systems programming (C, C++)
   * Statically-typed "modern" language (Haskell, Scala, Swift, Kotlin, etc.)
   * OO Languages (Java, Objective-C, C#)
   * Dynamically-typed languages (Ruby, JavaScript, Python)
-* Identifies with an underrepresented group in technology 
+* Identifies with an underrepresented or marginalized group in technology
 * Industry (e.g., general software, banking, transportation, etc.)
 * Current stack (server networking, desktop application, mobile application, web application, embedded, etc.)
-
+* Expertise in Rust
+* How often the user uses Rust
 
 ## Community shape
 
-Other demographic information can be collected just to better understand the shape of Rust community. While cohort analysis could also be performed based on these factors, we have a strong feeling that these indicators won't lead to interesting cohort analysis. Further investigation may prove this assumption to be incorrect however. 
+Other demographic information can be collected just to better understand the shape of Rust community. While cohort analysis could also be performed based on these factors, we have a strong feeling that these indicators won't lead to interesting cohort analysis. Further investigation may prove this assumption to be incorrect however.
 
 The other demographic information includes:
 
 * Location
 * Preferred human language for technical communication
+* Which IDE the respondent uses
 
 Other possible information we might consider collecting:
 
-* salary 
-* operating system preference
-* IDE preference
-* education level and CS specialization or not
-* gender 
+* CS specialization or not
+* Common demographic questions around (gender, race, etc.). Due to being an international community, this question can get complicated quickly. The question around identifying with underrepresented or marginalized communities can be a better proxy for how well the community is addressing the questions of inclusivity.
 
-Demographic information can be personal, and we don't want to make survey respondents uncomfortable with the level of information being asked. When possible we should offer the respondent the possibility to not give a response. 
+There are some demographic information we do *not* think are relevant to ask:
+
+* educational level
+* salary
+
+Demographic information can be personal, and we don't want to make survey respondents uncomfortable with the level of information being asked. When possible we should offer the respondent the possibility to not give a response.
 
 ## Why is the information useful?
 
@@ -53,4 +57,4 @@ As indicated above, demographic information paired with cohort analysis allows u
 
 For Rust leadership, demographic information can also help lead to additional investigation if a particular subslice of the population is surprisingly over or under represented.
 
-For Rust leadership and educators, knowing the demographics of the Rust community could be useful for targetting educational or marketing materials.
+For Rust leadership and educators, knowing the demographics of the Rust community could be useful for targeting educational or marketing materials.
