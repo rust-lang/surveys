@@ -415,7 +415,6 @@ Aspects:
 - GUI development
 - Rust language and standard library documentation
 
-
 ### Please indicate how vital to your workflow each of the following tools are when programming with Rust:
 
 Options:
@@ -462,7 +461,6 @@ Select all the apply:
 > If we are curious how far along adoption of rust-analyzer is, we can ask that
 > in a separate question, though this is likely easier to find out through download
 > numbers.
-
 
 ### In which of the following ways have you participated in the Rust community in the last 6 months:
 

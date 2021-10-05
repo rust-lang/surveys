@@ -2,16 +2,16 @@
 
 We want to know where Rust is used. At the highest level that means:
 
-* At work (including research, but excluding teaching),
-* in formal education,
-* for a hobby/fun/self-education,
+* At work (including research, but excluding teaching)
+* in formal education
+* for a hobby/fun/self-education
 * other contexts?
 
 ## At work
 
 We would like to know how many people are using Rust at work and what they are using it for. Furthermore, we would like to know how reliant companies are on Rust, or in other words how seriously companies are investing in Rust. Concrete data which could indicate this is the proportion of engineers using Rust, how much time is spent with Rust c.f. other languages or LoC of Rust being written c.f. other languages. More subjectively we could ask if Rust if a primary or first-class language (or still at the experimentation stage).
 
-We would like to know what Rust is used for (see also [purposes](./purposes.md)). Both the kin of product (internal tooling, customer facing applications, etc.) and the domain (operating systems, browsers, embedded, etc.).
+We would like to know what Rust is used for (see also [purposes](./purposes.md)). Both the kind of product (internal tooling, customer facing applications, etc.) and the domain (operating systems, browsers, embedded, etc.).
 
 We would like to know what helps and hinders Rust adoption at work.
 
