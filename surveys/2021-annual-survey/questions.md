@@ -230,6 +230,8 @@ Free form.
 > - It'll help when tuning algorithms or build systems whose memory usage may depend on the number of CPUs present.
 > - It'll help with prioritization around whether to make something go faster by throwing more CPUs at it or by optimizing on the same number of CPUs.
 > - It'll help avoid assumptions that rust developers might otherwise make about how universal the caliber of hardware they have is.
+> TODO: Any concern about respondents who are completing the survey from a different device than that which they use to program?
+> Should we provide an out? (Leave blank if unsure or information not available.)
 
 ### Which operating systems do you develop Rust software for?
 
@@ -274,6 +276,8 @@ Select one:
 > TODO: many times code stops compiling for reasons outside of the
 > Rust stability guarantee (e.g., a new warning is introduced and
 > the code uses `#![deny(warnings)]`). How can we capture that?
+> TODO: Are other warnings more specific? Can we capture frequency of specific vs. non-specific warnings? 
+> Or is it that new warnings are introduced and display for previously stable code?
 
 ### If your code has ever broken when upgrading to a new **stable** version of the compiler, how difficult was the upgrade?
 
@@ -326,33 +330,43 @@ Select one:
 >
 > When want to get an impression of how stable crates tend to be.
 
+> **SURVEY FLOW**
+>
+> Only display if indicate they use nightly above
+> "I don't use" option left in case of misselection in filter question
+
 ### If you use nightly, why?
 
 Select all that apply:
 
-- I don't use nightly
 - Out of habit
 - For a particular language feature or set of language features I need
 - To help test the nightly version for bugs
 - For testing in CI
 - A dependency I use requires it
 - Other (open response)
+- I don't ue nightly
 
 > **justification**
 >
 > We'd like to know what are the common reasons people use nightly
 > so that we can better understand where testers are coming from.
 
+> **SURVEY FLOW**
+>
+> Only display if they indicate they use beta above
+> "I don't use" option left in case of misselection in filter question
+
 ### If you use beta, why?
 
 Select all that apply:
 
-- I don't use beta
 - Out of habit
 - To adopt stabilized language features as early as possible
 - To help test the beta version for bugs
 - For testing in CI
 - Other (open response)
+- I don't use beta
 
 > **justification**
 >
@@ -706,6 +720,7 @@ Select one:
 - I'm not worried
 
 > Alternative: could rephrase as a 'select all that apply' question
+> Other Alternative: Could be structured as a ranking question: Rank the following...
 >
 > **justification**
 >
