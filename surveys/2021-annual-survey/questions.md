@@ -647,6 +647,34 @@ Select one:
 > This question assess hiring sentiment. Although there is intrinsic uncertainty, it is easy to answer and forward looking.
 > It will also be interesting to see what the demand for Rust skills from companies is over time.
 
+### Rate how much the follow statements are reasons your team use Rust at work.
+
+Statements:
+
+- We use Rust for its performance (i.e., speed, memory footprint, etc.) characteristics.
+- We use Rust because we need *precise control* over exactly how our software runs.
+- Rust security and safety properties are important to us.
+- Rust allows us to build relatively correct and bug free software.
+- We find it enjoyable or fun to program in Rust.
+- We already know Rust so it's our default choice.
+- We find it easy to prototype with.
+- Other (open response)
+
+Rating:
+
+- Strongly agree
+- Agree
+- Neither agree nor disagree
+- Disagree
+- Strongly disagree
+
+> **justification**
+>
+> The Rust community and potential adopters of Rust have a lot of assumptions of why one would choose Rust for a project.
+> This question can help confirm or challenge our assumptions and see how they change over time.
+>
+> TODO: this question should only be asked for those who say they use Rust at work.
+
 ## Rust in education
 
 > This section is largely in service of the [contexts](./design/contexts.md) design document.
