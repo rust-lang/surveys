@@ -653,13 +653,14 @@ Select one:
 
 Statements:
 
-- We use Rust for its performance characteristics.
-- We use Rust because we need to run software in a constrained or specialized environment.
+- We use Rust for its performance (i.e., speed, memory footprint, etc.) characteristics.
+- We use Rust because we need *precise control* over exactly how our software runs.
 - Rust security and safety properties are important to us.
-- Rust allows us to build correct and bug free software.
+- Rust allows us to build relatively correct and bug free software.
 - We find it enjoyable or fun to program in Rust.
 - We already know Rust so it's our default choice.
 - We find it easy to prototype with.
+- Other (open response)
 
 Rating:
 
