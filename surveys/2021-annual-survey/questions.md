@@ -578,7 +578,7 @@ Select one:
 > **justification**
 >
 > We want to establish what percentage of those who could possibly use Rust in a professional setting
-> are using Rust in a professional setting. This is most interesting over time. 
+> are using Rust in a professional setting. This is most interesting over time.
 > Answers to this question should be combined with whether the respondent has ever used Rust.
 
 ### To what extent is Rust currently being used by your company?
@@ -673,7 +673,39 @@ Rating:
 > The Rust community and potential adopters of Rust have a lot of assumptions of why one would choose Rust for a project.
 > This question can help confirm or challenge our assumptions and see how they change over time.
 >
-> TODO: this question should only be asked for those who say they use Rust at work.
+> **SURVEY FLOW**
+>
+> Only show this question if the respondent previously answered that [they use Rust at work](#are-you-using-rust-at-work?)
+
+### Please rate how successful your usage of Rust at work has been.
+
+Select one:
+
+- A smashing success
+- Challenging but ultimately worth it
+- Challenging and still unsure if it's worth the cost
+- Ultimately more headache than it's worth
+- It's still too early to say
+
+> **justification**
+>
+> Future potential adopters may want to know how often other's have encountered success.
+>
+> **SURVEY FLOW**
+>
+> Only show this question if the respondent previously answered that [they use Rust at work](#are-you-using-rust-at-work?)
+
+### What about your usage of Rust has been challenging?
+
+Free form.
+
+> **justification**
+>
+> This an opportunity to learn from adopters at companies what they struggle with when adopting Rust.
+>
+> **SURVEY FLOW**
+>
+> Only show this question if the respondent indicated their adoption was not a smashing success.
 
 ## Rust in education
 
