@@ -481,6 +481,26 @@ Select all that apply:
 > particular we can use this information to do cohort analysis on highly "active"
 > community members in comparison to less active community members.
 
+### How often have felt *un*welcome in the Rust community?
+
+Activities:
+
+- *Official* Rust community forums or chats (e.g., users.rust-lang.org, the official Rust Discord, the Rust Zulip, etc.)
+- Attending a Rust conference
+- Contributing to a repository in the rust-lang GitHub organization
+
+Choices:
+
+- I've *often* felt unwelcome
+- I *sometimes* feel unwelcome
+- I *never* feel unwelcome
+- I've never participated in this activity
+
+> **justification**
+>
+> We'd like to know if any of the officially moderated spaces in the Rust community tend to produce feelings
+> of unwelcome which made indicate that we need to more aggressively moderate those spaces.
+
 ### Roughly how often do you actively contribute to the Rust project?
 
 Options:
