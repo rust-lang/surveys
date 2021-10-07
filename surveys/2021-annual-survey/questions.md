@@ -385,7 +385,7 @@ Aspects:
 - Compile times
 - Binary size
 - Disk space (e.g., the size of `target` folder)
-- Lack of bugs in the compiler (i.e., ICEs a.k.a. internal compiler errors, miscompilations, etc.)
+- Bugs in the compiler (i.e., ICEs a.k.a. internal compiler errors, miscompilations, etc.)
 - Compilation error messages
 - IDE experience
 - Available tools and support
