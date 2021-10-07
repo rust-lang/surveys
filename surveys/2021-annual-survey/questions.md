@@ -160,50 +160,6 @@ Concepts: Enums, Modules, Ownership & Borrowing, Iterators, Traits, Generics and
 > **Justification** Might not be directly applicable, but does provide verification of the perceptions of teachers/devs.
 Plus, it demonstrates to users that you are interested in their perceptions of where the papercuts are.
 
-### I would use Rust more if...
-
-Select all that apply:
-
-- I saw more benefit of using Rust
-- Rust wasn't too intimidating or too complicated
-- Rust had the libraries I need
-- Rust had the tools I need
-- Rust had good enough IDE or editor support
-- Rust supported the platforms I need
-- Rust didn't seem too risky to use in production
-- Rust had better interoperability support with other languages
-- My company used Rust
-- Switching to Rust didn't make me less productive
-- Other (open response)
-
-> **TODO** this question seems like it could be useful, but how?
-> **Justification** I think it's this question in combination with follow-up questions that really provides us with the insight. It's not just "I need better Interoperability" - it's "I need better interop with these languages.
-> This q provides the scope of the concern, while the follow-up provides the actionable. (The scope helps determine which actionable to prioritize.)
-
-### If you indicated a desire for increased interoperability, which of the following languages would you want to use with Rust?
-
-- C
-- C++
-- C#
-- Clojure
-- Elm
-- Elixir
-- Erlang
-- Go
-- Haskell
-- Java
-- JavaScript
-- Objective-C
-- PHP
-- Python
-- Ruby
-- Scala
-- Swift
-
-> **justification**
->
-> This question has led to surprising answers in the past that could help the lang team better prioritize features that make interop easier.
-
 ### Which operating systems do you use regularly for Rust development as your dev machine?
 
 Select all that apply:
