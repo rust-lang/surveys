@@ -875,12 +875,12 @@ Select one:
 Languages:
 
 - Assembly language (of any variety)
-- Languages with manual memory management (e.g., C or C++)
-- Object oriented languages with garbage collection (e.g., Java, C#, etc.)
+- Languages with manual memory management (e.g., C, C++, Objective-C without ARC)
+- Classically object oriented languages with garbage collection (e.g., Java, C#)
 - Statically typed functional programming languages (e.g., Haskell, ML)
-- Dynamically typed functional programming languages (e.g., Lisp, Clojure, etc.)
-- "Modern" statically typed languages (e.g., Swift, Kotlin, etc.)
-- Dynamically typed languages (e.g., Javascript, Ruby, Python, etc.)
+- Dynamically typed functional programming languages (e.g., Lisp, Clojure, Elixir)
+- "Modern" statically typed languages (e.g., Swift, Kotlin)
+- Dynamically typed languages (e.g., Javascript, Ruby, Python, PHP, Perl)
 
 Experience:
 
