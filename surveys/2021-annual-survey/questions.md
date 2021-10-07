@@ -481,13 +481,16 @@ Select all that apply:
 > particular we can use this information to do cohort analysis on highly "active"
 > community members in comparison to less active community members.
 
-### How often have felt *un*welcome in the Rust community?
+### How often have you felt *un*welcome in the Rust community?
 
 Activities:
 
-- *Official* Rust community forums or chats (e.g., users.rust-lang.org, the official Rust Discord, the Rust Zulip, etc.)
+- *Official* Rust community forums or chats (users.rust-lang.org, internals.rust-lang.org, the official Rust Discord, or the Rust Zulip)
+- *Unofficial* Rust community forums or chats (e.g., reddit.com/r/rust, Hacker News, the Rust *Community* Discord, etc.)
 - Attending a Rust conference
-- Contributing to a repository in the rust-lang GitHub organization
+- Attending a Rust meetup or local community event
+- Discussion (issues, pull requests, etc.) on a repository *inside* the rust-lang GitHub organization
+- Discussion (issues, pull requests, etc.) on a repository *outside* of the rust-lang GitHub organization
 
 Choices:
 
