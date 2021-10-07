@@ -125,15 +125,17 @@ Select all that apply:
 
 ### When did you learn to program in Rust?
 
-**Note**: while you may continue to try to improve your Rust skills, for this question assume "learning to program in Rust" means spending the majority of your time with Rust consuming learning materials or coding *in order to learn* (as opposed to achieving some other goal).
+**Note**: while you may continue to try to improve your Rust skills, for this question assume "learning to program in Rust"
+means spending the majority of your time with Rust consuming learning materials or coding *in order to learn* (as opposed to achieving
+some other goal). If your learning process spans several of the listed time periods, pick the one where you felt you learned *the most*.
 
 Select one:
 
 - I'm still *actively* trying to learn Rust
 - Within the last year
-- Between 1 to 3 years ago
-- Between 3 to 6 years ago
-- More than 6 years ago
+- Sometime between 2019 and last last year
+- Sometime between 2015 and 2019
+- Before 2015
 
 > **justification**
 >
