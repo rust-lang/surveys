@@ -210,8 +210,10 @@ Statements:
 
 - Rust provides a real benefit over other programming languages
 - Rust is complicated to use
+- Rust is complicated to learn
 - Rust is risky to use in production
-- Rust makes me less productive
+- Rust makes me more productive
+- Rust is fun to use
 
 Answers:
 
@@ -224,6 +226,8 @@ Answers:
 > **justification**
 >
 > There are several "truisms" about Rust that we'd like to get perspective on how true these are for users of Rust.
+>
+> Note that answers here can be subject to survivorship bias and so extra care should be taken with interpreting results.
 
 ### Which operating systems do you use regularly for Rust development as your dev machine?
 
