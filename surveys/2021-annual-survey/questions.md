@@ -204,6 +204,27 @@ Select all that apply:
 >
 > This question has led to surprising answers in the past that could help the lang team better prioritize features that make interop easier.
 
+### How much do you agree with the following statements
+
+Statements:
+
+- Rust provides a real benefit over other programming languages
+- Rust is complicated to use
+- Rust is risky to use in production
+- Rust makes me less productive
+
+Answers:
+
+- Strongly agree
+- Agree
+- Neither agree nor disagree
+- Disagree
+- Strongly disagree
+
+> **justification**
+>
+> There are several "truisms" about Rust that we'd like to get perspective on how true these are for users of Rust.
+
 ### Which operating systems do you use regularly for Rust development as your dev machine?
 
 Select all that apply:
