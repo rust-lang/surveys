@@ -131,21 +131,15 @@ Select 0-4 (0 = I can't write or read Rust, 1 = I can write simple exercises in 
 >
 > Useful for cohort analysis, i.e., for other questions we can query if answers are significantly different for beginners vs advanced users.
 
-### How helpful/effective were the following activities for learning Rust?
+### Which of the following activities do you find helpful or effective for learning Rust?
 
 Activities:
 
 - Reading books or other written material geared towards learning Rust
 - Watching videos, streams, etc. geared towards learning Rust
+- Attending an organized training session or course (in person or virtual)
 - Doing Rust coding exercises or challenges created to help learn Rust
-- Building a non-trivial project in Rust
-
-Levels:
-
-- Very effective
-- Somewhat effective
-- Not effective
-- I have no experience with this activity
+- Building a non-trivial project in Rust or contributing to an open source project
 
 ### How often do you use Rust?
 
