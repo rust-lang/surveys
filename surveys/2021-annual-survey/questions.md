@@ -247,9 +247,9 @@ Select all that apply:
 - Embedded platforms (bare metal)
 - Other (open response)
 
-### Which version(s) of Rust do you use?
+### Which version(s) of Rust do you use for local development?
 
-Select one:
+Select all the apply:
 
 - Current stable version
 - Previous stable version
@@ -260,6 +260,12 @@ Select one:
 - Custom fork
 - I don't know
 - Other (open response)
+
+### Which version(s) of Rust do you use for testing (i.e., CI)?
+
+Select all the apply:
+
+*Same answers as above*
 
 ### When I upgrade to a new **stable** version of the compiler...
 
