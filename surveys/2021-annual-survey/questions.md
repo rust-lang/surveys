@@ -22,8 +22,8 @@ We estimate it will take about 10-15 minutes to complete.
 
 Select one:
 
-- Yes, I have used Rust [`NEXT`](#your-rust-experience)
-- No, I don't use Rust, but I have in the past [`NEXT`](#for-previous-rust-users)
+- Yes, I use Rust [`NEXT`](#your-rust-experience)
+- No, I don't currently use Rust, but I have in the past [`NEXT`](#for-previous-rust-users)
 - No, I have never used Rust [`NEXT`](#for-non-rust-users)
 
 > **justification**
@@ -160,6 +160,31 @@ Concepts: Enums, Modules, Ownership & Borrowing, Iterators, Traits, Generics and
 > **Justification** Might not be directly applicable, but does provide verification of the perceptions of teachers/devs.
 Plus, it demonstrates to users that you are interested in their perceptions of where the papercuts are.
 
+### How much do you agree with the following statements
+
+Statements:
+
+- Rust provides a real benefit over other programming languages
+- Rust is complicated to use
+- Rust is complicated to learn
+- Rust is risky to use in production
+- Rust makes me more productive
+- Rust is fun to use
+
+Answers:
+
+- Strongly agree
+- Agree
+- Neither agree nor disagree
+- Disagree
+- Strongly disagree
+
+> **justification**
+>
+> There are several "truisms" about Rust that we'd like to get perspective on how true these are for users of Rust.
+>
+> Note that answers here can be subject to survivorship bias and so extra care should be taken with interpreting results.
+
 ### Which operating systems do you use regularly for Rust development as your dev machine?
 
 Select all that apply:
@@ -172,9 +197,12 @@ Select all that apply:
 
 ### On the primary machine you compile Rust code on, how many logical CPU threads do you have?
 
-Please count logical CPUs here, not cores or sockets. To get this number on
-Linux, run `nproc`; on macOS, run `sysctl -n hw.ncpu`; on Windows, run
-`echo %NUMBER_OF_PROCESSORS%`.
+Please count logical CPUs here, not cores or sockets. You can get this number by running the following commands from the command line:
+
+- Linux: `nproc`
+- macOS: `sysctl -n hw.ncpu`
+- Windows Command Prompt: `echo %NUMBER_OF_PROCESSORS%`
+- Windows PowerShell: `(Get-CimInstance Win32_ComputerSystem).NumberOfLogicalProcessors`
 
 Free form.
 
@@ -200,9 +228,9 @@ Select all that apply:
 - Embedded platforms (bare metal)
 - Other (open response)
 
-### Which version(s) of Rust do you use?
+### Which version(s) of Rust do you use for local development?
 
-Select one:
+Select all the apply:
 
 - Current stable version
 - Previous stable version
@@ -213,6 +241,12 @@ Select one:
 - Custom fork
 - I don't know
 - Other (open response)
+
+### Which version(s) of Rust do you use for testing (i.e., CI)?
+
+Select all the apply:
+
+*Same answers as above*
 
 ### When I upgrade to a new **stable** version of the compiler...
 
@@ -831,12 +865,12 @@ Select one:
 Languages:
 
 - Assembly language (of any variety)
-- Languages with manual memory management (e.g., C or C++)
-- Object oriented languages with garbage collection (e.g., Java, C#, etc.)
+- Languages with manual memory management (e.g., C, C++, Objective-C without ARC)
+- Classically object oriented languages with garbage collection (e.g., Java, C#)
 - Statically typed functional programming languages (e.g., Haskell, ML)
-- Dynamically typed functional programming languages (e.g., Lisp, Clojure, etc.)
-- "Modern" statically typed languages (e.g., Swift, Kotlin, etc.)
-- Dynamically typed languages (e.g., Javascript, Ruby, Python, etc.)
+- Dynamically typed functional programming languages (e.g., Lisp, Clojure, Elixir)
+- "Modern" statically typed languages (e.g., Swift, Kotlin)
+- Dynamically typed languages (e.g., Javascript, Ruby, Python, PHP, Perl)
 
 Experience:
 
