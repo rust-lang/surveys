@@ -34,6 +34,8 @@ the following questions:
         * How much review capacity do teams have?
         * How much review load do teams have?
         * What is a sustainable review burden? (based on available time, volunteer vs full time maintainers)
+* Which teams are healthy or unhealthy?
+    * What makes them healhty or unhealthy?
 
 Parts of these questions will be interesting and useful to different audiences
 of the survey results. The following are audiences we explicitly want to keep
