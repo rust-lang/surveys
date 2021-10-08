@@ -897,19 +897,16 @@ Select one:
 
 ### Where do you live?
 
-Select one:
+Select one (optional):
 
-- North America
-- Central America
-- South America
-- Europe
-- Middle East
-- Africa
-- West, central, or south Asia
-- east or south-east Asia
-- Australasia or the pacific
+* *all UN member states*
+* *two observer states (Vatican City and Palestine)*
+* Other (free form)
 
-> TODO: https://github.com/rust-lang/surveys/issues/57
+> **justification**
+>
+> We'd like to get a geographic understanding of where the community is. The form of the question allows us to be fairly precise about this
+> though there will still be some challenges (e.g., someone who lives in East Russia has similar timezones to East Asia not West Russia).
 
 ### In what ways are you comfortable communicating about technical topics in English?
 
