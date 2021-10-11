@@ -123,9 +123,38 @@ Select all that apply:
 
 ## Your Rust experience
 
+### When did you learn to program in Rust?
+
+**Note**: while you may continue to try to improve your Rust skills, for this question assume "learning to program in Rust"
+means spending the *majority* of your time with Rust consuming learning materials or coding *in order to learn* (as opposed to achieving
+some other goal). If your learning process spans several of the listed time periods, pick the one where you felt you learned *the most*.
+
+Select one:
+
+- I'm still *actively* trying to learn Rust
+- During 2021
+- During 2019 or 2020
+- During 2017 or 2018
+- During 2015 or 2016
+- During 2014 or before
+
+> **justification**
+>
+> Useful for cohort analysis, i.e., for other questions we can understand if *when* someone learned Rust impacts their views on things.
+>
+> The time periods used as answers try to reflect the major "epochs" of Rust history (i.e., pre-1.0, 2015 edition pre and post new error style,
+> and 2018 edition) as well as the most recent past. We use whole years even though this doesn't line up perfectly with these epochs. Learning
+> Rust in early 2015 was likely similar to the experience of learning Rust post 1.0 while before that the language was changing rapidly.
+
 ### How would you rate your Rust expertise?
 
-Select 0-4 (0 = I can't write or read Rust, 1 = I can write simple exercises in Rust, 2 = I can write useful, production-ready code but it is a struggle, 3 = I am productive writing Rust, 4 = I'm an expert)
+Select one:
+
+- I can't write or read Rust
+- I can write simple programs in Rust
+- I can write useful, production-ready code but it is a struggle
+- I am productive writing Rust
+- I'm an expert
 
 > **justification**
 >
