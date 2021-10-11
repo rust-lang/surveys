@@ -210,7 +210,7 @@ Statements:
 - Rust makes me more productive
 - Rust is fun to use
 
-Answers:
+Rating:
 
 - Strongly agree
 - Agree
@@ -243,7 +243,7 @@ Please count logical CPUs here, not cores or sockets. You can get this number by
 - Windows Command Prompt: `echo %NUMBER_OF_PROCESSORS%`
 - Windows PowerShell: `(Get-CimInstance Win32_ComputerSystem).NumberOfLogicalProcessors`
 
-Free form.
+Free form (optional).
 
 > **justification**
 >
