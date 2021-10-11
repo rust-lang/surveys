@@ -287,73 +287,32 @@ Select all the apply:
 
 *Same answers as above*
 
-### When I upgrade to a new **stable** version of the compiler...
+### Please rate how much you agree with the following statements on Rust stability.
 
-Select one:
+Statements:
 
-- I am confident my code will continue to compile and be idiomatic.
-- I am confident my code will continue to compile but it may be unidiomatic.
-- There's a chance my code may no longer compile.
-- I am confident my code will break somehow.
+- I can upgrade the *stable* compiler version without fear of my code failing to compile.
+- I can upgrade the *nightly* compiler version without fear of my code failing to compile.
+- I can upgrade the *stable* compiler version without fear of my code taking longer to compile.
+- I can upgrade the *nightly* compiler version without fear of my code taking longer to compile.
+- Upgrading to a new *stable* compiler version requires either no changes or extremely small & easy changes to my code.
+- Upgrading to a new *nightly* compiler version requires either no changes or extremely small & easy changes to my code.
 
-> **justification**
->
-> When want to get an impression of how stable the language feels.
->
-> TODO: many times code stops compiling for reasons outside of the
-> Rust stability guarantee (e.g., a new warning is introduced and
-> the code uses `#![deny(warnings)]`). How can we capture that?
+Rating:
 
-### If your code has ever broken when upgrading to a new **stable** version of the compiler, how difficult was the upgrade?
-
-Select one:
-
-- Very difficult
-- Difficult
-- Medium difficulty
-- Easy enough
-- Trivial
-
-### When I upgrade to a new **nightly** version of the compiler...
-
-Select one:
-
-- I am confident my code will continue to compile and be idiomatic.
-- I am confident my code will continue to compile but it may be unidiomatic.
-- There's a chance my code may no longer compile.
-- I am confident my code is likely to break somehow.
-- I don't use nightly
+- Strongly agree
+- Agree
+- Neither agree nor disagree
+- Disagree
+- Strongly disagree
+- No opinion
 
 > **justification**
 >
-> When want to get an impression of how stable even the nightly compiler is.
->
-> TODO: many times code stops compiling for reasons outside of the
-> Rust stability guarantee (e.g., a new warning is introduced and
-> the code uses `#![deny(warnings)]`). How can we capture that?
-
-### If your code has ever broken when upgrading to a new **nightly** version of the compiler, how difficult was the upgrade?
-
-Select one:
-
-- Very difficult
-- Difficult
-- Easy enough
-- Trivial
-- I don't use nightly
-
-### When I upgrade to a new minor version of a crate...
-
-Select one:
-
-- I am confident my code will continue to compile and be idiomatic.
-- I am confident my code will continue to compile but it may be unidiomatic.
-- There's a chance my code may no longer compile.
-- I am confident my code is likely to break somehow.
-
-> **justification**
->
-> When want to get an impression of how stable crates tend to be.
+> When want to get an impression of how stable the compiler *feels*. Impressions are more important than hard numbers as
+> not all users define stability in the same way the compiler does. For example, experiencing compiler performance regressions
+> in a new version of the compiler isn't breaking official stability guarantees but it can feel just as painful as an
+> actual breaking change.
 
 ### If you use nightly, why?
 
