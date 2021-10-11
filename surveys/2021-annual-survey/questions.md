@@ -677,15 +677,23 @@ Rating:
 >
 > Only show this question if the respondent previously answered that [they use Rust at work](#are-you-using-rust-at-work?)
 
-### Please rate how successful your usage of Rust at work has been.
+### Please rate your experience using Rust at work.
 
-Select one:
+Statements:
 
-- A smashing success
-- Challenging but ultimately worth it
-- Challenging and still unsure if it's worth the cost
-- Ultimately more headache than it's worth
-- It's still too early to say
+- Using Rust has helped us achieve our goals
+- Adopting Rust has been challenging
+- Overall, adopting Rust has slowed down our team
+- Using Rust has been worth the cost of adoption
+- We're likely to use Rust again in the future
+
+Rating:
+
+- Strongly agree
+- Agree
+- Neither agree nor disagree
+- Disagree
+- Strongly disagree
 
 > **justification**
 >
