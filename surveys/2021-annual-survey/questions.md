@@ -911,15 +911,63 @@ Select one:
 - Yes
 - No [`NEXT`](#excluding-rust-what-is-your-experience-with-other-kinds-of-programming-languages)
 
-### If you are employed, which category best describes the domain in which *you* work?
+### Which category best describes the your current employer's industry?
 
-> TODO - server networking, desktop application, mobile application, web application, embedded, etc.
+Select all that apply:
+
+- Advertising
+- Agricultural
+- Aerospace
+- Automotive
+- Energy
+- Computer hardware
+- Consumer software
+- Business software
+- Finance
+- Food
+- Film or Television
+- Gaming
+- Healthcare
+- News media
+- Manufacturing
+- Music
+- Telecommunications
+- Transportation
+- Other (open response)
+
+> **justification**
+>
+> We want to see what industries have what representation in the Rust community.
+> While it's impossible to be precise here, we want to get a general idea.
+> This list is largely adopted from this [Wikipedia article](https://en.wikipedia.org/wiki/Outline_of_industry).
 
 ### Do you write or design software in your work?
 
 - Yes, primarily as an individual contributor (i.e., non-manager).
 - I primarily manage others who do.
 - No [`NEXT`](#excluding-rust-what-is-your-experience-with-other-kinds-of-programming-languages)
+
+### Which categories best describes the tech domain(s) you currently write or design software in?
+
+Select all that apply:
+
+- Blockchain
+- Cloud computing applications
+- Cloud computing infrastructure
+- Desktop computer applications
+- Mobile phone applications
+- Desktop computer or mobile phone infrastructure
+- WebAssembly
+- Embedded devices (with operating systems)
+- Embedded devices (bare metal)
+
+> **justification**
+>
+> We want to see generally what tech areas respondents work in. In addition to general categories,
+> we include some technology categories that are known to be popular in the Rust community.
+> This can help us get more insight into what respondents are working on. For instance, if a respondent
+> answers their employer works in automotive but they are working on mobile phone applications and not 
+> embedded devices, we might conclude different things than if they are working on embedded devices.
 
 ### How long have you worked in software professionally?
 
