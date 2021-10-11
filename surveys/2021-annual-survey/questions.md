@@ -134,16 +134,17 @@ Select one:
 - I'm still *actively* trying to learn Rust
 - During 2021
 - During 2019 or 2020
-- During 2015, 2016, 2017, or 2018
+- During 2017 or 2018
+- During 2015 or 2016
 - During 2014 or before
 
 > **justification**
 >
 > Useful for cohort analysis, i.e., for other questions we can understand if *when* someone learned Rust impacts their views on things.
 >
-> The time periods used as answers try to reflect the major "epochs" of Rust history (i.e., pre-1.0, 2015 edition, 2018 edition, etc.) as well
-> as the most recent past. We use whole years even though this doesn't line up perfectly with the epochs. Learning Rust in early 2015 was likely
-> similar to the experience of learning Rust post 1.0 while before that the language was changing rapidly.
+> The time periods used as answers try to reflect the major "epochs" of Rust history (i.e., pre-1.0, 2015 edition pre and post new error style,
+> and 2018 edition) as well as the most recent past. We use whole years even though this doesn't line up perfectly with these epochs. Learning
+> Rust in early 2015 was likely similar to the experience of learning Rust post 1.0 while before that the language was changing rapidly.
 
 ### How would you rate your Rust expertise?
 
