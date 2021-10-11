@@ -974,6 +974,30 @@ Select one:
 - < 10 year
 - > 10 years
 
+### How would you rate your comfort with and understanding of the following concepts?
+
+Concepts:
+
+- Memory management (stack vs. heap, pointers, etc.)
+- Algorithms, data structures, big O notation
+- Software performance and optimization
+- Operating system interfaces for at least one platform (win32, linux system calls, etc.)
+- Concurrency and parallelism primitives (threads, mutexes, etc.)
+- Asynchronous programming
+
+Comfort:
+
+- Little to no understanding or comfort
+- Basic understanding and comfort
+- Good understanding and comfort
+- Solid understanding and comfort
+
+> **justification**
+>
+> We'd like to get at least a rough idea of how comfortable the community is with certain concepts. For example,
+> If we find out that most of the community feels uncomfortable with concurrency primitives, we may want to focus
+> effort on improving docs in that area.
+
 ### Where do you live?
 
 Select one (optional):
