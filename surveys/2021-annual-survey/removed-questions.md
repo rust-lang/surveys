@@ -2,6 +2,50 @@
 
 This document attempts to capture questions that were removed from previous iterations of the survey as well as the justifications for their removal.
 
+### Why did you stop using Rust?
+
+Select all that apply:
+
+- I did not see any benefit to using Rust
+- Rust was too intimidating, too hard to learn, or too complicated
+- Rust didn't have the libraries I need
+- Rust didn't have the tools I need
+- Rust didn't have good enough IDE or editor support
+- Rust didn't support the platforms I need
+- Rust seemed too risky to use in production
+- My company doesn't use Rust
+- Switching to Rust made me less productive
+- I needed better interoperability between Rust and other languages
+- Other (open response)
+
+> **REMOVED**
+>
+> Because we're asking people who have stopped using Rust but are filling out the survey, this is
+> likely to be a very biased sample. We have no way to extrapolate the answers to the larger population
+> of former Rust users. Even if we did, this data is not very actionable.
+
+### I never used Rust because...
+
+Select all that apply:
+
+- I did not see any benefit to using Rust
+- Rust was too intimidating, too hard to learn, or too complicated
+- Rust doesn't have the libraries I need
+- Rust doesn't have the tools I need
+- Rust doesn't have good enough IDE or editor support
+- Rust doesn't support the platforms I need
+- Rust seems too risky to use in production
+- I need better interoperability between Rust and other languages
+- My company doesn't use Rust
+- Switching to Rust would make me less productive
+- I haven't learned Rust yet, but I want to
+- I haven't learned Rust yet, and I don't want to
+- Other (open response)
+
+> **REMOVED**
+>
+> As above.
+
 ### How long did you use Rust before you stopped?
 
 Select one:
@@ -362,3 +406,13 @@ Select all that apply:
 > **justification**
 >
 > This question has led to surprising answers in the past that could help the lang team better prioritize features that make interop easier.
+
+### How would you rate the learning of these concepts?
+
+Options: Easy, Moderate, Tricky, Very Difficult, Still Don't Get it, N/A (haven't learned)
+
+Concepts: Enums, Modules, Ownership & Borrowing, Iterators, Traits, Generics and Trait Bounds, Lifetimes, Cargo, Macros, Unsafe, Async I/O, Pattern Matching, Collections, Closures, FFI, Concurrency
+
+> **TODO** this question usually makes great blog material, but it's really not actionable. Teachers of Rust generally have a good idea of what's difficult to teach, and Rust compiler devs have a good idea of what the papercuts are. Perhaps it should be removed.
+> **REMOVED** Not actionable.
+

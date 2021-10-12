@@ -32,30 +32,6 @@ Select one:
 
 ## For previous Rust users
 
-### Why did you stop using Rust?
-
-Select all that apply:
-
-- I did not see any benefit to using Rust
-- Rust was too intimidating, too hard to learn, or too complicated
-- Rust didn't have the libraries I need
-- Rust didn't have the tools I need
-- Rust didn't have good enough IDE or editor support
-- Rust didn't support the platforms I need
-- Rust seemed too risky to use in production
-- My company doesn't use Rust
-- Switching to Rust made me less productive
-- I needed better interoperability between Rust and other languages
-- Other (open response)
-
-> **justification**
->
-> Useful for understanding why people give up on Rust.
->
-> **TODO**
->
-> - What will we actually do with this information once we know it?
-
 ### As you have indicated that you're no longer using Rust, what prompted you to participate in this survey?
 
 Select all that apply:
@@ -78,30 +54,6 @@ Select all that apply:
 > Skip to `## About You` section
 
 ## For non-Rust users
-
-### I never used Rust because...
-
-Select all that apply:
-
-- I did not see any benefit to using Rust
-- Rust was too intimidating, too hard to learn, or too complicated
-- Rust doesn't have the libraries I need
-- Rust doesn't have the tools I need
-- Rust doesn't have good enough IDE or editor support
-- Rust doesn't support the platforms I need
-- Rust seems too risky to use in production
-- I need better interoperability between Rust and other languages
-- My company doesn't use Rust
-- Switching to Rust would make me less productive
-- I haven't learned Rust yet, but I want to
-- I haven't learned Rust yet, and I don't want to
-- Other (open response)
-
-> **justification**
->
-> Useful for understanding why people don't use Rust without trying, even though they are interested enough to complete this survey.
->
-> **TODO** Given the strong bias in the sample, I'm not sure if this data is actually useful.
 
 ### As you have indicated that you have not used Rust, what prompted you to participate in this survey?
 
@@ -188,16 +140,6 @@ Select one:
 > programmers use of Rust is. This does mean that we will group together, for example,
 > those who program once a week but always in Rust and those who program daily but
 > use Rust once a week.
-
-### How would you rate the learning of these concepts?
-
-Options: Easy, Moderate, Tricky, Very Difficult, Still Don't Get it, N/A (haven't learned)
-
-Concepts: Enums, Modules, Ownership & Borrowing, Iterators, Traits, Generics and Trait Bounds, Lifetimes, Cargo, Macros, Unsafe, Async I/O, Pattern Matching, Collections, Closures, FFI, Concurrency
-
-> **TODO** this question usually makes great blog material, but it's really not actionable. Teachers of Rust generally have a good idea of what's difficult to teach, and Rust compiler devs have a good idea of what the papercuts are. Perhaps it should be removed.
-> **Justification** Might not be directly applicable, but does provide verification of the perceptions of teachers/devs.
-Plus, it demonstrates to users that you are interested in their perceptions of where the papercuts are.
 
 ### How much do you agree with the following statements
 
