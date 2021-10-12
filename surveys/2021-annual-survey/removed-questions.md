@@ -406,3 +406,13 @@ Select all that apply:
 > **justification**
 >
 > This question has led to surprising answers in the past that could help the lang team better prioritize features that make interop easier.
+
+### How would you rate the learning of these concepts?
+
+Options: Easy, Moderate, Tricky, Very Difficult, Still Don't Get it, N/A (haven't learned)
+
+Concepts: Enums, Modules, Ownership & Borrowing, Iterators, Traits, Generics and Trait Bounds, Lifetimes, Cargo, Macros, Unsafe, Async I/O, Pattern Matching, Collections, Closures, FFI, Concurrency
+
+> **TODO** this question usually makes great blog material, but it's really not actionable. Teachers of Rust generally have a good idea of what's difficult to teach, and Rust compiler devs have a good idea of what the papercuts are. Perhaps it should be removed.
+> **REMOVED** Not actionable.
+

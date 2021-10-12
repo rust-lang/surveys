@@ -141,16 +141,6 @@ Select one:
 > those who program once a week but always in Rust and those who program daily but
 > use Rust once a week.
 
-### How would you rate the learning of these concepts?
-
-Options: Easy, Moderate, Tricky, Very Difficult, Still Don't Get it, N/A (haven't learned)
-
-Concepts: Enums, Modules, Ownership & Borrowing, Iterators, Traits, Generics and Trait Bounds, Lifetimes, Cargo, Macros, Unsafe, Async I/O, Pattern Matching, Collections, Closures, FFI, Concurrency
-
-> **TODO** this question usually makes great blog material, but it's really not actionable. Teachers of Rust generally have a good idea of what's difficult to teach, and Rust compiler devs have a good idea of what the papercuts are. Perhaps it should be removed.
-> **Justification** Might not be directly applicable, but does provide verification of the perceptions of teachers/devs.
-Plus, it demonstrates to users that you are interested in their perceptions of where the papercuts are.
-
 ### How much do you agree with the following statements
 
 Statements:
