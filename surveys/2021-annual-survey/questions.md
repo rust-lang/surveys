@@ -97,6 +97,9 @@ Select one:
 > The time periods used as answers try to reflect the major "epochs" of Rust history (i.e., pre-1.0, 2015 edition pre and post new error style,
 > and 2018 edition) as well as the most recent past. We use whole years even though this doesn't line up perfectly with these epochs. Learning
 > Rust in early 2015 was likely similar to the experience of learning Rust post 1.0 while before that the language was changing rapidly.
+> We explicitly use years instead of asking for which Rust edition someone learned because the former is often much easier for respondents to know.
+> It's also helpful to be more specific than an edition, and it's fairly easy to know which edition someone likely used based on the year they
+> learned Rust.
 
 ### How would you rate your Rust expertise?
 
