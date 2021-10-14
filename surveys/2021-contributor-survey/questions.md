@@ -69,10 +69,12 @@ Select all that apply:
 
 ### How are you associated with the Rust Project?
 
-- I am a member of a Rust Team.
-- I am a lead of a Rust Team.
-- I am a member of a Rust working group or project group.
-- I am a lead of a Rust working group or project group.
+Select all that apply:
+
+- I am a member of one or more Rust Teams.
+- I am a lead of one or more Rust Teams.
+- I am a member of one or more Rust working groups or project groups.
+- I am a lead of one or more Rust working groups or project groups.
 - I am not a member of a Rust Team, working group, or project group, but I
   would like to be.
 - I am not a member of a Rust team, working group, or project group, and I have
@@ -141,7 +143,7 @@ Select all that apply:
 >
 > Suggested by @manishearth. Useful for identifying problems within project governance.
 
-### I feel positive about my team/working group/project group leadership and governance structure.
+### In general I feel positive about the governance structure and leadership of the teams, project groups, and working groups I participate in.
 
 **Skip if not a member of the Rust Project.**
 
@@ -155,6 +157,18 @@ Select all that apply:
 >
 > Useful for sentiment analysis and gagues the severity of the problems identified
 > in the subsequent questions.
+
+### Are there any issues or concerns you have regarding the governance and leadership of the teams, project groups, or working groups you participate in?
+
+Free Form
+
+> **justification**
+>
+> The previous question poses the risk of hiding specific issues in teams if
+> the user is a member of multiple teams or groups but is only disatisfied with
+> the governance of a subset of them. This question makes room for specific
+> concerns to be voiced while still gathering an evaluation of the users
+> general experience across all their teams.
 
 ### I feel positive about my own leadership within the project.
 
@@ -185,7 +199,7 @@ Select all that apply:
 > Useful for sentiment analysis and gagues the severity of the problems identified
 > in the subsequent questions.
 
-### I feel my team/working group/project group is healthy.
+### In general I feel positive about the health of the teams, project groups, and working groups I participate in.
 
 **Skip if not a member of the Rust Project.**
 
@@ -199,6 +213,18 @@ Select all that apply:
 >
 > Useful for sentiment analysis and gagues the severity of the problems identified
 > in the subsequent questions.
+
+### Are there any issues or concerns you have regarding the health of the teams, project groups, or working groups you participate in?
+
+Free Form
+
+> **justification**
+>
+> The previous question poses the risk of hiding specific issues in teams if
+> the user is a member of multiple teams or groups but is only disatisfied with
+> the  health of a subset of them. This question makes room for specific
+> concerns to be voiced while still gathering an evaluation of the users
+> general experience across all their teams.
 
 ### Are you burnt out or do you feel you're at risk of burning out?
 
@@ -297,10 +323,12 @@ Free Form
 
 ### How were you associated with the Rust Project?
 
-- I was a member of a Rust Team.
-- I was a lead of a Rust Team.
-- I was a member of a Rust working group or project group.
-- I was a lead of a Rust working group or project group.
+Select all that apply:
+
+- I was a member of one or more Rust Teams.
+- I was a lead of one or more Rust Teams.
+- I was a member of one or more Rust working groups or project groups.
+- I was a lead of one or more Rust working groups or project groups.
 - I was not a member of a Rust Team, working group, or project group, but I
   wanted to be.
 - I was not a member of a Rust team, working group, or project group, and I had
@@ -325,14 +353,22 @@ Free Form
 > being done. Those contributing new code will likely face diff problems than
 > those who mainly review or coordinate work.
 
-### What sort of work did you want to be focused on?
+### The type of work I did in the Rust project was exactly what I wanted to be working on.
 
-Free Form.
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
 
 > **justification**
 >
-> Useful in identifying how satisified our past contributors were with their
-> work and may help identify sources of contributor attrition.
+> Useful in identifying how satisified our contributors are with the work
+> they're currently doing or if we should be helping them branch out into new
+> areas / achieve new goals.
+>
+> This was one of the best received questions during the pre-survey interviews
+> and seemed to elicited thoughtful answers.
 
 ### My experience contributing to the Rust Project was positive.
 
@@ -347,7 +383,19 @@ Free Form.
 > Useful for sentiment analysis and gagues the severity of the problems identified
 > in the subsequent questions.
 
-### I feel my team/working group/project group was healthy.
+### I felt positive about the project leadership and governance structure.
+
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
+
+> **justification**
+>
+> Suggested by @manishearth. Useful for identifying problems within project governance.
+
+### In general I felt positive about the governance structure and leadership of the teams, project groups, and working groups I participated in.
 
 **Skip if not a member of the Rust Project.**
 
@@ -361,6 +409,94 @@ Free Form.
 >
 > Useful for sentiment analysis and gagues the severity of the problems identified
 > in the subsequent questions.
+
+### Are there any issues or concerns you had regarding the governance and leadership of the teams, project groups, or working groups you participated in?
+
+Free Form
+
+> **justification**
+>
+> The previous question poses the risk of hiding specific issues in teams if
+> the user is a member of multiple teams or groups but is only disatisfied with
+> the governance of a subset of them. This question makes room for specific
+> concerns to be voiced while still gathering an evaluation of the users
+> general experience across all their teams.
+
+### I felt positive about my own leadership within the project.
+
+**Skip if not a leader of a team or group**
+
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
+
+> **justification**
+>
+> Suggested by @manishearth. Useful for identifying problems within project governance.
+
+### I feel the Rust Project was healthy while I was actively involved.
+
+**Skip if not a member of the Rust Project.**
+
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
+
+> **justification**
+>
+> Useful for sentiment analysis and gagues the severity of the problems identified
+> in the subsequent questions.
+
+### In general I felt positive about the health of the teams, project groups, and working groups I participated in.
+
+**Skip if not a member of the Rust Project.**
+
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
+
+> **justification**
+>
+> Useful for sentiment analysis and gagues the severity of the problems identified
+> in the subsequent questions.
+
+### Are there any issues or concerns you had regarding the health of the teams, project groups, or working groups you participated in?
+
+Free Form
+
+> **justification**
+>
+> The previous question poses the risk of hiding specific issues in teams if
+> the user is a member of multiple teams or groups but is only disatisfied with
+> the  health of a subset of them. This question makes room for specific
+> concerns to be voiced while still gathering an evaluation of the users
+> general experience across all their teams.
+
+### Were you burnt out or did you feel you were at risk of burning out?
+
+Select all that apply:
+
+- I was burnt out.
+- I was at risk of burning out.
+- I was not burnt out when I stopped contributing but I had been in the past.
+- I have not been burnt out.
+
+### If you've experienced burnout, was it related to your contributions to the Rust project?
+
+- Yes
+- No
+
+> **justification**
+>
+> Answers a specific question we have.
+>
+> * Is burnout a major issue across the Rust Project?
 
 ### What made you stop contributing?
 
