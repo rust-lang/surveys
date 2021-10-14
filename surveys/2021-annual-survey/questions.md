@@ -713,6 +713,7 @@ Select one:
 - Doesn't add a feature I want
 - Stagnation
 - Instability of the language
+- Development of the language not scalable/sustainable
 - Superseded by an alternative
 - Becomes too complex
 - Not enough localization
