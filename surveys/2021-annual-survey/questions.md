@@ -682,8 +682,9 @@ Select one:
 
 - University or other tertiary institute
 - High school or secondary school
-- Bootcamp or other vocational-focussed educational institute (paid for by you)
-- A short training course offered by your employer or a contracted third party (paid for by your employer, not by you or the government)
+- A course through an *online* "continuing education" provider (e.g., Udemy, Coursera, edX, LinkedIn Learning, etc.)
+- A bootcamp or other vocational-focused educational institute
+- A short training course offered through your employer or contracted by your employer
 
 ### Which best describes your course or activity?
 
