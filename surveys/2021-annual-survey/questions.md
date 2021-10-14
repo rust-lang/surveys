@@ -137,7 +137,7 @@ Select one:
 > in someone's technical life.
 >
 > We deliberately use calendar time for this question to gauge how "serious" the
-> programmers use of Rust is. This does mean that we will group together, for example,
+> programmer's use of Rust is. This does mean that we will group together, for example,
 > those who program once a week but always in Rust and those who program daily but
 > use Rust once a week.
 
@@ -211,7 +211,7 @@ Select all that apply:
 
 ### Which version(s) of Rust do you use for local development?
 
-Select all the apply:
+Select all that apply:
 
 - Current stable version
 - Previous stable version
@@ -225,7 +225,7 @@ Select all the apply:
 
 ### Which version(s) of Rust do you use for testing (i.e., CI)?
 
-Select all the apply:
+Select all that apply:
 
 *Same answers as above*
 
