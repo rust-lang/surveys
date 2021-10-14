@@ -568,6 +568,10 @@ Select as many as apply:
 
 ### Approximately how many total developers does your company employ?
 
+Note: don't worry about being exact here! Go with you gut.
+
+Select one:
+
 - Under 10
 - 11-49
 - 50-99
