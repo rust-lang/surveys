@@ -170,7 +170,7 @@ Rating:
 
 Select all that apply:
 
-- *nix
+- Linux
 - Windows
 - Windows Subsystem for Linux
 - Mac OS
@@ -200,7 +200,7 @@ Free form (optional).
 
 Select all that apply:
 
-- *nix (desktop or server)
+- Linux (desktop or server)
 - Windows
 - Mac OS
 - iOS
