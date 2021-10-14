@@ -211,7 +211,7 @@ Select all that apply:
 
 ### Which version(s) of Rust do you use for local development?
 
-Select all the apply:
+Select all that apply:
 
 - Current stable version
 - Previous stable version
@@ -225,7 +225,7 @@ Select all the apply:
 
 ### Which version(s) of Rust do you use for testing (i.e., CI)?
 
-Select all the apply:
+Select all that apply:
 
 *Same answers as above*
 
