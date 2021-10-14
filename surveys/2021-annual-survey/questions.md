@@ -389,7 +389,7 @@ Select all the apply:
 
 Select all that apply:
 
-- I have produced informational content about Rust (e.g., blogged, live streamed, made a YouTube video, etc.).
+- I have produced informational content about Rust (e.g., blogged, live streamed, made a YouTube video, presented at a conference/meetup, etc.).
 - On several occasions I have consumed informational content about Rust (e.g., blogs, live streams, YouTube videos, etc.).
 - On several occasions I have read *comments* about Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
 - On several occasions I have *commented* on Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
@@ -397,6 +397,10 @@ Select all that apply:
 - On several occasions I have participated in conversations about Rust on social media (Twitter, Facebook, LinkedIn, etc.)
 - I have participated in Rust community forums or chats (e.g., users.rust-lang.org, Rust Discord, a local Rust chat community, etc.)
 - I have attended a Rust meetup or conference (virtual or in-person).
+- I have published a new or updated Rust crate to crates.io
+- I have contributed to a public Rust crate
+- I have submitted issue reports to a repository in the `rust-lang` GitHub organization
+- I have submitted pull requests to a repository in the `rust-lang` GitHub organization
 
 > **justification**
 >
