@@ -911,26 +911,25 @@ Select one:
 - Yes
 - No [`NEXT`](#excluding-rust-what-is-your-experience-with-other-kinds-of-programming-languages)
 
-### Which category best describes the your current employer's industry?
+### Which category best describes your current employer's industry?
 
 Select all that apply:
 
 - Advertising
-- Agricultural
 - Aerospace
 - Automotive
-- Energy
+- Business software
 - Computer hardware
 - Consumer software
-- Business software
+- Energy
 - Finance
-- Food
 - Film or Television
 - Gaming
 - Healthcare
 - News media
 - Manufacturing
 - Music
+- Retail
 - Telecommunications
 - Transportation
 - Other (open response)
@@ -953,7 +952,7 @@ Select all that apply:
 
 - Blockchain
 - Cloud computing applications
-- Cloud computing infrastructure
+- Cloud computing infrastructure or networking
 - Desktop computer applications
 - Mobile phone applications
 - Desktop computer or mobile phone infrastructure
