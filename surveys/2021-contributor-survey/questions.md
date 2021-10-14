@@ -363,12 +363,8 @@ Select all that apply:
 
 > **justification**
 >
-> Useful in identifying how satisified our contributors are with the work
-> they're currently doing or if we should be helping them branch out into new
-> areas / achieve new goals.
->
-> This was one of the best received questions during the pre-survey interviews
-> and seemed to elicited thoughtful answers.
+> Useful in identifying how satisified our past contributors were with their
+> work and may help identify sources of contributor attrition.
 
 ### My experience contributing to the Rust Project was positive.
 
