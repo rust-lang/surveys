@@ -213,7 +213,7 @@ Please count *logical* CPUs here, not cores or sockets. You can get this number 
 - Windows Command Prompt: `echo %NUMBER_OF_PROCESSORS%`
 - Windows PowerShell: `(Get-CimInstance Win32_ComputerSystem).NumberOfLogicalProcessors`
 
-Type: free form (number, optional).
+Type: free form (number, optional)
 
 > **justification**
 >
