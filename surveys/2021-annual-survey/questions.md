@@ -774,19 +774,27 @@ Select all the apply:
 >
 > Would be useful for leadership to understand the community's fears.
 
-### In your opinion, how easy is it for qualified applicants to find a Rust job?
+### How much do you agree with the following statements on Rust employment?
+
+Statements:
+
+- It is easy for qualified applicants to find jobs which use Rust for the majority of programming
+- Existing Rust jobs are attractive
+- Learning Rust provides me with skills that employers seek
+- I feel qualified to apply for at least some advertised Rust jobs
 
 Select one:
 
-- Easy
-- Doable
-- Challenging
-- I'm not sure
+- Strongly agree
+- Agree
+- Neither agree nor disagree
+- Disagree
+- Strong disagree
 
 > **justification**
 >
 > The flip side of the question asking whether the respondent's company plans on hiring Rust developers, we
-> want to know how high respondents sense demand for Rust jobs is.
+> want to know how respondents feel the level of demand for and quality of Rust jobs are.
 
 ## Demographics
 
