@@ -173,11 +173,21 @@ Rating:
 
 Select all that apply:
 
-- *nix
+- Linux
 - Windows
 - Windows Subsystem for Linux
 - Mac OS
 - Other (open response)
+
+> **justification**
+>
+> We're using "Linux" here rather than grouping all UNIXes together, to allow
+> us to gauge interest in specific other UNIXes via the fill-in-the-blank
+> "other" option. If we grouped UNIXes together, users of other UNIX systems
+> wouldn't be visible; let's try to capture the level of interest in those
+> systems. As with many questions with an open "other" response; if any
+> specific answer appears frequently, we can add it to future surveys to reduce
+> the amount of work needed to process responses.
 
 ### On the primary machine you compile Rust code on, how many logical CPU threads do you have?
 
@@ -203,7 +213,7 @@ Free form (optional).
 
 Select all that apply:
 
-- *nix (desktop or server)
+- Linux (desktop or server)
 - Windows
 - Mac OS
 - iOS
@@ -211,6 +221,11 @@ Select all that apply:
 - Embedded platforms (with an operating system)
 - Embedded platforms (bare metal)
 - Other (open response)
+
+> **justification**
+>
+> We're using "Linux" here rather than "*nix" or similar, with the same
+> justification as in the "Which operating systems do you use" question.
 
 ### Which version(s) of Rust do you use for local development?
 
