@@ -524,8 +524,10 @@ Select one:
 
 ### How many open-source and non-personal Rust projects do you currently maintain?
 
-Non-personal: at least one other person also contributes and the project is meant for others and not just yourself.
-Maintain: you have review and merge privileges
+- Non-personal: at least one other person also contributes and the project is meant for others and not just yourself.
+- Maintain: you have review and merge privileges
+
+Select one:
 
 - 0
 - 1
@@ -540,8 +542,11 @@ Maintain: you have review and merge privileges
 
 ### How many open-source and non-personal Rust projects do you currently contribute to (not including those you maintain)?
 
-Non-personal: at least one other person also contributes and the project is meant for others and not just yourself.
-Contribute: you regularly provide code, tests, documentation, issues, etc.
+- Non-personal: at least one other person also contributes and the project is meant for others and not just yourself.
+- Contribute: you *regularly* provide code, tests, documentation, issues, etc.
+- Maintain: you have review and merge privileges
+
+Select one:
 
 - 0
 - 1
