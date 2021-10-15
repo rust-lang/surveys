@@ -922,12 +922,14 @@ Select all that apply:
 - Computer hardware
 - Consumer software
 - Energy
+- Education/Academia
+- Entertainment or Media
 - Finance
-- Film or Television
 - Gaming
+- Government
 - Healthcare
-- News media
 - Manufacturing
+- Military
 - Music
 - Retail
 - Telecommunications
@@ -950,15 +952,29 @@ Select all that apply:
 
 Select all that apply:
 
+- Audio programming
 - Blockchain
 - Cloud computing applications
-- Cloud computing infrastructure or networking
-- Desktop computer applications
-- Mobile phone applications
-- Desktop computer or mobile phone infrastructure
-- WebAssembly
+- Cloud computing infrastructure or utilities
+- Computer graphics
+- Data science
+- Desktop computer application frontend
+- Desktop computer or mobile phone libraries or services
+- Distributed systems
 - Embedded devices (with operating systems)
 - Embedded devices (bare metal)
+- HPC (High-performance [Super]Computing)
+- IoT (Internet of Things)
+- Machine learning
+- Mobile phone application frontend
+- Computer networking
+- Robotics
+- Computer security
+- Scientific and/or numeric computing
+- Server-side or "backend" application
+- Simulation
+- Web application frontend
+- WebAssembly
 
 > **justification**
 >
