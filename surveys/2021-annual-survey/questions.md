@@ -173,9 +173,9 @@ Rating:
 >
 > Note that answers here can be subject to survivorship bias and so extra care should be taken with interpreting results.
 
-### Which operating systems do you use regularly for Rust development as your dev machine?
+### Which operating systems do you use regularly for Rust *development*?
 
-Note: this is specifically about which systems you use as a dev machine *not* all the 
+Note: this is specifically about which systems you use for development *not* all the 
 systems you target.
 
 Select all that apply:
@@ -221,7 +221,7 @@ Free form (optional).
 ### Which operating systems do you develop Rust software for?
 
 Note: this is specifically about which systems you **target** not which system you use
-as a development machine.
+for development.
 
 Select all that apply:
 
@@ -261,7 +261,7 @@ Select all that apply:
 > Together with the following question, we can better determine what the spread of 
 > version usage is across the community.
 
-### Which version(s) of Rust do you use in automated testing (i.e., CI)?
+### Which version(s) of Rust do you use in automated testing (e.g., CI)?
 
 Select all that apply:
 
