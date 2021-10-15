@@ -729,10 +729,10 @@ Select one:
 
 Statements:
 
-- It is easy for qualified applicants to find jobs which uses Rust for the majority of programming
+- It is easy for qualified applicants to find jobs which use Rust for the majority of programming
 - Existing Rust jobs are attractive
-- Rust programming skills are in high demand
-- Rust provides me with skills that employers seek
+- Learning Rust provides me with skills that employers seek
+- I feel qualified to apply for at least some advertised Rust jobs
 
 Select one:
 
