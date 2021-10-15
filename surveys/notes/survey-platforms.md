@@ -1,6 +1,6 @@
 # Survey Platform
 
-The survey platform we use is ???.
+The survey platform we use is [SurveyHero](https://www.surveyhero.com) with a Business subscription.
 
 ## Functionality 
 
@@ -11,6 +11,10 @@ An ideal survey platform has the following functionality:
 * Low cost and pay-as-you-go
 
 ## Survey Platform Assessments
+
+The following are the individual survey platform assessments for the platforms that we have considered.
+
+Ultimately SurveyHero was chosen over the other options due to its combination of rich survey authoring, ability to handle multiple translations as one single survey, and reliability in China. We also closely considered SurveyMonkey, but SurveyHero was chosen due to slightly lower cost and it being more reliable in China.
 
 ### SurveyHero (surveyhero.com)
 
@@ -58,3 +62,14 @@ An ideal survey platform has the following functionality:
 * Ease of shared editing
 * Unlimited responses
 * Free
+
+### Microsoft Forms
+
+*	One survey, multiple languages
+*	Single output format – reduced data wrangling
+*	Limited to 11 languages (or 23? Conflicting information on Microsoft resources)
+*	Manual editing capabilities (Original text visible during translation)
+*	Translation done outside of survey platform
+  *	Create survey in base language (if need RTL language, it must be the default for the survey)
+  *	Uses set of Excel files that are exported (after initial survey creation) and then imported with translation
+*	Language can be user selected or set by appending language code to the URL
