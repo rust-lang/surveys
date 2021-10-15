@@ -43,8 +43,6 @@ Select all that apply:
 - Curiosity.
 - Other (open response)
 
-> **ADDED**
->
 > **justification**
 >
 > Useful in understanding why non-users contribute;
@@ -65,7 +63,7 @@ Select all that apply:
 - Curiosity.
 - Other (open response)
 
-> **ADDED**
+> **justification**
 >
 > Useful in understanding why non-users contribute to the survey
 
@@ -115,15 +113,21 @@ Select one:
 >
 > Useful for cohort analysis, i.e., for other questions we can query if answers are significantly different for beginners vs advanced users.
 
-### Which of the following activities do you find helpful or effective for learning Rust?
+### Which of the following activities do you find helpful or effective for learning Rust or improving your Rust skills?
 
-Activities:
+Select all that apply:
 
 - Reading books or other written material geared towards learning Rust
 - Watching videos, streams, etc. geared towards learning Rust
 - Attending an organized training session or course (in person or virtual)
 - Doing Rust coding exercises or challenges created to help learn Rust
 - Building a non-trivial project in Rust or contributing to an open source project
+
+> **justification**
+>
+> We'd like to confirm what learning materials are popular with the community. This
+> combined with some cohort analysis can tell us about how particular subsections
+> of the community prefer to learn.
 
 ### How often do you use Rust?
 
@@ -169,7 +173,10 @@ Rating:
 >
 > Note that answers here can be subject to survivorship bias and so extra care should be taken with interpreting results.
 
-### Which operating systems do you use regularly for Rust development as your dev machine?
+### Which operating systems do you use regularly for Rust *development*?
+
+Note: this is specifically about which systems you use for development *not* all the 
+systems you target.
 
 Select all that apply:
 
@@ -180,6 +187,8 @@ Select all that apply:
 - Other (open response)
 
 > **justification**
+>
+> In general we'd like to know which operating systems are most used as dev machines in the community.
 >
 > We're using "Linux" here rather than grouping all UNIXes together, to allow
 > us to gauge interest in specific other UNIXes via the fill-in-the-blank
@@ -211,6 +220,9 @@ Free form (optional).
 
 ### Which operating systems do you develop Rust software for?
 
+Note: this is specifically about which systems you **target** not which system you use
+for development.
+
 Select all that apply:
 
 - Linux (desktop or server)
@@ -223,6 +235,9 @@ Select all that apply:
 - Other (open response)
 
 > **justification**
+>
+> This question can be used to figure out roughly what systems are being targeted as well as 
+> what OS stack is being developed against (i.e., desktop/server OS, mobile OS, embedded OS, bare metal)
 >
 > We're using "Linux" here rather than "*nix" or similar, with the same
 > justification as in the "Which operating systems do you use" question.
@@ -241,11 +256,20 @@ Select all that apply:
 - I don't know
 - Other (open response)
 
-### Which version(s) of Rust do you use for testing (i.e., CI)?
+> **justification**
+>
+> Together with the following question, we can better determine what the spread of 
+> version usage is across the community.
+
+### Which version(s) of Rust do you use in automated testing (e.g., CI)?
 
 Select all that apply:
 
 *Same answers as above*
+
+> **justification**
+>
+> See the previous question.
 
 ### Please rate how much you agree with the following statements on Rust stability.
 
@@ -319,14 +343,12 @@ Select all that apply:
 - From source
 - Other (open response)
 
+> **justification**
+>
+> Since many of these sources are not under project control, it can be hard to know where
+> people are getting their Rust compiler from.
+
 ### In your opinion, how do you find the following aspects of Rust?
-
-Options:
-
-- Great
-- Good enough
-- Could be better
-- Seriously lacking
 
 Aspects:
 
@@ -341,7 +363,22 @@ Aspects:
 - GUI development
 - Rust language and standard library documentation
 
+Options:
+
+- Great
+- Good enough
+- Could be better
+- Seriously lacking
+
+> **justification**
+>
+> This question gathers data on the communities perceptions of certain aspects of Rust at this point in time.
+
 ### In your opinion, have the following aspects of Rust gotten better or worse over the past year?
+
+Aspects:
+
+*same aspects as the previous question*
 
 Options:
 
@@ -352,9 +389,9 @@ Options:
 - Much Worse
 - Unsure
 
-Aspects:
-
-*same aspects as the previous question*
+> **justification**
+>
+> This question gathers data on the communities perceptions of certain aspects of Rust over the last year.
 
 ### Please indicate how vital to your workflow each of the following tools are when programming with Rust:
 
@@ -375,6 +412,11 @@ Tools:
 - miri
 - rustfmt
 - bindgen
+
+> **justification**
+>
+> Understanding how important certain tools are to the community and *more importantly* to 
+> certain subsections of the community is important.
 
 ### Which editor or IDE setup do you use on a regular basis?
 
@@ -445,9 +487,18 @@ Choices:
 > We'd like to know if any of the officially moderated spaces in the Rust community tend to produce feelings
 > of unwelcome which made indicate that we need to more aggressively moderate those spaces.
 
+### If you indicated that you did not feel welcome in the Rust community, are there any details about your experience that you would like to share with us?
+
+Free form (optional)
+
+> **justification**
+> 
+> More detail on the type of situations where people have felt unwelcome can let us better 
+> address these issues in the future.
+
 ### Roughly how often do you actively contribute to the Rust project?
 
-Options:
+Activities:
 
 - Comment on, contribute to discussion of, or provide edits to an open RFC
 - Create a new thread or comment on internals.rust-lang.org
@@ -502,29 +553,6 @@ Contribute: you regularly provide code, tests, documentation, issues, etc.
 >
 > We would like to know the rough make up of those who are using Rust in general
 > vs those who actively participate in development of open source Rust projects.
-
-> **Follow-up: How difficult was it to complete [task]?**
->
-> **Justification** Captures not just those who tried and failed, but those who tried and succeeded.
-> Shows failure/difficulty rate compared to success rate.
-> Also overall engagement / attempted engagement in these ways.
-
-### How welcome do you feel when interacting with the Rust community in the following ways?
-
-- rust-lang GitHub organization
-- Rust community GitHub projects
-- internals.rust-lang.org, Rust Discord, or Rust Zulip
-- users.rust-lang.org, Rust questions on stack overflow
-- r/rust
-- Other social media (Twitter, Facebook, WeChat, and other sites 'outside' the Rust project, e.g., r/programming, Hacker News)
-- Rust conferences
-- Local Rust events, e.g., meetups
-
-> **Survey Flow** If they indicated feeling unwelcome above:
-
-### You indicated that you did not feel welcome in the Rust community. Are there any details about your experience that you would like to share with us?
-
-Free form.
 
 ## Rust at work
 
@@ -640,10 +668,6 @@ Rating:
 >
 > The Rust community and potential adopters of Rust have a lot of assumptions of why one would choose Rust for a project.
 > This question can help confirm or challenge our assumptions and see how they change over time.
->
-> **SURVEY FLOW**
->
-> Only show this question if the respondent previously answered that [they use Rust at work](#are-you-using-rust-at-work?)
 
 ### Please rate your experience using Rust at work.
 
@@ -666,10 +690,6 @@ Rating:
 > **justification**
 >
 > Future potential adopters may want to know how often other's have encountered success.
->
-> **SURVEY FLOW**
->
-> Only show this question if the respondent previously answered that [they use Rust at work](#are-you-using-rust-at-work?)
 
 ### What about your usage of Rust has been challenging?
 
@@ -708,6 +728,10 @@ Select one:
 - A bootcamp or other vocational-focused educational institute
 - A short training course offered through your employer or contracted by your employer
 
+> **justification**
+>
+> We want to know where Rust is being taught.
+
 ### Which best describes your course or activity?
 
 - A course teaching exclusively how to program in Rust
@@ -715,20 +739,24 @@ Select one:
 - A computer science course (e.g., operating systems, algorithms, etc.) course which uses Rust (and potentially other languages)
 - Other type of course where Rust was used
 
+> **justification**
+>
+> We want to know how Rust is being taught.
+
 ### Is Rust mandated for your course or activity, or did you choose it yourself?
 
 - Rust was mandated
 - I chose to use Rust
 
+> **justification**
+>
+> Together with the above question, we want to know how Rust is being taught.
+
 ## Your opinions about Rust
 
-> This is a new section. I think that there are some subjective questions which are worth asking
-> and I'm collecting them here. In the final survey, they may be better scattered amongst other
-> questions.
+### What are your biggest worries for the future of Rust?
 
-### What is your biggest worry for the future of Rust?
-
-Select one:
+Select all the apply:
 
 - Not enough usage in industry
 - Too much interest from industry leads to too much politics
@@ -742,8 +770,6 @@ Select one:
 - Other (open response)
 - I'm not worried
 
-> Alternative: could rephrase as a 'select all that apply' question
->
 > **justification**
 >
 > Would be useful for leadership to understand the community's fears.
