@@ -716,14 +716,14 @@ Select one:
 Select one:
 
 - Not enough usage in industry
-- Too much interest from industry leads to too much politics
-- Not enough users
-- Doesn't add a feature I want
-- Stagnation
+- Too much interest from big companies
+- Not enough open source contributions to the ecosystem
+- Doesn't add a specific feature I want
+- Rust doesn't evolve quickly enough
 - Instability of the language
 - Superseded by an alternative
 - Becomes too complex
-- Not enough localization
+- Tools and documentation are not accessible enough (e.g., due to language or incompatibility with screen readers)
 - Other (open response)
 - I'm not worried
 
