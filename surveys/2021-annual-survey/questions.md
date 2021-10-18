@@ -204,16 +204,16 @@ Type: select all that apply
 > specific answer appears frequently, we can add it to future surveys to reduce
 > the amount of work needed to process responses.
 
-### On the primary machine you compile Rust code on, how many logical CPU threads do you have?
+### On the primary machine you compile Rust code on, how many CPUs are there?
 
-Please count logical CPUs here, not cores or sockets. You can get this number by running the following commands from the command line:
+Please count *logical* CPUs here, not cores or sockets. You can get this number by running the following commands from the command line:
 
 - Linux: `nproc`
 - macOS: `sysctl -n hw.ncpu`
 - Windows Command Prompt: `echo %NUMBER_OF_PROCESSORS%`
 - Windows PowerShell: `(Get-CimInstance Win32_ComputerSystem).NumberOfLogicalProcessors`
 
-Type: free form (optional).
+Type: free form (number, optional).
 
 > **justification**
 >
