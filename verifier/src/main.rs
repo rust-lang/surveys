@@ -12,13 +12,8 @@ fn main() -> Result<(), Box<dyn Error>> {
     let markdown_questions = markdown::parse(&markdown)?;
     let online_questions = fetch_online_questions(args)?;
 
-    for (online, markdown) in markdown_questions.iter().zip(online_questions.iter()) {
-        if online.text != markdown.question_text {
-            println!(
-                "Text doesn't match\n'{}' != '{}'",
-                online.text, markdown.question_text
-            );
-        }
+    for (_online, _markdown) in markdown_questions.iter().zip(online_questions.iter()) {
+        // TODO: compare questions
     }
 
     Ok(())
@@ -31,7 +26,13 @@ fn fetch_online_questions(args: Args) -> Result<Vec<api::Question>, Box<dyn Erro
     let survey = surveys
         .iter()
         .find(|s| s.title == survey_name)
-        .expect("No survey");
+        .ok_or_else(|| {
+            format!(
+                "no survey with the name '{}' in the account. Available surveys: {}",
+                survey_name,
+                surveys.iter().map(|s| &s.title).cloned().collect::<Vec<_>>().join(", ")
+            )
+        })?;
     client.fetch_questions(survey.survey_id)
 }
 
