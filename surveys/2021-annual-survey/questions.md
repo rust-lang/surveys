@@ -395,28 +395,29 @@ Options:
 
 ### Please indicate how vital to your workflow each of the following tools are when programming with Rust:
 
-Options:
+Tools:
+
+- clippy
+- cargo
+- rustdoc/cargo doc
+- rustup
+- play.rust-lang.org
+- miri
+- rustfmt/cargo fmt
+- bindgen
+
+Rating:
 
 - Essential
 - Somewhat important
 - Not important
 - I have no experience with this tool
 
-Tools:
-
-- clippy
-- cargo
-- rustdoc
-- rustup
-- play.rust-lang.org
-- miri
-- rustfmt
-- bindgen
-
 > **justification**
 >
 > Understanding how important certain tools are to the community and *more importantly* to 
-> certain subsections of the community is important.
+> certain subsections of the community is important. This can also help us understand how
+> popular certain tools are as well as how important lesser used tools are to their users.
 
 ### Which editor or IDE setup do you use on a regular basis?
 
