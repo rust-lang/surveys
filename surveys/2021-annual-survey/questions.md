@@ -112,6 +112,10 @@ Select one:
 > **justification**
 >
 > Useful for cohort analysis, i.e., for other questions we can query if answers are significantly different for beginners vs advanced users.
+>
+> Previously this question was a 1-10 ranking. Having specific labels can help with consistency across responses. Additionally, having 10 choices
+> was too specific (i.e., what's the difference between a 7 and 8?) where as with the new answers, we have a better idea of what the differences 
+> between answers actually mean.
 
 ### Which of the following activities do you find helpful or effective for learning Rust or improving your Rust skills?
 
