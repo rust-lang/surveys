@@ -307,7 +307,8 @@ Select all that apply:
 - For a particular language feature or set of language features I need
 - To help test the nightly version for bugs
 - For testing in CI
-- A dependency I use requires it
+- A crate dependency I use requires it
+- A tool I use requires it
 - Other (open response)
 
 > **justification**
