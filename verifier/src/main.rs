@@ -1,42 +1,37 @@
-use reqwest::blocking::Client;
 use std::error::Error;
 
-mod markdown;
+use structopt::StructOpt;
+
 mod api;
+mod markdown;
 
 fn main() -> Result<(), Box<dyn Error>> {
+    let args = Args::from_args();
     let markdown = std::fs::read_to_string("../surveys/2021-annual-survey/questions.md")?;
     let questions = markdown::parse(&markdown);
     println!("{:#?}", questions);
-    let client = Client::new();
-    let response = client
-        .get("https://api.surveyhero.com/v1/surveys")
-        .basic_auth("", Some(""))
-        .send()?
-        .error_for_status()?;
-    let surveys: api::Surveys = response.json()?;
+    let client = api::Client::new(args.username, args.password);
+    let surveys = client.fetch_surveys()?;
     println!("{:#?}", surveys);
 
-    let name = std::env::args().skip(1).next().expect("No name arg given");
+    let survey_name = args.survey_name;
     let survey = surveys
-        .surveys
         .iter()
-        .find(|s| s.title == name)
+        .find(|s| s.title == survey_name)
         .expect("No survey");
-    let id = &survey.survey_id;
 
-    let response = client
-        .get(format!(
-            "https://api.surveyhero.com/v1/surveys/{}/elements",
-            id
-        ))
-        .basic_auth("", Some(""))
-        .send()?
-        .error_for_status()?;
-
-    let elements: api::Elements = response.json()?;
-    println!("{:#?}", elements.questions().collect::<Vec<_>>());
+    let questions = client.fetch_questions(survey.survey_id)?;
+    println!("{:#?}", questions);
 
     Ok(())
 }
 
+#[derive(structopt::StructOpt)]
+struct Args {
+    #[structopt(short, long)]
+    username: String,
+    #[structopt(short, long)]
+    password: String,
+    #[structopt(short, long)]
+    survey_name: String,
+}
