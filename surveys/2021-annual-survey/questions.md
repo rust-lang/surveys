@@ -275,7 +275,7 @@ Type: select all that apply
 
 Type: select all that apply
 
-*Same answers as above*
+REPEAT
 
 > **justification**
 >
@@ -395,7 +395,7 @@ Type: matrix
 
 Aspects:
 
-*same aspects as the previous question*
+REPEAT
 
 Options:
 

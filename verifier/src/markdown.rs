@@ -1,12 +1,30 @@
-pub fn parse<'a>(markdown: &'a str) -> Vec<Question<'a>> {
+use std::{error::Error, vec};
+
+pub fn parse<'a>(markdown: &'a str) -> Result<Vec<Question<'a>>, Box<dyn Error>> {
     let mut questions = Vec::new();
     #[derive(Debug)]
     enum State<'a> {
+        // We are starting from nothing
         None,
+        // We have the question text and now need answers
         Text(&'a str),
+        // building up the question with answers
         Question(Question<'a>),
+        // Got the text for a matrix question
+        HalfMatrixText(&'a str),
+        // On the first half of a matrix question
+        HalfMatrix {
+            text: &'a str,
+            label: &'a str,
+            answers: Vec<&'a str>,
+        },
     }
     let mut state = State::None;
+    macro_rules! bail {
+        ($($args : tt) *) => {
+            return Err(format!("markdown error: {}", format_args!($($args)*)).into())
+        };
+    }
     for line in markdown
         .lines()
         .map(|l| l.trim())
@@ -14,15 +32,23 @@ pub fn parse<'a>(markdown: &'a str) -> Vec<Question<'a>> {
         .filter(|l| !l.starts_with(">"))
     {
         if line.starts_with("###") {
-            assert!(
-                matches!(state, State::None)
-                    || matches!(state, State::Question(ref q) if !q.is_empty()),
-                "illegal state: {:?}",
-                state
-            );
             let old_state = std::mem::replace(&mut state, State::Text(&line[3..].trim()));
-            if let State::Question(q) = old_state {
-                questions.push(q);
+            match old_state {
+                State::Question(q) if !q.is_empty() => questions.push(q),
+                State::None => {}
+                State::Text(q) => bail!("question without answers '{}'", q),
+                State::Question(q) => bail!("question without answers '{}'", q.text),
+                State::HalfMatrixText(q) => {
+                    bail!("question without answers '{}'", q)
+                }
+                State::HalfMatrix {
+                    answers, text: q, ..
+                } if answers.is_empty() => {
+                    bail!("question without answers '{}'", q)
+                }
+                State::HalfMatrix { text: q, .. } => {
+                    bail!("matrix question without second half of answers '{}'", q)
+                }
             }
         } else if line.starts_with("Type: ") {
             if let State::Text(text) = state {
@@ -43,15 +69,15 @@ pub fn parse<'a>(markdown: &'a str) -> Vec<Question<'a>> {
                         answers: Answers::SelectMany(vec![]),
                     })
                 } else if typ.starts_with("matrix") {
-                    State::Question(Question {
-                        text,
-                        answers: Answers::Matrix(vec![], vec![]),
-                    })
+                    State::HalfMatrixText(text)
                 } else {
-                    panic!("Illegal type: {}", typ);
+                    bail!("illegal question type: type='{}' question='{}'", typ, text);
                 }
             } else {
-                panic!("Illegal state: {:?}", state);
+                bail!(
+                    "illegal parser state: found type when state is '{:?}'",
+                    state
+                );
             }
         } else if line.starts_with("-") {
             match &mut state {
@@ -64,28 +90,104 @@ pub fn parse<'a>(markdown: &'a str) -> Vec<Question<'a>> {
                     ..
                 }) => a.push(line[1..].trim()),
                 State::Question(Question {
-                    answers: Answers::Matrix(ref mut a, ref mut b),
+                    answers:
+                        Answers::Matrix {
+                            ref mut answers2, ..
+                        },
                     ..
                 }) => {
-                    a.push(line[1..].trim());
-                    b.push(line[1..].trim());
+                    answers2.push(line[1..].trim());
                 }
-                _ => {}
+                State::HalfMatrix { answers, .. } => {
+                    answers.push(line[1..].trim());
+                }
+                _ => {
+                    //     bail!("illegal state. found answer when state is {:?}", state)
+                }
             }
-        } else if line.starts_with("*Same answers as above*") {
-            println!("TODO: Handle same answers as above");
-            state = State::None;
+        } else if line.starts_with("REPEAT") {
+            let previous = questions.last().ok_or_else(|| {
+                format!(
+                    "question repeats previous answer but there is no previous question '{}'",
+                    "TODO"
+                )
+            })?;
+            state = match (state, &previous.answers) {
+                (
+                    State::HalfMatrixText(q),
+                    Answers::Matrix {
+                        label1, answers1, ..
+                    },
+                ) => State::HalfMatrix {
+                    text: q,
+                    label: label1,
+                    answers: answers1.clone(),
+                },
+                (
+                    State::HalfMatrix {
+                        text,
+                        label,
+                        answers,
+                    },
+                    Answers::Matrix {
+                        label1, answers1, ..
+                    },
+                ) if answers.is_empty() && *label1 == label => State::HalfMatrix {
+                    text,
+                    label,
+                    answers: answers1.clone(),
+                },
+                (
+                    State::Question(Question {
+                        text,
+                        answers: Answers::SelectMany(a1),
+                    }),
+                    new,
+                ) if a1.is_empty() => State::Question(Question {
+                    text,
+                    answers: new.clone(),
+                }),
+                (state, _) => bail!(
+                    "unexpected placement of the REPEAT keyword. State={:?}",
+                    state
+                ),
+            };
+        } else if line.ends_with(":") {
+            state = match state {
+                State::HalfMatrixText(q) => State::HalfMatrix {
+                    text: q,
+                    label: line,
+                    answers: vec![],
+                },
+                State::HalfMatrix {
+                    text,
+                    label,
+                    answers,
+                } if !answers.is_empty() => State::Question(Question {
+                    text,
+                    answers: Answers::Matrix {
+                        label1: label,
+                        label2: line,
+                        answers1: answers,
+                        answers2: vec![],
+                    },
+                }),
+                State::HalfMatrix { text, .. } => {
+                    bail!("matrix question has no answers in first section '{}'", text)
+                }
+                _ => state,
+            };
         } else {
-            println!("Unhandled line: {}", line);
+            log::warn!("Unhandled line: {}", line);
         }
     }
-    questions
+    Ok(questions)
 }
 
 #[derive(Debug)]
 pub struct Question<'a> {
-    text: &'a str,
-    answers: Answers<'a>,
+    pub text: &'a str,
+    pub answers: Answers<'a>,
 }
 
 impl<'a> Question<'a> {
@@ -94,12 +196,17 @@ impl<'a> Question<'a> {
     }
 }
 
-#[derive(Debug)]
-enum Answers<'a> {
+#[derive(Debug, Clone)]
+pub enum Answers<'a> {
     FreeForm,
     SelectOne(Vec<&'a str>),
     SelectMany(Vec<&'a str>),
-    Matrix(Vec<&'a str>, Vec<&'a str>),
+    Matrix {
+        label1: &'a str,
+        answers1: Vec<&'a str>,
+        label2: &'a str,
+        answers2: Vec<&'a str>,
+    },
 }
 
 impl Answers<'_> {
@@ -107,7 +214,9 @@ impl Answers<'_> {
         match self {
             Self::SelectOne(a) => a.is_empty(),
             Self::SelectMany(a) => a.is_empty(),
-            Self::Matrix(a, b) => a.is_empty() || b.is_empty(),
+            Self::Matrix {
+                answers1, answers2, ..
+            } => answers1.is_empty() || answers2.is_empty(),
             Self::FreeForm => false,
         }
     }

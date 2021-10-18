@@ -77,7 +77,7 @@ pub enum Element {
 
 #[derive(Debug, Deserialize)]
 pub struct Question {
-    question_text: String,
+    pub question_text: String,
     #[serde(rename = "type")]
     typ: String,
 }
