@@ -76,10 +76,68 @@ pub enum Element {
 }
 
 #[derive(Debug, Deserialize)]
-pub struct Question {
-    pub question_text: String,
-    #[serde(rename = "type")]
-    typ: String,
+#[serde(tag = "type")]
+pub enum Question {
+    #[serde(rename = "choice_list")]
+    ChoiceList {
+        question_text: String,
+        choice_list: ChoiceList,
+    },
+}
+
+impl Question {
+    pub fn text(&self) -> &str {
+        match self {
+            Self::ChoiceList { question_text, .. } => question_text,
+        }
+    }
+
+    pub fn is_free_form(&self) -> bool {
+        println!("TODO: free form answers");
+        true
+    }
+
+    pub fn is_select_many(&self) -> bool {
+        match self {
+            Self::ChoiceList { choice_list, .. } => choice_list.settings.allows_multiple_choices,
+        }
+    }
+
+    pub fn is_select_one(&self) -> bool {
+        match self {
+            Self::ChoiceList { choice_list, .. } => !choice_list.settings.allows_multiple_choices,
+        }
+    }
+}
+
+#[derive(Debug, Deserialize)]
+pub struct ChoiceList {
+    choices: Vec<Choice>,
+    settings: Settings,
+}
+
+impl ChoiceList {
+    pub fn as_strs(&self) -> impl Iterator<Item = &str> {
+        self.choices.iter().map(|c| c.label.as_str())
+    }
+
+    pub fn contains_all_answers(&self, answers: &[&str]) -> bool {
+        self.as_strs().eq(answers.iter().map(|s| *s))
+    }
+
+    pub fn to_vec(&self) -> Vec<String> {
+        self.as_strs().map(|s| s.to_owned()).collect()
+    }
+}
+
+#[derive(Debug, Deserialize)]
+pub struct Choice {
+    label: String,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct Settings {
+    allows_multiple_choices: bool,
 }
 
 #[derive(Debug, Deserialize)]
