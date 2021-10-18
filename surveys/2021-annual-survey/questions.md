@@ -198,7 +198,7 @@ Select all that apply:
 > specific answer appears frequently, we can add it to future surveys to reduce
 > the amount of work needed to process responses.
 
-### On the primary machine you compile Rust code on, how many CPU do you have?
+### On the primary machine you compile Rust code on, how many CPUs are there?
 
 Please count *logical* CPUs here, not cores or sockets. You can get this number by running the following commands from the command line:
 
