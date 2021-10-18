@@ -218,10 +218,10 @@ Free form (optional).
 > - It'll help with prioritization around whether to make something go faster by throwing more CPUs at it or by optimizing on the same number of CPUs.
 > - It'll help avoid assumptions that rust developers might otherwise make about how universal the caliber of hardware they have is.
 
-### Which operating systems do you develop Rust software for?
+### Which operating systems or runtimes do you develop Rust software for?
 
-Note: this is specifically about which systems you **target** not which system you use
-for development.
+Note: this is specifically about which operating system or runtime you **target** not which system you use
+for development nor which specific architectures (e.g., x86 vs ARM) you target.
 
 Select all that apply:
 
@@ -232,6 +232,7 @@ Select all that apply:
 - Android
 - Embedded platforms (with an operating system)
 - Embedded platforms (bare metal)
+- WebAssembly
 - Other (open response)
 
 > **justification**
@@ -241,6 +242,9 @@ Select all that apply:
 >
 > We're using "Linux" here rather than "*nix" or similar, with the same
 > justification as in the "Which operating systems do you use" question.
+>
+> We specifically care about the runtime environment being targeted. ISA and other machine specifics are
+> not what matters.
 
 ### Which version(s) of Rust do you use for local development?
 
