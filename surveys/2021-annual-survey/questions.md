@@ -595,28 +595,6 @@ Select one:
 >
 > We want to establish how reliant companies are on Rust.
 
-### In what technology domains is Rust used at your company?
-
-Select as many as apply:
-
-- Server-side application
-- Desktop application
-- Mobile application
-- Web application
-- Embedded application
-- Other (open response)
-
-> **justification**
->
-> We want to known roughly what technology stacks are being most often used.
->
-> **challenges**
->
-> This can be ambiguous and hard to answer. For example, if you're building an operating
-> system for a mobile phone, is that embedded, mobile, or something else.
-> We want to understand the "shape" of Rust usage, and this question only gets at that
-> in one particular way.
-
 ### Approximately how many total developers does your company employ?
 
 Note: don't worry about being exact here! Go with you gut.
