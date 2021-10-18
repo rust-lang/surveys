@@ -416,3 +416,11 @@ Concepts: Enums, Modules, Ownership & Borrowing, Iterators, Traits, Generics and
 > **TODO** this question usually makes great blog material, but it's really not actionable. Teachers of Rust generally have a good idea of what's difficult to teach, and Rust compiler devs have a good idea of what the papercuts are. Perhaps it should be removed.
 > **REMOVED** Not actionable.
 
+### What libraries do you consider critical in the Rust ecosystem? 
+
+Free form.
+
+> **REMOVED**
+>
+> This question isn't helpful because other data sources are better at capturing this. For instance, libc is very important but might not get a lot of shout outs because 
+> it's not often a direct dependency. Number of downloads from crates.io is a much more reliable way to measure this. 
