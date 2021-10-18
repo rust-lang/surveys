@@ -112,6 +112,10 @@ Type: select one
 > **justification**
 >
 > Useful for cohort analysis, i.e., for other questions we can query if answers are significantly different for beginners vs advanced users.
+>
+> Previously this question was a 1-10 ranking. Having specific labels can help with consistency across responses. Additionally, having 10 choices
+> was too specific (i.e., what's the difference between a 7 and 8?) where as with the new answers, we have a better idea of what the differences 
+> between answers actually mean.
 
 ### Which of the following activities do you find helpful or effective for learning Rust or improving your Rust skills?
 
@@ -220,10 +224,10 @@ Type: free form (optional).
 > - It'll help with prioritization around whether to make something go faster by throwing more CPUs at it or by optimizing on the same number of CPUs.
 > - It'll help avoid assumptions that rust developers might otherwise make about how universal the caliber of hardware they have is.
 
-### Which operating systems do you develop Rust software for?
+### Which operating systems or runtimes do you develop Rust software for?
 
-Note: this is specifically about which systems you **target** not which system you use
-for development.
+Note: this is specifically about which operating system or runtime you **target** not which system you use
+for development nor which specific architectures (e.g., x86 vs ARM) you target.
 
 Type: select all that apply
 
@@ -234,6 +238,7 @@ Type: select all that apply
 - Android
 - Embedded platforms (with an operating system)
 - Embedded platforms (bare metal)
+- WebAssembly
 - Other (open response)
 
 > **justification**
@@ -243,6 +248,9 @@ Type: select all that apply
 >
 > We're using "Linux" here rather than "*nix" or similar, with the same
 > justification as in the "Which operating systems do you use" question.
+>
+> We specifically care about the runtime environment being targeted. ISA and other machine specifics are
+> not what matters.
 
 ### Which version(s) of Rust do you use for local development?
 
@@ -311,7 +319,8 @@ Type: select all that apply
 - For a particular language feature or set of language features I need
 - To help test the nightly version for bugs
 - For testing in CI
-- A dependency I use requires it
+- A crate dependency I use requires it
+- A tool I use requires it
 - Other (open response)
 
 > **justification**
@@ -405,28 +414,29 @@ Options:
 
 Type: matrix
 
-Options:
+Tools:
+
+- clippy
+- cargo
+- rustdoc/cargo doc
+- rustup
+- play.rust-lang.org
+- miri
+- rustfmt/cargo fmt
+- bindgen
+
+Rating:
 
 - Essential
 - Somewhat important
 - Not important
 - I have no experience with this tool
 
-Tools:
-
-- clippy
-- cargo
-- rustdoc
-- rustup
-- play.rust-lang.org
-- miri
-- rustfmt
-- bindgen
-
 > **justification**
 >
 > Understanding how important certain tools are to the community and *more importantly* to 
-> certain subsections of the community is important.
+> certain subsections of the community is important. This can also help us understand how
+> popular certain tools are as well as how important lesser used tools are to their users.
 
 ### Which editor or IDE setup do you use on a regular basis?
 
