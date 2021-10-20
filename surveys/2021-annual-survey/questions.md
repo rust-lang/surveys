@@ -49,7 +49,7 @@ Type: select all that apply
 
 > **SURVEY FLOW**
 >
-> Skip to `## About You` section
+> Skip to `## Your opinions about Rust` section
 
 ## For non-Rust users
 
@@ -69,7 +69,7 @@ Type: select all that apply
 
 > **SURVEY FLOW**
 >
-> Skip to `## About You` section
+> Skip to `## Your opinions about Rust` section
 
 ## Your Rust experience
 
