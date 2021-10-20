@@ -592,7 +592,7 @@ Type: select one
 - Yes, for the majority of my coding
 - Yes, it's one of a number of languages I use and I use it regularly
 - Yes, but I only use it occasionally
-- No
+- No [`NEXT`](#rust-in-education)
 
 > **justification**
 >
@@ -616,28 +616,6 @@ Type: select one
 > **justification**
 >
 > We want to establish how reliant companies are on Rust.
-
-### In what technology domains is Rust used at your company?
-
-Type: select all that apply
-
-- Server-side application
-- Desktop application
-- Mobile application
-- Web application
-- Embedded application
-- Other (open response)
-
-> **justification**
->
-> We want to known roughly what technology stacks are being most often used.
->
-> **challenges**
->
-> This can be ambiguous and hard to answer. For example, if you're building an operating
-> system for a mobile phone, is that embedded, mobile, or something else.
-> We want to understand the "shape" of Rust usage, and this question only gets at that
-> in one particular way.
 
 ### Approximately how many total developers does your company employ?
 
@@ -669,6 +647,28 @@ Type: select one
 
 > This question assess hiring sentiment. Although there is intrinsic uncertainty, it is easy to answer and forward looking.
 > It will also be interesting to see what the demand for Rust skills from companies is over time.
+
+### In what technology domains is Rust used at your company?
+
+Type: select all that apply
+
+- Server-side application
+- Desktop application
+- Mobile application
+- Web application
+- Embedded application
+- Other (open response)
+
+> **justification**
+>
+> We want to known roughly what technology stacks are being most often used.
+>
+> **challenges**
+>
+> This can be ambiguous and hard to answer. For example, if you're building an operating
+> system for a mobile phone, is that embedded, mobile, or something else.
+> We want to understand the "shape" of Rust usage, and this question only gets at that
+> in one particular way.
 
 ### Rate how much the follow statements are reasons your team use Rust at work.
 
@@ -743,7 +743,7 @@ Type: free form
 Type: select one
 
 - Yes [`NEXT`](#where-is-the-course-or-activity-taught)
-- No [`NEXT`](#what-is-your-biggest-worry-for-the-future-of-rust)
+- No [`NEXT`](#your-opinions-about-rust)
 
 > **justification**
 >
