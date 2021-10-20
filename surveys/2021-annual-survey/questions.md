@@ -904,6 +904,32 @@ Type: select one
 - Yes
 - No [`NEXT`](#excluding-rust-what-is-your-experience-with-other-kinds-of-programming-languages)
 
+### Do you write or design software in your work?
+
+Type: select one
+
+- Yes, primarily as an individual contributor (i.e., non-manager).
+- I primarily manage others who do.
+- No [`NEXT`](#excluding-rust-what-is-your-experience-with-other-kinds-of-programming-languages)
+
+### How long have you worked in software professionally?
+
+Type: select one
+
+- <= 1 year
+- 1 - 3 years
+- 3 - 5 years
+- 5 - 10 years
+- 10 - 20 years
+- > 20 years
+
+> **justification**
+>
+> For cohort analysis it is important to understand length of time in the software
+> industry as this can have an impact on perceptions.
+>
+> The ranges of years chosen are a best attempt at capturing different "stages" in a person's professional career.
+
 ### Which category best describes your current employer's industry?
 
 Type: select all that apply
@@ -934,14 +960,6 @@ Type: select all that apply
 > We want to see what industries have what representation in the Rust community.
 > While it's impossible to be precise here, we want to get a general idea.
 > This list is largely adopted from this [Wikipedia article](https://en.wikipedia.org/wiki/Outline_of_industry).
-
-### Do you write or design software in your work?
-
-Type: select one
-
-- Yes, primarily as an individual contributor (i.e., non-manager).
-- I primarily manage others who do.
-- No [`NEXT`](#excluding-rust-what-is-your-experience-with-other-kinds-of-programming-languages)
 
 ### Which categories best describes the tech domain(s) you currently write or design software in?
 
@@ -978,24 +996,6 @@ Type: select all that apply
 > This can help us get more insight into what respondents are working on. For instance, if a respondent
 > answers their employer works in automotive but they are working on mobile phone applications and not 
 > embedded devices, we might conclude different things than if they are working on embedded devices.
-
-### How long have you worked in software professionally?
-
-Type: select one
-
-- <= 1 year
-- 1 - 3 years
-- 3 - 5 years
-- 5 - 10 years
-- 10 - 20 years
-- > 20 years
-
-> **justification**
->
-> For cohort analysis it is important to understand length of time in the software
-> industry as this can have an impact on perceptions.
->
-> The ranges of years chosen are a best attempt at capturing different "stages" in a person's professional career.
 
 ### Excluding Rust, what is your experience with other kinds of programming languages?
 
