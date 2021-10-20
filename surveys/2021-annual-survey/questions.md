@@ -476,111 +476,6 @@ Type: select all that apply
 > combined with some cohort analysis can tell us about how particular subsections
 > of the community prefer to learn.
 
-### How much do you agree with the following statements
-
-Type: matrix
-
-Statements:
-
-- Rust provides a real benefit over other programming languages
-- Rust is complicated to use
-- Rust is complicated to learn
-- Rust is risky to use in production
-- Rust makes me more productive
-- Rust is fun to use
-
-Rating:
-
-- Strongly agree
-- Agree
-- Neither agree nor disagree
-- Disagree
-- Strongly disagree
-
-> **justification**
->
-> There are several "truisms" about Rust that we'd like to get perspective on how true these are for users of Rust.
->
-> Note that answers here can be subject to survivorship bias and so extra care should be taken with interpreting results.
-
-### In your opinion, how do you find the following aspects of Rust?
-
-Type: matrix
-
-Aspects:
-
-- Compile times
-- Binary size
-- Disk space (e.g., the size of `target` folder)
-- Bugs in the compiler (i.e., ICEs a.k.a. internal compiler errors, miscompilations, etc.)
-- Compilation error messages
-- IDE experience
-- Available tools and support
-- Async programming
-- GUI development
-- Rust language and standard library documentation
-
-Options:
-
-- Great
-- Good enough
-- Could be better
-- Seriously lacking
-
-> **justification**
->
-> This question gathers data on the communities perceptions of certain aspects of Rust at this point in time.
-
-### In your opinion, have the following aspects of Rust gotten better or worse over the past year?
-
-Type: matrix
-
-Aspects:
-
-REPEAT
-
-Options:
-
-- Much better
-- Better  
-- Remained the same  
-- Worse
-- Much Worse
-- Unsure
-
-> **justification**
->
-> This question gathers data on the communities perceptions of certain aspects of Rust over the last year.
-
-### Please rate how much you agree with the following statements on Rust stability.
-
-Type: matrix
-
-Statements:
-
-- I can upgrade the *stable* compiler version without fear of my code failing to compile.
-- I can upgrade the *nightly* compiler version without fear of my code failing to compile.
-- I can upgrade the *stable* compiler version without fear of my code taking longer to compile.
-- I can upgrade the *nightly* compiler version without fear of my code taking longer to compile.
-- Upgrading to a new *stable* compiler version requires either no changes or extremely small & easy changes to my code.
-- Upgrading to a new *nightly* compiler version requires either no changes or extremely small & easy changes to my code.
-
-Rating:
-
-- Strongly agree
-- Agree
-- Neither agree nor disagree
-- Disagree
-- Strongly disagree
-- No opinion
-
-> **justification**
->
-> When want to get an impression of how stable the compiler *feels*. Impressions are more important than hard numbers as
-> not all users define stability in the same way the compiler does. For example, experiencing compiler performance regressions
-> in a new version of the compiler isn't breaking official stability guarantees but it can feel just as painful as an
-> actual breaking change.
-
 ## Rust at work
 
 > This section is largely in service of the [contexts](./design/contexts.md) design document.
@@ -809,6 +704,112 @@ Type: select all that apply
 >
 > Would be useful for leadership to understand the community's fears.
 
+### How much do you agree with the following statements
+
+Type: matrix
+
+Statements:
+
+- Rust provides a real benefit over other programming languages
+- Rust is complicated to use
+- Rust is complicated to learn
+- Rust is risky to use in production
+- Rust makes me more productive
+- Rust is fun to use
+
+Rating:
+
+- Strongly agree
+- Agree
+- Neither agree nor disagree
+- Disagree
+- Strongly disagree
+
+> **justification**
+>
+> There are several "truisms" about Rust that we'd like to get perspective on how true these are for users of Rust.
+>
+> Note that answers here can be subject to survivorship bias and so extra care should be taken with interpreting results.
+
+### In your opinion, how do you find the following aspects of Rust?
+
+Type: matrix
+
+Aspects:
+
+- Compile times
+- Binary size
+- Disk space (e.g., the size of `target` folder)
+- Bugs in the compiler (i.e., ICEs a.k.a. internal compiler errors, miscompilations, etc.)
+- Compilation error messages
+- IDE experience
+- Available tools and support
+- Async programming
+- GUI development
+- Rust language and standard library documentation
+
+Options:
+
+- Great
+- Good enough
+- Could be better
+- Seriously lacking
+- Unsure
+
+> **justification**
+>
+> This question gathers data on the communities perceptions of certain aspects of Rust at this point in time.
+
+### In your opinion, have the following aspects of Rust gotten better or worse over the past year?
+
+Type: matrix
+
+Aspects:
+
+REPEAT
+
+Options:
+
+- Much better
+- Better  
+- Remained the same  
+- Worse
+- Much Worse
+- Unsure
+
+> **justification**
+>
+> This question gathers data on the communities perceptions of certain aspects of Rust over the last year.
+
+### Please rate how much you agree with the following statements on Rust stability.
+
+Type: matrix
+
+Statements:
+
+- I can upgrade the *stable* compiler version without fear of my code failing to compile.
+- I can upgrade the *nightly* compiler version without fear of my code failing to compile.
+- I can upgrade the *stable* compiler version without fear of my code taking longer to compile.
+- I can upgrade the *nightly* compiler version without fear of my code taking longer to compile.
+- Upgrading to a new *stable* compiler version requires either no changes or extremely small & easy changes to my code.
+- Upgrading to a new *nightly* compiler version requires either no changes or extremely small & easy changes to my code.
+
+Rating:
+
+- Strongly agree
+- Agree
+- Neither agree nor disagree
+- Disagree
+- Strongly disagree
+- No opinion or unsure
+
+> **justification**
+>
+> When want to get an impression of how stable the compiler *feels*. Impressions are more important than hard numbers as
+> not all users define stability in the same way the compiler does. For example, experiencing compiler performance regressions
+> in a new version of the compiler isn't breaking official stability guarantees but it can feel just as painful as an
+> actual breaking change.
+
 ### How much do you agree with the following statements on Rust employment?
 
 Type: matrix
@@ -950,6 +951,7 @@ Type: select all that apply
 - Telecommunications
 - Transportation
 - Other (open response)
+- I'm not employed
 
 > **justification**
 >
