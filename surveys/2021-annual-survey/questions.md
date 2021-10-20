@@ -833,17 +833,15 @@ Rating:
 > The flip side of the question asking whether the respondent's company plans on hiring Rust developers, we
 > want to know how respondents feel the level of demand for and quality of Rust jobs are.
 
-## Demographics
-
-> For methodological purposes, the bulk of the demographics should be at the end of the survey (unless acting as filter/flow questions above)
-> They're both easy to complete (beneficial at the end) and somewhat personal (but at this point folks are invested and we've built 'trust')
-> Can also be problematic at start if we're asking all easy, personal questions and then get to the harder ones - easy to drop out.
-
 ## About you
 
 See [who](./design/who.md).
 
 The following are primarily for cohort analysis, secondarily for understanding the shape of the community.
+
+For methodological purposes, the bulk of the demographics should be at the end of the survey (unless acting as filter/flow questions above)
+They're both easy to complete (beneficial at the end) and somewhat personal (but at this point folks are invested and we've built 'trust')
+Can also be problematic at start if we're asking all easy, personal questions and then get to the harder ones - easy to drop out.
 
 ### Do you consider yourself a member of an underrepresented or marginalized group in technology?
 
