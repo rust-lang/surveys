@@ -73,6 +73,43 @@ Type: select all that apply
 
 ## Your Rust experience
 
+### How often do you use Rust?
+
+Type: select one
+
+- Daily or nearly so
+- Weekly or nearly so
+- Monthly or nearly so
+- Rarely
+
+> **justification**
+>
+> This can be useful demographic information as a proxy for how "important" Rust is
+> in someone's technical life.
+>
+> We deliberately use calendar time for this question to gauge how "serious" the
+> programmer's use of Rust is. This does mean that we will group together, for example,
+> those who program once a week but always in Rust and those who program daily but
+> use Rust once a week.
+
+### How would you rate your Rust expertise?
+
+Type: select one
+
+- I can't write or read Rust
+- I can write simple programs in Rust
+- I can write useful, production-ready code but it is a struggle
+- I am productive writing Rust
+- I'm an expert
+
+> **justification**
+>
+> Useful for cohort analysis, i.e., for other questions we can query if answers are significantly different for beginners vs advanced users.
+>
+> Previously this question was a 1-10 ranking. Having specific labels can help with consistency across responses. Additionally, having 10 choices
+> was too specific (i.e., what's the difference between a 7 and 8?) where as with the new answers, we have a better idea of what the differences 
+> between answers actually mean.
+
 ### When did you learn to program in Rust?
 
 **Note**: while you may continue to try to improve your Rust skills, for this question assume "learning to program in Rust"
@@ -98,86 +135,6 @@ Type: select one
 > We explicitly use years instead of asking for which Rust edition someone learned because the former is often much easier for respondents to know.
 > It's also helpful to be more specific than an edition, and it's fairly easy to know which edition someone likely used based on the year they
 > learned Rust.
-
-### How would you rate your Rust expertise?
-
-Type: select one
-
-- I can't write or read Rust
-- I can write simple programs in Rust
-- I can write useful, production-ready code but it is a struggle
-- I am productive writing Rust
-- I'm an expert
-
-> **justification**
->
-> Useful for cohort analysis, i.e., for other questions we can query if answers are significantly different for beginners vs advanced users.
->
-> Previously this question was a 1-10 ranking. Having specific labels can help with consistency across responses. Additionally, having 10 choices
-> was too specific (i.e., what's the difference between a 7 and 8?) where as with the new answers, we have a better idea of what the differences 
-> between answers actually mean.
-
-### Which of the following activities do you find helpful or effective for learning Rust or improving your Rust skills?
-
-Type: select all that apply
-
-- Reading books or other written material geared towards learning Rust
-- Watching videos, streams, etc. geared towards learning Rust
-- Attending an organized training session or course (in person or virtual)
-- Doing Rust coding exercises or challenges created to help learn Rust
-- Building a non-trivial project in Rust or contributing to an open source project
-
-> **justification**
->
-> We'd like to confirm what learning materials are popular with the community. This
-> combined with some cohort analysis can tell us about how particular subsections
-> of the community prefer to learn.
-
-### How often do you use Rust?
-
-Type: select one
-
-- Daily or nearly so
-- Weekly or nearly so
-- Monthly or nearly so
-- Rarely
-
-> **justification**
->
-> This can be useful demographic information as a proxy for how "important" Rust is
-> in someone's technical life.
->
-> We deliberately use calendar time for this question to gauge how "serious" the
-> programmer's use of Rust is. This does mean that we will group together, for example,
-> those who program once a week but always in Rust and those who program daily but
-> use Rust once a week.
-
-### How much do you agree with the following statements
-
-Type: matrix
-
-Statements:
-
-- Rust provides a real benefit over other programming languages
-- Rust is complicated to use
-- Rust is complicated to learn
-- Rust is risky to use in production
-- Rust makes me more productive
-- Rust is fun to use
-
-Rating:
-
-- Strongly agree
-- Agree
-- Neither agree nor disagree
-- Disagree
-- Strongly disagree
-
-> **justification**
->
-> There are several "truisms" about Rust that we'd like to get perspective on how true these are for users of Rust.
->
-> Note that answers here can be subject to survivorship bias and so extra care should be taken with interpreting results.
 
 ### Which operating systems do you use regularly for Rust *development*?
 
@@ -281,35 +238,6 @@ REPEAT
 >
 > See the previous question.
 
-### Please rate how much you agree with the following statements on Rust stability.
-
-Type: matrix
-
-Statements:
-
-- I can upgrade the *stable* compiler version without fear of my code failing to compile.
-- I can upgrade the *nightly* compiler version without fear of my code failing to compile.
-- I can upgrade the *stable* compiler version without fear of my code taking longer to compile.
-- I can upgrade the *nightly* compiler version without fear of my code taking longer to compile.
-- Upgrading to a new *stable* compiler version requires either no changes or extremely small & easy changes to my code.
-- Upgrading to a new *nightly* compiler version requires either no changes or extremely small & easy changes to my code.
-
-Rating:
-
-- Strongly agree
-- Agree
-- Neither agree nor disagree
-- Disagree
-- Strongly disagree
-- No opinion
-
-> **justification**
->
-> When want to get an impression of how stable the compiler *feels*. Impressions are more important than hard numbers as
-> not all users define stability in the same way the compiler does. For example, experiencing compiler performance regressions
-> in a new version of the compiler isn't breaking official stability guarantees but it can feel just as painful as an
-> actual breaking change.
-
 ### If you use nightly, why?
 
 Type: select all that apply
@@ -361,6 +289,220 @@ Type: select all that apply
 > Since many of these sources are not under project control, it can be hard to know where
 > people are getting their Rust compiler from.
 
+### Which editor or IDE setup do you use on a regular basis?
+
+Type: select all that apply
+
+- VS Code
+- vi/vim/neovim
+- IntelliJ Rust
+- Emacs
+- Sublime
+- Visual Studio
+- Xcode
+- Atom
+- CLion
+- Other (open response)
+
+> **justification**
+>
+> It is good to know which editor is the most preferred for Rust development. This
+> can change investment strategies for further IDE development.
+>
+> Note: previously this question included different 'drivers' of the Rust IDE
+> experience (e.g., racer, rls, rust-analyzer). Development has consolidated on
+> rust-analyzer, and so it's not necessary to find out which is being used.
+> If we are curious how far along adoption of rust-analyzer is, we can ask that
+> in a separate question, though this is likely easier to find out through download
+> numbers.
+
+### Please indicate how vital to your workflow each of the following tools are when programming with Rust:
+
+Type: matrix
+
+Tools:
+
+- clippy
+- cargo
+- rustdoc/cargo doc
+- rustup
+- play.rust-lang.org
+- miri
+- rustfmt/cargo fmt
+- bindgen
+
+Rating:
+
+- Essential
+- Somewhat important
+- Not important
+- I have no experience with this tool
+
+> **justification**
+>
+> Understanding how important certain tools are to the community and *more importantly* to 
+> certain subsections of the community is important. This can also help us understand how
+> popular certain tools are as well as how important lesser used tools are to their users.
+
+### In which of the following ways have you participated in the Rust community in the last 6 months:
+
+Type: select all that apply
+
+- I have produced informational content about Rust (e.g., blogged, live streamed, made a YouTube video, etc.).
+- On several occasions I have consumed informational content about Rust (e.g., blogs, live streams, YouTube videos, etc.).
+- On several occasions I have read *comments* about Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
+- On several occasions I have *commented* on Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
+- On several occasions I have read official Rust communication channels (e.g., This Week in Rust, the official Rust blog, the Rust Twitter account, etc.)
+- On several occasions I have participated in conversations about Rust on social media (Twitter, Facebook, LinkedIn, etc.)
+- I have participated in Rust community forums or chats (e.g., users.rust-lang.org, Rust Discord, a local Rust chat community, etc.)
+- I have attended a Rust meetup or conference (virtual or in-person).
+
+> **justification**
+>
+> We'd like to get a picture of _how_ people participate in the Rust community. In
+> particular we can use this information to do cohort analysis on highly "active"
+> community members in comparison to less active community members.
+
+### Roughly how often do you contribute to the Rust project?
+
+Activities:
+
+- Comment on, contribute to discussion of, or provide edits to an open RFC
+- Create a new thread or comment on internals.rust-lang.org
+- Discuss Rust project  in an official chat (either Zulip or Discord)
+- Open an issue on any repo in the rust-lang GitHub org
+- Contribute code changes (including tests) to the Rust compiler (rust-lang/rust)
+- Contribute code changes (including tests) to any other project in the rust-lang GitHub org
+- Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub org.
+
+Type: select one
+
+- Daily
+- Weekly
+- Monthly
+- Less frequently than monthly
+- Never but have tried to
+- Never and have never tried to
+
+> **justification**
+>
+> We want to understand the nature of contribution to the Rust project both
+> to better understand the shape of community involvement and for cohort analysis.
+
+### How often have you felt *un*welcome in the Rust community?
+
+Type: matrix
+
+Activities:
+
+- *Official* Rust community forums or chats (users.rust-lang.org, internals.rust-lang.org, the official Rust Discord, or the Rust Zulip)
+- *Unofficial* Rust community forums or chats (e.g., reddit.com/r/rust, Hacker News, the Rust *Community* Discord, etc.)
+- Attending a Rust conference
+- Attending a Rust meetup or local community event
+- Discussion (issues, pull requests, etc.) on a repository *inside* the rust-lang GitHub organization
+- Discussion (issues, pull requests, etc.) on a repository *outside* of the rust-lang GitHub organization
+
+Choices:
+
+- I've *often* felt unwelcome
+- I *sometimes* feel unwelcome
+- I *never* feel unwelcome
+- I've never participated in this activity
+
+> **justification**
+>
+> We'd like to know if any of the officially moderated spaces in the Rust community tend to produce feelings
+> of unwelcome which made indicate that we need to more aggressively moderate those spaces.
+
+### If you indicated that you did not feel welcome in the Rust community, are there any details about your experience that you would like to share with us?
+
+Type: free form (optional)
+
+> **justification**
+> 
+> More detail on the type of situations where people have felt unwelcome can let us better 
+> address these issues in the future.
+
+### How many open-source and non-personal Rust projects do you currently maintain?
+
+- Non-personal: at least one other person also contributes and the project is meant for others and not just yourself.
+- Maintain: you have review and merge privileges
+
+Type: select one
+
+- 0
+- 1
+- 2-4
+- 5-10
+- More than 10
+
+> **justification**
+>
+> We would like to know the rough make up of those who are using Rust in general
+> vs those who actively participate in development of open source Rust projects.
+
+### How many open-source and non-personal Rust projects do you currently contribute to (not including those you maintain)?
+
+- Non-personal: at least one other person also contributes and the project is meant for others and not just yourself.
+- Contribute: you *regularly* provide code, tests, documentation, issues, etc.
+- Maintain: you have review and merge privileges
+
+Type: select one
+
+- 0
+- 1
+- 2-4
+- 5-10
+- More than 10
+
+> **justification**
+>
+> We would like to know the rough make up of those who are using Rust in general
+> vs those who actively participate in development of open source Rust projects.
+
+### Which of the following activities do you find helpful or effective for learning Rust or improving your Rust skills?
+
+Type: select all that apply
+
+- Reading books or other written material geared towards learning Rust
+- Watching videos, streams, etc. geared towards learning Rust
+- Attending an organized training session or course (in person or virtual)
+- Doing Rust coding exercises or challenges created to help learn Rust
+- Building a non-trivial project in Rust or contributing to an open source project
+
+> **justification**
+>
+> We'd like to confirm what learning materials are popular with the community. This
+> combined with some cohort analysis can tell us about how particular subsections
+> of the community prefer to learn.
+
+### How much do you agree with the following statements
+
+Type: matrix
+
+Statements:
+
+- Rust provides a real benefit over other programming languages
+- Rust is complicated to use
+- Rust is complicated to learn
+- Rust is risky to use in production
+- Rust makes me more productive
+- Rust is fun to use
+
+Rating:
+
+- Strongly agree
+- Agree
+- Neither agree nor disagree
+- Disagree
+- Strongly disagree
+
+> **justification**
+>
+> There are several "truisms" about Rust that we'd like to get perspective on how true these are for users of Rust.
+>
+> Note that answers here can be subject to survivorship bias and so extra care should be taken with interpreting results.
+
 ### In your opinion, how do you find the following aspects of Rust?
 
 Type: matrix
@@ -410,176 +552,34 @@ Options:
 >
 > This question gathers data on the communities perceptions of certain aspects of Rust over the last year.
 
-### Please indicate how vital to your workflow each of the following tools are when programming with Rust:
+### Please rate how much you agree with the following statements on Rust stability.
 
 Type: matrix
 
-Tools:
+Statements:
 
-- clippy
-- cargo
-- rustdoc/cargo doc
-- rustup
-- play.rust-lang.org
-- miri
-- rustfmt/cargo fmt
-- bindgen
+- I can upgrade the *stable* compiler version without fear of my code failing to compile.
+- I can upgrade the *nightly* compiler version without fear of my code failing to compile.
+- I can upgrade the *stable* compiler version without fear of my code taking longer to compile.
+- I can upgrade the *nightly* compiler version without fear of my code taking longer to compile.
+- Upgrading to a new *stable* compiler version requires either no changes or extremely small & easy changes to my code.
+- Upgrading to a new *nightly* compiler version requires either no changes or extremely small & easy changes to my code.
 
 Rating:
 
-- Essential
-- Somewhat important
-- Not important
-- I have no experience with this tool
+- Strongly agree
+- Agree
+- Neither agree nor disagree
+- Disagree
+- Strongly disagree
+- No opinion
 
 > **justification**
 >
-> Understanding how important certain tools are to the community and *more importantly* to 
-> certain subsections of the community is important. This can also help us understand how
-> popular certain tools are as well as how important lesser used tools are to their users.
-
-### Which editor or IDE setup do you use on a regular basis?
-
-Type: select all that apply
-
-- VS Code
-- vi/vim/neovim
-- IntelliJ Rust
-- Emacs
-- Sublime
-- Visual Studio
-- Xcode
-- Atom
-- CLion
-- Other (open response)
-
-> **justification**
->
-> It is good to know which editor is the most preferred for Rust development. This
-> can change investment strategies for further IDE development.
->
-> Note: previously this question included different 'drivers' of the Rust IDE
-> experience (e.g., racer, rls, rust-analyzer). Development has consolidated on
-> rust-analyzer, and so it's not necessary to find out which is being used.
-> If we are curious how far along adoption of rust-analyzer is, we can ask that
-> in a separate question, though this is likely easier to find out through download
-> numbers.
-
-### In which of the following ways have you participated in the Rust community in the last 6 months:
-
-Type: select all that apply
-
-- I have produced informational content about Rust (e.g., blogged, live streamed, made a YouTube video, etc.).
-- On several occasions I have consumed informational content about Rust (e.g., blogs, live streams, YouTube videos, etc.).
-- On several occasions I have read *comments* about Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
-- On several occasions I have *commented* on Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
-- On several occasions I have read official Rust communication channels (e.g., This Week in Rust, the official Rust blog, the Rust Twitter account, etc.)
-- On several occasions I have participated in conversations about Rust on social media (Twitter, Facebook, LinkedIn, etc.)
-- I have participated in Rust community forums or chats (e.g., users.rust-lang.org, Rust Discord, a local Rust chat community, etc.)
-- I have attended a Rust meetup or conference (virtual or in-person).
-
-> **justification**
->
-> We'd like to get a picture of _how_ people participate in the Rust community. In
-> particular we can use this information to do cohort analysis on highly "active"
-> community members in comparison to less active community members.
-
-### How often have you felt *un*welcome in the Rust community?
-
-Type: matrix
-
-Activities:
-
-- *Official* Rust community forums or chats (users.rust-lang.org, internals.rust-lang.org, the official Rust Discord, or the Rust Zulip)
-- *Unofficial* Rust community forums or chats (e.g., reddit.com/r/rust, Hacker News, the Rust *Community* Discord, etc.)
-- Attending a Rust conference
-- Attending a Rust meetup or local community event
-- Discussion (issues, pull requests, etc.) on a repository *inside* the rust-lang GitHub organization
-- Discussion (issues, pull requests, etc.) on a repository *outside* of the rust-lang GitHub organization
-
-Choices:
-
-- I've *often* felt unwelcome
-- I *sometimes* feel unwelcome
-- I *never* feel unwelcome
-- I've never participated in this activity
-
-> **justification**
->
-> We'd like to know if any of the officially moderated spaces in the Rust community tend to produce feelings
-> of unwelcome which made indicate that we need to more aggressively moderate those spaces.
-
-### If you indicated that you did not feel welcome in the Rust community, are there any details about your experience that you would like to share with us?
-
-Type: free form (optional)
-
-> **justification**
-> 
-> More detail on the type of situations where people have felt unwelcome can let us better 
-> address these issues in the future.
-
-### Roughly how often do you actively contribute to the Rust project?
-
-Activities:
-
-- Comment on, contribute to discussion of, or provide edits to an open RFC
-- Create a new thread or comment on internals.rust-lang.org
-- Discuss Rust project  in an official chat (either Zulip or Discord)
-- Open an issue on any repo in the rust-lang GitHub org
-- Contribute code changes (including tests) to the Rust compiler (rust-lang/rust)
-- Contribute code changes (including tests) to any other project in the rust-lang GitHub org
-- Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub org.
-
-Type: select one
-
-- Daily
-- Weekly
-- Monthly
-- Less frequently than monthly
-- Never but have tried to
-- Never and have never tried to
-
-> **justification**
->
-> We want to understand the nature of contribution to the Rust project both
-> to better understand the shape of community involvement and for cohort analysis.
-
-### How many open-source and non-personal Rust projects do you currently maintain?
-
-- Non-personal: at least one other person also contributes and the project is meant for others and not just yourself.
-- Maintain: you have review and merge privileges
-
-Type: select one
-
-- 0
-- 1
-- 2-4
-- 5-10
-- More than 10
-
-> **justification**
->
-> We would like to know the rough make up of those who are using Rust in general
-> vs those who actively participate in development of open source Rust projects.
-
-### How many open-source and non-personal Rust projects do you currently contribute to (not including those you maintain)?
-
-- Non-personal: at least one other person also contributes and the project is meant for others and not just yourself.
-- Contribute: you *regularly* provide code, tests, documentation, issues, etc.
-- Maintain: you have review and merge privileges
-
-Type: select one
-
-- 0
-- 1
-- 2-4
-- 5-10
-- More than 10
-
-> **justification**
->
-> We would like to know the rough make up of those who are using Rust in general
-> vs those who actively participate in development of open source Rust projects.
+> When want to get an impression of how stable the compiler *feels*. Impressions are more important than hard numbers as
+> not all users define stability in the same way the compiler does. For example, experiencing compiler performance regressions
+> in a new version of the compiler isn't breaking official stability guarantees but it can feel just as painful as an
+> actual breaking change.
 
 ## Rust at work
 
@@ -872,10 +872,6 @@ Type: select one
 - Often
 - Sometimes
 - Never
-
-### If you find it difficult to participate in the Rust community, and feel comfortable giving more details, please tell us what makes it difficult
-
-Type: free form.
 
 ### Are you a full- or part-time student?
 
