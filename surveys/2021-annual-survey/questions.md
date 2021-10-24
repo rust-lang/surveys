@@ -583,6 +583,7 @@ Statements:
 - We find it enjoyable or fun to program in Rust.
 - We already know Rust so it's our default choice.
 - We find it easy to prototype with.
+- We use Rust because we must interact with existing Rust code.
 - Other (open response)
 
 Rating:
