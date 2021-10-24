@@ -196,6 +196,7 @@ Type: select all that apply
 - Embedded platforms (with an operating system)
 - Embedded platforms (bare metal)
 - WebAssembly
+- Cross-platform
 - Other (open response)
 
 > **justification**
