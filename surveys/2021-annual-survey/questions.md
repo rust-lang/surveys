@@ -271,7 +271,7 @@ Type: select all that apply
 >
 > Same justification as the question about nightly but for beta.
 
-### What ways do you install Rust?
+### In which ways do you install Rust?
 
 Type: select all that apply
 
@@ -296,9 +296,9 @@ Type: select all that apply
 
 - VS Code
 - vi/vim/neovim
-- IntelliJ Rust
+- IntelliJ
 - Emacs
-- Sublime
+- Sublime Text
 - Visual Studio
 - Xcode
 - Atom
@@ -372,7 +372,7 @@ Activities:
 
 - Comment on, contribute to discussion of, or provide edits to an open RFC
 - Create a new thread or comment on internals.rust-lang.org
-- Discuss Rust project  in an official chat (either Zulip or Discord)
+- Discuss the Rust project in an official chat (either Zulip or Discord)
 - Open an issue on any repo in the rust-lang GitHub org
 - Contribute code changes (including tests) to the Rust compiler (rust-lang/rust)
 - Contribute code changes (including tests) to any other project in the rust-lang GitHub org
@@ -426,7 +426,7 @@ Type: free form (optional)
 > More detail on the type of situations where people have felt unwelcome can let us better 
 > address these issues in the future.
 
-### How many open-source and non-personal Rust projects do you currently maintain?
+### How many open-source and non-personal Rust projects do you currently help maintain?
 
 - Non-personal: at least one other person also contributes and the project is meant for others and not just yourself.
 - Maintain: you have review and merge privileges
@@ -444,7 +444,7 @@ Type: select one
 > We would like to know the rough make up of those who are using Rust in general
 > vs those who actively participate in development of open source Rust projects.
 
-### How many open-source and non-personal Rust projects do you currently contribute to (not including those you maintain)?
+### How many open-source and non-personal Rust projects do you currently contribute to (not including those you help maintain)?
 
 - Non-personal: at least one other person also contributes and the project is meant for others and not just yourself.
 - Contribute: you *regularly* provide code, tests, documentation, issues, etc.
@@ -541,7 +541,7 @@ Type: select one
 
 - Yes
 - No
-- I don't know or I don't work at company that would hire software developers.
+- I don't know or I don't work at company that hires software developers.
 
 > This question assess hiring sentiment. Although there is intrinsic uncertainty, it is easy to answer and forward looking.
 > It will also be interesting to see what the demand for Rust skills from companies is over time.
@@ -742,9 +742,9 @@ Aspects:
 
 - Compile times
 - Binary size
-- Disk space (e.g., the size of `target` folder)
+- Disk space usage (e.g., the size of `target` folder)
 - Bugs in the compiler (i.e., ICEs a.k.a. internal compiler errors, miscompilations, etc.)
-- Compilation error messages
+- Compiler error messages
 - IDE experience
 - Available tools and support
 - Async programming
@@ -763,7 +763,7 @@ Options:
 >
 > This question gathers data on the communities perceptions of certain aspects of Rust at this point in time.
 
-### In your opinion, have the following aspects of Rust gotten better or worse over the past year?
+### In your opinion, have the following aspects of Rust got better or worse over the past year?
 
 Type: matrix
 
@@ -938,8 +938,8 @@ Type: select all that apply
 - Aerospace
 - Automotive
 - Business software
-- Computer hardware
 - Consumer software
+- Computer hardware
 - Energy
 - Education/Academia
 - Entertainment or Media
@@ -1017,7 +1017,7 @@ Experience:
 - I've never used nor am I familiar with any language in this category
 - I have a basic familiarity with at least one language in this category
 - I am comfortable using at least one language in this category
-- I have expertise in at least one language in this category
+- I am an expert in at least one language in this category
 
 > **justification**
 >
