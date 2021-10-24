@@ -985,6 +985,7 @@ Type: select all that apply
 - Machine learning
 - Mobile phone application frontend
 - Computer networking
+- Programming languages, tools, libraries, etc.
 - Robotics
 - Computer security
 - Scientific and/or numeric computing
