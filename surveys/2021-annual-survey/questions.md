@@ -246,6 +246,7 @@ Type: select all that apply
 - I don't use nightly
 - Out of habit
 - For a particular language feature or set of language features I need
+- I like to have access too all the latest features
 - To help test the nightly version for bugs
 - For testing in CI
 - A crate dependency I use requires it
