@@ -49,7 +49,7 @@ Type: select all that apply
 
 > **SURVEY FLOW**
 >
-> Skip to `## About You` section
+> Skip to `## Your opinions about Rust` section
 
 ## For non-Rust users
 
@@ -69,9 +69,46 @@ Type: select all that apply
 
 > **SURVEY FLOW**
 >
-> Skip to `## About You` section
+> Skip to `## Your opinions about Rust` section
 
 ## Your Rust experience
+
+### How often do you use Rust?
+
+Type: select one
+
+- Daily or nearly so
+- Weekly or nearly so
+- Monthly or nearly so
+- Rarely
+
+> **justification**
+>
+> This can be useful demographic information as a proxy for how "important" Rust is
+> in someone's technical life.
+>
+> We deliberately use calendar time for this question to gauge how "serious" the
+> programmer's use of Rust is. This does mean that we will group together, for example,
+> those who program once a week but always in Rust and those who program daily but
+> use Rust once a week.
+
+### How would you rate your Rust expertise?
+
+Type: select one
+
+- I can't write or read Rust
+- I can write simple programs in Rust
+- I can write useful, production-ready code but it is a struggle
+- I am productive writing Rust
+- I'm an expert
+
+> **justification**
+>
+> Useful for cohort analysis, i.e., for other questions we can query if answers are significantly different for beginners vs advanced users.
+>
+> Previously this question was a 1-10 ranking. Having specific labels can help with consistency across responses. Additionally, having 10 choices
+> was too specific (i.e., what's the difference between a 7 and 8?) where as with the new answers, we have a better idea of what the differences 
+> between answers actually mean.
 
 ### When did you learn to program in Rust?
 
@@ -98,86 +135,6 @@ Type: select one
 > We explicitly use years instead of asking for which Rust edition someone learned because the former is often much easier for respondents to know.
 > It's also helpful to be more specific than an edition, and it's fairly easy to know which edition someone likely used based on the year they
 > learned Rust.
-
-### How would you rate your Rust expertise?
-
-Type: select one
-
-- I can't write or read Rust
-- I can write simple programs in Rust
-- I can write useful, production-ready code but it is a struggle
-- I am productive writing Rust
-- I'm an expert
-
-> **justification**
->
-> Useful for cohort analysis, i.e., for other questions we can query if answers are significantly different for beginners vs advanced users.
->
-> Previously this question was a 1-10 ranking. Having specific labels can help with consistency across responses. Additionally, having 10 choices
-> was too specific (i.e., what's the difference between a 7 and 8?) where as with the new answers, we have a better idea of what the differences 
-> between answers actually mean.
-
-### Which of the following activities do you find helpful or effective for learning Rust or improving your Rust skills?
-
-Type: select all that apply
-
-- Reading books or other written material geared towards learning Rust
-- Watching videos, streams, etc. geared towards learning Rust
-- Attending an organized training session or course (in person or virtual)
-- Doing Rust coding exercises or challenges created to help learn Rust
-- Building a non-trivial project in Rust or contributing to an open source project
-
-> **justification**
->
-> We'd like to confirm what learning materials are popular with the community. This
-> combined with some cohort analysis can tell us about how particular subsections
-> of the community prefer to learn.
-
-### How often do you use Rust?
-
-Type: select one
-
-- Daily or nearly so
-- Weekly or nearly so
-- Monthly or nearly so
-- Rarely
-
-> **justification**
->
-> This can be useful demographic information as a proxy for how "important" Rust is
-> in someone's technical life.
->
-> We deliberately use calendar time for this question to gauge how "serious" the
-> programmer's use of Rust is. This does mean that we will group together, for example,
-> those who program once a week but always in Rust and those who program daily but
-> use Rust once a week.
-
-### How much do you agree with the following statements
-
-Type: matrix
-
-Statements:
-
-- Rust provides a real benefit over other programming languages
-- Rust is complicated to use
-- Rust is complicated to learn
-- Rust is risky to use in production
-- Rust makes me more productive
-- Rust is fun to use
-
-Rating:
-
-- Strongly agree
-- Agree
-- Neither agree nor disagree
-- Disagree
-- Strongly disagree
-
-> **justification**
->
-> There are several "truisms" about Rust that we'd like to get perspective on how true these are for users of Rust.
->
-> Note that answers here can be subject to survivorship bias and so extra care should be taken with interpreting results.
 
 ### Which operating systems do you use regularly for Rust *development*?
 
@@ -281,35 +238,6 @@ REPEAT
 >
 > See the previous question.
 
-### Please rate how much you agree with the following statements on Rust stability.
-
-Type: matrix
-
-Statements:
-
-- I can upgrade the *stable* compiler version without fear of my code failing to compile.
-- I can upgrade the *nightly* compiler version without fear of my code failing to compile.
-- I can upgrade the *stable* compiler version without fear of my code taking longer to compile.
-- I can upgrade the *nightly* compiler version without fear of my code taking longer to compile.
-- Upgrading to a new *stable* compiler version requires either no changes or extremely small & easy changes to my code.
-- Upgrading to a new *nightly* compiler version requires either no changes or extremely small & easy changes to my code.
-
-Rating:
-
-- Strongly agree
-- Agree
-- Neither agree nor disagree
-- Disagree
-- Strongly disagree
-- No opinion
-
-> **justification**
->
-> When want to get an impression of how stable the compiler *feels*. Impressions are more important than hard numbers as
-> not all users define stability in the same way the compiler does. For example, experiencing compiler performance regressions
-> in a new version of the compiler isn't breaking official stability guarantees but it can feel just as painful as an
-> actual breaking change.
-
 ### If you use nightly, why?
 
 Type: select all that apply
@@ -362,54 +290,32 @@ Type: select all that apply
 > Since many of these sources are not under project control, it can be hard to know where
 > people are getting their Rust compiler from.
 
-### In your opinion, how do you find the following aspects of Rust?
+### Which editor or IDE setup do you use on a regular basis?
 
-Type: matrix
+Type: select all that apply
 
-Aspects:
-
-- Compile times
-- Binary size
-- Disk space (e.g., the size of `target` folder)
-- Bugs in the compiler (i.e., ICEs a.k.a. internal compiler errors, miscompilations, etc.)
-- Compilation error messages
-- IDE experience
-- Available tools and support
-- Async programming
-- GUI development
-- Rust language and standard library documentation
-
-Options:
-
-- Great
-- Good enough
-- Could be better
-- Seriously lacking
+- VS Code
+- vi/vim/neovim
+- IntelliJ Rust
+- Emacs
+- Sublime
+- Visual Studio
+- Xcode
+- Atom
+- CLion
+- Other (open response)
 
 > **justification**
 >
-> This question gathers data on the communities perceptions of certain aspects of Rust at this point in time.
-
-### In your opinion, have the following aspects of Rust gotten better or worse over the past year?
-
-Type: matrix
-
-Aspects:
-
-REPEAT
-
-Options:
-
-- Much better
-- Better  
-- Remained the same  
-- Worse
-- Much Worse
-- Unsure
-
-> **justification**
+> It is good to know which editor is the most preferred for Rust development. This
+> can change investment strategies for further IDE development.
 >
-> This question gathers data on the communities perceptions of certain aspects of Rust over the last year.
+> Note: previously this question included different 'drivers' of the Rust IDE
+> experience (e.g., racer, rls, rust-analyzer). Development has consolidated on
+> rust-analyzer, and so it's not necessary to find out which is being used.
+> If we are curious how far along adoption of rust-analyzer is, we can ask that
+> in a separate question, though this is likely easier to find out through download
+> numbers.
 
 ### Please indicate how vital to your workflow each of the following tools are when programming with Rust:
 
@@ -439,33 +345,6 @@ Rating:
 > certain subsections of the community is important. This can also help us understand how
 > popular certain tools are as well as how important lesser used tools are to their users.
 
-### Which editor or IDE setup do you use on a regular basis?
-
-Type: select all that apply
-
-- VS Code
-- vi/vim/neovim
-- IntelliJ Rust
-- Emacs
-- Sublime
-- Visual Studio
-- Xcode
-- Atom
-- CLion
-- Other (open response)
-
-> **justification**
->
-> It is good to know which editor is the most preferred for Rust development. This
-> can change investment strategies for further IDE development.
->
-> Note: previously this question included different 'drivers' of the Rust IDE
-> experience (e.g., racer, rls, rust-analyzer). Development has consolidated on
-> rust-analyzer, and so it's not necessary to find out which is being used.
-> If we are curious how far along adoption of rust-analyzer is, we can ask that
-> in a separate question, though this is likely easier to find out through download
-> numbers.
-
 ### In which of the following ways have you participated in the Rust community in the last 6 months:
 
 Type: select all that apply
@@ -484,6 +363,32 @@ Type: select all that apply
 > We'd like to get a picture of _how_ people participate in the Rust community. In
 > particular we can use this information to do cohort analysis on highly "active"
 > community members in comparison to less active community members.
+
+### Roughly how often do you contribute to the Rust project?
+
+Activities:
+
+- Comment on, contribute to discussion of, or provide edits to an open RFC
+- Create a new thread or comment on internals.rust-lang.org
+- Discuss Rust project  in an official chat (either Zulip or Discord)
+- Open an issue on any repo in the rust-lang GitHub org
+- Contribute code changes (including tests) to the Rust compiler (rust-lang/rust)
+- Contribute code changes (including tests) to any other project in the rust-lang GitHub org
+- Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub org.
+
+Type: select one
+
+- Daily
+- Weekly
+- Monthly
+- Less frequently than monthly
+- Never but have tried to
+- Never and have never tried to
+
+> **justification**
+>
+> We want to understand the nature of contribution to the Rust project both
+> to better understand the shape of community involvement and for cohort analysis.
 
 ### How often have you felt *un*welcome in the Rust community?
 
@@ -518,32 +423,6 @@ Type: free form (optional)
 > 
 > More detail on the type of situations where people have felt unwelcome can let us better 
 > address these issues in the future.
-
-### Roughly how often do you actively contribute to the Rust project?
-
-Activities:
-
-- Comment on, contribute to discussion of, or provide edits to an open RFC
-- Create a new thread or comment on internals.rust-lang.org
-- Discuss Rust project  in an official chat (either Zulip or Discord)
-- Open an issue on any repo in the rust-lang GitHub org
-- Contribute code changes (including tests) to the Rust compiler (rust-lang/rust)
-- Contribute code changes (including tests) to any other project in the rust-lang GitHub org
-- Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub org.
-
-Type: select one
-
-- Daily
-- Weekly
-- Monthly
-- Less frequently than monthly
-- Never but have tried to
-- Never and have never tried to
-
-> **justification**
->
-> We want to understand the nature of contribution to the Rust project both
-> to better understand the shape of community involvement and for cohort analysis.
 
 ### How many open-source and non-personal Rust projects do you currently maintain?
 
@@ -582,6 +461,22 @@ Type: select one
 > We would like to know the rough make up of those who are using Rust in general
 > vs those who actively participate in development of open source Rust projects.
 
+### Which of the following activities do you find helpful or effective for learning Rust or improving your Rust skills?
+
+Type: select all that apply
+
+- Reading books or other written material geared towards learning Rust
+- Watching videos, streams, etc. geared towards learning Rust
+- Attending an organized training session or course (in person or virtual)
+- Doing Rust coding exercises or challenges created to help learn Rust
+- Building a non-trivial project in Rust or contributing to an open source project
+
+> **justification**
+>
+> We'd like to confirm what learning materials are popular with the community. This
+> combined with some cohort analysis can tell us about how particular subsections
+> of the community prefer to learn.
+
 ## Rust at work
 
 > This section is largely in service of the [contexts](./design/contexts.md) design document.
@@ -593,7 +488,7 @@ Type: select one
 - Yes, for the majority of my coding
 - Yes, it's one of a number of languages I use and I use it regularly
 - Yes, but I only use it occasionally
-- No
+- No [`NEXT`](#rust-in-education)
 
 > **justification**
 >
@@ -617,28 +512,6 @@ Type: select one
 > **justification**
 >
 > We want to establish how reliant companies are on Rust.
-
-### In what technology domains is Rust used at your company?
-
-Type: select all that apply
-
-- Server-side application
-- Desktop application
-- Mobile application
-- Web application
-- Embedded application
-- Other (open response)
-
-> **justification**
->
-> We want to known roughly what technology stacks are being most often used.
->
-> **challenges**
->
-> This can be ambiguous and hard to answer. For example, if you're building an operating
-> system for a mobile phone, is that embedded, mobile, or something else.
-> We want to understand the "shape" of Rust usage, and this question only gets at that
-> in one particular way.
 
 ### Approximately how many total developers does your company employ?
 
@@ -670,6 +543,28 @@ Type: select one
 
 > This question assess hiring sentiment. Although there is intrinsic uncertainty, it is easy to answer and forward looking.
 > It will also be interesting to see what the demand for Rust skills from companies is over time.
+
+### In what technology domains is Rust used at your company?
+
+Type: select all that apply
+
+- Server-side application
+- Desktop application
+- Mobile application
+- Web application
+- Embedded application
+- Other (open response)
+
+> **justification**
+>
+> We want to known roughly what technology stacks are being most often used.
+>
+> **challenges**
+>
+> This can be ambiguous and hard to answer. For example, if you're building an operating
+> system for a mobile phone, is that embedded, mobile, or something else.
+> We want to understand the "shape" of Rust usage, and this question only gets at that
+> in one particular way.
 
 ### Rate how much the follow statements are reasons your team use Rust at work.
 
@@ -744,7 +639,7 @@ Type: free form
 Type: select one
 
 - Yes [`NEXT`](#where-is-the-course-or-activity-taught)
-- No [`NEXT`](#what-is-your-biggest-worry-for-the-future-of-rust)
+- No [`NEXT`](#your-opinions-about-rust)
 
 > **justification**
 >
@@ -810,6 +705,112 @@ Type: select all that apply
 >
 > Would be useful for leadership to understand the community's fears.
 
+### How much do you agree with the following statements
+
+Type: matrix
+
+Statements:
+
+- Rust provides a real benefit over other programming languages
+- Rust is complicated to use
+- Rust is complicated to learn
+- Rust is risky to use in production
+- Rust makes me more productive
+- Rust is fun to use
+
+Rating:
+
+- Strongly agree
+- Agree
+- Neither agree nor disagree
+- Disagree
+- Strongly disagree
+
+> **justification**
+>
+> There are several "truisms" about Rust that we'd like to get perspective on how true these are for users of Rust.
+>
+> Note that answers here can be subject to survivorship bias and so extra care should be taken with interpreting results.
+
+### In your opinion, how do you find the following aspects of Rust?
+
+Type: matrix
+
+Aspects:
+
+- Compile times
+- Binary size
+- Disk space (e.g., the size of `target` folder)
+- Bugs in the compiler (i.e., ICEs a.k.a. internal compiler errors, miscompilations, etc.)
+- Compilation error messages
+- IDE experience
+- Available tools and support
+- Async programming
+- GUI development
+- Rust language and standard library documentation
+
+Options:
+
+- Great
+- Good enough
+- Could be better
+- Seriously lacking
+- Unsure
+
+> **justification**
+>
+> This question gathers data on the communities perceptions of certain aspects of Rust at this point in time.
+
+### In your opinion, have the following aspects of Rust gotten better or worse over the past year?
+
+Type: matrix
+
+Aspects:
+
+REPEAT
+
+Options:
+
+- Much better
+- Better  
+- Remained the same  
+- Worse
+- Much Worse
+- Unsure
+
+> **justification**
+>
+> This question gathers data on the communities perceptions of certain aspects of Rust over the last year.
+
+### Please rate how much you agree with the following statements on Rust stability.
+
+Type: matrix
+
+Statements:
+
+- I can upgrade the *stable* compiler version without fear of my code failing to compile.
+- I can upgrade the *nightly* compiler version without fear of my code failing to compile.
+- I can upgrade the *stable* compiler version without fear of my code taking longer to compile.
+- I can upgrade the *nightly* compiler version without fear of my code taking longer to compile.
+- Upgrading to a new *stable* compiler version requires either no changes or extremely small & easy changes to my code.
+- Upgrading to a new *nightly* compiler version requires either no changes or extremely small & easy changes to my code.
+
+Rating:
+
+- Strongly agree
+- Agree
+- Neither agree nor disagree
+- Disagree
+- Strongly disagree
+- No opinion or unsure
+
+> **justification**
+>
+> When want to get an impression of how stable the compiler *feels*. Impressions are more important than hard numbers as
+> not all users define stability in the same way the compiler does. For example, experiencing compiler performance regressions
+> in a new version of the compiler isn't breaking official stability guarantees but it can feel just as painful as an
+> actual breaking change.
+
 ### How much do you agree with the following statements on Rust employment?
 
 Type: matrix
@@ -834,17 +835,15 @@ Rating:
 > The flip side of the question asking whether the respondent's company plans on hiring Rust developers, we
 > want to know how respondents feel the level of demand for and quality of Rust jobs are.
 
-## Demographics
-
-> For methodological purposes, the bulk of the demographics should be at the end of the survey (unless acting as filter/flow questions above)
-> They're both easy to complete (beneficial at the end) and somewhat personal (but at this point folks are invested and we've built 'trust')
-> Can also be problematic at start if we're asking all easy, personal questions and then get to the harder ones - easy to drop out.
-
 ## About you
 
 See [who](./design/who.md).
 
 The following are primarily for cohort analysis, secondarily for understanding the shape of the community.
+
+For methodological purposes, the bulk of the demographics should be at the end of the survey (unless acting as filter/flow questions above)
+They're both easy to complete (beneficial at the end) and somewhat personal (but at this point folks are invested and we've built 'trust')
+Can also be problematic at start if we're asking all easy, personal questions and then get to the harder ones - easy to drop out.
 
 ### Do you consider yourself a member of an underrepresented or marginalized group in technology?
 
@@ -876,10 +875,6 @@ Type: select one
 - Sometimes
 - Never
 
-### If you find it difficult to participate in the Rust community, and feel comfortable giving more details, please tell us what makes it difficult
-
-Type: free form.
-
 ### Are you a full- or part-time student?
 
 Type: select one
@@ -907,6 +902,32 @@ Type: select one
 - Yes
 - No [`NEXT`](#excluding-rust-what-is-your-experience-with-other-kinds-of-programming-languages)
 
+### Do you write or design software in your work?
+
+Type: select one
+
+- Yes, primarily as an individual contributor (i.e., non-manager).
+- I primarily manage others who do.
+- No [`NEXT`](#excluding-rust-what-is-your-experience-with-other-kinds-of-programming-languages)
+
+### How long have you worked in software professionally?
+
+Type: select one
+
+- <= 1 year
+- 1 - 3 years
+- 3 - 5 years
+- 5 - 10 years
+- 10 - 20 years
+- > 20 years
+
+> **justification**
+>
+> For cohort analysis it is important to understand length of time in the software
+> industry as this can have an impact on perceptions.
+>
+> The ranges of years chosen are a best attempt at capturing different "stages" in a person's professional career.
+
 ### Which category best describes your current employer's industry?
 
 Type: select all that apply
@@ -931,20 +952,13 @@ Type: select all that apply
 - Telecommunications
 - Transportation
 - Other (open response)
+- I'm not employed
 
 > **justification**
 >
 > We want to see what industries have what representation in the Rust community.
 > While it's impossible to be precise here, we want to get a general idea.
 > This list is largely adopted from this [Wikipedia article](https://en.wikipedia.org/wiki/Outline_of_industry).
-
-### Do you write or design software in your work?
-
-Type: select one
-
-- Yes, primarily as an individual contributor (i.e., non-manager).
-- I primarily manage others who do.
-- No [`NEXT`](#excluding-rust-what-is-your-experience-with-other-kinds-of-programming-languages)
 
 ### Which categories best describes the tech domain(s) you currently write or design software in?
 
@@ -981,24 +995,6 @@ Type: select all that apply
 > This can help us get more insight into what respondents are working on. For instance, if a respondent
 > answers their employer works in automotive but they are working on mobile phone applications and not 
 > embedded devices, we might conclude different things than if they are working on embedded devices.
-
-### How long have you worked in software professionally?
-
-Type: select one
-
-- <= 1 year
-- 1 - 3 years
-- 3 - 5 years
-- 5 - 10 years
-- 10 - 20 years
-- > 20 years
-
-> **justification**
->
-> For cohort analysis it is important to understand length of time in the software
-> industry as this can have an impact on perceptions.
->
-> The ranges of years chosen are a best attempt at capturing different "stages" in a person's professional career.
 
 ### Excluding Rust, what is your experience with other kinds of programming languages?
 
