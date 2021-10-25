@@ -89,17 +89,48 @@ Select all that apply:
 
 Select all that apply:
 
-- contribution work
-- maintainership work
-- reviews
-- coordination
-- organization
+- Documentation
+- Code Review (PRs)
+- Design Review (RFCs/MCPs/FCPs)
+- Issue Triage
+- Issue Reporting
+- Moderation
+- New Features
+- Bug Fixes
+- Performance enhancements
+- Communication (e.g. writing blog posts, release notes, preparing for meetings or taking minutes)
+- supporting/mentoring/guiding other contributors
+- Rollups/CI/Releases
+- Governance
+- Other: Free Form
 
 > **justification**
 >
 > Useful for cohort analysis. Problems will likely differ based on the work
 > being done. Those contributing new code will likely face diff problems than
 > those who mainly review or coordinate work.
+
+### Which areas of the project have you contributed to?
+
+Select all that apply:
+
+- rustc
+- tools (e.g. cargo, clippy, rustfmt, rustup, etc)
+- infrastructure (e.g. highfive, CI, rfcbot, etc)
+- libraries (e.g. core, std, libc, log, etc)
+- documentation (e.g. rustc-dev-guide, std-dev-guide, forge) (does not include documentation for libraries or rustdoc development)
+- website (e.g. rust-lang.org)
+- education resources (e.g. rustlings, the book, nomicon, etc)
+- Other: Free Form
+
+> **justification**
+>
+> Useful for cohort analysis. The part of the project that the user is involved
+> in can have implications for what types of pain points they would run into.
+> For example, pain points for contribution work will be different if you're a
+> tool developer (e.g. the processes for syncing with the main rust-lang/rust
+> repo, or with API stability in the compiler or something like that) or a
+> rustc developer (e.g. how long it takes a PR to land, build times, etc.).
 
 ### The type of work I do in the Rust project is exactly what I'd like to be working on.
 
@@ -341,17 +372,50 @@ Select all that apply:
 
 ### What kind of work did you do within the Rust Project?
 
-- contribution work
-- maintainership work
-- reviews
-- coordination
-- organization
+Select all that apply:
+
+- Documentation
+- Code Review (PRs)
+- Design Review (RFCs/MCPs/FCPs)
+- Issue Triage
+- Issue Reporting
+- Moderation
+- New Features
+- Bug Fixes
+- Performance enhancements
+- Communication (e.g. writing blog posts, release notes, preparing for meetings or taking minutes)
+- supporting/mentoring/guiding other contributors
+- Rollups/CI/Releases
+- Governance
+- Other: Free Form
 
 > **justification**
 >
 > Useful for cohort analysis. Problems will likely differ based on the work
 > being done. Those contributing new code will likely face diff problems than
 > those who mainly review or coordinate work.
+
+### Which areas of the project did you contribute to?
+
+Select all that apply:
+
+- rustc
+- tools (e.g. cargo, clippy, rustfmt, rustup, etc)
+- infrastructure (e.g. highfive, CI, rfcbot, etc)
+- libraries (e.g. core, std, libc, log, etc)
+- documentation (e.g. rustc-dev-guide, std-dev-guide, forge) (does not include documentation for libraries or rustdoc development)
+- website (e.g. rust-lang.org)
+- education resources (e.g. rustlings, the book, nomicon, etc)
+- Other: Free Form
+
+> **justification**
+>
+> Useful for cohort analysis. The part of the project that the user is involved
+> in can have implications for what types of pain points they would run into.
+> For example, pain points for contribution work will be different if you're a
+> tool developer (e.g. the processes for syncing with the main rust-lang/rust
+> repo, or with API stability in the compiler or something like that) or a
+> rustc developer (e.g. how long it takes a PR to land, build times, etc.).
 
 ### The type of work I did in the Rust project was exactly what I wanted to be working on.
 
@@ -616,17 +680,50 @@ Select all that apply:
 
 ### What kind of work would you like to do within the Rust Project?
 
-- contribution work
-- maintainership work
-- reviews
-- coordination
-- organization
+Select all that apply:
+
+- Documentation
+- Code Review (PRs)
+- Design Review (RFCs/MCPs/FCPs)
+- Issue Triage
+- Issue Reporting
+- Moderation
+- New Features
+- Bug Fixes
+- Performance enhancements
+- Communication (e.g. writing blog posts, release notes, preparing for meetings or taking minutes)
+- supporting/mentoring/guiding other contributors
+- Rollups/CI/Releases
+- Governance
+- Other: Free Form
 
 > **justification**
 >
 > Useful for cohort analysis. Problems will likely differ based on the work
 > being done. Those contributing new code will likely face diff problems than
 > those who mainly review or coordinate work.
+
+### Which areas of the project would you like to contribute to?
+
+Select all that apply:
+
+- rustc
+- tools (e.g. cargo, clippy, rustfmt, rustup, etc)
+- infrastructure (e.g. highfive, CI, rfcbot, etc)
+- libraries (e.g. core, std, libc, log, etc)
+- documentation (e.g. rustc-dev-guide, std-dev-guide, forge) (does not include documentation for libraries or rustdoc development)
+- website (e.g. rust-lang.org)
+- education resources (e.g. rustlings, the book, nomicon, etc)
+- Other: Free Form
+
+> **justification**
+>
+> Useful for cohort analysis. The part of the project that the user is involved
+> in can have implications for what types of pain points they would run into.
+> For example, pain points for contribution work will be different if you're a
+> tool developer (e.g. the processes for syncing with the main rust-lang/rust
+> repo, or with API stability in the compiler or something like that) or a
+> rustc developer (e.g. how long it takes a PR to land, build times, etc.).
 
 ### What has prevented you from getting involved?
 
