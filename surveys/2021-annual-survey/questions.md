@@ -548,16 +548,34 @@ Type: select one
 > This question assess hiring sentiment. Although there is intrinsic uncertainty, it is easy to answer and forward looking.
 > It will also be interesting to see what the demand for Rust skills from companies is over time.
 
-### In what technology domains is Rust used at your company?
+### In what technology domain(s) is Rust used at your company?
 
 Type: select all that apply
 
-- Server-side application
-- Desktop application
-- Mobile application
-- Web application
-- Embedded application
-- Other (open response)
+- Audio programming
+- Blockchain
+- Cloud computing applications
+- Cloud computing infrastructure or utilities
+- Computer graphics
+- Data science
+- Desktop computer application frontend
+- Desktop computer or mobile phone libraries or services
+- Distributed systems
+- Embedded devices (with operating systems)
+- Embedded devices (bare metal)
+- HPC (High-performance [Super]Computing)
+- IoT (Internet of Things)
+- Machine learning
+- Mobile phone application frontend
+- Computer networking
+- Programming languages and related tools (including compilers, IDEs, standard libraries, etc.)
+- Robotics
+- Computer security
+- Scientific and/or numeric computing
+- Server-side or "backend" application
+- Simulation
+- Web application frontend
+- WebAssembly
 
 > **justification**
 >
