@@ -347,9 +347,11 @@ Rating:
 
 ### In which of the following ways have you participated in the Rust community in the last 6 months:
 
+Note that the following forms of pariticipation do not include code related acitivities (i.e., writing, reviewing, or discussing code). Such pariticpation is asked about in later questions.
+
 Type: select all that apply
 
-- I have produced informational content about Rust (e.g., blogged, live streamed, made a YouTube video, etc.).
+- I have produced informational content about Rust (e.g., blogged, live streamed, made a YouTube video, presented at a conference/meetup, etc.).
 - On several occasions I have consumed informational content about Rust (e.g., blogs, live streams, YouTube videos, etc.).
 - On several occasions I have read *comments* about Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
 - On several occasions I have *commented* on Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
