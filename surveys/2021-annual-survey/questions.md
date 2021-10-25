@@ -719,7 +719,7 @@ Type: matrix
 Statements:
 
 - Rust provides a real benefit over other programming languages
-- Rust is complicated to use
+- Rust is significantly more complicated to program in than other programming languages
 - Rust requires significantly more effort to learn than other programming languages
 - Rust is risky to use in production
 - Rust makes me more productive
