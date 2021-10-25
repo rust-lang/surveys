@@ -703,6 +703,8 @@ Type: select all that apply
 - Superseded by an alternative
 - Becomes too complex
 - Tools and documentation are not accessible enough (e.g., due to language or incompatibility with screen readers)
+- Project governance does not scale to match the requirements of the community
+- Developers/maintainers of the language are not properly supported
 - Other (open response)
 - I'm not worried
 
