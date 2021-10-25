@@ -196,7 +196,7 @@ Type: select all that apply
 - Embedded platforms (with an operating system)
 - Embedded platforms (bare metal)
 - WebAssembly
-- Cross-platform
+- Explicitly platform-independent (e.g., a library which does not interact with the operating system)
 - Other (open response)
 
 > **justification**
@@ -576,14 +576,14 @@ Type: matrix
 
 Statements:
 
-- We use Rust for its performance (i.e., speed, memory footprint, etc.) characteristics.
-- We use Rust because we need *precise control* over exactly how our software runs.
-- Rust security and safety properties are important to us.
-- Rust allows us to build relatively correct and bug free software.
+- For its performance (i.e., speed, memory footprint, etc.) characteristics.
+- We need *precise control* over exactly how our software runs.
+- Its security and safety properties are important to us.
+- It allows us to build relatively correct and bug free software.
 - We find it enjoyable or fun to program in Rust.
 - We already know Rust so it's our default choice.
 - We find it easy to prototype with.
-- We use Rust because we must interact with existing Rust code.
+- We must interact with existing Rust code.
 - Other (open response)
 
 Rating:
@@ -766,7 +766,7 @@ Options:
 >
 > This question gathers data on the communities perceptions of certain aspects of Rust at this point in time.
 
-### In your opinion, have the following aspects of Rust got better or worse over the past year?
+### In your opinion, have the following aspects of Rust gotten better or worse over the past year?
 
 Type: matrix
 
@@ -985,7 +985,7 @@ Type: select all that apply
 - Machine learning
 - Mobile phone application frontend
 - Computer networking
-- Programming languages, tools, libraries, etc.
+- Programming languages and related tools (including compilers, IDEs, standard libraries, etc.)
 - Robotics
 - Computer security
 - Scientific and/or numeric computing
