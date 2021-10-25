@@ -721,6 +721,7 @@ Statements:
 - Rust provides a real benefit over other programming languages
 - Rust is significantly more complicated to program in than other programming languages
 - Rust requires significantly more effort to learn than other programming languages
+- Rust code tends to contain significantly *less* bugs than equivalent code written in another programming language would have.
 - Rust is risky to use in production
 - Rust makes me more productive
 - Rust is fun to use
