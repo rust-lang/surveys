@@ -347,7 +347,8 @@ Type: select all that apply
 
 Type: select all that apply
 
-- rustup
+- Rustup (where Rustup is installed from rust-lang.org or you built it from source)
+- Rustup (where Rustup is installed using any package manager)
 - Linux distribution package
 - Homebrew
 - Official rust-lang.org tarballs
