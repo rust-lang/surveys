@@ -720,7 +720,7 @@ Statements:
 
 - Rust provides a real benefit over other programming languages
 - Rust is complicated to use
-- Rust is complicated to learn
+- Rust requires significantly more effort to learn than other programming languages
 - Rust is risky to use in production
 - Rust makes me more productive
 - Rust is fun to use
