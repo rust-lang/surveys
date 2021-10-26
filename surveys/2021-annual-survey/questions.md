@@ -181,6 +181,15 @@ Type: free form (number, optional)
 > - It'll help with prioritization around whether to make something go faster by throwing more CPUs at it or by optimizing on the same number of CPUs.
 > - It'll help avoid assumptions that rust developers might otherwise make about how universal the caliber of hardware they have is.
 
+### On the primary machine you compile Rust code on, how much RAM (in GB) is there?
+
+Type: free form (number, optional)
+
+> **justification**
+>
+> Similar to the question above, it is good to know what the average amount of RAM is for developer machines. This will likely only be 
+> relevant if the number is much lower than expected.
+
 ### Which operating systems or runtimes do you develop Rust software for?
 
 Note: this is specifically about which operating system or runtime you **target** not which system you use
