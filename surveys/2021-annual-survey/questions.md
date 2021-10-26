@@ -491,23 +491,6 @@ Choices:
 
 ## Rust at work
 
-> This section is largely in service of the [contexts](./design/contexts.md) design document.
-
-### Are you using Rust at work?
-
-Type: select one
-
-- Yes, for the majority of my coding
-- Yes, it's one of a number of languages I use and I use it regularly
-- Yes, but I only use it occasionally
-- No [`NEXT`](#rust-in-education)
-
-> **justification**
->
-> We want to establish what percentage of those who could possibly use Rust in a professional setting
-> are using Rust in a professional setting. This is most interesting over time.
-> Answers to this question should be combined with whether the respondent has ever used Rust.
-
 ### To what extent is Rust currently being used by your company?
 
 Type: select one
@@ -519,7 +502,7 @@ Type: select one
 - My company has seriously considered, but not experimented with, using Rust.
 - My company has not seriously considered Rust for any use.
 - I am unsure whether my company has considered using or currently uses Rust.
-- I don't work for a company or my company does not develop software of any kind.
+- I don't work for a company or my company does not develop software of any kind. [`NEXT`](#rust-in-education)
 
 > **justification**
 >
@@ -551,12 +534,14 @@ Type: select one
 
 - Yes
 - No
-- I don't know or I don't work at company that hires software developers.
+- I don't know
 
 > This question assess hiring sentiment. Although there is intrinsic uncertainty, it is easy to answer and forward looking.
 > It will also be interesting to see what the demand for Rust skills from companies is over time.
 
 ### In what technology domain(s) is Rust used at your company?
+
+If you've previously answered that your company is not actively using Rust, you can leave this question blank.
 
 Type: select all that apply
 
@@ -589,12 +574,26 @@ Type: select all that apply
 >
 > We want to known roughly what technology stacks are being most often used.
 >
-> **challenges**
->
 > This can be ambiguous and hard to answer. For example, if you're building an operating
-> system for a mobile phone, is that embedded, mobile, or something else.
-> We want to understand the "shape" of Rust usage, and this question only gets at that
-> in one particular way.
+> system for a mobile phone, is that embedded, mobile, or something else?
+> We want to understand the "shape" of Rust usage, and this question tries to get at that
+> by allowing the respondent to select multiple answers.
+
+### Are you using Rust at work?
+
+Type: select one
+
+- Yes, for the majority of my coding
+- Yes, it's one of a number of languages I use and I use it regularly
+- Yes, but I only use it occasionally
+- No [`NEXT`](#rust-in-education)
+
+> **justification**
+>
+> We want to establish what percentage of those who could possibly use Rust in a professional setting
+> are using Rust in a professional setting. This is most interesting over time.
+> Answers to this question should be combined with whether the respondent has ever used Rust.
+
 
 ### Rate how much the follow statements are reasons your team use Rust at work.
 
@@ -625,7 +624,7 @@ Rating:
 > The Rust community and potential adopters of Rust have a lot of assumptions of why one would choose Rust for a project.
 > This question can help confirm or challenge our assumptions and see how they change over time.
 
-### Please rate your experience using Rust at work.
+### Please rate your team's experience using Rust at work.
 
 Type: matrix
 
@@ -656,20 +655,14 @@ Type: free form
 > **justification**
 >
 > This an opportunity to learn from adopters at companies what they struggle with when adopting Rust.
->
-> **SURVEY FLOW**
->
-> Only show this question if the respondent indicated their adoption was not a smashing success.
 
-## Rust in education
-
-> This section is largely in service of the [contexts](./design/contexts.md) design document.
+## Rust in Education
 
 ### Have you taken in the past year or are you currently taking a course or training which uses or teaches Rust?
 
 Type: select one
 
-- Yes [`NEXT`](#where-is-the-course-or-activity-taught)
+- Yes
 - No [`NEXT`](#your-opinions-about-rust)
 
 > **justification**
