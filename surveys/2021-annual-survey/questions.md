@@ -292,19 +292,18 @@ Type: select all that apply
 > Since many of these sources are not under project control, it can be hard to know where
 > people are getting their Rust compiler from.
 
-### Which editor or IDE setup do you use on a regular basis?
+### Which editor or IDE setup do you use with Rust code on a regular basis?
 
 Type: select all that apply
 
 - VS Code
 - vi/vim/neovim
-- IntelliJ
+- IntelliJ/CLion/other Jet Brains IDE
 - Emacs
 - Sublime Text
 - Visual Studio
 - Xcode
 - Atom
-- CLion
 - Other (open response)
 
 > **justification**
@@ -318,6 +317,30 @@ Type: select all that apply
 > If we are curious how far along adoption of rust-analyzer is, we can ask that
 > in a separate question, though this is likely easier to find out through download
 > numbers.
+
+### Which debuggers do you use for debugging Rust programs on a regular basis?
+
+Type: select all that apply
+
+- GDB
+- LLDB
+- Visual Studio
+- WinDBG
+- VS Code (using any debugger extension)
+- IntelliJ/CLion/other Jet Brains IDE
+- RR/Pernosco
+- 'println' debugging (or using any logging or tracing crate, etc.)
+- Other (open response)
+
+> **justification**
+>
+> It is good to know how many users use a debugging tool, and which tool they use.
+> This information could influence priorities for the compiler and tools teams.
+>
+> Note that there is some overlap between the answers, e.g., VS Code uses either a
+> GDB or LLDB plugin, but I think that is OK, we can take this into account when
+> interpreting the answers and we will get an indication of user's perceptions of
+> their tools.
 
 ### Please indicate how vital to your workflow each of the following tools are when programming with Rust:
 
@@ -770,6 +793,7 @@ Aspects:
 - Bugs in the compiler (i.e., ICEs a.k.a. internal compiler errors, miscompilations, etc.)
 - Compiler error messages
 - IDE experience
+- Debugging experience
 - Available tools and support
 - Async programming
 - GUI development
