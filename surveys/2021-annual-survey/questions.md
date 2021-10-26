@@ -22,7 +22,7 @@ We estimate it will take about 10-15 minutes to complete.
 
 Type: select one
 
-- Yes, I use Rust [`NEXT`](#your-rust-experience)
+- Yes, I use Rust (for any purpose, even if you're just learning) [`NEXT`](#your-rust-experience)
 - No, I don't currently use Rust, but I have in the past [`NEXT`](#for-previous-rust-users)
 - No, I have never used Rust [`NEXT`](#for-non-rust-users)
 
@@ -382,7 +382,7 @@ Activities:
 
 Type: select one
 
-- Daily
+- More frequently than weekly
 - Weekly
 - Monthly
 - Less frequently than monthly
@@ -467,13 +467,21 @@ Type: select one
 
 ### Which of the following activities do you find helpful or effective for learning Rust or improving your Rust skills?
 
-Type: select all that apply
+Type: matrix
+
+Activities:
 
 - Reading books or other written material geared towards learning Rust
 - Watching videos, streams, etc. geared towards learning Rust
 - Attending an organized training session or course (in person or virtual)
 - Doing Rust coding exercises or challenges created to help learn Rust
 - Building a non-trivial project in Rust or contributing to an open source project
+
+Choices:
+
+- Very helpful
+- Somewhat helpful
+- Not helpful
 
 > **justification**
 >
