@@ -467,13 +467,21 @@ Type: select one
 
 ### Which of the following activities do you find helpful or effective for learning Rust or improving your Rust skills?
 
-Type: select all that apply
+Type: matrix
+
+Activities:
 
 - Reading books or other written material geared towards learning Rust
 - Watching videos, streams, etc. geared towards learning Rust
 - Attending an organized training session or course (in person or virtual)
 - Doing Rust coding exercises or challenges created to help learn Rust
 - Building a non-trivial project in Rust or contributing to an open source project
+
+Choices:
+
+- Very helpful
+- Somewhat helpful
+- Not helpful
 
 > **justification**
 >
