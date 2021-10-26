@@ -382,7 +382,7 @@ Activities:
 
 Type: select one
 
-- Daily
+- More frequently than weekly
 - Weekly
 - Monthly
 - Less frequently than monthly
