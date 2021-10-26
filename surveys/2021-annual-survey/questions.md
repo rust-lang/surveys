@@ -73,7 +73,7 @@ Type: select all that apply
 
 ## Your Rust experience
 
-### How often do you use Rust?
+### On average, how often do you use Rust?
 
 Type: select one
 
