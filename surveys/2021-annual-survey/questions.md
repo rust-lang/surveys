@@ -416,8 +416,8 @@ Choices:
 
 > **justification**
 >
-> We'd like to know if any of the officially moderated spaces in the Rust community tend to produce feelings
-> of unwelcome which made indicate that we need to more aggressively moderate those spaces.
+> We'd like to know where people are feeling unwelcome and the degree to which they are feeling unwelcome. This can 
+> help us better understand the free from responses that will come in the next question.
 
 ### If you indicated that you did not feel welcome in the Rust community, are there any details about your experience that you would like to share with us?
 
