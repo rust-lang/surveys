@@ -979,6 +979,7 @@ Type: select all that apply
 - Automotive
 - Business software
 - Consumer software
+- Consulting
 - Computer hardware
 - Defense
 - Energy
@@ -990,6 +991,8 @@ Type: select all that apply
 - Healthcare
 - Manufacturing
 - Music
+- Railway
+- Research & Development
 - Retail
 - Telecommunications
 - Transportation
