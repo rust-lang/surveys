@@ -893,7 +893,7 @@ Please share only what you are comfortable sharing. This will help us better ser
 
 Type: select all that apply (optional)
 
-- No [`NEXT`](#if-you-find-it-difficult-to-participate-in-the-rust-community-and-feel-comfortable-giving-more-details-please-tell-us-what-makes-it-difficult)
+- No [`NEXT`](#are-you-a-full--or-part-time-student)
 - Yes, but I prefer not to say which
 - Cultural beliefs
 - Disabled or person with disability (including physical, mental, and other)
