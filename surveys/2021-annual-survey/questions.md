@@ -980,6 +980,7 @@ Type: select all that apply
 - Business software
 - Consumer software
 - Computer hardware
+- Defense
 - Energy
 - Education/Academia
 - Entertainment or Media
@@ -988,7 +989,6 @@ Type: select all that apply
 - Government
 - Healthcare
 - Manufacturing
-- Military
 - Music
 - Retail
 - Telecommunications
