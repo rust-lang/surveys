@@ -505,6 +505,7 @@ Choices:
 - Very helpful
 - Somewhat helpful
 - Not helpful
+- I have no experience with this activity
 
 > **justification**
 >
