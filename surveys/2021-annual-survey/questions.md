@@ -638,11 +638,9 @@ Statements:
 
 Rating:
 
-- Strongly agree
 - Agree
 - Neither agree nor disagree
 - Disagree
-- Strongly disagree
 
 > **justification**
 >
@@ -731,7 +729,7 @@ Type: select all that apply
 >
 > Would be useful for leadership to understand the community's fears.
 
-### How much do you agree with the following statements
+### Do you agree with the following statements?
 
 Type: matrix
 
@@ -747,11 +745,9 @@ Statements:
 
 Rating:
 
-- Strongly agree
 - Agree
 - Neither agree nor disagree
 - Disagree
-- Strongly disagree
 
 > **justification**
 >
@@ -809,7 +805,7 @@ Options:
 >
 > This question gathers data on the communities perceptions of certain aspects of Rust over the last year.
 
-### Please rate how much you agree with the following statements on Rust stability.
+### Do you agree with the following statements on Rust stability?
 
 Type: matrix
 
@@ -824,12 +820,9 @@ Statements:
 
 Rating:
 
-- Strongly agree
 - Agree
 - Neither agree nor disagree
 - Disagree
-- Strongly disagree
-- No opinion or unsure
 
 > **justification**
 >
@@ -838,7 +831,7 @@ Rating:
 > in a new version of the compiler isn't breaking official stability guarantees but it can feel just as painful as an
 > actual breaking change.
 
-### How much do you agree with the following statements on Rust employment?
+### Do you agree with the following statements on Rust employment?
 
 Type: matrix
 
@@ -851,11 +844,9 @@ Statements:
 
 Rating:
 
-- Strongly agree
 - Agree
 - Neither agree nor disagree
 - Disagree
-- Strong disagree
 
 > **justification**
 >
