@@ -10,11 +10,7 @@ Unless you choose to enter your email, your answers will be anonymous. Any perso
 
 https://github.com/rust-community/team/wiki/State-of-the-Rust-Language-Community-Survey-FAQ
 
-We estimate it will take about 10-15 minutes to complete.
-
-> TODOs:
->
-> - Ensure that the survey actually takes 10-15 minutes
+We estimate it will take about 10-25 minutes to complete.
 
 ## Rust Usage
 
