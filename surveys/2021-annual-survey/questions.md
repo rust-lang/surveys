@@ -964,6 +964,7 @@ Type: select all that apply
 - Automotive
 - Business software
 - Consumer software
+- Consulting
 - Computer hardware
 - Energy
 - Education/Academia
@@ -975,6 +976,8 @@ Type: select all that apply
 - Manufacturing
 - Military
 - Music
+- Railway
+- Research & Development
 - Retail
 - Telecommunications
 - Transportation
