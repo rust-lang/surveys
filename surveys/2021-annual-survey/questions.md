@@ -413,6 +413,30 @@ Type: select one
 > We want to understand the nature of contribution to the Rust project both
 > to better understand the shape of community involvement and for cohort analysis.
 
+### How often have you felt explicitly welcome in the Rust community?
+
+Type: matrix
+
+Activities:
+
+- *Official* Rust community forums or chats (users.rust-lang.org, internals.rust-lang.org, the official Rust Discord, or the Rust Zulip)
+- *Unofficial* Rust community forums or chats (e.g., reddit.com/r/rust, Hacker News, the Rust *Community* Discord, etc.)
+- Attending a Rust conference
+- Attending a Rust meetup or local community event
+- Discussion (issues, pull requests, etc.) on a repository *inside* the rust-lang GitHub organization
+- Discussion (issues, pull requests, etc.) on a repository *outside* of the rust-lang GitHub organization
+
+Choices:
+
+- I've *often* felt welcome
+- I *sometimes* feel welcome
+- I *never* feel welcome
+- I've never participated in this activity
+
+> **justification**
+>
+> We'd like to know where people are feeling welcome and the degree to which they are feeling welcome.
+
 ### How often have you felt *un*welcome in the Rust community?
 
 Type: matrix
