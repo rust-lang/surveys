@@ -1104,21 +1104,11 @@ Type: select all that apply
 > We want to understand self reported feeling of comfort and capability of communication
 > of English since a large portion of the Rust community is and likely will always be in English.
 
-### What is/are your **preferred** language(s) for the following forms of technical communication?
+### What is/are your **preferred** language(s) for technical communication?
 
-**IMPORTANT**: The answers should reflect your **preference** and **not** what you are capable of communicating in. For example, if you feel comfortable and capable of consuming technical communication in both English and Korean, but you always prefer Korean, you should *only* answer Korean as that is your preference.
+**IMPORTANT**: Your answer should reflect your **preference** and **not** what you are capable of communicating in. For example, if you feel comfortable and capable of consuming technical communication in both English and Korean, but you always prefer Korean, you should *only* answer Korean as that is your preference.
 
-Type: matrix
-
-Forms of communication:
-
-- *spoken* technical conversation
-- *written* technical conversation
-- technical documentation
-- technical talks
-- written technical education material
-
-Languages:
+Type: select all that apply
 
 - Chinese
 - Spanish
