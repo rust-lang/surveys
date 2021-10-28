@@ -783,6 +783,7 @@ Aspects:
 
 - Compile times
 - Binary size
+- Memory usage (i.e., how much RAM rustc uses when compiling)
 - Disk space usage (e.g., the size of `target` folder)
 - Bugs in the compiler (i.e., ICEs a.k.a. internal compiler errors, miscompilations, etc.)
 - Compiler error messages
