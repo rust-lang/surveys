@@ -423,4 +423,41 @@ Free form.
 > **REMOVED**
 >
 > This question isn't helpful because other data sources are better at capturing this. For instance, libc is very important but might not get a lot of shout outs because 
-> it's not often a direct dependency. Number of downloads from crates.io is a much more reliable way to measure this. 
+> it's not often a direct dependency. Number of downloads from crates.io is a much more reliable way to measure this.
+
+### How many open-source and non-personal Rust projects do you currently help maintain?
+
+- Non-personal: at least one other person also contributes and the project is meant for others and not just yourself.
+- Maintain: you have review and merge privileges
+
+Type: select one (optional)
+
+- 0
+- 1
+- 2-4
+- 5-10
+- More than 10
+
+> **justification**
+>
+> We would like to know the rough make up of those who are using Rust in general
+> vs those who actively participate in development of open source Rust projects.
+
+### How many open-source and non-personal Rust projects do you currently contribute to (not including those you help maintain)?
+
+- Non-personal: at least one other person also contributes and the project is meant for others and not just yourself.
+- Contribute: you *regularly* provide code, tests, documentation, issues, etc.
+- Maintain: you have review and merge privileges
+
+Type: select one (optional)
+
+- 0
+- 1
+- 2-4
+- 5-10
+- More than 10
+
+> **justification**
+>
+> We would like to know the rough make up of those who are using Rust in general
+> vs those who actively participate in development of open source Rust projects.
