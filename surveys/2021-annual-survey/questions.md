@@ -417,7 +417,7 @@ Type: select one
 > We want to understand the nature of contribution to the Rust project both
 > to better understand the shape of community involvement and for cohort analysis.
 
-### How often have you felt welcome in the Rust community?
+### How often have you felt explicitly welcome in the Rust community?
 
 Type: matrix
 
