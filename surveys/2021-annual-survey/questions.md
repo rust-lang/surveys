@@ -30,7 +30,7 @@ Type: select one
 
 ### As you have indicated that you're no longer using Rust, what prompted you to participate in this survey?
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 - I plan to return to using Rust in the future.
 - I consider myself part of the Rust Community.
@@ -51,7 +51,7 @@ Type: select all that apply
 
 ### As you have indicated that you have not used Rust, what prompted you to participate in this survey?
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 - I plan to use Rust in the future.
 - I consider myself part of the Rust Community.
@@ -112,7 +112,7 @@ Type: select one
 means spending the *majority* of your time with Rust consuming learning materials or coding *in order to learn* (as opposed to achieving
 some other goal). If your learning process spans several of the listed time periods, pick the one where you felt you learned *the most*.
 
-Type: select one
+Type: select one (optional)
 
 - I'm still *actively* trying to learn Rust
 - During 2021
@@ -137,7 +137,7 @@ Type: select one
 Note: this is specifically about which systems you use for development *not* all the 
 systems you target.
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 - Linux
 - Windows
@@ -182,7 +182,7 @@ Type: free form (number, optional)
 Note: this is specifically about which operating system or runtime you **target** not which system you use
 for development nor which specific architectures (e.g., x86 vs ARM) you target.
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 - Linux (desktop or server)
 - Windows
@@ -208,7 +208,7 @@ Type: select all that apply
 
 ### Which version(s) of Rust do you use for local development?
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 - Current stable version
 - Previous stable version
@@ -227,7 +227,7 @@ Type: select all that apply
 
 ### Which version(s) of Rust do you use in automated testing (e.g., CI)?
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 REPEAT
 
@@ -237,7 +237,7 @@ REPEAT
 
 ### If you use nightly, why?
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 - I don't use nightly
 - Out of habit
@@ -256,7 +256,7 @@ Type: select all that apply
 
 ### If you use beta, why?
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 - I don't use beta
 - Out of habit
@@ -271,7 +271,7 @@ Type: select all that apply
 
 ### In which ways do you install Rust?
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 - Rustup (where Rustup is installed from rust-lang.org or you built it from source)
 - Rustup (where Rustup is installed using any package manager)
@@ -290,7 +290,7 @@ Type: select all that apply
 
 ### Which editor or IDE setup do you use with Rust code on a regular basis?
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 - VS Code
 - vi/vim/neovim
@@ -316,7 +316,7 @@ Type: select all that apply
 
 ### Which debuggers do you use for debugging Rust programs on a regular basis?
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 - GDB
 - LLDB
@@ -340,7 +340,7 @@ Type: select all that apply
 
 ### Please indicate how vital to your workflow each of the following tools are when programming with Rust:
 
-Type: matrix
+Type: matrix (optional)
 
 Tools:
 
@@ -368,9 +368,9 @@ Rating:
 
 ### In which of the following ways have you participated in the Rust community in the last 6 months:
 
-Note that the following forms of pariticipation do not include code related acitivities (i.e., writing, reviewing, or discussing code). Such pariticpation is asked about in later questions.
+Note that the following forms of participation do not include code related activities (i.e., writing, reviewing, or discussing code). Such pariticpation is asked about in later questions.
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 - I have produced informational content about Rust (e.g., blogged, live streamed, made a YouTube video, presented at a conference/meetup, etc.).
 - On several occasions I have consumed informational content about Rust (e.g., blogs, live streams, YouTube videos, etc.).
@@ -399,7 +399,7 @@ Activities:
 - Contribute code changes (including tests) to any other project in the rust-lang GitHub org
 - Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub org.
 
-Type: select one
+Type: select one (optional)
 
 - More frequently than weekly
 - Weekly
@@ -439,7 +439,7 @@ Choices:
 
 ### How often have you felt *un*welcome in the Rust community?
 
-Type: matrix
+Type: matrix (optional)
 
 Activities:
 
@@ -471,46 +471,9 @@ Type: free form (optional)
 > More detail on the type of situations where people have felt unwelcome can let us better 
 > address these issues in the future.
 
-### How many open-source and non-personal Rust projects do you currently help maintain?
-
-- Non-personal: at least one other person also contributes and the project is meant for others and not just yourself.
-- Maintain: you have review and merge privileges
-
-Type: select one
-
-- 0
-- 1
-- 2-4
-- 5-10
-- More than 10
-
-> **justification**
->
-> We would like to know the rough make up of those who are using Rust in general
-> vs those who actively participate in development of open source Rust projects.
-
-### How many open-source and non-personal Rust projects do you currently contribute to (not including those you help maintain)?
-
-- Non-personal: at least one other person also contributes and the project is meant for others and not just yourself.
-- Contribute: you *regularly* provide code, tests, documentation, issues, etc.
-- Maintain: you have review and merge privileges
-
-Type: select one
-
-- 0
-- 1
-- 2-4
-- 5-10
-- More than 10
-
-> **justification**
->
-> We would like to know the rough make up of those who are using Rust in general
-> vs those who actively participate in development of open source Rust projects.
-
 ### Which of the following activities do you find helpful or effective for learning Rust or improving your Rust skills?
 
-Type: matrix
+Type: matrix (optional)
 
 Activities:
 
@@ -556,7 +519,7 @@ Type: select one
 
 Note: don't worry about being exact here! Go with you gut.
 
-Type: select one
+Type: select one (optional)
 
 - Under 10
 - 11-49
@@ -574,7 +537,7 @@ Type: select one
 
 ### Is your company planning on hiring Rust developers in the next year?
 
-Type: select one
+Type: select one (optional)
 
 - Yes
 - No
@@ -587,7 +550,7 @@ Type: select one
 
 If you've previously answered that your company is not actively using Rust, you can leave this question blank.
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 - Audio programming
 - Blockchain
@@ -613,6 +576,7 @@ Type: select all that apply
 - Simulation
 - Web application frontend
 - WebAssembly
+- Other (open response)
 
 > **justification**
 >
@@ -639,9 +603,9 @@ Type: select one
 > Answers to this question should be combined with whether the respondent has ever used Rust.
 
 
-### Rate how much the follow statements are reasons your team use Rust at work.
+### Rate how much the following statements are reasons which your team uses Rust at work.
 
-Type: matrix
+Type: matrix (optional)
 
 Statements:
 
@@ -670,7 +634,7 @@ Rating:
 
 ### Please rate your team's experience using Rust at work.
 
-Type: matrix
+Type: matrix (optional)
 
 Statements:
 
@@ -692,7 +656,7 @@ Rating:
 
 ### What about your usage of Rust has been challenging?
 
-Type: free form
+Type: free form (optional)
 
 > **justification**
 >
@@ -713,7 +677,7 @@ Type: select one
 
 ### Where is the course or activity taught?
 
-Type: select one
+Type: select one (optional)
 
 - University or other tertiary institute
 - High school or secondary school
@@ -727,7 +691,7 @@ Type: select one
 
 ### Which best describes your course or activity?
 
-Type: select one
+Type: select one (optional)
 
 - A course teaching exclusively how to program in Rust
 - A course teaching how to program in Rust and other languages
@@ -740,7 +704,7 @@ Type: select one
 
 ### Is Rust mandated for your course or activity, or did you choose it yourself?
 
-Type: select one
+Type: select one (optional)
 
 - Rust was mandated
 - I chose to use Rust
@@ -753,7 +717,7 @@ Type: select one
 
 ### What are your biggest worries for the future of Rust?
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 - Not enough usage in industry
 - Too much interest from big companies
@@ -773,9 +737,9 @@ Type: select all that apply
 >
 > Would be useful for leadership to understand the community's fears.
 
-### Do you agree with the following statements?
+### Do you agree with the following statements about Rust?
 
-Type: matrix
+Type: matrix (optional)
 
 Statements:
 
@@ -801,7 +765,7 @@ Rating:
 
 ### In your opinion, how do you find the following aspects of Rust?
 
-Type: matrix
+Type: matrix (optional)
 
 Aspects:
 
@@ -832,7 +796,7 @@ Options:
 
 ### In your opinion, have the following aspects of Rust gotten better or worse over the past year?
 
-Type: matrix
+Type: matrix (optional)
 
 Aspects:
 
@@ -853,7 +817,7 @@ Options:
 
 ### Do you agree with the following statements on Rust stability?
 
-Type: matrix
+Type: matrix (optional)
 
 Statements:
 
@@ -879,7 +843,7 @@ Rating:
 
 ### Do you agree with the following statements on Rust employment?
 
-Type: matrix
+Type: matrix (optional)
 
 Statements:
 
@@ -933,7 +897,7 @@ Type: select all that apply (optional)
 
 ### Do you feel your belonging to an underrepresented or marginalized group in technology makes it difficult for you to participate in the Rust community?
 
-Type: select one
+Type: select one (optional)
 
 - Often
 - Sometimes
@@ -959,8 +923,6 @@ Type: select one
 
 ### Are you employed full- or part-time (including paid internships)?
 
-> Optional
-
 Type: select one
 
 - Yes
@@ -976,7 +938,7 @@ Type: select one
 
 ### How long have you worked in software professionally?
 
-Type: select one
+Type: select one (optional)
 
 - <= 1 year
 - 1 - 3 years
@@ -994,7 +956,7 @@ Type: select one
 
 ### Which category best describes your current employer's industry?
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 - Advertising
 - Aerospace
@@ -1029,7 +991,7 @@ Type: select all that apply
 
 ### Which categories best describes the tech domain(s) you currently write or design software in?
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 - Audio programming
 - Blockchain
@@ -1055,6 +1017,7 @@ Type: select all that apply
 - Simulation
 - Web application frontend
 - WebAssembly
+- Other (open response)
 
 > **justification**
 >
@@ -1066,7 +1029,7 @@ Type: select all that apply
 
 ### Excluding Rust, what is your experience with other kinds of programming languages?
 
-Type: matrix
+Type: matrix (optional)
 
 Languages:
 
@@ -1093,7 +1056,7 @@ Experience:
 
 ### How long have you been programming (in any language, for any reason)?
 
-Type: select one
+Type: select one (optional)
 
 - < 1 year
 - < 3 years
@@ -1116,7 +1079,7 @@ Type: select one (optional)
 
 ### In what ways are you comfortable communicating about technical topics in English?
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 - I feel comfortable and capable of having a *spoken* technical conversation in English
 - I feel comfortable and capable of having a *written* technical conversation in English
@@ -1133,7 +1096,7 @@ Type: select all that apply
 
 **IMPORTANT**: Your answer should reflect your **preference** and **not** what you are capable of communicating in. For example, if you feel comfortable and capable of consuming technical communication in both English and Korean, but you always prefer Korean, you should *only* answer Korean as that is your preference.
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 - Chinese
 - Spanish
