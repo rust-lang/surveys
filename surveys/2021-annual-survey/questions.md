@@ -212,7 +212,8 @@ Type: select all that apply (optional)
 
 - Current stable version
 - Previous stable version
-- Some other specific version of stable Rust
+- A specific version of stable Rust equal to or newer than 1.47
+- A specific version of stable Rust older than 1.47
 - Beta release
 - Latest nightly
 - A specific version of nightly
@@ -224,6 +225,9 @@ Type: select all that apply (optional)
 >
 > Together with the following question, we can better determine what the spread of 
 > version usage is across the community.
+> We ask specifically about version 1.47 since it is, at the time of the survey, the 
+> version that was released ~1 year prior. Additionally, at the time of this writing
+> all major Linux distros have a version equal to or newer than this version.
 
 ### Which version(s) of Rust do you use in automated testing (e.g., CI)?
 
