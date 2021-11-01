@@ -83,29 +83,36 @@ pub enum Question {
         question_text: String,
         choice_list: ChoiceList,
     },
+    #[serde(rename = "input")]
+    Input { question_text: String },
+    #[serde(rename = "choice_table")]
+    ChoiceTable { question_text: String },
 }
 
 impl Question {
     pub fn text(&self) -> &str {
         match self {
             Self::ChoiceList { question_text, .. } => question_text,
+            Self::Input { question_text, .. } => question_text,
+            Self::ChoiceTable { question_text, .. } => question_text,
         }
     }
 
     pub fn is_free_form(&self) -> bool {
-        println!("TODO: free form answers");
-        true
+        matches!(self, Self::Input { .. })
     }
 
     pub fn is_select_many(&self) -> bool {
         match self {
             Self::ChoiceList { choice_list, .. } => choice_list.settings.allows_multiple_choices,
+            _ => false,
         }
     }
 
     pub fn is_select_one(&self) -> bool {
         match self {
             Self::ChoiceList { choice_list, .. } => !choice_list.settings.allows_multiple_choices,
+            _ => false,
         }
     }
 }

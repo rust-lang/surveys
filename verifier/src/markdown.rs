@@ -67,11 +67,11 @@ pub fn parse<'a>(markdown: &'a str) -> Result<Vec<Question<'a>>, Box<dyn Error>>
                 ParserState::Question(Question {
                     answers: Answers::SelectOne(ref mut a),
                     ..
-                }) => a.push(line[1..].trim()),
+                }) => a.push(trim_answer(line[1..].trim())),
                 ParserState::Question(Question {
                     answers: Answers::SelectMany(ref mut a),
                     ..
-                }) => a.push(line[1..].trim()),
+                }) => a.push(trim_answer(line[1..].trim())),
                 ParserState::Question(Question {
                     answers:
                         Answers::Matrix {
@@ -79,10 +79,10 @@ pub fn parse<'a>(markdown: &'a str) -> Result<Vec<Question<'a>>, Box<dyn Error>>
                         },
                     ..
                 }) => {
-                    answers2.push(line[1..].trim());
+                    answers2.push(trim_answer(line[1..].trim()));
                 }
                 ParserState::HalfMatrix { answers, .. } => {
-                    answers.push(line[1..].trim());
+                    answers.push(trim_answer(line[1..].trim()));
                 }
                 _ => {
                     //     bail!("illegal state. found answer when state is {:?}", state)
@@ -233,4 +233,14 @@ impl<'a> ParserState<'a> {
             Self::HalfMatrix { text, .. } => Some(text),
         }
     }
+}
+
+fn trim_answer(answer: &str) -> &str {
+    let next = answer.find("[`NEXT`]");
+    let i = if let Some(i) = next {
+        i
+    } else {
+        return answer;
+    };
+    &answer[..i].trim()
 }
