@@ -636,7 +636,7 @@ Rating:
 > The Rust community and potential adopters of Rust have a lot of assumptions of why one would choose Rust for a project.
 > This question can help confirm or challenge our assumptions and see how they change over time.
 
-### Please rate your team's experience using Rust at work.
+### Please rate your agreement with the following statements regarding your team's experience using Rust at work.
 
 Type: matrix (optional)
 
@@ -679,7 +679,7 @@ Type: select one
 >
 > This question is primarily used to funnel respondents into the more specific questions about the kinds of educational activities they've been a part of.
 
-### Where is the course or activity taught?
+### Where is/was the course or activity taught?
 
 Type: select one (optional)
 
@@ -706,7 +706,7 @@ Type: select one (optional)
 >
 > We want to know how Rust is being taught.
 
-### Is Rust mandated for your course or activity, or did you choose it yourself?
+### Is/was Rust mandated for your course or activity, or did you choose it yourself?
 
 Type: select one (optional)
 
@@ -741,7 +741,7 @@ Type: select all that apply (optional)
 >
 > Would be useful for leadership to understand the community's fears.
 
-### Do you agree with the following statements about Rust?
+### Please rate your agreement with the following statements about Rust.
 
 Type: matrix (optional)
 
