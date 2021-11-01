@@ -39,10 +39,13 @@ impl markdown::Question<'_> {
                 markdown::Answers::SelectOne(answers),
                 api::Question::ChoiceList { choice_list, .. },
             ) if other.is_select_one() => {
-                if !choice_list.contains_all_answers(&answers) {
+                let mismatched = choice_list.mismatched_answers(&answers);
+                if !mismatched.is_empty() {
                     return Comparison::AnswersDiffer(
-                        choice_list.to_vec(),
-                        answers.iter().map(|&s| s.to_owned()).collect(),
+                        mismatched
+                            .into_iter()
+                            .map(|(s1, s2)| (s1.to_owned(), s2.to_owned()))
+                            .collect(),
                     );
                 }
             }
@@ -50,10 +53,13 @@ impl markdown::Question<'_> {
                 markdown::Answers::SelectMany(answers),
                 api::Question::ChoiceList { choice_list, .. },
             ) if other.is_select_many() => {
-                if !choice_list.contains_all_answers(&answers) {
+                let mismatched = choice_list.mismatched_answers(&answers);
+                if !mismatched.is_empty() {
                     return Comparison::AnswersDiffer(
-                        choice_list.to_vec(),
-                        answers.iter().map(|&s| s.to_owned()).collect(),
+                        mismatched
+                            .into_iter()
+                            .map(|(s1, s2)| (s1.to_owned(), s2.to_owned()))
+                            .collect(),
                     );
                 }
             }
@@ -77,7 +83,7 @@ impl markdown::Question<'_> {
 enum Comparison {
     TitlesDiffer(String, String),
     QuestionTypesDiffer(String, QuestionType, QuestionType),
-    AnswersDiffer(Vec<String>, Vec<String>),
+    AnswersDiffer(Vec<(String, String)>),
     Equal,
 }
 

@@ -128,12 +128,11 @@ impl ChoiceList {
         self.choices.iter().map(|c| c.label.as_str())
     }
 
-    pub fn contains_all_answers(&self, answers: &[&str]) -> bool {
-        self.as_strs().eq(answers.iter().map(|s| *s))
-    }
-
-    pub fn to_vec(&self) -> Vec<String> {
-        self.as_strs().map(|s| s.to_owned()).collect()
+    pub fn mismatched_answers<'a>(&'a self, answers: &'a [&str]) -> Vec<(&'a str, &'a str)> {
+        self.as_strs()
+            .zip(answers.iter().map(|s| *s))
+            .filter(|(s1, s2)| s1 != s2)
+            .collect()
     }
 }
 
