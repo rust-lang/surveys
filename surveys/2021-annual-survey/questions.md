@@ -1,43 +1,43 @@
-# Survey questions
+# Опрос
 
-Whether or not you use Rust Programming Language <https://rust-lang.org> today, we want to hear from you!
+Вне зависимости от того, используете ли вы язык программирования Rust <https://rust-lang.org>, мы хотим услышать вас!
 
-The Rust Community Team has created this survey to help us gauge how we're doing, what can be improved, and how we can best engage with all of you as we move forward.
+Команда сообщества Rust создало этот опрос для оценки того, как идут дела в целом, что можно улучшить и каким наилучшим образом мы можем взаимодействовать вместе по мере развития.
 
-This is your chance to have a say in the development priorities for Rust.
+Это ваш шанс, чтобы высказаться о приоритетах развитя Rust.
 
-Unless you choose to enter your email, your answers will be anonymous. Any personal data you submit as a part of this survey will be handled in accordance with our policy as described in our Frequently Asked Questions:
+До тех пор, пока вы не указали ваш адрес элекронной почты, ваши ответы будут анонимны. Любые персональные данные, отправленные в рамках данного опроса, будут обработаны в соответствии с нашей политикой, которая описана в Часто Задаваемых Вопросах. 
 
 https://github.com/rust-community/team/wiki/State-of-the-Rust-Language-Community-Survey-FAQ
 
-We estimate it will take about 10-25 minutes to complete.
+Мы предполагаем, что опрос займёт примерно 10-25.
 
-## Rust Usage
+## Использование Rust
 
-### Do you use Rust?
+### Используете ли вы Rust?
 
 Type: select one
 
-- Yes, I use Rust (for any purpose, even if you're just learning) [`NEXT`](#your-rust-experience)
-- No, I don't currently use Rust, but I have in the past [`NEXT`](#for-previous-rust-users)
-- No, I have never used Rust [`NEXT`](#for-non-rust-users)
+- Да, я использую Rust (для различных целей, включая его изучение) [`NEXT`](#your-rust-experience)
+- Нет, я не использую Rust на текущий момент, но использовал ранее [`NEXT`](#for-previous-rust-users)
+- Нет, я ни разу не использовал Rust [`NEXT`](#for-non-rust-users)
 
 > **justification**
 >
 > Fundamental for cohort analysis
 
-## For previous Rust users
+## Для ранее использовавших ранее Rust пользователей
 
-### As you have indicated that you're no longer using Rust, what prompted you to participate in this survey?
+### Так как вы указали, что более не используете Rust, что побудило вас на участие в опросе?
 
 Type: select all that apply (optional)
 
-- I plan to return to using Rust in the future.
-- I consider myself part of the Rust Community.
-- Specifically to provide feedback on why I stopped using Rust.
-- To provide feedback on Rust in general.
-- Curiosity.
-- Other (open response)
+- Я планирую снова использовать Rust в будущем.
+- Я считаю себя частью сообщества Rust.
+- Специально, чтобы высказать причину, по которой перестал использовать Rust.
+- Чтобы оставить отзыв о Rust в целом.
+- Любопытство.
+- Другое (свободный ответ)
 
 > **justification**
 >
@@ -47,17 +47,17 @@ Type: select all that apply (optional)
 >
 > Skip to `## Your opinions about Rust` section
 
-## For non-Rust users
+## Для неиспользующих Rust
 
-### As you have indicated that you have not used Rust, what prompted you to participate in this survey?
+### Так как вы указали, что вы ни разу не использовали Rust, что побудило вас на участие в опросе?
 
 Type: select all that apply (optional)
 
-- I plan to use Rust in the future.
-- I consider myself part of the Rust Community.
-- Specifically to provide feedback on WHY I do not use Rust.
-- Curiosity.
-- Other (open response)
+- Я планирую использовать Rust в будущем.
+- Я считаю себя частью сообщества Rust.
+- Специально, чтобы высказать причину, по которой не использую Rust.
+- Любопытство.
+- Другое (свободный ответ)
 
 > **justification**
 >
@@ -67,16 +67,16 @@ Type: select all that apply (optional)
 >
 > Skip to `## Your opinions about Rust` section
 
-## Your Rust experience
+## Ваш опыт использования Rust
 
-### On average, how often do you use Rust?
+### В среднем, как часто вы используете Rust?
 
 Type: select one
 
-- Daily or nearly so
-- Weekly or nearly so
-- Monthly or nearly so
-- Rarely
+- Ежедневно или близко к этому
+- Еженедельно или близко к этому
+- Ежемесячно или близко к этому
+- Редко
 
 > **justification**
 >
@@ -88,15 +88,15 @@ Type: select one
 > those who program once a week but always in Rust and those who program daily but
 > use Rust once a week.
 
-### How would you rate your Rust expertise?
+### Как бы вы оценили своё знание Rust?
 
 Type: select one
 
-- I can't write or read Rust
-- I can write simple programs in Rust
-- I can write useful, production-ready code but it is a struggle
-- I am productive writing Rust
-- I'm an expert
+- Я не могу писать или читать код на Rust
+- Я могу писать простые приложения на Rust
+- Я могу писать полезный, готовый к работе код, но испытываю трудности
+- Я успешно пишу на Rust
+- Я эксперт
 
 > **justification**
 >
@@ -107,19 +107,20 @@ Type: select one
 > between answers actually mean.
 
 ### When did you learn to program in Rust?
+### Когда вы начали учиться программировать на Rust?
 
-**Note**: while you may continue to try to improve your Rust skills, for this question assume "learning to program in Rust"
-means spending the *majority* of your time with Rust consuming learning materials or coding *in order to learn* (as opposed to achieving
-some other goal). If your learning process spans several of the listed time periods, pick the one where you felt you learned *the most*.
+**Примечание**: в то время, как вы можете продолжать улучшать свои навыки владения Rust, ответ на этот вопрос предполагает под "учёбой разработки на Rust"
+понимается трата *большей части* вашего времени на Rust, используя учебные материалы или программируя *в целях учёбы* (в отличие от достижения какой-либо
+другой цели). Елси ваш процесс учёбы распространяется на несколько указанных промежутов, укажите тот, во время которого вы усвоили *больше всего*.
 
 Type: select one (optional)
 
-- I'm still *actively* trying to learn Rust
-- During 2021
-- During 2019 or 2020
-- During 2017 or 2018
-- During 2015 or 2016
-- During 2014 or before
+- Я всё ещё *активно* пытаюсь учить Rust
+- В 2021
+- В 2019 или 2020
+- В 2017 или 2018
+- В 2015 или 2016
+- В 2014 или ранее
 
 > **justification**
 >
@@ -132,10 +133,10 @@ Type: select one (optional)
 > It's also helpful to be more specific than an edition, and it's fairly easy to know which edition someone likely used based on the year they
 > learned Rust.
 
-### Which operating systems do you use regularly for Rust *development*?
+### Какую операционную систему вы регулярно используете для *разработки* на Rust?
 
-Note: this is specifically about which systems you use for development *not* all the 
-systems you target.
+Примечание: этот вопрос о том, какую операционную систему вы используете для разработки,
+а не те, на которых предполагается использование приложений.
 
 Type: select all that apply (optional)
 
@@ -143,7 +144,7 @@ Type: select all that apply (optional)
 - Windows
 - Windows Subsystem for Linux
 - Mac OS
-- Other (open response)
+- Другое (свободный ответ)
 
 > **justification**
 >
@@ -159,7 +160,7 @@ Type: select all that apply (optional)
 
 ### On the primary machine you compile Rust code on, how many CPUs are there?
 
-Please count *logical* CPUs here, not cores or sockets. You can get this number by running the following commands from the command line:
+Пожалуйста, укажите количество *логических* ядер процессора вместо физических или сокетов. Вы моежете получить это число, выполнив одну из приведённых ниже команд в командной строке:
 
 - Linux: `nproc`
 - macOS: `sysctl -n hw.ncpu`
@@ -177,23 +178,23 @@ Type: free form (number, optional)
 > - It'll help with prioritization around whether to make something go faster by throwing more CPUs at it or by optimizing on the same number of CPUs.
 > - It'll help avoid assumptions that rust developers might otherwise make about how universal the caliber of hardware they have is.
 
-### Which operating systems or runtimes do you develop Rust software for?
+### Для каких операционных систем или сред вы разрабатываете программное обеспечение на Rust?
 
 Note: this is specifically about which operating system or runtime you **target** not which system you use
 for development nor which specific architectures (e.g., x86 vs ARM) you target.
 
 Type: select all that apply (optional)
 
-- Linux (desktop or server)
+- Linux (настольный или серверный)
 - Windows
 - Mac OS
 - iOS
 - Android
-- Embedded platforms (with an operating system)
-- Embedded platforms (bare metal)
+- Embedded platforms (с операционной системой)
+- Embedded platforms (без операционной системы)
 - WebAssembly
-- Explicitly platform-independent (e.g., a library which does not interact with the operating system)
-- Other (open response)
+- Без явной зависимости к какой-либо платформе (например, не использующая функции операционной системы библиотека)
+- Другое (свободный ответ)
 
 > **justification**
 >
@@ -210,16 +211,16 @@ Type: select all that apply (optional)
 
 Type: select all that apply (optional)
 
-- Current stable version
-- Previous stable version
-- A specific version of stable Rust equal to or newer than 1.47
-- A specific version of stable Rust older than 1.47
-- Beta release
-- Latest nightly
-- A specific version of nightly
-- Custom fork
-- I don't know
-- Other (open response)
+- Текущая стабильная версия
+- Предыдущая стаблиьная версия
+- Стабильная верся Rust 1.47 или новее
+- Стабильная версия Rust старше 1.47
+- Бета версия
+- Последняя ночная версия
+- Определённая ночная версия
+- Пользовательская версия
+- Я не знаю
+- Другое (свободный ответ)
 
 > **justification**
 >
@@ -229,7 +230,7 @@ Type: select all that apply (optional)
 > version that was released ~1 year prior. Additionally, at the time of this writing
 > all major Linux distros have a version equal to or newer than this version.
 
-### Which version(s) of Rust do you use in automated testing (e.g., CI)?
+### Какие версии Rust вы используете для автоматизированного тестирования (например, CI)?
 
 Type: select all that apply (optional)
 
@@ -239,41 +240,41 @@ REPEAT
 >
 > See the previous question.
 
-### If you use nightly, why?
+### Если используете ночную версию, почему?
 
 Type: select all that apply (optional)
 
-- I don't use nightly
-- Out of habit
-- For a particular language feature or set of language features I need
-- I like to have access too all the latest features
-- To help test the nightly version for bugs
-- For testing in CI
-- A crate dependency I use requires it
-- A tool I use requires it
-- Other (open response)
+- Я не использую ночную версию
+- Привычка
+- Для какой-то определённой или ряда используемых возможнойстей языка
+- Мне нравится иметь доступ ко всем последним новшествам
+- Для помощи в нахождении ошибок в ночной версии
+- Для тестирования в CI
+- Используемый мной пакет требует этого
+- Используемый мной инструмент требует этого
+- Другое (свободный ответ)
 
 > **justification**
 >
 > We'd like to know what are the common reasons people use nightly
 > so that we can better understand where testers are coming from.
 
-### If you use beta, why?
+### Если вы используете бета версию, почему?
 
 Type: select all that apply (optional)
 
-- I don't use beta
-- Out of habit
-- To adopt stabilized language features as early as possible
-- To help test the beta version for bugs
-- For testing in CI
-- Other (open response)
+- Я не использую бета версию
+- Привычка
+- Для помощи в стабилизации возможностей языка как можно раньше
+- Для помощи в нахождении ошибок в бета версии
+- Для тестирования в CI
+- Другое (свободный ответ)
 
 > **justification**
 >
 > Same justification as the question about nightly but for beta.
 
-### In which ways do you install Rust?
+### Каким образом вы устанавливаете Rust?
 
 Type: select all that apply (optional)
 
@@ -284,27 +285,27 @@ Type: select all that apply (optional)
 - Official rust-lang.org tarballs
 - Official Windows .msi installers
 - Official macOS .pkg installers
-- From source
-- Other (open response)
+- Из исходного кода
+- Другое (свободный ответ)
 
 > **justification**
 >
 > Since many of these sources are not under project control, it can be hard to know where
 > people are getting their Rust compiler from.
 
-### Which editor or IDE setup do you use with Rust code on a regular basis?
+### Какой редактор или IDE вы регулярно используете для работы с кодом на Rust?
 
 Type: select all that apply (optional)
 
 - VS Code
 - vi/vim/neovim
-- IntelliJ/CLion/other Jet Brains IDE
+- IntelliJ/CLion/иная Jet Brains IDE
 - Emacs
 - Sublime Text
 - Visual Studio
 - Xcode
 - Atom
-- Other (open response)
+- Другое (свободный ответ)
 
 > **justification**
 >
@@ -318,7 +319,7 @@ Type: select all that apply (optional)
 > in a separate question, though this is likely easier to find out through download
 > numbers.
 
-### Which debuggers do you use for debugging Rust programs on a regular basis?
+### Какими отладчиками вы регулярно пользуетесь при отладке Rust приложений?
 
 Type: select all that apply (optional)
 
@@ -326,11 +327,11 @@ Type: select all that apply (optional)
 - LLDB
 - Visual Studio
 - WinDBG
-- VS Code (using any debugger extension)
+- VS Code (с любым расширением для отладки)
 - IntelliJ/CLion/other Jet Brains IDE
 - RR/Pernosco
-- 'println' debugging (or using any logging or tracing crate, etc.)
-- Other (open response)
+- 'println' отладка (или иное с использованием любого пакета логирования или трассировки)
+- Другое (свободный ответ)
 
 > **justification**
 >
@@ -342,11 +343,11 @@ Type: select all that apply (optional)
 > interpreting the answers and we will get an indication of user's perceptions of
 > their tools.
 
-### Please indicate how vital to your workflow each of the following tools are when programming with Rust:
+### Пожалуйста, укажите, насколько важен каждый из следующих инструментов при программировании на Rust для вашего рабочего процесса: 
 
 Type: matrix (optional)
 
-Tools:
+Инструменты:
 
 - clippy
 - cargo
@@ -357,12 +358,12 @@ Tools:
 - rustfmt/cargo fmt
 - bindgen
 
-Rating:
+Значимость:
 
-- Essential
-- Somewhat important
-- Not important
-- I have no experience with this tool
+- Основной
+- Важен в некоторой степени
+- Не важен
+- Нет опыта работы с этим инструментом
 
 > **justification**
 >
@@ -370,20 +371,20 @@ Rating:
 > certain subsections of the community is important. This can also help us understand how
 > popular certain tools are as well as how important lesser used tools are to their users.
 
-### In which of the following ways have you participated in the Rust community in the last 6 months:
+### Каким из перечисленных способов вы принимали участие в сообществе Rust за последние 6 месяцев:
 
-Note that the following forms of participation do not include code related activities (i.e., writing, reviewing, or discussing code). Such pariticpation is asked about in later questions.
+Обратите внимание, что перечисленные ниже пункты не включают деятельность, связанную с кодом (например, написание, рецензирование или обсуждение кода). Вопросы по активности, связанной с кодом, будут далее.
 
 Type: select all that apply (optional)
 
-- I have produced informational content about Rust (e.g., blogged, live streamed, made a YouTube video, presented at a conference/meetup, etc.).
-- On several occasions I have consumed informational content about Rust (e.g., blogs, live streams, YouTube videos, etc.).
-- On several occasions I have read *comments* about Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
-- On several occasions I have *commented* on Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
-- On several occasions I have read official Rust communication channels (e.g., This Week in Rust, the official Rust blog, the Rust Twitter account, etc.)
-- On several occasions I have participated in conversations about Rust on social media (Twitter, Facebook, LinkedIn, etc.)
-- I have participated in Rust community forums or chats (e.g., users.rust-lang.org, Rust Discord, a local Rust chat community, etc.)
-- I have attended a Rust meetup or conference (virtual or in-person).
+- Создавал информационный контент о Rust (например, блоги, прямые трансляции, видео на YouTube, презентации на конференциях/встречах, и так далее)
+- Иногда использовал информационный контент о Rust (например, блоги, прямые трансляции, видео на YouTube, презентации на конференциях/встречах, и так далее)
+- Иногда *читал* комментарии о Rust на "новостных" сайтах (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, и так далее)
+- Иногда *комментировал* о Rust на "новостных" сайтах (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, и так далее)
+- Иногда читал официальные каналы Rust (e.g., This Week in Rust, официальный блог Rust, аккуант Rust в Twitter, и так далее)
+- Иногда участвовал в обсуждениях на тему Rust в социальных сетях (Twitter, Facebook, LinkedIn, и так далее)
+- Участвовал на форумах сообщества Rust или чатах (например, users.rust-lang.org, Rust Discord, локальный чат Rust сообщества, и так далее)
+- Посещал встресу или конференцию, посвящённую Rust (виртуально или лично)
 
 > **justification**
 >
@@ -391,26 +392,26 @@ Type: select all that apply (optional)
 > particular we can use this information to do cohort analysis on highly "active"
 > community members in comparison to less active community members.
 
-### Roughly how often do you contribute to the Rust project?
+### Примерно как часто вы участвуете в проекте Rust?
 
-Activities:
+Активности:
 
-- Comment on, contribute to discussion of, or provide edits to an open RFC
-- Create a new thread or comment on internals.rust-lang.org
-- Discuss the Rust project in an official chat (either Zulip or Discord)
-- Open an issue on any repo in the rust-lang GitHub org
-- Contribute code changes (including tests) to the Rust compiler (rust-lang/rust)
-- Contribute code changes (including tests) to any other project in the rust-lang GitHub org
-- Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub org.
+- Комментирование, участие в обсуждениях или внесение правок в открыте RFC
+- Создание новых тем или комментирование на internals.rust-lang.org
+- Обсуждение проекта Rust в официальном чате (на Zulip или Discord)
+- Открытие вопросов в любом из репозиториев организации rust-lang на GitHub
+- Внесение изменений в код (включая тесты) компилятора Rust (rust-lang/rust)
+- Внесение изменений в код (включая тесты) любого из проектов внутри организации rust-lang на GitHub
+- Внесение не связанных с кодом изменений (документирование, коментирование, прочее) в любой проект внутри организации rust-lang на GitHub
 
 Type: select one (optional)
 
-- More frequently than weekly
-- Weekly
-- Monthly
-- Less frequently than monthly
-- Never but have tried to
-- Never and have never tried to
+- Чаще одного раза в неделю
+- Еженедельно
+- Ежемесячно
+- Реже раза в месяц
+- Никогда не участвовал, но пытался
+- Никогда не участвовал и не пытался
 
 > **justification**
 >
@@ -545,7 +546,7 @@ Type: select one (optional)
 
 - Yes
 - No
-- I don't know
+- Я не знаю
 
 > This question assess hiring sentiment. Although there is intrinsic uncertainty, it is easy to answer and forward looking.
 > It will also be interesting to see what the demand for Rust skills from companies is over time.
@@ -580,7 +581,7 @@ Type: select all that apply (optional)
 - Simulation
 - Web application frontend
 - WebAssembly
-- Other (open response)
+- Другое (свободный ответ)
 
 > **justification**
 >
@@ -621,7 +622,7 @@ Statements:
 - We already know Rust so it's our default choice.
 - We find it easy to prototype with.
 - We must interact with existing Rust code.
-- Other (open response)
+- Другое (свободный ответ)
 
 Rating:
 
@@ -734,7 +735,7 @@ Type: select all that apply (optional)
 - Tools and documentation are not accessible enough (e.g., due to language or incompatibility with screen readers)
 - Project governance does not scale to match the size/requirements of the community
 - Developers/maintainers of the language are not properly supported
-- Other (open response)
+- Другое (свободный ответ)
 - I'm not worried
 
 > **justification**
@@ -897,7 +898,7 @@ Type: select all that apply (optional)
 - Religious beliefs
 - Trans
 - Woman or perceived as a woman
-- Other (open response)
+- Другое (свободный ответ)
 
 ### Do you feel your belonging to an underrepresented or marginalized group in technology makes it difficult for you to participate in the Rust community?
 
@@ -984,7 +985,7 @@ Type: select all that apply (optional)
 - Retail
 - Telecommunications
 - Transportation
-- Other (open response)
+- Другое (свободный ответ)
 - I'm not employed
 
 > **justification**
@@ -1021,7 +1022,7 @@ Type: select all that apply (optional)
 - Simulation
 - Web application frontend
 - WebAssembly
-- Other (open response)
+- Другое (свободный ответ)
 
 > **justification**
 >
@@ -1074,7 +1075,7 @@ Type: select one (optional)
 
 - *all UN member states*
 - *two observer states (Vatican City and Palestine)*
-- Other (open response)
+- Другое (свободный ответ)
 
 > **justification**
 >
@@ -1096,27 +1097,27 @@ Type: select all that apply (optional)
 > We want to understand self reported feeling of comfort and capability of communication
 > of English since a large portion of the Rust community is and likely will always be in English.
 
-### What is/are your **preferred** language(s) for technical communication?
+### Какие языки вы предпочитаете для технического общения? 
 
-**IMPORTANT**: Your answer should reflect your **preference** and **not** what you are capable of communicating in. For example, if you feel comfortable and capable of consuming technical communication in both English and Korean, but you always prefer Korean, you should *only* answer Korean as that is your preference.
+**ВАЖНО**: Ваш ответ должен отражать ваши **предпочтения**, а **не** языки, которыми вы владеете. Например, если вам комфортно и способны вести диалог на технические темы на английскои и корейском, но всегда предпочитаете корейский, вы должны указать *только* корейский, так как он является предпочтительным.
 
 Type: select all that apply (optional)
 
-- Chinese
-- Spanish
-- English
-- Hindi
-- Bengali
-- Portuguese
-- Russian
-- Japanese
-- Turkish
-- Korean
-- French
-- German
-- Vietnamese
-- Urdu
-- Other (open response)
+- Китайский
+- Испанский
+- Английский
+- Хниди
+- Бенгальский
+- Португальский
+- Русский
+- Японский
+- Турецкий
+- Корейский
+- Французский
+- Немецкий
+- Вьетнамский
+- Урду
+- Другое (свободный ответ)
 
 > **justification**
 >
@@ -1125,11 +1126,11 @@ Type: select all that apply (optional)
 > The languages selected are based on all national languages that are members of
 > the top 20 most spoken languages in the world.
 
-## Anything else?
+## Что-либо ещё?
 
-### Anything else you'd like to tell us?
+### Желаете ли вы сказать нам что-либо ещё?
 
-Free form (optional)
+Свободная форма (опциоанльно)
 
 > **justification**
 >
