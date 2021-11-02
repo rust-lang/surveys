@@ -134,7 +134,7 @@ Type: select one (optional)
 
 ### Which operating systems do you use regularly for Rust *development*?
 
-Note: this is specifically about which systems you use for development *not* all the 
+**Note**: this is specifically about which systems you use for development *not* all the 
 systems you target.
 
 Type: select all that apply (optional)
@@ -179,7 +179,7 @@ Type: free form (number, optional)
 
 ### Which operating systems or runtimes do you develop Rust software for?
 
-Note: this is specifically about which operating system or runtime you **target** not which system you use
+**Note**: this is specifically about which operating system or runtime you **target** not which system you use
 for development nor which specific architectures (e.g., x86 vs ARM) you target.
 
 Type: select all that apply (optional)
@@ -521,7 +521,7 @@ Type: select one
 
 ### Approximately how many total developers does your company employ?
 
-Note: don't worry about being exact here! Go with you gut.
+**Note**: don't worry about being exact here! Go with you gut.
 
 Type: select one (optional)
 
