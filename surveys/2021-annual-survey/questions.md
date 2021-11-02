@@ -401,7 +401,7 @@ Activities:
 - Open an issue on any repo in the rust-lang GitHub org
 - Contribute code changes (including tests) to the Rust compiler (rust-lang/rust)
 - Contribute code changes (including tests) to any other project in the rust-lang GitHub org
-- Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub org.
+- Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub org
 
 Type: select one (optional)
 
