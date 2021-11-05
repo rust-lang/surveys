@@ -418,56 +418,56 @@ Type: select one (optional)
 > We want to understand the nature of contribution to the Rust project both
 > to better understand the shape of community involvement and for cohort analysis.
 
-### How often have you felt explicitly welcome in the Rust community?
+### Как часто вы чувствовали приветливое отношение к себе в сообществе Rust?
 
 Type: matrix
 
-Activities:
+Вид деятельности:
 
-- *Official* Rust community forums or chats (users.rust-lang.org, internals.rust-lang.org, the official Rust Discord, or the Rust Zulip)
-- *Unofficial* Rust community forums or chats (e.g., reddit.com/r/rust, Hacker News, the Rust *Community* Discord, etc.)
-- Attending a Rust conference
-- Attending a Rust meetup or local community event
-- Discussion (issues, pull requests, etc.) on a repository *inside* the rust-lang GitHub organization
-- Discussion (issues, pull requests, etc.) on a repository *outside* of the rust-lang GitHub organization
+- *Официальные* форумы и чаты сообщества Rust (users.rust-lang.org, internals.rust-lang.org, официальный сервер Rust Discord или Rust Zulip)
+- *Неофициальные* форумы и чаты сообщества Rust (e.g., reddit.com/r/rust, Hacker News, Rust *Community* Discord, прочее)
+- Участие в конференции, посвящённой Rust
+- Участие на встрече или локальном событии, посвящённом Rust
+- Обсуждение (проблема, пул реквест, прочее) в репозитории *внутри* rust-lang организации на GitHub
+- Обсуждение (проблема, пул реквест, прочее) в репозитории *вне* rust-lang организации на GitHub
 
-Choices:
+Варианты:
 
-- I've *often* felt welcome
-- I *sometimes* feel welcome
-- I *never* feel welcome
-- I've never participated in this activity
+- *Часто* испытывал приветливое отношение
+- *Иногда* испытывал приветливое отношение
+- *Никогда* не испытывал приветливого отношения
+- Никогда не участвовал в данной деятельности
 
 > **justification**
 >
 > We'd like to know where people are feeling welcome and the degree to which they are feeling welcome.
 
-### How often have you felt *un*welcome in the Rust community?
+### Как часто вы чувствовали *не*приветливое отношение к себе в сообществе Rust?
 
 Type: matrix (optional)
 
-Activities:
+Вид деятельности:
 
-- *Official* Rust community forums or chats (users.rust-lang.org, internals.rust-lang.org, the official Rust Discord, or the Rust Zulip)
-- *Unofficial* Rust community forums or chats (e.g., reddit.com/r/rust, Hacker News, the Rust *Community* Discord, etc.)
-- Attending a Rust conference
-- Attending a Rust meetup or local community event
-- Discussion (issues, pull requests, etc.) on a repository *inside* the rust-lang GitHub organization
-- Discussion (issues, pull requests, etc.) on a repository *outside* of the rust-lang GitHub organization
+- *Официальные* форумы и чаты сообщества Rust (users.rust-lang.org, internals.rust-lang.org, официальный сервер Rust Discord или Rust Zulip)
+- *Неофициальные* форумы и чаты сообщества Rust (e.g., reddit.com/r/rust, Hacker News, Rust *Community* Discord, прочее)
+- Участие в конференции, посвящённой Rust
+- Участие на встрече или локальном событии, посвящённом Rust
+- Обсуждение (проблема, пул реквест, прочее) в репозитории *внутри* rust-lang организации на GitHub
+- Обсуждение (проблема, пул реквест, прочее) в репозитории *вне* rust-lang организации на GitHub
 
-Choices:
+Варианты:
 
-- I've *often* felt unwelcome
-- I *sometimes* feel unwelcome
-- I *never* feel unwelcome
-- I've never participated in this activity
+- *Часто* испытывал неприветливое отношение
+- *Иногда* испытывал неприветливое отношение
+- *Никогда* не испытывал неприветливого отношения
+- Никогда не участвовал в данной деятельности
 
 > **justification**
 >
 > We'd like to know where people are feeling unwelcome and the degree to which they are feeling unwelcome. This can 
 > help us better understand the free from responses that will come in the next question.
 
-### If you indicated that you did not feel welcome in the Rust community, are there any details about your experience that you would like to share with us?
+### Если вы указали, что не чувствуете приветливого отношения в сообществе Rust, можете ли вы поделиться подробностями?
 
 Type: free form (optional)
 
@@ -476,24 +476,24 @@ Type: free form (optional)
 > More detail on the type of situations where people have felt unwelcome can let us better 
 > address these issues in the future.
 
-### Which of the following activities do you find helpful or effective for learning Rust or improving your Rust skills?
+### Какие из перечисленных ниже видов деятельсности вы считаете наиболее эффективными при изучении или улучшении навыков владения Rust?
 
 Type: matrix (optional)
 
-Activities:
+Виды деятельности:
 
-- Reading books or other written material geared towards learning Rust
-- Watching videos, streams, etc. geared towards learning Rust
-- Attending an organized training session or course (in person or virtual)
-- Doing Rust coding exercises or challenges created to help learn Rust
-- Building a non-trivial project in Rust or contributing to an open source project
+- Чтение книг или других письменных материалов, направленных на изучение Rust
+- Просмотр видео, трансляций или прочего, направленных на изучение Rust
+- Участие на тренинге или курсе (лично или виртульно)
+- Выполнение упражнений по программированию на Rust или задач, созданных для изучения Rust
+- Создание нетривиальных проектов на Rust или участие в проекте с открытым исходным кодом
 
-Choices:
+Варианты:
 
-- Very helpful
-- Somewhat helpful
-- Not helpful
-- I have no experience with this activity
+- Очень эффективный
+- В некоторой степени эфеективный
+- Неэффективный
+- Не занимался данным видом деятельности
 
 > **justification**
 >
@@ -501,9 +501,9 @@ Choices:
 > combined with some cohort analysis can tell us about how particular subsections
 > of the community prefer to learn.
 
-## Rust at work
+## Rust на работе
 
-### To what extent is Rust currently being used by your company?
+### В какой степени Rust используется в вашей компании?
 
 Type: select one
 
@@ -520,19 +520,19 @@ Type: select one
 >
 > We want to establish how reliant companies are on Rust.
 
-### Approximately how many total developers does your company employ?
+### Cколько примерно разработчиков в вашей компании?
 
-Note: don't worry about being exact here! Go with you gut.
+Примечание: не беспокойтесь о том, чтобы быть точным здесь! Следуйте интуиции.
 
 Type: select one (optional)
 
-- Under 10
+- Менее 10
 - 11-49
 - 50-99
 - 100-500
 - 500-1,000
 - 1,000-10,000
-- Over 10,000
+- Более 10,000
 
 > This question is not that interesting on its own, but it can be used as a sort of co-hort for understanding how answers 
 > change depending on the size of the development effort at a company.
@@ -540,46 +540,46 @@ Type: select one (optional)
 > Previously this question used "employees" instead of "developers". It is more appropriate for us to ask about the amount
 > of developers at a company vs. the amount of people employed in total.
 
-### Is your company planning on hiring Rust developers in the next year?
+### Планирует ли ваша компания нанимать Rust разработчиков в следующем году?
 
 Type: select one (optional)
 
-- Yes
-- No
+- Да
+- Нет
 - Я не знаю
 
 > This question assess hiring sentiment. Although there is intrinsic uncertainty, it is easy to answer and forward looking.
 > It will also be interesting to see what the demand for Rust skills from companies is over time.
 
-### In what technology domain(s) is Rust used at your company?
+### В каких технологий областях Rust используется в вашей компании?
 
-If you've previously answered that your company is not actively using Rust, you can leave this question blank.
+Если вы ранее ответили, что ваша компания не испольует активно Rust, вы можете не отвечать на данный вопрос.
 
 Type: select all that apply (optional)
 
-- Audio programming
-- Blockchain
-- Cloud computing applications
-- Cloud computing infrastructure or utilities
-- Computer graphics
-- Data science
-- Desktop computer application frontend
-- Desktop computer or mobile phone libraries or services
-- Distributed systems
-- Embedded devices (with operating systems)
-- Embedded devices (bare metal)
-- HPC (High-performance [Super]Computing)
-- IoT (Internet of Things)
-- Machine learning
-- Mobile phone application frontend
-- Computer networking
-- Programming languages and related tools (including compilers, IDEs, standard libraries, etc.)
-- Robotics
-- Computer security
-- Scientific and/or numeric computing
-- Server-side or "backend" application
-- Simulation
-- Web application frontend
+- Аудио программирование
+- Блокчейн
+- Приложения для облачных вычислений
+- Инфраструктура облачных вычисление или утилиты
+- Компьютерная графика
+- Наука о данных
+- Интерфейс приложений для настольных компьютеров
+- Сервисы и библиотеки для мобильных или настольных приложений
+- Распределённые системы
+- Встроенные устройства (с операционной системой)
+- Встроенные устройства (без операционной системы)
+- HPC (Высокопроизводительные вычисления)
+- IoT (Интернет вещей)
+- Машинное обучение
+- Интерфейс мобильных приложений
+- Компьютеная сеть
+- Языки программирования и относящиеся к ним инструменты (включая компляторы, IDE, стандартные библиотеки, прочее)
+- Робототехника
+- Компьютерная безопасность
+- Научные и/или числовые вычисления
+- Серверные или "бэкенд" приложения
+- Симуляция
+- Фронтенд веб-приложения
 - WebAssembly
 - Другое (свободный ответ)
 
@@ -592,14 +592,14 @@ Type: select all that apply (optional)
 > We want to understand the "shape" of Rust usage, and this question tries to get at that
 > by allowing the respondent to select multiple answers.
 
-### Are you using Rust at work?
+### Используете ли вы Rust на работе?
 
 Type: select one
 
-- Yes, for the majority of my coding
-- Yes, it's one of a number of languages I use and I use it regularly
-- Yes, but I only use it occasionally
-- No [`NEXT`](#rust-in-education)
+- Да, в большинстве случаев
+- Да, это один из языков программирования, который я регулярно использую
+- Да, но использую изредка
+- Нет [`NEXT`](#rust-in-education)
 
 > **justification**
 >
@@ -607,30 +607,29 @@ Type: select one
 > are using Rust in a professional setting. This is most interesting over time.
 > Answers to this question should be combined with whether the respondent has ever used Rust.
 
-
-### Rate how much the following statements are reasons which your team uses Rust at work.
+### Оцените, в какой мере следующие утверждения являются причинами, по которым ваша команда использует Rust на работе.
 
 Type: matrix (optional)
 
-Statements:
+Утверждения:
 
-- For its performance (i.e., speed, memory footprint, etc.) characteristics.
-- We need *precise control* over exactly how our software runs.
-- Its security and safety properties are important to us.
-- It allows us to build relatively correct and bug free software.
-- We find it enjoyable or fun to program in Rust.
-- We already know Rust so it's our default choice.
-- We find it easy to prototype with.
-- We must interact with existing Rust code.
+- Из-за его производительности (например, скорость, используемая память, прочее).
+- Нам нужен *полный контроль* над тем, как работает наше программное обеспечение.
+- Нам важна его безопасность.
+- Он позволяет нам создавать относительно правильное и свободное от ошибок программное обеспечение.
+- Нам нравится программировать на Rust.
+- Мы уже знаем Rust, так что это наш выбор по умолчанию.
+- Мы находим его простым для протипирования.
+- Мы должны взаимодействовать с уже существующим кодом на Rust.
 - Другое (свободный ответ)
 
-Rating:
+Оценка:
 
-- Strongly agree
-- Agree
-- Neither agree nor disagree
-- Disagree
-- Strongly disagree
+- Полностью согласен
+- Согласен
+- Ни согласен и ни не согласен
+- Не согласен
+- Категорическ не согласен
 
 > **justification**
 >
@@ -641,25 +640,25 @@ Rating:
 
 Type: matrix (optional)
 
-Statements:
+Утверждения:
 
-- Using Rust has helped us achieve our goals
-- Adopting Rust has been challenging
-- Overall, adopting Rust has slowed down our team
-- Using Rust has been worth the cost of adoption
-- We're likely to use Rust again in the future
+- Использование Rust помогло нам достичь наших целей
+- Переход на Rust был сложным
+- В целом переход на Rust замедлил нашу команду
+- Переход на Rust был оправдан
+- Мы скорее всего продолжим использовать Rust в будущем
 
-Rating:
+Оценка:
 
-- Agree
-- Neither agree nor disagree
-- Disagree
+- Согласен
+- Ни согласен и ни не согласен
+- Не согласен
 
 > **justification**
 >
 > Future potential adopters may want to know how often other's have encountered success.
 
-### What about your usage of Rust has been challenging?
+### Что является сложным при использовании Rust?
 
 Type: free form (optional)
 
@@ -667,86 +666,86 @@ Type: free form (optional)
 >
 > This an opportunity to learn from adopters at companies what they struggle with when adopting Rust.
 
-## Rust in Education
+## Rust в образовании
 
-### Have you taken in the past year or are you currently taking a course or training which uses or teaches Rust?
+### Проходили ли вы в прошлом году или проходите сейчас курс или тренинг, в котором используется или преподается Rust?
 
 Type: select one
 
-- Yes
-- No [`NEXT`](#your-opinions-about-rust)
+- Да
+- Нет [`NEXT`](#your-opinions-about-rust)
 
 > **justification**
 >
 > This question is primarily used to funnel respondents into the more specific questions about the kinds of educational activities they've been a part of.
 
-### Where is/was the course or activity taught?
+### Где проходил/проходит курс или учебное мероприятие?
 
 Type: select one (optional)
 
-- University or other tertiary institute
-- High school or secondary school
-- A course through an *online* "continuing education" provider (e.g., Udemy, Coursera, edX, LinkedIn Learning, etc.)
-- A bootcamp or other vocational-focused educational institute
-- A short training course offered through your employer or contracted by your employer
+- Университет или другое высшее учебное заведение
+- Средние или старшие классы школы
+- Курс от *онлайн* провайдера "непрерываного образования" (напимер, Udemy, Coursera, edX, LinkedIn Learning, прочее)
+- Учебный лагерь или другое профессионально-техническое учебное заведение
+- Краткий учебный курс, организованный вашим работодателем лично или по найму
 
 > **justification**
 >
 > We want to know where Rust is being taught.
 
-### Which best describes your course or activity?
+### Что лучше всего описывает ваш курс или учебную деятельность?
 
 Type: select one (optional)
 
-- A course teaching exclusively how to program in Rust
-- A course teaching how to program in Rust and other languages
-- A computer science course (e.g., operating systems, algorithms, etc.) course which uses Rust (and potentially other languages)
-- Other type of course where Rust was used
+- Курс обучает только программированию на Rust
+- Курс обучает программированию на Rust и других языках
+- Курс информатики (например, операционные системы, алгоритмы, прочее), который включает использование Rust (и возможно других языков программирования)
+- Другие виды обучения, где используется Rust
 
 > **justification**
 >
 > We want to know how Rust is being taught.
 
-### Is/was Rust mandated for your course or activity, or did you choose it yourself?
+### Являлся ли Rust обязательным в рамках вашего обучения или вы его выбрали самостояетльно?
 
 Type: select one (optional)
 
-- Rust was mandated
-- I chose to use Rust
+- Rust является обязательным
+- Я выбрал Rust
 
 > **justification**
 >
 > Together with the above question, we want to know how Rust is being taught.
 
-## Your opinions about Rust
+## Ваше мнение о Rust
 
-### What are your biggest worries for the future of Rust?
+### Что вас больше всего беспокоит в будущем Rust?
 
 Type: select all that apply (optional)
 
-- Not enough usage in industry
-- Too much interest from big companies
-- Not enough open source contributions to the ecosystem
-- Doesn't add a specific feature I want
-- Rust doesn't evolve quickly enough
-- Instability of the language
-- Superseded by an alternative
-- Becomes too complex
-- Tools and documentation are not accessible enough (e.g., due to language or incompatibility with screen readers)
-- Project governance does not scale to match the size/requirements of the community
-- Developers/maintainers of the language are not properly supported
+- Недостаточно использование в индустрии
+- Слишком большой интерес со стороны крупных компаний
+- Недостаточное количество открытого исходного кода в экосистему
+- Не имеет конкретной возможности, которая мне нужна
+- Rust не развивается достаточно быстро
+- Нестабильность языка
+- Замена альтернативой
+- Становится слишком сложным
+- Инструменты и документация не являются достаточно доступными (например, из-за использованного языка или несовместимости с программами чтения вслух)
+- Руководство проекта не масштабируется в соответствии с размером/требованиями сообщества
+- Разработчики языка не имеют поддержки в достаточной степени
 - Другое (свободный ответ)
-- I'm not worried
+- Я не обеспокоен
 
 > **justification**
 >
 > Would be useful for leadership to understand the community's fears.
 
-### Please rate your agreement with the following statements about Rust.
+### Пожалуйста, оцените степень вашего согласия со слледующими утверждениями о Rust.
 
 Type: matrix (optional)
 
-Statements:
+Утверждения:
 
 - Rust provides a real benefit over other programming languages
 - Rust is significantly more complicated to program in than other programming languages
@@ -756,11 +755,11 @@ Statements:
 - Rust makes me more productive
 - Rust is fun to use
 
-Rating:
+Оценка:
 
-- Agree
-- Neither agree nor disagree
-- Disagree
+- Согласен
+- Ни согласен и ни не согласен
+- Не согласен
 
 > **justification**
 >
@@ -772,72 +771,72 @@ Rating:
 
 Type: matrix (optional)
 
-Aspects:
+Аспекты:
 
-- Compile times
-- Binary size
-- Memory usage (i.e., how much RAM rustc uses when compiling)
-- Disk space usage (e.g., the size of `target` folder)
-- Bugs in the compiler (i.e., ICEs a.k.a. internal compiler errors, miscompilations, etc.)
-- Compiler error messages
-- IDE experience
-- Debugging experience
-- Available tools and support
-- Async programming
-- GUI development
-- Rust language and standard library documentation
+- Время компиляции
+- Размер приложения
+- Использование (то есть, сколько оперативной памяти rustc использует во время компиляции)
+- Использование дискового пространства (например, размер директории `target`)
+- Ошибки копилятора (то есть, ICE или внутренние ошибки компилятора, неправильная компиляция, прочеее)
+- Сообщение об ошибках компиляции
+- Удобство использование IDE
+- Удобство отладки
+- Имеющиеся интсрументы
+- Асинхронное программирование
+- Разработка графического интерфейса
+- Документация языка Rust и стандартной библиотеки
 
-Options:
+Варианты ответа:
 
-- Great
-- Good enough
-- Could be better
-- Seriously lacking
-- Unsure
+- Хорошо
+- Достаточно хорошо
+- Может быть лучше
+- Очень не хватает
+- Не уверен
 
 > **justification**
 >
 > This question gathers data on the communities perceptions of certain aspects of Rust at this point in time.
 
-### In your opinion, have the following aspects of Rust gotten better or worse over the past year?
+### По вашему мнению, стали ли следующие аспекты Rust лучше или хуже за прошедгий год?
 
 Type: matrix (optional)
 
-Aspects:
+Аспекты:
 
 REPEAT
 
-Options:
+Варианты ответа:
 
-- Much better
-- Better  
-- Remained the same  
-- Worse
-- Much Worse
-- Unsure
+- Намного лучше
+- Лучше  
+- Без изменений  
+- Хуже
+- Намного хуже
+- Не уверен
 
 > **justification**
 >
 > This question gathers data on the communities perceptions of certain aspects of Rust over the last year.
 
-### Do you agree with the following statements on Rust stability?
+### Согласны ли вы сос следующими утверждениями о стабильности Rust?
 
 Type: matrix (optional)
 
-Statements:
+Утверждения:
 
-- I can upgrade the *stable* compiler version without fear of my code failing to compile.
-- I can upgrade the *nightly* compiler version without fear of my code failing to compile.
-- I can upgrade the *stable* compiler version without fear of my code taking longer to compile.
-- I can upgrade the *nightly* compiler version without fear of my code taking longer to compile.
-- Upgrading to a new *stable* compiler version requires either no changes or extremely small & easy changes to my code.
-- Upgrading to a new *nightly* compiler version requires either no changes or extremely small & easy changes to my code.
+- Я могу обновить *стабильную* версию компилятора, не опасаясь, что мой код перестанет компилироваться
+- Я могу обновить *ночную* версию компилятора, не опасаясь, что мой код перестанет компилироваться
+- Я могу обновить *стабильную* версию компилятора, не опасаясь, что мой код будет дольше компилироваться
+- I can upgrade the *ночную* версию компилятора, не опасаясь, что мой код будет дольше компилироваться
+- Обновление на новую *стабильную* стабильную версию компилятора не трубует изменений или требует маленьких и простых изменений моего кода
+- Upgrading to a new *ночную* стабильную версию компилятора не трубует изменений или требует маленьких и простых изменений моего кода
 
-Rating:
+Оценка:
 
-- Agree
-- Neither agree nor disagree
-- Disagree
+- Согласен
+- Ни согласен и ни не согласен
+- Не согласен
 
 > **justification**
 >
@@ -846,79 +845,79 @@ Rating:
 > in a new version of the compiler isn't breaking official stability guarantees but it can feel just as painful as an
 > actual breaking change.
 
-### Do you agree with the following statements on Rust employment?
+### Согласны ли вы со следующими утверждениями о трудоустройстве с Rust?
 
 Type: matrix (optional)
 
-Statements:
+Утверждения:
 
-- It is easy for qualified applicants to find jobs which use Rust for the majority of programming
-- Existing Rust jobs are attractive
-- Learning Rust provides me with skills that employers seek
-- I feel qualified to apply for at least some advertised Rust jobs
+- Квалифицированным кандидатам легко найти работу, которая использует Rust для большей части программирования
+- Существующие Rust вакансии привлекательны
+- Изучение Rust дает мне навыки, которые требуют работодатели
+- Я чувствую себя достаточно квалифицированным для подачи заявкок хотя бы на несколько разрекламированных Rust вакансий
 
-Rating:
+Оценка:
 
-- Agree
-- Neither agree nor disagree
-- Disagree
+- Согласен
+- Ни согласен и ни не согласен
+- Не согласен
 
 > **justification**
 >
 > The flip side of the question asking whether the respondent's company plans on hiring Rust developers, we
 > want to know how respondents feel the level of demand for and quality of Rust jobs are.
 
-## About you
+## О вас
 
-See [who](./design/who.md).
+Смотри, [кто использует Rust](./design/who.md).
 
-The following are primarily for cohort analysis, secondarily for understanding the shape of the community.
+Эта часть опроса предназначена в первую очередь для когортного анализа, а во вторую - для понимания состояния сообщества.
 
-For methodological purposes, the bulk of the demographics should be at the end of the survey (unless acting as filter/flow questions above)
-They're both easy to complete (beneficial at the end) and somewhat personal (but at this point folks are invested and we've built 'trust')
-Can also be problematic at start if we're asking all easy, personal questions and then get to the harder ones - easy to drop out.
+В методологических целях основная часть демографических вопросов находится в конце опроса (если только они не используются для фильтрации вопросов, идущих ранее).
+Вопросы являются достаточно лёгкими для ответа (и в конце концов, полезными) и отчасти личными (но на этом этапе люди уже вложились, и мы выстроили "доверие").
+Может быть проблематично в начале, если мы зададим все простые личные вопросы и затем перейдём к более сложным - легко бросить.
 
-### Do you consider yourself a member of an underrepresented or marginalized group in technology?
+### Считаете ли вы себя членом недостаточно представленной или маргинализованной группы в сфере технологий?
 
-Please share only what you are comfortable sharing. This will help us better serve underrepresented and marginalized groups, better understand how well our outreach efforts are going, and more.
+Пожалуйста, поделитесь только тем, чем вам хотелось бы. Это поможет нам лучше работать с мало представленными и маргинализированные группы, лучше понять, насколько хорошо мы продвинулись в данном направлении, и многое другое.
 
 Type: select all that apply (optional)
 
-- No [`NEXT`](#are-you-a-full--or-part-time-student)
-- Yes, but I prefer not to say which
-- Cultural beliefs
-- Disabled or person with disability (including physical, mental, and other)
-- Educational background
-- Language
-- Lesbian, gay, bisexual, queer or otherwise non-heterosexual
-- Non-binary gender
-- Older or younger than the average developers I know
-- Political beliefs
-- Racial or ethnic minority
-- Religious beliefs
-- Trans
-- Woman or perceived as a woman
+- Нет [`NEXT`](#are-you-a-full--or-part-time-student)
+- Да, но я предпочитаю не рзглашать
+- Культурные взгляды
+- Инвалид или лицо с ограниченными возможностями (в том числе физическими, умственными и другими)
+- Образование
+- Язык
+- Лесбиянка, гей, бисексуал, квир или иным образом негетеросексуальный
+- Небинарные пол
+- Старше или младше знакомых мне разработчиков
+- Политические взгляды
+- Расовое или этническое меньшинство
+- Религиозные взгляды
+- Транс
+- Женщина или осозднаю себя как женщина
 - Другое (свободный ответ)
 
-### Do you feel your belonging to an underrepresented or marginalized group in technology makes it difficult for you to participate in the Rust community?
+### Считаете ли вы, что принадлежность к слабо представленной или маргинализованной группе в сфере технологий мешает вам участвовать в сообществе Rust?
 
 Type: select one (optional)
 
-- Often
-- Sometimes
-- Never
+- Часто
+- Иногда
+- Никогда
 
-### Are you a full- or part-time student?
+### Вы студент дневной или заочной формы обучения?
 
 Type: select one
 
-- No
-- Yes, in secondary/high school
-- Yes, in a bachelor's/undergraduate program
-- Yes, in a master's program
-- Yes, in a doctorate program
-- Yes, in a vocational program
-- Yes, other
+- Нет
+- Да, в средних или старших классах школы
+- Да, в бакалавриате
+- Да, в магистратуре
+- Да, получаю докторскую степень
+- Да, участвую в профессиональной программе
+- Да, другое
 
 > **justification**
 >
@@ -926,31 +925,31 @@ Type: select one
 > understand how students at different points in their education view
 > topics related to Rust.
 
-### Are you employed full- or part-time (including paid internships)?
+### Работаете ли вы на условиях полной или неполной занятости (включая оплачиваемые стажировки)?
 
 Type: select one
 
-- Yes
-- No [`NEXT`](#excluding-rust-what-is-your-experience-with-other-kinds-of-programming-languages)
+- Да
+- Нет [`NEXT`](#excluding-rust-what-is-your-experience-with-other-kinds-of-programming-languages)
 
-### Do you write or design software in your work?
+### Заниматесь ли вы разработкой программного обеспечения на работе?
 
 Type: select one
 
-- Yes, primarily as an individual contributor (i.e., non-manager).
-- I primarily manage others who do.
-- No [`NEXT`](#excluding-rust-what-is-your-experience-with-other-kinds-of-programming-languages)
+- Да, в основном я занимаюсь разработкой (то есть, не занимаюсь управлением).
+- В основном я управляю теми, кто это делает.
+- Нет [`NEXT`](#excluding-rust-what-is-your-experience-with-other-kinds-of-programming-languages)
 
-### How long have you worked in software professionally?
+### Как долго вы занимаетесь разработкой приложений профессионально?
 
 Type: select one (optional)
 
-- <= 1 year
-- 1 - 3 years
-- 3 - 5 years
-- 5 - 10 years
-- 10 - 20 years
-- > 20 years
+- <= 1 года
+- 1 - 3 лет
+- 3 - 5 лет
+- 5 - 10 лет
+- 10 - 20 лет
+- > 20 лет
 
 > **justification**
 >
@@ -959,34 +958,34 @@ Type: select one (optional)
 >
 > The ranges of years chosen are a best attempt at capturing different "stages" in a person's professional career.
 
-### Which category best describes your current employer's industry?
+### Какая категория лучше всего описывает индустрию, в которой вы работаете?
 
 Type: select all that apply (optional)
 
-- Advertising
-- Aerospace
-- Automotive
-- Business software
-- Consumer software
-- Consulting
-- Computer hardware
-- Defense
-- Energy
-- Education/Academia
-- Entertainment or Media
-- Finance
-- Gaming
-- Government
-- Healthcare
-- Manufacturing
-- Music
-- Railway
-- Research & Development
-- Retail
-- Telecommunications
-- Transportation
+- Реклама
+- Аэрокосмическая промышленность
+- Автомобильная промышленность
+- Программное обеспечение для бизнеса
+- Программное обеспечение для пользователей
+- Консалтинг
+- Компьютерное оборудование
+- Оборона
+- Образование
+- Энергетика
+- Развлечения или СМИ
+- Финансы
+- Игры
+- Правительство
+- Медицина
+- Производство
+- Музыка
+- Железные дороги
+- Исследовательская деятельность
+- Тороговля
+- Телекоммуникации
+- Транспорт
 - Другое (свободный ответ)
-- I'm not employed
+- Я не работаю
 
 > **justification**
 >
@@ -994,33 +993,33 @@ Type: select all that apply (optional)
 > While it's impossible to be precise here, we want to get a general idea.
 > This list is largely adopted from this [Wikipedia article](https://en.wikipedia.org/wiki/Outline_of_industry).
 
-### Which categories best describes the tech domain(s) you currently write or design software in?
+### Какие категории лучше всего описывают техническую область, для которой вы на текущий момент разрабатываете программное обеспечение?
 
 Type: select all that apply (optional)
 
-- Audio programming
-- Blockchain
-- Cloud computing applications
-- Cloud computing infrastructure or utilities
-- Computer graphics
-- Data science
-- Desktop computer application frontend
-- Desktop computer or mobile phone libraries or services
-- Distributed systems
-- Embedded devices (with operating systems)
-- Embedded devices (bare metal)
-- HPC (High-performance [Super]Computing)
-- IoT (Internet of Things)
-- Machine learning
-- Mobile phone application frontend
-- Computer networking
-- Programming languages and related tools (including compilers, IDEs, standard libraries, etc.)
-- Robotics
-- Computer security
-- Scientific and/or numeric computing
-- Server-side or "backend" application
-- Simulation
-- Web application frontend
+- Аудио программирование
+- Блокчейн
+- Приложения для облачных вычислений
+- Инфраструктура облачных вычисление или утилиты
+- Компьютерная графика
+- Наука о данных
+- Интерфейс приложений для настольных компьютеров
+- Сервисы и библиотеки для мобильных или настольных приложений
+- Распределённые системы
+- Встроенные устройства (с операционной системой)
+- Встроенные устройства (без операционной системы)
+- HPC (Высокопроизводительные вычисления)
+- IoT (Интернет вещей)
+- Машинное обучение
+- Интерфейс мобильных приложений
+- Компьютеная сеть
+- Языки программирования и относящиеся к ним инструменты (включая компляторы, IDE, стандартные библиотеки, прочее)
+- Робототехника
+- Компьютерная безопасность
+- Научные и/или числовые вычисления
+- Серверные или "бэкенд" приложения
+- Симуляция
+- Фронтенд веб-приложения
 - WebAssembly
 - Другое (свободный ответ)
 
@@ -1032,26 +1031,26 @@ Type: select all that apply (optional)
 > answers their employer works in automotive but they are working on mobile phone applications and not 
 > embedded devices, we might conclude different things than if they are working on embedded devices.
 
-### Excluding Rust, what is your experience with other kinds of programming languages?
+### Исключая Rust, каков ваш опыт использования других языков программирования?
 
 Type: matrix (optional)
 
-Languages:
+Языки:
 
-- Assembly language (of any variety)
-- Languages with manual memory management (e.g., C, C++, Objective-C without ARC)
-- Statically typed object oriented languages with garbage collection (e.g., Java, C#, Go)
-- Statically typed functional programming languages (e.g., Haskell, ML)
-- Dynamically typed functional programming languages (e.g., Lisp, Clojure, Elixir)
-- Statically typed languages with newer expressive type systems (e.g., Swift, Kotlin, Scala)
-- Dynamically typed languages (e.g., Javascript, Ruby, Python, PHP, Perl)
+- Языки ассемблера (любой)
+- Языки с неавтоматическим управлением памятью (напимер, C, C++, Objective-C без ARC)
+- Статически типизированные объектно ориентированные языки со сборщиком мусора (наприме, Java, C#, Go)
+- Статически типизированные функциональные языки программирования (например, Haskell, ML)
+- Динамически типизированные функциональные языки программирования (например, Lisp, Clojure, Elixir)
+- Стаически типизированные языки программирования с новейшей выразительной системой типов (например, Swift, Kotlin, Scala)
+- Динамические типизированные языки (например, Javascript, Ruby, Python, PHP, Perl)
 
-Experience:
+Опыт:
 
-- I've never used nor am I familiar with any language in this category
-- I have a basic familiarity with at least one language in this category
-- I am comfortable using at least one language in this category
-- I am an expert in at least one language in this category
+- Я ни разу не использовал и не знаком ни с одним языком данной категории
+- Я имею базовые знания как минимум об одном из языков данной категории
+- Я уверенно использую как минимум один из языков данной категории
+- Я эксперт как минимум в одном языков данной категории
 
 > **justification**
 >
@@ -1059,22 +1058,22 @@ Experience:
 > respondents are familiar with. It is more illustrative which types of languages
 > respondents are familiar with than the specific language.
 
-### How long have you been programming (in any language, for any reason)?
+### Как давно вы занимаетесь программированием (на любом языке и по любой причине)?
 
 Type: select one (optional)
 
-- < 1 year
-- < 3 years
-- < 5 years
-- < 10 year
-- > 10 years
+- < 1 года
+- < 3 лет
+- < 5 лет
+- < 10 лет
+- > 10 лет
 
-### Where do you live?
+### Где вы живёте?
 
 Type: select one (optional)
 
-- *all UN member states*
-- *two observer states (Vatican City and Palestine)*
+- *государство-член ООН*
+- *государтсво-обозреватель (Ватикан или Палестина)*
 - Другое (свободный ответ)
 
 > **justification**
@@ -1082,15 +1081,17 @@ Type: select one (optional)
 > We'd like to get a geographic understanding of where the community is. The form of the question allows us to be fairly precise about this
 > though there will still be some challenges (e.g., someone who lives in East Russia has similar timezones to East Asia not West Russia).
 
-### In what ways are you comfortable communicating about technical topics in English?
+### Каким способом вам удобнее общаться на технические темы на английском языке?
 
 Type: select all that apply (optional)
 
-- I feel comfortable and capable of having a *spoken* technical conversation in English
-- I feel comfortable and capable of having a *written* technical conversation in English
-- I feel comfortable and capable of reading technical documentation in English
-- I feel comfortable and capable of consuming a technical talk (e.g., at a conference or meetup) in English
-- I feel comfortable and capable of consuming a written technical educational material (e.g., technical books, blog posts, etc.) in English
+- Я уверенно могу общаться на технические темы на английском *устно*
+- Я уверенно могу общаться на технические темы на английском *пиьсменно*
+- Я уверенно могу читать техническую документацию на английсокм
+- Я уверенно могу слушать разговор на техническую тему (например, на конференции или встрече) на английском
+- Я уверенно могу читать технические обучающие материалы (например, технические книги, блоги, прочее) на английском
+- Я уверенно могу слушать разговор на техническую тему (например, на конференции или встрече) на английском
+- Я уверенно могу читать учебные материалы на техническую тематику (например, технические книги, блоги, прочее) на английском
 
 > **justification**
 >
