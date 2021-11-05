@@ -873,8 +873,8 @@ See [who](./design/who.md).
 
 The following are primarily for cohort analysis, secondarily for understanding the shape of the community.
 
-For methodological purposes, the bulk of the demographics should be at the end of the survey (unless acting as filter/flow questions above)
-They're both easy to complete (beneficial at the end) and somewhat personal (but at this point folks are invested and we've built 'trust')
+For methodological purposes, the bulk of the demographics should be at the end of the survey (unless acting as filter/flow questions above).
+They're both easy to complete (beneficial at the end) and somewhat personal (but at this point folks are invested and we've built 'trust').
 Can also be problematic at start if we're asking all easy, personal questions and then get to the harder ones - easy to drop out.
 
 ### Do you consider yourself a member of an underrepresented or marginalized group in technology?
@@ -936,8 +936,8 @@ Type: select one
 
 Type: select one
 
-- Yes, primarily as an individual contributor (i.e., non-manager).
-- I primarily manage others who do.
+- Yes, primarily as an individual contributor (i.e., non-manager)
+- I primarily manage others who do
 - No [`NEXT`](#excluding-rust-what-is-your-experience-with-other-kinds-of-programming-languages)
 
 ### How long have you worked in software professionally?
