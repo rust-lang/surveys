@@ -398,10 +398,10 @@ Activities:
 - Comment on, contribute to discussion of, or provide edits to an open RFC
 - Create a new thread or comment on internals.rust-lang.org
 - Discuss the Rust project in an official chat (either Zulip or Discord)
-- Open an issue on any repo in the rust-lang GitHub org
+- Open an issue on any repo in the rust-lang GitHub organisation
 - Contribute code changes (including tests) to the Rust compiler (rust-lang/rust)
-- Contribute code changes (including tests) to any other project in the rust-lang GitHub org
-- Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub org
+- Contribute code changes (including tests) to any other project in the rust-lang GitHub organisation
+- Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub organisation
 
 Type: select one (optional)
 
