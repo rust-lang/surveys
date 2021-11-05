@@ -32,11 +32,11 @@ Type: select one
 
 Type: select all that apply (optional)
 
-- I plan to return to using Rust in the future.
-- I consider myself part of the Rust Community.
-- Specifically to provide feedback on why I stopped using Rust.
-- To provide feedback on Rust in general.
-- Curiosity.
+- I plan to return to using Rust in the future
+- I consider myself part of the Rust Community
+- Specifically to provide feedback on why I stopped using Rust
+- To provide feedback on Rust in general
+- Curiosity
 - Other (open response)
 
 > **justification**
@@ -53,10 +53,10 @@ Type: select all that apply (optional)
 
 Type: select all that apply (optional)
 
-- I plan to use Rust in the future.
-- I consider myself part of the Rust Community.
-- Specifically to provide feedback on WHY I do not use Rust.
-- Curiosity.
+- I plan to use Rust in the future
+- I consider myself part of the Rust Community
+- Specifically to provide feedback on WHY I do not use Rust
+- Curiosity
 - Other (open response)
 
 > **justification**
@@ -134,7 +134,7 @@ Type: select one (optional)
 
 ### Which operating systems do you use regularly for Rust *development*?
 
-Note: this is specifically about which systems you use for development *not* all the 
+**Note**: this is specifically about which systems you use for development *not* all the 
 systems you target.
 
 Type: select all that apply (optional)
@@ -179,7 +179,7 @@ Type: free form (number, optional)
 
 ### Which operating systems or runtimes do you develop Rust software for?
 
-Note: this is specifically about which operating system or runtime you **target** not which system you use
+**Note**: this is specifically about which operating system or runtime you **target** not which system you use
 for development nor which specific architectures (e.g., x86 vs ARM) you target.
 
 Type: select all that apply (optional)
@@ -376,8 +376,8 @@ Note that the following forms of participation do not include code related activ
 
 Type: select all that apply (optional)
 
-- I have produced informational content about Rust (e.g., blogged, live streamed, made a YouTube video, presented at a conference/meetup, etc.).
-- On several occasions I have consumed informational content about Rust (e.g., blogs, live streams, YouTube videos, etc.).
+- I have produced informational content about Rust (e.g., blogged, live streamed, made a YouTube video, presented at a conference/meetup, etc.)
+- On several occasions I have consumed informational content about Rust (e.g., blogs, live streams, YouTube videos, etc.)
 - On several occasions I have read *comments* about Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
 - On several occasions I have *commented* on Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
 - On several occasions I have read official Rust communication channels (e.g., This Week in Rust, the official Rust blog, the Rust Twitter account, etc.)
@@ -398,10 +398,10 @@ Activities:
 - Comment on, contribute to discussion of, or provide edits to an open RFC
 - Create a new thread or comment on internals.rust-lang.org
 - Discuss the Rust project in an official chat (either Zulip or Discord)
-- Open an issue on any repo in the rust-lang GitHub org
+- Open an issue on any repo in the rust-lang GitHub organization
 - Contribute code changes (including tests) to the Rust compiler (rust-lang/rust)
-- Contribute code changes (including tests) to any other project in the rust-lang GitHub org
-- Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub org.
+- Contribute code changes (including tests) to any other project in the rust-lang GitHub organization
+- Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub organization
 
 Type: select one (optional)
 
@@ -506,14 +506,14 @@ Choices:
 
 Type: select one
 
-- My company uses Rust for a large portion of production projects.
-- My company uses Rust for a small portion of production projects.
-- My company uses Rust only for non-production projects (e.g., tooling).
+- My company uses Rust for a large portion of production projects
+- My company uses Rust for a small portion of production projects
+- My company uses Rust only for non-production projects (e.g., tooling)
 - My company has actively experimented with Rust
-- My company has seriously considered, but not experimented with, using Rust.
-- My company has not seriously considered Rust for any use.
-- I am unsure whether my company has considered using or currently uses Rust.
-- I don't work for a company or my company does not develop software of any kind. [`NEXT`](#rust-in-education)
+- My company has seriously considered, but not experimented with, using Rust
+- My company has not seriously considered Rust for any use
+- I am unsure whether my company has considered using or currently uses Rust
+- I don't work for a company or my company does not develop software of any kind [`NEXT`](#rust-in-education)
 
 > **justification**
 >
@@ -521,7 +521,7 @@ Type: select one
 
 ### Approximately how many total developers does your company employ?
 
-Note: don't worry about being exact here! Go with you gut.
+**Note**: don't worry about being exact here! Go with you gut.
 
 Type: select one (optional)
 
@@ -613,14 +613,14 @@ Type: matrix (optional)
 
 Statements:
 
-- For its performance (i.e., speed, memory footprint, etc.) characteristics.
-- We need *precise control* over exactly how our software runs.
-- Its security and safety properties are important to us.
-- It allows us to build relatively correct and bug free software.
-- We find it enjoyable or fun to program in Rust.
-- We already know Rust so it's our default choice.
-- We find it easy to prototype with.
-- We must interact with existing Rust code.
+- For its performance (i.e., speed, memory footprint, etc.) characteristics
+- We need *precise control* over exactly how our software runs
+- Its security and safety properties are important to us
+- It allows us to build relatively correct and bug free software
+- We find it enjoyable or fun to program in Rust
+- We already know Rust so it's our default choice
+- We find it easy to prototype with
+- We must interact with existing Rust code
 - Other (open response)
 
 Rating:
@@ -750,7 +750,7 @@ Statements:
 - Rust provides a real benefit over other programming languages
 - Rust is significantly more complicated to program in than other programming languages
 - Rust requires significantly more effort to learn than other programming languages
-- Rust code tends to contain significantly *fewer* bugs than equivalent code written in another programming language would have.
+- Rust code tends to contain significantly *fewer* bugs than equivalent code written in another programming language would have
 - Rust is risky to use in production
 - Rust makes me more productive
 - Rust is fun to use
@@ -812,7 +812,7 @@ Options:
 - Better  
 - Remained the same  
 - Worse
-- Much Worse
+- Much worse
 - Unsure
 
 > **justification**
@@ -825,12 +825,12 @@ Type: matrix (optional)
 
 Statements:
 
-- I can upgrade the *stable* compiler version without fear of my code failing to compile.
-- I can upgrade the *nightly* compiler version without fear of my code failing to compile.
-- I can upgrade the *stable* compiler version without fear of my code taking longer to compile.
-- I can upgrade the *nightly* compiler version without fear of my code taking longer to compile.
-- Upgrading to a new *stable* compiler version requires either no changes or extremely small & easy changes to my code.
-- Upgrading to a new *nightly* compiler version requires either no changes or extremely small & easy changes to my code.
+- I can upgrade the *stable* compiler version without fear of my code failing to compile
+- I can upgrade the *nightly* compiler version without fear of my code failing to compile
+- I can upgrade the *stable* compiler version without fear of my code taking longer to compile
+- I can upgrade the *nightly* compiler version without fear of my code taking longer to compile
+- Upgrading to a new *stable* compiler version requires either no changes or extremely small & easy changes to my code
+- Upgrading to a new *nightly* compiler version requires either no changes or extremely small & easy changes to my code
 
 Rating:
 
@@ -873,8 +873,8 @@ See [who](./design/who.md).
 
 The following are primarily for cohort analysis, secondarily for understanding the shape of the community.
 
-For methodological purposes, the bulk of the demographics should be at the end of the survey (unless acting as filter/flow questions above)
-They're both easy to complete (beneficial at the end) and somewhat personal (but at this point folks are invested and we've built 'trust')
+For methodological purposes, the bulk of the demographics should be at the end of the survey (unless acting as filter/flow questions above).
+They're both easy to complete (beneficial at the end) and somewhat personal (but at this point folks are invested and we've built 'trust').
 Can also be problematic at start if we're asking all easy, personal questions and then get to the harder ones - easy to drop out.
 
 ### Do you consider yourself a member of an underrepresented or marginalized group in technology?
@@ -936,8 +936,8 @@ Type: select one
 
 Type: select one
 
-- Yes, primarily as an individual contributor (i.e., non-manager).
-- I primarily manage others who do.
+- Yes, primarily as an individual contributor (i.e., non-manager)
+- I primarily manage others who do
 - No [`NEXT`](#excluding-rust-what-is-your-experience-with-other-kinds-of-programming-languages)
 
 ### How long have you worked in software professionally?
