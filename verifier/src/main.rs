@@ -71,8 +71,30 @@ impl markdown::Question<'_> {
                     );
                 }
             }
-            (markdown::Answers::Matrix { .. }, _) => {
-                println!("Can't compare matrices yet");
+            (
+                markdown::Answers::Matrix {
+                    answers1, answers2, ..
+                },
+                api::Question::ChoiceTable { choice_table, .. },
+            ) => {
+                let mismatched_rows = choice_table.mismatched_rows(&answers1);
+                if !mismatched_rows.is_empty() {
+                    return Comparison::MatrixAnswersDiffer(
+                        mismatched_rows
+                            .into_iter()
+                            .map(|(s1, s2)| (s1.to_owned(), s2.to_owned()))
+                            .collect(),
+                    );
+                }
+                let mismatched_columns = choice_table.mismatched_columns(&answers2);
+                if !mismatched_columns.is_empty() {
+                    return Comparison::MatrixAnswersDiffer(
+                        mismatched_columns
+                            .into_iter()
+                            .map(|(s1, s2)| (s1.to_owned(), s2.to_owned()))
+                            .collect(),
+                    );
+                }
             }
             _ => {
                 return Comparison::QuestionTypesDiffer(
@@ -92,6 +114,7 @@ enum Comparison {
     TitlesDiffer(String, String),
     QuestionTypesDiffer(String, QuestionType, QuestionType),
     AnswersDiffer(Vec<(String, String)>),
+    MatrixAnswersDiffer(Vec<(String, String)>),
     Equal,
 }
 

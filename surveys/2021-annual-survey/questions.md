@@ -33,7 +33,7 @@ Type: select one
 Type: select all that apply (optional)
 
 - I plan to return to using Rust in the future
-- I consider myself part of the Rust Community
+- I consider myself a part of the Rust community
 - Specifically to provide feedback on why I stopped using Rust
 - To provide feedback on Rust in general
 - Curiosity
@@ -54,7 +54,7 @@ Type: select all that apply (optional)
 Type: select all that apply (optional)
 
 - I plan to use Rust in the future
-- I consider myself part of the Rust Community
+- I consider myself a part of the Rust community
 - Specifically to provide feedback on WHY I do not use Rust
 - Curiosity
 - Other (open response)
@@ -92,11 +92,11 @@ Type: select one
 
 Type: select one
 
-- I can't write or read Rust
+- I can't read or write Rust
 - I can write simple programs in Rust
 - I can write useful, production-ready code but it is a struggle
 - I am productive writing Rust
-- I'm an expert
+- I am an expert
 
 > **justification**
 >
@@ -132,7 +132,7 @@ Type: select one (optional)
 > It's also helpful to be more specific than an edition, and it's fairly easy to know which edition someone likely used based on the year they
 > learned Rust.
 
-### Which operating systems do you use regularly for Rust *development*?
+### Which operating systems do you use regularly for Rust development?
 
 **Note**: this is specifically about which systems you use for development *not* all the 
 systems you target.
@@ -378,12 +378,12 @@ Type: select all that apply (optional)
 
 - I have produced informational content about Rust (e.g., blogged, live streamed, made a YouTube video, presented at a conference/meetup, etc.)
 - On several occasions I have consumed informational content about Rust (e.g., blogs, live streams, YouTube videos, etc.)
-- On several occasions I have read *comments* about Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
-- On several occasions I have *commented* on Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
+- On several occasions I have read comments about Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
+- On several occasions I have commented on Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
 - On several occasions I have read official Rust communication channels (e.g., This Week in Rust, the official Rust blog, the Rust Twitter account, etc.)
 - On several occasions I have participated in conversations about Rust on social media (Twitter, Facebook, LinkedIn, etc.)
 - I have participated in Rust community forums or chats (e.g., users.rust-lang.org, Rust Discord, a local Rust chat community, etc.)
-- I have attended a Rust meetup or conference (virtual or in-person).
+- I have attended a Rust meetup or conference (virtual or in-person)
 
 > **justification**
 >
@@ -392,6 +392,8 @@ Type: select all that apply (optional)
 > community members in comparison to less active community members.
 
 ### Roughly how often do you contribute to the Rust project?
+
+Type: matrix (optional)
 
 Activities:
 
@@ -403,8 +405,7 @@ Activities:
 - Contribute code changes (including tests) to any other project in the rust-lang GitHub organization
 - Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub organization
 
-Type: select one (optional)
-
+Frequency:
 - More frequently than weekly
 - Weekly
 - Monthly
@@ -607,21 +608,20 @@ Type: select one
 > Answers to this question should be combined with whether the respondent has ever used Rust.
 
 
-### Rate how much the following statements are reasons which your team uses Rust at work.
+### Rate how much the following statements are reasons which your team uses Rust at work
 
 Type: matrix (optional)
 
 Statements:
 
 - For its performance (i.e., speed, memory footprint, etc.) characteristics
-- We need *precise control* over exactly how our software runs
+- We need precise control over exactly how our software runs
 - Its security and safety properties are important to us
 - It allows us to build relatively correct and bug free software
 - We find it enjoyable or fun to program in Rust
 - We already know Rust so it's our default choice
 - We find it easy to prototype with
 - We must interact with existing Rust code
-- Other (open response)
 
 Rating:
 
@@ -635,6 +635,14 @@ Rating:
 >
 > The Rust community and potential adopters of Rust have a lot of assumptions of why one would choose Rust for a project.
 > This question can help confirm or challenge our assumptions and see how they change over time.
+
+### Are there any additional reasons why your team uses Rust at work?
+
+Type: free form (optional)
+
+> **justification**
+>
+> Follow up to the question before to gain more insights.
 
 ### Please rate your agreement with the following statements regarding your team's experience using Rust at work.
 
@@ -668,7 +676,7 @@ Type: free form (optional)
 
 ## Rust in Education
 
-### Have you taken in the past year or are you currently taking a course or training which uses or teaches Rust?
+### Are you currently or have you in the last year taken a course or training which uses or teaches Rust?
 
 Type: select one
 
@@ -685,7 +693,7 @@ Type: select one (optional)
 
 - University or other tertiary institute
 - High school or secondary school
-- A course through an *online* "continuing education" provider (e.g., Udemy, Coursera, edX, LinkedIn Learning, etc.)
+- A course through an online "continuing education" provider (e.g., Udemy, Coursera, edX, LinkedIn Learning, etc.)
 - A bootcamp or other vocational-focused educational institute
 - A short training course offered through your employer or contracted by your employer
 
@@ -734,8 +742,8 @@ Type: select all that apply (optional)
 - Tools and documentation are not accessible enough (e.g., due to language or incompatibility with screen readers)
 - Project governance does not scale to match the size/requirements of the community
 - Developers/maintainers of the language are not properly supported
-- Other (open response)
 - I'm not worried
+- Other (open response)
 
 > **justification**
 >
@@ -776,7 +784,7 @@ Aspects:
 - Compile times
 - Binary size
 - Memory usage (i.e., how much RAM rustc uses when compiling)
-- Disk space usage (e.g., the size of `target` folder)
+- Disk space usage (e.g., the size of target folder)
 - Bugs in the compiler (i.e., ICEs a.k.a. internal compiler errors, miscompilations, etc.)
 - Compiler error messages
 - IDE experience
@@ -877,14 +885,22 @@ For methodological purposes, the bulk of the demographics should be at the end o
 They're both easy to complete (beneficial at the end) and somewhat personal (but at this point folks are invested and we've built 'trust').
 Can also be problematic at start if we're asking all easy, personal questions and then get to the harder ones - easy to drop out.
 
-### Do you consider yourself a member of an underrepresented or marginalized group in technology?
+### Do you consider yourself a member of a group which is underrepresented or marginalized in technology?
+
+Please share only what you are comfortable sharing. This will help us better serve underrepresented and marginalized groups, better understand how well our outreach efforts are going, and more.
+
+Type: select one
+
+- Yes
+- No [`NEXT`](#are-you-a-full--or-part-time-student)
+- I prefer not to say [`NEXT`](#are-you-a-full--or-part-time-student)
+
+### Which of the following underrepresented or marginalized groups in technology do you consider yourself a part of?
 
 Please share only what you are comfortable sharing. This will help us better serve underrepresented and marginalized groups, better understand how well our outreach efforts are going, and more.
 
 Type: select all that apply (optional)
 
-- No [`NEXT`](#are-you-a-full--or-part-time-student)
-- Yes, but I prefer not to say which
 - Cultural beliefs
 - Disabled or person with disability (including physical, mental, and other)
 - Educational background
@@ -984,8 +1000,8 @@ Type: select all that apply (optional)
 - Retail
 - Telecommunications
 - Transportation
-- Other (open response)
 - I'm not employed
+- Other (open response)
 
 > **justification**
 >
@@ -1074,19 +1090,23 @@ Type: select one (optional)
 
 - *all UN member states*
 - *two observer states (Vatican City and Palestine)*
-- Other (open response)
+- Other
 
 > **justification**
 >
 > We'd like to get a geographic understanding of where the community is. The form of the question allows us to be fairly precise about this
 > though there will still be some challenges (e.g., someone who lives in East Russia has similar timezones to East Asia not West Russia).
 
+### As you selected "Other" from the list of countries above, please enter your territory of residence below:
+
+Type: free form (optional)
+
 ### In what ways are you comfortable communicating about technical topics in English?
 
 Type: select all that apply (optional)
 
-- I feel comfortable and capable of having a *spoken* technical conversation in English
-- I feel comfortable and capable of having a *written* technical conversation in English
+- I feel comfortable and capable of having a spoken technical conversation in English
+- I feel comfortable and capable of having a written technical conversation in English
 - I feel comfortable and capable of reading technical documentation in English
 - I feel comfortable and capable of consuming a technical talk (e.g., at a conference or meetup) in English
 - I feel comfortable and capable of consuming a written technical educational material (e.g., technical books, blog posts, etc.) in English
@@ -1096,7 +1116,7 @@ Type: select all that apply (optional)
 > We want to understand self reported feeling of comfort and capability of communication
 > of English since a large portion of the Rust community is and likely will always be in English.
 
-### What is/are your **preferred** language(s) for technical communication?
+### What is/are your preferred language(s) for technical communication?
 
 **IMPORTANT**: Your answer should reflect your **preference** and **not** what you are capable of communicating in. For example, if you feel comfortable and capable of consuming technical communication in both English and Korean, but you always prefer Korean, you should *only* answer Korean as that is your preference.
 
@@ -1129,7 +1149,7 @@ Type: select all that apply (optional)
 
 ### Anything else you'd like to tell us?
 
-Free form (optional)
+Type: free form (optional)
 
 > **justification**
 >
