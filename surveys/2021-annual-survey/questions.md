@@ -812,7 +812,7 @@ Options:
 - Better  
 - Remained the same  
 - Worse
-- Much Worse
+- Much worse
 - Unsure
 
 > **justification**
