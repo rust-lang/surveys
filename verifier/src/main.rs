@@ -13,14 +13,31 @@ fn main() -> Result<(), Box<dyn Error>> {
     let online_questions = fetch_online_questions(args)?;
 
     for (online, markdown) in markdown_questions.iter().zip(online_questions.iter()) {
-        eprintln!("{:?}", online.compare(markdown));
+        let comparison = online.compare(markdown);
+        if !matches!(comparison, Comparison::Equal) {
+            eprintln!("Q: '{}'", online.text);
+            eprintln!("  {:#?}", comparison);
+        }
     }
 
-    if markdown_questions.len() != online_questions.len() {
+    if markdown_questions.len() > online_questions.len() {
         eprintln!(
-            "surveys differ in length - markdown {} questions / online {} questions",
-            markdown_questions.len(),
-            online_questions.len()
+            "Missing questions in the online version:\n{}",
+            markdown_questions[online_questions.len()..]
+                .iter()
+                .map(|q| q.text)
+                .collect::<Vec<_>>()
+                .join("\n-")
+        );
+    }
+    if online_questions.len() > markdown_questions.len() {
+        eprintln!(
+            "Missing questions in the markdown version:\n-{}",
+            online_questions[markdown_questions.len()..]
+                .iter()
+                .map(|q| q.text())
+                .collect::<Vec<_>>()
+                .join("\n-")
         );
     }
 

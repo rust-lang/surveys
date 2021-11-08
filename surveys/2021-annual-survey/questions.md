@@ -33,7 +33,7 @@ Type: select one
 Type: select all that apply (optional)
 
 - I plan to return to using Rust in the future
-- I consider myself a part of the Rust community
+- I consider myself part of the Rust community
 - Specifically to provide feedback on why I stopped using Rust
 - To provide feedback on Rust in general
 - Curiosity
@@ -54,7 +54,7 @@ Type: select all that apply (optional)
 Type: select all that apply (optional)
 
 - I plan to use Rust in the future
-- I consider myself a part of the Rust community
+- I consider myself part of the Rust community
 - Specifically to provide feedback on WHY I do not use Rust
 - Curiosity
 - Other (open response)
@@ -246,7 +246,7 @@ Type: select all that apply (optional)
 - I don't use nightly
 - Out of habit
 - For a particular language feature or set of language features I need
-- I like to have access too all the latest features
+- I like to have access to all the latest features
 - To help test the nightly version for bugs
 - For testing in CI
 - A crate dependency I use requires it
@@ -676,7 +676,7 @@ Type: free form (optional)
 
 ## Rust in Education
 
-### Are you currently or have you in the last year taken a course or training which uses or teaches Rust?
+### Are you currently, or have you in the last year, taken a course or training which uses or teaches Rust?
 
 Type: select one
 
@@ -758,7 +758,7 @@ Statements:
 - Rust provides a real benefit over other programming languages
 - Rust is significantly more complicated to program in than other programming languages
 - Rust requires significantly more effort to learn than other programming languages
-- Rust code tends to contain significantly *fewer* bugs than equivalent code written in another programming language would have
+- Rust code tends to contain significantly fewer bugs than equivalent code written in another programming language would have
 - Rust is risky to use in production
 - Rust makes me more productive
 - Rust is fun to use
@@ -1147,7 +1147,7 @@ Type: select all that apply (optional)
 
 ## Anything else?
 
-### Anything else you'd like to tell us?
+### Is there anything else you'd like to tell us?
 
 Type: free form (optional)
 
