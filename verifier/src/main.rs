@@ -13,14 +13,31 @@ fn main() -> Result<(), Box<dyn Error>> {
     let online_questions = fetch_online_questions(args)?;
 
     for (online, markdown) in markdown_questions.iter().zip(online_questions.iter()) {
-        eprintln!("{:?}", online.compare(markdown));
+        let comparison = online.compare(markdown);
+        if !matches!(comparison, Comparison::Equal) {
+            eprintln!("Q: '{}'", online.text);
+            eprintln!("  {:#?}", comparison);
+        }
     }
 
-    if markdown_questions.len() != online_questions.len() {
+    if markdown_questions.len() > online_questions.len() {
         eprintln!(
-            "surveys differ in length - markdown {} questions / online {} questions",
-            markdown_questions.len(),
-            online_questions.len()
+            "Missing questions in the online version:\n{}",
+            markdown_questions[online_questions.len()..]
+                .iter()
+                .map(|q| q.text)
+                .collect::<Vec<_>>()
+                .join("\n-")
+        );
+    }
+    if online_questions.len() > markdown_questions.len() {
+        eprintln!(
+            "Missing questions in the markdown version:\n-{}",
+            online_questions[markdown_questions.len()..]
+                .iter()
+                .map(|q| q.text())
+                .collect::<Vec<_>>()
+                .join("\n-")
         );
     }
 
@@ -71,8 +88,30 @@ impl markdown::Question<'_> {
                     );
                 }
             }
-            (markdown::Answers::Matrix { .. }, _) => {
-                println!("Can't compare matrices yet");
+            (
+                markdown::Answers::Matrix {
+                    answers1, answers2, ..
+                },
+                api::Question::ChoiceTable { choice_table, .. },
+            ) => {
+                let mismatched_rows = choice_table.mismatched_rows(&answers1);
+                if !mismatched_rows.is_empty() {
+                    return Comparison::MatrixAnswersDiffer(
+                        mismatched_rows
+                            .into_iter()
+                            .map(|(s1, s2)| (s1.to_owned(), s2.to_owned()))
+                            .collect(),
+                    );
+                }
+                let mismatched_columns = choice_table.mismatched_columns(&answers2);
+                if !mismatched_columns.is_empty() {
+                    return Comparison::MatrixAnswersDiffer(
+                        mismatched_columns
+                            .into_iter()
+                            .map(|(s1, s2)| (s1.to_owned(), s2.to_owned()))
+                            .collect(),
+                    );
+                }
             }
             _ => {
                 return Comparison::QuestionTypesDiffer(
@@ -92,6 +131,7 @@ enum Comparison {
     TitlesDiffer(String, String),
     QuestionTypesDiffer(String, QuestionType, QuestionType),
     AnswersDiffer(Vec<(String, String)>),
+    MatrixAnswersDiffer(Vec<(String, String)>),
     Equal,
 }
 

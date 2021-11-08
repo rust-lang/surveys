@@ -164,6 +164,11 @@ pub fn parse<'a>(markdown: &'a str) -> Result<Vec<Question<'a>>, Box<dyn Error>>
             log::warn!("Unhandled line: {}", line);
         }
     }
+    match state {
+        ParserState::Question(q) if !q.is_empty() => questions.push(q),
+        ParserState::None => {}
+        _ => bail!("end of input and not in a correct state {:?}", state),
+    }
     Ok(questions)
 }
 

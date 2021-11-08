@@ -86,7 +86,10 @@ pub enum Question {
     #[serde(rename = "input")]
     Input { question_text: String },
     #[serde(rename = "choice_table")]
-    ChoiceTable { question_text: String },
+    ChoiceTable {
+        question_text: String,
+        choice_table: ChoiceTable,
+    },
 }
 
 impl Question {
@@ -131,9 +134,48 @@ impl ChoiceList {
     pub fn mismatched_answers<'a>(&'a self, answers: &'a [&str]) -> Vec<(&'a str, &'a str)> {
         self.as_strs()
             .zip(answers.iter().map(|s| *s))
+            .filter(|(s1, s2)| {
+                if *s2 == "Other (open response)" {
+                    return *s1 != "Other";
+                }
+                s1 != s2
+            })
+            .collect()
+    }
+}
+
+#[derive(Debug, Deserialize)]
+pub struct ChoiceTable {
+    rows: Vec<Row>,
+    choices: Vec<Choice>,
+}
+
+impl ChoiceTable {
+    pub fn column_strs(&self) -> impl Iterator<Item = &str> {
+        self.choices.iter().map(|c| c.label.as_str())
+    }
+
+    pub fn rows_strs(&self) -> impl Iterator<Item = &str> {
+        self.rows.iter().map(|c| c.label.as_str())
+    }
+
+    pub fn mismatched_rows<'a>(&'a self, labels: &[&'a str]) -> Vec<(&'a str, &'a str)> {
+        self.rows_strs()
+            .zip(labels.iter().map(|s| *s))
             .filter(|(s1, s2)| s1 != s2)
             .collect()
     }
+
+    pub fn mismatched_columns<'a>(&'a self, choices: &'a [&str]) -> Vec<(&'a str, &'a str)> {
+        self.column_strs()
+            .zip(choices.iter().map(|s| *s))
+            .filter(|(s1, s2)| s1 != s2)
+            .collect()
+    }
+}
+#[derive(Debug, Deserialize)]
+pub struct Row {
+    label: String,
 }
 
 #[derive(Debug, Deserialize)]
