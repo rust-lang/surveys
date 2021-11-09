@@ -32,7 +32,7 @@ The answers from the survey will be anonymized, aggregated, and summarized. A hi
 
 ## How is personally identifiable information handled?
 
-Nearly every question in the survey is optional. You are welcome to share as much or as little information as you are comfortable with. Only anonymized aggregate data is shared with others, and the small survey subteam handling raw data is required to sign a non-disclosure agreement (NDA).
+Nearly every question in the survey is optional. You are welcome to share as much or as little information as you are comfortable with. Only the community survey team will have access to the raw data, and only anonymized aggregate data is shared with others.
 
 This year’s survey was commissioned by the Rust Foundation and your responses are subject to the Foundation’s [privacy policy](https://foundation.rust-lang.org/policies/privacy-policy).
 
