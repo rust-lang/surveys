@@ -1,10 +1,10 @@
 # Rust Language Community Survey FAQ
 
-In this FAQ we try to answer common questions about the Annual Rust Language Community Survey. If in your opinion there is a missing question or if you have a concern about this document, please open an [issue](https://github.com/rust-lang/surveys/issues/new).
+In this FAQ we try to answer common questions about the Annual Rust Language Community Survey. If in your opinion there is a missing question or if you have a concern about this document, please open an [issue](https://github.com/rust-lang/surveys/issues/new) or contact the [Rust Community Team](mailto:community-team@rust-lang.org) directly.
 
 ## Why is this survey important for the Rust project?
 
-[Rust](https://rust-lang.org) is an Open Source project. As such, we want to hear both from people inside and outside of our ecosystem about the language, how it is perceived, and how we can make the language more accessible and our community more welcoming. This feedback will give our community the opportunity to participate in shaping the future of the project. We want to focus on the requirements of the language current and potential users to offer a compelling tool for them to solve real world problems in a safe, efficient, and modern way.
+[Rust](https://rust-lang.org) is an Open Source project. As such, we want to hear both from people inside and outside of our ecosystem about the language, how it is perceived, and how we can make the language more accessible and our community more welcoming. This survey gives our community another opportunity to participate in shaping the future of the project. 
 
 ## What are the goals of the survey?
 
@@ -14,14 +14,14 @@ In this FAQ we try to answer common questions about the Annual Rust Language Com
 
 ## How much time will it take to answer the survey?
 
-In average, it should take from 10 to 25 minutes.
+On average, it should take from 10 to 25 minutes.
 
 ## What kind of questions are included in the survey?
 
-It includes some questions about 
+It includes some questions about:
 
 - basic demographic information
-- how responders use Rust
+- how respondents use Rust
 - their opinions on their usage of Rust and related tooling 
 - their potential usage of Rust at work
 - their experience with Rust in educational settings
@@ -32,11 +32,13 @@ The answers from the survey will be anonymized, aggregated, and summarized. A hi
 
 ## How is personally identifiable information handled?
 
-Nearly every question in the survey is optional. You are welcome to share as much or as little information as you are comfortable with. Only anonymized aggregate data is shared with others, and anyone handling raw data is required to sign a non-disclosure agreement (NDA).
+Nearly every question in the survey is optional. You are welcome to share as much or as little information as you are comfortable with. Only anonymized aggregate data is shared with others, and the small survey subteam handling raw data is required to sign a non-disclosure agreement (NDA).
+
+This year’s survey was commissioned by the Rust Foundation and your responses are subject to the Foundation’s [privacy policy](https://foundation.rust-lang.org/policies/privacy-policy).
 
 ## Where and when is the survey results report published?
 
-We expect to publish results from the survey within a month or two of the survey completion. The survey results will be posted to [project's blog](https://blog.rust-lang.org).
+We expect to publish results from the survey within a month or two of the survey completion. The survey results will be posted to the [project's blog](https://blog.rust-lang.org).
 
 ## Where can I see the previous survey reports?
 
