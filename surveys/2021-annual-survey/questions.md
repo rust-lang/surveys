@@ -4,11 +4,9 @@ Whether or not you use Rust Programming Language <https://rust-lang.org> today, 
 
 The Rust Community Team has created this survey to help us gauge how we're doing, what can be improved, and how we can best engage with all of you as we move forward.
 
-This is your chance to have a say in the development priorities for Rust.
+This is your chance to have a say in the development priorities of Rust.
 
-Unless you choose to enter your email, your answers will be anonymous. Any personal data you submit as a part of this survey will be handled in accordance with our policy as described in our Frequently Asked Questions:
-
-https://github.com/rust-community/team/wiki/State-of-the-Rust-Language-Community-Survey-FAQ
+Your answers will be anonymous. Any personal data you submit as a part of this survey will be handled in accordance with our policy as described in our [Frequently Asked Questions](https://github.com/rust-lang/surveys/blob/main/documents/Community-Survey-FAQ.md).
 
 We estimate it will take about 10-25 minutes to complete.
 
