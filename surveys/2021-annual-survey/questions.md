@@ -1088,6 +1088,7 @@ Type: select one (optional)
 
 - *all UN member states*
 - *two observer states (Vatican City and Palestine)*
+- Taiwan
 - Other
 
 > **justification**
