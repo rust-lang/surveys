@@ -160,7 +160,7 @@ Select all that apply:
 > Useful for sentiment analysis and gagues the severity of the problems identified
 > in the subsequent questions.
 
-### I feel positive about the project leadership and governance structure.
+### I feel positive about the project leadership and governance structure of Rust.
 
 - strongly agree
 - agree
@@ -172,7 +172,7 @@ Select all that apply:
 >
 > Suggested by @manishearth. Useful for identifying problems within project governance.
 
-### In general I feel positive about the governance structure and leadership of the teams, project groups, and working groups I participate in.
+### I feel positive about the project leadership and governance structure of the teams, project groups, and working groups I'm in.
 
 **Skip if not a member of the Rust Project.**
 
@@ -199,7 +199,7 @@ Free Form
 > concerns to be voiced while still gathering an evaluation of the users
 > general experience across all their teams.
 
-### I feel positive about my own leadership within the project.
+### I feel positive about my own leadership within the Rust project.
 
 **Skip if not a leader of a team or group**
 
@@ -228,7 +228,7 @@ Free Form
 > Useful for sentiment analysis and gagues the severity of the problems identified
 > in the subsequent questions.
 
-### In general I feel positive about the health of the teams, project groups, and working groups I participate in.
+### I feel positive about the health of the teams, project groups, and working groups I participate in.
 
 **Skip if not a member of the Rust Project.**
 
@@ -443,7 +443,7 @@ Select all that apply:
 > Useful for sentiment analysis and gagues the severity of the problems identified
 > in the subsequent questions.
 
-### I felt positive about the project leadership and governance structure.
+### I felt positive about the project leadership and governance structure of Rust.
 
 - strongly agree
 - agree
@@ -455,7 +455,7 @@ Select all that apply:
 >
 > Suggested by @manishearth. Useful for identifying problems within project governance.
 
-### In general I felt positive about the governance structure and leadership of the teams, project groups, and working groups I participated in.
+### I felt positive about the project leadership and governance structure of the teams, project groups, and working groups I'm in.
 
 **Skip if not a member of the Rust Project.**
 
@@ -482,7 +482,7 @@ Free Form
 > concerns to be voiced while still gathering an evaluation of the users
 > general experience across all their teams.
 
-### I felt positive about my own leadership within the project.
+### I felt positive about my own leadership within the Rust project.
 
 **Skip if not a leader of a team or group**
 
@@ -511,7 +511,7 @@ Free Form
 > Useful for sentiment analysis and gagues the severity of the problems identified
 > in the subsequent questions.
 
-### In general I felt positive about the health of the teams, project groups, and working groups I participated in.
+### I felt positive about the health of the teams, project groups, and working groups I participated in.
 
 **Skip if not a member of the Rust Project.**
 
