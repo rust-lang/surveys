@@ -296,7 +296,7 @@ Type: select all that apply (optional)
 
 - VS Code
 - vi/vim/neovim
-- IntelliJ/CLion/other Jet Brains IDE
+- IntelliJ/CLion/other JetBrains IDE
 - Emacs
 - Sublime Text
 - Visual Studio
@@ -325,7 +325,7 @@ Type: select all that apply (optional)
 - Visual Studio
 - WinDBG
 - VS Code (using any debugger extension)
-- IntelliJ/CLion/other Jet Brains IDE
+- IntelliJ/CLion/other JetBrains IDE
 - RR/Pernosco
 - 'println' debugging (or using any logging or tracing crate, etc.)
 - Other (open response)
