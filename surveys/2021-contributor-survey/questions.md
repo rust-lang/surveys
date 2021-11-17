@@ -116,8 +116,8 @@ Select all that apply:
 Select all that apply:
 
 - rustc
-- tools (e.g. cargo, clippy, rustfmt, rustup, etc)
-- infrastructure (e.g. highfive, CI, rfcbot, etc)
+- external tools (e.g. cargo, clippy, rustfmt, rustup, etc)
+- infrastructure and internal tools (e.g. highfive, CI, rfcbot, bors, perf.rlo, etc)
 - libraries (e.g. core, std, libc, log, etc)
 - documentation (e.g. rustc-dev-guide, std-dev-guide, forge) (does not include documentation for libraries or rustdoc development)
 - website (e.g. rust-lang.org)
@@ -400,8 +400,8 @@ Select all that apply:
 Select all that apply:
 
 - rustc
-- tools (e.g. cargo, clippy, rustfmt, rustup, etc)
-- infrastructure (e.g. highfive, CI, rfcbot, etc)
+- external tools (e.g. cargo, clippy, rustfmt, rustup, etc)
+- infrastructure and internal tools (e.g. highfive, CI, rfcbot, bors, perf.rlo, etc)
 - libraries (e.g. core, std, libc, log, etc)
 - documentation (e.g. rustc-dev-guide, std-dev-guide, forge) (does not include documentation for libraries or rustdoc development)
 - website (e.g. rust-lang.org)
@@ -657,8 +657,8 @@ Select all that apply:
 Select all that apply:
 
 - rustc
-- tools (e.g. cargo, clippy, rustfmt, rustup, etc)
-- infrastructure (e.g. highfive, CI, rfcbot, etc)
+- external tools (e.g. cargo, clippy, rustfmt, rustup, etc)
+- infrastructure and internal tools (e.g. highfive, CI, rfcbot, bors, perf.rlo, etc)
 - libraries (e.g. core, std, libc, log, etc)
 - documentation (e.g. rustc-dev-guide, std-dev-guide, forge) (does not include documentation for libraries or rustdoc development)
 - website (e.g. rust-lang.org)
@@ -776,8 +776,8 @@ If the respondent didn't select the first answer of the first question in this s
 Select all that apply:
 
 - rustc
-- tools (e.g. cargo, clippy, rustfmt, rustup, etc)
-- infrastructure (e.g. highfive, CI, rfcbot, etc)
+- external tools (e.g. cargo, clippy, rustfmt, rustup, etc)
+- infrastructure and internal tools (e.g. highfive, CI, rfcbot, bors, perf.rlo, etc)
 - libraries (e.g. core, std, libc, log, etc)
 - documentation (e.g. rustc-dev-guide, std-dev-guide, forge) (does not include documentation for libraries or rustdoc development)
 - website (e.g. rust-lang.org)
