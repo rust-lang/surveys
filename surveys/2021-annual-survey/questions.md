@@ -1057,7 +1057,7 @@ Languages:
 - Statically typed functional programming languages (e.g., Haskell, ML)
 - Dynamically typed functional programming languages (e.g., Lisp, Clojure, Elixir)
 - Statically typed languages with newer expressive type systems (e.g., Swift, Kotlin, Scala)
-- Dynamically typed languages (e.g., Javascript, Ruby, Python, PHP, Perl)
+- Dynamically typed languages (e.g., JavaScript, Ruby, Python, PHP, Perl)
 
 Experience:
 
