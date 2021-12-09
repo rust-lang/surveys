@@ -606,7 +606,7 @@ Type: select one
 > Answers to this question should be combined with whether the respondent has ever used Rust.
 
 
-### Rate how much the following statements are reasons which your team uses Rust at work
+### Rate how much the following statements are reasons why your team uses Rust at work
 
 Type: matrix (optional)
 
