@@ -8,7 +8,7 @@ In priority order:
 
 * Protect the privacy of respondents.
 * Provide high quality data (unbiased data which is unlikely to be misinterpreted, c.f., raw data).
-* Provide useful and actionable data to the Rust project (i.e., teams and working groups, contributors, and the Foundation).
+* Provide useful and actionable data to the Rust Project (i.e., teams and working groups, contributors) and Foundation.
 * Provide data in a timely manner.
 * Provide data which is generally useful for the community (users and potential users of Rust, and providers of Rust tools and services). Note that this does not mean producing data to be useful for specific segments of the community.
 * Provide marketing for Rust.
@@ -21,7 +21,9 @@ Non-goals:
 * Provide individuals or specific groups (including companies or commercial product teams) with data that is likely only beneficial to them and not to the wider project or community.
 * Produce a rigorous or complete statistical study of survey results.
 
-## Sensitive data
+## Definitions
+
+### Sensitive data
 
 Sensitive data includes, but is not limited to, personally identifying information (PII, i.e., name, email address, identification numbers, etc).
 
@@ -33,6 +35,21 @@ Data (raw or derived) which could identify individuals or some groups is sensiti
 
 Unresolved question: extend this section
 
+### Raw data
+
+Raw data is the data as collected from respondents, including free form answers. Raw data is always considered sensitive and may only be accessed by NDA-signed members of the survey team.
+
+### Summary data
+
+Summary data is data in aggregate form showing the number of respondents giving each answer to a question. Summary data is minimally processed. Summary data excludes free-form answers and groups answers with very small numbers of respondents (where 'small' depends on context, in particular the sensitivity of the question and total number of responses). Summary data may be complete or partial. Summary data should never be sensitive data.
+
+A report containing a maximal amount of summary data will be shared publicly (see below for details). If it exists, summary data excluded from the public report will be shared with the Rust teams and Foundation.
+
+### Processed data
+
+Processed data is any data which has been processed beyond counting answers. That may include analysis of individual questions or analysis across multiple questions (such as cohort analysis or cross-referencing). Processed data may or may not include free-form answers, either individually or in aggregate. Processed data may or may not be sensitive depending on the data and how it is processed.
+
+Processed data will be produced by the survey working group at the request of the Rust teams or Foundation. How it will be shared will be decided by the survey working group on an ad hoc basis, based on the objectives defined above (in particular respondents privacy), sensitivity of the data to the project, and openness.
 
 ## Blog post
 
@@ -41,21 +58,21 @@ The survey working group will author a blog post for publication on the main Rus
 
 ## Initial reporting of data
 
-The survey working group will author an initial report on the survey data. This will contain a summary of responses to all questions with minimal processing, excluding free-form responses, and either excluding or combining groups so that individuals cannot reasonably be identified. The report will highlight and cross-reference data which the survey working group believe will be interesting or useful to members of the Rust project. The report *may* include some more processed summary data, such as graphs or charts, categorisation of free-form answers, re-bucketing of responses to individual questions, or cohort analysis across multiple questions. Timeliness of the report will be prioritised over depth of analysis. The report must not contain any PII. The report will not include raw data (i.e., any individual's responses to questions).
+The survey working group will author an initial report on the survey data. This will contain a summary of responses to all questions with minimal processing, excluding free-form responses, and either excluding or combining groups so that individuals cannot reasonably be identified (i.e., the summary data defined above). The report will highlight data which the survey working group believe will be interesting or useful to members of the Rust Project or Foundation. Timeliness of the report will be prioritised over depth of analysis. The report must not contain any sensitive data. The report will not include raw data (i.e., any individual's responses to questions).
 
-This initial report will be sent to all members of Rust teams, working groups, and the Rust Foundation. Recipients will be asked not to share the report outside the Rust project.
+This initial report will be sent to all members of Rust teams, working groups, and the Rust Foundation. Recipients will be asked not to share the report outside the Rust Project and Foundation.
 
-The survey working group will present the report to the Rust project and answer questions, for example in the Cross-Team Collaboration Fun Times meeting (note that this meeting is public and thus care must be taken not to discuss and sensitive information).
+The survey working group will present the report to the Rust Project and Foundation, and answer questions, for example in the Cross-Team Collaboration Fun Times meeting (note that this meeting is public and thus care must be taken not to discuss any sensitive information).
 
-A reduced version of the report with any sensitive information removed will be produced after the initial report is distributed. With core team approval, this report will be shared publicly, but not strongly advertised (i.e., a post on the Inside Rust blog, but not the main blog).
+With core team approval, this report will be shared publicly, but not strongly advertised (i.e., a post on the Inside Rust blog, but not the main blog).
 
 Unresolved question: is the core team the right group to approve the public report?
 
 ## Ongoing reporting of data
 
-The survey working group will continue to analyse the survey data and may produce further reports, either for teams or the whole Rust project. The scope of distribution and any requirements for confidentiality agreements will be decided on a case-by-case basis. These reports should never include PII. This responsibility may be transferred to a different Rust project team or working group in the future.
+The survey working group will continue to analyse the survey data and may produce further reports, either for teams or the whole Rust Project. The scope of distribution and any requirements for confidentiality agreements will be decided on a case-by-case basis. These reports should never include PII. This responsibility may be transferred to a different Rust team or working group in the future.
 
-Teams and working groups may request further analysis of the survey data by the survey working group. The working group should aim to respond to all requests unless they would expose PII or allow for identification of respondents (e.g., by identifying a small cohort), or the workload on the group is too much. These requests will be prioritised by the survey working group. Responses to these requests may be shared with a wider group within the Rust project, but should not be shared outside the project. The scope of distribution and any requirements for confidentiality agreements will be decided on a case-by-case basis.
+Teams and working groups may request further analysis of the survey data by the survey working group. The working group should aim to respond to all requests unless they would expose PII or allow for identification of respondents (e.g., by identifying a small cohort), or the workload on the group is too much. These requests will be prioritised by the survey working group. Responses to these requests may be shared with a wider group within the Rust Project, but should not be shared outside the Project or Foundation. The scope of distribution and any requirements for confidentiality agreements will be decided on a case-by-case basis.
 
 Unresolved question: should there be a time limit?
 
