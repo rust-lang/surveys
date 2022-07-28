@@ -111,13 +111,14 @@ trademarks that, without the license, would be an infringing use.
 >
 > TODO
 
-### How much of the Rust language can someone change and still call it “Rust”?
+### How much of the Rust language/toolchain can someone change and still call it “Rust”?
 
 Pick as many as you agree with:
 
 - Not at all
+- Backporting changes already made or in progress in the Rust project is fine
 - Fixed bugs and other minor changes are ok
-- Adding new functions/syntax but not removing anything or breaking anything
+- Extending with new functions/syntax but not removing anything or breaking anything
 - They can change it any way they want
 
 > **justification**
