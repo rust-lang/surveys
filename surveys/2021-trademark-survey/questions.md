@@ -186,6 +186,18 @@ Pick as many as you agree with:
 >
 > TODO
 
+### Communities (e.g. discussion or chat sites) using the Rust trademarks must meet some minimum standards.
+
+- strongly agree
+- agree
+- neither agree nor disagree
+- disagree
+- strongly disagree
+
+> **justification**
+>
+> TODO
+
 ### Can meetups, conferences, or other groups use the Rust/Cargo logos?
 
 - Yes, anyone can, commercial or non-commercial
