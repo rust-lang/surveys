@@ -148,18 +148,6 @@ Pick as many as you agree with:
 >
 > TODO
 
-### Commercial businesses can use the Rust/Cargo logo on their website or social media site, provided they have made a financial contribution to the Rust Foundation.
-
-- strongly agree
-- agree
-- neither agree nor disagree
-- disagree
-- strongly disagree
-
-> **justification**
->
-> TODO
-
 ### Commercial businesses can use the Rust/Cargo logo on their website or social media site, provided they have an open source project that uses Rust.
 
 - strongly agree
