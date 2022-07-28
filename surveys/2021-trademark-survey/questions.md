@@ -212,9 +212,12 @@ Pick as many as you agree with:
 
 ### The Rust/Cargo logo should be under a copyright license that allows modification and sharing, like a CC license:
 
+(This does not either require or prevent the use of a trademark license with
+other requirements.)
+
 - No
 - Yes, but only if it’s used for something that has nothing to do with software
-- Yes, and it can be used even for software
+- Yes, and the license must qualify as Open Source
 
 > **justification**
 >
