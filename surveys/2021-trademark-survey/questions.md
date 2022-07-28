@@ -199,7 +199,7 @@ Pick as many as you agree with:
 
 Pick as many as you agree with:
 
-- No, the Rust Foundation should be responsible for ordering all of these products and handing them out
+- No, the Rust Foundation should be responsible for reviewing and approving all of these products
 - Yes, for some types of items but not all kinds of items
 - Yes, but they can only use designs that the Rust Foundation provides
 - Yes, but only to give away, not for sale
