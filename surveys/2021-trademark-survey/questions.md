@@ -3,8 +3,8 @@
 Whether or not you use Rust <https://rust-lang.org> today, we want to hear from
 you!
 
-The Rust Foundation has created this survey to help us design a trademark
-survey that best serves the users of the Rust programming language.
+We've created this survey to help guide the development of a Rust trademark
+policy that best serves the users of the Rust programming language.
 
 The purpose of this questionnaire is to get directional information. For that
 reason, if you largely agree with an answer but not entirely, you should say
