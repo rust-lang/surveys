@@ -50,9 +50,9 @@ This source identifying/quality assurance function is not all that trademarks
 are used for. Trademark law also covers confusion about whether the trademark
 owner is endorsing or sponsoring the user. For example, when websites include
 their customers’ logos on their websites, we understand that the customer’s
-logo is being used to signal that the owner of the logo approves of or endorses
-the product and possibly the content of the website, and we take that
-information into account when considering the product and website. A suggestion
+logo is being used to signal that the owner of that logo approves of or endorses
+the owner of the website, and we take that
+information into account when considering the owner of the website. A suggestion
 of endorsement that is inaccurate can also be a trademark infringement.
 
 Trademark law always allows others to use a trademark to truthfully describe
