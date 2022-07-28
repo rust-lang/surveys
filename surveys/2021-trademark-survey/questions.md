@@ -78,7 +78,7 @@ trademarks that, without the license, would be an infringing use.
 >
 > TODO
 
-### Trademarks are different from copyrights, so it’s ok to exert some control over how people use trademarks
+### Trademarks are different from copyrights, so it’s ok to exert some control or standards about how people use trademarks
 
 - strongly agree
 - agree
