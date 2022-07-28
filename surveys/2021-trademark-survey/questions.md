@@ -13,7 +13,8 @@ developed where we will be working out the nuances.
 
 We are referring to the words RUST and CARGO and the logos, so assume the
 question is about both the words and the logos. If the question is about only
-the logos, it will be called “the Rust/Cargo logo.”
+the logos, it will be called “the Rust/Cargo logo.” Please note that the Rust
+logo only refers to the "gear" logo, not Ferris the Crab.
 
 Unless you choose to enter your email, your answers will be anonymous. Any
 personal data you submit as a part of this survey will be handled in accordance
