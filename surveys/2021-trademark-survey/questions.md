@@ -112,7 +112,7 @@ trademarks that, without the license, would be an infringing use.
 >
 > TODO
 
-### How much of the Rust language/toolchain can someone change and still call it “Rust”?
+### How much of Rust can someone change and still call it “Rust”?
 
 Pick as many as you agree with:
 
