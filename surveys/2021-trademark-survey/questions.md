@@ -231,7 +231,7 @@ other requirements.)
 
 - No
 - Yes, but only if it’s used for something that has nothing to do with software
-- Yes, and the license must qualify as Open Source
+- Yes, and the license must be an Open Source license
 
 > **justification**
 >
