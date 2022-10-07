@@ -26,44 +26,13 @@ Type: select one
 
 ## For previous Rust users
 
-### As you have indicated that you're no longer using Rust, what prompted you to participate in this survey?
+### Why did you stop using Rust?
 
-Type: select all that apply (optional)
-
-- I plan to return to using Rust in the future
-- I consider myself part of the Rust community
-- Specifically to provide feedback on why I stopped using Rust
-- To provide feedback on Rust in general
-- Curiosity
-- Other (open response)
-
-> **justification**
->
-> Useful in understanding why non-users contribute;
-
-> **SURVEY FLOW**
->
-> Skip to `## Your opinions about Rust` section
+### If you would like to use Rust, what is stopping you?
 
 ## For non-Rust users
 
-### As you have indicated that you have not used Rust, what prompted you to participate in this survey?
-
-Type: select all that apply (optional)
-
-- I plan to use Rust in the future
-- I consider myself part of the Rust community
-- Specifically to provide feedback on WHY I do not use Rust
-- Curiosity
-- Other (open response)
-
-> **justification**
->
-> Useful in understanding why non-users contribute to the survey
-
-> **SURVEY FLOW**
->
-> Skip to `## Your opinions about Rust` section
+### If you would like to use Rust, what is stopping you?
 
 ## Your Rust experience
 
@@ -207,49 +176,6 @@ Type: select all that apply (optional)
 > version that was released ~1 year prior. Additionally, at the time of this writing
 > all major Linux distros have a version equal to or newer than this version.
 
-### Which version(s) of Rust do you use in automated testing (e.g., CI)?
-
-Type: select all that apply (optional)
-
-REPEAT
-
-> **justification**
->
-> See the previous question.
-
-### If you use nightly, why?
-
-Type: select all that apply (optional)
-
-- I don't use nightly
-- Out of habit
-- For a particular language feature or set of language features I need
-- I like to have access to all the latest features
-- To help test the nightly version for bugs
-- For testing in CI
-- A crate dependency I use requires it
-- A tool I use requires it
-- Other (open response)
-
-> **justification**
->
-> We'd like to know what are the common reasons people use nightly
-> so that we can better understand where testers are coming from.
-
-### If you use beta, why?
-
-Type: select all that apply (optional)
-
-- I don't use beta
-- Out of habit
-- To adopt stabilized language features as early as possible
-- To help test the beta version for bugs
-- For testing in CI
-- Other (open response)
-
-> **justification**
->
-> Same justification as the question about nightly but for beta.
 
 ### Which editor or IDE setup do you use with Rust code on a regular basis?
 
@@ -277,31 +203,10 @@ Type: select all that apply (optional)
 > in a separate question, though this is likely easier to find out through download
 > numbers.
 
-### Which debuggers do you use for debugging Rust programs on a regular basis?
-
-Type: select all that apply (optional)
-
-- GDB
-- LLDB
-- Visual Studio
-- WinDBG
-- VS Code (using any debugger extension)
-- IntelliJ/CLion/other JetBrains IDE
-- RR/Pernosco
-- 'println' debugging (or using any logging or tracing crate, etc.)
-- Other (open response)
-
-> **justification**
->
-> It is good to know how many users use a debugging tool, and which tool they use.
-> This information could influence priorities for the compiler and tools teams.
->
-> Note that there is some overlap between the answers, e.g., VS Code uses either a
-> GDB or LLDB plugin, but I think that is OK, we can take this into account when
-> interpreting the answers and we will get an indication of user's perceptions of
-> their tools.
 
 ### In which of the following ways have you participated in the Rust community in the last 6 months:
+
+TODO redo
 
 Note that the following forms of participation do not include code related activities (i.e., writing, reviewing, or discussing code). Such pariticpation is asked about in later questions.
 
@@ -323,6 +228,8 @@ Type: select all that apply (optional)
 > community members in comparison to less active community members.
 
 ### Roughly how often do you contribute to the Rust project?
+
+TODO redo
 
 Type: matrix (optional)
 
@@ -350,6 +257,8 @@ Frequency:
 > to better understand the shape of community involvement and for cohort analysis.
 
 ### How often have you felt explicitly welcome in the Rust community?
+
+TODO merge with next question and simplify
 
 Type: matrix
 
@@ -406,6 +315,7 @@ Type: free form (optional)
 > 
 > More detail on the type of situations where people have felt unwelcome can let us better 
 > address these issues in the future.
+
 
 ## Rust at work
 
@@ -542,14 +452,6 @@ Rating:
 > The Rust community and potential adopters of Rust have a lot of assumptions of why one would choose Rust for a project.
 > This question can help confirm or challenge our assumptions and see how they change over time.
 
-### Are there any additional reasons why your team uses Rust at work?
-
-Type: free form (optional)
-
-> **justification**
->
-> Follow up to the question before to gain more insights.
-
 ### Please rate your agreement with the following statements regarding your team's experience using Rust at work.
 
 Type: matrix (optional)
@@ -607,6 +509,7 @@ Type: select one (optional)
 >
 > We want to know where Rust is being taught.
 
+
 ## Your opinions about Rust
 
 ### What are your biggest worries for the future of Rust?
@@ -631,131 +534,6 @@ Type: select all that apply (optional)
 >
 > Would be useful for leadership to understand the community's fears.
 
-### Please rate your agreement with the following statements about Rust.
-
-Type: matrix (optional)
-
-Statements:
-
-- Rust provides a real benefit over other programming languages
-- Rust is significantly more complicated to program in than other programming languages
-- Rust requires significantly more effort to learn than other programming languages
-- Rust code tends to contain significantly fewer bugs than equivalent code written in another programming language would have
-- Rust is risky to use in production
-- Rust makes me more productive
-- Rust is fun to use
-
-Rating:
-
-- Agree
-- Neither agree nor disagree
-- Disagree
-
-> **justification**
->
-> There are several "truisms" about Rust that we'd like to get perspective on how true these are for users of Rust.
->
-> Note that answers here can be subject to survivorship bias and so extra care should be taken with interpreting results.
-
-### In your opinion, how do you find the following aspects of Rust?
-
-Type: matrix (optional)
-
-Aspects:
-
-- Compile times
-- Binary size
-- Memory usage (i.e., how much RAM rustc uses when compiling)
-- Disk space usage (e.g., the size of target folder)
-- Bugs in the compiler (i.e., ICEs a.k.a. internal compiler errors, miscompilations, etc.)
-- Compiler error messages
-- IDE experience
-- Debugging experience
-- Available tools and support
-- Async programming
-- GUI development
-- Rust language and standard library documentation
-
-Options:
-
-- Great
-- Good enough
-- Could be better
-- Seriously lacking
-- Unsure
-
-> **justification**
->
-> This question gathers data on the communities perceptions of certain aspects of Rust at this point in time.
-
-### In your opinion, have the following aspects of Rust gotten better or worse over the past year?
-
-Type: matrix (optional)
-
-Aspects:
-
-REPEAT
-
-Options:
-
-- Much better
-- Better  
-- Remained the same  
-- Worse
-- Much worse
-- Unsure
-
-> **justification**
->
-> This question gathers data on the communities perceptions of certain aspects of Rust over the last year.
-
-### Do you agree with the following statements on Rust stability?
-
-Type: matrix (optional)
-
-Statements:
-
-- I can upgrade the *stable* compiler version without fear of my code failing to compile
-- I can upgrade the *nightly* compiler version without fear of my code failing to compile
-- I can upgrade the *stable* compiler version without fear of my code taking longer to compile
-- I can upgrade the *nightly* compiler version without fear of my code taking longer to compile
-- Upgrading to a new *stable* compiler version requires either no changes or extremely small & easy changes to my code
-- Upgrading to a new *nightly* compiler version requires either no changes or extremely small & easy changes to my code
-
-Rating:
-
-- Agree
-- Neither agree nor disagree
-- Disagree
-
-> **justification**
->
-> When want to get an impression of how stable the compiler *feels*. Impressions are more important than hard numbers as
-> not all users define stability in the same way the compiler does. For example, experiencing compiler performance regressions
-> in a new version of the compiler isn't breaking official stability guarantees but it can feel just as painful as an
-> actual breaking change.
-
-### Do you agree with the following statements on Rust employment?
-
-Type: matrix (optional)
-
-Statements:
-
-- It is easy for qualified applicants to find jobs which use Rust for the majority of programming
-- Existing Rust jobs are attractive
-- Learning Rust provides me with skills that employers seek
-- I feel qualified to apply for at least some advertised Rust jobs
-
-Rating:
-
-- Agree
-- Neither agree nor disagree
-- Disagree
-
-> **justification**
->
-> The flip side of the question asking whether the respondent's company plans on hiring Rust developers, we
-> want to know how respondents feel the level of demand for and quality of Rust jobs are.
 
 ## About you
 
@@ -797,14 +575,6 @@ Type: select all that apply (optional)
 - Woman or perceived as a woman
 - Other (open response)
 
-### Do you feel your belonging to an underrepresented or marginalized group in technology makes it difficult for you to participate in the Rust community?
-
-Type: select one (optional)
-
-- Often
-- Sometimes
-- Never
-
 ### Are you a full- or part-time student?
 
 Type: select one
@@ -838,25 +608,9 @@ Type: select one
 - I primarily manage others who do
 - No [`NEXT`](#excluding-rust-what-is-your-experience-with-other-kinds-of-programming-languages)
 
-### How long have you worked in software professionally?
-
-Type: select one (optional)
-
-- <= 1 year
-- 1 - 3 years
-- 3 - 5 years
-- 5 - 10 years
-- 10 - 20 years
-- > 20 years
-
-> **justification**
->
-> For cohort analysis it is important to understand length of time in the software
-> industry as this can have an impact on perceptions.
->
-> The ranges of years chosen are a best attempt at capturing different "stages" in a person's professional career.
-
 ### Which category best describes your current employer's industry?
+
+TODO merge with the next question
 
 Type: select all that apply (optional)
 
@@ -929,32 +683,6 @@ Type: select all that apply (optional)
 > answers their employer works in automotive but they are working on mobile phone applications and not 
 > embedded devices, we might conclude different things than if they are working on embedded devices.
 
-### Excluding Rust, what is your experience with other kinds of programming languages?
-
-Type: matrix (optional)
-
-Languages:
-
-- Assembly language (of any variety)
-- Languages with manual memory management (e.g., C, C++, Objective-C without ARC)
-- Statically typed object oriented languages with garbage collection (e.g., Java, C#, Go)
-- Statically typed functional programming languages (e.g., Haskell, ML)
-- Dynamically typed functional programming languages (e.g., Lisp, Clojure, Elixir)
-- Statically typed languages with newer expressive type systems (e.g., Swift, Kotlin, Scala)
-- Dynamically typed languages (e.g., JavaScript, Ruby, Python, PHP, Perl)
-
-Experience:
-
-- I've never used nor am I familiar with any language in this category
-- I have a basic familiarity with at least one language in this category
-- I am comfortable using at least one language in this category
-- I am an expert in at least one language in this category
-
-> **justification**
->
-> For cohort analysis it is interesting to know what other language "families"
-> respondents are familiar with. It is more illustrative which types of languages
-> respondents are familiar with than the specific language.
 
 ### How long have you been programming (in any language, for any reason)?
 
@@ -985,6 +713,8 @@ Type: select one (optional)
 Type: free form (optional)
 
 ### In what ways are you comfortable communicating about technical topics in English?
+
+TODO simplify
 
 Type: select all that apply (optional)
 
