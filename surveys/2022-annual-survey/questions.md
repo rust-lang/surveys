@@ -17,53 +17,12 @@ We estimate it will take about 10-25 minutes to complete.
 Type: select one
 
 - Yes, I use Rust (for any purpose, even if you're just learning) [`NEXT`](#your-rust-experience)
-- No, I don't currently use Rust, but I have in the past [`NEXT`](#for-previous-rust-users)
-- No, I have never used Rust [`NEXT`](#for-non-rust-users)
+- No, I don't currently use Rust, but I have in the past [`NEXT`](#your-opinions-about-rust)
+- No, I have never used Rust [`NEXT`](#your-opinions-about-rust)
 
 > **justification**
 >
 > Fundamental for cohort analysis
-
-## For previous Rust users
-
-### As you have indicated that you're no longer using Rust, what prompted you to participate in this survey?
-
-Type: select all that apply (optional)
-
-- I plan to return to using Rust in the future
-- I consider myself part of the Rust community
-- Specifically to provide feedback on why I stopped using Rust
-- To provide feedback on Rust in general
-- Curiosity
-- Other (open response)
-
-> **justification**
->
-> Useful in understanding why non-users contribute;
-
-> **SURVEY FLOW**
->
-> Skip to `## Your opinions about Rust` section
-
-## For non-Rust users
-
-### As you have indicated that you have not used Rust, what prompted you to participate in this survey?
-
-Type: select all that apply (optional)
-
-- I plan to use Rust in the future
-- I consider myself part of the Rust community
-- Specifically to provide feedback on WHY I do not use Rust
-- Curiosity
-- Other (open response)
-
-> **justification**
->
-> Useful in understanding why non-users contribute to the survey
-
-> **SURVEY FLOW**
->
-> Skip to `## Your opinions about Rust` section
 
 ## Your Rust experience
 
@@ -211,7 +170,8 @@ Type: select all that apply (optional)
 
 Type: select all that apply (optional)
 
-REPEAT
+REPEAT 
+- I don't use CI
 
 > **justification**
 >
@@ -321,33 +281,6 @@ Type: select all that apply (optional)
 > We'd like to get a picture of _how_ people participate in the Rust community. In
 > particular we can use this information to do cohort analysis on highly "active"
 > community members in comparison to less active community members.
-
-### Roughly how often do you contribute to the Rust project?
-
-Type: matrix (optional)
-
-Activities:
-
-- Comment on, contribute to discussion of, or provide edits to an open RFC
-- Create a new thread or comment on internals.rust-lang.org
-- Discuss the Rust project in an official chat (either Zulip or Discord)
-- Open an issue on any repo in the rust-lang GitHub organization
-- Contribute code changes (including tests) to the Rust compiler (rust-lang/rust)
-- Contribute code changes (including tests) to any other project in the rust-lang GitHub organization
-- Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub organization
-
-Frequency:
-- More frequently than weekly
-- Weekly
-- Monthly
-- Less frequently than monthly
-- Never but have tried to
-- Never and have never tried to
-
-> **justification**
->
-> We want to understand the nature of contribution to the Rust project both
-> to better understand the shape of community involvement and for cohort analysis.
 
 ### How often have you felt explicitly welcome in the Rust community?
 
@@ -579,33 +512,6 @@ Type: free form (optional)
 > **justification**
 >
 > This an opportunity to learn from adopters at companies what they struggle with when adopting Rust.
-
-## Rust in Education
-
-### Are you currently, or have you in the last year, taken a course or training which uses or teaches Rust?
-
-Type: select one
-
-- Yes
-- No [`NEXT`](#your-opinions-about-rust)
-
-> **justification**
->
-> This question is primarily used to funnel respondents into the more specific questions about the kinds of educational activities they've been a part of.
-
-### Where is/was the course or activity taught?
-
-Type: select one (optional)
-
-- University or other tertiary institute
-- High school or secondary school
-- A course through an online "continuing education" provider (e.g., Udemy, Coursera, edX, LinkedIn Learning, etc.)
-- A bootcamp or other vocational-focused educational institute
-- A short training course offered through your employer or contracted by your employer
-
-> **justification**
->
-> We want to know where Rust is being taught.
 
 ## Your opinions about Rust
 
@@ -855,79 +761,6 @@ Type: select one (optional)
 > industry as this can have an impact on perceptions.
 >
 > The ranges of years chosen are a best attempt at capturing different "stages" in a person's professional career.
-
-### Which category best describes your current employer's industry?
-
-Type: select all that apply (optional)
-
-- Advertising
-- Aerospace
-- Automotive
-- Business software
-- Consumer software
-- Consulting
-- Computer hardware
-- Defense
-- Energy
-- Education/Academia
-- Entertainment or Media
-- Finance
-- Gaming
-- Government
-- Healthcare
-- Manufacturing
-- Music
-- Railway
-- Research & Development
-- Retail
-- Telecommunications
-- Transportation
-- I'm not employed
-- Other (open response)
-
-> **justification**
->
-> We want to see what industries have what representation in the Rust community.
-> While it's impossible to be precise here, we want to get a general idea.
-> This list is largely adopted from this [Wikipedia article](https://en.wikipedia.org/wiki/Outline_of_industry).
-
-### Which categories best describes the tech domain(s) you currently write or design software in?
-
-Type: select all that apply (optional)
-
-- Audio programming
-- Blockchain
-- Cloud computing applications
-- Cloud computing infrastructure or utilities
-- Computer graphics
-- Data science
-- Desktop computer application frontend
-- Desktop computer or mobile phone libraries or services
-- Distributed systems
-- Embedded devices (with operating systems)
-- Embedded devices (bare metal)
-- HPC (High-performance [Super]Computing)
-- IoT (Internet of Things)
-- Machine learning
-- Mobile phone application frontend
-- Computer networking
-- Programming languages and related tools (including compilers, IDEs, standard libraries, etc.)
-- Robotics
-- Computer security
-- Scientific and/or numeric computing
-- Server-side or "backend" application
-- Simulation
-- Web application frontend
-- WebAssembly
-- Other (open response)
-
-> **justification**
->
-> We want to see generally what tech areas respondents work in. In addition to general categories,
-> we include some technology categories that are known to be popular in the Rust community.
-> This can help us get more insight into what respondents are working on. For instance, if a respondent
-> answers their employer works in automotive but they are working on mobile phone applications and not 
-> embedded devices, we might conclude different things than if they are working on embedded devices.
 
 ### Excluding Rust, what is your experience with other kinds of programming languages?
 
