@@ -155,26 +155,6 @@ Type: select all that apply (optional)
 > specific answer appears frequently, we can add it to future surveys to reduce
 > the amount of work needed to process responses.
 
-### On the primary machine you compile Rust code on, how many CPUs are there?
-
-Please count *logical* CPUs here, not cores or sockets. You can get this number by running the following commands from the command line:
-
-- Linux: `nproc`
-- macOS: `sysctl -n hw.ncpu`
-- Windows Command Prompt: `echo %NUMBER_OF_PROCESSORS%`
-- Windows PowerShell: `(Get-CimInstance Win32_ComputerSystem).NumberOfLogicalProcessors`
-
-Type: free form (number, optional)
-
-> **justification**
->
-> Question added by Josh Triplett. The answers can help tune parallel rustc:
->
-> - When we encounter a scalability issue that starts at a certain number of CPUs, it'll be good to know what proportion of the Rust community is affected.
-> - It'll help when tuning algorithms or build systems whose memory usage may depend on the number of CPUs present.
-> - It'll help with prioritization around whether to make something go faster by throwing more CPUs at it or by optimizing on the same number of CPUs.
-> - It'll help avoid assumptions that rust developers might otherwise make about how universal the caliber of hardware they have is.
-
 ### Which operating systems or runtimes do you develop Rust software for?
 
 **Note**: this is specifically about which operating system or runtime you **target** not which system you use
@@ -271,25 +251,6 @@ Type: select all that apply (optional)
 >
 > Same justification as the question about nightly but for beta.
 
-### In which ways do you install Rust?
-
-Type: select all that apply (optional)
-
-- Rustup (where Rustup is installed from rust-lang.org or you built it from source)
-- Rustup (where Rustup is installed using any package manager)
-- Linux distribution package
-- Homebrew
-- Official rust-lang.org tarballs
-- Official Windows .msi installers
-- Official macOS .pkg installers
-- From source
-- Other (open response)
-
-> **justification**
->
-> Since many of these sources are not under project control, it can be hard to know where
-> people are getting their Rust compiler from.
-
 ### Which editor or IDE setup do you use with Rust code on a regular basis?
 
 Type: select all that apply (optional)
@@ -339,34 +300,6 @@ Type: select all that apply (optional)
 > GDB or LLDB plugin, but I think that is OK, we can take this into account when
 > interpreting the answers and we will get an indication of user's perceptions of
 > their tools.
-
-### Please indicate how vital to your workflow each of the following tools are when programming with Rust:
-
-Type: matrix (optional)
-
-Tools:
-
-- clippy
-- cargo
-- rustdoc/cargo doc
-- rustup
-- play.rust-lang.org
-- miri
-- rustfmt/cargo fmt
-- bindgen
-
-Rating:
-
-- Essential
-- Somewhat important
-- Not important
-- I have no experience with this tool
-
-> **justification**
->
-> Understanding how important certain tools are to the community and *more importantly* to 
-> certain subsections of the community is important. This can also help us understand how
-> popular certain tools are as well as how important lesser used tools are to their users.
 
 ### In which of the following ways have you participated in the Rust community in the last 6 months:
 
@@ -473,31 +406,6 @@ Type: free form (optional)
 > 
 > More detail on the type of situations where people have felt unwelcome can let us better 
 > address these issues in the future.
-
-### Which of the following activities do you find helpful or effective for learning Rust or improving your Rust skills?
-
-Type: matrix (optional)
-
-Activities:
-
-- Reading books or other written material geared towards learning Rust
-- Watching videos, streams, etc. geared towards learning Rust
-- Attending an organized training session or course (in person or virtual)
-- Doing Rust coding exercises or challenges created to help learn Rust
-- Building a non-trivial project in Rust or contributing to an open source project
-
-Choices:
-
-- Very helpful
-- Somewhat helpful
-- Not helpful
-- I have no experience with this activity
-
-> **justification**
->
-> We'd like to confirm what learning materials are popular with the community. This
-> combined with some cohort analysis can tell us about how particular subsections
-> of the community prefer to learn.
 
 ## Rust at work
 
@@ -698,30 +606,6 @@ Type: select one (optional)
 > **justification**
 >
 > We want to know where Rust is being taught.
-
-### Which best describes your course or activity?
-
-Type: select one (optional)
-
-- A course teaching exclusively how to program in Rust
-- A course teaching how to program in Rust and other languages
-- A computer science course (e.g., operating systems, algorithms, etc.) course which uses Rust (and potentially other languages)
-- Other type of course where Rust was used
-
-> **justification**
->
-> We want to know how Rust is being taught.
-
-### Is/was Rust mandated for your course or activity, or did you choose it yourself?
-
-Type: select one (optional)
-
-- Rust was mandated
-- I chose to use Rust
-
-> **justification**
->
-> Together with the above question, we want to know how Rust is being taught.
 
 ## Your opinions about Rust
 
