@@ -26,11 +26,51 @@ Type: select one
 
 ## For previous Rust users
 
+### Why did you stop using Rust?
+
+Type: select all that apply
+
+- Rust did not help me achieve my goals
+- Missing language features
+- Missing libraries
+- Missing tools
+- Too difficult to learn
+- Community was rude, unwelcoming, or otherwise off-putting
+- I prefer to use another language
+- I no longer have the opportunity to use Rust due to factors outside of my control
+- Other
+
+### Tell us more:
+
+Type: free text
+
+
 > **SURVEY FLOW**
 >
 > Skip to `## Your opinions about Rust` section
 
+TODO there are some questions before this which we could ask non-users, how do we make this work with the software?
+
 ## For non-Rust users
+
+### Why don't you use Rust?
+
+Type: select all that apply
+
+- Rust did not help me achieve my goals
+- Missing language features
+- Missing libraries
+- Missing tools
+- Too difficult to learn or learning will take too much time
+- Community was rude, unwelcoming, or otherwise off-putting
+- I prefer to use another language
+- Due to factors outside of my control
+- Haven't got around to it
+- Other
+
+### Tell us more:
+
+Type: free text
 
 > **SURVEY FLOW**
 >
@@ -168,7 +208,7 @@ Type: select all that apply (optional)
 - A specific version of nightly
 - Custom fork
 - I don't know
-- Other (open response)
+- Other
 
 > **justification**
 >
@@ -234,56 +274,35 @@ Type: select all that apply (optional)
 > in a separate question, though this is likely easier to find out through download
 > numbers.
 
-
-### In which of the following ways have you participated in the Rust community in the last 6 months:
-
-Note that the following forms of participation do not include code related activities (i.e., writing, reviewing, or discussing code). Such pariticpation is asked about in later questions.
-
-Type: select all that apply (optional)
-
-- I have produced informational content about Rust (e.g., blogged, live streamed, made a YouTube video, presented at a conference/meetup, etc.)
-- On several occasions I have consumed informational content about Rust (e.g., blogs, live streams, YouTube videos, etc.)
-- On several occasions I have read comments about Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
-- On several occasions I have commented on Rust content on "news" sites (e.g., Hacker News, reddit.com/r/rust, lobste.rs/t/rust, etc.)
-- On several occasions I have read official Rust communication channels (e.g., This Week in Rust, the official Rust blog, the Rust Twitter account, etc.)
-- On several occasions I have participated in conversations about Rust on social media (Twitter, Facebook, LinkedIn, etc.)
-- I have participated in Rust community forums or chats (e.g., users.rust-lang.org, Rust Discord, a local Rust chat community, etc.)
-- I have attended a Rust meetup or conference (virtual or in-person)
-
-> **justification**
->
-> We'd like to get a picture of _how_ people participate in the Rust community. In
-> particular we can use this information to do cohort analysis on highly "active"
-> community members in comparison to less active community members.
-
-### Roughly how often do you contribute to the Rust project?
+### Roughly how often do you contribute to the Rust community?
 
 Type: matrix (optional)
 
 Activities:
 
-- Comment on, contribute to discussion of, or provide edits to an open RFC
-- Create a new thread or comment on internals.rust-lang.org
-- Discuss the Rust project in an official chat (either Zulip or Discord)
-- Open an issue on any repo in the rust-lang GitHub organization
-- Contribute code changes (including tests) to the Rust compiler (rust-lang/rust)
-- Contribute code changes (including tests) to any other project in the rust-lang GitHub organization
+- Produce informational content about Rust (e.g., blogged, live streamed, made a YouTube video, presented at a conference/meetup, etc.)
+- Consume informational content about Rust (e.g., blogs, live streams, YouTube videos, etc.)
+- Read official Rust communication channels (e.g., This Week in Rust, the official Rust blog, the Rust Twitter account, etc.)
+- Participate in conversations about Rust on social media or websites (Hacker News, r/rust, Twitter, LinkedIn, etc.)
+- Attend a Rust meetup or conference (virtual or in-person)
+- Write, comment on, contribute to discussion of, or provide edits to an open RFC
+- Discuss the Rust project in an official chat (internals.rust-lang.org, rust-lang Zulip, etc.)
+- Open an issue on any project in the rust-lang GitHub organization
+- Contribute code changes (including tests) to any project in the rust-lang GitHub organization
 - Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub organization
 
 Frequency:
 - More frequently than weekly
 - Weekly
-- Monthly
-- Less frequently than monthly
-- Never but have tried to
-- Never and have never tried to
+- Monthly or less frequently
+- Never
 
 > **justification**
 >
 > We want to understand the nature of contribution to the Rust project both
 > to better understand the shape of community involvement and for cohort analysis.
 
-### How often have you felt explicitly welcome in the Rust community?
+### How do you feel in the Rust community?
 
 Type: matrix
 
@@ -298,39 +317,15 @@ Activities:
 
 Choices:
 
-- I've *often* felt welcome
-- I *sometimes* feel welcome
-- I *never* feel welcome
+- I feel welcome
+- I feel neutral
+- I feel unwelcome
 - I've never participated in this activity
 
 > **justification**
 >
 > We'd like to know where people are feeling welcome and the degree to which they are feeling welcome.
 
-### How often have you felt *un*welcome in the Rust community?
-
-Type: matrix (optional)
-
-Activities:
-
-- *Official* Rust community forums or chats (users.rust-lang.org, internals.rust-lang.org, the official Rust Discord, or the Rust Zulip)
-- *Unofficial* Rust community forums or chats (e.g., reddit.com/r/rust, Hacker News, the Rust *Community* Discord, etc.)
-- Attending a Rust conference
-- Attending a Rust meetup or local community event
-- Discussion (issues, pull requests, etc.) on a repository *inside* the rust-lang GitHub organization
-- Discussion (issues, pull requests, etc.) on a repository *outside* of the rust-lang GitHub organization
-
-Choices:
-
-- I've *often* felt unwelcome
-- I *sometimes* feel unwelcome
-- I *never* feel unwelcome
-- I've never participated in this activity
-
-> **justification**
->
-> We'd like to know where people are feeling unwelcome and the degree to which they are feeling unwelcome. This can 
-> help us better understand the free from responses that will come in the next question.
 
 ### If you indicated that you did not feel welcome in the Rust community, are there any details about your experience that you would like to share with us?
 
@@ -343,15 +338,74 @@ Type: free form (optional)
 
 ## Rust at work
 
+### Are you personally using Rust at work?
+
+Type: select one
+
+- Yes, for the majority of my coding
+- Yes, but I only use it occasionally
+- No (skip to `To what extent is Rust currently being used by your company?`)
+
+> **justification**
+>
+> We want to establish what percentage of those who could possibly use Rust in a professional setting
+> are using Rust in a professional setting. This is most interesting over time.
+> Answers to this question should be combined with whether the respondent has ever used Rust.
+
+
+### Which of the following statements are reasons why you and your team use Rust at work
+
+Type: select all that apply
+
+Statements:
+
+- For its performance (i.e., speed, memory footprint, etc.) characteristics
+- We need precise control over exactly how our software runs
+- Its security and safety properties are important to us
+- It allows us to build relatively correct and bug free software
+- We find it enjoyable or fun to program in Rust
+- We already know Rust so it's our default choice
+- We find it easy to prototype with
+- We must interact with existing Rust code
+
+
+> **justification**
+>
+> The Rust community and potential adopters of Rust have a lot of assumptions of why one would choose Rust for a project.
+> This question can help confirm or challenge our assumptions and see how they change over time.
+
+
+### Which of the following statements apply to your team's experience using Rust at work.
+
+Type: select all that apply
+
+Statements:
+
+- Using Rust has helped us achieve our goals
+- Adopting Rust has been challenging
+- Overall, adopting Rust has slowed down our team
+- Using Rust has been worth the cost of adoption
+- We're likely to use Rust again in the future
+
+> **justification**
+>
+> Future potential adopters may want to know how often other's have encountered success.
+
+### What about your usage of Rust has been challenging?
+
+Type: free form (optional)
+
+> **justification**
+>
+> This an opportunity to learn from adopters at companies what they struggle with when adopting Rust.
+
+
 ### To what extent is Rust currently being used by your company?
 
 Type: select one
 
-- My company uses Rust for a large portion of production projects
-- My company uses Rust for a small portion of production projects
-- My company uses Rust only for non-production projects (e.g., tooling)
-- My company has actively experimented with Rust
-- My company has seriously considered, but not experimented with, using Rust
+- My company makes non-trivial use of Rust (e.g., used in production or in significant tooling)
+- My company has experimented with Rust or is considering using it
 - My company has not seriously considered Rust for any use
 - I am unsure whether my company has considered using or currently uses Rust
 - I don't work for a company or my company does not develop software of any kind [`NEXT`](#rust-in-education)
@@ -374,7 +428,7 @@ Type: select one (optional)
 - 1,000-10,000
 - Over 10,000
 
-> This question is not that interesting on its own, but it can be used as a sort of co-hort for understanding how answers 
+> This question is not that interesting on its own, but it can be used as a sort of cohort for understanding how answers 
 > change depending on the size of the development effort at a company.
 >
 > Previously this question used "employees" instead of "developers". It is more appropriate for us to ask about the amount
@@ -401,8 +455,13 @@ Type: select all that apply (optional)
 - Blockchain
 - Cloud computing applications
 - Cloud computing infrastructure or utilities
+- Command Line Interfaces (CLI)
 - Computer graphics
+- Computer games
+- Computer networking
+- Computer security
 - Data science
+- Database implementation
 - Desktop computer application frontend
 - Desktop computer or mobile phone libraries or services
 - Distributed systems
@@ -410,13 +469,11 @@ Type: select all that apply (optional)
 - Embedded devices (bare metal)
 - HPC (High-performance [Super]Computing)
 - IoT (Internet of Things)
-- Machine learning
+- Machine learning or AI
 - Mobile phone application frontend
-- Computer networking
 - Programming languages and related tools (including compilers, IDEs, standard libraries, etc.)
 - Robotics
-- Computer security
-- Scientific and/or numeric computing
+- Scientific and/or numerical computing
 - Server-side or "backend" application
 - Simulation
 - Web application frontend
@@ -432,80 +489,6 @@ Type: select all that apply (optional)
 > We want to understand the "shape" of Rust usage, and this question tries to get at that
 > by allowing the respondent to select multiple answers.
 
-### Are you using Rust at work?
-
-Type: select one
-
-- Yes, for the majority of my coding
-- Yes, it's one of a number of languages I use and I use it regularly
-- Yes, but I only use it occasionally
-- No [`NEXT`](#rust-in-education)
-
-> **justification**
->
-> We want to establish what percentage of those who could possibly use Rust in a professional setting
-> are using Rust in a professional setting. This is most interesting over time.
-> Answers to this question should be combined with whether the respondent has ever used Rust.
-
-
-### Rate how much the following statements are reasons why your team uses Rust at work
-
-Type: matrix (optional)
-
-Statements:
-
-- For its performance (i.e., speed, memory footprint, etc.) characteristics
-- We need precise control over exactly how our software runs
-- Its security and safety properties are important to us
-- It allows us to build relatively correct and bug free software
-- We find it enjoyable or fun to program in Rust
-- We already know Rust so it's our default choice
-- We find it easy to prototype with
-- We must interact with existing Rust code
-
-Rating:
-
-- Strongly agree
-- Agree
-- Neither agree nor disagree
-- Disagree
-- Strongly disagree
-
-> **justification**
->
-> The Rust community and potential adopters of Rust have a lot of assumptions of why one would choose Rust for a project.
-> This question can help confirm or challenge our assumptions and see how they change over time.
-
-
-### Please rate your agreement with the following statements regarding your team's experience using Rust at work.
-
-Type: matrix (optional)
-
-Statements:
-
-- Using Rust has helped us achieve our goals
-- Adopting Rust has been challenging
-- Overall, adopting Rust has slowed down our team
-- Using Rust has been worth the cost of adoption
-- We're likely to use Rust again in the future
-
-Rating:
-
-- Agree
-- Neither agree nor disagree
-- Disagree
-
-> **justification**
->
-> Future potential adopters may want to know how often other's have encountered success.
-
-### What about your usage of Rust has been challenging?
-
-Type: free form (optional)
-
-> **justification**
->
-> This an opportunity to learn from adopters at companies what they struggle with when adopting Rust.
 
 ## Rust in Education
 
@@ -558,9 +541,9 @@ Type: select all that apply (optional)
 >
 > Would be useful for leadership to understand the community's fears.
 
-### Please rate your agreement with the following statements about Rust.
+### Which of the following statements do you feel about Rust.
 
-Type: matrix (optional)
+Type: select all that apply
 
 Statements:
 
@@ -572,21 +555,15 @@ Statements:
 - Rust makes me more productive
 - Rust is fun to use
 
-Rating:
-
-- Agree
-- Neither agree nor disagree
-- Disagree
-
 > **justification**
 >
 > There are several "truisms" about Rust that we'd like to get perspective on how true these are for users of Rust.
 >
 > Note that answers here can be subject to survivorship bias and so extra care should be taken with interpreting results.
 
-### In your opinion, how do you find the following aspects of Rust?
+### In your opinion, how would you prioritise work on the following aspects of Rust?
 
-Type: matrix (optional)
+Type: shuffle
 
 Aspects:
 
@@ -603,13 +580,6 @@ Aspects:
 - GUI development
 - Rust language and standard library documentation
 
-Options:
-
-- Great
-- Good enough
-- Could be better
-- Seriously lacking
-- Unsure
 
 > **justification**
 >
@@ -653,10 +623,10 @@ Please share only what you are comfortable sharing. This will help us better ser
 Type: select one
 
 - Yes
-- No [`NEXT`](#are-you-a-full--or-part-time-student)
-- I prefer not to say [`NEXT`](#are-you-a-full--or-part-time-student)
+- No
+- I prefer not to say
 
-### Which of the following underrepresented or marginalized groups in technology do you consider yourself a part of?
+### Do you consider yourself part of any of the following underrepresented or marginalized groups?
 
 Please share only what you are comfortable sharing. This will help us better serve underrepresented and marginalized groups, better understand how well our outreach efforts are going, and more.
 
@@ -668,7 +638,8 @@ Type: select all that apply (optional)
 - Language
 - Lesbian, gay, bisexual, queer or otherwise non-heterosexual
 - Non-binary gender
-- Older or younger than the average developers I know
+- Older than the average developers I know
+- Younger than the average developers I know
 - Political beliefs
 - Racial or ethnic minority
 - Religious beliefs
@@ -763,24 +734,20 @@ Type: select all that apply (optional)
 - Spanish
 - English
 - Hindi
-- Bengali
 - Portuguese
 - Russian
 - Japanese
-- Turkish
 - Korean
 - French
 - German
-- Vietnamese
-- Urdu
+- Polish
 - Other (open response)
 
 > **justification**
 >
 > We want to understand *preference* of technical communication and how that differs
 > from their abilities to consume technical communication in English.
-> The languages selected are based on all national languages that are members of
-> the top 20 most spoken languages in the world.
+> The languages selected are those which got 50 or more responses in 2021.
 
 ## Anything else?
 
