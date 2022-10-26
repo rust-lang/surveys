@@ -34,7 +34,7 @@ Type: select all that apply
 - Missing language features
 - Missing libraries
 - Missing tools
-- Too difficult to learn
+- Too difficult or complex to become productive writing it
 - Community was rude, unwelcoming, or otherwise off-putting
 - I prefer to use another language
 - I no longer have the opportunity to use Rust due to factors outside of my control
@@ -62,7 +62,7 @@ Type: select all that apply
 - Too difficult to learn or learning will take too much time
 - Community was rude, unwelcoming, or otherwise off-putting
 - I prefer to use another language
-- Due to factors outside of my control
+- I can't use Rust due to factors outside of my control
 - I haven't got around to it
 - Other
 
@@ -274,7 +274,7 @@ Type: select all that apply (optional)
 
 ## The Rust community
 
-### Roughly how often do you contribute to the Rust community?
+### Roughly how often do you participate in the Rust community?
 
 Type: matrix (optional)
 
@@ -313,7 +313,7 @@ Activities:
 - Attending a Rust conference
 - Attending a Rust meetup or local community event
 - Discussion (issues, pull requests, etc.) on a repository *inside* the rust-lang GitHub organization
-- Discussion (issues, pull requests, etc.) on a repository *outside* of the rust-lang GitHub organization
+- Discussion (issues, pull requests, etc.) on a Rust repository *outside* of the rust-lang GitHub organization
 
 Choices:
 
@@ -342,9 +342,9 @@ Type: free form (optional)
 
 Type: select one
 
-- Yes, through a university, school, or other educational institution,
-- Yes, through my employer, contractor, or consultancy,
-- No [`NEXT`](#your-opinions-about-rust)
+- Yes, through a university, school, or other educational institution
+- Yes, through my employer, contractor, or consultancy
+- No
 
 > **justification**
 >
@@ -368,7 +368,7 @@ Type: select one
 > Answers to this question should be combined with whether the respondent has ever used Rust.
 
 
-### Which of the following statements are reasons why you use Rust at work
+### Which of the following statements are reasons why you use Rust at work?
 
 Type: select all that apply
 
@@ -383,14 +383,13 @@ Statements:
 - We find it easy to prototype with
 - We must interact with existing Rust code
 
-
 > **justification**
 >
 > The Rust community and potential adopters of Rust have a lot of assumptions of why one would choose Rust for a project.
 > This question can help confirm or challenge our assumptions and see how they change over time.
 
 
-### Which of the following statements apply to your experience using Rust at work.
+### Which of the following statements apply to your experience using Rust at work?
 
 Type: select all that apply
 
@@ -436,10 +435,8 @@ Type: select one
 Type: select one (optional)
 
 - Under 10
-- 11-49
-- 50-99
-- 100-500
-- 500-1,000
+- 10-99
+- 100-1,000
 - 1,000-10,000
 - Over 10,000
 
@@ -552,7 +549,7 @@ Type: select all that apply (optional)
 
 ### In your opinion, how would you prioritise work on the following aspects of Rust?
 
-Type: shuffle
+Type: ordered list
 
 Aspects:
 
@@ -569,11 +566,9 @@ Aspects:
 - GUI development
 - Rust language and standard library documentation
 
-
 > **justification**
 >
 > This question gathers data on the communities perceptions of certain aspects of Rust at this point in time.
-
 
 ### Do you agree with the following statements on Rust employment?
 
@@ -635,7 +630,6 @@ Type: select all that apply (optional)
 - Trans
 - Woman or perceived as a woman
 - Other (open response)
-
 
 ### Are you a full- or part-time student?
 
