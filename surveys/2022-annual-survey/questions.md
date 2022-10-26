@@ -44,12 +44,10 @@ Type: select all that apply
 
 Type: free text
 
-
 > **SURVEY FLOW**
 >
-> Skip to `## Your opinions about Rust` section
+> Skip to `### Approximately how many total developers does your company employ?`
 
-TODO there are some questions before this which we could ask non-users, how do we make this work with the software?
 
 ## For non-Rust users
 
@@ -65,7 +63,7 @@ Type: select all that apply
 - Community was rude, unwelcoming, or otherwise off-putting
 - I prefer to use another language
 - Due to factors outside of my control
-- Haven't got around to it
+- I haven't got around to it
 - Other
 
 ### Tell us more:
@@ -74,7 +72,7 @@ Type: free text
 
 > **SURVEY FLOW**
 >
-> Skip to `## Your opinions about Rust` section
+> Skip to `### Approximately how many total developers does your company employ?`
 
 ## Your Rust experience
 
@@ -195,7 +193,7 @@ Type: select all that apply (optional)
 > We specifically care about the runtime environment being targeted. ISA and other machine specifics are
 > not what matters.
 
-### Which version(s) of Rust do you use for local development?
+### Which version(s) of Rust do you use for development (excluding CI and other automated testing)?
 
 Type: select all that apply (optional)
 
@@ -228,7 +226,7 @@ REPEAT
 >
 > See the previous question.
 
-### If you use nightly, why?
+### If you use nightly for any tasks, why?
 
 Type: select all that apply (optional)
 
@@ -273,6 +271,8 @@ Type: select all that apply (optional)
 > If we are curious how far along adoption of rust-analyzer is, we can ask that
 > in a separate question, though this is likely easier to find out through download
 > numbers.
+
+## The Rust community
 
 ### Roughly how often do you contribute to the Rust community?
 
@@ -336,6 +336,21 @@ Type: free form (optional)
 > More detail on the type of situations where people have felt unwelcome can let us better 
 > address these issues in the future.
 
+## Rust in Education
+
+### Are you currently, or have you in the last year, taken a course or training which uses or teaches Rust?
+
+Type: select one
+
+- Yes, through a university, school, or other educational institution,
+- Yes, through my employer, contractor, or consultancy,
+- No [`NEXT`](#your-opinions-about-rust)
+
+> **justification**
+>
+> This question is primarily used to funnel respondents into the more specific questions about the kinds of educational activities they've been a part of.
+
+
 ## Rust at work
 
 ### Are you personally using Rust at work?
@@ -353,7 +368,7 @@ Type: select one
 > Answers to this question should be combined with whether the respondent has ever used Rust.
 
 
-### Which of the following statements are reasons why you and your team use Rust at work
+### Which of the following statements are reasons why you use Rust at work
 
 Type: select all that apply
 
@@ -375,7 +390,7 @@ Statements:
 > This question can help confirm or challenge our assumptions and see how they change over time.
 
 
-### Which of the following statements apply to your team's experience using Rust at work.
+### Which of the following statements apply to your experience using Rust at work.
 
 Type: select all that apply
 
@@ -490,34 +505,28 @@ Type: select all that apply (optional)
 > by allowing the respondent to select multiple answers.
 
 
-## Rust in Education
-
-### Are you currently, or have you in the last year, taken a course or training which uses or teaches Rust?
-
-Type: select one
-
-- Yes
-- No [`NEXT`](#your-opinions-about-rust)
-
-> **justification**
->
-> This question is primarily used to funnel respondents into the more specific questions about the kinds of educational activities they've been a part of.
-
-### Where is/was the course or activity taught?
-
-Type: select one (optional)
-
-- University or other tertiary institute
-- High school or secondary school
-- A course through an online "continuing education" provider (e.g., Udemy, Coursera, edX, LinkedIn Learning, etc.)
-- A bootcamp or other vocational-focused educational institute
-- A short training course offered through your employer or contracted by your employer
-
-> **justification**
->
-> We want to know where Rust is being taught.
-
 ## Your opinions about Rust
+
+### Which of the following statements do you feel about Rust.
+
+Type: select all that apply
+
+Statements:
+
+- Rust provides a real benefit over other programming languages
+- Rust is significantly more complicated to program in than other programming languages
+- Rust requires significantly more effort to learn than other programming languages
+- Rust code tends to contain significantly fewer bugs than equivalent code written in another programming language would have
+- Rust is risky to use in production
+- Rust makes me more productive
+- Rust is fun to use
+
+> **justification**
+>
+> There are several "truisms" about Rust that we'd like to get perspective on how true these are for users of Rust.
+>
+> Note that answers here can be subject to survivorship bias and so extra care should be taken with interpreting results.
+
 
 ### What are your biggest worries for the future of Rust?
 
@@ -540,26 +549,6 @@ Type: select all that apply (optional)
 > **justification**
 >
 > Would be useful for leadership to understand the community's fears.
-
-### Which of the following statements do you feel about Rust.
-
-Type: select all that apply
-
-Statements:
-
-- Rust provides a real benefit over other programming languages
-- Rust is significantly more complicated to program in than other programming languages
-- Rust requires significantly more effort to learn than other programming languages
-- Rust code tends to contain significantly fewer bugs than equivalent code written in another programming language would have
-- Rust is risky to use in production
-- Rust makes me more productive
-- Rust is fun to use
-
-> **justification**
->
-> There are several "truisms" about Rust that we'd like to get perspective on how true these are for users of Rust.
->
-> Note that answers here can be subject to survivorship bias and so extra care should be taken with interpreting results.
 
 ### In your opinion, how would you prioritise work on the following aspects of Rust?
 
@@ -705,10 +694,6 @@ Type: select one (optional)
 > We'd like to get a geographic understanding of where the community is. The form of the question allows us to be fairly precise about this
 > though there will still be some challenges (e.g., someone who lives in East Russia has similar timezones to East Asia not West Russia).
 
-### As you selected "Other" from the list of countries above, please enter your territory of residence below:
-
-Type: free form (optional)
-
 ### In what ways are you comfortable communicating about technical topics in English?
 
 Type: select all that apply (optional)
@@ -731,16 +716,16 @@ Type: select all that apply (optional)
 Type: select all that apply (optional)
 
 - Chinese
-- Spanish
 - English
-- Hindi
-- Portuguese
-- Russian
-- Japanese
-- Korean
 - French
 - German
+- Hindi
+- Japanese
+- Korean
 - Polish
+- Portuguese
+- Russian
+- Spanish
 - Other (open response)
 
 > **justification**
