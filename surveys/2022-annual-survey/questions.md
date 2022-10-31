@@ -103,7 +103,6 @@ Type: select one
 - I can write simple programs in Rust
 - I can write useful, non-trivial programs, but it is a struggle
 - I am productive writing Rust
-- I am an expert
 
 > **justification**
 >
