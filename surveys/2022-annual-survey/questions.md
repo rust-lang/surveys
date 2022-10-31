@@ -570,6 +570,32 @@ Aspects:
 >
 > This question gathers data on the communities perceptions of certain aspects of Rust at this point in time.
 
+### Do you agree with the following statements on Rust stability?
+
+Type: matrix (optional)
+
+Statements:
+
+- I can upgrade the *stable* compiler version without fear of my code failing to compile
+- I can upgrade the *nightly* compiler version without fear of my code failing to compile
+- I can upgrade the *stable* compiler version without fear of my code taking longer to compile
+- I can upgrade the *nightly* compiler version without fear of my code taking longer to compile
+- Upgrading to a new *stable* compiler version requires either no changes or extremely small & easy changes to my code
+- Upgrading to a new *nightly* compiler version requires either no changes or extremely small & easy changes to my code
+
+Rating:
+
+- Agree
+- Neither agree nor disagree
+- Disagree
+
+> **justification**
+>
+> When want to get an impression of how stable the compiler *feels*. Impressions are more important than hard numbers as
+> not all users define stability in the same way the compiler does. For example, experiencing compiler performance regressions
+> in a new version of the compiler isn't breaking official stability guarantees but it can feel just as painful as an
+> actual breaking change.
+
 ### Do you agree with the following statements on Rust employment?
 
 Type: matrix (optional)
