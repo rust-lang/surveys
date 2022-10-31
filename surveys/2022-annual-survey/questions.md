@@ -215,16 +215,6 @@ Type: select all that apply (optional)
 > version that was released ~1 year prior. Additionally, at the time of this writing
 > all major Linux distros have a version equal to or newer than this version.
 
-### Which version(s) of Rust do you use in automated testing (e.g., CI)?
-
-Type: select all that apply (optional)
-
-REPEAT
-
-> **justification**
->
-> See the previous question.
-
 ### If you use nightly for any tasks, why?
 
 Type: select all that apply (optional)
