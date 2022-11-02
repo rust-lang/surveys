@@ -103,7 +103,6 @@ Type: select one
 - I can write simple programs in Rust
 - I can write useful, non-trivial programs, but it is a struggle
 - I am productive writing Rust
-- I am an expert
 
 > **justification**
 >
@@ -199,8 +198,8 @@ Type: select all that apply (optional)
 
 - Current stable version
 - Previous stable version
-- A specific version of stable Rust equal to or newer than 1.47
-- A specific version of stable Rust older than 1.47
+- A specific version of stable Rust equal to or newer than 1.57
+- A specific version of stable Rust older than 1.57
 - Beta release
 - Latest nightly
 - A specific version of nightly
@@ -212,19 +211,9 @@ Type: select all that apply (optional)
 >
 > Together with the following question, we can better determine what the spread of 
 > version usage is across the community.
-> We ask specifically about version 1.47 since it is, at the time of the survey, the 
+> We ask specifically about version 1.57 since it is, at the time of the survey, the 
 > version that was released ~1 year prior. Additionally, at the time of this writing
 > all major Linux distros have a version equal to or newer than this version.
-
-### Which version(s) of Rust do you use in automated testing (e.g., CI)?
-
-Type: select all that apply (optional)
-
-REPEAT
-
-> **justification**
->
-> See the previous question.
 
 ### If you use nightly for any tasks, why?
 
@@ -581,6 +570,27 @@ Aspects:
 > **justification**
 >
 > This question gathers data on the communities perceptions of certain aspects of Rust at this point in time.
+
+### Do you agree with the following statements on Rust stability?
+
+Type: matrix (optional)
+
+Statements:
+
+- I can upgrade the *stable* compiler version without fear of my code failing to compile
+- I can upgrade the *nightly* compiler version without fear of my code failing to compile
+- Upgrading to a new *stable* compiler version requires either no changes or extremely small & easy changes to my code
+- Upgrading to a new *nightly* compiler version requires either no changes or extremely small & easy changes to my code
+
+Rating:
+
+- Agree
+- Disagree
+
+> **justification**
+>
+> When want to get an impression of how stable the compiler *feels*. Impressions are more important than hard numbers as
+> not all users define stability in the same way the compiler does.
 
 ### Do you agree with the following statements on Rust employment?
 
