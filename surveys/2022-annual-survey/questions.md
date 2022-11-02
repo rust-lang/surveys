@@ -46,7 +46,7 @@ Type: free text
 
 > **SURVEY FLOW**
 >
-> Skip to `### Approximately how many total developers does your company employ?`
+> Skip to `### To what extent is Rust currently being used by your company?`
 
 
 ## For non-Rust users
@@ -72,7 +72,7 @@ Type: free text
 
 > **SURVEY FLOW**
 >
-> Skip to `### Approximately how many total developers does your company employ?`
+> Skip to `### To what extent is Rust currently being used by your company?`
 
 ## Your Rust experience
 
