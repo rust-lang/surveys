@@ -245,6 +245,18 @@ Type: select all that apply (optional)
 > We'd like to know what are the common reasons people use nightly
 > so that we can better understand where testers are coming from.
 
+### What is the oldest version of Rust you use for any development task?
+
+Excluding testing to ensure your code works on that compiler version.
+
+Type: select one
+
+Every version from 1.65 to 1.0 in descending order, and "a pre-1.0 version"
+
+> **justification**
+>
+> To get real data on how many people use older versions of the toolchain to
+> inform discussion on MSRVs.
 
 ### Which editor or IDE setup do you use with Rust code on a regular basis?
 
