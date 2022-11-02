@@ -238,7 +238,7 @@ Type: select all that apply (optional)
 
 Excluding testing to ensure your code works on that compiler version.
 
-Type: select one
+Type: select one (optional)
 
 Every version from 1.65 to 1.0 in descending order, and "a pre-1.0 version"
 
@@ -341,7 +341,7 @@ Type: free form (optional)
 
 ### Are you currently, or have you in the last year, taken a course or training which uses or teaches Rust?
 
-Type: select one
+Type: select one (optional)
 
 - Yes, through a university, school, or other educational institution
 - Yes, through my employer, contractor, or consultancy
@@ -371,7 +371,7 @@ Type: select one
 
 ### Which of the following statements are reasons why you use Rust at work?
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 Statements:
 
@@ -392,7 +392,7 @@ Statements:
 
 ### Which of the following statements apply to your experience using Rust at work?
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 Statements:
 
@@ -423,7 +423,7 @@ Type: select one
 - My company has experimented with Rust or is considering using it
 - My company has not seriously considered Rust for any use
 - I am unsure whether my company has considered using or currently uses Rust
-- I don't work for a company or my company does not develop software of any kind [`NEXT`](#rust-in-education)
+- I don't work for a company or my company does not develop software of any kind [`NEXT`](#your-opinions-about-rust)
 
 > **justification**
 >
@@ -507,7 +507,7 @@ Type: select all that apply (optional)
 
 ### Which of the following statements do you feel about Rust.
 
-Type: select all that apply
+Type: select all that apply (optional)
 
 Statements:
 
@@ -550,7 +550,7 @@ Type: select all that apply (optional)
 
 ### In your opinion, how would you prioritise work on the following aspects of Rust?
 
-Type: ordered list
+Type: ordered list (optional)
 
 Aspects:
 
@@ -655,7 +655,7 @@ Type: select all that apply (optional)
 
 ### Are you a full- or part-time student?
 
-Type: select one
+Type: select one (optional)
 
 - No
 - Yes, in secondary/high school
@@ -680,7 +680,7 @@ Type: select one
 
 ### Do you write or design software in your work?
 
-Type: select one
+Type: select one (optional)
 
 - Yes, primarily as an individual contributor (i.e., non-manager)
 - I primarily manage others who do
