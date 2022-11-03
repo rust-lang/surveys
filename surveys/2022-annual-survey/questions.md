@@ -505,7 +505,7 @@ Type: select all that apply (optional)
 
 ## Your opinions about Rust
 
-### Which of the following statements do you feel about Rust.
+### Which of the following statements about Rust do you feel are true?
 
 Type: select all that apply (optional)
 
