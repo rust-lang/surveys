@@ -354,13 +354,28 @@ Type: select one (optional)
 
 ## Rust at work
 
+### Are you employed full- or part-time (including paid internships)?
+
+Type: select one
+
+- Yes
+- No [`NEXT`](#your-opinions-about-rust)
+
+### Do you write or design software in your work?
+
+Type: select one (optional)
+
+- Yes, primarily as an individual contributor (i.e., non-manager)
+- I primarily manage others who do
+- No [`NEXT`](#your-opinions-about-rust)
+
 ### Are you personally using Rust at work?
 
 Type: select one
 
 - Yes, for the majority of my coding
 - Yes, but I only use it occasionally
-- No (skip to `To what extent is Rust currently being used by your company?`)
+- No [`NEXT`](#to-what-extent-is-rust-currently-being-used-by-your-company)
 
 > **justification**
 >
@@ -421,42 +436,13 @@ Type: select one
 
 - My company makes non-trivial use of Rust (e.g., used in production or in significant tooling)
 - My company has experimented with Rust or is considering using it
-- My company has not seriously considered Rust for any use
-- I am unsure whether my company has considered using or currently uses Rust
-- I don't work for a company or my company does not develop software of any kind [`NEXT`](#your-opinions-about-rust)
+- My company has not seriously considered Rust for any use [`NEXT`](#approximately-how-many-total-developers-does-your-company-employ)
+- I am unsure whether my company has considered using or currently uses Rust [`NEXT`](#approximately-how-many-total-developers-does-your-company-employ)
 
 > **justification**
 >
 > We want to establish how reliant companies are on Rust.
 
-### Approximately how many total developers does your company employ?
-
-**Note**: don't worry about being exact here! Go with you gut.
-
-Type: select one (optional)
-
-- Under 10
-- 10-99
-- 100-1,000
-- 1,000-10,000
-- Over 10,000
-
-> This question is not that interesting on its own, but it can be used as a sort of cohort for understanding how answers 
-> change depending on the size of the development effort at a company.
->
-> Previously this question used "employees" instead of "developers". It is more appropriate for us to ask about the amount
-> of developers at a company vs. the amount of people employed in total.
-
-### Is your company planning on hiring Rust developers in the next year?
-
-Type: select one (optional)
-
-- Yes
-- No
-- I don't know
-
-> This question assess hiring sentiment. Although there is intrinsic uncertainty, it is easy to answer and forward looking.
-> It will also be interesting to see what the demand for Rust skills from companies is over time.
 
 ### In what technology domain(s) is Rust used at your company?
 
@@ -502,6 +488,34 @@ Type: select all that apply (optional)
 > We want to understand the "shape" of Rust usage, and this question tries to get at that
 > by allowing the respondent to select multiple answers.
 
+### Approximately how many total developers does your company employ?
+
+**Note**: don't worry about being exact here! Go with you gut.
+
+Type: select one (optional)
+
+- Under 10
+- 10-99
+- 100-1,000
+- 1,000-10,000
+- Over 10,000
+
+> This question is not that interesting on its own, but it can be used as a sort of cohort for understanding how answers
+> change depending on the size of the development effort at a company.
+>
+> Previously this question used "employees" instead of "developers". It is more appropriate for us to ask about the amount
+> of developers at a company vs. the amount of people employed in total.
+
+### Is your company planning on hiring Rust developers in the next year?
+
+Type: select one (optional)
+
+- Yes
+- No
+- I don't know
+
+> This question assess hiring sentiment. Although there is intrinsic uncertainty, it is easy to answer and forward looking.
+> It will also be interesting to see what the demand for Rust skills from companies is over time.
 
 ## Your opinions about Rust
 
@@ -670,21 +684,6 @@ Type: select one (optional)
 > This will be important for cohort analysis. In particular, we want to
 > understand how students at different points in their education view
 > topics related to Rust.
-
-### Are you employed full- or part-time (including paid internships)?
-
-Type: select one
-
-- Yes
-- No [`NEXT`](#how-long-have-you-been-programming-in-any-language-for-any-reason)
-
-### Do you write or design software in your work?
-
-Type: select one (optional)
-
-- Yes, primarily as an individual contributor (i.e., non-manager)
-- I primarily manage others who do
-- No 
 
 ### How long have you been programming (in any language, for any reason)?
 
