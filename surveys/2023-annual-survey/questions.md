@@ -572,6 +572,7 @@ Type: ordered list (optional)
 
 Aspects:
 
+- Runtime performance
 - Compile times
 - Binary size
 - Memory usage (i.e., how much RAM rustc uses when compiling)
