@@ -146,7 +146,8 @@ systems you target.
 Type: select all that apply (optional)
 
 - Linux
-- Windows
+- Windows 10/11
+- Windows 8 or older
 - Windows Subsystem for Linux
 - Mac OS
 - Other (open response)
@@ -171,7 +172,8 @@ for development nor which specific architectures (e.g., x86 vs ARM) you target.
 Type: select all that apply (optional)
 
 - Linux (desktop or server)
-- Windows
+- Windows 10/11
+- Windows 8 or older
 - Mac OS
 - iOS
 - Android
