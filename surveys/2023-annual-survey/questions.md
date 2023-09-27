@@ -121,11 +121,11 @@ some other goal). If your learning process spans several of the listed time peri
 Type: select one (optional)
 
 - I'm still *actively* trying to learn Rust
-- During 2022
-- During 2020 or 2021
-- During 2018 or 2019
-- During 2016 or 2017
-- During 2015 or before
+- During 2023
+- During 2021 or 2022
+- During 2019 or 2020
+- During 2017 or 2018
+- During 2016 or before
 
 > **justification**
 >
