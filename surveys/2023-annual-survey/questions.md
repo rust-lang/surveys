@@ -240,7 +240,7 @@ Excluding testing to ensure your code works on that compiler version.
 
 Type: select one (optional)
 
-Every version from 1.65 to 1.0 in descending order, and "a pre-1.0 version"
+Every version from 1.74 to 1.0 in descending order, and "a pre-1.0 version"
 
 > **justification**
 >
