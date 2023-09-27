@@ -226,6 +226,7 @@ Type: select all that apply (optional)
 - For a particular language feature or set of language features I need
 - I like to have access to all the latest features
 - To help test the nightly version for bugs
+- To provide design feedback on nightly features
 - For testing in CI
 - A crate dependency I use requires it
 - A tool I use requires it
