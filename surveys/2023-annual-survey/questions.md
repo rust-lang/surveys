@@ -253,7 +253,8 @@ Type: select all that apply (optional)
 
 - VS Code
 - vi/vim/neovim
-- IntelliJ/CLion/other JetBrains IDE
+- IntelliJ/CLion/other JetBrains IDE + Rust plugin
+- Rust Rover (dedicated IntelliJ Rust IDE)
 - Emacs
 - Sublime Text
 - Visual Studio
