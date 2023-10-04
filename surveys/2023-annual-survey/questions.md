@@ -658,7 +658,8 @@ Please share only what you are comfortable sharing. This will help us better ser
 Type: select all that apply (optional)
 
 - Cultural beliefs
-- Disabled or person with disability (including physical, mental, and other)
+- Disabled (including physically, mentally or other)
+- Neurodivergent
 - Educational background
 - Language
 - Lesbian, gay, bisexual, queer or otherwise non-heterosexual
