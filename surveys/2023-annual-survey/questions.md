@@ -658,7 +658,7 @@ Please share only what you are comfortable sharing. This will help us better ser
 Type: select all that apply (optional)
 
 - Cultural beliefs
-- Disabled (including physically, mentally or other)
+- Disabled (physically, mentally or otherwise)
 - Neurodivergent
 - Educational background
 - Language
