@@ -664,8 +664,8 @@ Type: select all that apply (optional)
 - Language
 - Lesbian, gay, bisexual, queer or otherwise non-heterosexual
 - Non-binary gender
-- Older than the average developers I know
-- Younger than the average developers I know
+- Older than the average developer I know
+- Younger than the average developer I know
 - Political beliefs
 - Racial or ethnic minority
 - Religious beliefs
