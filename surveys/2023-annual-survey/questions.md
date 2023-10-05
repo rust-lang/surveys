@@ -30,7 +30,6 @@ Type: select one
 
 Type: select all that apply
 
-- Rust did not help me achieve my goals
 - Missing language features
 - Missing libraries
 - Missing tools
