@@ -322,7 +322,7 @@ Activities:
 Choices:
 
 - I feel welcome
-- I feel neutral
+- I do not feel particularly welcome or unwelcome
 - I feel unwelcome
 - I've never participated in this activity
 
