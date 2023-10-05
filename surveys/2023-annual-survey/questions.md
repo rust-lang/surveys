@@ -98,7 +98,7 @@ Type: select one
 
 Type: select one
 
-- I can't read or write Rust
+- I can't write Rust code
 - I can write simple programs in Rust
 - I can write useful, non-trivial programs, but it is a struggle
 - I am productive writing Rust
