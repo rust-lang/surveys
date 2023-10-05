@@ -140,7 +140,7 @@ Type: select one (optional)
 
 ### Which operating systems do you use regularly for Rust development?
 
-**Note**: this is specifically about which systems you use for development *not* all the 
+**Note**: this is specifically about which systems you personally use for development *not* all the 
 systems you target.
 
 Type: select all that apply (optional)
