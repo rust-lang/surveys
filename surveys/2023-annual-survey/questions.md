@@ -229,6 +229,7 @@ Type: select all that apply (optional)
 - For testing in CI
 - A crate dependency I use requires it
 - A tool I use requires it
+- To have faster compile times
 - Other (open response)
 
 > **justification**
