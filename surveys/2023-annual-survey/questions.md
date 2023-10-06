@@ -258,7 +258,7 @@ Type: select all that apply (optional)
 - vi/vim/neovim
 - IntelliJ/CLion/other JetBrains IDE + Rust plugin
 - Rust Rover (dedicated IntelliJ Rust IDE)
-- Emacs
+- Emacs (or derivatives like Doom Emacs, Spacemacs, etc.)
 - Sublime Text
 - Visual Studio
 - Xcode
