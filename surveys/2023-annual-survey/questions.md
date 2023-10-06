@@ -315,6 +315,7 @@ Activities:
 
 - *Official* Rust community forums or chats (users.rust-lang.org, internals.rust-lang.org, the official Rust Discord, or the Rust Zulip)
 - *Unofficial* Rust community forums or chats (e.g., reddit.com/r/rust, Hacker News, the Rust *Community* Discord, etc.)
+- Community focused on a specific area of Rust software development (e.g. game development, audio, etc.)
 - Attending a Rust conference
 - Attending a Rust meetup or local community event
 - Discussion (issues, pull requests, etc.) on a repository *inside* the rust-lang GitHub organization
