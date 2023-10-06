@@ -585,8 +585,6 @@ Aspects:
 - Debugging experience
 - Available tools and support
 - New language features
-- Async programming
-- GUI development
 - Rust language and standard library documentation
 
 > **justification**
