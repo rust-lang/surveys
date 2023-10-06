@@ -516,7 +516,8 @@ Type: select one (optional)
 Type: select one (optional)
 
 - Yes
-- No
+- No (it is planning to hire other developers)
+- No (it is not planning to hire any developers)
 - I don't know
 
 > This question assess hiring sentiment. Although there is intrinsic uncertainty, it is easy to answer and forward looking.
