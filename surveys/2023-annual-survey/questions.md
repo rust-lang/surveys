@@ -715,8 +715,8 @@ Type: select one (optional)
 
 > **justification**
 >
-> We'd like to get a geographic understanding of where the community is. The form of the question allows us to be fairly precise about this
-> though there will still be some challenges (e.g., someone who lives in East Russia has similar timezones to East Asia not West Russia).
+> We'd like to get a geographic understanding of where the community is. To have more structure, a free-form answer
+> is not used, and instead we use the country definition according to UN.
 
 ### In what ways are you comfortable communicating about technical topics in English?
 
