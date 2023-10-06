@@ -583,7 +583,9 @@ Aspects:
 - Compiler error messages
 - IDE experience
 - Debugging experience
-- Available tools and support
+- Documentation (rustdoc, docs.rs)
+- Build system (cargo)
+- Package management (crates.io)
 - New language features
 - Rust language and standard library documentation
 
