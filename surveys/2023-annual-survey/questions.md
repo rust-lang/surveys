@@ -559,6 +559,7 @@ Type: select all that apply (optional)
 - Superseded by an alternative
 - Becomes too complex
 - Tools and documentation are not accessible enough (e.g., due to language or incompatibility with screen readers)
+- Rust Foundation not supporting the Rust project properly (e.g. in financial, infrastructure, legal aspects)
 - Project governance does not scale to match the size/requirements of the community
 - Developers/maintainers of the language are not properly supported
 - I'm not worried
