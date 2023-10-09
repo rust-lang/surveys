@@ -634,6 +634,20 @@ Aspects:
 >
 > cargo team expressed interest in this, see https://rust-lang.zulipchat.com/#narrow/stream/246057-t-cargo/topic/Rust.20survery.202023/near/393816653
 
+### How do you download crates to build Rust projects?
+
+Type: matrix (optional)
+
+Aspects:
+- I use crates.io
+- I use a custom/local/company registry
+- I use a mirror of crates.io
+- I don't know
+
+> **justification**
+>
+> It could be interesting to know how many people use crates.io vs some custom/local/company registry, and how many people are even aware of what registry do they use. See issue surveys#236.
+
 ### Do you agree with the following statements on Rust stability?
 
 Type: matrix (optional)
