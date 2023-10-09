@@ -619,6 +619,52 @@ Aspects:
 >
 > This question gathers data on the communities perceptions of certain aspects of Rust at this point in time.
 
+### Which unimplemented or (nightly only) features are you looking for to be stabilized?
+
+Please mention here features for the *Rust compiler* that are currently behind a feature gate (only available using an unstable/nightly release of the Rust compiler) or a feature that is missing and in your opinion would be beneficial to the Rust ecosystem or to your work. This list excludes other tooling around the compiler such as cargo, rustup, rustfmt, etc.
+
+Type: ordered list (optional)
+
+Nightly or unstable feature:
+
+- I wish the Rust project to not add major new features (or slow down the pace of development)
+- Specialization ([RFC#1210](https://github.com/rust-lang/rust/issues/31844))
+- Generators/coroutines ([RFC#2033](https://github.com/rust-lang/rust/issues/43122))
+- Async closures ([RFC#2532](https://github.com/rust-lang/rust/issues/62290))
+- If/while let chains ([eRFC#2497](https://github.com/rust-lang/rust/issues/53667))
+- Try blocks ([RFC#243](https://github.com/rust-lang/rust/issues/31436))
+- Never type ([RFC#1216](https://github.com/rust-lang/rust/issues/35121))
+- Improved traits (trait alias, implied bounds, associated type defaults)
+- Improved const (generic const expressions, const expr for custom types, const trait methods)
+- Compile time reflection (variadic generics)
+- Enum variant types ([RFC#2593](https://github.com/rust-lang/lang-team/issues/122))
+- Allocator trait, better OOM handling (https://github.com/rust-lang/rust/issues/32838)
+- Stable ABI (https://github.com/rust-lang/rust/issues/111423)
+- Other (please specify)
+
+> **justification**
+>
+> Allow the cohort to mention specific language features they might be eagerly waiting for, see https://github.com/rust-lang/surveys/pull/234/files#r1347633041
+
+### Which of these problems do you recall encountering within the last year?
+
+Type: select all that apply (optional)
+
+- Implementing things on tuples
+- Splitting things across crates
+- Having to do iterator implementations manually
+- Not being able to do enough in const fn
+- Needing to drop down to C ABI for rust plugins
+- Async
+- Traits and generics
+- Borrow checker
+- Macros
+- Other (please specify)
+
+> **justification**
+>
+> Conversely, try asking which /problems/ they encountered and let the Rust project figure out what is needed to improve in these areas
+
 ### How do you build your Rust projects?
 
 Type: select all that apply (optional)
