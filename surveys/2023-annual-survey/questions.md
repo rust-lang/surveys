@@ -94,7 +94,7 @@ Type: select one
 > those who program once a week but always in Rust and those who program daily but
 > use Rust once a week.
 
-### On average, how often do you do coding/design work in general (i.e. excluding Rust)?
+### On average, how often do you do coding/design work in general?
 
 Type: select one
 
