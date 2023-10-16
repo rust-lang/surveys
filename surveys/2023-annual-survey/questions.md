@@ -356,6 +356,18 @@ Type: select one (optional)
 >
 > This question is primarily used to funnel respondents into the more specific questions about the kinds of educational activities they've been a part of.
 
+### If you consumed learning material about Rust, which kind of material did you consume?
+
+Type: select all that apply (optional)
+
+- Books ("The Rust Programming Language", "Rust for Rustaceans", etc.)
+- Online exercises (Rustlings, Rust by Example, etc.)
+- Videos
+- Online courses, webinars
+- Other (please specify)
+
+> **justification**
+> Justification: getting data here seems helpful for guiding users / recommending public content.
 
 ## Rust at work
 
