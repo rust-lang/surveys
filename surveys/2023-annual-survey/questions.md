@@ -360,7 +360,7 @@ Type: select one (optional)
 
 Type: select all that apply (optional)
 
-- Books (TRPL, Rust for Rustaceans, etc.)
+- Books ("The Rust Programming Language", "Rust for Rustaceans", etc.)
 - Online exercises (Rustlings, Rust by Example, etc.)
 - Videos
 - Online courses, webinars
