@@ -356,6 +356,12 @@ Type: select one (optional)
 >
 > This question is primarily used to funnel respondents into the more specific questions about the kinds of educational activities they've been a part of.
 
+### If you took a public course, which one was it?
+
+Type: free text
+
+> **justification**
+> Justification: getting data here seems helpful for guiding users / recommending public content.
 
 ## Rust at work
 
