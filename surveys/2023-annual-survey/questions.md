@@ -619,6 +619,21 @@ Aspects:
 >
 > This question gathers data on the communities perceptions of certain aspects of Rust at this point in time.
 
+### How do you build your Rust projects?
+
+Type: select all that apply (optional)
+
+Aspects:
+
+- I use Cargo
+- I use some other build system
+- I combine Cargo and another build system
+- If you combine Cargo with (or just use) other build systems, which ones? (open response)
+
+> **justification**
+>
+> cargo team expressed interest in this, see https://rust-lang.zulipchat.com/#narrow/stream/246057-t-cargo/topic/Rust.20survery.202023/near/393816653
+
 ### Do you agree with the following statements on Rust stability?
 
 Type: matrix (optional)
