@@ -596,7 +596,7 @@ Aspects:
 
 ### How do you build your Rust projects?
 
-Type: select one (optional)
+Type: select all that apply (optional)
 
 Aspects:
 
