@@ -292,7 +292,7 @@ Type: select all that apply (optional)
 
 ## The Rust community
 
-### Roughly how often do you participate in the Rust community?
+### Roughly how often do you engage in the following Rust community activities?
 
 Type: matrix (optional)
 
@@ -320,19 +320,19 @@ Frequency:
 > We want to understand the nature of contribution to the Rust project both
 > to better understand the shape of community involvement and for cohort analysis.
 
-### How do you feel in the Rust community?
+### What has your experience been like in the following Rust community spaces?
 
 Type: matrix
 
-Activities:
+Community Spaces:
 
 - *Official* Rust community forums or chats (users.rust-lang.org, internals.rust-lang.org, the official Rust Discord, or the Rust Zulip)
 - *Unofficial* Rust community forums or chats (e.g., reddit.com/r/rust, Hacker News, the Rust *Community* Discord, etc.)
 - Community focused on a specific area of Rust software development (e.g. game development, audio, etc.)
-- Attending a Rust conference
-- Attending a Rust meetup or local community event
-- Discussion (issues, pull requests, etc.) on a repository *inside* the rust-lang GitHub organization
-- Discussion (issues, pull requests, etc.) on a Rust repository *outside* of the rust-lang GitHub organization
+- Rust conferences
+- Rust meetups or local community events
+- Discussions (issues, pull requests, etc.) on a repository *inside* the rust-lang GitHub organization
+- Discussions (issues, pull requests, etc.) on a Rust repository *outside* of the rust-lang GitHub organization
 
 Choices:
 
@@ -357,7 +357,7 @@ Type: free form (optional)
 
 ## Rust in Education
 
-### Are you currently, or have you in the last year, taken a course or training which uses or teaches Rust?
+### Are you currently taking a course that uses or teaches Rust OR have you taken a course of this type in the last year?
 
 Type: select one (optional)
 
@@ -423,7 +423,7 @@ Statements:
 - For its performance (i.e., speed, memory footprint, etc.) characteristics
 - We need precise control over exactly how our software runs
 - Its security and safety properties are important to us
-- It allows us to build relatively correct and bug free software
+- It allows us to build relatively correct and bug-free software
 - We find it enjoyable or fun to program in Rust
 - We already know Rust so it's our default choice
 - We find it easy to prototype with
@@ -476,10 +476,11 @@ Type: select one
 
 ### In what technology domain(s) is Rust used at your company?
 
-If you've previously answered that your company is not actively using Rust, you can leave this question blank.
+~~If you've previously answered that your company is not actively using Rust, you can leave this question blank.~~
+>> **Foundation justification: We'll be able to manage skip logic when setting up the survey, so there's no need to include this.**
 
 Type: select all that apply (optional)
-
+>> **Foundation note: If there are any that can be assumed in "other" I think that will be better for UI**
 - Audio programming
 - Blockchain
 - Cloud computing applications
@@ -520,7 +521,9 @@ Type: select all that apply (optional)
 
 ### Approximately how many total developers does your company employ?
 
-**Note**: don't worry about being exact here! Go with you gut.
+**Note**: Don't worry about being precise here! Go with your instinct.
+
+>> **Foundation justification: "gut" might not be cross-cultural**
 
 Type: select one (optional)
 
@@ -575,7 +578,7 @@ Statements:
 
 Type: select all that apply (optional)
 
-- Not enough usage in industry
+- Not enough usage in the tech industry
 - Too much interest from big companies
 - Not enough open source contributions to the ecosystem
 - Doesn't add a specific feature I want
@@ -715,13 +718,15 @@ Rating:
 > When want to get an impression of how stable the compiler *feels*. Impressions are more important than hard numbers as
 > not all users define stability in the same way the compiler does.
 
-### Do you agree with the following statements on Rust employment?
+### Please share your assessment of the following statements on Rust employment.
+
+>> **Foundation justification: This wording seems more fitted to the question/action being asked.**
 
 Type: matrix (optional)
 
 Statements:
 
-- It is easy for qualified applicants to find jobs which use Rust for the majority of programming
+- It is easy for qualified applicants to find jobs that use Rust for the majority of programming
 - Existing Rust jobs are attractive
 
 Rating:
@@ -739,15 +744,29 @@ Rating:
 
 See [who](./design/who.md).
 
-The following are primarily for cohort analysis, secondarily for understanding the shape of the community.
+Your responses to the following questions will help our reviewers conduct cohort analyses and help us better understand the Rust community. Please answer according to your comfort level.  
 
-For methodological purposes, the bulk of the demographics should be at the end of the survey (unless acting as filter/flow questions above).
+~~For methodological purposes, the bulk of the demographics should be at the end of the survey (unless acting as filter/flow questions above).
 They're both easy to complete (beneficial at the end) and somewhat personal (but at this point folks are invested and we've built 'trust').
-Can also be problematic at start if we're asking all easy, personal questions and then get to the harder ones - easy to drop out.
+Can also be problematic at start if we're asking all easy, personal questions and then get to the harder ones - easy to drop out.~~
 
-### Do you consider yourself a member of a group which is underrepresented or marginalized in technology?
+### Do you hold a leadership role in the Rust Project or are you otherwise involved in strategic decision-making about Rust?
 
-Please share only what you are comfortable sharing. This will help us better serve underrepresented and marginalized groups, better understand how well our outreach efforts are going, and more.
+Type: Select one, conditional
+
+- Yes
+(Select all that apply)
+> - I consider myself to be in a leadership position within the Rust Project
+> - I am a member of a Rust Project Team and/or Working Group
+> - No
+> - I prefer not to say
+
+>> **Foundation justification: This will allow us to better understand who is participating in this survey and what experiences they might be applying to their answers (without requiring PII). We think it should be a required question.
+
+
+### Do you consider yourself a member of a group that is underrepresented or marginalized in technology?
+
+~~Please share only what you are comfortable sharing. This will help us better serve underrepresented and marginalized groups, better understand how well our outreach efforts are going, and more.~~
 
 Type: select one
 
@@ -755,11 +774,13 @@ Type: select one
 - No
 - I prefer not to say
 
-### Do you consider yourself part of any of the following underrepresented or marginalized groups?
+### Which of the following underrepresented or marginalized groups do you identify with?
 
-Please share only what you are comfortable sharing. This will help us better serve underrepresented and marginalized groups, better understand how well our outreach efforts are going, and more.
+~~Please share only what you are comfortable sharing. This will help us better serve underrepresented and marginalized groups, better understand how well our outreach efforts are going, and more.~~ 
 
-Type: select all that apply (optional)
+Type: Conditional select all that apply (optional)
+
+>> **Foundation justification for change: We shouldn't require people to answer this question/see it if they answered no or prefer not to say. Each selection should trigger a "Please add any further descriptions or notes (optional)" freeform box as this will provide us with meaningful information and insight into the community for those who opt to leave notes. We are opting to suggest this freeform box idea instead of sub-selections as the latter would require us to pick and choose which would have further options which would be a strange design and possibly make people feel disregarded. This conditional question should be required for anyone who answered "Yes" to the previous question.**
 
 - Cultural beliefs
 - Disabled (physically, mentally or otherwise)
