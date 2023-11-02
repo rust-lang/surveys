@@ -476,11 +476,8 @@ Type: select one
 
 ### In what technology domain(s) is Rust used at your company?
 
-~~If you've previously answered that your company is not actively using Rust, you can leave this question blank.~~
->> **Foundation justification: We'll be able to manage skip logic when setting up the survey, so there's no need to include this.**
-
 Type: select all that apply (optional)
->> **Foundation note: If there are any that can be assumed in "other" I think that will be better for UI**
+
 - Audio programming
 - Blockchain
 - Cloud computing applications
@@ -522,8 +519,6 @@ Type: select all that apply (optional)
 ### Approximately how many total developers does your company employ?
 
 **Note**: Don't worry about being precise here! Go with your instinct.
-
->> **Foundation justification: "gut" might not be cross-cultural**
 
 Type: select one (optional)
 
@@ -720,8 +715,6 @@ Rating:
 
 ### Please share your assessment of the following statements on Rust employment.
 
->> **Foundation justification: This wording seems more fitted to the question/action being asked.**
-
 Type: matrix (optional)
 
 Statements:
@@ -746,10 +739,6 @@ See [who](./design/who.md).
 
 Your responses to the following questions will help our reviewers conduct cohort analyses and help us better understand the Rust community. Please answer according to your comfort level.  
 
-~~For methodological purposes, the bulk of the demographics should be at the end of the survey (unless acting as filter/flow questions above).
-They're both easy to complete (beneficial at the end) and somewhat personal (but at this point folks are invested and we've built 'trust').
-Can also be problematic at start if we're asking all easy, personal questions and then get to the harder ones - easy to drop out.~~
-
 ### Do you hold a leadership role in the Rust Project or are you otherwise involved in strategic decision-making about Rust?
 
 Type: Select one, conditional
@@ -761,12 +750,7 @@ Type: Select one, conditional
 > - No
 > - I prefer not to say
 
->> **Foundation justification: This will allow us to better understand who is participating in this survey and what experiences they might be applying to their answers (without requiring PII). We think it should be a required question.
-
-
 ### Do you consider yourself a member of a group that is underrepresented or marginalized in technology?
-
-~~Please share only what you are comfortable sharing. This will help us better serve underrepresented and marginalized groups, better understand how well our outreach efforts are going, and more.~~
 
 Type: select one
 
@@ -776,11 +760,7 @@ Type: select one
 
 ### Which of the following underrepresented or marginalized groups do you identify with?
 
-~~Please share only what you are comfortable sharing. This will help us better serve underrepresented and marginalized groups, better understand how well our outreach efforts are going, and more.~~ 
-
 Type: Conditional select all that apply (optional)
-
->> **Foundation justification for change: We shouldn't require people to answer this question/see it if they answered no or prefer not to say. Each selection should trigger a "Please add any further descriptions or notes (optional)" freeform box as this will provide us with meaningful information and insight into the community for those who opt to leave notes. We are opting to suggest this freeform box idea instead of sub-selections as the latter would require us to pick and choose which would have further options which would be a strange design and possibly make people feel disregarded. This conditional question should be required for anyone who answered "Yes" to the previous question.**
 
 - Cultural beliefs
 - Disabled (physically, mentally or otherwise)
