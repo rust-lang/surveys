@@ -26,14 +26,14 @@ Type: select one
 
 ## For previous Rust users
 
-### Why did you stop using Rust?
+### As you have indicated that you're no longer using Rust, why did you stop using Rust?
 
 Type: select all that apply
 
 - Missing language features
 - Missing libraries
 - Missing tools
-- Too difficult or complex to become productive writing it
+- Too difficult to learn
 - Community was rude, unwelcoming, or otherwise off-putting
 - I prefer to use another language
 - I no longer have the opportunity to use Rust due to factors outside of my control
@@ -54,7 +54,7 @@ Type: free text
 
 Type: select all that apply
 
-- Rust did not help me achieve my goals
+- Rust does not help me achieve my goals
 - Missing language features
 - Missing libraries
 - Missing tools
@@ -113,7 +113,7 @@ Type: select one
 
 - I can't write Rust code
 - I can write simple programs in Rust
-- I can write useful, non-trivial programs, but it is a struggle
+- I can write useful, production-ready code, but it is a struggle
 - I am productive writing Rust
 
 > **justification**
@@ -206,7 +206,7 @@ Type: select all that apply (optional)
 > We specifically care about the runtime environment being targeted. ISA and other machine specifics are
 > not what matters.
 
-### Which version(s) of Rust do you use for development (excluding CI and other automated testing)?
+### Which version(s) of Rust do you use for development?
 
 Type: select all that apply (optional)
 
@@ -229,7 +229,7 @@ Type: select all that apply (optional)
 > version that was released ~1 year prior. Additionally, at the time of this writing
 > all major Linux distros have a version equal to or newer than this version.
 
-### If you use nightly for any tasks, why?
+### If you use nightly, why?
 
 Type: select all that apply (optional)
 
@@ -252,7 +252,7 @@ Type: select all that apply (optional)
 
 ### What is the oldest version of Rust you use for any development task?
 
-Excluding testing to ensure your code works on that compiler version.
+(Excluding testing to ensure your code works on that compiler version.)
 
 Type: select one (optional)
 
