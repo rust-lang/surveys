@@ -766,17 +766,6 @@ See [who](./design/who.md).
 
 Your responses to the following questions will help our reviewers conduct cohort analyses and help us better understand the Rust community. Please answer according to your comfort level.  
 
-### Do you hold a leadership role in the Rust Project or are you otherwise involved in strategic decision-making about Rust?
-
-Type: Select one, conditional
-
-- Yes
-(Select all that apply)
-> - I consider myself to be in a leadership position within the Rust Project
-> - I am a member of a Rust Project Team and/or Working Group
-> - No
-> - I prefer not to say
-
 ### Do you consider yourself a member of a group that is underrepresented or marginalized in technology?
 
 Type: select one
