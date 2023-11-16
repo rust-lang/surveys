@@ -369,6 +369,72 @@ Type: free text
 >
 > Allow the cohort to mention specific language features they might be eagerly waiting for, see https://github.com/rust-lang/surveys/pull/234/files#r1347633041
 
+### Which of these problems do you recall encountering within the last year?
+
+Type: select all that apply (optional)
+
+- Implementing things on tuples
+- Splitting things across crates
+- Having to do iterator implementations manually
+- Not being able to do enough in const fn
+- Needing to drop down to C ABI for rust plugins
+- Async
+- Traits and generics
+- Borrow checker
+- Macros
+- Other (please specify)
+
+> **justification**
+>
+> Conversely, try asking which /problems/ they encountered and let the Rust project figure out what is needed to improve in these areas
+
+### How do you build your Rust projects?
+
+Type: select all that apply (optional)
+
+- I use Cargo
+- I use some other build system
+- I combine Cargo and another build system
+- If you use Cargo with (or just use) other build systems, which ones do you use? (open response)
+
+> **justification**
+>
+> cargo team expressed interest in this, see https://rust-lang.zulipchat.com/#narrow/stream/246057-t-cargo/topic/Rust.20survery.202023/near/393816653
+
+### How do you download crates to build Rust projects?
+
+Type: select all that apply (optional)
+
+- I use crates.io
+- I use a custom/local/company registry
+- I use a mirror of crates.io
+- I don't know
+
+> **justification**
+>
+> It could be interesting to know how many people use crates.io vs some custom/local/company registry, and how many people are even aware of what registry do they use. See issue surveys#236.
+
+### Do you agree with the following statements on Rust stability?
+
+Type: matrix (optional)
+
+Statements:
+
+- I can upgrade the *stable* compiler version without fear of my code failing to compile
+- I can upgrade the *nightly* compiler version without fear of my code failing to compile
+- Upgrading to a new *stable* compiler version requires either no changes or extremely small & easy changes to my code
+- Upgrading to a new *nightly* compiler version requires either no changes or extremely small & easy changes to my code
+
+Rating:
+
+- Agree
+- Disagree
+
+> **justification**
+>
+> When want to get an impression of how stable the compiler *feels*. Impressions are more important than hard numbers as
+> not all users define stability in the same way the compiler does.
+
 ## The Rust community
 
 ### Roughly how often do you engage in the following Rust community activities?
@@ -383,12 +449,13 @@ Activities:
 - Participate in conversations about Rust on social media or websites (Hacker News, r/rust, Twitter, LinkedIn, etc.)
 - Attend a Rust meetup or conference (virtual or in-person)
 - Write, comment on, contribute to discussion of, or provide edits to an open RFC
-- Discuss the Rust project in an official chat (internals.rust-lang.org, rust-lang Zulip, etc.)
-- Open an issue on any project in the rust-lang GitHub organization
+- Discuss the Rust project in an official chat or forum (internals.rust-lang.org, Rust Zulip etc.)
+- Open an issue on any repo in the rust-lang GitHub organization
 - Contribute code changes (including tests) to any project in the rust-lang GitHub organization
 - Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub organization
 
 Frequency:
+
 - More frequently than weekly
 - Weekly
 - Monthly or less frequently
@@ -459,7 +526,8 @@ Type: select all that apply (optional)
 - Other (please specify)
 
 > **justification**
-> Justification: getting data here seems helpful for guiding users / recommending public content.
+> 
+> Getting data here seems helpful for guiding users / recommending public content.
 
 ## Rust at work
 
@@ -476,7 +544,7 @@ Type: select one (optional)
 
 - Yes, primarily as an individual contributor (i.e., non-manager)
 - I primarily manage others who do
-- No [`NEXT`](#your-opinions-about-rust)
+- No [`NEXT`](#to-what-extent-is-rust-currently-being-used-by-your-company)
 
 ### Are you personally using Rust at work?
 
@@ -484,7 +552,7 @@ Type: select one
 
 - Yes, for the majority of my coding
 - Yes, but I only use it occasionally
-- No [`NEXT`](#to-what-extent-is-rust-currently-being-used-by-your-company)
+- No
 
 > **justification**
 >
@@ -492,27 +560,19 @@ Type: select one
 > are using Rust in a professional setting. This is most interesting over time.
 > Answers to this question should be combined with whether the respondent has ever used Rust.
 
+### To what extent is Rust currently being used by your company?
 
-### Which of the following statements are reasons why you use Rust at work?
+Type: select one
 
-Type: select all that apply (optional)
-
-Statements:
-
-- For its performance (i.e., speed, memory footprint, etc.) characteristics
-- We need precise control over exactly how our software runs
-- Its security and safety properties are important to us
-- It allows us to build relatively correct and bug-free software
-- We find it enjoyable or fun to program in Rust
-- We already know Rust so it's our default choice
-- We find it easy to prototype with
-- We must interact with existing Rust code
+- My company makes non-trivial use of Rust (e.g., used in production or in significant tooling)
+- My company has experimented with Rust or is considering using it
+- My company has not seriously considered Rust for any use [`NEXT`](#approximately-how-many-total-developers-does-your-company-employ)
+- I am unsure whether my company has considered using or currently uses Rust [`NEXT`](#approximately-how-many-total-developers-does-your-company-employ)
+- I don't work for a company or my company does not develop software of any kind [`NEXT`](#which-of-the-following-statements-about-rust-do-you-feel-are-true)
 
 > **justification**
 >
-> The Rust community and potential adopters of Rust have a lot of assumptions of why one would choose Rust for a project.
-> This question can help confirm or challenge our assumptions and see how they change over time.
-
+> We want to establish how reliant companies are on Rust.
 
 ### Which of the following statements apply to your experience using Rust at work?
 
@@ -530,6 +590,26 @@ Statements:
 >
 > Future potential adopters may want to know how often other's have encountered success.
 
+### Which of the following statements are reasons why you use Rust at work?
+
+Type: select all that apply (optional)
+
+Statements:
+
+- For its performance (i.e., speed, memory footprint, etc.) characteristics
+- We need precise control over exactly how our software runs
+- Its security and safety properties are important to us
+- It allows us to build relatively correct and bug free software
+- We find it enjoyable or fun to program in Rust
+- We already know Rust so it's our default choice
+- We find it easy to prototype with
+- We must interact with existing Rust code
+
+> **justification**
+>
+> The Rust community and potential adopters of Rust have a lot of assumptions of why one would choose Rust for a project.
+> This question can help confirm or challenge our assumptions and see how they change over time.
+
 ### What about your usage of Rust has been challenging?
 
 Type: free form (optional)
@@ -537,21 +617,6 @@ Type: free form (optional)
 > **justification**
 >
 > This an opportunity to learn from adopters at companies what they struggle with when adopting Rust.
-
-
-### To what extent is Rust currently being used by your company?
-
-Type: select one
-
-- My company makes non-trivial use of Rust (e.g., used in production or in significant tooling)
-- My company has experimented with Rust or is considering using it
-- My company has not seriously considered Rust for any use [`NEXT`](#approximately-how-many-total-developers-does-your-company-employ)
-- I am unsure whether my company has considered using or currently uses Rust [`NEXT`](#approximately-how-many-total-developers-does-your-company-employ)
-
-> **justification**
->
-> We want to establish how reliant companies are on Rust.
-
 
 ### In what technology domain(s) is Rust used at your company?
 
@@ -561,7 +626,6 @@ Type: select all that apply (optional)
 - Blockchain
 - Cloud computing applications
 - Cloud computing infrastructure or utilities
-- Command Line Interfaces (CLI)
 - Computer graphics
 - Computer games
 - Computer networking
@@ -575,7 +639,7 @@ Type: select all that apply (optional)
 - Embedded devices (bare metal)
 - HPC (High-performance [Super]Computing)
 - IoT (Internet of Things)
-- Machine learning or AI
+- Machine learning
 - Mobile phone application frontend
 - Programming languages and related tools (including compilers, IDEs, standard libraries, etc.)
 - Robotics
@@ -588,7 +652,7 @@ Type: select all that apply (optional)
 
 > **justification**
 >
-> We want to known roughly what technology stacks are being most often used.
+> We want to know roughly what technology stacks are being most often used.
 >
 > This can be ambiguous and hard to answer. For example, if you're building an operating
 > system for a mobile phone, is that embedded, mobile, or something else?
@@ -602,11 +666,15 @@ Type: select all that apply (optional)
 Type: select one (optional)
 
 - Under 10
-- 10-99
-- 100-1,000
+- 11-49
+- 50-99
+- 100-500
+- 500-1,000
 - 1,000-10,000
 - Over 10,000
 
+> **justification**
+> 
 > This question is not that interesting on its own, but it can be used as a sort of cohort for understanding how answers
 > change depending on the size of the development effort at a company.
 >
@@ -622,6 +690,8 @@ Type: select one (optional)
 - No (it is not planning to hire any developers)
 - I don't know
 
+> **justification**
+>
 > This question assess hiring sentiment. Although there is intrinsic uncertainty, it is easy to answer and forward looking.
 > It will also be interesting to see what the demand for Rust skills from companies is over time.
 
@@ -647,7 +717,6 @@ Statements:
 >
 > Note that answers here can be subject to survivorship bias and so extra care should be taken with interpreting results.
 
-
 ### What are your biggest worries for the future of Rust?
 
 Type: select all that apply (optional)
@@ -670,75 +739,6 @@ Type: select all that apply (optional)
 > **justification**
 >
 > Would be useful for leadership to understand the community's fears.
-
-### Which of these problems do you recall encountering within the last year?
-
-Type: select all that apply (optional)
-
-- Implementing things on tuples
-- Splitting things across crates
-- Having to do iterator implementations manually
-- Not being able to do enough in const fn
-- Needing to drop down to C ABI for rust plugins
-- Async
-- Traits and generics
-- Borrow checker
-- Macros
-- Other (please specify)
-
-> **justification**
->
-> Conversely, try asking which /problems/ they encountered and let the Rust project figure out what is needed to improve in these areas
-
-### How do you build your Rust projects?
-
-Type: select all that apply (optional)
-
-Aspects:
-
-- I use Cargo
-- I use some other build system
-- I combine Cargo and another build system
-- If you combine Cargo with (or just use) other build systems, which ones? (open response)
-
-> **justification**
->
-> cargo team expressed interest in this, see https://rust-lang.zulipchat.com/#narrow/stream/246057-t-cargo/topic/Rust.20survery.202023/near/393816653
-
-### How do you download crates to build Rust projects?
-
-Type: matrix (optional)
-
-Aspects:
-- I use crates.io
-- I use a custom/local/company registry
-- I use a mirror of crates.io
-- I don't know
-
-> **justification**
->
-> It could be interesting to know how many people use crates.io vs some custom/local/company registry, and how many people are even aware of what registry do they use. See issue surveys#236.
-
-### Do you agree with the following statements on Rust stability?
-
-Type: matrix (optional)
-
-Statements:
-
-- I can upgrade the *stable* compiler version without fear of my code failing to compile
-- I can upgrade the *nightly* compiler version without fear of my code failing to compile
-- Upgrading to a new *stable* compiler version requires either no changes or extremely small & easy changes to my code
-- Upgrading to a new *nightly* compiler version requires either no changes or extremely small & easy changes to my code
-
-Rating:
-
-- Agree
-- Disagree
-
-> **justification**
->
-> When want to get an impression of how stable the compiler *feels*. Impressions are more important than hard numbers as
-> not all users define stability in the same way the compiler does.
 
 ### Please share your assessment of the following statements on Rust employment.
 
