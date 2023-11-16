@@ -290,6 +290,31 @@ Type: select all that apply (optional)
 > in a separate question, though this is likely easier to find out through download
 > numbers.
 
+### In your opinion, how would you prioritise work on the following aspects of Rust?
+
+Type: ordered list (optional)
+
+Aspects:
+
+- Runtime performance
+- Compile times
+- Binary size
+- Memory usage (i.e., how much RAM rustc uses when compiling)
+- Disk space usage (e.g., the size of target folder)
+- Bugs in the compiler (i.e., ICEs a.k.a. internal compiler errors, miscompilations, etc.)
+- Compiler error messages
+- IDE experience
+- Debugging experience
+- Documentation (rustdoc, docs.rs)
+- Build system (cargo)
+- Package management (crates.io)
+- New language features
+- Rust language and standard library documentation
+
+> **justification**
+>
+> This question gathers data on the communities perceptions of certain aspects of Rust at this point in time.
+
 ## The Rust community
 
 ### Roughly how often do you engage in the following Rust community activities?
@@ -591,31 +616,6 @@ Type: select all that apply (optional)
 > **justification**
 >
 > Would be useful for leadership to understand the community's fears.
-
-### In your opinion, how would you prioritise work on the following aspects of Rust?
-
-Type: ordered list (optional)
-
-Aspects:
-
-- Runtime performance
-- Compile times
-- Binary size
-- Memory usage (i.e., how much RAM rustc uses when compiling)
-- Disk space usage (e.g., the size of target folder)
-- Bugs in the compiler (i.e., ICEs a.k.a. internal compiler errors, miscompilations, etc.)
-- Compiler error messages
-- IDE experience
-- Debugging experience
-- Documentation (rustdoc, docs.rs)
-- Build system (cargo)
-- Package management (crates.io)
-- New language features
-- Rust language and standard library documentation
-
-> **justification**
->
-> This question gathers data on the communities perceptions of certain aspects of Rust at this point in time.
 
 ### Which unimplemented or (nightly only) features are you looking for to be stabilized?
 
