@@ -771,12 +771,12 @@ Your responses to the following questions will help our reviewers conduct cohort
 Type: select one
 
 - Yes
-- No
-- I prefer not to say
+- No [`NEXT`](#are-you-a-full--or-part-time-student)
+- I prefer not to say [`NEXT`](#are-you-a-full--or-part-time-student)
 
-### Which of the following underrepresented or marginalized groups do you identify with?
+### Which of the following underrepresented or marginalized groups in technology do you consider yourself a part of?
 
-Type: Conditional select all that apply (optional)
+Type: select all that apply (optional)
 
 - Cultural beliefs
 - Disabled (physically, mentally or otherwise)
@@ -785,8 +785,7 @@ Type: Conditional select all that apply (optional)
 - Language
 - Lesbian, gay, bisexual, queer or otherwise non-heterosexual
 - Non-binary gender
-- Older than the average developer I know
-- Younger than the average developer I know
+- Older or younger than the average developer I know
 - Political beliefs
 - Racial or ethnic minority
 - Religious beliefs
@@ -804,7 +803,7 @@ Type: select one (optional)
 - Yes, in a master's program
 - Yes, in a doctorate program
 - Yes, in a vocational program
-- Yes, other
+- Yes, other (open response)
 
 > **justification**
 >
@@ -826,15 +825,17 @@ Type: select one (optional)
 
 Type: select one (optional)
 
-- *all UN member states*
-- *two observer states (Vatican City and Palestine)*
-- Taiwan
+- List of countries [`NEXT`](#in-what-ways-are-you-comfortable-communicating-about-technical-topics-in-english)
 - Other
 
 > **justification**
 >
 > We'd like to get a geographic understanding of where the community is. To have more structure, a free-form answer
 > is not used, and instead we use the country definition according to UN.
+
+### As you selected "Other" from the list of countries above, please enter your territory of residence below:
+
+Type: free text
 
 ### In what ways are you comfortable communicating about technical topics in English?
 
@@ -864,7 +865,6 @@ Type: select all that apply (optional)
 - Hindi
 - Japanese
 - Korean
-- Polish
 - Portuguese
 - Russian
 - Spanish
