@@ -292,7 +292,7 @@ Type: select all that apply (optional)
 
 ### In your opinion, how would you prioritise work on the following aspects of Rust?
 
-Type: ordered list (optional)
+Type: matrix (optional)
 
 Aspects:
 
@@ -310,6 +310,12 @@ Aspects:
 - Package management (crates.io)
 - New language features
 - Rust language and standard library documentation
+
+Priority:
+- High Priority
+- Medium Priority
+- Low Priority
+- Should not be prioritised
 
 > **justification**
 >
