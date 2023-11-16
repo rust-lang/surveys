@@ -312,6 +312,7 @@ Aspects:
 - Rust language and standard library documentation
 
 Priority:
+
 - High Priority
 - Medium Priority
 - Low Priority
@@ -336,11 +337,10 @@ Type: select one (optional)
 
 Please mention here features for the *Rust compiler* that are currently behind a feature gate (only available using an unstable/nightly release of the Rust compiler) or a feature that is missing and in your opinion would be beneficial to the Rust ecosystem or to your work. This list excludes other tooling around the compiler such as cargo, rustup, rustfmt, etc.
 
-Type: ordered list (optional)
+Type: matrix (optional)
 
-Nightly or unstable feature:
+Features:
 
-- I wish the Rust project to not add major new features (or slow down the pace of development)
 - Specialization ([RFC#1210](https://github.com/rust-lang/rust/issues/31844))
 - Generators/coroutines ([RFC#2033](https://github.com/rust-lang/rust/issues/43122))
 - Async closures ([RFC#2532](https://github.com/rust-lang/rust/issues/62290))
@@ -353,7 +353,17 @@ Nightly or unstable feature:
 - Enum variant types ([RFC#2593](https://github.com/rust-lang/lang-team/issues/122))
 - Allocator trait, better OOM handling (https://github.com/rust-lang/rust/issues/32838)
 - Stable ABI (https://github.com/rust-lang/rust/issues/111423)
-- Other (please specify)
+
+Priority:
+
+- High Priority
+- Medium Priority
+- Low Priority
+- Should not be prioritised
+
+### Are there any features not mentioned above that you would like to be prioritised?
+
+Type: free text
 
 > **justification**
 >
