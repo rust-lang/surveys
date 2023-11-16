@@ -321,6 +321,44 @@ Priority:
 >
 > This question gathers data on the communities perceptions of certain aspects of Rust at this point in time.
 
+### Do you think that unimplemented (or nightly only) features should be stabilised in Rust?
+
+Type: select one (optional)
+
+- I think that unimplemented features should be stabilised [`NEXT`](#which-unimplemented-or-nightly-only-features-are-you-looking-for-to-be-stabilized)
+- I wish the Rust project to not add major new features (or slow down the pace of development) [`NEXT`](#which-of-these-problems-do-you-recall-encountering-within-the-last-year)
+
+> **justification**
+> 
+> We want to find out if people prefer stability and fewer changes, or if they want to see more features being stabilized.  
+
+### Which unimplemented or (nightly only) features are you looking for to be stabilized?
+
+Please mention here features for the *Rust compiler* that are currently behind a feature gate (only available using an unstable/nightly release of the Rust compiler) or a feature that is missing and in your opinion would be beneficial to the Rust ecosystem or to your work. This list excludes other tooling around the compiler such as cargo, rustup, rustfmt, etc.
+
+Type: ordered list (optional)
+
+Nightly or unstable feature:
+
+- I wish the Rust project to not add major new features (or slow down the pace of development)
+- Specialization ([RFC#1210](https://github.com/rust-lang/rust/issues/31844))
+- Generators/coroutines ([RFC#2033](https://github.com/rust-lang/rust/issues/43122))
+- Async closures ([RFC#2532](https://github.com/rust-lang/rust/issues/62290))
+- If/while let chains ([eRFC#2497](https://github.com/rust-lang/rust/issues/53667))
+- Try blocks ([RFC#243](https://github.com/rust-lang/rust/issues/31436))
+- Never type ([RFC#1216](https://github.com/rust-lang/rust/issues/35121))
+- Improved traits (trait alias, implied bounds, associated type defaults)
+- Improved const (generic const expressions, const expr for custom types, const trait methods)
+- Compile time reflection (variadic generics)
+- Enum variant types ([RFC#2593](https://github.com/rust-lang/lang-team/issues/122))
+- Allocator trait, better OOM handling (https://github.com/rust-lang/rust/issues/32838)
+- Stable ABI (https://github.com/rust-lang/rust/issues/111423)
+- Other (please specify)
+
+> **justification**
+>
+> Allow the cohort to mention specific language features they might be eagerly waiting for, see https://github.com/rust-lang/surveys/pull/234/files#r1347633041
+
 ## The Rust community
 
 ### Roughly how often do you engage in the following Rust community activities?
@@ -622,33 +660,6 @@ Type: select all that apply (optional)
 > **justification**
 >
 > Would be useful for leadership to understand the community's fears.
-
-### Which unimplemented or (nightly only) features are you looking for to be stabilized?
-
-Please mention here features for the *Rust compiler* that are currently behind a feature gate (only available using an unstable/nightly release of the Rust compiler) or a feature that is missing and in your opinion would be beneficial to the Rust ecosystem or to your work. This list excludes other tooling around the compiler such as cargo, rustup, rustfmt, etc.
-
-Type: ordered list (optional)
-
-Nightly or unstable feature:
-
-- I wish the Rust project to not add major new features (or slow down the pace of development)
-- Specialization ([RFC#1210](https://github.com/rust-lang/rust/issues/31844))
-- Generators/coroutines ([RFC#2033](https://github.com/rust-lang/rust/issues/43122))
-- Async closures ([RFC#2532](https://github.com/rust-lang/rust/issues/62290))
-- If/while let chains ([eRFC#2497](https://github.com/rust-lang/rust/issues/53667))
-- Try blocks ([RFC#243](https://github.com/rust-lang/rust/issues/31436))
-- Never type ([RFC#1216](https://github.com/rust-lang/rust/issues/35121))
-- Improved traits (trait alias, implied bounds, associated type defaults)
-- Improved const (generic const expressions, const expr for custom types, const trait methods)
-- Compile time reflection (variadic generics)
-- Enum variant types ([RFC#2593](https://github.com/rust-lang/lang-team/issues/122))
-- Allocator trait, better OOM handling (https://github.com/rust-lang/rust/issues/32838)
-- Stable ABI (https://github.com/rust-lang/rust/issues/111423)
-- Other (please specify)
-
-> **justification**
->
-> Allow the cohort to mention specific language features they might be eagerly waiting for, see https://github.com/rust-lang/surveys/pull/234/files#r1347633041
 
 ### Which of these problems do you recall encountering within the last year?
 
