@@ -45,7 +45,7 @@ Type: free text
 
 > **SURVEY FLOW**
 >
-> Skip to `### To what extent is Rust currently being used by your company?`
+> Skip to `### Are you employed full- or part-time (including paid internships)?`
 
 
 ## For non-Rust users
@@ -71,7 +71,7 @@ Type: free text
 
 > **SURVEY FLOW**
 >
-> Skip to `### To what extent is Rust currently being used by your company?`
+> Skip to `### Are you employed full- or part-time (including paid internships)?`
 
 ## Your Rust experience
 
