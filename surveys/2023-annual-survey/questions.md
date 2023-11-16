@@ -161,7 +161,7 @@ Type: select all that apply (optional)
 - Windows 10/11
 - Windows 8 or older
 - Windows Subsystem for Linux
-- Mac OS
+- macOS
 - Other (open response)
 
 > **justification**
@@ -186,7 +186,7 @@ Type: select all that apply (optional)
 - Linux (desktop or server)
 - Windows 10/11
 - Windows 8 or older
-- Mac OS
+- macOS
 - iOS
 - Android
 - Embedded platforms (with an operating system)
