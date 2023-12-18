@@ -17,9 +17,12 @@ it should nevertheless be helpful as a guide.
 5. Put the survey questions to SurveyHero
    - This needs collaboration with the Rust foundation, please ask in the [#rust-survey](https://rust-lang.zulipchat.com/#narrow/stream/402479-t-community.2Frust-survey)
    Zulip stream for assistance.
-6. Find translator volunteers
-   - Either for translating the survey, or for reviewing auto-generated translations.
+6. Translate the questionnaire
+   - SurveyHero can generate the questionnaire in other languages, uses some machine translation which often leaves a bit to desire
+   - Find translators for reviewing the survey and the auto-generated translations
    - You can ask around on the `#rust-survey` or `#general` Zulip streams for assistance.
+   - Be aware that the SurveyHero export feature is currently broken (breaks non Latin alphabets) and importing the translations is not allowed. Correcting the translations is therefore a manual work both for the translator and for the operator that has access to the SurveyHero backoffice.
+   - Translators can take advantage of [this small guide](https://rust-lang.zulipchat.com/#narrow/stream/402479-t-community.2Frust-survey/topic/Translation.20guide/near/406836813)
 7. Double-check the survey flow in SurveyHero
    - Go through all the possible paths through the survey, and check that the questions and answers in SurveyHero are
    the same as in `questions.md`.
