@@ -6,13 +6,18 @@ The Rust community survey team can run micro-surveys for members of the Rust Pro
 
 A small survey which is very low cost (in both time and cognitive load) to complete (and prepare). They should be focused on a single topic (possibly with a first question to get context on the respondent for cohort analysis), should take fewer than five minutes to complete and contain just a few (e.g. less than five) questions (ideally all multiple choice rather than free-form, though we might ask a single free-form question if needed). See [below](#examples) for some examples.
 
-The goal is to provide members of the Rust Project a quick way to gauge the opinions of the members of the Rust community about a very targeted topic.
+There are two intended target audiences of these micro-surveys (each survey can target one or the other):
 
-Micro surveys will only be published in English, to reduce the latency of their creation and evaluation.
+- Members of the Rust community. This gives the Rust Project a way to quickly gauge the opinions of the community about a very targeted topic, concerning e.g. usage of Rust or the development of new features.
+- Members of the Rust Project (Rust maintainers). This gives the Rust Project leadership a way to learn more about the "mood" inside the Project, and ask various meta questions about the development of Rust and its inner workings.
 
-The community survey team will design and manage the micro-survey. Data will be managed, processed, and distributed in the same way as the annual survey, i.e. raw data will be kept private, some data may be shared publicly in a blog post, processed data will be distributed to relevant teams.
+To reduce the latency of their creation and evaluation, micro-surveys will be published only in the English language by
+default. However, we can also publish the survey in a different language if it makes sense (e.g. if we wanted to
+primarily address members of the community in a specific geographic region).
 
-Note that the micro-surveys will be performed by the survey team, without the involvement of the Rust Foundation. That means that the surveys should not ask any privacy or [DEI](https://en.wikipedia.org/wiki/Diversity,_equity,_and_inclusion) questions, to avoid dealing with potential privacy issues.
+The community survey team will design and manage micro-surveys. Data will be managed, processed, and distributed in the same way as the annual survey, i.e. raw data will be kept private, some data may be shared publicly in a blog post, processed data will be distributed to relevant teams.
+
+Note that the micro-surveys should not need to ask any [PII](https://en.wikipedia.org/wiki/Personal_data) or [DEI](https://en.wikipedia.org/wiki/Diversity,_equity,_and_inclusion) questions, to avoid dealing with potential privacy issues and allowing lightweight handling of the data.
 
 The survey team will accept requests for micro-survey topics and questions from Rust teams. We don't anticipate needing outside help with data processing, except in exceptional circumstances. Ideally, we should have the creation and analysis of the survey as automated as possible, to make these micro-surveys easier to manage.
 
@@ -53,3 +58,14 @@ We could run this survey to find out how Rust users use a specific feature.
 * Have you implemented or used a trait which used GATs (Yes, no, not sure)
 
 * If you've written a trait using a lifetime-GAT, did you use the lifetime as a bound on Self (`Self: 'a`)? (Yes, no, I haven't written a lifetime-GAT)
+
+### Maintainer survey: review capacity
+
+We could run this survey to find out how do Rust maintainers feel and should we prioritize
+something in the project management.
+
+* Do you review pull requests on any rust-lang repository? (Yes, no)
+
+* Do you feel overwhelmed by the amount of reviews assigned to you? (Yes, no, sometimes, not sure)
+
+* Would you like to switch to a different PR assignment logic, e.g. a pull-based model? (Yes, no)
