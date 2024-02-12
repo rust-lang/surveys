@@ -149,7 +149,7 @@ We are immensely grateful to those who participated in the 2023 State of Rust Su
 
 If you’d like to dig into more details, we recommend you to browse through the full [survey report][report].
 
-[report]: ../../../images/2024-02-rust-survey-2023/annual-survey-2023-report.pdf
+[report]: https://raw.githubusercontent.com/rust-lang/surveys/main/surveys/2023-annual-survey/report/annual-survey-2023-report.pdf
 
 [a]Gracie to run this by DEI subcommittee
 
