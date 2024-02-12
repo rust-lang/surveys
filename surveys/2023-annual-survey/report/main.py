@@ -334,17 +334,17 @@ if __name__ == "__main__":
 
     render_report_to_pdf(
         report,
-        Path(__file__) / "report.pdf",
+        Path(__file__).parent / "report.pdf",
         "Rust Annual survey 2023 report",
         include_labels=False
     )
 
-    image_dir = "2024-02-rust-survey-2023"
+    resource_dir = "2024-02-rust-survey-2023"
     # Fill path to blog roost
     blog_root = Path("")
     render_blog_post(
         template=Path("2024-02-26-2023-Rust-Annual-Survey-2023-results.md"),
         blog_root=blog_root,
-        image_dir=image_dir,
+        resource_dir=resource_dir,
         report=report
     )
