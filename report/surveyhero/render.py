@@ -150,7 +150,7 @@ def render_blog_post(
     with open(template) as f:
         document = f.read()
 
-    scripts = ['<script charset="utf-8" src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>']
+    scripts = ['<script charset="utf-8" src="https://cdn.plot.ly/plotly-basic-2.29.0.min.js"></script>']
     matches = list(CHART_MARKER_REGEX.finditer(document))
 
     args = [
