@@ -22,8 +22,8 @@ class RenderedChart:
     to_replace: str
 
 
-def make_rel_path(image_root: Path, path: Path) -> str:
-    path = path.relative_to(image_root)
+def make_rel_path(image_dir: Path, path: Path) -> str:
+    path = path.relative_to(image_dir.parent)
     return f"../../../images/{path}"
 
 
@@ -37,7 +37,7 @@ def render_png(image_dir: Path, renderer: ChartRenderer, chart_id: str) -> Path:
 
 
 def render_blog_chart(arg) -> RenderedChart:
-    (image_root, image_dir, report, match) = arg
+    (image_dir, report, match) = arg
 
     fullmatch = match[0]
     chart_id = match[1]
@@ -76,12 +76,12 @@ def render_blog_chart(arg) -> RenderedChart:
         div = element.find("div")
         div["class"] = chart_type
         div.append(BeautifulSoup(f"""<noscript>
-    <img src="{make_rel_path(image_root=image_root, path=png_path)}" height="{height}" alt="{chart_id}" />
+    <img src="{make_rel_path(image_dir=image_dir, path=png_path)}" height="{height}" alt="{chart_id}" />
 </noscript>""", "html.parser"))
 
         links = [
-            (make_rel_path(image_root=image_root, path=png_path), "Download chart as PNG", "PNG"),
-            (make_rel_path(image_root=image_root, path=svg_path), "Download chart as SVG", "SVG"),
+            (make_rel_path(image_dir=image_dir, path=png_path), "Download chart as PNG", "PNG"),
+            (make_rel_path(image_dir=image_dir, path=svg_path), "Download chart as SVG", "SVG"),
         ]
 
         wordcloud_id = f"{chart_id}-wordcloud"
@@ -89,7 +89,7 @@ def render_blog_chart(arg) -> RenderedChart:
         if wordcloud is not None:
             wc_png_path = render_png(image_dir=image_dir, renderer=wordcloud, chart_id=wordcloud_id)
             links.append(
-                (make_rel_path(image_root=image_root, path=wc_png_path), "Download open answers as wordcloud PNG",
+                (make_rel_path(image_dir=image_dir, path=wc_png_path), "Download open answers as wordcloud PNG",
                  "Wordcloud of open answers")
             )
 
@@ -106,8 +106,9 @@ def render_blog_chart(arg) -> RenderedChart:
 
         script = element.find("script")
         assert script is not None
+
         return RenderedChart(
-            script=str(script),
+            script=script.text.strip(),
             tag=tag,
             to_replace=fullmatch
         )
@@ -120,7 +121,7 @@ def render_blog_chart(arg) -> RenderedChart:
 def render_blog_post(
         template: Path,
         blog_root: Path,
-        image_dir: str,
+        resource_dir: str,
         report: ChartReport
 ):
     """
@@ -137,36 +138,38 @@ def render_blog_post(
 
     :param template: Blog post Markdown template. Its filename will be used to name the generated blog post file.
     :param blog_root: Local checkout of the https://github.com/rust-lang/blog.rust-lang.org repository
-    :param image_dir: Name of a directory in <blog_root/static/images> where the rendered charts will be stored.
+    :param resource_dir: Name of a directory in <blog_root/static/images> where the rendered charts will be stored.
     :param report: `ChartReport` containing charts that can be rendered.
     """
     output_path = blog_root / "posts" / template.name
 
-    image_root = blog_root / "static" / "images"
-    image_dir = image_root / image_dir
+    image_dir = blog_root / "static" / "images" / resource_dir
     image_dir.mkdir(parents=True, exist_ok=True)
-    print(f"Generating blog post to {output_path}, image directory {image_dir}")
+    script_dir = blog_root / "static" / "scripts" / resource_dir
+    script_dir.mkdir(parents=True, exist_ok=True)
+    print(f"Generating blog post to {output_path}, image directory {image_dir}, scripts directory {script_dir}")
 
     with open(template) as f:
         document = f.read()
 
-    scripts = ['<script charset="utf-8" src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>']
     matches = list(CHART_MARKER_REGEX.finditer(document))
 
     args = [
-        (image_root, image_dir, report, (match.group(0), match.group(1), match.group(2)))
+        (image_dir, report, (match.group(0), match.group(1), match.group(2)))
         for match in matches
     ]
 
     import multiprocess as mp
 
+    script_text = ""
+
     with mp.Pool() as pool:
         for result in tqdm.tqdm(pool.imap(render_blog_chart, args), total=len(args)):
-            scripts.append(result.script)
+            script_text += f"\n\n{result.script}"
             document = document.replace(result.to_replace, result.tag)
 
     # Helper JavaScript script that makes charts better visible on mobile phones
-    scripts.append("""<script type="text/javascript">
+    script_text += """
 // Angle axis ticks and make bar chart labels vertical on small displays
 function relayoutCharts() {
     if (window.innerWidth > 800) return;
@@ -182,7 +185,15 @@ function relayoutCharts() {
 
 window.addEventListener("resize", relayoutCharts);
 document.addEventListener("DOMContentLoaded", relayoutCharts);
-</script>""")
+"""
+    script_path = script_dir / "charts.js"
+    with open(script_path, "w") as f:
+        f.write(script_text)
+
+    scripts = [
+        '<script charset="utf-8" src="https://cdn.plot.ly/plotly-basic-2.29.0.min.js"></script>',
+        f'<script src="../../../scripts/{script_path.relative_to(script_dir.parent)}"></script>'
+    ]
 
     script_marker = "<!-- scripts -->"
     if script_marker not in document:
