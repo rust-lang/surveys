@@ -71,8 +71,10 @@ def render_blog_chart(arg) -> RenderedChart:
     if isinstance(chart, PlotlyRenderer):
         figure = chart.render_fn(**args)
         chart_type = figure.layout.meta
-        element = BeautifulSoup(figure.to_html(full_html=False, include_plotlyjs=None, div_id=chart_id),
-                                features="html.parser").div
+        element = BeautifulSoup(figure.to_html(full_html=False, include_plotlyjs=None, div_id=chart_id, config=dict(
+            modeBarButtonsToRemove=["zoom", "pan", "lasso2d", "select", "autoScale", "toImage"],
+            displaylogo=False
+        )), features="html.parser").div
         div = element.find("div")
         div["class"] = chart_type
         div.append(BeautifulSoup(f"""<noscript>
@@ -178,8 +180,13 @@ function relayoutCharts() {
     var bar_charts = document.getElementsByClassName("bar-chart");
     for (var i = 0; i < bar_charts.length; i++) {
         var chart = bar_charts[i];
-        Plotly.relayout(chart, {xaxis: {tickangle: 45}});
+        Plotly.relayout(chart, {autosize: false, width: "100%", xaxis: {tickangle: 90}});
         Plotly.restyle(chart, {textangle: -90});
+    }
+    var matrix_charts = document.getElementsByClassName("matrix-chart");
+    for (var i = 0; i < matrix_charts.length; i++) {
+        var chart = matrix_charts[i];
+        Plotly.relayout(chart, {autosize: false, width: "100%"});
     }
 }
 
