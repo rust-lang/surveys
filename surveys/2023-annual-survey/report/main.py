@@ -334,7 +334,7 @@ if __name__ == "__main__":
 
     render_report_to_pdf(
         report,
-        Path(__file__).parent / "report.pdf",
+        Path(__file__).parent / "annual-survey-2023-report.pdf",
         "Rust Annual survey 2023 report",
         include_labels=False
     )

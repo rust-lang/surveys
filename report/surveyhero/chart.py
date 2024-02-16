@@ -1,3 +1,4 @@
+import string
 import textwrap
 from collections import defaultdict
 from typing import List, Any, Dict, Optional
@@ -334,6 +335,10 @@ def make_wordcloud(answers: List[str], height=600) -> bytes:
     from matplotlib import colormaps
     from .render import pillow_to_png_bytes
 
+    text = " ".join(answers)
+    printable = set(string.printable)
+    text = "".join(c for c in text if c in printable)
+
     wc = WordCloud(
         width=800,
         height=height,
@@ -342,5 +347,5 @@ def make_wordcloud(answers: List[str], height=600) -> bytes:
         colormap=colormaps["summer"],
         max_words=50,
         random_state=42
-    ).generate(" ".join(answers))
+    ).generate(text)
     return pillow_to_png_bytes(wc.to_image())
