@@ -30,7 +30,7 @@ This year, we have relied on automated translations of the survey, and we have a
 
 The Rust Survey team understands that there were some issues with several of these translated versions, and we apologize for any difficulty this has caused. We are always looking for ways to improve going forward and are in the process of discussing improvements to this part of the survey creation process for next year.
 
-We saw a 3% increase in respondents taking this year’s survey in English – 80% in 2023 and 77% in 2022. Across all other languages, we saw only minor variations – all of which are likely due to us offering fewer languages overall this year due to having fewer volunteers.
+We saw a 3pp increase in respondents taking this year’s survey in English – 80% in 2023 and 77% in 2022. Across all other languages, we saw only minor variations – all of which are likely due to us offering fewer languages overall this year due to having fewer volunteers.
 
 Rust user respondents were asked which country they live in. The top 10 countries represented were, in order: United States (22%), Germany (12%), China (6%), United Kingdom (6%), France (6%), Canada (3%), Russia (3%), Netherlands (3%), Japan (3%), and Poland (3%) . We were interested to see a small reduction in participants taking the survey in the United States in 2023 (down 3pp from the 2022 edition) which is a positive indication of the growing global nature of our community! You can try to find your country in the chart below:
 
@@ -116,11 +116,13 @@ As always, one of the main goals of the State of Rust survey is to shed light on
 
 Of those respondents who shared their main worries for the future of Rust (9,374), the majority were concerned about Rust becoming too complex at 43% — a 5pp increase from 2022. 42% of respondents were concerned about a low level of Rust usage in the tech industry. 32% of respondents in 2023 were most concerned about Rust developers and maintainers not being properly supported — a 6pp increase from 2022.
 
-We saw a notable decrease in respondents who were not at all concerned about the future of Rust. 18% in 2023 and 34% in 2022.
+We saw a notable decrease in respondents who were not at all concerned about the future of Rust, 18% in 2023 and 30% in 2022.
 
 Thank you to all participants for your candid feedback which will go a long way toward improving Rust for everyone.
 
 <!-- chart: what-are-your-biggest-worries-about-rust (height=500) -->
+
+> Closed answers marked with N/A were not present in the previous (2022) version of the survey.
 
 In terms of features that Rust users want to be implemented, stabilized or improved, the most desired improvements are in the areas of traits (trait aliases, associated type defaults, etc.), const execution (generic const expressions, const trait methods, etc.) and async (async closures, coroutines).
 
@@ -134,9 +136,9 @@ The areas of Rust that Rustaceans seem to struggle with the most seem to be asyn
 
 Respondents of the survey want the Rust maintainers to mainly prioritize fixing compiler bugs (68%), improving the runtime performance of Rust programs (57%) and also improving compile times (45%).
 
-Same as in recent years, respondents noted that compile times are one of the most important area that should be improved. However, it is interesting to note that respondents also seem to consider runtime performance to be more important than compile times.
-
 <!-- chart: how-should-work-be-prioritized (height=800) -->
+
+Same as in recent years, respondents noted that compilation time is one of the most important areas that should be improved. However, it is interesting to note that respondents also seem to consider runtime performance to be more important than compile times.
 
 ## Looking ahead
 

@@ -289,10 +289,12 @@ def annual_survey_2023_report() -> ChartReport:
         "Tools and documentation are not accessible enough (e.g., due to language or incompatibility with screen readers)": "Tools and documentation are not accessible enough",
         "Rust Foundation not supporting the Rust project properly (e.g. in financial, infrastructure, legal aspects)": "Rust Foundation not supporting the Rust project properly"
     })
-    # base = r_2022.q(25)
-    # The closed answer set is too different this year to provide a meaningful comparison
-    report.add_bar_chart("what-are-your-biggest-worries-about-rust", question, xaxis_tickangle=55,
-                         max_tick_width=45)
+    base = r_2022.q(25).rename_answers({
+        "Tools and documentation are not accessible enough (e.g., due to language or incompatibility with screen readers)": "Tools and documentation are not accessible enough",
+        "Not enough usage in industry": "Not enough usage in the tech industry"
+    })
+    report.add_bar_chart("what-are-your-biggest-worries-about-rust", question, base, xaxis_tickangle=55,
+                         max_tick_width=45, bar_label_vertical=True)
     report.add_wordcloud("what-are-your-biggest-worries-about-rust-wordcloud", answers_2023.answers[238])
 
     report.add_matrix_chart(
@@ -343,7 +345,7 @@ if __name__ == "__main__":
     # Fill path to blog roost
     blog_root = Path("")
     render_blog_post(
-        template=Path("2024-02-26-2023-Rust-Annual-Survey-2023-results.md"),
+        template=Path("2024-02-19-2023-Rust-Annual-Survey-2023-results.md"),
         blog_root=blog_root,
         resource_dir=resource_dir,
         report=report
