@@ -3,6 +3,7 @@ import io
 import os
 import re
 import tempfile
+import urllib.request
 from pathlib import Path
 from typing import Union, Tuple, Any
 
@@ -197,8 +198,12 @@ document.addEventListener("DOMContentLoaded", relayoutCharts);
     with open(script_path, "w") as f:
         f.write(script_text)
 
+    plotly_script_path = script_dir.parent / "plotly-basic-2.29.0.min.js"
+    if not os.path.isfile(plotly_script_path):
+        urllib.request.urlretrieve("https://cdn.plot.ly/plotly-basic-2.29.0.min.js", plotly_script_path)
+
     scripts = [
-        '<script charset="utf-8" src="https://cdn.plot.ly/plotly-basic-2.29.0.min.js"></script>',
+        '<script charset="utf-8" src="../../../scripts/plotly-basic-2.29.0.min.js"></script>',
         f'<script src="../../../scripts/{script_path.relative_to(script_dir.parent)}"></script>'
     ]
 
