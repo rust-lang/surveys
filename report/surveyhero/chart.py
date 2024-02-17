@@ -1,3 +1,4 @@
+import math
 import string
 import textwrap
 from collections import defaultdict
@@ -91,7 +92,13 @@ def make_bar_chart(
     answers = sorted(answers, key=sort_key, reverse=True)
 
     # Generate label that is shown above each bar
-    data["text"] = data.apply(lambda r: f"{r['percent']:.1f}%", axis=1)
+    def generate_text(row) -> str:
+        value = row["percent"]
+        if math.isclose(value, 0.0):
+            return "N/A"
+        return f"{value:.1f}%"
+
+    data["text"] = data.apply(generate_text, axis=1)
 
     fig = px.bar(
         data,
