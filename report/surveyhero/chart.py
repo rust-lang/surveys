@@ -21,11 +21,6 @@ def format_title(question: Question, include_kind: bool = False) -> str:
     return f'<b>{wrap_text(question.question, max_width=75)}</b><br /><span style="font-size: 0.8em;">(total responses = {question.total_responses}{kind})</span>'
 
 
-def scale_font(ref_value: int, ref_height: int, height: int, max=22) -> int:
-    ratio = height / ref_height
-    return min(max, int(ratio * ref_value))
-
-
 def wrap_text(text: str, max_width: int) -> str:
     text = textwrap.wrap(text, width=max_width, break_long_words=False)
     text = "<br />".join(text)
@@ -98,8 +93,6 @@ def make_bar_chart(
     # Generate label that is shown above each bar
     data["text"] = data.apply(lambda r: f"{r['percent']:.1f}%", axis=1)
 
-    reference_height = 800
-
     fig = px.bar(
         data,
         x="answer",
@@ -122,7 +115,7 @@ def make_bar_chart(
         meta="bar-chart",
         hoverlabel=dict(
             bgcolor="white",
-            font_size=scale_font(24, reference_height, height),
+            font_size=16,
             font_family="Rockwell"
         ),
         hovermode="x unified",
