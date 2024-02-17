@@ -173,6 +173,10 @@ def render_blog_post(
 
     # Helper JavaScript script that makes charts better visible on mobile phones
     script_text += """
+function deepCopy(obj) {
+    return JSON.parse(JSON.stringify(obj));
+}
+
 // Angle axis ticks and make bar chart labels vertical on small displays
 function relayoutCharts() {
     if (window.innerWidth > 800) return;
@@ -181,13 +185,25 @@ function relayoutCharts() {
     var bar_charts = document.getElementsByClassName("bar-chart");
     for (var i = 0; i < bar_charts.length; i++) {
         var chart = bar_charts[i];
-        Plotly.relayout(chart, {autosize: false, width: "100%", xaxis: {tickangle: 90}});
+
+        // We need to extract and copy the original layout, otherwise it would be lost
+        // when relayouting.
+        var layout = deepCopy(chart.layout);
+        layout.xaxis.tickangle = 90;
+        layout.autosize = false;
+        layout.width = "100%";
+        Plotly.relayout(chart, layout);
         Plotly.restyle(chart, {textangle: -90});
     }
     var matrix_charts = document.getElementsByClassName("matrix-chart");
     for (var i = 0; i < matrix_charts.length; i++) {
         var chart = matrix_charts[i];
-        Plotly.relayout(chart, {autosize: false, width: "100%"});
+        var layout = deepCopy(chart.layout);
+        layout.autosize = false;
+        layout.width = "100%";
+        layout.legend.y = -0.3;
+        layout.legend.yanchor = "bottom";
+        Plotly.relayout(chart, layout);
     }
 }
 
