@@ -1,6 +1,7 @@
 # Micro surveys
 
-The Rust community survey team can run micro-surveys for members of the Rust Project. This document explains how do these micro-surveys work. If you want to run a micro-survey, please create a topic on the survey team [Zulip stream](https://rust-lang.zulipchat.com/#narrow/stream/402479-t-community.2Frust-survey).
+The Rust community survey team can run micro-surveys for members of the Rust Project. This document explains how do these micro-surveys work. If you want to run a micro-survey, please create a topic on the survey team [Zulip stream](https://rust-lang.zulipchat.com/#narrow/stream/402479-t-community.2Frust-survey)
+and check out the [guide](#how-to-create-a-new-micro-survey) below.
 
 ## What is a micro survey?
 
@@ -69,3 +70,9 @@ something in the project management.
 * Do you feel overwhelmed by the amount of reviews assigned to you? (Yes, no, sometimes, not sure)
 
 * Would you like to switch to a different PR assignment logic, e.g. a pull-based model? (Yes, no)
+
+
+## How to create a new micro-survey?
+Send a PR against this repository, with a new Markdown file describing the questions of the survey, in the `surveys/micro/<name-of-survey>` directory.
+
+The format of the Markdown file is described [here](surveys/notes/reference.md).
