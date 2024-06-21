@@ -10,9 +10,31 @@ This survey is anonymous, though the Council will see the answers. A summary of 
 
 Type: select one (optional)
 
+- Strongly Agree
 - Agree
-- Neither agree nor disagree
+- Unsure
 - Disagree
+- Strongly Disagree
+
+### I am aware of the role that the Leadership Council plays in the governance of the Rust Project.
+
+Type: select one (optional)
+
+- Strongly Agree
+- Agree
+- Unsure
+- Disagree
+- Strongly Disagree
+
+### The Rust Project has a solid foundation of Project governance.
+
+Type: select one (optional)
+
+- Strongly Agree
+- Agree
+- Unsure
+- Disagree
+- Strongly Disagree
 
 ### Are there areas of the Leadership Council that you think are going well?
 
