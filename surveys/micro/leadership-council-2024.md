@@ -2,7 +2,7 @@
 
 This is a quick annual survey for Rust-lang project members to provide feedback on the [Leadership Council](https://forge.rust-lang.org/governance/council.html). Your feedback is appreciated to help steer the Council activities. As always, if you have specific questions or feedback that you would like to provide, feel free to reach out to your Council representative.
 
-This survey is anonymous, though the Council will see the answers. A summary of these results will be released after the survey is complete.
+This survey is anonymous. The Council will go through all answers and release a summary after the survey is complete.
 
 ## Leadership Council Effectiveness
 
