@@ -5,7 +5,7 @@ and check out the [guide](#how-to-create-a-new-micro-survey) below.
 
 ## What is a micro survey?
 
-A small survey which is very low cost (in both time and cognitive load) to complete (and prepare). They should be focused on a single topic (possibly with a first question to get context on the respondent for cohort analysis), should take fewer than five minutes to complete and contain just a few (e.g. less than five) questions (ideally all multiple choice rather than free-form, though we might ask a single free-form question if needed). See [below](#examples) for some examples.
+A small survey which is very low cost (in both time and cognitive load) to complete (and prepare). They should be focused on a single topic (possibly with a first question to get context on the respondent for cohort analysis), should take fewer than ten minutes to complete and ideally contain a reasonable amount of questions (e.g. up to ten, but it is not a hard limit). See [below](#examples) for some examples.
 
 There are two intended target audiences of these micro-surveys (each survey can target one or the other):
 
