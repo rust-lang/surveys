@@ -68,7 +68,7 @@ Type: select all that apply (optional)
 
 Type: select all that apply (optional)
 
-- Exclusively Rust for firmware
+- Exclusively Rust for firmware [`NEXT`](#what-frameworks-or-rtoss-are-you-using-with-embedded-rust)
 - Majority Rust for firmware, with some components or libraries in other languages (C/C++/other)
 - Majority other languages (C/C++/other) for firmware, with some Rust components or libraries
 - Exclusively other languages (C/C++/other) for firmware
@@ -83,7 +83,6 @@ Type: select all that apply (optional)
 * Micro/Circuit Python
 * Swift
 * Zig
-* None - exclusively Rust
 * Other (open response)
 
 ## Typical tools and libraries used
