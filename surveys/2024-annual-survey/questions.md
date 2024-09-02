@@ -369,7 +369,7 @@ Type: free text
 >
 > Allow the cohort to mention specific language features they might be eagerly waiting for, see https://github.com/rust-lang/surveys/pull/234/files#r1347633041
 
-### Which of these problems do you recall encountering within the last year?
+### Which of the following aspects of Rust presented non-trivial problems to your programming productivity?
 
 Type: select all that apply (optional)
 
