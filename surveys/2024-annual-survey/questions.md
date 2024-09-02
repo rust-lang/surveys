@@ -551,6 +551,7 @@ Type: select one (optional)
 Type: select one
 
 - Yes, for the majority of my coding
+- Yes, a few times per week on average
 - Yes, but I only use it occasionally
 - No
 
