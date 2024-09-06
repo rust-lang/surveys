@@ -47,7 +47,6 @@ Type: free text
 >
 > Skip to `### Are you employed full- or part-time (including paid internships)?`
 
-
 ## For non-Rust users
 
 ### Why don't you use Rust?
@@ -73,7 +72,7 @@ Type: free text
 >
 > Skip to `### Are you employed full- or part-time (including paid internships)?`
 
-## Your Rust experience
+## Rust usage and learning experience
 
 ### On average, how often do you use Rust?
 
@@ -149,6 +148,34 @@ Type: select one (optional)
 > We explicitly use years instead of asking for which Rust edition someone learned because the former is often much easier for respondents to know.
 > It's also helpful to be more specific than an edition, and it's fairly easy to know which edition someone likely used based on the year they
 > learned Rust.
+
+### If you consumed learning material about Rust, which kind of material did you consume?
+
+Type: select all that apply (optional)
+
+- Books ("The Rust Programming Language", "Rust for Rustaceans", etc.)
+- Online exercises (Rustlings, Rust by Example, etc.)
+- Videos
+- Online courses, webinars
+- Other (please specify)
+
+> **justification**
+>
+> Getting data here seems helpful for guiding users / recommending public content.
+
+### Are you currently taking a course that uses or teaches Rust OR have you taken a course of this type in the last year?
+
+Type: select one (optional)
+
+- Yes, through a university, school, or other educational institution
+- Yes, through my employer, contractor, or consultancy
+- No
+
+> **justification**
+>
+> This question is primarily used to funnel respondents into the more specific questions about the kinds of educational activities they've been a part of.
+
+## Technical questions
 
 ### Which operating systems do you use regularly for Rust development?
 
@@ -491,7 +518,6 @@ Choices:
 >
 > We'd like to know where people are feeling welcome and the degree to which they are feeling welcome.
 
-
 ### If you indicated that you did not feel welcome in the Rust community, are there any details about your experience that you would like to share with us?
 
 Type: free form (optional)
@@ -500,34 +526,6 @@ Type: free form (optional)
 > 
 > More detail on the type of situations where people have felt unwelcome can let us better 
 > address these issues in the future.
-
-## Rust in Education
-
-### Are you currently taking a course that uses or teaches Rust OR have you taken a course of this type in the last year?
-
-Type: select one (optional)
-
-- Yes, through a university, school, or other educational institution
-- Yes, through my employer, contractor, or consultancy
-- No
-
-> **justification**
->
-> This question is primarily used to funnel respondents into the more specific questions about the kinds of educational activities they've been a part of.
-
-### If you consumed learning material about Rust, which kind of material did you consume?
-
-Type: select all that apply (optional)
-
-- Books ("The Rust Programming Language", "Rust for Rustaceans", etc.)
-- Online exercises (Rustlings, Rust by Example, etc.)
-- Videos
-- Online courses, webinars
-- Other (please specify)
-
-> **justification**
-> 
-> Getting data here seems helpful for guiding users / recommending public content.
 
 ## Rust at work
 
