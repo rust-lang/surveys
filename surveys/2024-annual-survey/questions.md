@@ -369,6 +369,35 @@ Type: free text
 >
 > Allow the cohort to mention specific language features they might be eagerly waiting for, see https://github.com/rust-lang/surveys/pull/234/files#r1347633041
 
+### Which features stabilized in the past 12 months do you use the most?
+
+The text in the parentheses shows in which Rust version was the feature stabilized.
+
+Type: matrix (optional)
+
+Features:
+
+- [`async fn` in traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
+- [Return position `impl Trait` in traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
+- [C-string literals](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#c-string-literals) (1.77)
+- [Recursion in `async fn`](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#support-for-recursion-in-async-fn) (1.77)
+- [`offset_of!` macro](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#offset_of) (1.77)
+- [`#[diagnostic]` attribute](https://blog.rust-lang.org/2024/05/02/Rust-1.78.0.html#diagnostic-attributes) (1.78)
+- [Inline `const` expressions](https://blog.rust-lang.org/2024/06/13/Rust-1.79.0.html#inline-const-expressions) (1.79)
+- [Bounds in associated type position](https://blog.rust-lang.org/2024/06/13/Rust-1.79.0.html#bounds-in-associated-type-position) (1.79)
+- [`LazyCell` and `LazyLock`](https://blog.rust-lang.org/2024/07/25/Rust-1.80.0.html#lazycell-and-lazylock) (1.80)
+- [Exclusive ranges in patterns](https://blog.rust-lang.org/2024/07/25/Rust-1.80.0.html#exclusive-ranges-in-patterns) (1.80)
+- [`Error` trait in `core`](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#coreerrorerror) (1.81)
+- [`#[expect(lint)]` and lint reasons](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#expectlint) (1.81)
+
+Usage:
+
+- I use this feature
+- I cannot use this feature yet
+- I do not need this feature
+- I did not know it was stabilized
+- I do not know what it is
+
 ### Which of the following aspects of Rust presented non-trivial problems to your programming productivity?
 
 Type: select all that apply (optional)
