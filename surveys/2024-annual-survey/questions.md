@@ -360,7 +360,7 @@ Priority:
 
 ### Which unimplemented or (nightly only) features are you looking for to be stabilized?
 
-Please mention here features for the *Rust compiler* that are currently behind a feature gate (only available using an unstable/nightly release of the Rust compiler) or a feature that is missing and in your opinion would be beneficial to the Rust ecosystem or to your work. This list excludes other tooling around the compiler such as cargo, rustup, rustfmt, etc.
+Please mention *Rust compiler or standard library* features that are currently unstable (only available using a nightly release of the Rust compiler) or missing that would in your opinion be beneficial to the Rust ecosystem or to you. This list excludes other tooling around the compiler such as cargo, rustup, rustfmt, etc.
 
 Type: matrix (optional)
 
@@ -368,23 +368,29 @@ Features:
 
 - Specialization ([RFC#1210](https://github.com/rust-lang/rust/issues/31844))
 - Generators/coroutines ([RFC#2033](https://github.com/rust-lang/rust/issues/43122))
-- Async closures ([RFC#2532](https://github.com/rust-lang/rust/issues/62290))
+- Async generators/coroutines (https://github.com/rust-lang/rust/pull/118420)
 - If/while let chains ([eRFC#2497](https://github.com/rust-lang/rust/issues/53667))
 - Try blocks ([RFC#243](https://github.com/rust-lang/rust/issues/31436))
 - Never type ([RFC#1216](https://github.com/rust-lang/rust/issues/35121))
-- Improved traits (trait alias, implied bounds, associated type defaults)
-- Improved const (generic const expressions, const expr for custom types, const trait methods)
-- Compile time reflection (variadic generics)
+- Trait aliases
+- Type alias impl trait (TAIT)
+- Associated type defaults
+- Generic const expressions
+- Const trait methods
+- Compile time reflection
+- Variadic generics
+- Arbitrary self types
 - Enum variant types ([RFC#2593](https://github.com/rust-lang/lang-team/issues/122))
-- Allocator trait, better OOM handling (https://github.com/rust-lang/rust/issues/32838)
+- Allocator trait and better OOM handling (https://github.com/rust-lang/rust/issues/32838)
 - Stable ABI (https://github.com/rust-lang/rust/issues/111423)
+- Portable SIMD (https://github.com/rust-lang/portable-simd)
 
 Priority:
 
-- High Priority
-- Medium Priority
-- Low Priority
-- Should not be prioritised
+- Would unblock my use-case
+- Would improve my code
+- Don't need it
+- Don't know what it is
 
 ### Are there any features not mentioned above that you would like to be prioritised?
 
