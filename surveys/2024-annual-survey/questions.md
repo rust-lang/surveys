@@ -309,6 +309,23 @@ Type: select one (optional)
 > To get real data on how many people use older versions of the toolchain to
 > inform discussion on MSRVs.
 
+### What is your opinion on how fast Rust evolves?
+
+We want to know how do you perceive the speed of development of the Rust language.
+
+Type: select one (optional)
+
+- Rust is already too complex, it should not add or stabilize more significant features.
+- Rust changes too quickly, I wish it would slow down the pace of development.
+- I am satisfied with the current pace of development.
+- Rust changes too slowly, I wish it would add or stabilize features faster.
+- I don't know or don't care.
+
+> **justification**
+>
+> We want to find out if people prefer stability and fewer changes, or if they want to see more features being
+> implemented or stabilized.
+
 ### In your opinion, how would you prioritise work on the following aspects of Rust?
 
 Type: matrix (optional)
@@ -340,17 +357,6 @@ Priority:
 > **justification**
 >
 > This question gathers data on the communities perceptions of certain aspects of Rust at this point in time.
-
-### Do you think that unimplemented (or nightly only) features should be stabilised in Rust?
-
-Type: select one (optional)
-
-- I think that unimplemented features should be stabilised [`NEXT`](#which-unimplemented-or-nightly-only-features-are-you-looking-for-to-be-stabilized)
-- I wish the Rust project to not add major new features (or slow down the pace of development) [`NEXT`](#which-of-these-problems-do-you-recall-encountering-within-the-last-year)
-
-> **justification**
-> 
-> We want to find out if people prefer stability and fewer changes, or if they want to see more features being stabilized.  
 
 ### Which unimplemented or (nightly only) features are you looking for to be stabilized?
 
