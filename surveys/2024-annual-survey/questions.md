@@ -155,7 +155,10 @@ Type: select all that apply (optional)
 
 - Books ("The Rust Programming Language", "Rust for Rustaceans", etc.)
 - Online exercises (Rustlings, Rust by Example, etc.)
-- Videos
+- Videos or live-streams
+- Blog posts
+- Documentation
+- Source code of Rust crates
 - Online courses, webinars
 - Other (please specify)
 
