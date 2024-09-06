@@ -206,6 +206,33 @@ Type: select all that apply (optional)
 > We specifically care about the runtime environment being targeted. ISA and other machine specifics are
 > not what matters.
 
+### Which editor or IDE setup do you use with Rust code on a regular basis?
+
+Type: select all that apply (optional)
+
+- VS Code
+- vi/vim/neovim
+- IntelliJ/CLion/other JetBrains IDE + Rust plugin
+- Rust Rover (dedicated IntelliJ Rust IDE)
+- Emacs (or derivatives like Doom Emacs, Spacemacs, etc.)
+- Sublime Text
+- Visual Studio
+- Xcode
+- Atom
+- Other (open response)
+
+> **justification**
+>
+> It is good to know which editor is the most preferred for Rust development. This
+> can change investment strategies for further IDE development.
+>
+> Note: previously this question included different 'drivers' of the Rust IDE
+> experience (e.g., racer, rls, rust-analyzer). Development has consolidated on
+> rust-analyzer, and so it's not necessary to find out which is being used.
+> If we are curious how far along adoption of rust-analyzer is, we can ask that
+> in a separate question, though this is likely easier to find out through download
+> numbers.
+
 ### Which version(s) of Rust do you use for development?
 
 Type: select all that apply (optional)
@@ -262,33 +289,6 @@ Type: select one (optional)
 >
 > To get real data on how many people use older versions of the toolchain to
 > inform discussion on MSRVs.
-
-### Which editor or IDE setup do you use with Rust code on a regular basis?
-
-Type: select all that apply (optional)
-
-- VS Code
-- vi/vim/neovim
-- IntelliJ/CLion/other JetBrains IDE + Rust plugin
-- Rust Rover (dedicated IntelliJ Rust IDE)
-- Emacs (or derivatives like Doom Emacs, Spacemacs, etc.)
-- Sublime Text
-- Visual Studio
-- Xcode
-- Atom
-- Other (open response)
-
-> **justification**
->
-> It is good to know which editor is the most preferred for Rust development. This
-> can change investment strategies for further IDE development.
->
-> Note: previously this question included different 'drivers' of the Rust IDE
-> experience (e.g., racer, rls, rust-analyzer). Development has consolidated on
-> rust-analyzer, and so it's not necessary to find out which is being used.
-> If we are curious how far along adoption of rust-analyzer is, we can ask that
-> in a separate question, though this is likely easier to find out through download
-> numbers.
 
 ### In your opinion, how would you prioritise work on the following aspects of Rust?
 
