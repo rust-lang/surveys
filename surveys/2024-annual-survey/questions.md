@@ -94,19 +94,6 @@ Type: select one
 > those who program once a week but always in Rust and those who program daily but
 > use Rust once a week.
 
-### On average, how often do you do coding/design work in general?
-
-Type: select one
-
-- Daily or nearly so
-- Weekly or nearly so
-- Monthly or nearly so
-- Rarely
-
-> **justification**
->
-> Could be interesting to understand the *absolute* coding/design experience of the cohort and then compare it with *relative* Rust experience, see comment: https://github.com/rust-lang/surveys/pull/234/files#r1347513327
-
 ### How would you rate your Rust expertise?
 
 Type: select one
