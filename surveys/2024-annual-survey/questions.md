@@ -614,6 +614,7 @@ Type: free form (optional)
 Type: select all that apply (optional)
 
 - Audio programming
+- Automotive
 - Blockchain
 - Cloud computing applications
 - Cloud computing infrastructure or utilities
