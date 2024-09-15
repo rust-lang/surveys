@@ -693,7 +693,8 @@ Type: matrix (optional)
 
 Statements:
 
-- It is easy for qualified applicants to find jobs that use Rust for the majority of programming
+- It is easy for junior programmers to find jobs that use Rust for the majority of programming
+- It is easy for senior programmers to find jobs that use Rust for the majority of programming
 - Existing Rust jobs are attractive
 
 Rating:
