@@ -526,7 +526,7 @@ Type: free form (optional)
 Type: select one
 
 - Yes
-- No [`NEXT`](#your-opinions-about-rust)
+- No [`NEXT`](#please-share-your-assessment-of-the-following-statements-on-rust-employment)
 
 ### Do you write or design software in your work?
 
@@ -559,7 +559,7 @@ Type: select one
 - My company has experimented with Rust or is considering using it
 - My company has not seriously considered Rust for any use [`NEXT`](#approximately-how-many-total-developers-does-your-company-employ)
 - I am unsure whether my company has considered using or currently uses Rust [`NEXT`](#approximately-how-many-total-developers-does-your-company-employ)
-- I don't work for a company or my company does not develop software of any kind [`NEXT`](#which-of-the-following-statements-about-rust-do-you-feel-are-true)
+- I don't work for a company or my company does not develop software of any kind [`NEXT`](#please-share-your-assessment-of-the-following-statements-on-rust-employment)
 
 > **justification**
 >
@@ -687,6 +687,26 @@ Type: select one (optional)
 > This question assess hiring sentiment. Although there is intrinsic uncertainty, it is easy to answer and forward looking.
 > It will also be interesting to see what the demand for Rust skills from companies is over time.
 
+### Please share your assessment of the following statements on Rust employment.
+
+Type: matrix (optional)
+
+Statements:
+
+- It is easy for qualified applicants to find jobs that use Rust for the majority of programming
+- Existing Rust jobs are attractive
+
+Rating:
+
+- Agree
+- Neither agree nor disagree
+- Disagree
+
+> **justification**
+>
+> The flip side of the question asking whether the respondent's company plans on hiring Rust developers, we
+> want to know how respondents feel the level of demand for and quality of Rust jobs are.
+
 ## Your opinions about Rust
 
 ### Which of the following statements about Rust do you feel are true?
@@ -731,26 +751,6 @@ Type: select all that apply (optional)
 > **justification**
 >
 > Would be useful for leadership to understand the community's fears.
-
-### Please share your assessment of the following statements on Rust employment.
-
-Type: matrix (optional)
-
-Statements:
-
-- It is easy for qualified applicants to find jobs that use Rust for the majority of programming
-- Existing Rust jobs are attractive
-
-Rating:
-
-- Agree
-- Neither agree nor disagree
-- Disagree
-
-> **justification**
->
-> The flip side of the question asking whether the respondent's company plans on hiring Rust developers, we
-> want to know how respondents feel the level of demand for and quality of Rust jobs are.
 
 ## About you
 
