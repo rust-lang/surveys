@@ -57,8 +57,9 @@ Select all that apply:
 ### How long have you been contributing to the Rust Project?
 
 - Less than 3 months
-- 3 to 6 months
-- 1 year
+- 3-6 months
+- 6-12 months
+- 1-2 year
 - 2-3 years
 - 3-5 years
 - 5+ years
@@ -76,10 +77,8 @@ Select all that apply:
 - I am a lead of one or more Rust Teams.
 - I am a member of one or more Rust working groups or project groups.
 - I am a lead of one or more Rust working groups or project groups.
-- I am not a member of a Rust Team, working group, or project group, but I
-  would like to be.
-- I am not a member of a Rust team, working group, or project group, and I have
-  no intention to join one.
+- I am not a member of a Rust Team, working group, or project group, but I would like to be.
+- I am not a member of a Rust team, working group, or project group, and I have no intention to join one.
 
 > **justification**
 >
@@ -341,8 +340,9 @@ Free Form
 ### How long were you a contributor to the Rust Project?
 
 - Less than 3 months
-- 3 to 6 months
-- 1 year
+- 3-6 months
+- 6-12 months
+- 1-2 year
 - 2-3 years
 - 3-5 years
 - 5+ years
@@ -360,10 +360,8 @@ Select all that apply:
 - I was a lead of one or more Rust Teams.
 - I was a member of one or more Rust working groups or project groups.
 - I was a lead of one or more Rust working groups or project groups.
-- I was not a member of a Rust Team, working group, or project group, but I
-  wanted to be.
-- I was not a member of a Rust team, working group, or project group, and I had
-  no intention of joining one.
+- I was not a member of a Rust Team, working group, or project group, but I wanted to be.
+- I was not a member of a Rust team, working group, or project group, and I had no intention of joining one.
 
 > **justification**
 >
