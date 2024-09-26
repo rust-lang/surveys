@@ -326,38 +326,6 @@ Type: select one (optional)
 > We want to find out if people prefer stability and fewer changes, or if they want to see more features being
 > implemented or stabilized.
 
-### In your opinion, how would you prioritise work on the following aspects of Rust?
-
-Type: matrix (optional)
-
-Aspects:
-
-- Runtime performance
-- Compile times
-- Binary size
-- Memory usage (i.e., how much RAM rustc uses when compiling)
-- Disk space usage (e.g., the size of target folder)
-- Bugs in the compiler (i.e., ICEs a.k.a. internal compiler errors, miscompilations, etc.)
-- Compiler error messages
-- IDE experience
-- Debugging experience
-- Documentation (rustdoc, docs.rs)
-- Build system (cargo)
-- Package management (crates.io)
-- New language features
-- Rust language and standard library documentation
-
-Priority:
-
-- High Priority
-- Medium Priority
-- Low Priority
-- Should not be prioritised
-
-> **justification**
->
-> This question gathers data on the communities perceptions of certain aspects of Rust at this point in time.
-
 ### Which unimplemented or (nightly only) features are you looking for to be stabilized?
 
 Please mention *Rust compiler or standard library* features that are currently unstable (only available using a nightly release of the Rust compiler) or missing that would in your opinion be beneficial to the Rust ecosystem or to you. This list excludes other tooling around the compiler such as cargo, rustup, rustfmt, etc.
@@ -403,22 +371,47 @@ Type: free text
 
 ### Which of the following aspects of Rust present non-trivial problems to your programming productivity?
 
-Type: select all that apply (optional)
+#### Choose an assessment only for challenges that you think are impacting your work. You can skip any topic, we will interpret that as you are neutral.
 
-- Implementing things on tuples
-- Splitting things across crates (orphan rule)
-- Having to do iterator implementations manually
+Type: matrix (optional)
+
+- Implementing logic for tuples of various sizes
+- Splitting code across crates (orphan rule)
+- Having to implement Iterator manually
 - Not being able to do enough in const fn
-- Implementing Rust plugins with a stable ABI
-- Interoperating with other languages (e.g. C and C++)
+- Implementing plugins
+- Interoperating with other languages (e.g. C or C++)
 - Achieving structured concurrency with async code
 - Writing executor-agnostic async code
+- Writing correct unsafe code
 - Borrow checker not allowing valid code
-- Other (please specify)
+- Slow runtime performance
+- Slow compile times
+- Large binary size of compiled artifacts
+- High disk space usage (e.g. the size of the target folder)
+- Encountering compiler bugs (e.g. ICEs a.k.a. internal compiler errors or miscompilations)
+- Encountering opaque/unclear compiler error messages
+- Subpar IDE support (e.g. some errors are not shown or analysis is slow)
+- Subpar debugging experience (e.g. missing value visualizations or async stacktraces)
+- Lacking documentation of the Rust language or the standard library
+
+Options:
+
+- Big problem for me
+- Could be improved, but does not limit me
+- Not an issue for me at all
 
 > **justification**
 >
-> Conversely, try asking which /problems/ they encountered and let the Rust project figure out what is needed to improve in these areas
+> This question tries to get insights on what people wish the Rust project would improve.
+
+### Are there any challenges not mentioned above that limit your Rust programming productivity?
+
+Type: free text
+
+> **justification**
+>
+> Allow the cohort to mention other challenges.
 
 ### Which features stabilized in the past 12 months do you use the most?
 
