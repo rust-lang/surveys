@@ -368,18 +368,19 @@ Features:
 
 - Specialization ([RFC#1210](https://github.com/rust-lang/rust/issues/31844))
 - Generators/coroutines ([RFC#2033](https://github.com/rust-lang/rust/issues/43122))
+- Async closures ([RFC#2532](https://github.com/rust-lang/rust/issues/62290))
 - Async generators/coroutines (https://github.com/rust-lang/rust/pull/118420)
 - If/while let chains ([eRFC#2497](https://github.com/rust-lang/rust/issues/53667))
 - Try blocks ([RFC#243](https://github.com/rust-lang/rust/issues/31436))
 - Never type ([RFC#1216](https://github.com/rust-lang/rust/issues/35121))
-- Trait aliases
-- Type alias impl trait (TAIT)
-- Associated type defaults
+- Trait aliases ([RFC#1733](https://github.com/rust-lang/rfcs/blob/master/text/1733-trait-alias.md))
+- Type alias impl trait (TAIT) ([RFC#2515](https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html))
+- Associated type defaults ([RFC#2532](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html))
 - Generic const expressions
 - Const trait methods
 - Compile time reflection
 - Variadic generics
-- Arbitrary self types
+- Arbitrary self types ([RFC#3519](https://github.com/rust-lang/rfcs/blob/master/text/3519-arbitrary-self-types-v2.md))
 - Enum variant types ([RFC#2593](https://github.com/rust-lang/lang-team/issues/122))
 - Allocator trait and better OOM handling (https://github.com/rust-lang/rust/issues/32838)
 - Stable ABI (https://github.com/rust-lang/rust/issues/111423)
