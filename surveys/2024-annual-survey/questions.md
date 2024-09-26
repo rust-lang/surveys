@@ -401,6 +401,25 @@ Type: free text
 >
 > Allow the cohort to mention specific language features they might be eagerly waiting for, see https://github.com/rust-lang/surveys/pull/234/files#r1347633041
 
+### Which of the following aspects of Rust present non-trivial problems to your programming productivity?
+
+Type: select all that apply (optional)
+
+- Implementing things on tuples
+- Splitting things across crates (orphan rule)
+- Having to do iterator implementations manually
+- Not being able to do enough in const fn
+- Implementing Rust plugins with a stable ABI
+- Interoperating with other languages (e.g. C and C++)
+- Achieving structured concurrency with async code
+- Writing executor-agnostic async code
+- Borrow checker not allowing valid code
+- Other (please specify)
+
+> **justification**
+>
+> Conversely, try asking which /problems/ they encountered and let the Rust project figure out what is needed to improve in these areas
+
 ### Which features stabilized in the past 12 months do you use the most?
 
 The text in the parentheses shows in which Rust version was the feature stabilized.
@@ -429,25 +448,6 @@ Usage:
 - I do not need this feature
 - I did not know it was stabilized
 - I do not know what it is
-
-### Which of the following aspects of Rust presented non-trivial problems to your programming productivity?
-
-Type: select all that apply (optional)
-
-- Implementing things on tuples
-- Splitting things across crates
-- Having to do iterator implementations manually
-- Not being able to do enough in const fn
-- Needing to drop down to C ABI for rust plugins
-- Async
-- Traits and generics
-- Borrow checker
-- Macros
-- Other (please specify)
-
-> **justification**
->
-> Conversely, try asking which /problems/ they encountered and let the Rust project figure out what is needed to improve in these areas
 
 ### How do you build your Rust projects?
 
