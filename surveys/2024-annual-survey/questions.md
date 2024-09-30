@@ -405,7 +405,7 @@ Options:
 >
 > This question tries to get insights on what people wish the Rust project would improve.
 
-### Are there any challenges not mentioned above that limit your Rust programming productivity?
+### Are there any challenges not mentioned above that affect your Rust programming productivity?
 
 Type: free text
 
