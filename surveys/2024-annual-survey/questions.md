@@ -141,7 +141,7 @@ Type: select one (optional)
 Type: select all that apply (optional)
 
 - Books ("The Rust Programming Language", "Rust for Rustaceans", etc.)
-- Online exercises (Rustlings, Rust by Example, etc.)
+- Online exercises (Rustlings, 100 Exercises To Learn Rust, etc.)
 - Videos or live-streams
 - Blog posts
 - Documentation
