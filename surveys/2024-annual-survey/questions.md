@@ -178,8 +178,7 @@ Type: select all that apply (optional)
 - Windows 10/11
 - Windows 8 or older
 - Windows Subsystem for Linux
-- macOS (Intel)
-- macOS (ARM)
+- macOS
 - Other (open response)
 
 > **justification**
@@ -204,13 +203,13 @@ Type: select all that apply (optional)
 - Linux (desktop or server)
 - Windows 10/11
 - Windows 8 or older
-- macOS (Intel)
-- macOS (ARM)
+- macOS
 - iOS
 - Android
 - Embedded platforms (with an operating system)
 - Embedded platforms (bare metal)
-- WebAssembly
+- WebAssembly (for browsers)
+- WebAssembly (for other hosts)
 - Explicitly platform-independent (e.g., a library which does not interact with the operating system)
 - Other (open response)
 
