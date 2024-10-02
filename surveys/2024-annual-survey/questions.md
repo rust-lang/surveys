@@ -376,7 +376,7 @@ Type: free text
 Type: matrix (optional)
 
 - Implementing logic for tuples of various sizes
-- Splitting code across crates (orphan rule)
+- Splitting code across crates (e.g. orphan rule)
 - Having to implement Iterator manually
 - Not being able to do enough in const fn
 - Implementing plugins
