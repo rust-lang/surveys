@@ -147,6 +147,8 @@ Type: select all that apply (optional)
 - Documentation
 - Source code of Rust crates
 - Online courses, webinars
+- In-person training
+- University learning materials
 - Other (please specify)
 
 > **justification**
