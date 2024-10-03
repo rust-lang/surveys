@@ -320,6 +320,7 @@ Type: select one (optional)
 - I am satisfied with the current pace of development.
 - Rust changes too slowly, I wish it would add or stabilize features faster.
 - I don't know or don't care.
+- Other (open response)
 
 > **justification**
 >
