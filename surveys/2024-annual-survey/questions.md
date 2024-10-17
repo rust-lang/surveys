@@ -239,6 +239,7 @@ Type: select all that apply (optional)
 - Visual Studio
 - Xcode
 - Atom
+- Helix
 - Other (open response)
 
 > **justification**
