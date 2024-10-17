@@ -305,7 +305,7 @@ Type: select all that apply (optional)
 
 Type: select one (optional)
 
-1.84 (nightly), and then every version from 1.83 to 1.0 in descending order, and "a pre-1.0 version"
+- 1.85 (nightly), and then every version from 1.83 to 1.0 in descending order, and "a pre-1.0 version"
 
 > **justification**
 >
@@ -359,25 +359,25 @@ Type: matrix (optional)
 
 Features:
 
-- Specialization ([RFC#1210](https://github.com/rust-lang/rust/issues/31844))
-- Generators/coroutines ([RFC#2033](https://github.com/rust-lang/rust/issues/43122))
-- Async closures ([RFC#2532](https://github.com/rust-lang/rust/issues/62290))
-- Async generators/coroutines (https://github.com/rust-lang/rust/pull/118420)
-- If/while let chains ([eRFC#2497](https://github.com/rust-lang/rust/issues/53667))
-- Try blocks ([RFC#243](https://github.com/rust-lang/rust/issues/31436))
-- Never type ([RFC#1216](https://github.com/rust-lang/rust/issues/35121))
-- Trait aliases ([RFC#1733](https://github.com/rust-lang/rfcs/blob/master/text/1733-trait-alias.md))
-- Type alias impl trait (TAIT) ([RFC#2515](https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html))
-- Associated type defaults ([RFC#2532](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html))
+- [Specialization](https://github.com/rust-lang/rust/issues/31844)
+- [Generators/coroutines](https://github.com/rust-lang/rust/issues/43122)
+- [Async closures](https://github.com/rust-lang/rust/issues/62290)
+- [Async generators/coroutines](https://github.com/rust-lang/rust/pull/118420)
+- [If/while let chains](https://github.com/rust-lang/rust/issues/53667)
+- [Try blocks](https://github.com/rust-lang/rust/issues/31436)
+- [Never type](https://github.com/rust-lang/rust/issues/35121)
+- [Trait aliases](https://github.com/rust-lang/rfcs/blob/master/text/1733-trait-alias.md)
+- [Type Alias Impl Trait (TAIT)](https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html)
+- [Associated type defaults](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)
 - Generic const expressions
-- Const trait methods ([RFC#2632](https://github.com/rust-lang/rust/issues/67792))
+- [Const trait methods](https://github.com/rust-lang/rust/issues/67792)
 - Compile time reflection
 - Variadic generics
-- Arbitrary self types ([RFC#3519](https://github.com/rust-lang/rfcs/blob/master/text/3519-arbitrary-self-types-v2.md))
-- Enum variant types ([RFC#2593](https://github.com/rust-lang/lang-team/issues/122))
-- Allocator trait and better OOM handling (https://github.com/rust-lang/rust/issues/32838)
-- Stable ABI (https://github.com/rust-lang/rust/issues/111423)
-- Portable SIMD (https://github.com/rust-lang/portable-simd)
+- [Arbitrary self types](https://github.com/rust-lang/rfcs/blob/master/text/3519-arbitrary-self-types-v2.md)
+- [Enum variant types](https://github.com/rust-lang/lang-team/issues/122)
+- [Allocator trait and better OOM handling](https://github.com/rust-lang/rust/issues/32838)
+- [Stable ABI](https://github.com/rust-lang/rust/issues/111423)
+- [Portable SIMD](https://github.com/rust-lang/portable-simd)
 
 Priority:
 
@@ -399,6 +399,8 @@ Type: free form (optional)
 Assess only challenges that you think are impacting your work. If you do not select anything for a given row, we will assume that you do not know or do not care about that aspect.
 
 Type: matrix (optional)
+
+Challenges:
 
 - Implementing logic for tuples of various sizes
 - Splitting code across crates (e.g. orphan rule)
@@ -446,18 +448,18 @@ Type: matrix (optional)
 
 Features:
 
-- [`async fn` in traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
-- [Return position `impl Trait` in traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
+- [async fn in traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
+- [Return position impl Trait in traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
 - [C-string literals](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#c-string-literals) (1.77)
-- [Recursion in `async fn`](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#support-for-recursion-in-async-fn) (1.77)
-- [`offset_of!` macro](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#offset_of) (1.77)
-- [`#[diagnostic]` attribute](https://blog.rust-lang.org/2024/05/02/Rust-1.78.0.html#diagnostic-attributes) (1.78)
-- [Inline `const` expressions](https://blog.rust-lang.org/2024/06/13/Rust-1.79.0.html#inline-const-expressions) (1.79)
+- [Recursion in async fn](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#support-for-recursion-in-async-fn) (1.77)
+- [offset_of! macro](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#offset_of) (1.77)
+- [#[diagnostic] attribute](https://blog.rust-lang.org/2024/05/02/Rust-1.78.0.html#diagnostic-attributes) (1.78)
+- [Inline const expressions](https://blog.rust-lang.org/2024/06/13/Rust-1.79.0.html#inline-const-expressions) (1.79)
 - [Bounds in associated type position](https://blog.rust-lang.org/2024/06/13/Rust-1.79.0.html#bounds-in-associated-type-position) (1.79)
-- [`LazyCell` and `LazyLock`](https://blog.rust-lang.org/2024/07/25/Rust-1.80.0.html#lazycell-and-lazylock) (1.80)
+- [LazyCell and LazyLock](https://blog.rust-lang.org/2024/07/25/Rust-1.80.0.html#lazycell-and-lazylock) (1.80)
 - [Exclusive ranges in patterns](https://blog.rust-lang.org/2024/07/25/Rust-1.80.0.html#exclusive-ranges-in-patterns) (1.80)
-- [`Error` trait in `core`](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#coreerrorerror) (1.81)
-- [`#[expect(lint)]` and lint reasons](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#expectlint) (1.81)
+- [Error trait in core](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#coreerrorerror) (1.81)
+- [#[expect(lint)] and lint reasons](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#expectlint) (1.81)
 
 Usage:
 
