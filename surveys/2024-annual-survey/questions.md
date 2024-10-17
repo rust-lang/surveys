@@ -172,7 +172,7 @@ Type: select one (optional)
 
 ### Which operating systems do you use regularly for Rust development?
 
-**Note**: this is specifically about which systems you personally use for development *not* all the 
+**Note**: this is specifically about which systems you personally use for development, *not* all the 
 systems you target.
 
 Type: select all that apply (optional)
@@ -339,11 +339,11 @@ We want to know how do you perceive the speed of development of the Rust languag
 
 Type: select one (optional)
 
-- Rust is already too complex, it should not add or stabilize more significant features.
-- Rust changes too quickly, I wish it would slow down the pace of development.
-- I am satisfied with the current pace of development.
-- Rust changes too slowly, I wish it would add or stabilize features faster.
-- I don't know or don't care.
+- Rust is already too complex, it should not add or stabilize more significant features
+- Rust changes too quickly, I wish it would slow down the pace of development
+- I am satisfied with the current pace of development
+- Rust changes too slowly, I wish it would add or stabilize features faster
+- I don't know or don't care
 - Other (open response)
 
 > **justification**
@@ -351,7 +351,7 @@ Type: select one (optional)
 > We want to find out if people prefer stability and fewer changes, or if they want to see more features being
 > implemented or stabilized.
 
-### Which unimplemented or (nightly only) features are you looking for to be stabilized?
+### Which unimplemented (or nightly only) features are you looking for to be stabilized?
 
 Please mention *Rust compiler or standard library* features that are currently unstable (only available using a nightly release of the Rust compiler) or missing that would in your opinion be beneficial to the Rust ecosystem or to you. This list excludes other tooling around the compiler such as cargo, rustup, rustfmt, etc.
 
@@ -507,7 +507,7 @@ Activities:
 - Participate in conversations about Rust on social media or websites (Hacker News, r/rust, Twitter, LinkedIn, etc.)
 - Attend a Rust meetup or conference (virtual or in-person)
 - Write, comment on, contribute to discussion of, or provide edits to an open RFC
-- Discuss the Rust project in an official chat or forum (internals.rust-lang.org, Rust Zulip etc.)
+- Discuss the Rust project in an official chat or forum (internals.rust-lang.org, Rust Zulip, etc.)
 - Open an issue on any repo in the rust-lang GitHub organization
 - Contribute code changes (including tests) to any project in the rust-lang GitHub organization
 - Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub organization
@@ -536,7 +536,7 @@ Community Spaces:
 - Rust conferences
 - Rust meetups or local community events
 - Discussions (issues, pull requests, etc.) on a repository *inside* the rust-lang GitHub organization
-- Discussions (issues, pull requests, etc.) on a Rust repository *outside* of the rust-lang GitHub organization
+- Discussions (issues, pull requests, etc.) on a repository *outside* the rust-lang GitHub organization
 
 Choices:
 
@@ -726,7 +726,7 @@ Type: select one (optional)
 > This question assess hiring sentiment. Although there is intrinsic uncertainty, it is easy to answer and forward looking.
 > It will also be interesting to see what the demand for Rust skills from companies is over time.
 
-### Please share your assessment of the following statements on Rust employment.
+### Please share your assessment of the following statements on Rust employment
 
 Type: matrix (optional)
 
@@ -811,13 +811,13 @@ Type: select one
 Type: select all that apply (optional)
 
 - Cultural beliefs
-- Disabled (physically, mentally or otherwise)
+- Disabled (physically, mentally, or otherwise)
 - Neurodivergent
 - Educational background
 - Language
 - Lesbian, gay, bisexual, queer or otherwise non-heterosexual
 - Non-binary gender
-- Older or younger than the average developer I know
+- Older or younger than the average developers I know
 - Political beliefs
 - Racial or ethnic minority
 - Religious beliefs
@@ -850,7 +850,7 @@ Type: select one (optional)
 - < 1 year
 - < 3 years
 - < 5 years
-- < 10 year
+- < 10 years
 - > 10 years
 
 ### Where do you live?
