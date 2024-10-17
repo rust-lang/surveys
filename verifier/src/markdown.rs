@@ -1,13 +1,9 @@
-use std::{error::Error, vec};
+use anyhow::bail;
+use std::vec;
 
-pub fn parse<'a>(markdown: &'a str) -> Result<Vec<Question<'a>>, Box<dyn Error>> {
+pub fn parse(markdown: &str) -> anyhow::Result<Vec<Question>> {
     let mut questions = Vec::new();
     let mut state = ParserState::None;
-    macro_rules! bail {
-        ($($args : tt) *) => {
-            return Err(format!("markdown error: {}", format_args!($($args)*)).into())
-        };
-    }
     for line in markdown
         .lines()
         .map(|l| l.trim())
@@ -91,8 +87,8 @@ pub fn parse<'a>(markdown: &'a str) -> Result<Vec<Question<'a>>, Box<dyn Error>>
         } else if line.starts_with("REPEAT") {
             let previous = questions.last().ok_or_else(|| {
                 match state.question_text() {
-                    Some(t) => format!("question repeats previous answer but there is no previous question '{}'", t),
-                    None => format!("question repeats previous answer but there is no previous question or text for the current question"),
+                    Some(t) => anyhow::anyhow!("question repeats previous answer but there is no previous question '{}'", t),
+                    None => anyhow::anyhow!("question repeats previous answer but there is no previous question or text for the current question"),
                 }
             })?;
             state = match (state, &previous.answers) {
@@ -150,7 +146,6 @@ pub fn parse<'a>(markdown: &'a str) -> Result<Vec<Question<'a>>, Box<dyn Error>>
                     text,
                     answers: Answers::Matrix {
                         label1: label,
-                        label2: line,
                         answers1: answers,
                         answers2: vec![],
                     },
@@ -192,7 +187,6 @@ pub enum Answers<'a> {
     Matrix {
         label1: &'a str,
         answers1: Vec<&'a str>,
-        label2: &'a str,
         answers2: Vec<&'a str>,
     },
 }

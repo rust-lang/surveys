@@ -1,51 +1,87 @@
-use std::error::Error;
-
+use crate::api::Question;
+use crate::render::render_questions;
+use anyhow::Context;
+use std::io::ErrorKind;
+use std::path::PathBuf;
 use structopt::StructOpt;
 
 mod api;
 mod markdown;
+mod render;
 
-fn main() -> Result<(), Box<dyn Error>> {
+fn main() -> anyhow::Result<()> {
     env_logger::init();
     let args = Args::from_args();
-    let markdown = std::fs::read_to_string("../surveys/2024-annual-survey/questions.md")?;
-    let markdown_questions = markdown::parse(&markdown)?;
-    let online_questions = fetch_online_questions(args)?;
+    let online_data = fetch_surveyhero_data(args)?;
 
-    for (online, markdown) in markdown_questions.iter().zip(online_questions.iter()) {
+    let base_path = PathBuf::from("../surveys/2024-annual-survey");
+    let mut pairs = vec![(base_path.join("questions.md"), online_data.main)];
+    for (language, questions) in online_data.secondary_languages {
+        pairs.push((
+            base_path
+                .join("translations")
+                .join(language)
+                .with_extension("md"),
+            questions,
+        ));
+    }
+
+    for (path, questions) in pairs {
+        println!("-----\nChecking {}\n-----\n", path.display());
+
+        let markdown = match std::fs::read_to_string(&path) {
+            Ok(markdown) => markdown,
+            Err(error) if error.kind() == ErrorKind::NotFound => {
+                eprintln!(
+                    "{} not found, creating it with data from SurveyHero",
+                    path.display()
+                );
+                render_questions(&questions, &path)?;
+                std::fs::read_to_string(&path)?
+            }
+            Err(e) => return Err(e.into()),
+        };
+        let markdown_questions = markdown::parse(&markdown)
+            .with_context(|| format!("Cannot parse {} as Markdown", path.display()))?;
+        check_questions(&markdown_questions, &questions);
+    }
+
+    Ok(())
+}
+
+fn check_questions(markdown_questions: &[markdown::Question], sh_questions: &[Question]) {
+    for (online, markdown) in markdown_questions.iter().zip(sh_questions.iter()) {
         let comparison = online.compare(markdown);
         if !matches!(comparison, Comparison::Equal) {
-            eprintln!("Q: '{}'", online.text);
-            eprintln!("  {:#?}", comparison);
+            println!("Q: '{}'", online.text);
+            println!("  {:#?}", comparison);
         }
     }
 
-    if markdown_questions.len() > online_questions.len() {
-        eprintln!(
+    if markdown_questions.len() > sh_questions.len() {
+        println!(
             "Missing questions in the online version:\n{}",
-            markdown_questions[online_questions.len()..]
+            markdown_questions[sh_questions.len()..]
                 .iter()
                 .map(|q| q.text)
                 .collect::<Vec<_>>()
                 .join("\n-")
         );
     }
-    if online_questions.len() > markdown_questions.len() {
-        eprintln!(
+    if sh_questions.len() > markdown_questions.len() {
+        println!(
             "Missing questions in the markdown version:\n-{}",
-            online_questions[markdown_questions.len()..]
+            sh_questions[markdown_questions.len()..]
                 .iter()
                 .map(|q| q.text())
                 .collect::<Vec<_>>()
                 .join("\n-")
         );
     }
-
-    Ok(())
 }
 
 impl markdown::Question<'_> {
-    fn compare(&self, other: &api::Question) -> Comparison {
+    fn compare(&self, other: &Question) -> Comparison {
         if self.text != other.text() {
             return Comparison::TitlesDiffer(self.text.to_owned(), other.text().to_owned());
         }
@@ -60,10 +96,9 @@ impl markdown::Question<'_> {
                     );
                 }
             }
-            (
-                markdown::Answers::SelectOne(answers),
-                api::Question::ChoiceList { choice_list, .. },
-            ) if other.is_select_one() => {
+            (markdown::Answers::SelectOne(answers), Question::ChoiceList { choice_list, .. })
+                if other.is_select_one() =>
+            {
                 let mismatched = choice_list.mismatched_answers(&answers);
                 if !mismatched.is_empty() {
                     return Comparison::AnswersDiffer(
@@ -74,10 +109,9 @@ impl markdown::Question<'_> {
                     );
                 }
             }
-            (
-                markdown::Answers::SelectMany(answers),
-                api::Question::ChoiceList { choice_list, .. },
-            ) if other.is_select_many() => {
+            (markdown::Answers::SelectMany(answers), Question::ChoiceList { choice_list, .. })
+                if other.is_select_many() =>
+            {
                 let mismatched = choice_list.mismatched_answers(&answers);
                 if !mismatched.is_empty() {
                     return Comparison::AnswersDiffer(
@@ -92,7 +126,7 @@ impl markdown::Question<'_> {
                 markdown::Answers::Matrix {
                     answers1, answers2, ..
                 },
-                api::Question::ChoiceTable { choice_table, .. },
+                Question::ChoiceTable { choice_table, .. },
             ) => {
                 let mismatched_rows = choice_table.mismatched_rows(&answers1);
                 if !mismatched_rows.is_empty() {
@@ -126,6 +160,7 @@ impl markdown::Question<'_> {
     }
 }
 
+#[allow(dead_code)]
 #[derive(Debug)]
 enum Comparison {
     TitlesDiffer(String, String),
@@ -143,8 +178,8 @@ enum QuestionType {
     Matrix,
 }
 
-impl<'a> From<&'a api::Question> for QuestionType {
-    fn from(q: &api::Question) -> Self {
+impl<'a> From<&'a Question> for QuestionType {
+    fn from(q: &Question) -> Self {
         if q.is_select_one() {
             return QuestionType::SelectOne;
         }
@@ -170,15 +205,15 @@ impl From<&markdown::Question<'_>> for QuestionType {
     }
 }
 
-fn fetch_online_questions(args: Args) -> Result<Vec<api::Question>, Box<dyn Error>> {
-    let client = api::Client::new(args.username, args.password);
+fn fetch_surveyhero_data(args: Args) -> anyhow::Result<SurveyData> {
+    let mut client = api::Client::new(args.username, args.password);
     let surveys = client.fetch_surveys()?;
     let survey_name = args.survey_name;
     let survey = surveys
         .iter()
         .find(|s| s.title == survey_name)
         .ok_or_else(|| {
-            format!(
+            anyhow::anyhow!(
                 "no survey with the name '{}' in the account. Available surveys: {}",
                 survey_name,
                 surveys
@@ -189,7 +224,28 @@ fn fetch_online_questions(args: Args) -> Result<Vec<api::Question>, Box<dyn Erro
                     .join(", ")
             )
         })?;
-    client.fetch_questions(survey.survey_id)
+    let languages = client.fetch_secondary_languages(survey.survey_id)?;
+
+    let main = client.fetch_questions(survey.survey_id, None)?;
+    let secondary_languages = languages
+        .into_iter()
+        .map(|l| {
+            let questions = client.fetch_questions(survey.survey_id, Some(l.code.clone()))?;
+            let language = l.code.clone();
+            Ok::<_, anyhow::Error>((language, questions))
+        })
+        .collect::<Result<_, _>>()?;
+
+    Ok(SurveyData {
+        main,
+        secondary_languages,
+    })
+}
+
+#[derive(Debug)]
+struct SurveyData {
+    main: Vec<Question>,
+    secondary_languages: Vec<(String, Vec<Question>)>,
 }
 
 #[derive(structopt::StructOpt)]
