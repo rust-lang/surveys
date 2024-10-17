@@ -15,13 +15,13 @@ fn main() -> Result<(), Box<dyn Error>> {
     for (online, markdown) in markdown_questions.iter().zip(online_questions.iter()) {
         let comparison = online.compare(markdown);
         if !matches!(comparison, Comparison::Equal) {
-            eprintln!("Q: '{}'", online.text);
-            eprintln!("  {:#?}", comparison);
+            println!("Q: '{}'", online.text);
+            println!("  {:#?}", comparison);
         }
     }
 
     if markdown_questions.len() > online_questions.len() {
-        eprintln!(
+        println!(
             "Missing questions in the online version:\n{}",
             markdown_questions[online_questions.len()..]
                 .iter()
@@ -31,7 +31,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         );
     }
     if online_questions.len() > markdown_questions.len() {
-        eprintln!(
+        println!(
             "Missing questions in the markdown version:\n-{}",
             online_questions[markdown_questions.len()..]
                 .iter()
