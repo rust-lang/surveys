@@ -8,7 +8,7 @@ mod markdown;
 fn main() -> Result<(), Box<dyn Error>> {
     env_logger::init();
     let args = Args::from_args();
-    let markdown = std::fs::read_to_string("../surveys/2021-annual-survey/questions.md")?;
+    let markdown = std::fs::read_to_string("../surveys/2024-annual-survey/questions.md")?;
     let markdown_questions = markdown::parse(&markdown)?;
     let online_questions = fetch_online_questions(args)?;
 
@@ -69,7 +69,7 @@ impl markdown::Question<'_> {
                     return Comparison::AnswersDiffer(
                         mismatched
                             .into_iter()
-                            .map(|(s1, s2)| (s1.to_owned(), s2.to_owned()))
+                            .map(|(s1, s2)| (s1, s2.to_string()))
                             .collect(),
                     );
                 }
@@ -83,7 +83,7 @@ impl markdown::Question<'_> {
                     return Comparison::AnswersDiffer(
                         mismatched
                             .into_iter()
-                            .map(|(s1, s2)| (s1.to_owned(), s2.to_owned()))
+                            .map(|(s1, s2)| (s1, s2.to_string()))
                             .collect(),
                     );
                 }
@@ -99,7 +99,7 @@ impl markdown::Question<'_> {
                     return Comparison::MatrixAnswersDiffer(
                         mismatched_rows
                             .into_iter()
-                            .map(|(s1, s2)| (s1.to_owned(), s2.to_owned()))
+                            .map(|(s1, s2)| (s1, s2.to_string()))
                             .collect(),
                     );
                 }
@@ -108,7 +108,7 @@ impl markdown::Question<'_> {
                     return Comparison::MatrixAnswersDiffer(
                         mismatched_columns
                             .into_iter()
-                            .map(|(s1, s2)| (s1.to_owned(), s2.to_owned()))
+                            .map(|(s1, s2)| (s1, s2.to_string()))
                             .collect(),
                     );
                 }

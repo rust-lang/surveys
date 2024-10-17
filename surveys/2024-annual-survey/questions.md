@@ -42,7 +42,7 @@ Type: select all that apply
 
 ### Tell us more:
 
-Type: free text
+Type: free form (optional)
 
 > **SURVEY FLOW**
 >
@@ -67,7 +67,7 @@ Type: select all that apply
 
 ### Tell us more:
 
-Type: free text
+Type: free form (optional)
 
 > **SURVEY FLOW**
 >
@@ -172,7 +172,7 @@ Type: select one (optional)
 
 ### Which operating systems do you use regularly for Rust development?
 
-**Note**: this is specifically about which systems you personally use for development *not* all the 
+**Note**: this is specifically about which systems you personally use for development, *not* all the 
 systems you target.
 
 Type: select all that apply (optional)
@@ -305,12 +305,33 @@ Type: select all that apply (optional)
 
 Type: select one (optional)
 
-1.84 (nightly), and then every version from 1.83 to 1.0 in descending order, and "a pre-1.0 version"
+- 1.85 (nightly), and then every version from 1.83 to 1.0 in descending order, and "a pre-1.0 version"
 
 > **justification**
 >
 > To get real data on how many people use older versions of the toolchain to
 > inform discussion on MSRVs.
+
+### Do you agree with the following statements on Rust stability?
+
+Type: matrix (optional)
+
+Statements:
+
+- I can upgrade the *stable* compiler version without fear of my code failing to compile
+- I can upgrade the *nightly* compiler version without fear of my code failing to compile
+- Upgrading to a new *stable* compiler version requires either no changes or extremely small & easy changes to my code
+- Upgrading to a new *nightly* compiler version requires either no changes or extremely small & easy changes to my code
+
+Rating:
+
+- Agree
+- Disagree
+
+> **justification**
+>
+> When want to get an impression of how stable the compiler *feels*. Impressions are more important than hard numbers as
+> not all users define stability in the same way the compiler does.
 
 ### What is your opinion on how fast Rust evolves?
 
@@ -318,11 +339,11 @@ We want to know how do you perceive the speed of development of the Rust languag
 
 Type: select one (optional)
 
-- Rust is already too complex, it should not add or stabilize more significant features.
-- Rust changes too quickly, I wish it would slow down the pace of development.
-- I am satisfied with the current pace of development.
-- Rust changes too slowly, I wish it would add or stabilize features faster.
-- I don't know or don't care.
+- Rust is already too complex, it should not add or stabilize more significant features
+- Rust changes too quickly, I wish it would slow down the pace of development
+- I am satisfied with the current pace of development
+- Rust changes too slowly, I wish it would add or stabilize features faster
+- I don't know or don't care
 - Other (open response)
 
 > **justification**
@@ -330,7 +351,7 @@ Type: select one (optional)
 > We want to find out if people prefer stability and fewer changes, or if they want to see more features being
 > implemented or stabilized.
 
-### Which unimplemented or (nightly only) features are you looking for to be stabilized?
+### Which unimplemented (or nightly only) features are you looking for to be stabilized?
 
 Please mention *Rust compiler or standard library* features that are currently unstable (only available using a nightly release of the Rust compiler) or missing that would in your opinion be beneficial to the Rust ecosystem or to you. This list excludes other tooling around the compiler such as cargo, rustup, rustfmt, etc.
 
@@ -338,25 +359,25 @@ Type: matrix (optional)
 
 Features:
 
-- Specialization ([RFC#1210](https://github.com/rust-lang/rust/issues/31844))
-- Generators/coroutines ([RFC#2033](https://github.com/rust-lang/rust/issues/43122))
-- Async closures ([RFC#2532](https://github.com/rust-lang/rust/issues/62290))
-- Async generators/coroutines (https://github.com/rust-lang/rust/pull/118420)
-- If/while let chains ([eRFC#2497](https://github.com/rust-lang/rust/issues/53667))
-- Try blocks ([RFC#243](https://github.com/rust-lang/rust/issues/31436))
-- Never type ([RFC#1216](https://github.com/rust-lang/rust/issues/35121))
-- Trait aliases ([RFC#1733](https://github.com/rust-lang/rfcs/blob/master/text/1733-trait-alias.md))
-- Type alias impl trait (TAIT) ([RFC#2515](https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html))
-- Associated type defaults ([RFC#2532](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html))
+- [Specialization](https://github.com/rust-lang/rust/issues/31844)
+- [Generators/coroutines](https://github.com/rust-lang/rust/issues/43122)
+- [Async closures](https://github.com/rust-lang/rust/issues/62290)
+- [Async generators/coroutines](https://github.com/rust-lang/rust/pull/118420)
+- [If/while let chains](https://github.com/rust-lang/rust/issues/53667)
+- [Try blocks](https://github.com/rust-lang/rust/issues/31436)
+- [Never type](https://github.com/rust-lang/rust/issues/35121)
+- [Trait aliases](https://github.com/rust-lang/rfcs/blob/master/text/1733-trait-alias.md)
+- [Type Alias Impl Trait (TAIT)](https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html)
+- [Associated type defaults](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)
 - Generic const expressions
-- Const trait methods
+- [Const trait methods](https://github.com/rust-lang/rust/issues/67792)
 - Compile time reflection
 - Variadic generics
-- Arbitrary self types ([RFC#3519](https://github.com/rust-lang/rfcs/blob/master/text/3519-arbitrary-self-types-v2.md))
-- Enum variant types ([RFC#2593](https://github.com/rust-lang/lang-team/issues/122))
-- Allocator trait and better OOM handling (https://github.com/rust-lang/rust/issues/32838)
-- Stable ABI (https://github.com/rust-lang/rust/issues/111423)
-- Portable SIMD (https://github.com/rust-lang/portable-simd)
+- [Arbitrary self types](https://github.com/rust-lang/rfcs/blob/master/text/3519-arbitrary-self-types-v2.md)
+- [Enum variant types](https://github.com/rust-lang/lang-team/issues/122)
+- [Allocator trait and better OOM handling](https://github.com/rust-lang/rust/issues/32838)
+- [Stable ABI](https://github.com/rust-lang/rust/issues/111423)
+- [Portable SIMD](https://github.com/rust-lang/portable-simd)
 
 Priority:
 
@@ -367,7 +388,7 @@ Priority:
 
 ### Are there any features not mentioned above that you would like to be prioritised?
 
-Type: free text
+Type: free form (optional)
 
 > **justification**
 >
@@ -375,9 +396,11 @@ Type: free text
 
 ### Which of the following aspects of Rust present non-trivial problems to your programming productivity?
 
-#### Assess only challenges that you think are impacting your work.
+Assess only challenges that you think are impacting your work. If you do not select anything for a given row, we will assume that you do not know or do not care about that aspect.
 
 Type: matrix (optional)
+
+Challenges:
 
 - Implementing logic for tuples of various sizes
 - Splitting code across crates (e.g. orphan rule)
@@ -390,7 +413,7 @@ Type: matrix (optional)
 - Writing correct unsafe code
 - Borrow checker not allowing valid code
 - Slow runtime performance
-- Slow compile times
+- Slow compilation
 - Large binary size of compiled artifacts
 - High disk space usage (e.g. the size of the target folder)
 - Encountering compiler bugs (e.g. ICEs a.k.a. internal compiler errors or miscompilations)
@@ -411,7 +434,7 @@ Options:
 
 ### Are there any challenges not mentioned above that affect your Rust programming productivity?
 
-Type: free text
+Type: free form (optional)
 
 > **justification**
 >
@@ -425,18 +448,18 @@ Type: matrix (optional)
 
 Features:
 
-- [`async fn` in traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
-- [Return position `impl Trait` in traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
+- [async fn in traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
+- [Return position impl Trait in traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
 - [C-string literals](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#c-string-literals) (1.77)
-- [Recursion in `async fn`](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#support-for-recursion-in-async-fn) (1.77)
-- [`offset_of!` macro](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#offset_of) (1.77)
-- [`#[diagnostic]` attribute](https://blog.rust-lang.org/2024/05/02/Rust-1.78.0.html#diagnostic-attributes) (1.78)
-- [Inline `const` expressions](https://blog.rust-lang.org/2024/06/13/Rust-1.79.0.html#inline-const-expressions) (1.79)
+- [Recursion in async fn](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#support-for-recursion-in-async-fn) (1.77)
+- [offset_of! macro](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#offset_of) (1.77)
+- [#[diagnostic] attribute](https://blog.rust-lang.org/2024/05/02/Rust-1.78.0.html#diagnostic-attributes) (1.78)
+- [Inline const expressions](https://blog.rust-lang.org/2024/06/13/Rust-1.79.0.html#inline-const-expressions) (1.79)
 - [Bounds in associated type position](https://blog.rust-lang.org/2024/06/13/Rust-1.79.0.html#bounds-in-associated-type-position) (1.79)
-- [`LazyCell` and `LazyLock`](https://blog.rust-lang.org/2024/07/25/Rust-1.80.0.html#lazycell-and-lazylock) (1.80)
+- [LazyCell and LazyLock](https://blog.rust-lang.org/2024/07/25/Rust-1.80.0.html#lazycell-and-lazylock) (1.80)
 - [Exclusive ranges in patterns](https://blog.rust-lang.org/2024/07/25/Rust-1.80.0.html#exclusive-ranges-in-patterns) (1.80)
-- [`Error` trait in `core`](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#coreerrorerror) (1.81)
-- [`#[expect(lint)]` and lint reasons](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#expectlint) (1.81)
+- [Error trait in core](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#coreerrorerror) (1.81)
+- [#[expect(lint)] and lint reasons](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#expectlint) (1.81)
 
 Usage:
 
@@ -472,27 +495,6 @@ Type: select all that apply (optional)
 >
 > It could be interesting to know how many people use crates.io vs some custom/local/company registry, and how many people are even aware of what registry do they use. See issue surveys#236.
 
-### Do you agree with the following statements on Rust stability?
-
-Type: matrix (optional)
-
-Statements:
-
-- I can upgrade the *stable* compiler version without fear of my code failing to compile
-- I can upgrade the *nightly* compiler version without fear of my code failing to compile
-- Upgrading to a new *stable* compiler version requires either no changes or extremely small & easy changes to my code
-- Upgrading to a new *nightly* compiler version requires either no changes or extremely small & easy changes to my code
-
-Rating:
-
-- Agree
-- Disagree
-
-> **justification**
->
-> When want to get an impression of how stable the compiler *feels*. Impressions are more important than hard numbers as
-> not all users define stability in the same way the compiler does.
-
 ## The Rust community
 
 ### Roughly how often do you engage in the following Rust community activities?
@@ -507,7 +509,7 @@ Activities:
 - Participate in conversations about Rust on social media or websites (Hacker News, r/rust, Twitter, LinkedIn, etc.)
 - Attend a Rust meetup or conference (virtual or in-person)
 - Write, comment on, contribute to discussion of, or provide edits to an open RFC
-- Discuss the Rust project in an official chat or forum (internals.rust-lang.org, Rust Zulip etc.)
+- Discuss the Rust project in an official chat or forum (internals.rust-lang.org, Rust Zulip, etc.)
 - Open an issue on any repo in the rust-lang GitHub organization
 - Contribute code changes (including tests) to any project in the rust-lang GitHub organization
 - Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub organization
@@ -536,7 +538,7 @@ Community Spaces:
 - Rust conferences
 - Rust meetups or local community events
 - Discussions (issues, pull requests, etc.) on a repository *inside* the rust-lang GitHub organization
-- Discussions (issues, pull requests, etc.) on a Rust repository *outside* of the rust-lang GitHub organization
+- Discussions (issues, pull requests, etc.) on a repository *outside* the rust-lang GitHub organization
 
 Choices:
 
@@ -573,7 +575,7 @@ Type: select one (optional)
 
 - Yes, primarily as an individual contributor (i.e., non-manager)
 - I primarily manage others who do
-- No [`NEXT`](#to-what-extent-is-rust-currently-being-used-by-your-company)
+- No [`NEXT`](#to-what-extent-is-rust-currently-being-used-by-your-organisation)
 
 ### Are you personally using Rust at work?
 
@@ -590,15 +592,15 @@ Type: select one
 > are using Rust in a professional setting. This is most interesting over time.
 > Answers to this question should be combined with whether the respondent has ever used Rust.
 
-### To what extent is Rust currently being used by your company?
+### To what extent is Rust currently being used by your organisation?
 
 Type: select one
 
-- My company makes non-trivial use of Rust (e.g., used in production or in significant tooling)
-- My company has experimented with Rust or is considering using it
-- My company has not seriously considered Rust for any use [`NEXT`](#approximately-how-many-total-developers-does-your-company-employ)
-- I am unsure whether my company has considered using or currently uses Rust [`NEXT`](#approximately-how-many-total-developers-does-your-company-employ)
-- I don't work for a company or my company does not develop software of any kind [`NEXT`](#please-share-your-assessment-of-the-following-statements-on-rust-employment)
+- My organisation makes non-trivial use of Rust (e.g., used in production or in significant tooling)
+- My organisation has experimented with Rust or is considering using it
+- My organisation has not seriously considered Rust for any use [`NEXT`](#approximately-how-many-total-developers-does-your-organisation-employ)
+- I am unsure whether my organisation has considered using or currently uses Rust [`NEXT`](#approximately-how-many-total-developers-does-your-organisation-employ)
+- I don't work for a organisation or my organisation does not develop software of any kind [`NEXT`](#please-share-your-assessment-of-the-following-statements-on-rust-employment)
 
 > **justification**
 >
@@ -648,7 +650,7 @@ Type: free form (optional)
 >
 > This an opportunity to learn from adopters at companies what they struggle with when adopting Rust.
 
-### In what technology domain(s) is Rust used at your company?
+### In what technology domain(s) is Rust used at your organisation?
 
 Type: select all that apply (optional)
 
@@ -690,7 +692,7 @@ Type: select all that apply (optional)
 > We want to understand the "shape" of Rust usage, and this question tries to get at that
 > by allowing the respondent to select multiple answers.
 
-### Approximately how many total developers does your company employ?
+### Approximately how many total developers does your organisation employ?
 
 **Note**: Don't worry about being precise here! Go with your instinct.
 
@@ -712,7 +714,7 @@ Type: select one (optional)
 > Previously this question used "employees" instead of "developers". It is more appropriate for us to ask about the amount
 > of developers at a company vs. the amount of people employed in total.
 
-### Is your company planning on hiring Rust developers in the next year?
+### Is your organisation planning on hiring Rust developers in the next year?
 
 Type: select one (optional)
 
@@ -726,7 +728,7 @@ Type: select one (optional)
 > This question assess hiring sentiment. Although there is intrinsic uncertainty, it is easy to answer and forward looking.
 > It will also be interesting to see what the demand for Rust skills from companies is over time.
 
-### Please share your assessment of the following statements on Rust employment.
+### Please share your assessment of the following statements on Rust employment
 
 Type: matrix (optional)
 
@@ -811,13 +813,13 @@ Type: select one
 Type: select all that apply (optional)
 
 - Cultural beliefs
-- Disabled (physically, mentally or otherwise)
+- Disabled (physically, mentally, or otherwise)
 - Neurodivergent
 - Educational background
 - Language
 - Lesbian, gay, bisexual, queer or otherwise non-heterosexual
 - Non-binary gender
-- Older or younger than the average developer I know
+- Older or younger than the average developers I know
 - Political beliefs
 - Racial or ethnic minority
 - Religious beliefs
@@ -850,7 +852,7 @@ Type: select one (optional)
 - < 1 year
 - < 3 years
 - < 5 years
-- < 10 year
+- < 10 years
 - > 10 years
 
 ### Where do you live?
@@ -867,7 +869,7 @@ Type: select one (optional)
 
 ### As you selected "Other" from the list of countries above, please enter your territory of residence below:
 
-Type: free text
+Type: free form
 
 ### In what ways are you comfortable communicating about technical topics in English?
 
