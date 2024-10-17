@@ -573,7 +573,7 @@ Type: select one (optional)
 
 - Yes, primarily as an individual contributor (i.e., non-manager)
 - I primarily manage others who do
-- No [`NEXT`](#to-what-extent-is-rust-currently-being-used-by-your-company)
+- No [`NEXT`](#to-what-extent-is-rust-currently-being-used-by-your-organisation)
 
 ### Are you personally using Rust at work?
 
@@ -590,15 +590,15 @@ Type: select one
 > are using Rust in a professional setting. This is most interesting over time.
 > Answers to this question should be combined with whether the respondent has ever used Rust.
 
-### To what extent is Rust currently being used by your company?
+### To what extent is Rust currently being used by your organisation?
 
 Type: select one
 
-- My company makes non-trivial use of Rust (e.g., used in production or in significant tooling)
-- My company has experimented with Rust or is considering using it
-- My company has not seriously considered Rust for any use [`NEXT`](#approximately-how-many-total-developers-does-your-company-employ)
-- I am unsure whether my company has considered using or currently uses Rust [`NEXT`](#approximately-how-many-total-developers-does-your-company-employ)
-- I don't work for a company or my company does not develop software of any kind [`NEXT`](#please-share-your-assessment-of-the-following-statements-on-rust-employment)
+- My organisation makes non-trivial use of Rust (e.g., used in production or in significant tooling)
+- My organisation has experimented with Rust or is considering using it
+- My organisation has not seriously considered Rust for any use [`NEXT`](#approximately-how-many-total-developers-does-your-organisation-employ)
+- I am unsure whether my organisation has considered using or currently uses Rust [`NEXT`](#approximately-how-many-total-developers-does-your-organisation-employ)
+- I don't work for a organisation or my organisation does not develop software of any kind [`NEXT`](#please-share-your-assessment-of-the-following-statements-on-rust-employment)
 
 > **justification**
 >
@@ -648,7 +648,7 @@ Type: free form (optional)
 >
 > This an opportunity to learn from adopters at companies what they struggle with when adopting Rust.
 
-### In what technology domain(s) is Rust used at your company?
+### In what technology domain(s) is Rust used at your organisation?
 
 Type: select all that apply (optional)
 
@@ -690,7 +690,7 @@ Type: select all that apply (optional)
 > We want to understand the "shape" of Rust usage, and this question tries to get at that
 > by allowing the respondent to select multiple answers.
 
-### Approximately how many total developers does your company employ?
+### Approximately how many total developers does your organisation employ?
 
 **Note**: Don't worry about being precise here! Go with your instinct.
 
@@ -712,7 +712,7 @@ Type: select one (optional)
 > Previously this question used "employees" instead of "developers". It is more appropriate for us to ask about the amount
 > of developers at a company vs. the amount of people employed in total.
 
-### Is your company planning on hiring Rust developers in the next year?
+### Is your organisation planning on hiring Rust developers in the next year?
 
 Type: select one (optional)
 
