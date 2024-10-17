@@ -146,7 +146,6 @@ pub fn parse(markdown: &str) -> anyhow::Result<Vec<Question>> {
                     text,
                     answers: Answers::Matrix {
                         label1: label,
-                        label2: line,
                         answers1: answers,
                         answers2: vec![],
                     },
@@ -188,7 +187,6 @@ pub enum Answers<'a> {
     Matrix {
         label1: &'a str,
         answers1: Vec<&'a str>,
-        label2: &'a str,
         answers2: Vec<&'a str>,
     },
 }

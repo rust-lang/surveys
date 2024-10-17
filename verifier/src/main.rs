@@ -22,7 +22,7 @@ fn main() -> anyhow::Result<()> {
                 .join("translations")
                 .join(language)
                 .with_extension("md"),
-            questions.questions,
+            questions,
         ));
     }
 
@@ -160,6 +160,7 @@ impl markdown::Question<'_> {
     }
 }
 
+#[allow(dead_code)]
 #[derive(Debug)]
 enum Comparison {
     TitlesDiffer(String, String),
@@ -231,13 +232,7 @@ fn fetch_surveyhero_data(args: Args) -> anyhow::Result<SurveyData> {
         .map(|l| {
             let questions = client.fetch_questions(survey.survey_id, Some(l.code.clone()))?;
             let language = l.code.clone();
-            Ok::<_, anyhow::Error>((
-                language,
-                QuestionSet {
-                    questions,
-                    language: l.code,
-                },
-            ))
+            Ok::<_, anyhow::Error>((language, questions))
         })
         .collect::<Result<_, _>>()?;
 
@@ -250,13 +245,7 @@ fn fetch_surveyhero_data(args: Args) -> anyhow::Result<SurveyData> {
 #[derive(Debug)]
 struct SurveyData {
     main: Vec<Question>,
-    secondary_languages: Vec<(String, QuestionSet)>,
-}
-
-#[derive(Debug)]
-struct QuestionSet {
-    language: String,
-    questions: Vec<Question>,
+    secondary_languages: Vec<(String, Vec<Question>)>,
 }
 
 #[derive(structopt::StructOpt)]

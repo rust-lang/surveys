@@ -93,7 +93,6 @@ struct Languages {
 
 #[derive(Debug, Deserialize)]
 pub struct Language {
-    pub name: String,
     pub code: String,
     is_default: bool,
     is_active: bool,
@@ -120,10 +119,7 @@ impl Elements {
 #[serde(tag = "type")]
 pub enum Element {
     #[serde(rename = "question")]
-    Question {
-        element_id: usize,
-        question: Question,
-    },
+    Question { question: Question },
     #[serde(other)]
     Unknown,
 }
@@ -270,10 +266,7 @@ pub fn normalize_surveyhero_text(text: &str) -> String {
     let text = LINK_REGEX.replace_all(&text, "[$text]($link)");
 
     // Replace <em>$text</em> with *$text*
-    ITALICS_REGEX
-        .replace_all(&text, "*$text*")
-        .trim()
-        .to_string()
+    ITALICS_REGEX.replace_all(&text, "*$text*").to_string()
 }
 
 fn normalize_markdown_text(text: &str) -> &str {
@@ -281,5 +274,4 @@ fn normalize_markdown_text(text: &str) -> &str {
     text.strip_suffix("(open response)")
         .map(|t| t.trim_end())
         .unwrap_or(text)
-        .trim()
 }
