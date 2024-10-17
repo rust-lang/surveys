@@ -1,4 +1,4 @@
-use crate::api::{normalize_surveyhero_text, Question};
+use crate::api::Question;
 use std::io;
 use std::io::Write;
 use std::path::Path;
@@ -11,7 +11,7 @@ pub fn render_questions(questions: &[Question], file: &Path) -> io::Result<()> {
 
     let mut file = std::fs::File::create(file)?;
     for question in questions {
-        writeln!(file, "### {}\n", normalize_surveyhero_text(question.text()))?;
+        writeln!(file, "### {}\n", question.text())?;
         match question {
             Question::Input { .. } => {
                 writeln!(file, "Type: free form")?;
@@ -30,11 +30,11 @@ pub fn render_questions(questions: &[Question], file: &Path) -> io::Result<()> {
             }
             Question::ChoiceTable { choice_table, .. } => {
                 writeln!(file, "Type: matrix\n")?;
-                writeln!(file, "Rows\n\n")?;
+                writeln!(file, "Rows:\n")?;
                 for row in choice_table.rows_strs() {
                     writeln!(file, "- {row}")?;
                 }
-                writeln!(file, "\nColumns\n\n")?;
+                writeln!(file, "\nColumns:\n")?;
                 for col in choice_table.column_strs() {
                     writeln!(file, "- {col}")?;
                 }

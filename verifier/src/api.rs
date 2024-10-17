@@ -34,17 +34,36 @@ impl Client {
         Ok(surveys.surveys)
     }
 
-    pub fn fetch_questions(&self, survey_id: usize) -> Result<Vec<Question>, Box<dyn Error>> {
+    pub fn fetch_secondary_languages(&mut self, survey_id: usize) -> anyhow::Result<Vec<Language>> {
+        self.rate_limit();
+        let response = self
+            .inner
+            .get(format!(
+                "https://api.surveyhero.com/v1/surveys/{survey_id}/languages"
+            ))
+            .basic_auth(&self.username, Some(&self.password))
+            .send()?
+            .error_for_status()?;
+        let surveys: Languages = response.json()?;
+        Ok(surveys
+            .languages
+            .into_iter()
+            .filter(|l| !l.is_default && l.is_active)
+            .collect())
+    }
+
     pub fn fetch_questions(
         &mut self,
         survey_id: usize,
+        language: Option<String>,
     ) -> anyhow::Result<Vec<Question>> {
         self.rate_limit();
         let response = self
             .inner
             .get(format!(
-                "https://api.surveyhero.com/v1/surveys/{}/questions",
-                survey_id
+                "https://api.surveyhero.com/v1/surveys/{}/questions{}",
+                survey_id,
+                language.map(|l| format!("?lang={l}")).unwrap_or_default()
             ))
             .basic_auth(&self.username, Some(&self.password))
             .send()?
@@ -67,6 +86,17 @@ impl Client {
     }
 }
 
+#[derive(Debug, Deserialize)]
+struct Languages {
+    languages: Vec<Language>,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct Language {
+    pub name: String,
+    pub code: String,
+    is_default: bool,
+    is_active: bool,
 }
 
 #[derive(Debug, Deserialize)]
@@ -116,12 +146,12 @@ pub enum Question {
 }
 
 impl Question {
-    pub fn text(&self) -> &str {
-        match self {
+    pub fn text(&self) -> String {
+        normalize_surveyhero_text(match self {
             Self::ChoiceList { question_text, .. } => question_text,
             Self::Input { question_text, .. } => question_text,
             Self::ChoiceTable { question_text, .. } => question_text,
-        }
+        })
     }
 
     pub fn is_free_form(&self) -> bool {
@@ -146,7 +176,7 @@ impl Question {
 #[derive(Debug, Deserialize)]
 pub struct ChoiceList {
     choices: Vec<Choice>,
-    settings: Settings,
+    pub settings: Settings,
 }
 
 impl ChoiceList {
@@ -156,7 +186,7 @@ impl ChoiceList {
             .map(|c| normalize_surveyhero_text(c.label.as_str()))
     }
 
-    pub fn mismatched_answers<'a>(&'a self, answers: &'a [&str]) -> Vec<(String, Cow<str>)> {
+    pub fn mismatched_answers<'a>(&'a self, answers: &'a [&str]) -> Vec<(String, &'a str)> {
         self.as_strs()
             .zip(answers.iter().map(|s| normalize_markdown_text(s)))
             .filter(|(s1, s2)| s1 != s2)
@@ -183,14 +213,14 @@ impl ChoiceTable {
             .map(|c| normalize_surveyhero_text(c.label.as_str()))
     }
 
-    pub fn mismatched_rows<'a>(&'a self, labels: &[&'a str]) -> Vec<(String, Cow<str>)> {
+    pub fn mismatched_rows<'a>(&'a self, labels: &[&'a str]) -> Vec<(String, &'a str)> {
         self.rows_strs()
             .zip(labels.iter().map(|s| normalize_markdown_text(s)))
             .filter(|(s1, s2)| s1 != s2)
             .collect()
     }
 
-    pub fn mismatched_columns<'a>(&'a self, choices: &'a [&str]) -> Vec<(String, Cow<str>)> {
+    pub fn mismatched_columns<'a>(&'a self, choices: &'a [&str]) -> Vec<(String, &'a str)> {
         self.column_strs()
             .zip(choices.iter().map(|s| normalize_markdown_text(s)))
             .filter(|(s1, s2)| s1 != s2)
@@ -223,29 +253,33 @@ pub struct Survey {
     pub title: String,
 }
 
-fn normalize_surveyhero_text(text: &str) -> String {
+pub fn normalize_surveyhero_text(text: &str) -> String {
     static LINK_REGEX: LazyLock<Regex> =
         LazyLock::new(|| Regex::new(r#"<a href="(?<link>.*?)".*?>(?<text>.*?)</a>"#).unwrap());
+    static ITALICS_REGEX: LazyLock<Regex> =
+        LazyLock::new(|| Regex::new(r"<em>(?<text>.*?)</em>").unwrap());
 
     let text = text
         .replace("&amp;", "&")
         .replace("&nbsp;", " ")
-        .replace("&lt;", "<");
+        .replace("&lt;", "<")
+        .replace("&gt;", ">")
+        .replace("<br>", "");
 
     // Replace <a href="$link" ...>$text</a> with [$text]($link)
-    LINK_REGEX.replace_all(&text, "[$text]($link)").to_string()
+    let text = LINK_REGEX.replace_all(&text, "[$text]($link)");
+
+    // Replace <em>$text</em> with *$text*
+    ITALICS_REGEX
+        .replace_all(&text, "*$text*")
+        .trim()
+        .to_string()
 }
 
-fn normalize_markdown_text(text: &str) -> Cow<str> {
-    static ITALICS_REGEX: LazyLock<Regex> =
-        LazyLock::new(|| Regex::new(r"(\*(?<text>\w+)\*)").unwrap());
-
+fn normalize_markdown_text(text: &str) -> &str {
     // Remove (open response) from the end of the Markdown text
-    let answer = text
-        .strip_suffix("(open response)")
+    text.strip_suffix("(open response)")
         .map(|t| t.trim_end())
-        .unwrap_or(text);
-
-    // Replace *foo* with <em>foo</em>
-    ITALICS_REGEX.replace_all(answer, "<em>$text</em>")
+        .unwrap_or(text)
+        .trim()
 }

@@ -1,19 +1,56 @@
 use crate::api::Question;
+use crate::render::render_questions;
 use anyhow::Context;
+use std::io::ErrorKind;
 use std::path::PathBuf;
 use structopt::StructOpt;
 
 mod api;
 mod markdown;
+mod render;
 
 fn main() -> anyhow::Result<()> {
     env_logger::init();
     let args = Args::from_args();
-    let markdown = std::fs::read_to_string("../surveys/2024-annual-survey/questions.md")?;
-    let markdown_questions = markdown::parse(&markdown)?;
-    let online_questions = fetch_online_questions(args)?;
+    let online_data = fetch_surveyhero_data(args)?;
 
-    for (online, markdown) in markdown_questions.iter().zip(online_questions.iter()) {
+    let base_path = PathBuf::from("../surveys/2024-annual-survey");
+    let mut pairs = vec![(base_path.join("questions.md"), online_data.main)];
+    for (language, questions) in online_data.secondary_languages {
+        pairs.push((
+            base_path
+                .join("translations")
+                .join(language)
+                .with_extension("md"),
+            questions.questions,
+        ));
+    }
+
+    for (path, questions) in pairs {
+        println!("-----\nChecking {}\n-----\n", path.display());
+
+        let markdown = match std::fs::read_to_string(&path) {
+            Ok(markdown) => markdown,
+            Err(error) if error.kind() == ErrorKind::NotFound => {
+                eprintln!(
+                    "{} not found, creating it with data from SurveyHero",
+                    path.display()
+                );
+                render_questions(&questions, &path)?;
+                std::fs::read_to_string(&path)?
+            }
+            Err(e) => return Err(e.into()),
+        };
+        let markdown_questions = markdown::parse(&markdown)
+            .with_context(|| format!("Cannot parse {} as Markdown", path.display()))?;
+        check_questions(&markdown_questions, &questions);
+    }
+
+    Ok(())
+}
+
+fn check_questions(markdown_questions: &[markdown::Question], sh_questions: &[Question]) {
+    for (online, markdown) in markdown_questions.iter().zip(sh_questions.iter()) {
         let comparison = online.compare(markdown);
         if !matches!(comparison, Comparison::Equal) {
             println!("Q: '{}'", online.text);
@@ -21,28 +58,26 @@ fn main() -> anyhow::Result<()> {
         }
     }
 
-    if markdown_questions.len() > online_questions.len() {
+    if markdown_questions.len() > sh_questions.len() {
         println!(
             "Missing questions in the online version:\n{}",
-            markdown_questions[online_questions.len()..]
+            markdown_questions[sh_questions.len()..]
                 .iter()
                 .map(|q| q.text)
                 .collect::<Vec<_>>()
                 .join("\n-")
         );
     }
-    if online_questions.len() > markdown_questions.len() {
+    if sh_questions.len() > markdown_questions.len() {
         println!(
             "Missing questions in the markdown version:\n-{}",
-            online_questions[markdown_questions.len()..]
+            sh_questions[markdown_questions.len()..]
                 .iter()
                 .map(|q| q.text())
                 .collect::<Vec<_>>()
                 .join("\n-")
         );
     }
-
-    Ok(())
 }
 
 impl markdown::Question<'_> {
@@ -188,7 +223,40 @@ fn fetch_surveyhero_data(args: Args) -> anyhow::Result<SurveyData> {
                     .join(", ")
             )
         })?;
-    client.fetch_questions(survey.survey_id)
+    let languages = client.fetch_secondary_languages(survey.survey_id)?;
+
+    let main = client.fetch_questions(survey.survey_id, None)?;
+    let secondary_languages = languages
+        .into_iter()
+        .map(|l| {
+            let questions = client.fetch_questions(survey.survey_id, Some(l.code.clone()))?;
+            let language = l.code.clone();
+            Ok::<_, anyhow::Error>((
+                language,
+                QuestionSet {
+                    questions,
+                    language: l.code,
+                },
+            ))
+        })
+        .collect::<Result<_, _>>()?;
+
+    Ok(SurveyData {
+        main,
+        secondary_languages,
+    })
+}
+
+#[derive(Debug)]
+struct SurveyData {
+    main: Vec<Question>,
+    secondary_languages: Vec<(String, QuestionSet)>,
+}
+
+#[derive(Debug)]
+struct QuestionSet {
+    language: String,
+    questions: Vec<Question>,
 }
 
 #[derive(structopt::StructOpt)]
