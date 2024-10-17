@@ -370,7 +370,7 @@ Features:
 - Type alias impl trait (TAIT) ([RFC#2515](https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html))
 - Associated type defaults ([RFC#2532](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html))
 - Generic const expressions
-- Const trait methods
+- Const trait methods ([RFC#2632](https://github.com/rust-lang/rust/issues/67792))
 - Compile time reflection
 - Variadic generics
 - Arbitrary self types ([RFC#3519](https://github.com/rust-lang/rfcs/blob/master/text/3519-arbitrary-self-types-v2.md))
