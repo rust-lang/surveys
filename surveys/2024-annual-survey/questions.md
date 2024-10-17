@@ -26,7 +26,7 @@ Type: select one
 
 ## For previous Rust users
 
-### As you have indicated that you're no longer using Rust, why did you stop using Rust?
+### As you have indicated that you're not currently using Rust, why not?
 
 Type: select all that apply
 
@@ -36,7 +36,8 @@ Type: select all that apply
 - Too difficult to learn
 - Community was rude, unwelcoming, or otherwise off-putting
 - I prefer to use another language
-- I no longer have the opportunity to use Rust due to factors outside of my control
+- I no longer have the opportunity to use Rust due to factors outside my control
+- I plan to use it in the future once an opportunity comes up
 - Other
 
 ### Tell us more:
@@ -60,7 +61,7 @@ Type: select all that apply
 - Too difficult to learn or learning will take too much time
 - Community was rude, unwelcoming, or otherwise off-putting
 - I prefer to use another language
-- I can't use Rust due to factors outside of my control
+- I can't use Rust due to factors outside my control
 - I haven't got around to it
 - Other
 
