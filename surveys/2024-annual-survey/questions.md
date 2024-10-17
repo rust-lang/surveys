@@ -390,7 +390,7 @@ Type: matrix (optional)
 - Writing correct unsafe code
 - Borrow checker not allowing valid code
 - Slow runtime performance
-- Slow compile times
+- Slow compilation
 - Large binary size of compiled artifacts
 - High disk space usage (e.g. the size of the target folder)
 - Encountering compiler bugs (e.g. ICEs a.k.a. internal compiler errors or miscompilations)
