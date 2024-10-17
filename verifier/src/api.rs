@@ -1,9 +1,8 @@
 use regex::Regex;
 use reqwest::blocking::Client as Reqwest;
 use serde::Deserialize;
-use std::borrow::Cow;
-use std::error::Error;
 use std::sync::LazyLock;
+use std::time::{Duration, SystemTime};
 
 pub struct Client {
     username: String,
@@ -22,6 +21,7 @@ impl Client {
     }
 
     pub fn fetch_surveys(&self) -> Result<Vec<Survey>, Box<dyn Error>> {
+    pub fn fetch_surveys(&mut self) -> anyhow::Result<Vec<Survey>> {
         let response = self
             .inner
             .get("https://api.surveyhero.com/v1/surveys")
@@ -33,6 +33,10 @@ impl Client {
     }
 
     pub fn fetch_questions(&self, survey_id: usize) -> Result<Vec<Question>, Box<dyn Error>> {
+    pub fn fetch_questions(
+        &mut self,
+        survey_id: usize,
+    ) -> anyhow::Result<Vec<Question>> {
         let response = self
             .inner
             .get(format!(

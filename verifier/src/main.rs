@@ -1,11 +1,12 @@
-use std::error::Error;
-
+use crate::api::Question;
+use anyhow::Context;
+use std::path::PathBuf;
 use structopt::StructOpt;
 
 mod api;
 mod markdown;
 
-fn main() -> Result<(), Box<dyn Error>> {
+fn main() -> anyhow::Result<()> {
     env_logger::init();
     let args = Args::from_args();
     let markdown = std::fs::read_to_string("../surveys/2024-annual-survey/questions.md")?;
@@ -45,7 +46,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 }
 
 impl markdown::Question<'_> {
-    fn compare(&self, other: &api::Question) -> Comparison {
+    fn compare(&self, other: &Question) -> Comparison {
         if self.text != other.text() {
             return Comparison::TitlesDiffer(self.text.to_owned(), other.text().to_owned());
         }
@@ -60,10 +61,9 @@ impl markdown::Question<'_> {
                     );
                 }
             }
-            (
-                markdown::Answers::SelectOne(answers),
-                api::Question::ChoiceList { choice_list, .. },
-            ) if other.is_select_one() => {
+            (markdown::Answers::SelectOne(answers), Question::ChoiceList { choice_list, .. })
+                if other.is_select_one() =>
+            {
                 let mismatched = choice_list.mismatched_answers(&answers);
                 if !mismatched.is_empty() {
                     return Comparison::AnswersDiffer(
@@ -74,10 +74,9 @@ impl markdown::Question<'_> {
                     );
                 }
             }
-            (
-                markdown::Answers::SelectMany(answers),
-                api::Question::ChoiceList { choice_list, .. },
-            ) if other.is_select_many() => {
+            (markdown::Answers::SelectMany(answers), Question::ChoiceList { choice_list, .. })
+                if other.is_select_many() =>
+            {
                 let mismatched = choice_list.mismatched_answers(&answers);
                 if !mismatched.is_empty() {
                     return Comparison::AnswersDiffer(
@@ -92,7 +91,7 @@ impl markdown::Question<'_> {
                 markdown::Answers::Matrix {
                     answers1, answers2, ..
                 },
-                api::Question::ChoiceTable { choice_table, .. },
+                Question::ChoiceTable { choice_table, .. },
             ) => {
                 let mismatched_rows = choice_table.mismatched_rows(&answers1);
                 if !mismatched_rows.is_empty() {
@@ -143,8 +142,8 @@ enum QuestionType {
     Matrix,
 }
 
-impl<'a> From<&'a api::Question> for QuestionType {
-    fn from(q: &api::Question) -> Self {
+impl<'a> From<&'a Question> for QuestionType {
+    fn from(q: &Question) -> Self {
         if q.is_select_one() {
             return QuestionType::SelectOne;
         }
@@ -170,15 +169,15 @@ impl From<&markdown::Question<'_>> for QuestionType {
     }
 }
 
-fn fetch_online_questions(args: Args) -> Result<Vec<api::Question>, Box<dyn Error>> {
-    let client = api::Client::new(args.username, args.password);
+fn fetch_surveyhero_data(args: Args) -> anyhow::Result<SurveyData> {
+    let mut client = api::Client::new(args.username, args.password);
     let surveys = client.fetch_surveys()?;
     let survey_name = args.survey_name;
     let survey = surveys
         .iter()
         .find(|s| s.title == survey_name)
         .ok_or_else(|| {
-            format!(
+            anyhow::anyhow!(
                 "no survey with the name '{}' in the account. Available surveys: {}",
                 survey_name,
                 surveys
