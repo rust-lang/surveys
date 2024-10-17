@@ -509,8 +509,8 @@ Activities:
 - Write, comment on, contribute to discussion of, or provide edits to an open RFC
 - Discuss the Rust project in an official chat or forum (internals.rust-lang.org, Rust Zulip etc.)
 - Open an issue on any repo in the rust-lang GitHub organization
-- Contribute code changes (including tests) to any project in the rust-lang GitHub organization
-- Contribute non-code changes (documentation, comments, etc.) to any project in the rust-lang GitHub organization
+- Contribute code changes (including tests) to any open-source Rust project
+- Contribute non-code changes (documentation, comments, etc.) to any open-source Rust project
 
 Frequency:
 
