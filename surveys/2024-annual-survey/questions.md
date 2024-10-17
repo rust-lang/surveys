@@ -312,6 +312,27 @@ Type: select one (optional)
 > To get real data on how many people use older versions of the toolchain to
 > inform discussion on MSRVs.
 
+### Do you agree with the following statements on Rust stability?
+
+Type: matrix (optional)
+
+Statements:
+
+- I can upgrade the *stable* compiler version without fear of my code failing to compile
+- I can upgrade the *nightly* compiler version without fear of my code failing to compile
+- Upgrading to a new *stable* compiler version requires either no changes or extremely small & easy changes to my code
+- Upgrading to a new *nightly* compiler version requires either no changes or extremely small & easy changes to my code
+
+Rating:
+
+- Agree
+- Disagree
+
+> **justification**
+>
+> When want to get an impression of how stable the compiler *feels*. Impressions are more important than hard numbers as
+> not all users define stability in the same way the compiler does.
+
 ### What is your opinion on how fast Rust evolves?
 
 We want to know how do you perceive the speed of development of the Rust language.
@@ -471,27 +492,6 @@ Type: select all that apply (optional)
 > **justification**
 >
 > It could be interesting to know how many people use crates.io vs some custom/local/company registry, and how many people are even aware of what registry do they use. See issue surveys#236.
-
-### Do you agree with the following statements on Rust stability?
-
-Type: matrix (optional)
-
-Statements:
-
-- I can upgrade the *stable* compiler version without fear of my code failing to compile
-- I can upgrade the *nightly* compiler version without fear of my code failing to compile
-- Upgrading to a new *stable* compiler version requires either no changes or extremely small & easy changes to my code
-- Upgrading to a new *nightly* compiler version requires either no changes or extremely small & easy changes to my code
-
-Rating:
-
-- Agree
-- Disagree
-
-> **justification**
->
-> When want to get an impression of how stable the compiler *feels*. Impressions are more important than hard numbers as
-> not all users define stability in the same way the compiler does.
 
 ## The Rust community
 
