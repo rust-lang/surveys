@@ -8,6 +8,7 @@ pub struct Client {
     username: String,
     password: String,
     inner: Reqwest,
+    last_request: Option<SystemTime>,
 }
 
 impl Client {
@@ -17,11 +18,12 @@ impl Client {
             username,
             password,
             inner,
+            last_request: None,
         }
     }
 
-    pub fn fetch_surveys(&self) -> Result<Vec<Survey>, Box<dyn Error>> {
     pub fn fetch_surveys(&mut self) -> anyhow::Result<Vec<Survey>> {
+        self.rate_limit();
         let response = self
             .inner
             .get("https://api.surveyhero.com/v1/surveys")
@@ -37,6 +39,7 @@ impl Client {
         &mut self,
         survey_id: usize,
     ) -> anyhow::Result<Vec<Question>> {
+        self.rate_limit();
         let response = self
             .inner
             .get(format!(
@@ -50,6 +53,20 @@ impl Client {
         let elements: Elements = response.json()?;
         Ok(elements.questions().collect())
     }
+
+    // Try to avoid 429 errors by rate limiting the client
+    fn rate_limit(&mut self) {
+        if let Some(last) = self.last_request {
+            let elapsed = last.elapsed().unwrap();
+            let limit = Duration::from_secs(1);
+            if elapsed < limit {
+                std::thread::sleep((limit - elapsed) + Duration::from_millis(100));
+            }
+        }
+        self.last_request = Some(SystemTime::now());
+    }
+}
+
 }
 
 #[derive(Debug, Deserialize)]
