@@ -375,7 +375,7 @@ Type: free text
 
 ### Which of the following aspects of Rust present non-trivial problems to your programming productivity?
 
-#### Assess only challenges that you think are impacting your work.
+Assess only challenges that you think are impacting your work. If you do not select anything for a given row, we will assume that you do not know or do not care about that aspect.
 
 Type: matrix (optional)
 
