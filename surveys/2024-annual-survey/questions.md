@@ -383,7 +383,7 @@ Type: matrix (optional)
 - Splitting code across crates (e.g. orphan rule)
 - Having to implement Iterator manually
 - Not being able to do enough in const fn
-- Implementing plugins
+- Implementing dynamic library plugins
 - Interoperating with other languages (e.g. C or C++)
 - Achieving structured concurrency with async code
 - Writing executor-agnostic async code
