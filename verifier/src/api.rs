@@ -36,7 +36,7 @@ impl Client {
         let response = self
             .inner
             .get(format!(
-                "https://api.surveyhero.com/v1/surveys/{}/elements",
+                "https://api.surveyhero.com/v1/surveys/{}/questions",
                 survey_id
             ))
             .basic_auth(&self.username, Some(&self.password))
