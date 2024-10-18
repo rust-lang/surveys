@@ -460,6 +460,8 @@ Features:
 - [Exclusive ranges in patterns](https://blog.rust-lang.org/2024/07/25/Rust-1.80.0.html#exclusive-ranges-in-patterns) (1.80)
 - [Error trait in core](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#coreerrorerror) (1.81)
 - [#[expect(lint)] and lint reasons](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#expectlint) (1.81)
+- [Precise capturing syntax](https://blog.rust-lang.org/2024/10/17/Rust-1.82.0.html#precise-capturing-use-syntax) (1.82)
+- [&raw pointers](https://blog.rust-lang.org/2024/10/17/Rust-1.82.0.html#native-syntax-for-creating-a-raw-pointer) (1.82)
 
 Usage:
 
