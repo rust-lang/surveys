@@ -80,7 +80,7 @@ Type: select all that apply
 - Exercices en ligne (Rustlings, 100 Exercises To Learn Rust, etc.)
 - Vidéos ou diffusions en direct
 - Blogs
-- Docunentation
+- Documentation
 - Code source de cagettes (crates) Rust
 - Cours en ligne, webinaires
 - Cours en personne
@@ -132,7 +132,7 @@ Type: select all that apply
 - IntelliJ/CLion/autre IDE JetBrains + plugin Rust
 - Rust Rover (IDE IntelliJ dédié à Rust)
 - Emacs (ou dérivés comme Doom Emacs, Spacemacs, etc.)
-- <span class="original-text">Sublime Text</span>
+- Sublime Text
 - Visual Studio
 - Xcode
 - Atom
@@ -286,7 +286,7 @@ Type: select one
 - Rust évolue trop rapidement, j’aimerais que le rythme de développement ralentisse
 - Je suis satisfait du rythme actuel de développement
 - Rust évolue trop lentement, j’aimerais que des fonctionnalités soient ajoutées ou stabilisées plus rapidement
-- Je ne sais pas ou je m&#39;en fiche
+- Je ne sais pas ou je m’en fiche
 - Autre
 
 ### Quelles fonctionnalités non implémentées (ou uniquement nightly) souhaitez-vous stabiliser ?
@@ -303,7 +303,7 @@ Rows:
 - [Blocs try](https://github.com/rust-lang/rust/issues/31436)
 - [Type never](https://github.com/rust-lang/rust/issues/35121)
 - [Alias de traits](https://github.com/rust-lang/rfcs/blob/master/text/1733-trait-alias.md)
-- [Trait d&#39;implémentation d&#39;alias de type (TAIT)](https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html)
+- [Trait d’implémentation d’alias de type (TAIT)](https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html)
 - [Valeurs par défaut des types associés](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)
 - Expressions constantes génériques
 - [Méthodes de trait constant](https://github.com/rust-lang/rust/issues/67792)
@@ -319,8 +319,8 @@ Columns:
 
 - Cela débloquerait mon travail
 - Cela améliorerait mon code
-- Je n&#39;en ai pas besoin
-- Je ne sais pas ce que c&#39;est
+- Je n’en ai pas besoin
+- Je ne sais pas ce que c’est
 
 ### Y a-t-il des fonctionnalités non mentionnées ci-dessus que vous aimeriez voir priorisées ?
 
@@ -337,11 +337,11 @@ Rows:
 - Devoir implémenter Iterator manuellement
 - Ne pas pouvoir en faire assez dans les const fn
 - Implémentation de plugins de bibliothèque dynamique
-- Interopérabilité avec d&#39;autres langages (par exemple C ou C++)
+- Interopérabilité avec d’autres langages (par exemple C ou C++)
 - Obtenir une concurrence structurée avec du code asynchrone
 - Écriture de code asynchrone indépendant de l’exécuteur
 - Écrire le code unsafe correctement
-- Le vérificateur d&#39;emprunt n&#39;autorise pas de code valide
+- Le vérificateur d’emprunt n’autorise pas de code valide
 - Performances d’exécution lentes
 - Compilation lente
 - Grande taille binaire des artefacts compilés
@@ -385,11 +385,11 @@ Rows:
 
 Columns:
 
-- J&#39;utilise cette fonctionnalité
+- J’utilise cette fonctionnalité
 - Je ne peux pas encore utiliser cette fonctionnalité
-- Je n&#39;ai pas besoin de cette fonctionnalité
+- Je n’ai pas besoin de cette fonctionnalité
 - Je ne savais pas qu’elle était stabilisée
-- Je ne sais pas ce que c&#39;est
+- Je ne sais pas ce que c’est
 
 ### Comment compilez-vous vos projets Rust ?
 
@@ -529,7 +529,7 @@ Type: select all that apply
 - Applications informatique dans le cloud
 - Infrastructure ou services informatique dans le cloud
 - Infographie
-- Jeux d&#39;ordinateur
+- Jeux d’ordinateur
 - Réseaux informatiques
 - Sécurité informatique
 - Science des données
