@@ -17,7 +17,7 @@ Type: select all that apply
 - コミュニティは失礼、非歓迎的、またはその他の点で不快だった
 - 別な言語の方が良かった
 - 私の管理できない原因で、Rustを使う機会が無くなった
-- 
+- 機会があれば今後も利用したいと思う
 - その他
 
 ### より詳しくお答えください：
@@ -66,11 +66,11 @@ Type: select one
 Type: select one
 
 - まだ*積極的に*Rustを学ぼうとしているところです
-- 2023年の間
-- 2021年から2022年の間
-- 2019年から20200年の間
-- 2017年から2018年の間
-- 2016年以前
+- 2024年の間
+- 2022年から2023年の間
+- 2020年から2021年の間
+- 2018年から2019年の間
+- 2017年以前
 
 ### Rust に関する学習教材を利用した場合、どのような種類の教材を利用しましたか?
 
@@ -79,12 +79,12 @@ Type: select all that apply
 - 書籍 (『Rust プログラミング言語』、『Rust for Rustaceans』など)
 - オンライン演習 (Rustlings、Rust by Exampleなど)
 - 動画
-- 
-- 
-- 
+- ブログ投稿
+- ドキュメント
+- Rustクレートのソースコード
 - オンラインコース、ウェビナー
-- 
-- 
+- 対面トレーニング
+- 大学の教材
 - その他（具体的にご記入ください）
 
 ### Rust を使用する（またはRustを教える）コースまたは研修を、現在受けていますか、または昨年受けましたか?
@@ -118,8 +118,8 @@ Type: select all that apply
 - Android
 - 組み込みプラットフォーム（OSあり）
 - 組み込みプラットフォーム（ベアメタル）
-- WebAssembly
-- 
+- WebAssembly（ブラウザ用）
+- WebAssembly（他のホスト）
 - プラットフォームに明示的には依存しない（たとえば、OSと相互作用しないライブラリ）
 - その他
 
@@ -145,8 +145,8 @@ Type: select all that apply
 
 - 現在のstableバージョン
 - 以前のstableバージョン
-- 1.67以上の特定のstableバージョン
-- 1.67より古い特定のstableバージョン
+- 1.75以上の特定のstableバージョン
+- 1.75より古い特定のstableバージョン
 - Beta
 - 最新のnightly
 - nightlyの特定バージョン
@@ -167,7 +167,7 @@ Type: select all that apply
 - CIでのテストのため
 - 使用しているクレートの依存関係がnightlyバージョンを要求しているから
 - 利用しているツールがnightlyバージョンを要求しているから
-- コンパイル時間を短縮するには
+- コンパイル時間を短縮するため
 - その他
 
 ### あなたが開発業務のために使用した一番古いバージョンのRustは何ですか？
@@ -278,16 +278,16 @@ Columns:
 - 同意する
 - 同意しない
 
-### 
+### Rustの進化の速さについてあなたの意見をお聞かせください。
 
 Type: select one
 
-- 
-- 
-- 
-- 
-- 
-- Other
+- Rustはすでに複雑すぎるため、より重要な機能を追加したり安定化したりするべきではない
+- Rust は変化が早すぎるので、開発のペースを遅くしてほしい
+- 現在の開発のペースに満足しています
+- Rust の変化は遅すぎるので、もっと早く機能を追加したり安定化させたりしてほしい
+- 知らないし、気にしない
+- その他
 
 ### 未実装の機能、または (夜間のみ) 安定化を求めている機能はどれですか?
 
@@ -298,22 +298,22 @@ Rows:
 - Specialization
 - Generators/coroutines
 - Async closures
-- 
+- Async generators/coroutines
 - If/while let chains
 - Try blocks
 - Never type
 - 改良されたtrait (trait alias, implied bounds, associated type defaults)
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
+- Type Alias Impl Trait (TAIT)
+- Associated type defaults
+- Generic const expressions
+- Const trait methods
+- Compile time reflection
+- Variadic generics
+- Arbitrary self types
+- Enum variant types
 - Allocator trait, OOM処理の改善
 - 安定したABI
-- 
+- Portable SIMD
 
 Columns:
 
@@ -346,11 +346,11 @@ Rows:
 - パッケージ管理 (crates.io)
 - 新しい言語機能
 - Rust言語と標準ライブラリのドキュメント
-- 
-- 
-- 
-- 
-- 
+- コンパイラのバグに遭遇する（例：ICE、つまり内部コンパイラエラーや誤ったコンパイル）
+- 不明瞭なコンパイラエラーメッセージが表示される
+- 標準以下の IDE サポート (例: 一部のエラーが表示されなかったり、分析が遅い)
+- 標準以下のデバッグ経験（例：欠損値の視覚化や非同期スタックトレース）
+- Rust言語や標準ライブラリのドキュメントが不足している
 
 Columns:
 
@@ -362,34 +362,34 @@ Columns:
 
 Type: free form
 
-### 
+### 過去 12 か月間に安定化した機能のうち、最もよく使用するものはどれですか?
 
 Type: matrix
 
 Rows:
 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
+- async fn in traits (1.75)
+- Return position impl Trait in traits (1.75)
+- C-string literals (1.77)
+- Recursion in async fn (1.77)
+- offset_of! macro (1.77)
+- #[diagnostic] attribute (1.78)
+- Inline const expressions (1.79)
+- Bounds in associated type position (1.79)
+- LazyCell and LazyLock (1.80)
+- Exclusive ranges in patterns (1.80)
+- Error trait in core (1.81)
+- #[expect(lint)] and lint reasons (1.81)
+- Precise capturing syntax (1.82)
+- &raw pointers (1.82)
 
 Columns:
 
-- 
-- 
-- 
-- 
-- 
+- この機能を使う
+- この機能はまだ使用できません
+- この機能は必要ありません
+- 安定しているとは知らなかった
+- それが何なのか分からない
 
 ### Rustプロジェクトをどのように構築しますか
 
@@ -478,7 +478,7 @@ Type: select one
 Type: select one
 
 - はい。コーディングの大部分で利用しています
-- 
+- はい。平均すると週に数回程度です
 - はい。でもたまにしか使いません
 - いいえ
 
@@ -524,7 +524,7 @@ Type: free form
 Type: select all that apply
 
 - オーディオプログラミング
-- 
+- 自動車関連
 - ブロックチェーン
 - クラウドコンピューティング
 - クラウドコンピューティングのインフラストラクチャまたはユーティリティ
@@ -580,7 +580,7 @@ Type: matrix
 Rows:
 
 - 適正のある応募者は、プログラミングの大部分にRustを使用する仕事を簡単に見つけることができる
-- 
+- 上級プログラマにとって、プログラミングの大部分にRustを使用する仕事を見つけるのは簡単だ
 - 既存のRustの仕事は魅力的だ
 
 Columns:
