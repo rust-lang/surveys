@@ -375,7 +375,7 @@ Rows:
 - offset_of! 宏 (offset_of! macro, 1.77)
 - #[diagnostic] 属性 (#[diagnostic] attribute, 1.78)
 - 内联编译时运算表达式 (Inline const expressions, 1.79)
-- 关联类型位置中item的约束 (Bounds in associated type position, 1.79)
+- 关联类型位置中的约束 (Bounds in associated type position, 1.79)
 - LazyCell和LazyLock (LazyCell and LazyLock, 1.80)
 - 范围匹配中支持排他范围 (Exclusive ranges in patterns, 1.80)
 - 核心库中的Error特质 (Error trait in core, 1.81)
