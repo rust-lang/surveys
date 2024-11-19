@@ -738,8 +738,8 @@ Type: select one
 - Grèce
 - Guatemala
 - Guinée
-- Guinée-Bissau
 - Guinée équatoriale
+- Guinée-Bissau
 - Guyane
 - Haïti
 - Honduras
@@ -807,7 +807,6 @@ Type: select one
 - Romanie
 - Royaume-Uni de Grande-Bretagne et d'Irlande du Nord
 - Rwanda
-- République-Unie de Tanzanie
 - République arabe syrienne
 - République bolivarienne du Venezuela
 - République centrafricaine
@@ -819,6 +818,7 @@ Type: select one
 - République islamique d'Iran
 - République populaire démocratique de Corée
 - République tchèque
+- République-Unie de Tanzanie
 - Saint-Christophe-et-Niévès
 - Saint-Marin
 - Saint-Vincent-et-les-Grenadines
@@ -866,8 +866,8 @@ Type: select one
 - Équateur
 - Érythrée
 - État plurinational de Bolivie
-- États-Unis d'Amérique
 - États fédérés de Micronésie
+- États-Unis d'Amérique
 - Île Maurice
 - Îles Marshall
 - Îles Salomon
