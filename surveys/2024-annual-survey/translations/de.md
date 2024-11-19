@@ -10,14 +10,14 @@ Type: select one
 
 Type: select all that apply
 
-- Fehlende Features in Rust
+- Fehlende Sprachfeatures in Rust
 - lende Bibliotheken (crates)
 - Fehlendes Tooling
 - Rust ist zu schwer zu lernen
 - Community war unhöflich, abweisend, oder auf andere Art unsympathisch
 - Ich benutze lieber eine andere Programmiersprache
 - Ich kann Rust nicht mehr nutzen, weil sich externe Umstände geändert haben
-- 
+- Ich plane, Rust in Zukunft zu verwenden, sobald sich eine Gelegenheit ergibt
 - Anderer Grund
 
 ### Bitte teilen Sie uns mehr mit:
@@ -28,15 +28,15 @@ Type: free form
 
 Type: select all that apply
 
-- Rust hilft mir nicht meine Ziele zu erreichen
-- Fehlende Features in Rust
+- Rust hilft mir nicht, meine Ziele zu erreichen
+- Fehlende Sprachfeatures in Rust
 - Fehlende Bibliotheken (crates)
 - Fehlendes Tooling
 - Rust ist zu schwer zu lernen, oder Rust zu lernen würde zu viel Zeit brauchen
 - Community war unhöflich, abweisend, oder auf andere Art unsympathisch
 - Ich benutze lieber eine andere Programmiersprache
 - Ich kann Rust aufgrund externe Umstände nicht nutzen
-- Ich hatte noch keine Zeit Rust zu nutzen
+- Ich hatte noch keine Zeit, Rust zu nutzen
 - Anderer Grund
 
 ### Bitte teilen Sie uns mehr mit:
@@ -78,13 +78,13 @@ Type: select all that apply
 
 - Bücher („The Rust Programming Language“, „Rust for Rustaceans“ usw.)
 - Online-Übungen (Rustlings, Rust by Example, usw.
-- Videos
-- 
-- 
-- 
+- Videos oder Livestreams
+- Blogs
+- Dokumentation
+- Quellcode von Rust crates
 - Online-Kurse, Webinare
-- 
-- 
+- Training vor Ort
+- Universitäres Lehrmaterial
 - Sonstiges (bitte angeben)
 
 ### Nehmen Sie gerade an einem Kurs oder Training teil, das Rust benutzt oder lehrt? Haben Sie im letzten Jahr an einem solchen Kurs teilgenommen?
@@ -118,8 +118,8 @@ Type: select all that apply
 - Android
 - Embedded Systeme (mit Betriebssystem)
 - Embedded Systeme (bare metal)
-- WebAssembly
-- 
+- WebAssembly (im Browser)
+- WebAssembly (für andere Zielsysteme)
 - Explizit plattformunabhängig (z.B. ein Crate, das nicht mit dem Betriebssystem interagiert)
 - Andere
 
@@ -174,7 +174,7 @@ Type: select all that apply
 
 Type: select one
 
-- 1.85 (nächtlich)
+- 1.85 (nightly)
 - 1.84 (beta)
 - 1.83
 - 1.82
@@ -260,7 +260,7 @@ Type: select one
 - 1.2
 - 1.1
 - 1.0
-- Pre 1.0
+- Vor 1.0
 
 ### Stimmen Sie den folgenden Aussagen zur Rust-Stabilität zu?
 
@@ -278,16 +278,16 @@ Columns:
 - Ich stimme zu
 - Ich stimme nicht zu
 
-### 
+### Was ist Ihre Meinung, wie schnell sich Rust weiterentwickelt?
 
 Type: select one
 
-- 
-- 
-- 
-- 
-- 
-- Other
+- Rust ist bereits zu komplex, es sollten keine weiteren Features stabilisiert oder hinzugefügt werden
+- Rust ändert sich zu schnell, ich wünschte, die Entwicklung würde etwas verlangsamt
+- Ich bin mit der Entwicklungsgeschwindigkeit zufrieden
+- Rust ändert sich zu langsam, ich wünschte, Features würden schneller hinzugefügt oder stabilisiert
+- Ich weiß es nicht oder es interessiert mich nicht
+- Andere Antwort...
 
 ### Welche nicht implementierten oder (nur nächtlichen) Funktionen möchten Sie stabilisieren?
 
@@ -295,101 +295,101 @@ Type: matrix
 
 Rows:
 
-- Spezialisierung
+- Specialization
 - Generatoren/Koroutinen
-- Asynchrone Closures
-- 
-- If/while let-Kombinationen
+- Async Closures
+- Async Generatoren/Koroutinen
+- If/while let-Ketten
 - Try Blöcke
 - Never-Typ
-- Trait-Verbesserungen (Aliase, implizite Vererbung, Defaults für assoziierte Typen)
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
+- Trait-Aliase
+- Typ-Alias in Impl Trait (TAIT)
+- Assoziierte Default-Typen
+- Generische Const-Ausdrücke
+- Const Trait-Methoden
+- Reflektion zur Compilierzeit
+- Variadische Generics
+- Beliebige Self-Typen
+- Enum Varianten Typen
 - Allokator trait, bessere OOM-Verwaltung
 - Stabile ABI
-- 
+- Portables SIMD
 
 Columns:
 
-- Hohe Priorität
-- Mittlere Priorität
-- Niedrige Priorität
-- Sollte nicht priorisiert werden
+- Würde es mir erlauben, Rust zu nutzen
+- Würde meinen Code verbessern
+- Brauche ich nicht
+- Weiß nicht, was das ist
 
 ### Gibt es Funktionen, die oben nicht erwähnt wurden und denen Sie Vorrang einräumen möchten?
 
 Type: free form
 
-### Wie sollte Ihrer Meinung nach die Arbeit an den folgenden Aspekten von Rust priorisiert werden?
+### Welche der folgenden Aspekte präsentieren nicht triviale Probleme bezüglich Ihrer Produktivität in der Sprache?
 
 Type: matrix
 
 Rows:
 
-- Laufzeitleistung
-- Kompilierzeiten
-- Binäre Größe
-- Speichernutzung (d. h. wie viel RAM Rustc beim Kompilieren verwendet)
-- Speicherplatznutzung (z. B. die Größe des Zielordners)
-- Fehler im Compiler (z. B. ICEs, auch interne Compilerfehler, Fehlkompilierungen usw.)
-- Compiler-Fehlermeldungen
-- IDE-Erfahrung
-- Debugging-Erfahrung
-- Dokumentation (rustdoc, docs.rs)
-- Bausystem (Cargo)
-- Paketverwaltung (crates.io)
-- Neue Sprachfunktionen
-- Rust-Sprache und Standardbibliotheksdokumentation
-- 
-- 
-- 
-- 
-- 
+- Logik für Tupel variabler Länge implementieren
+- Quelltext über mehrere crates verteilen (Orphan Rule)
+- Iteratoren manuell implementieren
+- Nicht genug in konstanten funktionen tun können
+- Dynamische Bibliotheken/Plugins implementieren
+- Mit anderen Sprachen zusammenarbeiten (z.B. C oder C++)
+- Strukturierte Nebenläufigkeit mit Async Code erreichen
+- Async-Laufzeit-agnostischen Code schreiben
+- Korrekten unsafe Code schreiben
+- Der Borrow Checker lehnt meinen validen Code ab
+- Schlechte Performance zur Programmlaufzeit
+- Langsame Kompilierung
+- Große Binärdateien der kompilierten Programme
+- Hoher Speicherplatzverbrauch (der Dateien im target-Verzeichnis)
+- Kompilierfehler (z.B. intener Kompilerfehler, auch genannt ICE, oder Fehlkompilationen)
+- Unklare oder undurchsichtige Fehlermeldungen des Kompilers
+- Unterdurchschnittliche IDE-Unterstützung (z.B. fehlende Fehlermeldungen oder langsame Analyse)
+- Unterdurchschnittliche Debugging-Erfahrung (z.B. fehlende Visualisierungen oder async Stacktraces)
+- Fehlende Dokumentation der Rust Sprache oder Standardbibliothek
 
 Columns:
 
-- Hohe Priorität
-- Mittlere Priorität
-- Niedrige Priorität
+- Ist ein großes Problem für mich
+- Könnte verbessert werden, hindert mich aber nicht
+- Kein Problem für mich
 
-### Gibt es Funktionen, die oben nicht erwähnt wurden und denen Sie Vorrang einräumen möchten?
+### Gibt es Funktionen, die oben nicht erwähnt wurden, die Ihre Produktivität in Rust beeinträchtigen?
 
 Type: free form
 
-### 
+### Welches in den letzten 12 Monaten stabilisierte Feature nutzen Sie am Meisten?
 
 Type: matrix
 
 Rows:
 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
+- Async Funktionen in Traits (1.75)
+- impl Trait in Return Position in Traits (1.75)
+- C-String-Ausdrücke (1.77)
+- Rekursion in Async Funktionen (1.77)
+- offset_of! Makro (1.77)(
+- #[diagnostic] Attribut (1.78)
+- Inline const Ausdrücke (1.79)
+- Typ-Grenzen in assoziierten Typen (1.79)
+- LazyCell und LazyLock (1.80)
+- Exklusive Ranges in Patterns (1.80)
+- Error Trait in libcore (1.81)
+- #[expect(lint)] und Lint-Gründe (1.81)
+- Präzise Capturing syntax (1.82)
+- &raw Zeiger
 
 Columns:
 
-- 
-- 
-- 
-- 
-- 
+- Ich nutze dieses Feature
+- Ich kann dieses Feature noch nicht nutzen
+- Ich brauche dieses Feature nicht
+- Ich wusste nicht, dass dies stabilisiert wurde
+- Ich weiß nicht, was das ist
 
 ### Wie kompilieren Sie Ihre Rust Projekte?
 
@@ -478,11 +478,11 @@ Type: select one
 Type: select one
 
 - Ja, für den Großteil meiner Programmierung
-- 
+- Ja, ein paar Mal pro Woche
 - Ja, aber ich benutze es nur gelegentlich
 - Nein
 
-### In wiefern wird Rust zurzeit in Ihrer Firma genutzt?
+### Wie weit wird Rust zurzeit in Ihrer Firma genutzt?
 
 Type: select one
 
@@ -512,8 +512,8 @@ Type: select all that apply
 - Rust ermöglicht uns, relativ fehlerfreie und korrekte Software zu schreiben.
 - Wir genießen es in Rust zu programmieren.
 - Wir kennen Rust schon, deshalb ist es unsere Standardwahl.
+- Wir finden es einfach, in Rust Prototypen zu bauen.
 - Wir müssen mit schon existierendem Rust-Code interagieren.
-- Wir finden es einfach in Rust Prototypen zu bauen.
 
 ### Was war in Ihrem Gebrauch von Rust eine Herausforderung?
 
@@ -524,7 +524,7 @@ Type: free form
 Type: select all that apply
 
 - Audioprogrammierung
-- 
+- Automotive
 - Blockchain
 - Cloud-Computing-Anwendungen
 - Cloud-Computing-Infrastruktur oder -Dienstprogramme
@@ -579,8 +579,8 @@ Type: matrix
 
 Rows:
 
-- Es ist einfach für qualifizierte Kandidaten einen Job zu finden, in dem hauptsächlich Rust zur Programmierung benutzt wird.
-- 
+- Es ist einfach für Junior-Entwickler, einen Job zu finden, in dem hauptsächlich Rust zur Programmierung benutzt wird.
+- Es ist einfach für Senior-Entwickler, einen Job zu finden, in dem hauptsächlich Rust zur Programmierung benutzt wird.
 - Existierende Rust Jobs sind attraktiv.
 
 Columns:
@@ -597,7 +597,7 @@ Type: select all that apply
 - Es ist bedeutend schwieriger in Rust zu programmieren als in anderen Programmiersprachen.
 - Es erfordert bedeutend mehr Aufwand Rust zu lernen als andere Programmiersprachen.
 - Code in Rust hat tendenziell signifikant weniger Fehler als vergleichbarer Code, der in einer anderen Sprache geschrieben wurde
-- Es ist riskant Rust in Produktionsumgebungen zu nutzen
+- Es ist riskant, Rust in Produktionsumgebungen zu nutzen
 - Rust macht mich produktiver.
 - Rust macht Spaß
 
@@ -620,7 +620,7 @@ Type: select all that apply
 - Ich mache mir keine Sorgen
 - Andere
 
-### Ihre Antworten auf die folgenden Fragen helfen unseren Prüfern bei der Durchführung von Kohortenanalysen und helfen uns, die Rust-Community besser zu verstehen. Bitte antworten Sie entsprechend Ihrem Komfortniveau. Betrachten Sie sich als Mitglied einer Gruppe, die im Technologiebereich unterrepräsentiert oder marginalisiert ist?
+### Betrachten Sie sich als Mitglied einer Gruppe, die im Technologiebereich unterrepräsentiert oder marginalisiert ist?
 
 Type: select one
 
@@ -883,10 +883,10 @@ Type: select all that apply
 - Ich fühle mich wohl und in der Lage, ein gesprochenes technisches Gespräch auf Englisch zu führen
 - Ich fühle mich wohl und in der Lage, ein schriftliches Fachgespräch auf Englisch zu führen
 - Ich fühle mich wohl und in der Lage, technische Dokumentationen auf Englisch zu lesen
-- Ich fühle mich wohl und in der Lage, einen technischen Vortrag (z. B. bei einer Konferenz oder einem Treffen) auf Englisch zu halten
+- Ich fühle mich wohl und in der Lage, einen technischen Vortrag (z. B. bei einer Konferenz oder einem Treffen) auf Englisch zu hören
 - Ich fühle mich wohl und in der Lage, schriftliches technisches Lehrmaterial (z. B. Fachbücher, Blog-Posts usw.) auf Englisch zu lesen
 
-### Was ist/sind Ihre bevorzugte(n) Sprache(n) zur technischen Kommunikation?
+### Welche Sprache(n) bevorzugten Sie, um technische Inhalte zu konsumieren (z.B. Blogs, Dokumentation, usw.)
 
 Type: select all that apply
 
