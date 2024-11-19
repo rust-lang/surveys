@@ -11,7 +11,7 @@ Type: select one
 Type: select all that apply
 
 - Fehlende Sprachfeatures in Rust
-- lende Bibliotheken (crates)
+- Fehlende Bibliotheken (crates)
 - Fehlendes Tooling
 - Rust ist zu schwer zu lernen
 - Community war unhöflich, abweisend, oder auf andere Art unsympathisch
