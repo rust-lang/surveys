@@ -77,7 +77,7 @@ Type: select one
 Type: select all that apply
 
 - Libros ("The Rust Programming Language", "Rust for Rustaceans", etc.)
-- Ejercicios online (Rustlings, 100 Excercises To Learn Rust, etc.)
+- Ejercicios online (Rustlings, 100 Exercises To Learn Rust, etc.)
 - Videos o live-streams
 - Entradas en el blog
 - Documentaciones
