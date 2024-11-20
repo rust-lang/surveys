@@ -537,8 +537,8 @@ Type: select all that apply
 - Aplicaciones de escritorio
 - Computadores de escritorio o librerías de teléfonos móviles o servicios
 - Sistemas distribuídos
-- Dispositivos embebidos (con un sistema operativo)
-- Dispositivos embebidos (metal puro)
+- Plataformas embebidas (con un sistema operativo)
+- Plataformas embebidas (bare metal o sin sistema operativo)
 - HPC ([Super]Cómputo de alto rendimiento)
 - IoT (Internet de las cosas)
 - Machine learning
@@ -564,13 +564,13 @@ Type: select one
 - 1.000-10.000
 - Más de 10.000
 
-### ¿Está tu compañía considerando contratar developers de Rust en el próximo año?
+### ¿Está tu compañía considerando contratar programadores de Rust en el próximo año?
 
 Type: select one
 
 - Sí
-- No (está planeando contratar a otros developers)
-- No (no planea contratar developers)
+- No (está planeando contratar a otros programadores)
+- No (no planea contratar programadores)
 - No lo sé
 
 ### ¿Está de acuerdo con las siguientes afirmaciones sobre el empleo de Rust?
@@ -616,7 +616,7 @@ Type: select all that apply
 - Las herramientas y la documentación no son suficientemente accesibles (por ejemplo debido al lenguaje o la incompatibilidad con lectores de pantalla)
 - La Fundación Rust no apoya adecuadamente el proyecto Rust (por ejemplo, en aspectos financieros, de infraestructura y legales)
 - La gestión del proyecto no evoluciona para cubrir el tamaño y las necesidades de la comunidad
-- Los developers/maintainers del lenguaje no tienen suficiente apoyo
+- Los programadores/mantenedores del lenguaje no tienen suficiente apoyo
 - No estoy preocupado
 - Otra
 
@@ -639,7 +639,7 @@ Type: select all that apply
 - Idioma
 - Lesbiana, gay, bisexual, queer o de alguna manera no heterosexual
 - Género no-binario
-- Mayor o menor de la edad promedio de los developers que conozco
+- Mayor o menor de la edad promedio de los programadores que conozco
 - Creencias políticas
 - Minoría étnica o racial
 - Creencias religiosas
