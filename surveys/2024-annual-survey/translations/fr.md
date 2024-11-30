@@ -613,7 +613,7 @@ Type: select all that apply
 - Qu’il soit instable
 - Qu’il soit remplacé par une alternative
 - Que le langage ne devienne trop complexe
-- Que les outils et la documentation ne soient pas suffisamment accessibles (par exemple, en raison de la langue ou de l’incompatibilité avec les lecteurs d’écran)
+- Que les outils et la documentation ne soient pas suffisamment accessibles (par exemple, en raison de la langue ou de l’incompatibilité avec les liseuses)
 - La Fondation Rust ne soutient pas correctement le projet Rust (par exemple sur les aspects financiers, infrastructurels et juridiques)
 - Que la gouvernance du projet ne s’adapte pas à la taille et aux besoins de la communauté
 - Que les développeurs/mainteneurs du langage ne bénéficient pas d’un soutien approprié.
