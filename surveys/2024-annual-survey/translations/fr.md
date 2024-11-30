@@ -154,11 +154,11 @@ Type: select all that apply
 - Je ne sais pas
 - Autre
 
-### Si vous utilisez une version nightly, veuillez préciser le motif.
+### Si vous utilisez une version nightly, veuillez préciser le(s) motif(s).
 
 Type: select all that apply
 
-- Je n'utilise pas de version nightly
+- Je n’utilise pas de version nightly
 - Par habitude
 - Pour une fonctionnalité particulière du langage ou pour un ensemble de fonctionnalités du langage dont j’ai besoin
 - J’aime avoir accès à toutes les dernières fonctionnalités
@@ -406,7 +406,7 @@ Type: select all that apply
 
 - J’utilise crates.io
 - J’utilise un registre personnalisé/local/d’entreprise
-- J&#39;utilise un miroir de crates.io
+- J’utilise un miroir de crates.io
 - Je ne sais pas
 
 ### À quelle fréquence participez-vous aux activités communautaires Rust suivantes ?
@@ -905,4 +905,3 @@ Type: select all that apply
 ### Y a-t-il autre chose que vous aimeriez nous dire ?
 
 Type: free form
-
