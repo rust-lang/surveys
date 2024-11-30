@@ -303,7 +303,7 @@ Rows:
 - [Blocs try](https://github.com/rust-lang/rust/issues/31436)
 - [Type never](https://github.com/rust-lang/rust/issues/35121)
 - [Alias de traits](https://github.com/rust-lang/rfcs/blob/master/text/1733-trait-alias.md)
-- [Trait d&#39;implémentation d&#39;alias de type (TAIT)](https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html)
+- [Trait d’implémentation d’alias de type (TAIT)](https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html)
 - [Valeurs par défaut des types associés](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)
 - Expressions constantes génériques
 - [Méthodes de trait constant](https://github.com/rust-lang/rust/issues/67792)
