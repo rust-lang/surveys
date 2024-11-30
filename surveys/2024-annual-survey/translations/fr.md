@@ -368,7 +368,7 @@ Type: matrix
 
 Rows:
 
-- [fonction asynchrone dans les traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
+- [Fonction asynchrone dans les traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
 - [Position de retour impl Trait dans traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
 - [Littéraux de chaîne C](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#c-string-literals) (1.77)
 - [Récursivité dans la fonction asynchrone](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#support-for-recursion-in-async-fn) (1.77)
