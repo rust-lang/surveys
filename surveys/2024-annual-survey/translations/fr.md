@@ -6,7 +6,7 @@ Type: select one
 - Non, je n’utilise pas Rust actuellement, mais je l’ai fait dans le passé.
 - Non, je n’ai jamais utilisé Rust.
 
-### Vous avez indiqué que vous n’utilisez plus Rust, pour quelle raison avez-vous arrêté d’utiliser Rust ?
+### Vous avez indiqué que vous n’utilisez plus Rust, pour quelle(s) raison(s) avez-vous arrêté d’utiliser Rust ?
 
 Type: select all that apply
 
@@ -80,7 +80,7 @@ Type: select all that apply
 - Exercices en ligne (Rustlings, 100 Exercises To Learn Rust, etc.)
 - Vidéos ou diffusions en direct
 - Blogs
-- Docunentation
+- Documentation
 - Code source de cagettes (crates) Rust
 - Cours en ligne, webinaires
 - Cours en personne
@@ -303,13 +303,13 @@ Rows:
 - [Blocs try](https://github.com/rust-lang/rust/issues/31436)
 - [Type never](https://github.com/rust-lang/rust/issues/35121)
 - [Alias de traits](https://github.com/rust-lang/rfcs/blob/master/text/1733-trait-alias.md)
-- [Trait d’implémentation d’alias de type (TAIT)](https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html)
+- [Type aliasé d’implémentation de trait](https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html)
 - [Valeurs par défaut des types associés](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)
 - Expressions constantes génériques
-- [Méthodes de trait constant](https://github.com/rust-lang/rust/issues/67792)
+- [Méthodes de trait constantes](https://github.com/rust-lang/rust/issues/67792)
 - Réflexion au moment de la compilation
 - Génériques variadiques
-- [Types de soi arbitraires](https://github.com/rust-lang/rfcs/blob/master/text/3519-arbitrary-self-types-v2.md)
+- [Types `self` arbitraires](https://github.com/rust-lang/rfcs/blob/master/text/3519-arbitrary-self-types-v2.md)
 - [Types de variantes d’énumération](https://github.com/rust-lang/lang-team/issues/122)
 - [Trait Allocator et meilleure gestion des épuisements de mémoire](https://github.com/rust-lang/rust/issues/32838)
 - [ABI stable](https://github.com/rust-lang/rust/issues/111423)
@@ -319,8 +319,8 @@ Columns:
 
 - Cela débloquerait mon travail
 - Cela améliorerait mon code
-- Je n&#39;en ai pas besoin
-- Je ne sais pas ce que c&#39;est
+- Je n’en ai pas besoin
+- Je ne sais pas ce que c’est
 
 ### Y a-t-il des fonctionnalités non mentionnées ci-dessus que vous aimeriez voir priorisées ?
 
@@ -334,14 +334,14 @@ Rows:
 
 - Implémentation de la logique pour des tuples de différentes tailles
 - Répartition du code entre les cagettes (crates) (par exemple, règle de l’orphelin)
-- Devoir implémenter Iterator manuellement
+- Devoir implémenter le trait Iterator manuellement
 - Ne pas pouvoir en faire assez dans les const fn
 - Implémentation de plugins de bibliothèque dynamique
-- Interopérabilité avec d&#39;autres langages (par exemple C ou C++)
+- Interopérabilité avec d’autres langages (par exemple C ou C++)
 - Obtenir une concurrence structurée avec du code asynchrone
 - Écriture de code asynchrone indépendant de l’exécuteur
 - Écrire le code unsafe correctement
-- Le vérificateur d&#39;emprunt n&#39;autorise pas de code valide
+- Le vérificateur d’emprunt n’autorise pas de code valide
 - Performances d’exécution lentes
 - Compilation lente
 - Grande taille binaire des artefacts compilés
@@ -369,17 +369,17 @@ Type: matrix
 Rows:
 
 - [Fonction asynchrone dans les traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
-- [Position de retour impl Trait dans traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
-- [Littéraux de chaîne C](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#c-string-literals) (1.77)
+- [impl Trait comme type de retour de fonctions de traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
+- [Chaîne de caractères C littérales](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#c-string-literals) (1.77)
 - [Récursivité dans la fonction asynchrone](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#support-for-recursion-in-async-fn) (1.77)
 - [macro offset_of!](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#offset_of) (1.77)
 - [Attribut #[diagnostic]](https://blog.rust-lang.org/2024/05/02/Rust-1.78.0.html#diagnostic-attributes) (1.78)
 - [Expressions constantes en ligne](https://blog.rust-lang.org/2024/06/13/Rust-1.79.0.html#inline-const-expressions) (1.79)
 - [Limites de la position du type associé](https://blog.rust-lang.org/2024/06/13/Rust-1.79.0.html#bounds-in-associated-type-position) (1.79)
 - [LazyCell et LazyLock](https://blog.rust-lang.org/2024/07/25/Rust-1.80.0.html#lazycell-and-lazylock) (1.80)
-- [Gammes exclusives en motifs](https://blog.rust-lang.org/2024/07/25/Rust-1.80.0.html#exclusive-ranges-in-patterns) (1.80)
+- [Filtrage par motif exclusif](https://blog.rust-lang.org/2024/07/25/Rust-1.80.0.html#exclusive-ranges-in-patterns) (1.80)
 - [Trait Error dans core](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#coreerrorerror) (1.81)
-- [#[expect(lint)] et raisons de lint](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#expectlint) (1.81)
+- [#[expect(lint)] et message explicatif de pourquoi le lint est attendu](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#expectlint) (1.81)
 - [Syntaxe de capture précise](https://blog.rust-lang.org/2024/10/17/Rust-1.82.0.html#precise-capturing-use-syntax) (1.82)
 - [pointeurs &raw](https://blog.rust-lang.org/2024/10/17/Rust-1.82.0.html#native-syntax-for-creating-a-raw-pointer) (1.82)
 
@@ -388,7 +388,7 @@ Columns:
 - J&#39;utilise cette fonctionnalité
 - Je ne peux pas encore utiliser cette fonctionnalité
 - Je n&#39;ai pas besoin de cette fonctionnalité
-- Je ne savais pas qu’elle était stabilisée
+- Je ne savais pas qu’elle avait été stabilisée
 - Je ne sais pas ce que c&#39;est
 
 ### Comment compilez-vous vos projets Rust ?
@@ -400,12 +400,12 @@ Type: select all that apply
 - Je combine Cargo et un autre système de construction
 - Si vous utilisez Cargo avec (ou utilisez simplement) d’autres systèmes de compilation, lesquels utilisez-vous ?
 
-### Comment téléchargez-vous des librairies pour construire des projets Rust ?
+### Comment téléchargez-vous des bibliothèques pour construire des projets Rust ?
 
 Type: select all that apply
 
-- J&#39;utilise crates.io
-- J'utilise un registre personnalisé/local/d’entreprise
+- J’utilise crates.io
+- J’utilise un registre personnalisé/local/d’entreprise
 - J&#39;utilise un miroir de crates.io
 - Je ne sais pas
 
@@ -450,8 +450,8 @@ Rows:
 Columns:
 
 - Je me sens bien accueilli(e)
-- Je ne me sens ni particulièrement bienvenu ni malvenu
-- Je ne me sens pas le bienvenu
+- Je ne me sens ni particulièrement bienvenu(e) ni malvenu(e)
+- Je ne me sens pas le/la bienvenu(e)
 - Je n'ai jamais participé à cette activité
 
 ### Si vous avez indiqué que vous ne vous sentiez pas le bienvenu dans la communauté Rust, y a-t-il des détails sur votre expérience que vous aimeriez partager avec nous ?
