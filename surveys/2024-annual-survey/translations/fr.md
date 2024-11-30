@@ -571,7 +571,7 @@ Type: select one
 - Oui
 - Non (elle envisage d’embaucher d'autres développeurs)
 - Non (il n’est pas prévu d'embaucher des développeurs)
-- je ne sais pas
+- Je ne sais pas
 
 ### Êtes-vous d'accord avec les déclarations suivantes sur le marché de travail en Rust ?
 
