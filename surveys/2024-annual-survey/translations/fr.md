@@ -286,7 +286,7 @@ Type: select one
 - Rust évolue trop rapidement, j’aimerais que le rythme de développement ralentisse
 - Je suis satisfait du rythme actuel de développement
 - Rust évolue trop lentement, j’aimerais que des fonctionnalités soient ajoutées ou stabilisées plus rapidement
-- Je ne sais pas ou je m&#39;en fiche
+- Je ne sais pas ou je m’en fiche
 - Autre
 
 ### Quelles fonctionnalités non implémentées (ou uniquement nightly) souhaitez-vous stabiliser ?
