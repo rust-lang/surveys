@@ -260,7 +260,8 @@ pub fn normalize_surveyhero_text(text: &str) -> String {
         .replace("&nbsp;", " ")
         .replace("&lt;", "<")
         .replace("&gt;", ">")
-        .replace("<br>", "");
+        .replace("<br>", "")
+        .replace(" ", " ");
 
     // Replace <a href="$link" ...>$text</a> with [$text]($link)
     let text = LINK_REGEX.replace_all(&text, "[$text]($link)");
