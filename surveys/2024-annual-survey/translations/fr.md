@@ -1,4 +1,4 @@
-### Utilisez-vous Rust ?
+### Utilisez-vous Rust ?
 
 Type: select one
 
@@ -20,7 +20,7 @@ Type: select all that apply
 - Je prévois de l’utiliser dans le futur, lorsqu’une opportunité se présentera
 - Autre
 
-### Veuillez nous en dire plus :
+### Veuillez nous en dire plus :
 
 Type: free form
 
@@ -39,11 +39,11 @@ Type: select all that apply
 - Je ne l’ai pas encore fait
 - Autre
 
-### Veuillez nous en dire plus :
+### Veuillez nous en dire plus :
 
 Type: free form
 
-### En moyenne, à quelle fréquence utilisez-vous Rust ?
+### En moyenne, à quelle fréquence utilisez-vous Rust ?
 
 Type: select one
 
@@ -52,16 +52,16 @@ Type: select one
 - Mensuellement ou presque
 - Rarement
 
-### Comment évaluez-vous votre expertise en Rust ?
+### Comment évaluez-vous votre expertise en Rust ?
 
 Type: select one
 
 - Je ne peux pas écrire de code Rust
 - Je peux écrire des programmes simples en Rust
-- Je peux écrire du code utile, prêt à être mis en production, mais c'est compliqué.
+- Je peux écrire du code utile, prêt à être mis en production, mais c’est compliqué.
 - Je suis productif en codant en Rust
 
-### Quand avez-vous appris à programmer en Rust ?
+### Quand avez-vous appris à programmer en Rust ?
 
 Type: select one
 
@@ -87,7 +87,7 @@ Type: select all that apply
 - Études supérieures (université, grande école, etc.)
 - Autre (veuillez préciser)
 
-### Suivez-vous actuellement, ou avez-vous suivi l’année dernière, un cours ou une formation qui utilise ou enseigne Rust ?
+### Suivez-vous actuellement, ou avez-vous suivi l’année dernière, un cours ou une formation qui utilise ou enseigne Rust ?
 
 Type: select one
 
@@ -123,7 +123,7 @@ Type: select all that apply
 - Explicitement indépendant de la plate-forme (par exemple, une bibliothèque qui n’interagit pas avec le système d'exploitation).
 - Autre
 
-### Quel éditeur ou IDE utilisez-vous régulièrement pour coder en Rust ?
+### Quel éditeur ou IDE utilisez-vous régulièrement pour coder en Rust ?
 
 Type: select all that apply
 
@@ -132,14 +132,14 @@ Type: select all that apply
 - IntelliJ/CLion/autre IDE JetBrains + plugin Rust
 - Rust Rover (IDE IntelliJ dédié à Rust)
 - Emacs (ou dérivés comme Doom Emacs, Spacemacs, etc.)
-- <span class="original-text">Sublime Text</span>
+- Sublime Text
 - Visual Studio
 - Xcode
 - Atom
 - Helix
 - Autre
 
-### Quelle(s) version(s) de Rust utilisez-vous sur votre machine ?
+### Quelle(s) version(s) de Rust utilisez-vous sur votre machine ?
 
 Type: select all that apply
 
@@ -170,7 +170,7 @@ Type: select all that apply
 - Pour avoir des temps de compilation plus rapides
 - Autre
 
-### Quelle est la plus ancienne version de Rust que vous utilisez pour toute tâche de développement ?
+### Quelle est la plus ancienne version de Rust que vous utilisez pour toute tâche de développement ?
 
 Type: select one
 
@@ -262,7 +262,7 @@ Type: select one
 - 1.0
 - Avant 1.0
 
-### Êtes-vous d'accord avec les déclarations suivantes sur la stabilité de Rust ?
+### Êtes-vous d’accord avec les déclarations suivantes sur la stabilité de Rust ?
 
 Type: matrix
 
@@ -322,7 +322,7 @@ Columns:
 - Je n’en ai pas besoin
 - Je ne sais pas ce que c’est
 
-### Y a-t-il des fonctionnalités non mentionnées ci-dessus que vous aimeriez voir priorisées ?
+### Y a-t-il des fonctionnalités non mentionnées ci-dessus que vous aimeriez voir priorisées ?
 
 Type: free form
 
@@ -345,7 +345,7 @@ Rows:
 - Performances d’exécution lentes
 - Compilation lente
 - Grande taille binaire des artefacts compilés
-- Utilisation de l'espace disque (par exemple, la taille du dossier target)
+- Utilisation de l’espace disque (par exemple, la taille du dossier target)
 - Bogues dans le compilateur (c’est-à-dire, les ICE, ou erreurs internes du compilateur, les mauvaises compilations, etc.)
 - Rencontre avec des messages d’erreur de compilateur opaques/peu clairs
 - Prise en charge IDE inférieure à la moyenne (par exemple, certaines erreurs ne sont pas affichées ou l’analyse est lente)
@@ -358,7 +358,7 @@ Columns:
 - Pourrait être amélioré, mais ne me limite pas
 - Ce n’est pas du tout un problème pour moi
 
-### Y a-t-il des fonctionnalités non mentionnées ci-dessus que vous aimeriez voir priorisées ?
+### Y a-t-il des fonctionnalités non mentionnées ci-dessus que vous aimeriez voir priorisées ?
 
 Type: free form
 
@@ -385,11 +385,11 @@ Rows:
 
 Columns:
 
-- J&#39;utilise cette fonctionnalité
+- J’utilise cette fonctionnalité
 - Je ne peux pas encore utiliser cette fonctionnalité
-- Je n&#39;ai pas besoin de cette fonctionnalité
-- Je ne savais pas qu’elle avait été stabilisée
-- Je ne sais pas ce que c&#39;est
+- Je n’ai pas besoin de cette fonctionnalité
+- Je ne savais pas qu’elle était stabilisée
+- Je ne sais pas ce que c’est
 
 ### Comment compilez-vous vos projets Rust ?
 
@@ -398,7 +398,7 @@ Type: select all that apply
 - J’utilise Cargo
 - J’utilise un autre système de compilation
 - Je combine Cargo et un autre système de construction
-- Si vous utilisez Cargo avec (ou utilisez simplement) d’autres systèmes de compilation, lesquels utilisez-vous ?
+- Si vous utilisez Cargo avec (ou utilisez simplement) d’autres systèmes de compilation, lesquels utilisez-vous ?
 
 ### Comment téléchargez-vous des bibliothèques pour construire des projets Rust ?
 
@@ -415,7 +415,7 @@ Type: matrix
 
 Rows:
 
-- Produire du contenu informatif sur Rust (par exemple, blog, diffusion en direct, vidéo sur YouTube, présentation lors d'une conférence/réunion, etc.)
+- Produire du contenu informatif sur Rust (par exemple, blog, diffusion en direct, vidéo sur YouTube, présentation lors d’une conférence/réunion, etc.)
 - Consommer du contenu informatif sur Rust (par exemple, des blogs, des flux en direct, des vidéos YouTube, etc.)
 - Lire les canaux de communication officiels de Rust (par exemple, This Week in Rust, le blog officiel de Rust, le compte Twitter de Rust, etc.)
 - Participer aux conversations relatives à Rust sur les médias sociaux ou les sites web (Hacker News, r/rust, Twitter, LinkedIn, etc.)
@@ -433,7 +433,7 @@ Columns:
 - Tous les mois ou moins fréquemment
 - Jamais
 
-### Combien de fois vous êtes-vous senti expressément bienvenu dans la communauté Rust ?
+### Combien de fois vous êtes-vous senti expressément bienvenu dans la communauté Rust ?
 
 Type: matrix
 
@@ -452,37 +452,37 @@ Columns:
 - Je me sens bien accueilli(e)
 - Je ne me sens ni particulièrement bienvenu(e) ni malvenu(e)
 - Je ne me sens pas le/la bienvenu(e)
-- Je n'ai jamais participé à cette activité
+- Je n’ai jamais participé à cette activité
 
-### Si vous avez indiqué que vous ne vous sentiez pas le bienvenu dans la communauté Rust, y a-t-il des détails sur votre expérience que vous aimeriez partager avec nous ?
+### Si vous avez indiqué que vous ne vous sentiez pas le bienvenu dans la communauté Rust, y a-t-il des détails sur votre expérience que vous aimeriez partager avec nous ?
 
 Type: free form
 
-### Êtes-vous employé à temps plein ou à temps partiel (y compris les stages rémunérés) ?
+### Êtes-vous employé à temps plein ou à temps partiel (y compris les stages rémunérés) ?
 
 Type: select one
 
 - Oui
 - Non
 
-### Écrivez-vous ou concevez-vous des logiciels dans le cadre de votre travail ?
+### Écrivez-vous ou concevez-vous des logiciels dans le cadre de votre travail ?
 
 Type: select one
 
 - Oui, principalement en tant que contributeur individuel (c.-à-d., non-manager)
-- Je gère principalement d'autres personnes qui le font
+- Je gère principalement d’autres personnes qui le font
 - Non
 
-### Utilisez-vous Rust au travail ?
+### Utilisez-vous Rust au travail ?
 
 Type: select one
 
 - Oui, pour la majorité de mon développement
 - Oui, quelques fois par semaine en moyenne
-- Oui, mais je ne l'utilise qu’occasionnellement
+- Oui, mais je ne l’utilise qu’occasionnellement
 - Non
 
-### Dans quelle mesure Rust est-il actuellement utilisé par votre entreprise ?
+### Dans quelle mesure Rust est-il actuellement utilisé par votre entreprise ?
 
 Type: select one
 
@@ -492,22 +492,22 @@ Type: select one
 - Je ne sais pas si mon entreprise a envisagé d’utiliser ou utilise actuellement Rust
 - Je ne travaille pas pour une entreprise ou mon entreprise ne développe pas de logiciels d’aucune sorte
 
-### Parmi les affirmations suivantes, lesquelles correspondent à votre utilisation de Rust au travail ?
+### Parmi les affirmations suivantes, lesquelles correspondent à votre utilisation de Rust au travail ?
 
 Type: select all that apply
 
-- L'utilisation de Rust nous a permis d'atteindre nos objectifs
+- L’utilisation de Rust nous a permis d’atteindre nos objectifs
 - Apprendre à utiliser Rust a été un défi
 - Dans l’ensemble, apprendre à utiliser Rust a ralenti notre équipe
-- L’utilisation de Rust a valu le coût de l'adoption
+- L’utilisation de Rust a valu le coût de l’adoption
 - Nous utiliserons probablement Rust à nouveau à l’avenir
 
-### Parmi les affirmations suivantes, lesquelles correspondent aux raisons pour lesquelles vous utilisez Rust au travail ?
+### Parmi les affirmations suivantes, lesquelles correspondent aux raisons pour lesquelles vous utilisez Rust au travail ?
 
 Type: select all that apply
 
 - Pour ses caractéristiques de performance (c.-à-d., la vitesse, l’empreinte mémoire, etc.)
-- Nous avons besoin d'un contrôle précis sur la façon dont notre logiciel fonctionne
+- Nous avons besoin d’un contrôle précis sur la façon dont notre logiciel fonctionne
 - Ses propriétés de sécurité et de sûreté sont importantes pour nous
 - Il nous permet de construire des logiciels relativement corrects et sans bogues
 - Nous pensons que c’est agréable ou amusant de programmer avec Rust
@@ -519,7 +519,7 @@ Type: select all that apply
 
 Type: free form
 
-### Dans quel(s) domaine(s) technologique(s) Rust est-il utilisé dans votre entreprise ?
+### Dans quel(s) domaine(s) technologique(s) Rust est-il utilisé dans votre entreprise ?
 
 Type: select all that apply
 
@@ -529,30 +529,30 @@ Type: select all that apply
 - Applications informatique dans le cloud
 - Infrastructure ou services informatique dans le cloud
 - Infographie
-- Jeux d&#39;ordinateur
+- Jeux d’ordinateur
 - Réseaux informatiques
 - Sécurité informatique
 - Science des données
 - Implémentation de la base de données
-- Partie graphique d'une application bureau
+- Partie graphique d’une application bureau
 - Services, ordinateurs de bureau ou de téléphones portables
 - Systèmes distribués
-- Dispositifs embarqués (avec systèmes d'exploitation)
-- Dispositifs embarquées (sans système d'exploitation)
+- Dispositifs embarqués (avec systèmes d’exploitation)
+- Dispositifs embarquées (sans système d’exploitation)
 - Superordinateur
 - Internet des objets
 - Apprentissage automatique
-- Partie graphique d'une application mobile
+- Partie graphique d’une application mobile
 - Langages de programmation et outils associés (y compris les compilateurs, les IDE, les bibliothèques standard, etc.)
 - Robotique
 - Calcul scientifique et/ou numérique
 - Application côté serveur ou « backend »
 - Simulation(s)
-- Partie graphique d'une application Web
+- Partie graphique d’une application Web
 - WebAssembly
 - Autre
 
-### Approximativement, combien de développeurs votre entreprise emploie-t-elle au total ?
+### Approximativement, combien de développeurs votre entreprise emploie-t-elle au total ?
 
 Type: select one
 
@@ -564,16 +564,16 @@ Type: select one
 - 1 000-10 000
 - Supérieur à 10 000
 
-### Votre entreprise prévoit-elle d'embaucher des développeurs Rust au cours de l'année à venir ?
+### Votre entreprise prévoit-elle d’embaucher des développeurs Rust au cours de l’année à venir ?
 
 Type: select one
 
 - Oui
-- Non (elle envisage d’embaucher d'autres développeurs)
-- Non (il n’est pas prévu d'embaucher des développeurs)
-- Je ne sais pas
+- Non (elle envisage d’embaucher d’autres développeurs)
+- Non (il n’est pas prévu d’embaucher des développeurs)
+- je ne sais pas
 
-### Êtes-vous d'accord avec les déclarations suivantes sur le marché de travail en Rust ?
+### Êtes-vous d’accord avec les déclarations suivantes sur le marché de travail en Rust ?
 
 Type: matrix
 
@@ -585,31 +585,31 @@ Rows:
 
 Columns:
 
-- D'accord
-- Ni d'accord, ni en désaccord
-- Pas d'accord
+- D’accord
+- Ni d’accord, ni en désaccord
+- Pas d’accord
 
-### Parmi les affirmations suivantes, laquelle traduit votre opinion de Rust ?
+### Parmi les affirmations suivantes, laquelle traduit votre opinion de Rust ?
 
 Type: select all that apply
 
 - Rust présente un avantage réel par rapport aux autres langages de programmation
 - Le langage Rust est nettement plus compliqué à programmer que les autres langages de programmation
-- Apprendre à utiliser Rust demande beaucoup plus d’efforts que pour d'autres langages de programmation
-- Le code Rust a tendance à contenir beaucoup moins de bogues qu'un code équivalent écrit dans un autre langage de programmation
-- Il est risqué d'utiliser Rust en production
+- Apprendre à utiliser Rust demande beaucoup plus d’efforts que pour d’autres langages de programmation
+- Le code Rust a tendance à contenir beaucoup moins de bogues qu’un code équivalent écrit dans un autre langage de programmation
+- Il est risqué d’utiliser Rust en production
 - Rust me rend plus productif
 - L’utilisation de Rust est amusante
 
-### Quelles sont vos plus grandes inquiétudes pour l'avenir du Rust ?
+### Quelles sont vos plus grandes inquiétudes pour l’avenir du Rust ?
 
 Type: select all that apply
 
-- Qu’il n'y ait pas assez d'utilisation dans l'industrie
-- Qu’il y ait trop d'intérêt de la part des grandes entreprises
-- Qu’il n'y ait pas assez de contributions open source à l'écosystème
-- Qu’il n'ajoute pas une fonctionnalité spécifique que je veux
-- Qu’il n'évolue pas assez vite
+- Qu’il n’y ait pas assez d’utilisation dans l’industrie
+- Qu’il y ait trop d’intérêt de la part des grandes entreprises
+- Qu’il n’y ait pas assez de contributions open source à l’écosystème
+- Qu’il n’ajoute pas une fonctionnalité spécifique que je veux
+- Qu’il n’évolue pas assez vite
 - Qu’il soit instable
 - Qu’il soit remplacé par une alternative
 - Que le langage ne devienne trop complexe
@@ -628,7 +628,7 @@ Type: select one
 - Non
 - Je préfère ne rien dire
 
-### Parmi les groupes sous-représentés ou marginalisés suivants dans le domaine de la technologie, lesquels considérez-vous faire partie ?
+### Parmi les groupes sous-représentés ou marginalisés suivants dans le domaine de la technologie, lesquels considérez-vous faire partie ?
 
 Type: select all that apply
 
@@ -647,7 +647,7 @@ Type: select all that apply
 - Femme ou perçue comme une femme
 - Autre
 
-### Êtes-vous un étudiant ? Si oui, à temps plein ou à temps partiel ?
+### Êtes-vous un étudiant ? Si oui, à temps plein ou à temps partiel ?
 
 Type: select one
 
@@ -669,7 +669,7 @@ Type: select one
 - < 10 ans
 - > 10 ans
 
-### Où vivez-vous ?
+### Où vivez-vous ?
 
 Type: select one
 
@@ -718,7 +718,7 @@ Type: select one
 - Costa Rica
 - Croatie
 - Cuba
-- Côte d'Ivoire
+- Côte d’Ivoire
 - Danemark
 - Djibouti
 - Dominique
@@ -805,7 +805,7 @@ Type: select one
 - Qatar
 - RAS de Hong Kong
 - Romanie
-- Royaume-Uni de Grande-Bretagne et d'Irlande du Nord
+- Royaume-Uni de Grande-Bretagne et d’Irlande du Nord
 - Rwanda
 - République-Unie de Tanzanie
 - République arabe syrienne
@@ -816,7 +816,7 @@ Type: select one
 - République dominicaine
 - République démocratique du Congo
 - République démocratique populaire du Laos
-- République islamique d'Iran
+- République islamique d’Iran
 - République populaire démocratique de Corée
 - République tchèque
 - Saint-Christophe-et-Niévès
@@ -866,7 +866,7 @@ Type: select one
 - Équateur
 - Érythrée
 - État plurinational de Bolivie
-- États-Unis d'Amérique
+- États-Unis d’Amérique
 - États fédérés de Micronésie
 - Île Maurice
 - Îles Marshall
@@ -883,10 +883,10 @@ Type: select all that apply
 - Je me sens à l’aise et capable de tenir une conversation technique orale en anglais.
 - Je me sens à l’aise et capable de tenir une conversation technique écrite en anglais.
 - Je me sens à l’aise et capable de lire de la documentation technique en anglais.
-- Je me sens à l'aise et capable de suivre un exposé technique (par exemple, lors d’une conférence ou d'une réunion) en anglais.
+- Je me sens à l’aise et capable de suivre un exposé technique (par exemple, lors d’une conférence ou d’une réunion) en anglais.
 - Je me sens à l’aise et capable de consommer du matériel éducatif technique écrit (par exemple, des livres techniques, des articles de blog, etc.) en anglais.
 
-### Quelle(s) langue(s) préférez-vous pour la communication technique ?
+### Quelle(s) langue(s) préférez-vous pour la communication technique ?
 
 Type: select all that apply
 
@@ -902,6 +902,6 @@ Type: select all that apply
 - Allemand
 - Autre
 
-### Y a-t-il autre chose que vous aimeriez nous dire ?
+### Y a-t-il autre chose que vous aimeriez nous dire ?
 
 Type: free form
