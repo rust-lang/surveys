@@ -2,11 +2,11 @@
 
 Type: select one
 
-- Oui, j’utilise Rust (pour tout usage, même si vous êtes en phase d’apprentissage).
+- Oui, j’utilise Rust (pour tout usage, même si vous êtes en phase d'apprentissage).
 - Non, je n’utilise pas Rust actuellement, mais je l’ai fait dans le passé.
 - Non, je n’ai jamais utilisé Rust.
 
-### Vous avez indiqué que vous n’utilisez plus Rust, pour quelle raison avez-vous arrêté d’utiliser Rust ?
+### Vous avez indiqué que vous n’utilisez plus Rust, pour quelle(s) raison(s) avez-vous arrêté d’utiliser Rust ?
 
 Type: select all that apply
 
@@ -24,7 +24,7 @@ Type: select all that apply
 
 Type: free form
 
-### Comme vous avez indiqué que vous n’utilisez pas Rust, qu’est-ce qui vous a incité à participer à cette enquête ?
+### Comme vous avez indiqué que vous n’utilisez pas Rust, qu’est-ce qui vous a incité à participer à cette enquête ?
 
 Type: select all that apply
 
@@ -72,7 +72,7 @@ Type: select one
 - Courant 2018 ou 2019
 - Courant 2017 ou avant
 
-### Si vous avez consommé du matériel d’apprentissage sur Rust, quel type de matériel avez-vous consommé ?
+### Si vous avez consommé du matériel d’apprentissage sur Rust, quel type de matériel avez-vous consommé ?
 
 Type: select all that apply
 
@@ -91,11 +91,11 @@ Type: select all that apply
 
 Type: select one
 
-- Oui, par l’intermédiaire d’une université, d’une école ou d’un autre établissement d’enseignement
+- Oui, par l’intermédiaire d'une université, d’une école ou d’un autre établissement d’enseignement
 - Oui, par l’intermédiaire de mon employeur, d’un entrepreneur ou d’un consultant
 - Non
 
-### Quels systèmes d’exploitation utilisez-vous régulièrement quand vous développez en Rust ?
+### Quels systèmes d’exploitation utilisez-vous régulièrement quand vous développez en Rust ?
 
 Type: select all that apply
 
@@ -106,7 +106,7 @@ Type: select all that apply
 - macOS
 - Autre
 
-### Pour quels systèmes d’exploitation ou environnements d’exécution développez-vous des logiciels en Rust ?
+### Pour quels systèmes d’exploitation ou environnements d’exécution développez-vous des logiciels en Rust ?
 
 Type: select all that apply
 
@@ -116,11 +116,11 @@ Type: select all that apply
 - macOS
 - iOS
 - Android
-- Dispositifs embarqués (avec un système d’exploitation)
-- Dispositifs embarqués (sans système d’exploitation)
+- Dispositifs embarqués (avec un système d'exploitation)
+- Dispositifs embarqués (sans système d'exploitation)
 - WebAssembly (pour les navigateurs)
 - WebAssembly (pour d’autres hôtes)
-- Explicitement indépendant de la plate-forme (par exemple, une bibliothèque qui n’interagit pas avec le système d’exploitation).
+- Explicitement indépendant de la plate-forme (par exemple, une bibliothèque qui n’interagit pas avec le système d'exploitation).
 - Autre
 
 ### Quel éditeur ou IDE utilisez-vous régulièrement pour coder en Rust ?
@@ -154,7 +154,7 @@ Type: select all that apply
 - Je ne sais pas
 - Autre
 
-### Si vous utilisez une version nightly, veuillez préciser le motif
+### Si vous utilisez une version nightly, veuillez préciser le(s) motif(s).
 
 Type: select all that apply
 
@@ -278,7 +278,7 @@ Columns:
 - Je suis d’accord
 - Je ne suis pas d’accord
 
-### Quelle est votre opinion sur la vitesse d’évolution de Rust ?
+### Quelle est votre opinion sur la vitesse d’évolution de Rust ?
 
 Type: select one
 
@@ -289,7 +289,7 @@ Type: select one
 - Je ne sais pas ou je m’en fiche
 - Autre
 
-### Quelles fonctionnalités non implémentées (ou uniquement nightly) souhaitez-vous stabiliser ?
+### Quelles fonctionnalités non implémentées (ou uniquement nightly) souhaitez-vous stabiliser ?
 
 Type: matrix
 
@@ -303,13 +303,13 @@ Rows:
 - [Blocs try](https://github.com/rust-lang/rust/issues/31436)
 - [Type never](https://github.com/rust-lang/rust/issues/35121)
 - [Alias de traits](https://github.com/rust-lang/rfcs/blob/master/text/1733-trait-alias.md)
-- [Trait d’implémentation d’alias de type (TAIT)](https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html)
+- [Type aliasé d’implémentation de trait](https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html)
 - [Valeurs par défaut des types associés](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)
 - Expressions constantes génériques
-- [Méthodes de trait constant](https://github.com/rust-lang/rust/issues/67792)
+- [Méthodes de trait constantes](https://github.com/rust-lang/rust/issues/67792)
 - Réflexion au moment de la compilation
 - Génériques variadiques
-- [Types de soi arbitraires](https://github.com/rust-lang/rfcs/blob/master/text/3519-arbitrary-self-types-v2.md)
+- [Types `self` arbitraires](https://github.com/rust-lang/rfcs/blob/master/text/3519-arbitrary-self-types-v2.md)
 - [Types de variantes d’énumération](https://github.com/rust-lang/lang-team/issues/122)
 - [Trait Allocator et meilleure gestion des épuisements de mémoire](https://github.com/rust-lang/rust/issues/32838)
 - [ABI stable](https://github.com/rust-lang/rust/issues/111423)
@@ -326,7 +326,7 @@ Columns:
 
 Type: free form
 
-### Lequel des aspects suivants de Rust présente des problèmes non triviaux pour votre productivité de programmation ?
+### Lequel des aspects suivants de Rust présente des problèmes non triviaux pour votre productivité de programmation ?
 
 Type: matrix
 
@@ -334,7 +334,7 @@ Rows:
 
 - Implémentation de la logique pour des tuples de différentes tailles
 - Répartition du code entre les cagettes (crates) (par exemple, règle de l’orphelin)
-- Devoir implémenter Iterator manuellement
+- Devoir implémenter le trait Iterator manuellement
 - Ne pas pouvoir en faire assez dans les const fn
 - Implémentation de plugins de bibliothèque dynamique
 - Interopérabilité avec d’autres langages (par exemple C ou C++)
@@ -362,24 +362,24 @@ Columns:
 
 Type: free form
 
-### Quelles fonctionnalités stabilisées au cours des 12 derniers mois utilisez-vous le plus ?
+### Quelles fonctionnalités stabilisées au cours des 12 derniers mois utilisez-vous le plus ?
 
 Type: matrix
 
 Rows:
 
-- [fonction asynchrone dans les traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
-- [Position de retour impl Trait dans traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
-- [Littéraux de chaîne C](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#c-string-literals) (1.77)
+- [Fonction asynchrone dans les traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
+- [impl Trait comme type de retour de fonctions de traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
+- [Chaîne de caractères C littérales](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#c-string-literals) (1.77)
 - [Récursivité dans la fonction asynchrone](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#support-for-recursion-in-async-fn) (1.77)
 - [macro offset_of!](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#offset_of) (1.77)
 - [Attribut #[diagnostic]](https://blog.rust-lang.org/2024/05/02/Rust-1.78.0.html#diagnostic-attributes) (1.78)
 - [Expressions constantes en ligne](https://blog.rust-lang.org/2024/06/13/Rust-1.79.0.html#inline-const-expressions) (1.79)
 - [Limites de la position du type associé](https://blog.rust-lang.org/2024/06/13/Rust-1.79.0.html#bounds-in-associated-type-position) (1.79)
 - [LazyCell et LazyLock](https://blog.rust-lang.org/2024/07/25/Rust-1.80.0.html#lazycell-and-lazylock) (1.80)
-- [Gammes exclusives en motifs](https://blog.rust-lang.org/2024/07/25/Rust-1.80.0.html#exclusive-ranges-in-patterns) (1.80)
+- [Filtrage par motif exclusif](https://blog.rust-lang.org/2024/07/25/Rust-1.80.0.html#exclusive-ranges-in-patterns) (1.80)
 - [Trait Error dans core](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#coreerrorerror) (1.81)
-- [#[expect(lint)] et raisons de lint](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#expectlint) (1.81)
+- [#[expect(lint)] et message explicatif de pourquoi le lint est attendu](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#expectlint) (1.81)
 - [Syntaxe de capture précise](https://blog.rust-lang.org/2024/10/17/Rust-1.82.0.html#precise-capturing-use-syntax) (1.82)
 - [pointeurs &raw](https://blog.rust-lang.org/2024/10/17/Rust-1.82.0.html#native-syntax-for-creating-a-raw-pointer) (1.82)
 
@@ -391,7 +391,7 @@ Columns:
 - Je ne savais pas qu’elle était stabilisée
 - Je ne sais pas ce que c’est
 
-### Comment compilez-vous vos projets Rust ?
+### Comment compilez-vous vos projets Rust ?
 
 Type: select all that apply
 
@@ -400,7 +400,7 @@ Type: select all that apply
 - Je combine Cargo et un autre système de construction
 - Si vous utilisez Cargo avec (ou utilisez simplement) d’autres systèmes de compilation, lesquels utilisez-vous ?
 
-### Comment téléchargez-vous des librairies pour construire des projets Rust ?
+### Comment téléchargez-vous des bibliothèques pour construire des projets Rust ?
 
 Type: select all that apply
 
@@ -409,7 +409,7 @@ Type: select all that apply
 - J’utilise un miroir de crates.io
 - Je ne sais pas
 
-### À quelle fréquence participez-vous aux activités communautaires Rust suivantes ?
+### À quelle fréquence participez-vous aux activités communautaires Rust suivantes ?
 
 Type: matrix
 
@@ -422,9 +422,9 @@ Rows:
 - Assister à une rencontre ou une conférence Rust (virtuelle ou en personne)
 - Rédiger, commenter, contribuer à la discussion ou fournir des modifications à une demande de commentaire (RFC) ouverte
 - Discuter du projet Rust dans un chat officiel (Zulip ou Discord).
-- Ouvrir un ticket sur n’importe quel dépôt de l’organisation GitHub rust-lang.
-- Contribuer aux modifications du code (y compris les tests) concernant n’importe quel projet de l’organisation GitHub rust-lang.
-- Contribuer à des modifications non liées au code (documentation, commentaires, etc.) à n’importe quel projet de l’organisation GitHub rust-lang.
+- Ouvrir un ticket sur n’importe quel dépôt de l'organisation GitHub rust-lang.
+- Contribuer aux modifications du code (y compris les tests) concernant n’importe quel projet de l'organisation GitHub rust-lang.
+- Contribuer à des modifications non liées au code (documentation, commentaires, etc.) à n'importe quel projet de l'organisation GitHub rust-lang.
 
 Columns:
 
@@ -450,8 +450,8 @@ Rows:
 Columns:
 
 - Je me sens bien accueilli(e)
-- Je ne me sens ni particulièrement bienvenu ni malvenu
-- Je ne me sens pas le bienvenu
+- Je ne me sens ni particulièrement bienvenu(e) ni malvenu(e)
+- Je ne me sens pas le/la bienvenu(e)
 - Je n’ai jamais participé à cette activité
 
 ### Si vous avez indiqué que vous ne vous sentiez pas le bienvenu dans la communauté Rust, y a-t-il des détails sur votre expérience que vous aimeriez partager avec nous ?
@@ -515,7 +515,7 @@ Type: select all that apply
 - Nous pensons que c’est facile de créer des prototypes avec Rust
 - Nous devons interagir avec le code Rust existant
 
-### En quoi votre utilisation de Rust a-t-elle été problématique ?
+### En quoi votre utilisation de Rust a-t-elle été problématique ?
 
 Type: free form
 
@@ -613,14 +613,14 @@ Type: select all that apply
 - Qu’il soit instable
 - Qu’il soit remplacé par une alternative
 - Que le langage ne devienne trop complexe
-- Que les outils et la documentation ne soient pas suffisamment accessibles (par exemple, en raison de la langue ou de l’incompatibilité avec les lecteurs d’écran)
+- Que les outils et la documentation ne soient pas suffisamment accessibles (par exemple, en raison de la langue ou de l’incompatibilité avec les liseuses)
 - La Fondation Rust ne soutient pas correctement le projet Rust (par exemple sur les aspects financiers, infrastructurels et juridiques)
 - Que la gouvernance du projet ne s’adapte pas à la taille et aux besoins de la communauté
 - Que les développeurs/mainteneurs du langage ne bénéficient pas d’un soutien approprié.
 - Je ne suis pas inquiet.
 - Autre
 
-### Vous considérez-vous comme membre d’un groupe sous-représenté ou marginalisé dans le domaine de la technologie ?
+### Vous considérez-vous comme membre d’un groupe sous-représenté ou marginalisé dans le domaine de la technologie ?
 
 Type: select one
 
@@ -659,7 +659,7 @@ Type: select one
 - Oui, dans un programme professionnel
 - Oui, autre
 
-### Depuis combien de temps programmez-vous (dans n’importe quel langage, pour n’importe quelle raison) ?
+### Depuis combien de temps programmez-vous (dans n’importe quel langage, pour n’importe quelle raison) ?
 
 Type: select one
 
@@ -872,11 +872,11 @@ Type: select one
 - Îles Marshall
 - Îles Salomon
 
-### Comme vous avez sélectionné « Autre » dans la liste des pays ci-dessus, veuillez saisir votre territoire de résidence ci-dessous
+### Comme vous avez sélectionné « Autre » dans la liste des pays ci-dessus, veuillez saisir votre territoire de résidence ci-dessous :
 
 Type: free form
 
-### Dans quelle mesure êtes-vous à l’aise pour communiquer sur des sujets techniques en anglais ?
+### Dans quelle mesure êtes-vous à l’aise pour communiquer sur des sujets techniques en anglais ?
 
 Type: select all that apply
 
