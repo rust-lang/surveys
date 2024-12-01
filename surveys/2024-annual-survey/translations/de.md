@@ -712,8 +712,8 @@ Type: select one
 - Dänemark
 - Ecuador
 - Ein anderes Land
-- Elfenbeinküste
 - El Salvador
+- Elfenbeinküste
 - Eritrea
 - Estland
 - Fidschi
@@ -860,8 +860,8 @@ Type: select one
 - Venezuela
 - Vereinigte Arabische Emirate
 - Vereinigte Republik Tansania
-- Vereinigtes Königreich Großbritannien und Nordirland
 - Vereinigte Staaten von Amerika
+- Vereinigtes Königreich Großbritannien und Nordirland
 - Vietnam
 - Weißrussland
 - Zentralafrikanische Republik
