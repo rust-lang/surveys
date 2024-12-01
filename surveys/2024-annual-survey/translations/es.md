@@ -10,14 +10,14 @@ Type: select one
 
 Type: select all that apply
 
-- Faltan funcionalidad en el lenguaje de programación
+- Faltan funciones en el lenguaje de programación
 - Faltan librerías
 - Faltan herramientas
 - Demasiado difícil de aprender
 - La comunidad fue grosera, poco acogedora o desagradable
 - Prefiero utilizar otro lenguaje
 - Ya no tengo la posibilidad de utilizar Rust, debido a factores fuera de mi control
-- 
+- Planeo utilizarlo en el futuro, en cuanto tenga la oportunidad
 - Otra
 
 ### Cuéntanos más:
@@ -29,21 +29,21 @@ Type: free form
 Type: select all that apply
 
 - Rust no me ayuda a lograr mis objetivos
-- Faltan funcionalidad en el lenguaje
+- Falta de funcionalidad en el lenguaje
 - Faltan librerías
 - Faltan herramientas
-- Demasiado difícil de aprender o aprender me va a llevar demasiado tiempo
+- Demasiado difícil de aprender o el aprendizaje me va a llevar demasiado tiempo
 - La comunidad fue grosera, poco acogedora o desagradable
 - Prefiero utilizar otro lenguaje
 - No puedo utilizar Rust, debido a factores fuera de mi control
 - No he llegado a hacerlo
-- otro
+- Otra
 
 ### Cuéntanos más:
 
 Type: free form
 
-### EEn promedio, ¿con qué frecuencia utiliza Rust?
+### En promedio, ¿con qué frecuencia utiliza Rust?
 
 Type: select one
 
@@ -56,42 +56,42 @@ Type: select one
 
 Type: select one
 
-- no puedo escribir código Rust
-- puedo escribir programas simples en Rust
-- puedo escribir código útil, listo para producción, pero con dificultad
-- puedo escribir código Rust productivamente
+- No puedo escribir el código Rust
+- Puedo escribir programas simples en Rust
+- Puedo escribir un código útil y listo para la producción, pero con dificultad
+- Puedo escribir un código Rust productivamente
 
 ### ¿Cuándo aprendió a programar con Rust?
 
 Type: select one
 
 - Aún estoy tratando de aprender Rust activamente
-- Durante 2023
-- Durante 2021 ó 2022
-- Durante 2019 ó 2020
-- Durante 2017 ó 2018
-- Durante 2016 ó antes
+- Durante 2024
+- Durante 2022 ó 2023
+- Durante 2020 ó 2021
+- Durante 2018 ó 2019
+- Durante 2017 ó antes
 
 ### Si usted utilizó material de enseñanza sobre Rust, ¿qué tipo de material ha utilizado?
 
 Type: select all that apply
 
 - Libros ("The Rust Programming Language", "Rust for Rustaceans", etc.)
-- Ejercicios online (Rustlings, Rust by Example, etc.)
-- Videos
-- 
-- 
-- 
+- Ejercicios online (Rustlings, 100 Exercises To Learn Rust, etc.)
+- Videos o live-streams
+- Entradas en el blog
+- Documentaciones
+- Código fuente de Rust
 - Cursos online, webinares
-- 
-- 
+- Entrenamiento personal
+- Material de aprendizaje universitario
 - Otros (por favor especifique)
 
 ### ¿Está participando actualmente de un curso que utilice o enseñe Rust? o ¿ha participado de un curso de este tipo el año pasado?
 
 Type: select one
 
-- Sí, a través de la universidad, colegio, o alguna otra institución de educación
+- Sí, a través de la universidad, colegio, o alguna otra institución educativa
 - Sí, a través de mi empleador, contratista o consultoría
 - No
 
@@ -106,11 +106,11 @@ Type: select all that apply
 - macOS
 - otros
 
-### ¿Para cuáles sistemas operativos o tiempos de ejecución desarrolla Rust software?
+### ¿Para cuáles sistemas operativos o entornos de ejecución desarrolla Rust software?
 
 Type: select all that apply
 
-- Linux (ordenador o servidor
+- Linux (ordenador o servidor)
 - Windows 10/11
 - Windows 8 ó anterior
 - macOS
@@ -118,57 +118,57 @@ Type: select all that apply
 - Android
 - Plataformas embebidas (con un sistema operativo)
 - Plataformas embebidas (bare metal o sin sistema operativo)
-- WebAssembly
-- 
+- WebAssembly (para browsers)
+- WebAssembly (para otros hosts)
 - explícitamente independiente de la plataforma (por ejemplo, una biblioteca que no interactúa con el sistema operativo)
-- otro
+- Otra
 
-### ¿Cuál editor o IDE utiliza con código Rust regularmente?
+### ¿Cuál editor o IDE (entorno de desarrollo integrado) utiliza con código Rust regularmente?
 
 Type: select all that apply
 
 - VS Code
 - vi/vim/neovim
-- IntelliJ/CLion/otro JetBrains IDE + complemento Rust
-- Rust Rover (IDE dedicado de IntelliJ Rust)
+- IntelliJ/CLion/otro IDE de JetBrains + complemento Rust
+- Rust Rover (IDE dedicada de IntelliJ Rust)
 - Emacs (o derivados como Doom Emacs, Spacemacs, etc.)
 - Sublime Text
 - Visual Studio
 - Xcode
 - Atom
 - Helix
-- otro
+- Otra
 
-### ¿Cuáles versiones (o versión) de Rust utiliza para desarrollo local?
+### ¿Cuál versión (o versiones) de Rust utiliza para desarrollo local?
 
 Type: select all that apply
 
-- La versión estable más actual
-- una versión estable anterior
-- una versión estable de Rust específica igual o más reciente a 1.67
-- una versión estable de Rust específica anterior a 1.67
-- versión beta
+- La versión estable actual
+- La versión estable anterior
+- Una versión específica estable de Rust, igual o más reciente a 1.75
+- Una versión específica estable de Rust, anterior a 1.75
+- Versión beta
 - La versión nightly más reciente
 - Una versión específica de nightly
 - Una versión modificada (un fork)
 - No lo sé
-- otro
+- Otra
 
 ### Si utilizas nightly, ¿por qué?
 
 Type: select all that apply
 
-- no utilizo nightly
+- No utilizo nightly
 - Por costumbre
-- por funcionalidad particular que necesito
-- me gusta tener acceso a todas la última funcionalidad
-- para ayudar a probar la versión nightly por si aparecen problemas
-- Proporcionar comentarios sobre el diseño de las funciones nocturnas.
+- Por una funcionalidad particular, o un set de funciones del lenguaje que necesito
+- Me gusta tener acceso a todas la últimas funcionalidades
+- Para ayudar a probar la versión nightly por si aparecen problemas
+- Para proporcionar comentarios sobre el diseño de las funciones nightly
 - Para probar en integración contínua (CI)
-- Un crate que utilizo como dependencia lo requiere
+- Un crate del cual dependo lo requiere
 - Una herramienta que utilizo lo requiere
 - Para tener tiempos de compilación más rápidos
-- otro
+- Otra
 
 ### ¿Cuál es la versión más antigua de Rust que utiliza para cualquier tarea de desarrollo?
 
@@ -268,8 +268,8 @@ Type: matrix
 
 Rows:
 
+- Puedo actualizar la versión del compilador *estable* sin temor a que mi código no se pueda compilar
 - Puedo actualizar la versión del compilador *nightly* sin temor a que mi código no se pueda compilar
-- Puedo actualizar la versión del compilador *nocturno* sin temor a que mi código no se pueda compilar
 - Actualizar a una nueva versión *estable* del compilador no requiere cambios o cambios extremadamente pequeños y fáciles en mi código
 - Actualizar a una nueva versión del compilador *nightly* no requiere cambios o cambios extremadamente pequeños y fáciles en mi código
 
@@ -278,159 +278,159 @@ Columns:
 - Estoy de acuerdo
 - No estoy de acuerdo
 
-### 
+### Cuál es su opinión sobre cuán rápido evoluciona Rust?
 
 Type: select one
 
-- 
-- 
-- 
-- 
-- 
-- Other
+- Rust ya es muy complejo. No debería agregar o estabilizar más funcionalidad significativa.
+- Rust cambia demasiado rápido. Yo deseo que disminuya la velocidad de desarrollo
+- Estoy satisfecho con la velocidad de desarrollo actual
+- Rust cambia demasiado lento, deseo que agregue o estabilice funcionalidad más rápido
+- No sé o no me interesa
+- Otra
 
-###  ¿Qué funcionalidad no implementadas o (solo nightly) buscas estabilizar?
+###  ¿Qué funcionalidad no implementada o (solo nightly) desearías que fuera estabilizada?
 
 Type: matrix
 
 Rows:
 
-- Especialización
+- Especialización (specialization)
 - Generadores/corrutinas
-- Clausuras asíncronas
-- 
-- If/while let encadenados
+- Clausuras async
+- Generadores/corrutina async
+- Cadenas de if/while let
 - Bloques try
-- Never type
-- Traits mejorados (trait alias, bounds implícitos, valores predeterminados de tipos asociados)
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
+- Tipo never
+- Alias de traits
+- Type Alias Impl Trait (TAIT)
+- Valores predeterminados de tipos asociados (associated type defaults)
+- Expresiones const genéricas 
+- Métodos const trait
+- Reflexión en tiempo de compilación
+- Genericidad variadica
+- Tipos de self arbitrarios
+- Tipos para variantes de enum
 - Allocator trait, mejor manejo de OOM
 - ABI estable
-- 
+- SIMD portable
 
 Columns:
 
-- Alta prioridad
-- Prioridad media
-- Baja prioridad
-- No se debe priorizar
+- Desbloquearía mi caso de uso
+- Mejoraría mi código
+- No lo necesito
+- No sé que es
 
 ### ¿Hay alguna funcionalidad no mencionada anteriormente a la que le gustaría que se le dé prioridad?
 
 Type: free form
 
-### En su opinión, ¿cómo se debería priorizar el trabajo en las siguientes áreas de Rust?
+### Cuales de los siguientes aspectos de Rust presenta problemas no triviales para su productividad al programar?
 
 Type: matrix
 
 Rows:
 
-- Rendimiento en tiempo de ejecución
-- Tiempo de compilación
-- Tamaño del binario
-- Uso de memoria (es decir, cuánta RAM utiliza Rustc al compilar)
-- Uso de espacio en disco (por ejemplo, el tamaño de la carpeta de destino)
-- Errores en el compilador (es decir, ICE, también conocidos como errores internos del compilador, malas compilaciones, etc.)
-- Mensajes de error del compilador
-- Experiencia IDE
-- Experiencia de depuración
-- Documentación (rustdoc, docs.rs)
-- Sistema de build (cargo)
-- Gestión de paquetes (crates.io)
-- Nueva funcionalidad del lenguaje
-- Documentación del lenguaje Rust y de la librería estándar
-- 
-- 
-- 
-- 
-- 
+- Implementar lógica para tuplas de varios tamaños
+- Dividir código en varios crates (e.g. la regla orphan)
+- Tener que implementar un iterador manualmente
+- No poder utilizar const fn lo suficiente
+- Implementar plugins de librerías dinámicas
+- Interoperabilidad con otros lenguajes (e.g. C o C++)
+- Lograr concurrencia estructurada con código async
+- Escribir código async agnóstico del ejecutor
+- Escribir código unsafe correcto
+- El borrow checker no permite código válido
+- Performance en tiempo de ejecución pobre
+- Compilación lenta
+- Tamaño grande de artefactos compilados binarios 
+- Uso excesivo de almacenamiento en disco (e.g. el tamaño de la carpeta target)
+- Encontrar bugs en el compilador (e.g. ICEs o errores internos al compilador o compilaciones erróneas)
+- Encontrar mensajes de error del compilador opacos o poco claros
+- Soporte de IDE pobre (e.g. algunos errores no se muestran o el análisis es lento)
+- Experiencia de depuración pobre (e.g. visualización de valores o stacktraces async ausentes)
+- Falta documentación del lenguaje Rust o de la librería standard
 
 Columns:
 
-- Alta prioridad
-- Prioridad media
-- Baja prioridad
+- Es un gran problema para mí
+- Podría ser mejorado, pero no me limita
+- No me interesa
 
-### ¿Hay alguna funcionalidad no mencionada anteriormente a la que le gustaría que se le dé prioridad?
+### ¿Hay algunos requerimientos no mencionados anteriormente que afectan su productividad en la programación Rust?
 
 Type: free form
 
-### 
+### Cuál de las características estabilizadas en los últimos 12 meses son las que más utiliza?
 
 Type: matrix
 
 Rows:
 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
+- async fn en traits (1.75)
+- impl Trait en posición de retorno en traits (1.75)
+- Literales de string de C (1.77)
+- Recursion en async fn (1.77)
+- Macro offset_of! (1.77)
+- Atributo #[diagnostic] (1.78)
+- Expresiones const inline (1.79)
+- Ligadura (bound) en posición de tipo asociado (1.79)
+- LazyCell y LazyLock (1.80)
+- Rangos exclusivos en patrones (1.80)
+- Trait Error en core (1.81)
+- #[expect(lint)] y razones de lint (1.81)
+- Sintaxis de captura preciso (1.82)
+- Punteros &raw (1.82)
 
 Columns:
 
-- 
-- 
-- 
-- 
-- 
+- Yo utilizo esta funcionalidad
+- Yo no puedo utilizar esta funcionalidad aún
+- Yo no necesito esta funcionalidad
+- Yo no sabía que habia sido estabilizada
+- Yo no sé que es
 
-### ¿Cómo realizas el build tus proyectos Rust?
+### ¿Cómo construyes tus proyectos Rust?
 
 Type: select all that apply
 
-- Utilizo cargo
-- Utilizo algún otro sistema de compilación
+- Yo utilizo Cargo
+- Yo utilizo algún otro sistema de build
 - Combino Cargo y otro sistema de build
-- Si usa Cargo con (o simplemente usa) otros sistemas de compilación, ¿cuáles usa?
+- Si usted utiliza Cargo con (o simplemente utiliza) otros sistemas de build, ¿cuáles usa?
 
-### ¿Cómo descarga crates para realizar el build de proyectos de Rust?
+### Como bajas crates para compiler proyectos en Rust?
 
 Type: select all that apply
 
-- Utilizo crates.io
-- Utilizo un registro personalizado/local/de empresa
-- Utilizo un mirror de crates.io
-- No sé
+- Yo utilizo crates.io
+- Yo utilizo un registro personalizado/local/de empresa
+- Yo utilizo un mirror de crates.io
+- Yo no sé
 
-### Aproximadamente, ¿con qué frecuencia participa en la comunidad de Rust?
+### Aproximadamente, ¿con qué frecuencia participa en las próximas actividades de la comunidad Rust?
 
 Type: matrix
 
 Rows:
 
-- Producir contenido informativo sobre Rust (por ejemplo, publicar en un blog, transmitir en vivo, hacer un vídeo de YouTube, presentarlo en una conferencia/reunión, etc.)
-- Consumir contenido informativo sobre Rust (por ejemplo, blogs, transmisiones en vivo, videos de YouTube, etc.)
-- Leer los canales de comunicación oficiales de Rust (por ejemplo, This Week in Rust, el blog oficial de Rust, la cuenta de Twitter de Rust, etc.)
+- Produce contenido informativo sobre Rust (por ejemplo, publicar en un blog, transmitir en vivo, hacer un vídeo de YouTube, presentarlo en una conferencia/reunión, etc.)
+- Consume contenido informativo sobre Rust (por ejemplo, blogs, transmisiones en vivo, videos de YouTube, etc.)
+- Lee los canales de comunicación oficiales de Rust (por ejemplo, This Week in Rust, el blog oficial de Rust, la cuenta de Twitter de Rust, etc.)
 - Participar en conversaciones sobre Rust en redes sociales o sitios web (Hacker News, r/rust, Twitter, LinkedIn, etc.)
-- Asistir a una reunión o conferencia de Rust (virtual o en persona)
-- Escribir, comentar, contribuir a la discusión o editar un RFC abierto
-- Discutir el proyecto Rust en un chat o foro oficial (internals.rust-lang.org o Rust Zulip)
-- Abrir un issue en cualquier repositorio de la organización rust-lang en GitHub
-- Contribuir modificaciones al código (incluidas las pruebas) a cualquier proyecto en la organización rust-lang en GitHub
-- Contribuir modificaciones que no sean de código (documentación, comentarios, etc.) a cualquier proyecto en la organización rust-lang en GitHub
+- Asiste a una reunión o conferencia de Rust (virtual o en persona)
+- Escribe, comenta, contribuye a la discusión o edita un RFC abierto
+- Discute el proyecto Rust en un chat o foro oficial (internals.rust-lang.org o Rust Zulip)
+- Iniciar un tema en cualquier repositorio de la GitHub organización "rust-lang"
+- Contribuir modificaciones al código (incluidas las pruebas) a cualquier proyecto open-source en Rust
+- Contribuye modificaciones que no sean de código (documentación, comentarios, etc.) a cualquier proyecto open-source en Rust
 
 Columns:
 
 - Con más frecuencia que semanalmente
 - Semanalmente
-- Mensualmente o menos
+- Mensualmente o con menos frecuencia
 - Nunca
 
 ### ¿Cuál fue su experiencia en los siguientes “Rust community spaces”?
@@ -444,8 +444,8 @@ Rows:
 - Comunidad concentrada en un área específico de Rust software development (por ej. desarrollo de juegos, audio, etc.)
 - Conferencias de Rust
 - Rust meetups o eventos locales de la comunidad
-- Discusiones (issues, pull requests, etc.) en un repositorio dentro de la organización “rust-lang GitHub”
-- Discusiones (issues, pull requests, etc.) en un repositorio fuera de la organización “rust-lang GitHub”
+- Discusiones (issues, pull requests, etc.) en un repositorio dentro de la GitHub organización “rust-lang”
+- Discusiones (issues, pull requests, etc.) en un repositorio fuera de la  GitHub organización “rust-lang”
 
 Columns:
 
@@ -478,7 +478,7 @@ Type: select one
 Type: select one
 
 - Sí, para la mayor parte de mi codificación/coding
-- 
+- Sí, en promedio unas pocas veces por semana
 - Sí, pero solamente la utilizo en forma ocasional
 - No
 
@@ -486,13 +486,13 @@ Type: select one
 
 Type: select one
 
-- Mi organización hace “non-trivial” uso de Rust (por ej., utilizado en producción o en “significant tooling”)
+- Mi organización hace “non-trivial” uso de Rust (por ej., utilizado en producción o en herramientas importantes)
 - Mi organización ha experimentado con Rust, o está considerando utilizarlo
-- Mi organización no considera seriamente utilizar Rust para algún uso
+- Mi organización no considera seriamente Rust para alguna aplicación
 - No estoy seguro si mi organización ha considerado utilizar o si actualmente utiliza Rust
 - No trabajo para una organización o mi organización no desarrolla software de ningún tipo
 
-### Cuál de las siguientes afirmaciones se aplica a su experiencia utilizando Rust en el trabajo? Puede elegir varias opciones
+### Cuál de las siguientes afirmaciones se aplica a su experiencia utilizando Rust en el trabajo?
 
 Type: select all that apply
 
@@ -507,24 +507,24 @@ Type: select all that apply
 Type: select all that apply
 
 - Por sus características de rendimiento (es decir, velocidad, consumo de memoria, etc.)
-- Necesitamos un control preciso sobre exactamente cómo se ejecuta nuestro software
+- Necesitamos un control preciso sobre exactamente cómo se ejecuta nuestra software
 - Sus propiedades de seguridad y protección son importantes para nosotros
-- Nos permite construir un software relativamente correcto y libre de errores.
+- Nos permite construir una software relativamente correcta y libre de errores
 - Nos resulta agradable o divertido programar en Rust
 - Ya conocemos Rust, por lo que es nuestra opción predeterminada
 - Nos resulta fácil crear prototipos con Rust
 - Debemos interactuar con el código Rust existente
 
-### ¿Le ha resultado desafiante el uso de Rust?
+### ¿Qué era complicado cuándo utilizaste Rust?
 
 Type: free form
 
-### ¿En qué dominios de la tecnología se usa Rust en tu compañía
+### ¿En qué dominios de la tecnología se usa Rust en tu compañía?
 
 Type: select all that apply
 
 - Programación de Audio
-- 
+- Automotive
 - Blockchain
 - Aplicaciones de cómputo en la nube
 - Utilidades o infrastructura de cómputo en la nube
@@ -535,22 +535,22 @@ Type: select all that apply
 - Ciencia de datos
 - Implementación de base de datos
 - Aplicaciones de escritorio
-- Servicios para computadores de escritorio o teléfonos móviles
+- Computadores de escritorio o librerías de teléfonos móviles o servicios
 - Sistemas distribuídos
-- Dispositivos embebidos (con un sistema operativo)
-- Dispositivos embebidos (sin sistema operativo)
+- Plataformas embebidas (con un sistema operativo)
+- Plataformas embebidas (bare metal o sin sistema operativo)
 - HPC ([Super]Cómputo de alto rendimiento)
 - IoT (Internet de las cosas)
 - Machine learning
 - Aplicaciones para teléfonos móviles
-- Lenguajes de programación y herramientas relacionadas
+- Programación de lenguajes y herramientas relacionadas (incluyendo compilers, IDEs, librerías standard, etc.)
 - Robótica
 - Cómputo científico o numérico
 - Aplicaciones del lado del servidor o "backend"
 - Simulación
 - Aplicaciones Web (frontend)
 - WebAssembly
-- otro
+- Otra
 
 ### Aproximadamente, ¿Cuántos desarrolladores en total emplea tu compañía?
 
@@ -560,17 +560,17 @@ Type: select one
 - 11-49
 - 50-99
 - 100-500
-- 500-1000
-- 1000-10000
-- Más de 10000
+- 500-1.000
+- 1.000-10.000
+- Más de 10.000
 
-### ¿Está tu compañía considerando contratar desarrolladores de Rust en el próximo año?
+### ¿Está tu compañía considerando contratar programadores de Rust en el próximo año?
 
 Type: select one
 
 - Sí
-- No (está planeando contratar a otros desarrolladores)
-- No (no planea contratar desarrolladores)
+- No (está planeando contratar a otros programadores)
+- No (no planea contratar programadores)
 - No lo sé
 
 ### ¿Está de acuerdo con las siguientes afirmaciones sobre el empleo de Rust?
@@ -579,8 +579,8 @@ Type: matrix
 
 Rows:
 
-- Es fácil para los solicitantes cualificados encontrar trabajos que usan Rust para la mayoría de la programación
-- 
+- Es fácil para los solicitantes cualificados encontrar trabajos que usan Rust para la mayor parte de la programación
+- Es sencillo, para programadores mayores, encontrar empleos en los cuales Rust es utilizado en la mayor parte de la programación.
 - Los trabajos de Rust existentes son atractivos
 
 Columns:
@@ -589,7 +589,7 @@ Columns:
 - Ni de acuerdo ni en desacuerdo
 - En desacuerdo
 
-### ¿Cuál de las siguientes afirmaciones siente acerca de Rust?
+### ¿Cuáles de las siguientes afirmaciones sobre Rust considera que son ciertas?
 
 Type: select all that apply
 
@@ -606,21 +606,21 @@ Type: select all that apply
 Type: select all that apply
 
 - No tiene suficiente uso en la industria
-- Mucho interés de parte de grandes compañías
-- No tiene suficiente colaboración al ecosistema de código abierto
+- Demasiado interés por parte de grandes compañías
+- No tiene suficientes open-source contribuciones al ecosistema
 - No añade una característica específica que quiero
 -  Rust no evoluciona suficientemente rápido
 - Inestabilidad del lenguaje
 - Que sea opacado por una alternativa
 - Que se vuelva demasiado complejo
-- Las herramientas y la documentación no son suficientemente accesibles (por ejemplo, para personas con visión limitada)
+- Las herramientas y la documentación no son suficientemente accesibles (por ejemplo debido al lenguaje o la incompatibilidad con lectores de pantalla)
 - La Fundación Rust no apoya adecuadamente el proyecto Rust (por ejemplo, en aspectos financieros, de infraestructura y legales)
 - La gestión del proyecto no evoluciona para cubrir el tamaño y las necesidades de la comunidad
-- Los desarrolladores y mantenedores del lenguaje no tienen suficiente soporte
+- Los programadores/mantenedores del lenguaje no tienen suficiente apoyo
 - No estoy preocupado
-- otro
+- Otra
 
-### Sus respuestas a las siguientes preguntas ayudarán a nuestros revisores a realizar análisis de cohortes y nos ayudarán a comprender mejor la comunidad de Rust. Por favor responda según su nivel de comodidad. ¿Se considera miembro de un grupo subrepresentado o marginado en tecnología?
+### ¿Se considera miembro de un grupo subrepresentado o marginado en tecnología?
 
 Type: select one
 
@@ -639,13 +639,13 @@ Type: select all that apply
 - Idioma
 - Lesbiana, gay, bisexual, queer o de alguna manera no heterosexual
 - Género no-binario
-- Mayor o más joven de la edad promedio de los desarrolladores que conozco
+- Mayor o menor de la edad promedio de los programadores que conozco
 - Creencias políticas
 - Minoría étnica o racial
 - Creencias religiosas
 - Trans
 - Mujer o percibido como mujer
-- otro
+- Otra
 
 ### ¿Eres un estudiante a tiempo completo o parcial?
 
@@ -653,13 +653,13 @@ Type: select one
 
 - No
 - Si, en escuela secundaria
-- Si, en universidad
-- Si, en un programa de magister
+- Si, en un programa de bachelor/undergraduate
+- Si, en un programa de master
 - Si, en un programa de doctorado
-- Si, en un programa vocacional (por ejemplo un bootcamp)
+- Si, en un programa vocacional
 - Si, otro
 
-### ¿Por cuánto tiempo has estado programando? (en cualquier lenguaje o por cualquier motivo)
+### ¿Por cuánto tiempo has estado programando? (en cualquier lenguaje, por cualquier motivo)
 
 Type: select one
 
@@ -708,6 +708,7 @@ Type: select one
 - Canadá
 - Chad
 - Chile
+- China
 - Chipre
 - Ciudad del Vaticano
 - Colombia
@@ -804,19 +805,16 @@ Type: select one
 - Nueva Zelanda
 - Níger
 - Omán
-- otro
+- Otra
 - Pakistán
 - Palau
 - Palestina
 - Panamá
 - Papúa Nueva Guinea
 - Paraguay
-- Para llevar
-- Pavo
 - Países Bajos
 - Perú
 - Polonia
-- Porcelana
 - Portugal
 - RAE de Hong Kong
 - Reino Unido de Gran Bretaña e Irlanda del Norte
@@ -857,9 +855,11 @@ Type: select one
 - Taiwán
 - Tayikistán
 - Timor-Leste
+- Togo
 - Tonga
 - Trinidad y Tobago
 - Turkmenistán
+- Turquía
 - Tuvalu
 - Túnez
 - Ucrania
@@ -872,21 +872,21 @@ Type: select one
 - Zambia
 - Zimbabue
 
-### Debido a que seleccionaste "Otra" en la lista de paises más arriba, por favor introduce tu territorio de residencia a continuación:
+### Debido a que seleccionaste "Otra" en la lista de países más arriba, por favor introduce tu territorio de residencia a continuación:
 
 Type: free form
 
-### ¿De qué manera te sientes cómodo al comunicarte en Inglés sobre temas técnicos?
+### ¿De qué manera te sientes cómodo al comunicarte en inglés sobre temas técnicos?
 
 Type: select all that apply
 
 - Me siento cómodo y capaz sosteniendo una conversación técnica hablada en inglés
 - Me siento cómodo y capaz sosteniendo una conversación técnica escrita en inglés
-- Me siento cómodo y capaz leyendo documentación técnica en Inglés
-- Me siento cómodo y capaz de consumir una charla técnica (conferencia o meetup) en inglés
-- Me siento cómodo y capaz de consumir material educativo técnico (libros, publicaciones en blogs) en inglés
+- Me siento cómodo y capaz leyendo documentación técnica en inglés
+- Me siento cómodo y capaz de entender una charla técnica (conferencia o meetup) en inglés
+- Me siento cómodo y capaz de entender material educativo técnico (libros, publicaciones en blogs) en inglés
 
-### ¿Cuál es tu lenguaje o lenguajes preferidos para documentación técnica?
+### ¿Cuál es tu lenguaje o lenguajes preferidos para entender documentación técnica (por ejemplo blogs, documentación, etc.) ?
 
 Type: select all that apply
 
@@ -900,9 +900,9 @@ Type: select all that apply
 - Coreano
 - Francés
 - Alemán
-- otro
+- Otra
 
-### ¿Tienes alguna otra cosa qué decirnos?
+### Hay algo más que quieras decirnos?
 
 Type: free form
 
