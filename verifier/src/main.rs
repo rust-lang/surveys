@@ -104,17 +104,20 @@ fn check_questions(markdown_questions: &[markdown::Question], sh_questions: &[Qu
 impl markdown::Question<'_> {
     fn compare(&self, other: &Question) -> Comparison {
         if self.text != other.text() {
-            return Comparison::TitlesDiffer(self.text.to_owned(), other.text().to_owned());
+            return Comparison::TitlesDiffer {
+                md: self.text.to_owned(),
+                sh: other.text().to_owned(),
+            };
         }
 
         match (&self.answers, other) {
             (markdown::Answers::FreeForm, _) => {
                 if !other.is_free_form() {
-                    return Comparison::QuestionTypesDiffer(
-                        self.text.to_owned(),
-                        QuestionType::FreeForm,
-                        other.into(),
-                    );
+                    return Comparison::QuestionTypesDiffer {
+                        question: self.text.to_owned(),
+                        md: QuestionType::FreeForm,
+                        sh: other.into(),
+                    };
                 }
             }
             (markdown::Answers::SelectOne(answers), Question::ChoiceList { choice_list, .. })
@@ -125,7 +128,10 @@ impl markdown::Question<'_> {
                     return Comparison::AnswersDiffer(
                         mismatched
                             .into_iter()
-                            .map(|(s1, s2)| (s1, s2.to_string()))
+                            .map(|(s1, s2)| AnswerDiff {
+                                sh: s1,
+                                md: s2.to_string(),
+                            })
                             .collect(),
                     );
                 }
@@ -138,7 +144,10 @@ impl markdown::Question<'_> {
                     return Comparison::AnswersDiffer(
                         mismatched
                             .into_iter()
-                            .map(|(s1, s2)| (s1, s2.to_string()))
+                            .map(|(s1, s2)| AnswerDiff {
+                                sh: s1,
+                                md: s2.to_string(),
+                            })
                             .collect(),
                     );
                 }
@@ -154,7 +163,10 @@ impl markdown::Question<'_> {
                     return Comparison::MatrixAnswersDiffer(
                         mismatched_rows
                             .into_iter()
-                            .map(|(s1, s2)| (s1, s2.to_string()))
+                            .map(|(s1, s2)| AnswerDiff {
+                                sh: s1,
+                                md: s2.to_string(),
+                            })
                             .collect(),
                     );
                 }
@@ -163,17 +175,20 @@ impl markdown::Question<'_> {
                     return Comparison::MatrixAnswersDiffer(
                         mismatched_columns
                             .into_iter()
-                            .map(|(s1, s2)| (s1, s2.to_string()))
+                            .map(|(s1, s2)| AnswerDiff {
+                                sh: s1,
+                                md: s2.to_string(),
+                            })
                             .collect(),
                     );
                 }
             }
             _ => {
-                return Comparison::QuestionTypesDiffer(
-                    self.text.to_owned(),
-                    self.into(),
-                    other.into(),
-                );
+                return Comparison::QuestionTypesDiffer {
+                    question: self.text.to_owned(),
+                    md: self.into(),
+                    sh: other.into(),
+                };
             }
         }
 
@@ -183,11 +198,25 @@ impl markdown::Question<'_> {
 
 #[allow(dead_code)]
 #[derive(Debug)]
+struct AnswerDiff {
+    md: String,
+    sh: String,
+}
+
+#[allow(dead_code)]
+#[derive(Debug)]
 enum Comparison {
-    TitlesDiffer(String, String),
-    QuestionTypesDiffer(String, QuestionType, QuestionType),
-    AnswersDiffer(Vec<(String, String)>),
-    MatrixAnswersDiffer(Vec<(String, String)>),
+    TitlesDiffer {
+        md: String,
+        sh: String,
+    },
+    QuestionTypesDiffer {
+        question: String,
+        md: QuestionType,
+        sh: QuestionType,
+    },
+    AnswersDiffer(Vec<AnswerDiff>),
+    MatrixAnswersDiffer(Vec<AnswerDiff>),
     Equal,
 }
 
