@@ -312,7 +312,7 @@ Rows:
 - 任意方法接受类型 (Arbitrary Self Types)
 - 枚举成员类型 (Enum Variant Types)
 - 分配器特质、更优的内存溢出处理 (Allocator trait and better OOM handling)
-- 稳定应用程序二进制接口 
+- 稳定应用程序二进制接口
 - 可移植SIMD（单指令、多数据流）
 
 Columns:
@@ -439,7 +439,7 @@ Type: matrix
 
 Rows:
 
--  Rust 官方社区论坛或聊天室（users.rust-lang.org、internals.rust-lang.org、官方 Rust Discord 或 Rust Zulip ）
+- Rust 官方社区论坛或聊天室（users.rust-lang.org、internals.rust-lang.org、官方 Rust Discord 或 Rust Zulip)
 - Rust 非官方社区论坛或聊天室（如reddit.com/r/rust、Hacker News 或 Rust Community Discord 等等)
 - 专注于 Rust 软件开发特定领域（例如游戏开发、音频等）的社区
 - Rust 会议
