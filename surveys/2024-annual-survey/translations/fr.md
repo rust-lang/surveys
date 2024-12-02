@@ -58,14 +58,14 @@ Type: select one
 
 - Je ne peux pas écrire de code Rust
 - Je peux écrire des programmes simples en Rust
-- Je peux écrire du code utile, prêt à être mis en production, mais c’est compliqué.
+- Je peux écrire du code utile, prêt à être mis en production, mais c’est compliqué
 - Je suis productif en codant en Rust
 
 ### Quand avez-vous appris à programmer en Rust ?
 
 Type: select one
 
-- J’essaie toujours activement d’apprendre Rust.
+- J’essaie toujours activement d’apprendre Rust
 - Courant 2024
 - Courant 2022 ou 2023
 - Courant 2020 ou 2021
@@ -270,8 +270,8 @@ Rows:
 
 - Je peux mettre à niveau la version *stable* du compilateur sans craindre que mon code ne se compile pas
 - Je peux mettre à jour la version *nightly* du compilateur sans craindre que mon code ne se compile pas
-- La mise à niveau vers une nouvelle version *stable* du compilateur ne nécessite aucune modification ou des modifications extrêmement minimes et faciles à apporter à mon code.
-- La mise à niveau vers une nouvelle version du compilateur *nightly* ne nécessite aucune modification ou des modifications extrêmement minimes et faciles à apporter à mon code.
+- La mise à niveau vers une nouvelle version *stable* du compilateur ne nécessite aucune modification ou des modifications extrêmement minimes et faciles à apporter à mon code
+- La mise à niveau vers une nouvelle version du compilateur *nightly* ne nécessite aucune modification ou des modifications extrêmement minimes et faciles à apporter à mon code
 
 Columns:
 
@@ -421,10 +421,10 @@ Rows:
 - Participer aux conversations relatives à Rust sur les médias sociaux ou les sites web (Hacker News, r/rust, Twitter, LinkedIn, etc.)
 - Assister à une rencontre ou une conférence Rust (virtuelle ou en personne)
 - Rédiger, commenter, contribuer à la discussion ou fournir des modifications à une demande de commentaire (RFC) ouverte
-- Discuter du projet Rust dans un chat officiel (Zulip ou Discord).
-- Ouvrir un ticket sur n’importe quel dépôt de l'organisation GitHub rust-lang.
-- Contribuer aux modifications du code (y compris les tests) concernant n’importe quel projet de l'organisation GitHub rust-lang.
-- Contribuer à des modifications non liées au code (documentation, commentaires, etc.) à n'importe quel projet de l'organisation GitHub rust-lang.
+- Discuter du projet Rust dans un chat officiel (Zulip ou Discord)
+- Ouvrir un ticket sur n’importe quel dépôt de l’organisation GitHub rust-lang
+- Contribuer aux modifications du code (y compris les tests) concernant n’importe quel projet de l’organisation GitHub rust-lang
+- Contribuer à des modifications non liées au code (documentation, commentaires, etc.) à n’importe quel projet de l’organisation GitHub rust-lang
 
 Columns:
 
@@ -579,7 +579,7 @@ Type: matrix
 
 Rows:
 
-- Il est facile pour les jeunes candidats de trouver des emplois utilisant Rust pour la majeure partie de la programmation.
+- Il est facile pour les jeunes candidats de trouver des emplois utilisant Rust pour la majeure partie de la programmation
 - Il est facile pour les programmeurs seniors de trouver des emplois qui utilisent Rust pour la majorité de la programmation
 - Les emplois existants en Rust sont attrayants
 
@@ -867,7 +867,7 @@ Type: select one
 - Érythrée
 - État plurinational de Bolivie
 - États fédérés de Micronésie
-- États-Unis d'Amérique
+- États-Unis d’Amérique
 - Île Maurice
 - Îles Marshall
 - Îles Salomon
@@ -880,11 +880,11 @@ Type: free form
 
 Type: select all that apply
 
-- Je me sens à l’aise et capable de tenir une conversation technique orale en anglais.
-- Je me sens à l’aise et capable de tenir une conversation technique écrite en anglais.
-- Je me sens à l’aise et capable de lire de la documentation technique en anglais.
-- Je me sens à l’aise et capable de suivre un exposé technique (par exemple, lors d’une conférence ou d’une réunion) en anglais.
-- Je me sens à l’aise et capable de consommer du matériel éducatif technique écrit (par exemple, des livres techniques, des articles de blog, etc.) en anglais.
+- Je me sens à l’aise et capable de tenir une conversation technique orale en anglais
+- Je me sens à l’aise et capable de tenir une conversation technique écrite en anglais
+- Je me sens à l’aise et capable de lire de la documentation technique en anglais
+- Je me sens à l’aise et capable de suivre un exposé technique (par exemple, lors d’une conférence ou d’une réunion) en anglais
+- Je me sens à l’aise et capable de consommer du matériel éducatif technique écrit (par exemple, des livres techniques, des articles de blog, etc.) en anglais
 
 ### Quelle(s) langue(s) préférez-vous pour la communication technique ?
 
