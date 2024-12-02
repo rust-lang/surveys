@@ -4,10 +4,10 @@ version = "0.1.0"
 edition = "2018"
 
 [dependencies]
-anyhow = "1.0.89"
-reqwest = { version = "0.11.5", features = ["blocking", "json"] }
-serde = { version = "1.0", features = ["derive"] }
-structopt = "0.3"
+anyhow = "1"
+clap = { version = "4.5", features = ["derive"] }
+env_logger = "0.11"
 log = "0.4"
-env_logger = "0.9"
-regex = "1.11.0"
+regex = "1.11"
+reqwest = { version = "0.12", features = ["blocking", "json", "rustls-tls-webpki-roots"], default-features = false }
+serde = { version = "1", features = ["derive"] }
