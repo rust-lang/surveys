@@ -261,6 +261,8 @@ pub fn normalize_surveyhero_text(text: &str) -> String {
         .replace("&lt;", "<")
         .replace("&gt;", ">")
         .replace("<br>", "")
+        .replace("\u{202f}", " ")
+        .replace("&#39;", "’")
         .replace(" ", " ");
 
     // Replace <a href="$link" ...>$text</a> with [$text]($link)
