@@ -33,7 +33,7 @@ fn main() -> anyhow::Result<()> {
     match args.cmd {
         VerifierCmd::Check { .. } => {
             for (path, questions) in pairs {
-                println!("-----\nChecking {}\n-----\n", path.display());
+                println!("-----\nChecking {}\n", path.display());
 
                 let markdown = match std::fs::read_to_string(&path) {
                     Ok(markdown) => markdown,
@@ -50,6 +50,19 @@ fn main() -> anyhow::Result<()> {
                 let markdown_questions = markdown::parse(&markdown)
                     .with_context(|| format!("Cannot parse {} as Markdown", path.display()))?;
                 check_questions(&markdown_questions, &questions);
+            }
+        }
+        VerifierCmd::Download { .. } => {
+            for (path, questions) in pairs {
+                // Do not overwrite the English version, as it contains special metadata and
+                // comments
+                if path
+                    .file_name()
+                    .map(|p| p != "questions.md")
+                    .unwrap_or(true)
+                {
+                    render_questions(&questions, &path)?;
+                }
             }
         }
     }
@@ -234,10 +247,12 @@ fn fetch_surveyhero_data(args: &SharedArgs) -> anyhow::Result<SurveyData> {
         })?;
     let languages = client.fetch_secondary_languages(survey.survey_id)?;
 
+    log::debug!("Downloading English version");
     let main = client.fetch_questions(survey.survey_id, None)?;
     let secondary_languages = languages
         .into_iter()
         .map(|l| {
+            log::debug!("Downloading {} version", l.code);
             let questions = client.fetch_questions(survey.survey_id, Some(l.code.clone()))?;
             let language = l.code.clone();
             Ok::<_, anyhow::Error>((language, questions))
@@ -286,12 +301,18 @@ enum VerifierCmd {
         #[clap(flatten)]
         shared: SharedArgs,
     },
+    /// Create or overwrite local Markdown files with the contents on SurveyHero.
+    Download {
+        #[clap(flatten)]
+        shared: SharedArgs,
+    },
 }
 
 impl VerifierCmd {
     fn shared(&self) -> &SharedArgs {
         match self {
             VerifierCmd::Check { shared } => shared,
+            VerifierCmd::Download { shared } => shared,
         }
     }
 }
