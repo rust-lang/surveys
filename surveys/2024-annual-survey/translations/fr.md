@@ -20,7 +20,7 @@ Type: select all that apply
 - Je prévois de l’utiliser dans le futur, lorsqu’une opportunité se présentera
 - Autre
 
-### Veuillez nous en dire plus:
+### Veuillez nous en dire plus :
 
 Type: free form
 
