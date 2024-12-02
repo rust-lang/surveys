@@ -3,19 +3,9 @@
 This tool is used to verify that surveys in this repo match the surveys on our survey hosting platform to prevent drift between the two.
 
 ## Usage
+Run `cargo run -- --help` to see the available subcommands.
 
-```
-USAGE:
-    verifier --password <password> --survey-name <survey-name> --username <username>
+- You can use `cargo run -- check` to test if the SurveyHero contents match the local Markdown files.
+- You can use `cargo run -- download` to create local Markdown files from the SurveyHero contents.
 
-FLAGS:
-    -h, --help       Prints help information
-    -V, --version    Prints version information
-
-OPTIONS:
-    -p, --password <password>          
-    -s, --survey-name <survey-name>    
-    -u, --username <username>  
-```
-
-The username and password are the names provided by the SurveyHero [developer API console](https://www.surveyhero.com/user/account/api) after creating an API key.
+The username and password flags are the names provided by the SurveyHero [developer API console](https://www.surveyhero.com/user/account/api) after creating an API key.

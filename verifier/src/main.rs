@@ -1,9 +1,9 @@
 use crate::api::Question;
 use crate::render::render_questions;
 use anyhow::Context;
+use clap::Parser;
 use std::io::ErrorKind;
 use std::path::PathBuf;
-use structopt::StructOpt;
 
 mod api;
 mod markdown;
@@ -11,10 +11,14 @@ mod render;
 
 fn main() -> anyhow::Result<()> {
     env_logger::init();
-    let args = Args::from_args();
-    let online_data = fetch_surveyhero_data(args)?;
 
-    let base_path = PathBuf::from("../surveys/2024-annual-survey");
+    let args = Args::parse();
+    let online_data = fetch_surveyhero_data(args.cmd.shared())?;
+
+    let base_path = PathBuf::from(format!(
+        "../surveys/{}-annual-survey",
+        args.cmd.shared().year
+    ));
     let mut pairs = vec![(base_path.join("questions.md"), online_data.main)];
     for (language, questions) in online_data.secondary_languages {
         pairs.push((
@@ -26,24 +30,28 @@ fn main() -> anyhow::Result<()> {
         ));
     }
 
-    for (path, questions) in pairs {
-        println!("-----\nChecking {}\n-----\n", path.display());
+    match args.cmd {
+        VerifierCmd::Check { .. } => {
+            for (path, questions) in pairs {
+                println!("-----\nChecking {}\n-----\n", path.display());
 
-        let markdown = match std::fs::read_to_string(&path) {
-            Ok(markdown) => markdown,
-            Err(error) if error.kind() == ErrorKind::NotFound => {
-                eprintln!(
-                    "{} not found, creating it with data from SurveyHero",
-                    path.display()
-                );
-                render_questions(&questions, &path)?;
-                std::fs::read_to_string(&path)?
+                let markdown = match std::fs::read_to_string(&path) {
+                    Ok(markdown) => markdown,
+                    Err(error) if error.kind() == ErrorKind::NotFound => {
+                        eprintln!(
+                            "{} not found, creating it with data from SurveyHero",
+                            path.display()
+                        );
+                        render_questions(&questions, &path)?;
+                        std::fs::read_to_string(&path)?
+                    }
+                    Err(e) => return Err(e.into()),
+                };
+                let markdown_questions = markdown::parse(&markdown)
+                    .with_context(|| format!("Cannot parse {} as Markdown", path.display()))?;
+                check_questions(&markdown_questions, &questions);
             }
-            Err(e) => return Err(e.into()),
-        };
-        let markdown_questions = markdown::parse(&markdown)
-            .with_context(|| format!("Cannot parse {} as Markdown", path.display()))?;
-        check_questions(&markdown_questions, &questions);
+        }
     }
 
     Ok(())
@@ -205,13 +213,13 @@ impl From<&markdown::Question<'_>> for QuestionType {
     }
 }
 
-fn fetch_surveyhero_data(args: Args) -> anyhow::Result<SurveyData> {
-    let mut client = api::Client::new(args.username, args.password);
+fn fetch_surveyhero_data(args: &SharedArgs) -> anyhow::Result<SurveyData> {
+    let mut client = api::Client::new(args.username.clone(), args.password.clone());
     let surveys = client.fetch_surveys()?;
-    let survey_name = args.survey_name;
+    let survey_name = &args.survey_name;
     let survey = surveys
         .iter()
-        .find(|s| s.title == survey_name)
+        .find(|s| s.title.as_str() == survey_name)
         .ok_or_else(|| {
             anyhow::anyhow!(
                 "no survey with the name '{}' in the account. Available surveys: {}",
@@ -248,12 +256,42 @@ struct SurveyData {
     secondary_languages: Vec<(String, Vec<Question>)>,
 }
 
-#[derive(structopt::StructOpt)]
+/// Verify the contents of the Annual Rust Survey on SurveyHero.
+#[derive(clap::Parser)]
 struct Args {
-    #[structopt(short, long)]
+    #[clap(subcommand)]
+    cmd: VerifierCmd,
+}
+
+#[derive(clap::Parser, Clone)]
+struct SharedArgs {
+    /// SurveyHero API key username.
+    #[clap(long)]
     username: String,
-    #[structopt(short, long)]
+    /// SurveyHero API key token.
+    #[clap(long)]
     password: String,
-    #[structopt(short, long)]
+    /// Name of the survey.
+    #[clap(long)]
     survey_name: String,
+    /// Year of the survey. Corresponds to `surveys/<year>-annual-survey` directory.
+    #[clap(long)]
+    year: u32,
+}
+
+#[derive(clap::Parser, Clone)]
+enum VerifierCmd {
+    /// Check that whatever the contents on SurveyHero match the local Markdown files.
+    Check {
+        #[clap(flatten)]
+        shared: SharedArgs,
+    },
+}
+
+impl VerifierCmd {
+    fn shared(&self) -> &SharedArgs {
+        match self {
+            VerifierCmd::Check { shared } => shared,
+        }
+    }
 }
