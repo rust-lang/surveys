@@ -369,7 +369,7 @@ Features:
 - [Trait aliases](https://github.com/rust-lang/rfcs/blob/master/text/1733-trait-alias.md)
 - [Type Alias Impl Trait (TAIT)](https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html)
 - [Associated type defaults](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)
-- Generic const expressions
+- [Generic const expressions](https://github.com/rust-lang/rust/issues/76560)
 - [Const trait methods](https://github.com/rust-lang/rust/issues/67792)
 - Compile time reflection
 - Variadic generics
