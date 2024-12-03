@@ -1,6 +1,6 @@
 # Survey questions
 
-Whether or not you use Rust Programming Language <https://rust-lang.org> today, we want to hear from you!
+Whether or not you use the Rust Programming Language <https://rust-lang.org> today, we want to hear from you!
 
 The Rust Community Team has created this survey to help us gauge how we're doing, what can be improved, and how we can best engage with all of you as we move forward.
 
