@@ -35,7 +35,7 @@ Type: select all that apply
 - Rust ist zu schwer zu lernen, oder Rust zu lernen würde zu viel Zeit brauchen
 - Community war unhöflich, abweisend, oder auf andere Art unsympathisch
 - Ich benutze lieber eine andere Programmiersprache
-- Ich kann Rust aufgrund externe Umstände nicht nutzen
+- Ich kann Rust aufgrund externer Umstände nicht nutzen
 - Ich hatte noch keine Zeit, Rust zu nutzen
 - Anderer Grund
 
@@ -66,18 +66,18 @@ Type: select one
 Type: select one
 
 - Ich versuche immer noch *aktiv*, Rust zu lernen
-- Im Jahr 2023
-- Im Jahr 2021 oder 2022
-- Im Jahr 2019 oder 2020
-- Im Jahr 2017 oder 2018
-- Im Jahr 2016 oder früher
+- Im Jahr 2024
+- Im Jahr 2022 oder 2023
+- Im Jahr 2020 oder 2021
+- Im Jahr 2018 oder 2019
+- Im Jahr 2017 oder früher
 
 ### Wenn Sie Lernmaterial über Rust konsumiert haben, welche Art von Material haben Sie konsumiert?
 
 Type: select all that apply
 
 - Bücher („The Rust Programming Language“, „Rust for Rustaceans“ usw.)
-- Online-Übungen (Rustlings, Rust by Example, usw.
+- Online-Übungen (Rustlings, Rust by Example, usw.)
 - Videos oder Livestreams
 - Blogs
 - Dokumentation
@@ -117,7 +117,7 @@ Type: select all that apply
 - iOS
 - Android
 - Embedded Systeme (mit Betriebssystem)
-- Embedded Systeme (bare metal)
+- Embedded Systeme (ohne Betriebssystem)
 - WebAssembly (im Browser)
 - WebAssembly (für andere Zielsysteme)
 - Explizit plattformunabhängig (z.B. ein Crate, das nicht mit dem Betriebssystem interagiert)
@@ -145,8 +145,8 @@ Type: select all that apply
 
 - Die derzeitige stabile Version
 - Die vorige stabile Version
-- Eine spezifische stabile Rust-Version gleich oder neuer als 1.67
-- Eine spezifische stabile Rust-Version vor 1.67
+- Eine spezifische stabile Rust-Version gleich oder neuer als 1.75
+- Eine spezifische stabile Rust-Version vor 1.75
 - Die Beta Version
 - Aktuelle Nightly Version
 - Eine spezifische Nightly-Version
@@ -163,7 +163,7 @@ Type: select all that apply
 - Zur Nutzung eines oder mehrerer Sprachfeatures die ich brauche
 - Ich mag es, Zugriff auf die neuesten Features zu haben
 - Um zu helfen, die Nightly Version auf Bugs zu testen
-- Um Design-Feedback zu nächtlichen Funktionen zu geben
+- Um Design-Feedback zu Nightly Funktionen zu geben
 - Um in CI zu testen
 - Eine Crate die ich verwende benötigt Nightly
 - Ein Programm das ich verwende benötigt Nightly
@@ -269,9 +269,9 @@ Type: matrix
 Rows:
 
 - Ich kann die *stabile* Compilerversion aktualisieren, ohne befürchten zu müssen, dass mein Code nicht kompiliert werden kann
-- Ich kann die *nächtliche* Compilerversion aktualisieren, ohne befürchten zu müssen, dass mein Code nicht kompiliert werden kann
+- Ich kann die *Nightly* Compilerversion aktualisieren, ohne befürchten zu müssen, dass mein Code nicht kompiliert werden kann
 - Das Upgrade auf eine neue *stabile* Compilerversion erfordert entweder keine Änderungen oder nur äußerst kleine und einfache Änderungen an meinem Code
-- Das Upgrade auf eine neue *nächtliche* Compilerversion erfordert entweder keine Änderungen oder nur äußerst kleine und einfache Änderungen an meinem Code
+- Das Upgrade auf eine neue *Nightly* Compilerversion erfordert entweder keine Änderungen oder nur äußerst kleine und einfache Änderungen an meinem Code
 
 Columns:
 
@@ -289,7 +289,7 @@ Type: select one
 - Ich weiß es nicht oder es interessiert mich nicht
 - Andere Antwort...
 
-### Welche nicht implementierten oder (nur nächtlichen) Funktionen möchten Sie stabilisieren?
+### Welche nicht implementierten (oder nur Nightly) Funktionen möchten Sie stabilisiert sehen?
 
 Type: matrix
 
@@ -311,13 +311,13 @@ Rows:
 - Variadische Generics
 - Beliebige Self-Typen
 - Enum Varianten Typen
-- Allokator trait, bessere OOM-Verwaltung
+- Allokator Trait, bessere OOM-Verwaltung
 - Stabile ABI
 - Portables SIMD
 
 Columns:
 
-- Würde es mir erlauben, Rust zu nutzen
+- Würde eine Blockade bei meinem Anwendungsfall lösen
 - Würde meinen Code verbessern
 - Brauche ich nicht
 - Weiß nicht, was das ist
@@ -333,20 +333,20 @@ Type: matrix
 Rows:
 
 - Logik für Tupel variabler Länge implementieren
-- Quelltext über mehrere crates verteilen (Orphan Rule)
+- Quelltext über mehrere crates verteilen (z.B. Orphan Rule)
 - Iteratoren manuell implementieren
-- Nicht genug in konstanten funktionen tun können
+- Nicht genug in konstanten Funktionen tun können
 - Dynamische Bibliotheken/Plugins implementieren
 - Mit anderen Sprachen zusammenarbeiten (z.B. C oder C++)
 - Strukturierte Nebenläufigkeit mit Async Code erreichen
 - Async-Laufzeit-agnostischen Code schreiben
 - Korrekten unsafe Code schreiben
 - Der Borrow Checker lehnt meinen validen Code ab
-- Schlechte Performance zur Programmlaufzeit
+- Langsame Performance zur Programmlaufzeit
 - Langsame Kompilierung
 - Große Binärdateien der kompilierten Programme
-- Hoher Speicherplatzverbrauch (der Dateien im target-Verzeichnis)
-- Kompilierfehler (z.B. intener Kompilerfehler, auch genannt ICE, oder Fehlkompilationen)
+- Hoher Speicherplatzverbrauch (z.B. der Dateien im target-Verzeichnis)
+- Kompilierfehler (z.B. interner Kompilerfehler, auch genannt ICE, oder Fehlkompilationen)
 - Unklare oder undurchsichtige Fehlermeldungen des Kompilers
 - Unterdurchschnittliche IDE-Unterstützung (z.B. fehlende Fehlermeldungen oder langsame Analyse)
 - Unterdurchschnittliche Debugging-Erfahrung (z.B. fehlende Visualisierungen oder async Stacktraces)
@@ -362,7 +362,7 @@ Columns:
 
 Type: free form
 
-### Welches in den letzten 12 Monaten stabilisierte Feature nutzen Sie am Meisten?
+### Welches in den letzten 12 Monaten stabilisierte Feature nutzen Sie am meisten?
 
 Type: matrix
 
@@ -372,7 +372,7 @@ Rows:
 - impl Trait in Return Position in Traits (1.75)
 - C-String-Ausdrücke (1.77)
 - Rekursion in Async Funktionen (1.77)
-- offset_of! Makro (1.77)(
+- offset_of! Makro (1.77)
 - #[diagnostic] Attribut (1.78)
 - Inline const Ausdrücke (1.79)
 - Typ-Grenzen in assoziierten Typen (1.79)
@@ -380,8 +380,8 @@ Rows:
 - Exklusive Ranges in Patterns (1.80)
 - Error Trait in libcore (1.81)
 - #[expect(lint)] und Lint-Gründe (1.81)
-- Präzise Capturing syntax (1.82)
-- &raw Zeiger
+- Präzise Capturing Syntax (1.82)
+- &raw Zeiger (1.82)
 
 Columns:
 
@@ -391,14 +391,14 @@ Columns:
 - Ich wusste nicht, dass dies stabilisiert wurde
 - Ich weiß nicht, was das ist
 
-### Wie kompilieren Sie Ihre Rust Projekte?
+### Wie bauen Sie Ihre Rust Projekte?
 
 Type: select all that apply
 
 - Ich benutze Cargo
 - Ich verwende ein anderes Build-System
 - Ich kombiniere Cargo und ein anderes Build-System
-- Wenn Sie Cargo mit anderen Build-Systemen verwenden (oder einfach nur verwenden), welche verwenden Sie?
+- Wenn Sie Cargo mit anderen Build-Systemen verwenden (oder nur andere verwenden), welche verwenden Sie?
 
 ### Woher beziehen Sie crates, von denen Ihre Rust-Projekte abhängen?
 
@@ -417,11 +417,11 @@ Rows:
 
 - Informationsmaterial über Rust erstellen (z.B. einen Blog schreiben, streamen, YouTube Videos produzieren, auf einer Konferenz präsentieren, …)
 - Informationsmaterial über Rust konsumieren (z.B. eine Artikel lesen, Streams oder Videos schauen, …)
-- Offizielle Kommunikationskanälen lesen (z.B. This Week in Rust, den offizielle Rust Blog, den Twitteraccount von Rust, …)
+- Offizielle Kommunikationskanälen lesen (z.B. This Week in Rust, den offiziellen Rust Blog, den Twitteraccount von Rust, …)
 - An Unterhaltungen auf Social Media über Rust teilnehmen (z.B. auf Hacker News, r/rust, Twitter, LinkedIn, …)
 - Ein Rust Meetup oder eine Konferenz (virtuell oder vor Ort) besuchen
 - Einen RFC schreiben, kommentieren, zu der Diskussion betragen, oder Änderungen an dem RFC vorschlagen
-- Das Rust-Projekt in einem offiziellen Chat besprechen (entweder Zulip oder Discord)
+- Das Rust-Projekt in einem offiziellen Chat oder Forum besprechen (z.B. internals.rust-lang.org, Rust Zulip, …)
 - Ein Issue in einem beliebigen Repository in der rust-lang GitHub-Organisation eröffnen
 - Code-Änderungen (einschließlich Tests) zu einem beliebigen Projekt in der rust-lang GitHub-Organisation beitragen
 - Nicht-Code-Änderungen (Dokumentation, Kommentare usw.) zu einem Projekt in der rust-lang GitHub-Organisation beitragen
@@ -440,8 +440,8 @@ Type: matrix
 Rows:
 
 - *Offizielle* Rust-Community-Foren oder -Chats (users.rust-lang.org, internals.rust-lang.org, der offizielle Rust Discord oder der Rust Zulip)
-- *Inoffizielle* Rust-Community-Foren oder -Chats (z. B. reddit.com/r/rust, Hacker News, der Rust-Community-Discord usw.)
-- Auf einen bestimmten Bereich spezialisierte Community (z. B. Spieleentwicklung, Audio, usw.)
+- *Inoffizielle* Rust-Community-Foren oder -Chats (z.B. reddit.com/r/rust, Hacker News, der Rust-Community-Discord usw.)
+- Auf einen bestimmten Bereich spezialisierte Community (z.B. Spieleentwicklung, Audio, usw.)
 - An einer Rust-Konferenz teilnehmen
 - An einem Rust-Treffen oder einer lokalen Community-Veranstaltung teilnehmen
 - Diskussionen (Issues, Pull-Requests usw.) in einem Repository *innerhalb* der rust-lang GitHub-Organisation
@@ -546,7 +546,7 @@ Type: select all that apply
 - Programmiersprachen und zugehörige Programme (einschließlich Compiler, IDEs, Standardbibliotheken usw.)
 - Robotik
 - Wissenschaftliches und/oder numerisches Rechnen
-- Serverseitige oder &quot;Backend&quot;-Anwendung
+- Serverseitige oder "Backend"-Anwendung
 - Simulation
 - Webanwendungs-Frontend
 - WebAssembly
@@ -570,7 +570,7 @@ Type: select one
 
 - Ja
 - Nein (es ist geplant, andere Entwickler einzustellen)
-- Nein (es ist nicht geplant, Entwickler einzustellen)
+- Nein (es ist nicht geplant, generell Entwickler einzustellen)
 - Ich weiß es nicht
 
 ### Stimmen Sie den folgenden Aussagen zum Arbeitsmarkt für Rust zu?
@@ -613,8 +613,8 @@ Type: select all that apply
 - Instabilität der Sprache
 - Von einer Alternative abgelöst
 - Wird zu komplex
-- Hilfsprogramme und Dokumentation sind nicht ausreichend zugänglich (z. B. aufgrund von Sprache oder Inkompatibilität mit Bildschirmleseprogrammen)
-- Die Rust Foundation unterstützt das Rust-Projekt nicht ordnungsgemäß (z. B. in finanzieller, infrastruktureller oder rechtlicher Hinsicht)
+- Hilfsprogramme und Dokumentation sind nicht ausreichend zugänglich (z.B. aufgrund von Sprache oder Inkompatibilität mit Bildschirmleseprogrammen)
+- Die Rust Foundation unterstützt das Rust-Projekt nicht ordnungsgemäß (z.B. in finanzieller, infrastruktureller oder rechtlicher Hinsicht)
 - Die Projektplaner passen sich nicht der Größe/den Anforderungen der Community an
 - Entwickler/Betreuer der Sprache werden nicht richtig unterstützt
 - Ich mache mir keine Sorgen
@@ -667,7 +667,7 @@ Type: select one
 - < 3 Jahre
 - < 5 Jahre
 - < 10 Jahre
-- > 10 Jahre
+- \> 10 Jahre
 
 ### Wo wohnen Sie?
 
@@ -883,10 +883,10 @@ Type: select all that apply
 - Ich fühle mich wohl und in der Lage, ein gesprochenes technisches Gespräch auf Englisch zu führen
 - Ich fühle mich wohl und in der Lage, ein schriftliches Fachgespräch auf Englisch zu führen
 - Ich fühle mich wohl und in der Lage, technische Dokumentationen auf Englisch zu lesen
-- Ich fühle mich wohl und in der Lage, einen technischen Vortrag (z. B. bei einer Konferenz oder einem Treffen) auf Englisch zu hören
-- Ich fühle mich wohl und in der Lage, schriftliches technisches Lehrmaterial (z. B. Fachbücher, Blog-Posts usw.) auf Englisch zu lesen
+- Ich fühle mich wohl und in der Lage, einen technischen Vortrag (z.B. bei einer Konferenz oder einem Treffen) auf Englisch zu hören
+- Ich fühle mich wohl und in der Lage, schriftliches technisches Lehrmaterial (z.B. Fachbücher, Blog-Posts usw.) auf Englisch zu lesen
 
-### Welche Sprache(n) bevorzugten Sie, um technische Inhalte zu konsumieren (z.B. Blogs, Dokumentation, usw.)
+### Welche Sprache(n) bevorzugen Sie, um technische Inhalte zu konsumieren (z.B. Blogs, Dokumentation, usw.)?
 
 Type: select all that apply
 
