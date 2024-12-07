@@ -332,25 +332,25 @@ Type: matrix
 
 Rows:
 
-- Implémentation de la logique pour des tuples de différentes tailles
-- Répartition du code entre les cagettes (crates) (par exemple, règle de l’orphelin)
-- Devoir implémenter le trait Iterator manuellement
-- Ne pas pouvoir en faire assez dans les const fn
-- Implémentation de plugins de bibliothèque dynamique
+- Implémenter la logique pour des tuples de différentes tailles
+- Répartir le code entre les cagettes (crates) (par exemple, règle de l’orphelin)
+- Devoir implémenter manuellement le trait Iterator
+- Ne pas pouvoir faire assez dans une const fn
+- Implémenter des plugins de bibliothèque dynamique
 - Interopérabilité avec d’autres langages (par exemple C ou C++)
 - Obtenir une concurrence structurée avec du code asynchrone
-- Écriture de code asynchrone indépendant de l’exécuteur
-- Écrire le code unsafe correctement
-- Le vérificateur d’emprunt n’autorise pas de code valide
+- Écrire du code asynchrone indépendant de l’exécuteur
+- Écrire du code unsafe correct
+- Code valide rejeté par le vérificateur d’emprunt
 - Performances d’exécution lentes
 - Compilation lente
-- Grande taille binaire des artefacts compilés
-- Utilisation de l’espace disque (par exemple, la taille du dossier target)
-- Bogues dans le compilateur (c’est-à-dire, les ICE, ou erreurs internes du compilateur, les mauvaises compilations, etc.)
-- Rencontre avec des messages d’erreur de compilateur opaques/peu clairs
-- Prise en charge IDE inférieure à la moyenne (par exemple, certaines erreurs ne sont pas affichées ou l’analyse est lente)
-- Expérience de débogage inférieure à la moyenne (par exemple, visualisations de valeurs manquantes ou traces de pile asynchrones)
-- Manque de documentation sur le langage Rust ou la bibliothèque standard
+- Grande taille des artéfacts binaires compilés
+- Utilisation de l’espace disque (par exemple la taille du dossier target)
+- Bogues dans le compilateur (ICE, erreur interne du compilateur, mauvaise compilation, etc.)
+- Messages d’erreur du compilateur opaques ou peu clairs
+- Prise en charge par l'IDE inférieure à la moyenne (par exemple erreurs non affichées, ou analyse lente)
+- Expérience de débogage inférieure à la moyenne (par exemple visualisations de valeurs manquantes, ou traces de pile asynchrones)
+- Manque de documentation sur le langage Rust ou dans la bibliothèque standard
 
 Columns:
 
