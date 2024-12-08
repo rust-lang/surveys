@@ -76,7 +76,7 @@ Type: select one
 
 Type: select all that apply
 
-- 書籍（例如《The Rust 編程語言》、《Rust for Rustaceans》等）
+- 書籍（例如《The Rust Programming Language》、《Rust for Rustaceans》等）
 - 線上練習教學（例如 Rustlings、Rust by Examples 等）
 - 影片或直播
 - 部落格
@@ -85,14 +85,14 @@ Type: select all that apply
 - 線上課程、網路研討會
 - 個人教學
 - 大學教學資料
-- 其他（請注明）
+- 其他（請註明）
 
 ### 您在今年或去年是否參加過（或仍在參加）使用或教授 Rust 的課程或培訓？
 
 Type: select one
 
-- 是，通過大學、學校或其他教育機構
-- 是，通過我的雇主、承包商或諮詢公司
+- 是，透過大學、學校或其他教育機構
+- 是，透過我的雇主、承包商或諮詢公司
 - 否
 
 ### 您經常使用哪些作業系統進行 Rust 開發?
@@ -163,8 +163,8 @@ Type: select all that apply
 - 為了我需要的特定語言功能
 - 我喜歡能用上所有最新功能
 - 幫助測試；檢測 Nightly 版本是否含有缺陷
-- 提供有關 Nightly 功能的設計反饋
-- 用於持續集成中測試
+- 提供有關 Nightly 功能的設計回饋
+- 用於 CI 中測試
 - 我使用的一個 crate 依賴需要 Nightly
 - 我使用的一個工具需要 Nightly
 - 為獲得更快的編譯時間
@@ -282,12 +282,12 @@ Columns:
 
 Type: select one
 
-- 我認為 Rust 已經過於覆雜，不應添加新的顯著功能或使更多僅 Nightly 可用的顯著功能穩定化
+- 我認為 Rust 已經過於複雜，不應添加新的顯著功能或使更多僅 Nightly 可用的顯著功能穩定化
 - 我認為 Rust 發展太快，我希望 Rust 能減慢發展速度
 - 我對 Rust 目前的發展速度感到滿意
 - 我認為 Rust 發展太慢，我希望 Rust 能更快地添加新的功能或更快地使僅 Nightly 可用的功能穩定化
 - 我不了解或不在意
-- 其他（請注明）
+- 其他（請註明）
 
 ### 您希望哪些目前處於未實現狀態（或僅 Nightly 可用）的功能進行穩定化？
 
@@ -297,14 +297,14 @@ Rows:
 
 - 特化 (Specialization)
 - 生成器/協程 (Generators/coroutines)
-- 異步閉包 (Async closures)
-- 異步生成器/協程 (Async generators/coroutines)
+- 非同步閉包 (Async closures)
+- 非同步生成器/協程 (Async generators/coroutines)
 - if/while let鏈 (If/while let chains)
 - try 表達式塊 (Try blocks)
 - 永無(never)類型 (Never type)
 - 特質別名 (Trait aliases)
 - 類型別名中的 impl Trait (Type Alias Impl Trait (TAIT) )
-- 默認關聯類型 (Associated type defaults)
+- 預設關聯類型 (Associated type defaults)
 - 泛型編譯時求值表達式 (Generic const expressions)
 - 編譯時可用的特質方法 (Const trait methods)
 - 編譯時反射機制 (Compile-time reflection)
@@ -326,7 +326,7 @@ Columns:
 
 Type: free form
 
-### 您認為以下列出的哪些 Rust 的方面對於您的編程效率造成了顯著的負面影響？
+### 您認為以下列出的哪些 Rust 的方面對於您的寫程式效率造成了顯著的負面影響？
 
 Type: matrix
 
@@ -338,8 +338,8 @@ Rows:
 - 編譯時函式 (const fn) 的限制 (Not being able to do enough in const fn)
 - 實現動態庫插件 （Implementing dynamic library plugins）
 - 和其他語言（例如C和C++）的交互、協作（Interoperating with other languages (e.g. C or C++) ）
-- 異步程式碼中的結構化並發 (Achieving structured concurrency with async code)
-- 編寫不限於特定異步執行引擎的異步程式碼 (Writing executor-agnostic async code)
+- 非同步程式碼中的結構化並發 (Achieving structured concurrency with async code)
+- 編寫不限於特定非同步執行引擎的非同步程式碼 (Writing executor-agnostic async code)
 - 編寫正確的不安全程式碼 (Writing correct unsafe code)
 - 借用檢查器的限制、不允許部分語義上正確的程式碼 (Borrow checker not allowing valid code)
 - 運行慢
@@ -349,7 +349,7 @@ Rows:
 - 編輯器自身錯誤（即內部錯誤Internal Compiler Errors或者程式碼生成錯誤）(Encountering compiler bugs (e.g. ICEs a.k.a. internal compiler errors or miscompilations))
 - 難懂的或者令人困惑的編譯錯誤訊息
 - IDE支持不到位（例如缺乏某些錯誤訊息的顯示、分析慢等）
-- 調試體驗支持不到位（例如缺乏數值可視化或者異步堆疊軌跡）
+- 調試體驗支持不到位（例如缺乏數值可視化或者非同步堆疊軌跡）
 - 語言或標準庫文件不充分
 
 Columns:
@@ -368,10 +368,10 @@ Type: matrix
 
 Rows:
 
-- 特質中的異步函數 (async fn in traits, 1.75)
+- 特質中的非同步函數 (async fn in traits, 1.75)
 - 特質中返回位置的impl Trait (Return position impl Trait in traits,1.75)
 - C字符串字面量 (C-string literals, 1.77)
-- 異步函數中的遞歸 (Recursion in async fn, 1.77)
+- 非同步函數中的遞歸 (Recursion in async fn, 1.77)
 - offset_of! 巨集 (offset_of! macro, 1.77)
 - #[diagnostic] 屬性 (#[diagnostic] attribute, 1.78)
 - 內聯編譯時運算表達式 (Inline const expressions, 1.79)
@@ -422,9 +422,9 @@ Rows:
 - 參加 Rust 聚會或會議（虛擬或面對面）
 - 撰寫、評論、參與討論或編輯公開的 RFC
 - 在官方聊天室（internals.rust-lang.org, rust-lang Zulip 或 Discord）中討論 Rust 專案
-- 在 rust-lang GitHub 組織中的任何倉庫報告問題
-- 為 rust-lang GitHub 組織里的任何專案貢獻程式碼變更（包括測試）
-- 為 rust-lang GitHub 組織里的任何專案貢獻非程式碼的變更（如文件、注釋等）
+- 在 rust-lang GitHub 組織中的任何專案報告問題
+- 為 rust-lang GitHub 組織裡的任何專案貢獻程式碼變更（包括測試）
+- 為 rust-lang GitHub 組織裡的任何專案貢獻非程式碼的變更（如文件、注釋等）
 
 Columns:
 
@@ -441,7 +441,7 @@ Rows:
 
 - Rust 官方社群論壇或聊天室（users.rust-lang.org、internals.rust-lang.org、官方 Rust Discord 或 Rust Zulip）
 - Rust 非官方社群論壇或聊天室（如reddit.com/r/rust、Hacker News 或 Rust Community Discord 等等）
-- 專注於 Rust 軟件開發特定領域（例如遊戲開發、音檔等）的社群
+- 專注於 Rust 軟件開發特定領域（例如遊戲開發、音訊等）的社群
 - Rust 會議
 - Rust 聚會或當地社群活動
 - 在 rust-lang GitHub 組織<strong>之內</strong>的倉庫中進行討論（問題、PR等）
@@ -510,8 +510,8 @@ Type: select all that apply
 - 我們需要精確控制軟體的運行行為
 - Rust 的安全性和可靠性對我們來說非常重要
 - Rust 允許我們構建相對正確和無缺陷的軟體
-- 我們發現使用 Rust 編程是令人愉快或有趣的
-- 我們已經知道 Rust，所以它是我們的默認選擇
+- 我們發現使用 Rust 寫程式是令人愉快或有趣的
+- 我們已經知道 Rust，所以它是我們的預設選擇
 - 我們認為用它進行原型實現很方便
 - 我們必須與現有的 Rust 程式碼進行交互
 
@@ -523,7 +523,7 @@ Type: free form
 
 Type: select all that apply
 
-- 音檔編程
+- 音訊程式設計
 - 機動車應用
 - 區塊鏈
 - 雲端計算應用
@@ -594,7 +594,7 @@ Columns:
 Type: select all that apply
 
 - Rust 比其他程式語言提供了真正的優勢
-- Rust 的編程比其他程式語言覆雜得多
+- Rust 的編寫比其他程式語言複雜得多
 - Rust 比其他程式語言需要花費更多的精力來學習
 - 與用其他程式語言編寫的等效程式碼相比，Rust 程式碼包含的錯誤要少得多
 - Rust 在生產中使用有風險
@@ -612,8 +612,8 @@ Type: select all that apply
 - Rust 的發展不夠快
 - 語言不穩定
 - 被替代品取代
-- 變得過於覆雜
-- 工具和文件未能提供足夠的無障礙支持（如自然語言的障礙或不兼容屏幕閱讀器）
+- 變得過於複雜
+- 工具和文件未能提供足夠的無障礙支援（如自然語言的障礙或不相容螢幕閱讀器）
 - Rust 基金會沒有適當支持 Rust 項目（例如在財務、基礎設施、法律方面）
 - 項目的治理無法與社區的大小、需求規模相匹配
 - 語言的開發者和維護者未能得到適當的支持
@@ -652,10 +652,10 @@ Type: select all that apply
 Type: select one
 
 - 不是
-- 是，目前是初中生/高中生
-- 是，目前是本科生
-- 是, 目前是碩士生
-- 是, 目前是博士生
+- 是，目前是國中生/高中生
+- 是，目前是大學生
+- 是，目前是碩士生
+- 是，目前是博士生
 - 是，在職業培訓中
 - 是，其他
 
