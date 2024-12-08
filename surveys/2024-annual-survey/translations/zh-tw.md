@@ -424,7 +424,7 @@ Rows:
 - 在官方聊天室（internals.rust-lang.org, rust-lang Zulip 或 Discord）中討論 Rust 專案
 - 在 rust-lang GitHub 組織中的任何專案報告問題
 - 為 rust-lang GitHub 組織裡的任何專案貢獻程式碼變更（包括測試）
-- 為 rust-lang GitHub 組織裡的任何專案貢獻非程式碼的變更（如文件、注釋等）
+- 為 rust-lang GitHub 組織裡的任何專案貢獻非程式碼的變更（如文件、註解等）
 
 Columns:
 
