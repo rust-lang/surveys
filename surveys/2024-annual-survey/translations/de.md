@@ -289,7 +289,7 @@ Type: select one
 - Ich weiß es nicht oder es interessiert mich nicht
 - Andere Antwort...
 
-### Welche nicht implementierten (oder nur Nightly) Funktionen möchten Sie stabilisiert sehen?
+### Welche nicht implementierten (oder nur Nightly) Funktionen wünschen Sie sich?
 
 Type: matrix
 
@@ -317,7 +317,7 @@ Rows:
 
 Columns:
 
-- Würde eine Blockade bei meinem Anwendungsfall lösen
+- Würde ein Hindernis bei meinem Anwendungsfall beseitigen
 - Würde meinen Code verbessern
 - Brauche ich nicht
 - Weiß nicht, was das ist
@@ -336,7 +336,7 @@ Rows:
 - Quelltext über mehrere crates verteilen (z.B. Orphan Rule)
 - Iteratoren manuell implementieren
 - Nicht genug in konstanten Funktionen tun können
-- Dynamische Bibliotheken/Plugins implementieren
+- Dynamische Bibliotheken Plugins implementieren
 - Mit anderen Sprachen zusammenarbeiten (z.B. C oder C++)
 - Strukturierte Nebenläufigkeit mit Async Code erreichen
 - Async-Laufzeit-agnostischen Code schreiben
@@ -641,7 +641,7 @@ Type: select all that apply
 - Nicht-binäres Geschlecht
 - Älter oder jünger als die durchschnittlichen Entwickler, die ich kenne
 - Politische Ansichten
-- Rasse oder ethnische Minderheit
+- Ethnische Herkunft
 - Religiöse Ansichten
 - Trans
 - Frau oder als Frau wahrgenommen
@@ -667,7 +667,7 @@ Type: select one
 - < 3 Jahre
 - < 5 Jahre
 - < 10 Jahre
-- \> 10 Jahre
+- > 10 Jahre
 
 ### Wo wohnen Sie?
 
