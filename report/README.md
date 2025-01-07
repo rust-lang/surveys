@@ -15,6 +15,8 @@ $ source venv/venv/bin/activate
 
 and then add this directory to the `PYTHONPATH` of your main Python script, and then use e.g. `from surveyhero.parser import parse_surveyhero_report`.
 
+The dependencies were tested with Python 3.8. 
+
 ## Useful functions
 First, you will probably want to export data from SurveyHero into two CSV files - one containing the aggregated data from
 the report, and a second one that contains the individual answers from all the respondents.
