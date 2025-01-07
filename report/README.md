@@ -3,7 +3,7 @@ This directory contains scripts that automate the generation of charts, reports 
 surveys created in SurveyHero.
 
 Note that these scripts are intended to be used as a library, so you will need to write your own script to leverage them.
-It is best to take a look at their usage from previous surveys, and start with that.
+It is best to take a look at their usage from previous surveys, and start with that. The scripts will change over time, they are only kept compatible with the latest version of the annual survey. If you need to re-render the reports from an older survey, you should use an older version of these scripts from the corresponding year.
 
 To use the scripts, you should install their dependencies first:
 ```bash
