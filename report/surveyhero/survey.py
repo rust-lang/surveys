@@ -25,7 +25,8 @@ class SimpleQuestion:
                     continue
                 answer = dataclasses.replace(answer, answer=updated)
             answers.append(answer)
-        assert len(diff) == 0
+        if len(diff) != 0:
+            raise Exception(f"Some diffs were not applied: {diff}\nAnswers: {self.answers}")
         return dataclasses.replace(self, answers=answers)
 
 
@@ -42,7 +43,7 @@ class MatrixQuestion:
                 group = diff.pop(group)
             answer_groups[group] = items
         if len(diff) > 0:
-            raise Exception(f"Rename answers diff not empty: {diff}")
+            raise Exception(f"Rename answers diff not empty: {diff}. Answers: {self.answer_groups}")
         return dataclasses.replace(self, answer_groups=answer_groups)
 
 
@@ -77,6 +78,8 @@ class Question:
         for (target, old_answers) in diff.items():
             count = 0
             for answer in old_answers:
+                if answer not in answers_orig:
+                    raise Exception(f"Answer {answer} not in {answers_orig}")
                 count += answers_orig[answer].count
                 answers_orig.pop(answer)
             assert count > 0

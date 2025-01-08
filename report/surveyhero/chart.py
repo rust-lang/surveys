@@ -35,7 +35,8 @@ def make_bar_chart(
         xaxis_tickangle=0,
         max_tick_width=30,
         legend_order: Optional[List[str]] = None,
-        layout_args: Optional[Dict[str, Any]] = None
+        layout_args: Optional[Dict[str, Any]] = None,
+        legend_params: Optional[Dict[str, Any]] = None,
 ) -> Figure:
     assert len(questions) > 0
     assert len(set(question.year for question in questions)) == len(questions)
@@ -117,6 +118,10 @@ def make_bar_chart(
         textangle=90 if bar_label_vertical else 0,
     )
 
+    legend = {}
+    if legend_params is not None:
+        legend.update(legend_params)
+
     layout_args = layout_args or {}
     fig.update_layout(
         meta="bar-chart",
@@ -144,6 +149,7 @@ def make_bar_chart(
             pad=10,
             b=10
         ),
+        legend=legend,
         dragmode="pan",
         **layout_args
     )
@@ -239,10 +245,12 @@ def make_matrix_chart(
         question: Question,
         categories: List[str],
         category_label: str,
-        height=600,
+        option_label: Optional[str] = None,
+        height: Optional[int] = None,
         horizontal: bool = False,
         max_label_width=20,
-        legend_params: Optional[Dict[str, Any]] = None
+        legend_params: Optional[Dict[str, Any]] = None,
+        textposition = "outside"
 ) -> Figure:
     """
     Create a matrix chart with different categories.
@@ -278,6 +286,12 @@ def make_matrix_chart(
     if not horizontal:
         keys = dict(y="Count", x="Category")
 
+    if height is None:
+        if horizontal:
+            height = 600
+        else:
+            height = 1000
+
     fig = px.bar(
         df,
         **keys,
@@ -287,12 +301,12 @@ def make_matrix_chart(
             Category=group_keys
         ),
         title=format_title(question),
-        height=1000 if not horizontal else height,
+        height=height,
         hover_data=[category_label]
     )
     fig.update_traces(
         orientation="h" if horizontal else "v",
-        textposition="outside",
+        textposition=textposition,
         hovertemplate=f"Category: %{{y}}<br />{category_label}: %{{customdata[0]}}<br />Percent: %{{text}}<extra></extra>",
     )
 
@@ -302,7 +316,18 @@ def make_matrix_chart(
 
     layout_args = {}
     if horizontal:
-        layout_args["xaxis_range"] = [0, 110]
+        if textposition != "inside":
+            layout_args["xaxis_range"] = [0, 110]
+        else:
+            layout_args["xaxis_range"] = [0, 100]
+        layout_args["xaxis_title"] = None
+        layout_args["xaxis_ticksuffix"] = "%"
+        layout_args["yaxis_ticksuffix"] = ""
+        layout_args["yaxis_title"] = option_label
+    else:
+        layout_args["yaxis_title"] = None
+        layout_args["xaxis_title"] = option_label
+        layout_args["yaxis_ticksuffix"] = "%"
 
     fig.update_layout(
         meta="matrix-chart",
@@ -312,13 +337,9 @@ def make_matrix_chart(
             font_family="Rockwell",
         ),
         # hovermode="y unified",
-        yaxis_title=None,
         yaxis_tickangle=0,
         # https://stackoverflow.com/a/52397461/1107768
-        yaxis_ticksuffix="   ",
         yaxis_fixedrange=True,
-        xaxis_title="Percent out of the category (%)",
-        xaxis_ticksuffix="%",
         xaxis_fixedrange=True,
         legend=legend,
         dragmode="pan",
