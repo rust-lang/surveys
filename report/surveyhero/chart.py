@@ -114,7 +114,7 @@ def make_bar_chart(
     fig.update_traces(
         textposition="outside",
         hovertemplate="Year: %{customdata[0]}<br />Count: %{customdata[1]}<br />Percent: %{text}<extra></extra>",
-        textangle=-90 if bar_label_vertical else 0,
+        textangle=90 if bar_label_vertical else 0,
     )
 
     layout_args = layout_args or {}
