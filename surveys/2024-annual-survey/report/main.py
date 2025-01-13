@@ -12,7 +12,7 @@ REPORT_SCRIPT_DIR = ROOT_DIR / "report"
 sys.path.insert(0, str(REPORT_SCRIPT_DIR))
 
 from surveyhero.parser import parse_surveyhero_report, parse_surveyhero_answers
-from surveyhero.render import render_report_to_pdf
+from surveyhero.render import render_blog_post, render_report_to_pdf
 from surveyhero.report import ChartReport
 from surveyhero.survey import Question, SurveyFullAnswers, SurveyReport, normalize_open_answers
 
@@ -65,6 +65,7 @@ def inspect_open_answers(answers: List[str]):
 
 
 def annual_survey_2024_report() -> ChartReport:
+    r_2022 = parse_surveyhero_report(Path(ROOT_DIR / "data/data-2022.csv"), year=2022)
     r_2023 = parse_surveyhero_report(Path(ROOT_DIR / "data/data-2023.csv"), year=2023)
     r_2024 = parse_surveyhero_report(Path(ROOT_DIR / "data/data-2024.csv"), year=2024)
     answers_2023 = parse_surveyhero_answers(Path(ROOT_DIR / "data/data-full-2023.csv"), year=2023)
@@ -86,8 +87,7 @@ def annual_survey_2024_report() -> ChartReport:
     }
     report.add_bar_chart("do-you-use-rust", r_2024.q(0).rename_answers(rename), r_2023.q(0).rename_answers(rename))
 
-    base = r_2023.q(1)
-    base = base.rename_answers({
+    base = r_2023.q(1).rename_answers({
         "I no longer have the opportunity to use Rust due to factors outside of my control":
             "I no longer have the opportunity to use Rust due to factors outside my control"
     })
@@ -97,16 +97,34 @@ def annual_survey_2024_report() -> ChartReport:
                          max_tick_width=50)
     report.add_wordcloud("why-did-you-stop-using-rust-wordcloud", answers_2024.answers[10] + answers_2024.answers[11])
 
-    report.add_bar_chart("why-dont-you-use-rust", r_2024.q(2), r_2023.q(2),
+    base = r_2023.q(2).rename_answers({
+        "I can't use Rust due to factors outside of my control":
+        "I can't use Rust due to factors outside my control"
+    })
+    report.add_bar_chart("why-dont-you-use-rust", r_2024.q(2), base,
                          bar_label_vertical=True,
                          xaxis_tickangle=45,
                          max_tick_width=40)
     report.add_wordcloud("why-dont-you-use-rust-wordcloud", answers_2024.answers[23])
 
-    report.add_bar_chart("how-often-do-you-use-rust", r_2024.q(3), r_2023.q(3))
-    report.add_bar_chart("how-would-you-rate-your-rust-expertise", r_2024.q(4), r_2023.q(5).rename_answers({
+    report.add_bar_chart("how-often-do-you-use-rust", r_2024.q(3), r_2023.q(3), r_2022.q(3),
+                         bar_label_vertical=True)
+
+    expertise_diff = {
         "I can write useful, production-ready code but it is a struggle": "I can write useful, production-ready code, but it is a struggle"
-    }), xaxis_tickangle=45, max_tick_width=40)
+    }
+    report.add_bar_chart(
+        "how-would-you-rate-your-rust-expertise",
+        r_2024.q(4),
+        r_2023.q(5).rename_answers(expertise_diff),
+        r_2022.q(4).rename_answers({
+            **expertise_diff,
+            "I can't read or write Rust": "I can't write Rust code"
+        }),
+        bar_label_vertical=True,
+        xaxis_tickangle=45,
+        max_tick_width=40
+    )
     report.add_pie_chart("when-did-you-learn-rust", r_2024.q(5))
 
     # Let's not use base, as the answers are too different
@@ -128,6 +146,10 @@ def annual_survey_2024_report() -> ChartReport:
     report.add_bar_chart("which-os-do-you-use",
                          r_2024.q(8).combine_answers(windows_diff),
                          r_2023.q(7).combine_answers(windows_diff),
+                         r_2022.q(6).rename_answers({
+                             "Mac OS": "macOS"
+                         }),
+                         bar_label_vertical=True,
                          max_tick_width=20)
     report.add_wordcloud("which-os-do-you-use-wordcloud", answers_2024.answers[45])
 
@@ -306,30 +328,60 @@ def annual_survey_2024_report() -> ChartReport:
     report.add_pie_chart("do-you-design-software", r_2024.q(24))
 
     report.add_bar_chart("do-you-personally-use-rust-at-work", r_2024.q(25), r_2023.q(26),
+                         r_2022.q(17),
                          max_tick_width=24)
-    report.add_bar_chart("how-is-rust-used-at-your-organization", r_2024.q(26), r_2023.q(27), xaxis_tickangle=45)
-    report.add_bar_chart("which-statements-apply-to-rust-at-work", r_2024.q(27), r_2023.q(28), xaxis_tickangle=45)
+    report.add_bar_chart(
+        "how-is-rust-used-at-your-organization",
+        r_2024.q(26),
+        r_2023.q(27),
+        r_2022.q(20).rename_answers({
+            "I am unsure whether my company has considered using or currently uses Rust": "I am unsure whether my organisation has considered using or currently uses Rust",
+            "I don't work for a company or my company does not develop software of any kind": "I don't work for a organisation or my organisation does not develop software of any kind",
+            "My company has experimented with Rust or is considering using it": "My organisation has experimented with Rust or is considering using it",
+            "My company has not seriously considered Rust for any use": "My organisation has not seriously considered Rust for any use",
+            "My company makes non-trivial use of Rust (e.g., used in production or in significant tooling)": "My organisation makes non-trivial use of Rust (e.g., used in production or in significant tooling)"
+        }),
+        xaxis_tickangle=45,
+        bar_label_vertical=True
+    )
+    report.add_bar_chart(
+        "which-statements-apply-to-rust-at-work",
+        r_2024.q(27),
+        r_2023.q(28),
+        r_2022.q(19),
+        xaxis_tickangle=45,
+        bar_label_vertical=True
+    )
 
-    report.add_bar_chart("why-you-use-rust-at-work", r_2024.q(28), r_2023.q(29),
-                         xaxis_tickangle=45,
-                         bar_label_vertical=True)
+    report.add_bar_chart(
+        "why-you-use-rust-at-work",
+        r_2024.q(28),
+        r_2023.q(29),
+        r_2022.q(18),
+        xaxis_tickangle=45,
+        bar_label_vertical=True
+    )
 
     base_open = normalize_open_answers(answers_2023.answers[213], replace_spaces=True)
+    technology_diff = {
+        "Programming languages and related tools (including compilers, IDEs, standard libraries, etc.)": "Programming languages and related tools"
+    }
     base = (
         r_2023.q(30)
         .rename_answers({
+            **technology_diff,
             "Computer Games": "Computer games",
             "Scientific and/or numeric computing": "Scientific and/or numerical computing",
         })
         .add_open(base_open, "automotive", "Automotive")
     )
 
-    report.add_bar_chart("technology-domain", r_2024.q(29), base,
+    report.add_bar_chart("technology-domain", r_2024.q(29).rename_answers(technology_diff), base,
                          legend_params=dict(
                              orientation="h",
                              y=1
                          ),
-                         xaxis_tickangle=-90,
+                         xaxis_tickangle=90,
                          bar_label_vertical=True,
                          max_tick_width=50)
     report.add_wordcloud("technology-domain-wordcloud", answers_2024.answers[235])
@@ -411,15 +463,15 @@ if __name__ == "__main__":
         report,
         Path(__file__).parent / "annual-survey-2024-report.pdf",
         "Rust Annual survey 2024 report",
-        include_labels=True
+        include_labels=False
     )
 
-    # resource_dir = "2024-02-rust-survey-2023"
-    # Fill path to blog roost
-    # blog_root = Path("")
-    # render_blog_post(
-    #     template=Path("2024-02-19-2023-Rust-Annual-Survey-2023-results.md"),
-    #     blog_root=blog_root,
-    #     resource_dir=resource_dir,
-    #     report=report
-    # )
+    resource_dir = "2025-01-rust-survey-2024"
+    # Fill path to blog root (i.e. a checkout of https://github.com/rust-lang/blog.rust-lang.org)
+    blog_root = Path("/projects/personal/rust/blog.rust-lang.org")
+    render_blog_post(
+        template=Path("2025-01-27-2024-State-Of-Rust-Survey-2024-results.md"),
+        blog_root=blog_root,
+        resource_dir=resource_dir,
+        report=report
+    )
