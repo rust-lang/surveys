@@ -41,6 +41,9 @@ def make_bar_chart(
     assert len(questions) > 0
     assert len(set(question.year for question in questions)) == len(questions)
 
+    # Sort questions by year to have a left-to-right reading order
+    questions = sorted(questions, key=lambda q: q.year)
+
     if legend_order is not None:
         legend_order = [wrap_text(l, max_width=max_tick_width) for l in legend_order]
 
@@ -81,7 +84,7 @@ def make_bar_chart(
         counts = data.loc[data["Year"] == year, "count"].astype(np.float32)
         data.loc[data["Year"] == year, "percent"] = (counts / total_count) * 100.0
 
-    main_year = str(questions[0].year)
+    main_year = str(questions[-1].year)
 
     def sort_key(answer: str) -> int:
         if legend_order is not None:
@@ -101,11 +104,18 @@ def make_bar_chart(
 
     data["text"] = data.apply(generate_text, axis=1)
 
+    palette = px.colors.qualitative.Plotly
+    # Make sure that we have a canonical assignment of colors to individual years
+    # If there is only a single year, we should assign it palette[0]
+    # If there are two years, the largest one should have palette[0], the other one palette[1] etc.
+    palette = palette[:len(questions)][::-1]
+
     fig = px.bar(
         data,
         x="answer",
         y="percent",
         color="Year",
+        color_discrete_sequence=palette,
         barmode="group",
         text="text",
         custom_data=["Year", "count"],
