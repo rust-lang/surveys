@@ -437,7 +437,9 @@ def annual_survey_2024_report() -> ChartReport:
 
     report.add_bar_chart("which-marginalized-group", r_2024.q(36), xaxis_tickangle=45)
 
-    report.add_bar_chart("are-you-a-student", r_2024.q(37), r_2023.q(38), xaxis_tickangle=45,
+    report.add_bar_chart("are-you-a-student", r_2024.q(37), r_2023.q(38),
+                         xaxis_tickangle=45,
+                         max_tick_width=40,
                          bar_label_vertical=True)
     report.add_pie_chart("how-long-have-you-been-programming", r_2024.q(38))
     report.add_pie_chart("where-do-you-live", r_2024.q(39))
