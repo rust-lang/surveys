@@ -22,9 +22,11 @@ def format_title(question: Question, include_kind: bool = False) -> str:
     return f'<b>{wrap_text(question.question, max_width=75)}</b><br /><span style="font-size: 0.8em;">(total responses = {question.total_responses}{kind})</span>'
 
 
-def wrap_text(text: str, max_width: int) -> str:
-    text = textwrap.wrap(text, width=max_width, break_long_words=False)
-    text = "<br />".join(text)
+def wrap_text(text: str, max_width: int, override_line_size: Optional[str] = None) -> str:
+    lines = textwrap.wrap(text, width=max_width, break_long_words=False)
+    if override_line_size is not None:
+        lines = [f"<span style='font-size: {override_line_size}'>{line}</span>" for line in lines]
+    text = "<br />".join(lines)
     return text
 
 
@@ -44,8 +46,23 @@ def make_bar_chart(
     # Sort questions by year to have a left-to-right reading order
     questions = sorted(questions, key=lambda q: q.year)
 
+    # Plotly hardcodes the line height to be 1.3em, which is quite large, and it makes it
+    # hard to visually parse different lines vs different X axis ticks.
+    # Therefore, we use a hack - we set the xaxis font size to be 9 instead of 12
+    # (the defaut font size), to reduce the line height proportionally (9 * 1.3 instead of
+    # 12 * 1.3).
+    # And then we inflate the font size of the individual lines by 12/9 to make the actual
+    # font size be the same as before applying the hack.
+    xaxis_font_size = 9
+    override_line_size = f"{12 / xaxis_font_size:.1f}em"
+
     if legend_order is not None:
-        legend_order = [wrap_text(l, max_width=max_tick_width) for l in legend_order]
+        # We need to apply the size hack also to the legend, otherwise the answers won't match
+        legend_order = [wrap_text(
+            l,
+            max_width=max_tick_width,
+            override_line_size=override_line_size
+        ) for l in legend_order]
 
     data = defaultdict(list)
     totals = {}
@@ -53,7 +70,11 @@ def make_bar_chart(
     for question in questions:
         assert question.is_simple()
         for answer in question.kind.answers:
-            text = wrap_text(answer.answer, max_width=max_tick_width)
+            text = wrap_text(
+                answer.answer,
+                max_width=max_tick_width,
+                override_line_size=override_line_size
+            )
 
             data["year"].append(str(question.year))
             data["answer"].append(text)
@@ -144,6 +165,8 @@ def make_bar_chart(
         xaxis_title=None,
         # xaxis_tickwidth=40,
         xaxis_tickangle=xaxis_tickangle,
+        # See usage of `override_line_size` above
+        xaxis_tickfont=dict(size=xaxis_font_size),
         yaxis_title="Percent out of all responses (%)",
         yaxis_range=[0, 119],
         yaxis_ticksuffix="%",
