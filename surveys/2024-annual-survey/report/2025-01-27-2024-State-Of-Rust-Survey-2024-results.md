@@ -20,11 +20,9 @@ There's a lot of data to go through, so strap in and enjoy!
 | **Survey** | **Started** | **Completed** | **Completion rate** | **Views** |
 |:----------:|------------:|--------------:|--------------------:|----------:|
 |    2023    |      11 950 |         9 710 |               82.2% |    16 028 |
-|    2024    |        TODO |          TODO |               TODO% |      TODO |
+|    2024    |       9 450 |         7 310 |               77.4% |    13 564 |
 
-TODO - outdated, don't have the data yet
-
-[//]: # (As shown above, in 2023, we have received 37% fewer survey views in vs 2022, but saw a slight uptick in starts and completions. There are many reasons why this could have been the case, but it’s possible that because we released the [2022 analysis blog]&#40;https://blog.rust-lang.org/2023/08/07/Rust-Survey-2023-Results.html&#41; so late last year, the survey was fresh in many Rustaceans’ minds. This might have prompted fewer people to feel the need to open the most recent survey. Therefore, we find it doubly impressive that there were more starts and completions in 2023, despite the lower overall view count.)
+As shown above, in 2024, we have received fewer survey views than in the previous year. This was likely caused simply by the fact that the survey ran only for two weeks, while in the previous year it ran for almost a month. However, the completion rate has also dropped, which seems to suggest that the survey might be a bit too long. We will take this into consideration for the next edition of the survey.
 
 ## Community
 
