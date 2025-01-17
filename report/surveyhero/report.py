@@ -48,10 +48,8 @@ class ChartReport:
     def __init__(self):
         self.charts: Dict[str, ChartRenderer] = {}
 
-    def add_bar_chart(self, name: str, question: Question, baseline: Optional[Question] = None, **kwargs):
-        questions = [question]
-        if baseline is not None:
-            questions.append(baseline)
+    def add_bar_chart(self, name: str, question: Question, *baselines: Question, **kwargs):
+        questions = [question] + list(baselines)
 
         def render_fn(**args):
             return make_bar_chart(questions=questions, **join(kwargs, args))

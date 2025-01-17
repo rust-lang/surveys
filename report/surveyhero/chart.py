@@ -22,9 +22,11 @@ def format_title(question: Question, include_kind: bool = False) -> str:
     return f'<b>{wrap_text(question.question, max_width=75)}</b><br /><span style="font-size: 0.8em;">(total responses = {question.total_responses}{kind})</span>'
 
 
-def wrap_text(text: str, max_width: int) -> str:
-    text = textwrap.wrap(text, width=max_width, break_long_words=False)
-    text = "<br />".join(text)
+def wrap_text(text: str, max_width: int, override_line_size: Optional[str] = None) -> str:
+    lines = textwrap.wrap(text, width=max_width, break_long_words=False)
+    if override_line_size is not None:
+        lines = [f"<span style='font-size: {override_line_size}'>{line}</span>" for line in lines]
+    text = "<br />".join(lines)
     return text
 
 
@@ -35,13 +37,32 @@ def make_bar_chart(
         xaxis_tickangle=0,
         max_tick_width=30,
         legend_order: Optional[List[str]] = None,
-        layout_args: Optional[Dict[str, Any]] = None
+        layout_args: Optional[Dict[str, Any]] = None,
+        legend_params: Optional[Dict[str, Any]] = None,
 ) -> Figure:
     assert len(questions) > 0
     assert len(set(question.year for question in questions)) == len(questions)
 
+    # Sort questions by year to have a left-to-right reading order
+    questions = sorted(questions, key=lambda q: q.year)
+
+    # Plotly hardcodes the line height to be 1.3em, which is quite large, and it makes it
+    # hard to visually parse different lines vs different X axis ticks.
+    # Therefore, we use a hack - we set the xaxis font size to be 9 instead of 12
+    # (the defaut font size), to reduce the line height proportionally (9 * 1.3 instead of
+    # 12 * 1.3).
+    # And then we inflate the font size of the individual lines by 12/9 to make the actual
+    # font size be the same as before applying the hack.
+    xaxis_font_size = 9
+    override_line_size = f"{12 / xaxis_font_size:.1f}em"
+
     if legend_order is not None:
-        legend_order = [wrap_text(l, max_width=max_tick_width) for l in legend_order]
+        # We need to apply the size hack also to the legend, otherwise the answers won't match
+        legend_order = [wrap_text(
+            l,
+            max_width=max_tick_width,
+            override_line_size=override_line_size
+        ) for l in legend_order]
 
     data = defaultdict(list)
     totals = {}
@@ -49,7 +70,11 @@ def make_bar_chart(
     for question in questions:
         assert question.is_simple()
         for answer in question.kind.answers:
-            text = wrap_text(answer.answer, max_width=max_tick_width)
+            text = wrap_text(
+                answer.answer,
+                max_width=max_tick_width,
+                override_line_size=override_line_size
+            )
 
             data["year"].append(str(question.year))
             data["answer"].append(text)
@@ -80,7 +105,7 @@ def make_bar_chart(
         counts = data.loc[data["Year"] == year, "count"].astype(np.float32)
         data.loc[data["Year"] == year, "percent"] = (counts / total_count) * 100.0
 
-    main_year = str(questions[0].year)
+    main_year = str(questions[-1].year)
 
     def sort_key(answer: str) -> int:
         if legend_order is not None:
@@ -100,11 +125,18 @@ def make_bar_chart(
 
     data["text"] = data.apply(generate_text, axis=1)
 
+    palette = px.colors.qualitative.Plotly
+    # Make sure that we have a canonical assignment of colors to individual years
+    # If there is only a single year, we should assign it palette[0]
+    # If there are two years, the largest one should have palette[0], the other one palette[1] etc.
+    palette = palette[:len(questions)][::-1]
+
     fig = px.bar(
         data,
         x="answer",
         y="percent",
         color="Year",
+        color_discrete_sequence=palette,
         barmode="group",
         text="text",
         custom_data=["Year", "count"],
@@ -114,8 +146,12 @@ def make_bar_chart(
     fig.update_traces(
         textposition="outside",
         hovertemplate="Year: %{customdata[0]}<br />Count: %{customdata[1]}<br />Percent: %{text}<extra></extra>",
-        textangle=-90 if bar_label_vertical else 0,
+        textangle=90 if bar_label_vertical else 0,
     )
+
+    legend = {}
+    if legend_params is not None:
+        legend.update(legend_params)
 
     layout_args = layout_args or {}
     fig.update_layout(
@@ -129,6 +165,8 @@ def make_bar_chart(
         xaxis_title=None,
         # xaxis_tickwidth=40,
         xaxis_tickangle=xaxis_tickangle,
+        # See usage of `override_line_size` above
+        xaxis_tickfont=dict(size=xaxis_font_size),
         yaxis_title="Percent out of all responses (%)",
         yaxis_range=[0, 119],
         yaxis_ticksuffix="%",
@@ -144,6 +182,7 @@ def make_bar_chart(
             pad=10,
             b=10
         ),
+        legend=legend,
         dragmode="pan",
         **layout_args
     )
@@ -239,10 +278,12 @@ def make_matrix_chart(
         question: Question,
         categories: List[str],
         category_label: str,
-        height=600,
+        option_label: Optional[str] = None,
+        height: Optional[int] = None,
         horizontal: bool = False,
         max_label_width=20,
-        legend_params: Optional[Dict[str, Any]] = None
+        legend_params: Optional[Dict[str, Any]] = None,
+        textposition = "outside"
 ) -> Figure:
     """
     Create a matrix chart with different categories.
@@ -278,6 +319,12 @@ def make_matrix_chart(
     if not horizontal:
         keys = dict(y="Count", x="Category")
 
+    if height is None:
+        if horizontal:
+            height = 600
+        else:
+            height = 1000
+
     fig = px.bar(
         df,
         **keys,
@@ -287,12 +334,12 @@ def make_matrix_chart(
             Category=group_keys
         ),
         title=format_title(question),
-        height=1000 if not horizontal else height,
+        height=height,
         hover_data=[category_label]
     )
     fig.update_traces(
         orientation="h" if horizontal else "v",
-        textposition="outside",
+        textposition=textposition,
         hovertemplate=f"Category: %{{y}}<br />{category_label}: %{{customdata[0]}}<br />Percent: %{{text}}<extra></extra>",
     )
 
@@ -302,7 +349,18 @@ def make_matrix_chart(
 
     layout_args = {}
     if horizontal:
-        layout_args["xaxis_range"] = [0, 110]
+        if textposition != "inside":
+            layout_args["xaxis_range"] = [0, 110]
+        else:
+            layout_args["xaxis_range"] = [0, 100]
+        layout_args["xaxis_title"] = None
+        layout_args["xaxis_ticksuffix"] = "%"
+        layout_args["yaxis_ticksuffix"] = ""
+        layout_args["yaxis_title"] = option_label
+    else:
+        layout_args["yaxis_title"] = None
+        layout_args["xaxis_title"] = option_label
+        layout_args["yaxis_ticksuffix"] = "%"
 
     fig.update_layout(
         meta="matrix-chart",
@@ -312,13 +370,9 @@ def make_matrix_chart(
             font_family="Rockwell",
         ),
         # hovermode="y unified",
-        yaxis_title=None,
         yaxis_tickangle=0,
         # https://stackoverflow.com/a/52397461/1107768
-        yaxis_ticksuffix="   ",
         yaxis_fixedrange=True,
-        xaxis_title="Percent out of the category (%)",
-        xaxis_ticksuffix="%",
         xaxis_fixedrange=True,
         legend=legend,
         dragmode="pan",

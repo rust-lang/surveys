@@ -1,7 +1,7 @@
 plotly==5.18.0
 kaleido==0.2.1
-pandas==2.1.4
-matplotlib==3.8.2
+pandas==2.0.3
+matplotlib==3.7.5
 wordcloud==1.9.3
 elsie[cairo]==3.4
 beautifulsoup4==4.12.3
