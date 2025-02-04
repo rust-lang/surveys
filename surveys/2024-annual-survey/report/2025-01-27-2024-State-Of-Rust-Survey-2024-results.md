@@ -26,7 +26,7 @@ As shown above, in 2024, we have received fewer survey views than in the previou
 
 ## Community
 
-TODO - outdated, don't have the data yet
+"The State of Rust survey not only gives us excellent insight into how many Rust users around the world are using and experiencing the language but also gives us insight into the makeup of our global community. This information gives us a sense of where the language is being used and where access gaps might exist for us to address over time. In this section of the survey recap, we'll summarize a few community metrics: country of residence, preferred language for technical communication, and which traditionally underrepresented or marginalized communities respondents consider themselves members of. We hope this information and our related analysis help further important discussions about how we can continue to prioritize global access and inclusivity in the Rust community."
 
 [//]: # (We saw a 3pp increase in respondents taking this year’s survey in English – 80% in 2023 and 77% in 2022. Across all other languages, we saw only minor variations – all of which are likely due to us offering fewer languages overall this year due to having fewer volunteers.)
 
@@ -49,7 +49,7 @@ Same as every year, we asked our respondents in which country they live in. The 
 [//]: # (<!-- chart: which-marginalized-group &#40;height=500&#41; -->)
 
 [//]: # ()
-[//]: # (As Rust continues to grow, we must acknowledge the diversity, equity, and inclusivity &#40;DEI&#41;-related gaps that exist in the Rust community. Sadly, Rust is not unique in this regard. For instance, only 20% of 2023 respondents to this representation question consider themselves a member of a racial or ethnic minority and only 26% identify as a woman. We would like to see more equitable figures in these and other categories. In 2023, the Rust Foundation formed a diversity, equity, and inclusion subcommittee on its Board of Directors whose members are aware of these results and are actively discussing ways that the Foundation might be able to better support underrepresented groups in Rust and help make our ecosystem more globally inclusive. One of the central goals of the Rust Foundation board's subcommittee is to analyze information about our community to find out what gaps exist, so this information is a helpful place to start. This topic deserves much more depth than is possible here, but readers can expect more on the subject in the future.)
+[//]: # (Each year, we must acknowledge the diversity, equity, and inclusivity (DEI) related gaps in the Rust community and open source as a whole. We believe that excellent work is underway at the Rust Foundation to advance global access to Rust community gatherings and distribute grants to a diverse pool of maintainers each cycle, which you can learn more about [here](https://rustfoundation.org/community). Even so, global inclusion and access is just one element of DEI, and the survey working group will continue to advocate for progress in this domain)
 
 ## Rust usage
 
@@ -63,9 +63,13 @@ Similarly as last year, around 31% of those who did not identify as Rust users c
 
 Of the former Rust users who participated in the 2024 survey, 36% cited factors outside their control as a reason why they no longer use Rust, which is a 10pp decrease from last year. This year, we also asked respondents if they would consider using Rust again if an opportunity comes up, which turns out to be true for a large fraction of the respondents (63%). That is good to hear!
 
+TODO: [why-dont-you-use-rust] The "Other" answer
+
 <!-- chart: why-did-you-stop-using-rust (height=500) -->
 
 > Closed answers marked with N/A were not present in the previous version(s) of the survey.
+
+TODO: [why-did-you-stop-using-rust] The Other answer
 
 Of those who used Rust in 2024, 53% did so on a daily (or nearly daily) basis — an increase of 4pp from the previous year. We can observe an upward trend in the frequency of Rust usage over the past few years.
 
@@ -75,6 +79,14 @@ Rust expertise is also continually increasing amongst our respondents! 20% of re
 
 <!-- chart: how-would-you-rate-your-rust-expertise (height=500) -->
 
+Which version of Rust are you using?
+
+<!-- chart: which-version-of-rust-do-you-use (height=500) -->
+
+Are you using Rust nightly?
+
+<!-- chart: if-you-use-nightly-why (height=500) -->
+
 ## Learning Rust
 To use Rust, programmers first have to learn it, so we are always interested in finding out how do they approach that. Based on the survey results, it seems that most users learn from Rust documentation and also from [The Rust Programming Language](https://doc.rust-lang.org/book/) book, which has been a favourite learning resource of new Rustaceans for a long time. Many people also seem to learn by reading the source code of Rust crates. The fact that both the documentation and source code of tens of thousands of Rust crates is available on [docs.rs](https://docs.rs) and GitHub makes this easier.
 
@@ -82,7 +94,11 @@ To use Rust, programmers first have to learn it, so we are always interested in 
 
 On the other hand, only a very small number of respondents (around 3%) have taken a university Rust course or use university learning materials. It seems that Rust has not yet penetrated university curriculums, as this is typically a very slow moving area.
 
+Answers falling into the "Other" option can be clustered more or less in 3 categories: people using LLM assistants (Copilot, ChatGPT, Claude, etc.), official Rust places (the Discord instance, the [URLO][urlo] forum or being mentored while contributing patches) so a big thanks to those making our spaces friendly and welcoming for newcomers, this is important work and it pays off. Interestingly, a non-trivial number of people "learned by doing" and used rustc error messages and clippy as a guide, this a good indicator of the quality of the diagnostics.
+
 <!-- chart: have-you-taken-a-rust-course -->
+
+[urlo]: https://users.rust-lang.org/
 
 ## Programming environment
 
@@ -94,7 +110,7 @@ Rust programmers target a diverse set of platforms with their Rust programs. We 
 
 <!-- chart: which-os-do-you-target (height=500) -->
 
-We cannot of course forget the favourite topic of many programmers: which IDE (developer environment) do they use. Although Visual Studio Code still remains the most popular option, its share has dropped by 5pp this year. On the other hand, the Zed editor seems to have gained considerable traction recently.
+We cannot of course forget the favourite topic of many programmers: which IDE (developer environment) do they use. Although Visual Studio Code still remains the most popular option, its share has dropped by 5pp this year. On the other hand, the Zed editor seems to have gained considerable traction recently. The small percentage of those who selected "Other" are using a wide range of different tools: from CursorAI to classics like Kate, Notepad++. Special mention to the 3 persons using "ed", that's quite an achievement.
 
 <!-- chart: what-ide-do-you-use (height=500) -->
 
@@ -118,7 +134,7 @@ Similarly to the previous year, a large percentage of respondents (82%) report t
 
 <!-- chart: which-statements-apply-to-rust-at-work (height=500) -->
 
-In terms of technology domains, the situation is quite similar to the previous year. Rust to be especially popular for creating server backends, web and networking services and cloud technologies. It also seems to be gaining more traction for embedded use-cases. 
+In terms of technology domains, the situation is quite similar to the previous year. Rust seems to be especially popular for creating server backends, web and networking services and cloud technologies. It also seems to be gaining more traction for embedded use-cases.
 
 <!-- chart: technology-domain (height=600,xrange=15) -->
 
@@ -134,7 +150,7 @@ We have asked our users about aspects of Rust that limit their productivity. Per
 
 <!-- chart: which-problems-limit-your-productivity -->
 
-In terms of specific unstable (or missing) features that Rust users want to be stabilized (or implemented), the most desired ones were async closures and if/let while chains. Well, we have good news! Async closures will be stabilized in the next version of Rust (1.85), and if/let while chains will hopefully follow [soon after](https://github.com/rust-lang/rust/pull/132833), once Edition 2024 is released (which will also happen in Rust 1.85).
+In terms of specific unstable (or missing) features that Rust users want to be stabilized (or implemented), the most desired ones were async closures and if/let while chains. Well, we have good news! Async closures will be stabilized in the next version of Rust (1.85), and if/let while chains will hopefully follow [soon after](https://github.com/rust-lang/rust/pull/132833), once Edition 2024 is released (which will also happen in Rust 1.85). People were really helpful and tried hard pointing their most notable issue limiting productivity. It's hard to summarize all the various freeform answers but we have seen mentioned eveything that we already know about. This said, some clustering can be done around async programming (an all-time favourite) and (very distant) various issues relevant to cargo and general debuggability of errors (which people love but it's not perfect for everyone). A few mentioned Rust tooling being slow or resource intensive (rust-analyzer and rustfmt), a better IDE story and interoperability with other languages.
 
 Other coveted features are generators (both sync and async) and more powerful generic const expressions. You can follow the [Rust Project Goals](https://rust-lang.github.io/rust-project-goals/2025h1/goals.html) to track the progress of these (and other) features.
 
