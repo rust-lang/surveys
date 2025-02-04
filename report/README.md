@@ -12,7 +12,7 @@ First install system dependencies, the development packages for `libxml2`, `libx
 sudo apt install libxml2-dev libxslt1-dev zlib1g-dev libjpeg-dev libpython3-dev
 ```
 
-Ensure you have Python 3.8 installed (last minor release is 3.8.20). Specifically an old version of the `lxml` library is used and due to [this bug](https://bugs.launchpad.net/lxml/+bug/1973155) an accordingly old version of Python is required. If your distribution does ship anymore with Python 3.8.x you'll have to compile it yourself ([instructions](https://stackoverflow.com/a/62831268)).
+Ensure you have Python 3.8 installed (last minor release is 3.8.20). Specifically an old version of the `lxml` library is used and due to [this bug](https://bugs.launchpad.net/lxml/+bug/1973155) an accordingly old version of Python is required. If your distribution does not ship anymore with Python 3.8.x you'll have to compile it yourself ([instructions](https://stackoverflow.com/a/62831268)).
 
 To use the scripts, you should install their dependencies first:
 ```bash
