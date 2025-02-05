@@ -61,15 +61,13 @@ Similarly as last year, around 31% of those who did not identify as Rust users c
 
 <!-- chart: why-dont-you-use-rust (height=500) -->
 
-Of the former Rust users who participated in the 2024 survey, 36% cited factors outside their control as a reason why they no longer use Rust, which is a 10pp decrease from last year. This year, we also asked respondents if they would consider using Rust again if an opportunity comes up, which turns out to be true for a large fraction of the respondents (63%). That is good to hear!
-
-TODO: [why-dont-you-use-rust] The "Other" answer
+Of the former Rust users who participated in the 2024 survey, 36% cited factors outside their control as a reason why they no longer use Rust, which is a 10pp decrease from last year. This year, we also asked respondents if they would consider using Rust again if an opportunity comes up, which turns out to be true for a large fraction of the respondents (63%). That is good to hear! The "Other" not using Rust is because they didn't yet come around to it (for one reason or another) or because it's just not the right tool for the job.
 
 <!-- chart: why-did-you-stop-using-rust (height=500) -->
 
 > Closed answers marked with N/A were not present in the previous version(s) of the survey.
 
-TODO: [why-did-you-stop-using-rust] The Other answer
+Those not using Rust anymore are mostly because they don't really need (or their/company's goals switched) or because (like above) it was not the right tool for the job. A few reported being overwhelmed by the language or its ecosystem in general or that switching or introducing Rust would have been too expensive (in terms of human effort).
 
 Of those who used Rust in 2024, 53% did so on a daily (or nearly daily) basis — an increase of 4pp from the previous year. We can observe an upward trend in the frequency of Rust usage over the past few years.
 
@@ -80,6 +78,8 @@ Rust expertise is also continually increasing amongst our respondents! 20% of re
 <!-- chart: how-would-you-rate-your-rust-expertise (height=500) -->
 
 Which version of Rust are you using?
+
+Out of habit, we asked people which version of do you use. Unsurprisingly, most people are on stable (either the most recent one or whichever comes with their Linux distribution). Those who don't need unstable feature(s) or they work on unstable compiler target like embedded. Using nightly is for people hacking on the compiler or other tooling (thank you folks <3). A few mentioned that rustfmt on nightly works better. Perhaps an interesting datapoint is that **nobody** reported using the beta release channel.
 
 <!-- chart: which-version-of-rust-do-you-use (height=500) -->
 
