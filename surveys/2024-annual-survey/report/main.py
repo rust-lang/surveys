@@ -468,11 +468,11 @@ if __name__ == "__main__":
         include_labels=False
     )
 
-    resource_dir = "2025-01-rust-survey-2024"
+    resource_dir = "2025-02-13-rust-survey-2024"
     # Fill path to blog root (i.e. a checkout of https://github.com/rust-lang/blog.rust-lang.org)
     blog_root = Path("/projects/personal/rust/blog.rust-lang.org")
     render_blog_post(
-        template=Path("2025-01-27-2024-State-Of-Rust-Survey-2024-results.md"),
+        template=Path("2025-02-13-2024-State-Of-Rust-Survey-results.md"),
         blog_root=blog_root,
         resource_dir=resource_dir,
         report=report
