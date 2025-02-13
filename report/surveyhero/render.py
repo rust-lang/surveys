@@ -72,37 +72,72 @@ def render_blog_chart(arg) -> RenderedChart:
     if isinstance(chart, PlotlyRenderer):
         figure = chart.render_fn(**args)
         chart_type = figure.layout.meta
-        element = BeautifulSoup(figure.to_html(full_html=False, include_plotlyjs=None, div_id=chart_id, config=dict(
-            modeBarButtonsToRemove=["zoom", "pan", "lasso2d", "select", "autoScale", "toImage"],
-            displaylogo=False
-        )), features="html.parser").div
+        element = BeautifulSoup(
+            figure.to_html(
+                full_html=False,
+                include_plotlyjs=None,
+                div_id=chart_id,
+                config=dict(
+                    modeBarButtonsToRemove=[
+                        "zoom",
+                        "pan",
+                        "lasso2d",
+                        "select",
+                        "autoScale",
+                        "toImage",
+                    ],
+                    displaylogo=False,
+                ),
+            ),
+            features="html.parser",
+        ).div
         div = element.find("div")
         div["class"] = chart_type
-        div.append(BeautifulSoup(f"""<noscript>
+        div.append(
+            BeautifulSoup(
+                f"""<noscript>
     <img src="{make_rel_path(image_dir=image_dir, path=png_path)}" height="{height}" alt="{chart_id}" />
-</noscript>""", "html.parser"))
+</noscript>""",
+                "html.parser",
+            )
+        )
 
         links = [
-            (make_rel_path(image_dir=image_dir, path=png_path), "Download chart as PNG", "PNG"),
-            (make_rel_path(image_dir=image_dir, path=svg_path), "Download chart as SVG", "SVG"),
+            (
+                make_rel_path(image_dir=image_dir, path=png_path),
+                "Download chart as PNG",
+                "PNG",
+            ),
+            (
+                make_rel_path(image_dir=image_dir, path=svg_path),
+                "Download chart as SVG",
+                "SVG",
+            ),
         ]
 
         wordcloud_id = f"{chart_id}-wordcloud"
         wordcloud = report.get_chart(wordcloud_id)
         if wordcloud is not None:
-            wc_png_path = render_png(image_dir=image_dir, renderer=wordcloud, chart_id=wordcloud_id)
+            wc_png_path = render_png(
+                image_dir=image_dir, renderer=wordcloud, chart_id=wordcloud_id
+            )
             links.append(
-                (make_rel_path(image_dir=image_dir, path=wc_png_path), "Download open answers as wordcloud PNG",
-                 "Wordcloud of open answers")
+                (
+                    make_rel_path(image_dir=image_dir, path=wc_png_path),
+                    "Download open answers as wordcloud PNG",
+                    "Wordcloud of open answers",
+                )
             )
 
-        links = [f"""<span>[<a href="{link}" target="_href_" title="{title}">{label}</a>]</span>"""
-                 for (link, title, label) in links]
+        links = [
+            f"""<span>[<a href="{link}" target="_href_" title="{title}">{label}</a>]</span>"""
+            for (link, title, label) in links
+        ]
         tag = f"""<!-- Chart {chart_id} start -->
 <div>
     {div}
     <div style="display: flex; margin-bottom: 10px;">
-        {'&nbsp;'.join(links)}
+        {"&nbsp;".join(links)}
     </div>
 </div>
 <!-- Chart {chart_id} end -->"""
@@ -110,11 +145,7 @@ def render_blog_chart(arg) -> RenderedChart:
         script = element.find("script")
         assert script is not None
 
-        return RenderedChart(
-            script=script.text.strip(),
-            tag=tag,
-            to_replace=fullmatch
-        )
+        return RenderedChart(script=script.text.strip(), tag=tag, to_replace=fullmatch)
     elif isinstance(chart, PngRenderer):
         assert False
     else:
@@ -122,10 +153,7 @@ def render_blog_chart(arg) -> RenderedChart:
 
 
 def render_blog_post(
-        template: Path,
-        blog_root: Path,
-        resource_dir: str,
-        report: ChartReport
+    template: Path, blog_root: Path, resource_dir: str, report: ChartReport
 ):
     """
     Render a Rust Blog post containing special placeholders that will render as SurveyHero charts from the given `report`.
@@ -150,7 +178,9 @@ def render_blog_post(
     image_dir.mkdir(parents=True, exist_ok=True)
     script_dir = blog_root / "static" / "scripts" / resource_dir
     script_dir.mkdir(parents=True, exist_ok=True)
-    print(f"Generating blog post to {output_path}, image directory {image_dir}, scripts directory {script_dir}")
+    print(
+        f"Generating blog post to {output_path}, image directory {image_dir}, scripts directory {script_dir}"
+    )
 
     with open(template) as f:
         document = f.read()
@@ -193,7 +223,7 @@ function relayoutCharts() {
         layout.autosize = false;
         layout.width = "100%";
         Plotly.relayout(chart, layout);
-        Plotly.restyle(chart, {textangle: -90});
+        Plotly.restyle(chart, {textangle: 90});
     }
     var matrix_charts = document.getElementsByClassName("matrix-chart");
     for (var i = 0; i < matrix_charts.length; i++) {
@@ -216,16 +246,20 @@ document.addEventListener("DOMContentLoaded", relayoutCharts);
 
     plotly_script_path = script_dir.parent / "plotly-basic-2.29.0.min.js"
     if not os.path.isfile(plotly_script_path):
-        urllib.request.urlretrieve("https://cdn.plot.ly/plotly-basic-2.29.0.min.js", plotly_script_path)
+        urllib.request.urlretrieve(
+            "https://cdn.plot.ly/plotly-basic-2.29.0.min.js", plotly_script_path
+        )
 
     scripts = [
         '<script charset="utf-8" src="../../../scripts/plotly-basic-2.29.0.min.js"></script>',
-        f'<script src="../../../scripts/{script_path.relative_to(script_dir.parent)}"></script>'
+        f'<script src="../../../scripts/{script_path.relative_to(script_dir.parent)}"></script>',
     ]
 
     script_marker = "<!-- scripts -->"
     if script_marker not in document:
-        raise Exception(f"Please add `{script_marker}` to the (end of the) Markdown document")
+        raise Exception(
+            f"Please add `{script_marker}` to the (end of the) Markdown document"
+        )
     script_str = "<!-- Chart scripts -->\n\n" + "\n\n".join(scripts)
     document = document.replace(script_marker, script_str)
 
@@ -248,7 +282,9 @@ def render_pdf_page(args) -> Tuple[str, str, Union[str, bytes]]:
         return (name, "png", png_bytes)
 
 
-def render_report_to_pdf(report: ChartReport, output: Path, title: str, include_labels=False):
+def render_report_to_pdf(
+    report: ChartReport, output: Path, title: str, include_labels=False
+):
     """
     Renders a PDF report containing all charts from the given `report` into the `output` path.
     """
@@ -266,12 +302,16 @@ def render_report_to_pdf(report: ChartReport, output: Path, title: str, include_
 
     args = [(report, name) for name in report.charts.keys()]
     with mp.Pool() as pool:
-        for (name, format, result) in tqdm.tqdm(pool.imap(render_pdf_page, args), total=len(args)):
+        for name, format, result in tqdm.tqdm(
+            pool.imap(render_pdf_page, args), total=len(args)
+        ):
             slide = slides.new_slide()
 
             if name.endswith("-wordcloud"):
-                slide.box(y=150).text("Wordcloud of open answers for the previous chart:",
-                                      style=elsie.TextStyle(size=20))
+                slide.box(y=150).text(
+                    "Wordcloud of open answers for the previous chart:",
+                    style=elsie.TextStyle(size=20),
+                )
 
             box = slide.box(width="95%")
             if format == "png":
