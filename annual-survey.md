@@ -41,8 +41,7 @@ it should nevertheless be helpful as a guide.
 1. Analyze the results and publish a blog post
    - There is a dedicated section about this [below](#analysing-survey-results)
 2. Add a link to the previous survey announcement blog post pointing to the blog post with survey results
-3. Update [forge.rust-lang.org](https://forge.rust-lang.org/community/survey-faq.html#where-can-i-see-the-previous-survey-reports) with a link to the results blog post.
-4. Update [FAQ](documents/Community-Survey-FAQ.md) with a link to the results blog post.
+3. Update [FAQ](documents/Community-Survey-FAQ.md) with a link to the results blog post.
 
 ### Analysing survey results
 After the survey finishes, we should generate a PDF with a report and a blog post that will be published on https://blog.rust-lang.org/.
