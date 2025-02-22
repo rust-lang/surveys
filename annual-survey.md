@@ -42,6 +42,7 @@ it should nevertheless be helpful as a guide.
    - There is a dedicated section about this [below](#analysing-survey-results)
 2. Add a link to the previous survey announcement blog post pointing to the blog post with survey results
 3. Update [FAQ](documents/Community-Survey-FAQ.md) with a link to the results blog post.
+4. Post a link to the results to [This Week in Rust](https://this-week-in-rust.org/)
 
 ### Analysing survey results
 After the survey finishes, we should generate a PDF with a report and a blog post that will be published on https://blog.rust-lang.org/.
