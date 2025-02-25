@@ -461,19 +461,24 @@ if __name__ == "__main__":
 
     report = annual_survey_2024_report()
 
+    resource_dir = "2025-02-13-rust-survey-2024"
+    # Fill path to blog root (i.e. a checkout of https://github.com/rust-lang/blog.rust-lang.org)
+    blog_root = Path("/projects/personal/rust/blog.rust-lang.org")
+    # relative path in this repository where the survey Markdown template is
+    template_path = Path("surveys/2024-annual-survey/report/2025-02-13-2024-State-Of-Rust-Survey-results.md")
+    render_blog_post(
+        template=template_path,
+        blog_root=blog_root,
+        resource_dir=resource_dir,
+        report=report
+    )
+
+    if len(sys.argv) == 2 and sys.argv[1] == "--skip-pdf":
+        sys.exit(0)
+
     render_report_to_pdf(
         report,
         Path(__file__).parent / "annual-survey-2024-report.pdf",
         "Rust Annual survey 2024 report",
         include_labels=False
-    )
-
-    resource_dir = "2025-02-13-rust-survey-2024"
-    # Fill path to blog root (i.e. a checkout of https://github.com/rust-lang/blog.rust-lang.org)
-    blog_root = Path("/projects/personal/rust/blog.rust-lang.org")
-    render_blog_post(
-        template=Path("2025-02-13-2024-State-Of-Rust-Survey-results.md"),
-        blog_root=blog_root,
-        resource_dir=resource_dir,
-        report=report
     )
