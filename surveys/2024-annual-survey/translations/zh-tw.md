@@ -110,17 +110,17 @@ Type: select all that apply
 
 Type: select all that apply
 
-- Linux（桌面或服務器）
+- Linux（桌面或伺服器）
 - Windows 10/11
 - Windows 8 或更早版本
 - macOS
 - iOS
 - 安卓（Android）
-- 嵌入式平台（帶作業系統）
+- 嵌入式平台（具有作業系統）
 - 嵌入式平台（裸機）
 - WebAssembly（瀏覽器環境）
 - WebAssembly（非瀏覽器環境）
-- 明確平台獨立（如不與作業系統交互的套件）
+- 明確平台獨立（如不與作業系統互動的套件）
 - 其他
 
 ### 您通常使用什麽編輯器或 IDE 配置來編寫 Rust 代碼？
@@ -296,29 +296,29 @@ Type: matrix
 Rows:
 
 - 特化 (Specialization)
-- 生成器/協程 (Generators/coroutines)
+- 生成器/共常式 (Generators/coroutines)
 - 非同步閉包 (Async closures)
-- 非同步生成器/協程 (Async generators/coroutines)
+- 非同步生成器/共常式 (Async generators/coroutines)
 - if/while let鏈 (If/while let chains)
-- try 表達式塊 (Try blocks)
+- try 表達式區塊 (Try blocks)
 - 永無(never)類型 (Never type)
-- 特質別名 (Trait aliases)
+- 特徵別名 (Trait aliases)
 - 類型別名中的 impl Trait (Type Alias Impl Trait (TAIT) )
 - 預設關聯類型 (Associated type defaults)
 - 泛型編譯時求值表達式 (Generic const expressions)
-- 編譯時可用的特質方法 (Const trait methods)
+- 編譯時可用的特徵方法 (Const trait methods)
 - 編譯時反射機制 (Compile-time reflection)
 - 可變泛型 (Variadic generics)
 - 任意方法接受類型 (Arbitrary Self Types)
-- 枚舉成員類型 (Enum Variant Types)
-- 分配器特質、更優的記憶體溢出處理 (Allocator trait and better OOM handling)
-- 穩定應用程式二進制接口
-- 可移植SIMD（單指令、多數據流）
+- 列舉成員類型 (Enum Variant Types)
+- 分配器特徵、更優的記憶體不足處理 (Allocator trait and better OOM handling)
+- 穩定應用程式二進制介面
+- 可移植SIMD（單指令流多資料流）
 
 Columns:
 
 - 如果穩定版本中本功能可用，則會解決想用 Rust 適用我的用例時遇到的障礙
-- 如果穩定版本中本功能可用，則會改進我的代碼
+- 如果穩定版本中本功能可用，則會改進我的程式碼
 - 我不需要這個功能
 - 我不了解這個功能
 
@@ -337,20 +337,20 @@ Rows:
 - 需要手動實現Iterator (Having to implement Iterator manually)
 - 編譯時函式 (const fn) 的限制 (Not being able to do enough in const fn)
 - 實現動態庫插件 （Implementing dynamic library plugins）
-- 和其他語言（例如C和C++）的交互、協作（Interoperating with other languages (e.g. C or C++) ）
-- 非同步程式碼中的結構化並發 (Achieving structured concurrency with async code)
+- 和其他語言（例如C和C++）的互動、協作（Interoperating with other languages (e.g. C or C++) ）
+- 非同步程式碼中的結構化並行 (Achieving structured concurrency with async code)
 - 編寫不限於特定非同步執行引擎的非同步程式碼 (Writing executor-agnostic async code)
 - 編寫正確的不安全程式碼 (Writing correct unsafe code)
 - 借用檢查器的限制、不允許部分語義上正確的程式碼 (Borrow checker not allowing valid code)
 - 運行慢
 - 編譯慢
 - 編譯產物占用儲存空間大 (Large binary size of compiled artifacts)
-- Rust 語言文件與標準庫文件
+- Rust 語言文件與標準函式庫文件
 - 編輯器自身錯誤（即內部錯誤Internal Compiler Errors或者程式碼生成錯誤）(Encountering compiler bugs (e.g. ICEs a.k.a. internal compiler errors or miscompilations))
 - 難懂的或者令人困惑的編譯錯誤訊息
-- IDE支持不到位（例如缺乏某些錯誤訊息的顯示、分析慢等）
-- 調試體驗支持不到位（例如缺乏數值可視化或者非同步堆疊軌跡）
-- 語言或標準庫文件不充分
+- IDE支援不佳（例如缺乏某些錯誤訊息的顯示、分析慢等）
+- 除錯體驗支援不佳（例如缺乏數值視覺化或者非同步堆疊軌跡）
+- 語言或標準函式庫文件不充分
 
 Columns:
 
@@ -370,15 +370,15 @@ Rows:
 
 - 特質中的非同步函數 (async fn in traits, 1.75)
 - 特質中返回位置的impl Trait (Return position impl Trait in traits,1.75)
-- C字符串字面量 (C-string literals, 1.77)
-- 非同步函數中的遞歸 (Recursion in async fn, 1.77)
+- C字串字面值 (C-string literals, 1.77)
+- 非同步函數中的遞迴 (Recursion in async fn, 1.77)
 - offset_of! 巨集 (offset_of! macro, 1.77)
 - #[diagnostic] 屬性 (#[diagnostic] attribute, 1.78)
 - 內聯編譯時運算表達式 (Inline const expressions, 1.79)
 - 關聯類型位置中的約束 (Bounds in associated type position, 1.79)
 - LazyCell 和 LazyLock (LazyCell and LazyLock, 1.80)
-- 範圍匹配中支持排他範圍 (Exclusive ranges in patterns, 1.80)
-- 核心庫中的 Error 特質 (Error trait in core, 1.81)
+- 範圍匹配中支援排除範圍 (Exclusive ranges in patterns, 1.80)
+- 核心函式庫中的 Error 特徵 (Error trait in core, 1.81)
 - #[expect(lint)] 和 lint 原因 (#[expect(lint)] and lint reasons, 1.81)
 - use<..> 準確捕捉語法 (Precise capturing syntax, 1.82)
 - &raw 指針 (&raw pointers, 1.82)
@@ -405,7 +405,7 @@ Type: select all that apply
 Type: select all that apply
 
 - 我使用 crates.io
-- 我使用自定義/本地/公司注冊庫(registry)
+- 我使用自定義/本地/公司註冊表(registry)
 - 我使用 crates.io 的鏡像
 - 我不知道
 
@@ -415,9 +415,9 @@ Type: matrix
 
 Rows:
 
-- 制作關於 Rust 的訊息內容（如部落格、直播、制作 YouTube 影片、在會議/聚會上展示等
+- 製作關於 Rust 的訊息內容（如部落格、直播、製作 YouTube 影片、在會議/聚會上展示等
 - 接收有關 Rust 的訊息內容（如部落格、直播、YouTube 影片等）
-- 閱讀 Rust 官方溝通渠道（如 This Week in Rust、Rust 官方部落格、Rust 推特帳號等）
+- 閱讀 Rust 官方溝通管道（如 This Week in Rust、Rust 官方部落格、Rust 推特帳號等）
 - 參與社交媒體或網站（Hacker News、r/rust、Twitter、LinkedIn等）上關於Rust的討論
 - 參加 Rust 聚會或會議（虛擬或面對面）
 - 撰寫、評論、參與討論或編輯公開的 RFC
@@ -441,7 +441,7 @@ Rows:
 
 - Rust 官方社群論壇或聊天室（users.rust-lang.org、internals.rust-lang.org、官方 Rust Discord 或 Rust Zulip）
 - Rust 非官方社群論壇或聊天室（如reddit.com/r/rust、Hacker News 或 Rust Community Discord 等等）
-- 專注於 Rust 軟件開發特定領域（例如遊戲開發、音訊等）的社群
+- 專注於 Rust 軟體開發特定領域（例如遊戲開發、音訊等）的社群
 - Rust 會議
 - Rust 聚會或當地社群活動
 - 在 rust-lang GitHub 組織<strong>之內</strong>的倉庫中進行討論（問題、PR等）
@@ -469,7 +469,7 @@ Type: select one
 
 Type: select one
 
-- 是，作為程式碼的貢獻者（非管理崗位）
+- 是，作為程式碼的貢獻者（非管理職）
 - 我主要管理其他編寫、設計軟體的人
 - 否
 
@@ -497,7 +497,7 @@ Type: select one
 Type: select all that apply
 
 - 使用 Rust 幫助我們實現了目標
-- 采用 Rust 是一項挑戰
+- 採用 Rust 是一項挑戰
 - 總的來說，採用 Rust 降低了我們團隊的速度
 - 使用 Rust 值得採用 Rust 所需要的成本
 - 我們在未來很可能會繼續使用 Rust
@@ -506,14 +506,14 @@ Type: select all that apply
 
 Type: select all that apply
 
-- 性能（即速度、記憶體用量等）特征
+- 性能（即速度、記憶體使用量等）特色
 - 我們需要精確控制軟體的運行行為
 - Rust 的安全性和可靠性對我們來說非常重要
 - Rust 允許我們構建相對正確和無缺陷的軟體
 - 我們發現使用 Rust 寫程式是令人愉快或有趣的
 - 我們已經知道 Rust，所以它是我們的預設選擇
 - 我們認為用它進行原型實現很方便
-- 我們必須與現有的 Rust 程式碼進行交互
+- 我們必須與現有的 Rust 程式碼互動
 
 ### 您在使用 Rust 時遇到了哪些挑戰？
 
@@ -535,15 +535,15 @@ Type: select all that apply
 - 資料科學
 - 資料庫實現
 - 桌面應用程式前端
-- 桌面或移動的庫或服務
+- 桌面或移動的函式庫或服務
 - 分散式系統
-- 嵌入式系統（帶作業系統）
+- 嵌入式系統（具有作業系統）
 - 嵌入式系統（裸機）
 - 高性能計算
 - 物聯網
 - 機器學習
 - 手機應用前端
-- 程式語言和相關工具（包括編譯器、IDE、標準庫等）
+- 程式語言和相關工具（包括編譯器、IDE、標準函式庫等）
 - 機器人
 - 科學和/或數值計算
 - 服務端或後端應用
@@ -614,8 +614,8 @@ Type: select all that apply
 - 被替代品取代
 - 變得過於複雜
 - 工具和文件未能提供足夠的無障礙支援（如自然語言的障礙或不相容螢幕閱讀器）
-- Rust 基金會沒有適當支持 Rust 項目（例如在財務、基礎設施、法律方面）
-- 項目的治理無法與社區的大小、需求規模相匹配
+- Rust 基金會沒有適當支持 Rust 專案（例如在財務、基礎設施、法律方面）
+- 專案的治理無法與社區的大小、需求規模相符
 - 語言的開發者和維護者未能得到適當的支持
 - 我不擔憂
 - 其他
