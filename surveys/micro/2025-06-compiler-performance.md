@@ -94,7 +94,7 @@ Type: matrix (optional)
 Commands:
 
 - `cargo check`
-- `cargo build`
+- `cargo build` or `cargo run`
 - `cargo test`
 
 Frequency:
