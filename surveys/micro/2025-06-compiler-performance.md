@@ -49,7 +49,7 @@ Type: select one (optional)
 
 ## Workflows
 
-### How do you build your Rust projects?
+### Which builds system do you use to build Rust code?
 
 Type: select all that apply (optional)
 
@@ -57,6 +57,15 @@ Type: select all that apply (optional)
 - I use some other build system
 - I combine Cargo and another build system
 - If you use other build system(s), which ones do you use? (open response)
+
+### How do you build your Rust projects?
+
+Type: select all that apply (optional)
+
+- On my local computer
+- On CI infrastructure
+- On a remote or cloud server
+- Other (open response)
 
 ### Which compilation workflows are the most important to you?
 
@@ -79,7 +88,7 @@ Priority:
 - Important, compile times are acceptable for me
 - Important, compile times are a blocker for me
 
-### Do you have any other compilation workflow that you would like to mention?
+### Do you have any other Rust development workflow that you would like to mention?
 
 Type: open response (optional)
 
@@ -137,6 +146,7 @@ Commands:
 - `cargo check` and `cargo clippy` not sharing compilation cache
 - Waiting for an IDE to show me inline error/warning annotations
 - `cargo` rebuilding everything from scratch and I do not understand why
+- `cargo` and my IDE blocking each other
 
 Priority:
 
