@@ -148,7 +148,7 @@ Priority:
 
 ### Have you used any of the following mechanisms to improve compilation performance?
 
-Please select only mechanisms/workarounds that you have used **primarily** in order to improve compilation performance, not for other reasons.
+Please select only mechanisms/workarounds that you have used at least once **primarily** in order to improve compilation performance, not for other reasons.
 
 Type: select all that apply (optional)
 
