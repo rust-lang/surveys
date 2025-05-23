@@ -238,6 +238,35 @@ Type: select one (optional)
 - Yes, I want full debuginfo by default
 - No, I would prefer faster compilation with less debuginfo by default
 
+## Hardware
+
+Here we would like to get basic hardware information about the computer/server that you most often use to compile your Rust code. If you compile your code using a remote server, please enter the specs of that server.
+
+### How many cores does your computer have?
+
+Please count physical CPU cores, not including hyperthreads. If you do not know what are hyperthreads, just enter a number of cores that you think your computer has.
+
+Type: select one (optional)
+
+- 1
+- 2-4
+- 5-8
+- 9-16
+- 17-32
+- More than 32 cores
+
+### How much RAM memory does your computer have?
+
+Type: select one (optional)
+
+- Less than 2 GiB
+- 2-4 GiB
+- 5-8 GiB
+- 9-16 GiB
+- 17-32 GiB
+- 33-64 GiB
+- More than 64 GiB
+
 ## Other
 
 ### Is there anything else related to Rust compiler performance that you would like to tell us?
