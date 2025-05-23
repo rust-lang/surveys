@@ -12,7 +12,7 @@ Type: select one
 
 - Yes, I use Rust [`NEXT`](#do-you-code-in-rust-at-a-company)
 - No, I don't currently use Rust, but I have in the past [`NEXT`](#were-long-compilation-times-the-primary-reason-why-you-stopped-using-rust)
-- No, I have never used Rust [`END`](#other)
+- No, I have never used Rust [`NEXT`](#other)
 
 ### Were long compilation times the primary reason why you stopped using Rust?
 
@@ -56,7 +56,7 @@ Type: select all that apply (optional)
 - I use Cargo
 - I use some other build system
 - I combine Cargo and another build system
-- If you use Cargo with (or just use) other build systems, which ones do you use? (open response)
+- If you use other build system(s), which ones do you use? (open response)
 
 ### Which compilation workflows are the most important to you?
 
@@ -75,9 +75,13 @@ Workflows:
 
 Priority:
 
-- Not important for me
-- Important for me, compile times are okay for me
-- Important for me, compile times are a blocker for me
+- Not so important for me
+- Important, compile times are acceptable for me
+- Important, compile times are a blocker for me
+
+### Do you have any other compilation workflow that you would like to mention?
+
+Type: open response (optional)
 
 ### How do you primarily examine compilation errors in your code?
 
@@ -87,25 +91,29 @@ Type: select all that apply (optional)
 - Using terminal commands (e.g. `cargo check`)
 - Other (open response)
 
-### If you use Cargo, how often do you use the following commands after making a change to Rust code?
+### If you use Cargo, how often do you use the following commands after each change to Rust code?
 
 Type: matrix (optional)
 
 Commands:
 
 - `cargo check`
-- `cargo build` or `cargo run`
+- `cargo clippy`
 - `cargo test`
+- `cargo run` / `cargo build`
 
 Frequency:
 
-- Rarely
-- Sometimes
-- Often
+- After every code change
+- Only after I have resolved other issues
+- Only after I am done (e.g. before creating a commit or pushing to a remote branch)
+- Never
 
 ### How long do you need to wait for the compiler to rebuild your code after making a change?
 
 Please select the longest duration range amongst the projects that you regularly work on.
+
+This question focuses on local development workflows, not CI or remote builds. If you do not compile your Rust code locally, please skip this question.
 
 Type: select one (optional)
 
@@ -123,11 +131,12 @@ Type: matrix (optional)
 
 Commands:
 
-- Waiting for a rebuild after making a small change.
-- Waiting for CI workflows that build Rust code.
-- `cargo check` and `cargo build` not sharing compilation cache.
-- `cargo check` and `cargo clippy` not sharing compilation cache.
-- Waiting for an IDE to show me inline error/warning annotations.
+- Waiting for a rebuild after making a small change
+- Waiting for CI workflows that build Rust code
+- `cargo check` and `cargo build` not sharing compilation cache
+- `cargo check` and `cargo clippy` not sharing compilation cache
+- Waiting for an IDE to show me inline error/warning annotations
+- `cargo` rebuilding everything from scratch and I do not understand why
 
 Priority:
 
@@ -137,7 +146,9 @@ Priority:
 
 ## Workarounds
 
-### Do you use any of the following compiler options to improve compilation performance?
+### Have you used any of the following mechanisms to improve compilation performance?
+
+Please select only mechanisms/workarounds that you have used **primarily** in order to improve compilation performance, not for other reasons.
 
 Type: select all that apply (optional)
 
@@ -146,6 +157,13 @@ Type: select all that apply (optional)
 - Cranelift codegen backend (e.g. set `codegen-backend = "cranelift"` in `Cargo.toml`)
 - Alternative linker (e.g. `lld`/`mold`/`wild`)
 - Caching compiler wrapper (e.g. `sccache`)
+- Share `target` directory amongst multiple projects (with `CARGO_TARGET_DIR`)
+- Split crates into smaller crates
+- Reduce the amount of dependencies
+- Disable default Cargo features of dependencies
+- Create a Cargo feature that makes certain dependencies (or their features) optional
+- Reduce usage of procedural macros
+- Reduce usage of generic code (e.g. by converting it to use `dyn Trait` instead)
 - Something else (open response)
 
 ### If you use an alternative linker, which one do you use?
@@ -158,15 +176,6 @@ Type: select all that apply (optional)
 - wild
 - Other (open response)
 
-### Do you use any of the following compiler options to improve compilation performance?
-
-Type: select all that apply (optional)
-
-- Disable (or reduce) debuginfo (e.g. setting `debug = 0` in `Cargo.toml`)
-- Parallel compiler frontend (passing `-Zthreads=<N>` to the compiler)
-- Cranelift codegen backend (e.g. setting `codegen-backend = "cranelift"` in `Cargo.toml`)
-- Alternative linker (e.g. LLD/mold/wild)
-
 ### Do you use a global `config.toml` override?
 
 You can create a `config.toml` file in your `CARGO_HOME` directory (e.g. `~/.cargo/config.toml`) which can be used to apply certain compilation settings (e.g. using a faster linker) across all Cargo projects on your computer.
@@ -176,18 +185,6 @@ Type: select one (optional)
 - Yes
 - No
 
-### Do you use any of the following methods to improve compilation performance?
-
-Please select only methods that you have used primarily in order to improve compilation performance, not for other reasons.
-
-Type: select all that apply (optional)
-
-- Splitting crates into smaller crates
-- Reducing the amount of dependencies
-- Disabling default Cargo features of dependencies
-- Creating a Cargo feature that makes certain dependencies (or their features) optional
-- Something else (open response)
-
 ### Do you use a nightly compiler to achieve better compilation performance?
 
 Please answer `Yes` if you use the `nightly` toolchain primarily for achieving better compilation performance, not for other reasons.
@@ -195,11 +192,24 @@ Please answer `Yes` if you use the `nightly` toolchain primarily for achieving b
 Type: select one (optional)
 
 - Yes
-- No
+- No [`NEXT`](#debugging)
+
+### How does using the nightly compiler help you achieve better compilation performance?
+
+Type: open answer (optional)
 
 ## Debugging
 
 ### How often do you use a debugger to debug your Rust code?
+
+Type: select one (optional)
+
+- Never or very rarely
+- Sometimes (e.g. once per week or less)
+- Often (e.g. multiple times per day)
+- Almost always (e.g. after almost every build)
+
+### How often do you use a profiler to profile your Rust code?
 
 Type: select one (optional)
 
