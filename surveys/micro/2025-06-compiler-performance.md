@@ -164,6 +164,7 @@ Type: select all that apply (optional)
 - Create a Cargo feature that makes certain dependencies (or their features) optional
 - Reduce usage of procedural macros
 - Reduce usage of generic code (e.g. by converting it to use `dyn Trait` instead)
+- Merge integration tests into a single binary
 - Something else (open response)
 
 ### If you use an alternative linker, which one do you use?
