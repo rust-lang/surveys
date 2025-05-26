@@ -67,28 +67,29 @@ Type: select all that apply (optional)
 - On a remote or cloud server
 - Other (open response)
 
-### Which compilation workflows are the most important to you?
+### Which development workflows limit your productivity?
 
-Please rate how important are the following compilation workflows to you, and how much do you currently struggle with their performance currently.
+Please rate how much do you struggle with compiler performance in the following development workflows.
 
 Type: matrix (optional)
 
 Workflows:
 
-- Unoptimized rebuild (change code, rebuild without optimizations)
-- Optimized rebuild (change code, rebuild with optimizations)
-- Workspace rebuild (change a crate which causes multiple other crates in your workspace to be rebuilt)
-- Clean unoptimized build (build a crate graph from scratch)
-- Clean optimized build (build a crate graph from scratch)
-- Build in a CI workflow
+- Unoptimized rebuilds (change code, rebuild without optimizations)
+- Optimized rebuilds (change code, rebuild with optimizations)
+- Workspace rebuilds (change a crate which causes multiple other crates in your workspace to be rebuilt)
+- Clean unoptimized builds (build a crate graph from scratch)
+- Clean optimized builds (build a crate graph from scratch)
+- CI (Continuous Integration) builds
+- Docker builds
 
 Priority:
 
-- Not so important for me
-- Important, compile times are acceptable for me
-- Important, compile times are a blocker for me
+- Big problem for me
+- Could be improved, but does not limit me
+- Not an issue for me at all
 
-### Do you have any other Rust development workflow that you would like to mention?
+### Do you have any other Rust development workflows that you would like to mention?
 
 Type: open response (optional)
 
@@ -150,9 +151,9 @@ Commands:
 
 Priority:
 
-- Not a problem for me
-- Could be improved
-- Big blocker for me
+- Big problem for me
+- Could be improved, but does not limit me
+- Not an issue for me at all
 
 ## Workarounds
 
@@ -167,13 +168,13 @@ Type: select all that apply (optional)
 - Cranelift codegen backend (e.g. set `codegen-backend = "cranelift"` in `Cargo.toml`)
 - Alternative linker (e.g. `lld`/`mold`/`wild`)
 - Caching compiler wrapper (e.g. `sccache`)
-- Share `target` directory amongst multiple projects (with `CARGO_TARGET_DIR`)
+- Share `target` directory amongst multiple projects (e.g. with `CARGO_TARGET_DIR`)
 - Split crates into smaller crates
 - Reduce the amount of dependencies
 - Disable default Cargo features of dependencies
 - Create a Cargo feature that makes certain dependencies (or their features) optional
 - Reduce usage of procedural macros
-- Reduce usage of generic code (e.g. by converting it to use `dyn Trait` instead)
+- Reduce usage of generic code (e.g. by converting it to `dyn Trait` instead)
 - Merge integration tests into a single binary
 - Something else (open response)
 
@@ -189,7 +190,7 @@ Type: select all that apply (optional)
 
 ### Do you use a global `config.toml` override?
 
-You can create a `config.toml` file in your `CARGO_HOME` directory (e.g. `~/.cargo/config.toml`) which can be used to apply certain compilation settings (e.g. using a faster linker) across all Cargo projects on your computer.
+You can create a `config.toml` file in your `CARGO_HOME` directory (e.g. `~/.cargo/config.toml`) which can be used to apply certain compilation settings (e.g. using a faster linker) across all Cargo projects on your computer. Do you make use of this?
 
 Type: select one (optional)
 
@@ -198,7 +199,7 @@ Type: select one (optional)
 
 ### Do you use a nightly compiler to achieve better compilation performance?
 
-Please answer `Yes` if you use the `nightly` toolchain primarily for achieving better compilation performance, not for other reasons.
+Please answer `Yes` only if you use the `nightly` toolchain primarily for achieving better compilation performance, not for other reasons.
 
 Type: select one (optional)
 
@@ -229,7 +230,7 @@ Type: select one (optional)
 - Often (e.g. multiple times per day)
 - Almost always (e.g. after almost every build)
 
-### Do you require unoptimized builds to be debuggable by default?
+### Do you require unoptimized builds to have debuginfo by default?
 
 `cargo build` with the default `dev` profile produces full debug information (debuginfo) by default. This enables debugging using a debugger, but it can also make compilation times slower (by varying amounts, e.g. 30%). In order to improve compilation performance, this debuginfo could be lowered e.g. to `line-tables-only` by default, which still enables rich backtrace information, but does not allow proper debugging.
 
