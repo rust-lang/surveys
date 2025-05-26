@@ -188,15 +188,6 @@ Type: select all that apply (optional)
 - wild
 - Other (open response)
 
-### Do you use a global `config.toml` override?
-
-You can create a `config.toml` file in your `CARGO_HOME` directory (e.g. `~/.cargo/config.toml`) which can be used to apply certain compilation settings (e.g. using a faster linker) across all Cargo projects on your computer. Do you make use of this?
-
-Type: select one (optional)
-
-- Yes
-- No
-
 ### Do you use a nightly compiler to achieve better compilation performance?
 
 Please answer `Yes` only if you use the `nightly` toolchain primarily for achieving better compilation performance, not for other reasons.
