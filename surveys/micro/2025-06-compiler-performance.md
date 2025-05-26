@@ -1,10 +1,10 @@
 # Survey questions
 
-The goal of this survey is to figure out how much do Rust users struggle with compilation times and which compilation workflows are the most relevant for them. We would like to use this data so that we can focus the efforts of Rust compiler contributors on the areas of compilation performance that matter the most to our users.
+The goal of this survey is to figure out how much do Rust users struggle with compilation times and which development workflows are the most relevant for them. We would like to use this data so that we can focus the efforts of Rust compiler contributors on the areas of compilation performance that matter the most to our users.
 
-Your feedback is much appreciated. This survey is fully anonymous. The Rust survey team will go through the answers and release a summary on the Rust blog after the survey is complete.
+Your feedback is much appreciated!
 
-## User classification
+This survey is fully anonymous. The Rust survey team will go through the answers and release a summary on the Rust blog after the survey is complete.
 
 ### Do you use Rust?
 
@@ -12,7 +12,7 @@ Type: select one
 
 - Yes, I use Rust [`NEXT`](#do-you-code-in-rust-at-a-company)
 - No, I don't currently use Rust, but I have in the past [`NEXT`](#were-long-compilation-times-the-primary-reason-why-you-stopped-using-rust)
-- No, I have never used Rust [`NEXT`](#other)
+- No, I have never used Rust [`NEXT`](#is-there-anything-else-related-to-rust-compiler-performance-that-you-would-like-to-tell-us)
 
 ### Were long compilation times the primary reason why you stopped using Rust?
 
@@ -20,7 +20,11 @@ Type: select one
 
 - Yes
 - No, but it was one of the reasons why I stopped using Rust
-- No
+- No [`NEXT`](#is-there-anything-else-related-to-rust-compiler-performance-that-you-would-like-to-tell-us)
+
+Please answer the following questions based on how did you use Rust before you stopped using it.
+
+## User classification
 
 ### Which operating systems do you use regularly for Rust development?
 
@@ -47,9 +51,9 @@ Type: select one (optional)
 - Yes (501-5000 employees)
 - Yes (more than 5000 employees)
 
-## Workflows
+## Development workflows
 
-### Which builds system do you use to build Rust code?
+### Which build systems do you use to build Rust code?
 
 Type: select all that apply (optional)
 
@@ -63,7 +67,7 @@ Type: select all that apply (optional)
 Type: select all that apply (optional)
 
 - On my local computer
-- On CI infrastructure
+- On CI (Continuous Integration) infrastructure
 - On a remote or cloud server
 - Other (open response)
 
@@ -83,41 +87,16 @@ Workflows:
 - CI (Continuous Integration) builds
 - Docker builds
 
-Priority:
+Options:
 
 - Big problem for me
 - Could be improved, but does not limit me
 - Not an issue for me at all
+- I do not use this workflow
 
 ### Do you have any other Rust development workflows that you would like to mention?
 
-Type: open response (optional)
-
-### How do you primarily examine compilation errors in your code?
-
-Type: select all that apply (optional)
-
-- Using code editor (e.g. inline annotations)
-- Using terminal commands (e.g. `cargo check`)
-- Other (open response)
-
-### If you use Cargo, how often do you use the following commands after each change to Rust code?
-
-Type: matrix (optional)
-
-Commands:
-
-- `cargo check`
-- `cargo clippy`
-- `cargo test`
-- `cargo run` / `cargo build`
-
-Frequency:
-
-- After every code change
-- Only after I have resolved other issues
-- Only after I am done (e.g. before creating a commit or pushing to a remote branch)
-- Never
+Type: free form (optional)
 
 ### How long do you need to wait for the compiler to rebuild your code after making a change?
 
@@ -143,17 +122,43 @@ Commands:
 
 - Waiting for a rebuild after making a small change
 - Waiting for CI workflows that build Rust code
-- `cargo check` and `cargo build` not sharing compilation cache
-- `cargo check` and `cargo clippy` not sharing compilation cache
 - Waiting for an IDE to show me inline error/warning annotations
-- `cargo` rebuilding everything from scratch and I do not understand why
-- `cargo` and my IDE blocking each other
+- *cargo* and my IDE blocking each other
+- *cargo check* and *cargo build* not sharing compilation cache
+- *cargo check* and *cargo clippy* not sharing compilation cache
+- *cargo* rebuilding everything from scratch and I do not understand why
 
-Priority:
+Options:
 
 - Big problem for me
 - Could be improved, but does not limit me
 - Not an issue for me at all
+
+### How do you primarily examine compilation errors in your code?
+
+Type: select all that apply (optional)
+
+- Using code editor (e.g. inline annotations)
+- Using terminal commands (e.g. *cargo check*)
+- Other (open response)
+
+### If you use Cargo, how often do you use the following commands after each change to Rust code?
+
+Type: matrix (optional)
+
+Commands:
+
+- *cargo check*
+- *cargo clippy*
+- *cargo test*
+- *cargo run* / *cargo build*
+
+Frequency:
+
+- After every code change
+- Only after I have resolved other issues
+- Only after I am done (e.g. before committing code)
+- Never
 
 ## Workarounds
 
@@ -172,7 +177,7 @@ Type: select all that apply (optional)
 - Split crates into smaller crates
 - Reduce the amount of dependencies
 - Disable default Cargo features of dependencies
-- Create a Cargo feature that makes certain dependencies (or their features) optional
+- Create a Cargo feature to opt into building certain dependencies (or their features)
 - Reduce usage of procedural macros
 - Reduce usage of generic code (e.g. by converting it to `dyn Trait` instead)
 - Merge integration tests into a single binary
@@ -190,18 +195,18 @@ Type: select all that apply (optional)
 
 ### Do you use a nightly compiler to achieve better compilation performance?
 
-Please answer `Yes` only if you use the `nightly` toolchain primarily for achieving better compilation performance, not for other reasons.
+Please answer `Yes` only if you use the *nightly* toolchain primarily for achieving better compilation performance, not for other reasons.
 
 Type: select one (optional)
 
 - Yes
-- No [`NEXT`](#debugging)
+- No [`NEXT`](#debugging-and-profiling)
 
 ### How does using the nightly compiler help you achieve better compilation performance?
 
-Type: open answer (optional)
+Type: free form (optional)
 
-## Debugging
+## Debugging and profiling
 
 ### How often do you use a debugger to debug your Rust code?
 
@@ -223,7 +228,7 @@ Type: select one (optional)
 
 ### Do you require unoptimized builds to have debuginfo by default?
 
-`cargo build` with the default `dev` profile produces full debug information (debuginfo) by default. This enables debugging using a debugger, but it can also make compilation times slower (by varying amounts, e.g. 30%). In order to improve compilation performance, this debuginfo could be lowered e.g. to `line-tables-only` by default, which still enables rich backtrace information, but does not allow proper debugging.
+*cargo build* with the default `dev` profile produces full debug information (debuginfo) by default. This enables debugging using a debugger, but it can also make compilation times slower (by varying amounts, e.g. 30%). In order to improve compilation performance, this debuginfo could be lowered e.g. to `line-tables-only` by default, which still enables rich backtrace information, but does not allow proper debugging.
 
 Type: select one (optional)
 
@@ -259,8 +264,6 @@ Type: select one (optional)
 - 33-64 GiB
 - More than 64 GiB
 
-## Other
-
 ### Is there anything else related to Rust compiler performance that you would like to tell us?
 
-Type: free text (optional)
+Type: free form (optional)
