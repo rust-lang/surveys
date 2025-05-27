@@ -148,10 +148,10 @@ Type: matrix (optional)
 
 Commands:
 
-- *cargo check*
-- *cargo clippy*
-- *cargo test*
-- *cargo run* / *cargo build*
+- cargo check
+- cargo clippy
+- cargo test
+- cargo run / cargo build
 
 Frequency:
 
@@ -168,18 +168,18 @@ Please select only mechanisms/workarounds that you have used at least once **pri
 
 Type: select all that apply (optional)
 
-- Disable (or reduce) debuginfo (e.g. set `debug = 0` in `Cargo.toml`)
-- Parallel compiler frontend (pass `-Zthreads=<N>` to the compiler)
-- Cranelift codegen backend (e.g. set `codegen-backend = "cranelift"` in `Cargo.toml`)
-- Alternative linker (e.g. `lld`/`mold`/`wild`)
-- Caching compiler wrapper (e.g. `sccache`)
-- Share `target` directory amongst multiple projects (e.g. with `CARGO_TARGET_DIR`)
+- Disable (or reduce) debuginfo (e.g. set *debug = 0* in Cargo.toml)
+- Parallel compiler frontend (pass *-Zthreads=<N>* to the compiler)
+- Cranelift codegen backend (e.g. set *codegen-backend = "cranelift"* in Cargo.toml)
+- Alternative linker (e.g. lld/mold/wild)
+- Caching compiler wrapper (e.g. sccache)
+- Share *target* directory amongst multiple projects (e.g. with CARGO_TARGET_DIR)
 - Split crates into smaller crates
 - Reduce the amount of dependencies
 - Disable default Cargo features of dependencies
 - Create a Cargo feature to opt into building certain dependencies (or their features)
 - Reduce usage of procedural macros
-- Reduce usage of generic code (e.g. by converting it to `dyn Trait` instead)
+- Reduce usage of generic code (e.g. by converting it to *dyn Trait* instead)
 - Merge integration tests into a single binary
 - Something else (open response)
 
@@ -195,7 +195,7 @@ Type: select all that apply (optional)
 
 ### Do you use a nightly compiler to achieve better compilation performance?
 
-Please answer `Yes` only if you use the *nightly* toolchain primarily for achieving better compilation performance, not for other reasons.
+Please answer *Yes* only if you use the *nightly* toolchain primarily for achieving better compilation performance, not for other reasons.
 
 Type: select one (optional)
 
@@ -228,7 +228,7 @@ Type: select one (optional)
 
 ### Do you require unoptimized builds to have debuginfo by default?
 
-*cargo build* with the default `dev` profile produces full debug information (debuginfo) by default. This enables debugging using a debugger, but it can also make compilation times slower (by varying amounts, e.g. 30%). In order to improve compilation performance, this debuginfo could be lowered e.g. to `line-tables-only` by default, which still enables rich backtrace information, but does not allow proper debugging.
+*cargo build* with the default *dev* profile produces full debug information (debuginfo) by default. This enables debugging using a debugger, but it can also make compilation times slower (by varying amounts, e.g. 30%). In order to improve compilation performance, this debuginfo could be lowered e.g. to *line-tables-only* by default, which still enables rich backtrace information, but does not allow proper debugging.
 
 Type: select one (optional)
 
