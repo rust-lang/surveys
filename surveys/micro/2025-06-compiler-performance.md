@@ -160,6 +160,23 @@ Frequency:
 - Only after I am done (e.g. before committing code)
 - Never
 
+### Are you aware of the following tools for profiling Rust compilation?
+
+Type: matrix (optional)
+
+Tools:
+
+- Compiler self profiler (*-Zself-profile*)
+- Compiler pass analysis (*-Ztime-passes*)
+- LLVM function instantiation analysis (*cargo-llvm-lines*)
+- Cargo timings (*cargo build --timings*)
+
+Familiarity:
+
+- I use it
+- I know about it, but do not use it
+- Never heard of it
+
 ## Workarounds
 
 ### Have you used any of the following mechanisms to improve compilation performance?
