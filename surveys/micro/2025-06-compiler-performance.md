@@ -181,9 +181,11 @@ Familiarity:
 
 ### Have you used any of the following mechanisms to improve compilation performance?
 
-Please select only mechanisms/workarounds that you have used at least once **primarily** in order to improve compilation performance, not for other reasons.
+Note that answers are optional, if you do not fill an answer for a specific row, we will assume it to mean that you haven't used that mechanism.
 
-Type: select all that apply (optional)
+Type: matrix (optional)
+
+Mechanisms:
 
 - Disable (or reduce) debuginfo (e.g. set *debug = 0* in Cargo.toml)
 - Parallel compiler frontend (pass *-Zthreads=<N>* to the compiler)
@@ -198,7 +200,13 @@ Type: select all that apply (optional)
 - Reduce usage of procedural macros
 - Reduce usage of generic code (e.g. by converting it to *dyn Trait* instead)
 - Merge integration tests into a single binary
-- Something else (open response)
+
+Results:
+
+- It helps me improve compile times
+- I tried it, but it didn't help
+- I know of it, but haven't tried it
+- Never heard of it
 
 ### If you use an alternative linker, which one do you use?
 
@@ -220,6 +228,10 @@ Type: select one (optional)
 - No [`NEXT`](#debugging-and-profiling)
 
 ### How does using the nightly compiler help you achieve better compilation performance?
+
+Type: free form (optional)
+
+### Is there some other mechanism for improving compilation performance that you use?
 
 Type: free form (optional)
 
