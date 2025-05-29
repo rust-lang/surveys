@@ -45,13 +45,15 @@ If yes, what is the approximate size of the company?
 
 Type: select one (optional)
 
-- No, I do not code in Rust in a company
+- No, I don't code in Rust in a company
 - Yes (1-50 employees)
 - Yes (51-500 employees)
 - Yes (501-5000 employees)
 - Yes (more than 5000 employees)
 
 ## Development workflows
+
+Here we would like to understand what kinds of workflows you use when compiling Rust code. If you work on multiple projects with diverse workflows, please primarily focus on use-case(s) where you most struggle with compilation performance.
 
 ### Which build systems do you use to build Rust code?
 
@@ -92,11 +94,39 @@ Options:
 - Big problem for me
 - Could be improved, but does not limit me
 - Not an issue for me at all
-- I do not use this workflow
+- I don't use this workflow
 
 ### Do you have any other Rust development workflows that you would like to mention?
 
 Type: free form (optional)
+
+### How large is the Rust project that you work on in terms of lines of Rust code?
+
+Please provide an answer for the Rust project where you most struggle with compilation times. Only include the lines of Rust code of your project, not of its dependencies. You can count the lines of code e.g. using [tokei](https://github.com/XAMPPRocky/tokei).
+
+Type: select one (optional)
+
+- Less than 2 thousand lines
+- 2-10 thousand lines
+- 11-50 thousand lines
+- 51-100 thousand lines
+- 101-500 thousand lines
+- More than 500 thousand lines of code
+
+### How large is the Rust project that you work on in terms of (Cargo) dependencies?
+
+Please provide an answer for the Rust project where you most struggle with compilation times. Include the number of external/third-party dependencies/crates (including transitive ones) compiled when you run e.g. *cargo build*.
+
+Type: select one (optional)
+
+- No dependencies
+- 1-10 dependencies
+- 11-50 dependencies
+- 51-100 dependencies
+- 101-200 dependencies
+- 201-300 dependencies
+- 301-500 dependencies
+- More than 500 dependencies
 
 ### How long do you need to wait for the compiler to rebuild your code after making a change?
 
@@ -174,7 +204,7 @@ Tools:
 Familiarity:
 
 - I use it
-- I know about it, but do not use it
+- I know of it, but don't use it
 - Never heard of it
 
 ## Workarounds
