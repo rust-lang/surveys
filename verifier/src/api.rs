@@ -28,8 +28,14 @@ impl Client {
             .inner
             .get("https://api.surveyhero.com/v1/surveys")
             .basic_auth(&self.username, Some(&self.password))
-            .send()?
-            .error_for_status()?;
+            .send()?;
+        let status = response.status();
+        if !status.is_success() {
+            let text = response.text()?;
+            return Err(anyhow::anyhow!(
+                "HTTP error status {status} while fetching surveys:\n{text}"
+            ));
+        }
         let surveys: Surveys = response.json()?;
         Ok(surveys.surveys)
     }
