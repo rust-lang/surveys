@@ -15,20 +15,22 @@ fn main() -> anyhow::Result<()> {
     let args = Args::parse();
     let online_data = fetch_surveyhero_data(args.cmd.shared())?;
 
-    let base_path = PathBuf::from(format!(
-        "../surveys/{}-annual-survey",
-        args.cmd.shared().year
-    ));
-    let mut pairs = vec![(base_path.join("questions.md"), online_data.main)];
-    for (language, questions) in online_data.secondary_languages {
-        pairs.push((
-            base_path
-                .join("translations")
-                .join(language)
-                .with_extension("md"),
-            questions,
-        ));
-    }
+    let base_path = PathBuf::from(format!("../surveys/{}", args.cmd.shared().path));
+    let pairs = if base_path.is_dir() {
+        let mut pairs = vec![(base_path.join("questions.md"), online_data.main)];
+        for (language, questions) in online_data.secondary_languages {
+            pairs.push((
+                base_path
+                    .join("translations")
+                    .join(language)
+                    .with_extension("md"),
+                questions,
+            ));
+        }
+        pairs
+    } else {
+        vec![(base_path, online_data.main)]
+    };
 
     match args.cmd {
         VerifierCmd::Check { .. } => {
@@ -318,9 +320,9 @@ struct SharedArgs {
     /// Name of the survey.
     #[clap(long)]
     survey_name: String,
-    /// Year of the survey. Corresponds to `surveys/<year>-annual-survey` directory.
+    /// Survey path. Corresponds to a Markdown file or a directory at `surveys/<path>`.
     #[clap(long)]
-    year: u32,
+    path: String,
 }
 
 #[derive(clap::Parser, Clone)]
