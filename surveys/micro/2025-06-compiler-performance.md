@@ -81,6 +81,8 @@ Type: matrix (optional)
 
 Workflows:
 
+- Type checking (change code, type check using *cargo check* or IDE)
+- Running tests (change code, run tests *cargo test* or IDE)
 - Unoptimized rebuilds (change code, rebuild without optimizations)
 - Optimized rebuilds (change code, rebuild with optimizations)
 - Workspace rebuilds (change a crate which causes multiple other crates in your workspace to be rebuilt)
