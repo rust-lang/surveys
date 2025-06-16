@@ -39,6 +39,9 @@ pub fn render_questions(questions: &[Question], file: &Path) -> io::Result<()> {
                     writeln!(file, "- {col}")?;
                 }
             }
+            Question::RatingScale { .. } => {
+                writeln!(file, "Type: rating scale\n")?;
+            }
         }
         writeln!(file)?;
     }
