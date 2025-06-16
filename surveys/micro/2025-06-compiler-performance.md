@@ -102,6 +102,15 @@ Options:
 
 Type: free form (optional)
 
+### Do you use any caching to speed up CI builds?
+
+Type: select all that apply (optional)
+
+- rust-cache or other similar action
+- sccache
+- cargo-chef
+- Other (open response)
+
 ### How large is the Rust project that you work on in terms of lines of Rust code?
 
 Please provide an answer for the Rust project where you most struggle with compilation times. Only include the lines of Rust code of your project, not of its dependencies. You can count the lines of code e.g. using [tokei](https://github.com/XAMPPRocky/tokei).
