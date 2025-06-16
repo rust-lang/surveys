@@ -220,6 +220,8 @@ Familiarity:
 
 ## Workarounds
 
+Here we would like to find out what workarounds you use to improve compilation performance.
+
 ### Have you used any of the following mechanisms to improve compilation performance?
 
 Note that answers are optional, if you do not fill an answer for a specific row, we will assume it to mean that you haven't used that mechanism.
@@ -237,7 +239,7 @@ Mechanisms:
 - Split crates into smaller crates
 - Reduce the amount of dependencies
 - Disable default Cargo features of dependencies
-- Create a Cargo feature to opt into building certain dependencies (or their features)
+- Create a Cargo feature to make certain dependencies (or their features) opt-in
 - Reduce usage of procedural macros
 - Reduce usage of generic code (e.g. by converting it to *dyn Trait* instead)
 - Merge integration tests into a single binary
@@ -278,6 +280,8 @@ Type: free form (optional)
 
 ## Debugging and profiling
 
+Here we would like to find out if you use debuginfo in Rust programs.
+
 ### How often do you use a debugger to debug your Rust code?
 
 Type: select one (optional)
@@ -298,12 +302,13 @@ Type: select one (optional)
 
 ### Do you require unoptimized builds to have debuginfo by default?
 
-*cargo build* with the default *dev* profile produces full debug information (debuginfo) by default. This enables debugging using a debugger, but it can also make compilation times slower (by varying amounts, e.g. 30%). In order to improve compilation performance, this debuginfo could be lowered e.g. to *line-tables-only* by default, which still enables rich backtrace information, but does not allow proper debugging.
+*cargo build* with the default *dev* profile produces full debug information (debuginfo) by default, including full debuginfo for all your dependencies. This enables debugging using a debugger, but it can also make compilation times slower (by varying amounts, e.g. 5-30%). In order to improve compilation performance, this debuginfo could be lowered e.g. to *line-tables-only* by default, which still enables rich backtrace information, but does not allow proper debugging.
 
 Type: select one (optional)
 
 - Yes, I want full debuginfo by default
-- No, I would prefer faster compilation with less debuginfo by default
+- Yes, but I do not need full debuginfo for my dependencies, just for my code
+- No, I would prefer slightly faster compilation with less debuginfo by default
 
 ## Hardware
 
@@ -311,7 +316,7 @@ Here we would like to get basic hardware information about the computer/server t
 
 ### How many cores does your computer have?
 
-Please count physical CPU cores, not including hyperthreads. If you do not know what are hyperthreads, just enter a number of cores that you think your computer has.
+Please enter the number of "hardware threads" (including hyperthreads). If you do not know what are hyperthreads, just enter a number of cores that you think your computer has.
 
 Type: select one (optional)
 
@@ -333,6 +338,10 @@ Type: select one (optional)
 - 17-32 GiB
 - 33-64 GiB
 - More than 64 GiB
+
+### Overall, how satisfied are you with Rust compilation performance?
+
+Type: rating scale (optional)
 
 ### Is there anything else related to Rust compiler performance that you would like to tell us?
 
