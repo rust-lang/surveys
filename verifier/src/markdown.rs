@@ -49,6 +49,11 @@ pub fn parse(markdown: &str) -> anyhow::Result<Vec<Question>> {
                     })
                 } else if typ.starts_with("matrix") {
                     ParserState::HalfMatrixText(text)
+                } else if typ.starts_with("rating scale") {
+                    ParserState::Question(Question {
+                        text,
+                        answers: Answers::RatingScale,
+                    })
                 } else {
                     bail!("illegal question type: type='{}' question='{}'", typ, text);
                 }
@@ -182,6 +187,7 @@ impl<'a> Question<'a> {
 #[derive(Debug, Clone)]
 pub enum Answers<'a> {
     FreeForm,
+    RatingScale,
     SelectOne(Vec<&'a str>),
     SelectMany(Vec<&'a str>),
     Matrix {
@@ -200,6 +206,7 @@ impl Answers<'_> {
                 answers1, answers2, ..
             } => answers1.is_empty() || answers2.is_empty(),
             Self::FreeForm => false,
+            Self::RatingScale => false,
         }
     }
 }

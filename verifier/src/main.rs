@@ -185,6 +185,7 @@ impl markdown::Question<'_> {
                     );
                 }
             }
+            (markdown::Answers::RatingScale, Question::RatingScale { .. }) => {}
             _ => {
                 return Comparison::QuestionTypesDiffer {
                     question: self.text.to_owned(),
@@ -228,6 +229,7 @@ enum QuestionType {
     SelectOne,
     SelectMany,
     Matrix,
+    RatingScale,
 }
 
 impl<'a> From<&'a Question> for QuestionType {
@@ -253,6 +255,7 @@ impl From<&markdown::Question<'_>> for QuestionType {
             markdown::Answers::SelectOne(_) => Self::SelectOne,
             markdown::Answers::SelectMany(_) => Self::SelectMany,
             markdown::Answers::Matrix { .. } => Self::Matrix,
+            markdown::Answers::RatingScale => Self::RatingScale,
         }
     }
 }

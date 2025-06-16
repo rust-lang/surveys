@@ -145,6 +145,8 @@ pub enum Question {
         question_text: String,
         choice_table: ChoiceTable,
     },
+    #[serde(rename = "rating_scale")]
+    RatingScale { question_text: String },
 }
 
 impl Question {
@@ -153,6 +155,7 @@ impl Question {
             Self::ChoiceList { question_text, .. } => question_text,
             Self::Input { question_text, .. } => question_text,
             Self::ChoiceTable { question_text, .. } => question_text,
+            Self::RatingScale { question_text } => question_text,
         })
     }
 
