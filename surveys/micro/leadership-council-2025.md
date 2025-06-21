@@ -39,6 +39,28 @@ See also our [spending/budget](https://github.com/rust-lang/leadership-council/b
 
 [duties]: https://rust-lang.github.io/rfcs/3392-leadership-council.html#duties-expectations-and-constraints-on-the-council
 
+### Do you consider yourself a member of the Rust Project?
+
+Type: select one (required)
+
+- Yes
+- No
+
+### What teams/areas of the project do you regularly participate in?
+
+This question aims to provide us with feedback on areas of the project that we
+may not be addressing as well (or areas we're doing better in).
+
+Type: select one or more (optional)
+
+- Compiler
+- Dev Tools
+- Launching Pad
+- Library
+- Infrastructure
+- Moderation
+- Language
+
 ### Tracking and delegating work
 
 > Identifying, prioritizing, and tracking work that goes undone due to lack of
