@@ -28,6 +28,15 @@ summary after the survey is complete, similar to the one published
 For each of the key [duties] outlined in RFC 3392 (quoted below), we'd like your
 input on how well the Council is performing against that duty.
 
+You may want to (re)read the last ~year of regular updates from the Council to help build context:
+
+* [2024 Q3](https://blog.rust-lang.org/inside-rust/2024/09/06/leadership-council-update/)
+* [2024 Q4](https://blog.rust-lang.org/inside-rust/2024/12/09/leadership-council-update/)
+* [2025 Q1](https://blog.rust-lang.org/inside-rust/2025/03/17/leadership-council-update/)
+* [2025 Q2](https://blog.rust-lang.org/inside-rust/2025/06/11/leadership-council-update/)
+
+See also our [spending/budget](https://github.com/rust-lang/leadership-council/blob/main/policies/spending/budget.md).
+
 [duties]: https://rust-lang.github.io/rfcs/3392-leadership-council.html#duties-expectations-and-constraints-on-the-council
 
 ### Tracking and delegating work
@@ -38,8 +47,6 @@ input on how well the Council is performing against that duty.
 >
 > Delegating this work, potentially establishing new (and possibly temporary)
 > teams to own this work.
-
-FIXME: Maybe link to work we've done in this category?
 
 Type: select one (optional)
 
@@ -53,8 +60,6 @@ Type: select one (optional)
 ### Project-wide coordination
 
 > Coordinating Project-wide changes to teams, structures, or processes.
-
-FIXME: Maybe link to work we've done in this category?
 
 Type: select one (optional)
 
@@ -70,8 +75,6 @@ Type: select one (optional)
 > Ensuring top-level teams are accountable to their purviews, to other teams,
 > and to the Project.
 
-FIXME: Maybe link to work we've done in this category?
-
 Type: select one (optional)
 
 - Strongly Agree
@@ -86,8 +89,6 @@ Type: select one (optional)
 > Ensuring where possible that teams have the people and resources they need to
 > accomplish their work.
 
-FIXME: Maybe link to work we've done in this category?
-
 Type: select one (optional)
 
 - Strongly Agree
@@ -101,8 +102,6 @@ Type: select one (optional)
 
 > Establishing the official position, opinion, or will of the Rust Project as a
 > whole. 
-
-FIXME: Maybe cut this -- not sure how distinct it practically becomes from the previous point.
 
 Type: select one (optional)
 
