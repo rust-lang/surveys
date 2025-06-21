@@ -134,6 +134,22 @@ Type: select one (optional)
 - Strongly Disagree
 - Not enough information to comment.
 
+### Accessibility of council members
+
+Do you feel that if you needed to, you could reach out to the Council as a whole or your particular
+Council representative? This includes both knowing who to contact and your
+feeling that your perspective would be heard.
+
+Type: select one (optional)
+
+- Strongly Agree
+- Agree
+- Unsure
+- Disagree
+- Strongly Disagree
+- Not enough information to comment.
+
+
 ### Are there areas of the Leadership Council that you think are going well?
 
 Type: free text (optional)
