@@ -23,6 +23,32 @@ This survey is anonymous. The Council will go through all answers and release a
 summary after the survey is complete, similar to the one published
 [last year](https://blog.rust-lang.org/2024/08/26/council-survey/).
 
+## Who are you?
+
+These questions will help us determine if there's differences in how we're
+doing across areas of the project.
+
+### Do you consider yourself a member of the Rust Project?
+
+Type: select one (required)
+
+- Yes
+- No
+
+### What teams/areas of the project do you regularly participate in?
+
+Note that these are the top-level teams for lack of better project "areas".
+
+Type: select one or more (optional)
+
+- Compiler
+- Dev Tools
+- Launching Pad
+- Library
+- Infrastructure
+- Moderation
+- Language
+
 ## Leadership Council Effectiveness
 
 For each of the key [duties] outlined in RFC 3392 (quoted below), we'd like your
@@ -39,27 +65,6 @@ See also our [spending/budget](https://github.com/rust-lang/leadership-council/b
 
 [duties]: https://rust-lang.github.io/rfcs/3392-leadership-council.html#duties-expectations-and-constraints-on-the-council
 
-### Do you consider yourself a member of the Rust Project?
-
-Type: select one (required)
-
-- Yes
-- No
-
-### What teams/areas of the project do you regularly participate in?
-
-This question aims to provide us with feedback on areas of the project that we
-may not be addressing as well (or areas we're doing better in).
-
-Type: select one or more (optional)
-
-- Compiler
-- Dev Tools
-- Launching Pad
-- Library
-- Infrastructure
-- Moderation
-- Language
 
 ### Tracking and delegating work
 
