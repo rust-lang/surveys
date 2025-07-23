@@ -153,7 +153,7 @@ def render_blog_chart(arg) -> RenderedChart:
 
 
 def render_blog_post(
-    template: Path, blog_root: Path, resource_dir: str, report: ChartReport
+        template: Path, blog_root: Path, resource_dir: str, report: ChartReport
 ):
     """
     Render a Rust Blog post containing special placeholders that will render as SurveyHero charts from the given `report`.
@@ -283,18 +283,17 @@ def render_pdf_page(args) -> Tuple[str, str, Union[str, bytes]]:
 
 
 def render_report_to_pdf(
-    report: ChartReport, output: Path, title: str, include_labels=False
+        report: ChartReport, output: Path, title: str, include_labels=False
 ):
     """
     Renders a PDF report containing all charts from the given `report` into the `output` path.
     """
-    import elsie
-    from elsie.render.backends.cairo.backend import CairoBackend
+    import nelsie
 
     # A4 format
-    slides = elsie.SlideDeck(backend=CairoBackend(), width=595, height=842)
+    slides = nelsie.SlideDeck(width=595, height=842)
     slide = slides.new_slide()
-    slide.box().text(title)
+    slide.text(title, align="center")
 
     print("Rendering charts")
 
@@ -303,26 +302,25 @@ def render_report_to_pdf(
     args = [(report, name) for name in report.charts.keys()]
     with mp.Pool() as pool:
         for name, format, result in tqdm.tqdm(
-            pool.imap(render_pdf_page, args), total=len(args)
+                pool.imap(render_pdf_page, args), total=len(args)
         ):
             slide = slides.new_slide()
 
             if name.endswith("-wordcloud"):
                 slide.box(y=150).text(
                     "Wordcloud of open answers for the previous chart:",
-                    style=elsie.TextStyle(size=20),
+                    style=nelsie.TextStyle(size=20),
                 )
 
-            box = slide.box(width="95%")
             if format == "png":
-                box.image(result, image_type="png")
+                slide.image((result, "png"), width="90%")
             elif format == "svg":
-                box.image(result)
+                slide.image(result, width="90%")
                 os.unlink(result)
             else:
                 assert False
             if include_labels:
-                slide.box(x=5, y=5).text(name, style=elsie.TextStyle(size=10))
+                slide.box(x=5, y=5).text(name, style=nelsie.TextStyle(size=10))
     print("Rendering PDF")
     slides.render(str(output))
 
