@@ -47,7 +47,21 @@ class MatrixQuestion:
         return dataclasses.replace(self, answer_groups=answer_groups)
 
 
-QuestionKind = Union[SimpleQuestion, MatrixQuestion]
+@dataclasses.dataclass
+class RatingAnswer:
+    answer: Answer
+    rating: int
+
+
+@dataclasses.dataclass
+class RatingQuestion:
+    answers: List[RatingAnswer]
+
+    def rename_answers(self, _diff: Dict[str, str]) -> "RatingQuestion":
+        return self
+
+
+QuestionKind = Union[SimpleQuestion, MatrixQuestion, RatingQuestion]
 
 
 @dataclasses.dataclass

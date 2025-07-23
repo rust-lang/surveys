@@ -3,7 +3,8 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
-from .survey import SurveyFullAnswers, Question, MatrixQuestion, Answer, SimpleQuestion, SurveyReport
+from .survey import SurveyFullAnswers, Question, MatrixQuestion, Answer, SimpleQuestion, \
+    SurveyReport, RatingQuestion, RatingAnswer
 
 
 def parse_surveyhero_answers(path: Path, year: int) -> SurveyFullAnswers:
@@ -46,13 +47,15 @@ def parse_surveyhero_report(path: Path, year: int) -> SurveyReport:
         questions = []
 
         for row in csv.reader(f):
-            if row and "Answer" in row:
+            if row and ("Answer" in row or "Rating" in row):
                 if active_question is not None:
                     questions.append(active_question)
                 question = row[0]
                 kind = SimpleQuestion(answers=[])
                 if row[1] == "Row":
                     kind = MatrixQuestion(answer_groups=defaultdict(list))
+                elif row[2] == "Rating":
+                    kind = RatingQuestion(answers=[])
 
                 count = int(COUNT_REGEX.search(question).group(1))
                 question = question[:question.rindex("(")].strip()
@@ -69,7 +72,7 @@ def parse_surveyhero_report(path: Path, year: int) -> SurveyReport:
                 if all(r == "" for r in row):
                     # Empty row
                     continue
-                elif "Average" in row or "Standard Deviation" in row:
+                elif "Average" in row or "Standard Deviation" in row or "Net Promoter Score" in row:
                     # Statistics
                     continue
                 else:
@@ -87,6 +90,16 @@ def parse_surveyhero_report(path: Path, year: int) -> SurveyReport:
                         active_question.kind.answer_groups[group].append(Answer(
                             answer=normalize_answer(answer),
                             count=count,
+                        ))
+                    elif isinstance(active_question.kind, RatingQuestion):
+                        label = row[1]
+                        rating = int(row[2])
+                        count = int(row[3])
+                        active_question.kind.answers.append(RatingAnswer(
+                            answer=Answer(
+                                answer=normalize_answer(label),
+                                count=count),
+                            rating=rating
                         ))
                     else:
                         print(row)
