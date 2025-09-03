@@ -484,13 +484,14 @@ Type: select all that apply (optional)
 >
 > cargo team expressed interest in this, see https://rust-lang.zulipchat.com/#narrow/stream/246057-t-cargo/topic/Rust.20survery.202023/near/393816653
 
-### How do you download crates to build Rust projects?
+### From where do you download crates to build Rust projects?
 
 Type: select all that apply (optional)
 
-- I use crates.io
-- I use a custom/local/company registry
-- I use a mirror of crates.io
+- crates.io
+- Custom/local/company registry
+- Mirror of crates.io
+- git repositories
 - I don't know
 
 > **justification**
