@@ -22,7 +22,8 @@ def print_question_index(path: Path, new: SurveyReport, old: Optional[SurveyRepo
     else:
         with open(path, "w") as f:
             for (index, question) in enumerate(new.questions):
-                print(f"{new.year}/{index}: {question.question}", file=f)
+                kind = question.kind.__class__.__name__
+                print(f"{new.year}/{index} ({kind}): {question.question}", file=f)
 
 
 def print_answer_index(answers: SurveyFullAnswers, report: SurveyReport, path: Path):
