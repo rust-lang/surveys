@@ -120,11 +120,11 @@ some other goal). If your learning process spans several of the listed time peri
 Type: select one (optional)
 
 - I'm still *actively* trying to learn Rust
-- During 2024
-- During 2022 or 2023
-- During 2020 or 2021
-- During 2018 or 2019
-- During 2017 or before
+- During 2025
+- During 2023 or 2024
+- During 2021 or 2022
+- During 2020 or 2019
+- During 2018 or before
 
 > **justification**
 >
@@ -261,8 +261,8 @@ Type: select all that apply (optional)
 
 - Current stable version
 - Previous stable version
-- A specific version of stable Rust equal to or newer than 1.75
-- A specific version of stable Rust older than 1.75
+- A specific version of stable Rust equal to or newer than 1.83
+- A specific version of stable Rust older than 1.83
 - Beta release
 - Latest nightly
 - A specific version of nightly
@@ -274,7 +274,7 @@ Type: select all that apply (optional)
 >
 > Together with the following question, we can better determine what the spread of 
 > version usage is across the community.
-> We ask specifically about version 1.75 since it is, at the time of the survey, the 
+> We ask specifically about version 1.83 since it is, at the time of the survey, the 
 > version that was released ~1 year prior. Additionally, at the time of this writing
 > all major Linux distros have a version equal to or newer than this version.
 
@@ -305,7 +305,7 @@ Type: select all that apply (optional)
 
 Type: select one (optional)
 
-- 1.85 (nightly), and then every version from 1.83 to 1.0 in descending order, and "a pre-1.0 version"
+- 1.92 (nightly), and then every version from 1.91 to 1.0 in descending order, and "a pre-1.0 version"
 
 > **justification**
 >
