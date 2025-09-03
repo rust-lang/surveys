@@ -465,7 +465,7 @@ Features:
 
 Usage:
 
-- I use this feature
+- I use it or plan to use it
 - I cannot use this feature yet
 - I do not need this feature
 - I did not know it was stabilized
