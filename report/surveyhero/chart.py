@@ -19,7 +19,12 @@ def format_title(question: Question, include_kind: bool = False) -> str:
         kind = "single answer" if question.is_single_answer() else "multiple answers"
         kind = f", {kind}"
 
-    return f'<b>{wrap_text(question.question, max_width=75)}</b><br /><span style="font-size: 0.8em;">(total responses = {question.total_responses}{kind})</span>'
+    title = question.question
+    if "\n" in title:
+        title = title.replace("\n", "<br />")
+    else:
+        title = wrap_text(title, max_width=75)
+    return f'<b>{title}</b><br /><span style="font-size: 0.8em;">(total responses = {question.total_responses}{kind})</span>'
 
 
 def wrap_text(text: str, max_width: int, override_line_size: Optional[str] = None) -> str:

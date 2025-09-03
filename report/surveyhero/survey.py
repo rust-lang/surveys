@@ -1,5 +1,5 @@
 import dataclasses
-from typing import List, Union, Dict, Optional
+from typing import List, Union, Dict, Optional, Callable
 
 import pandas as pd
 
@@ -136,6 +136,15 @@ class Question:
         assert replaced
         answers.append(Answer(answer=label, count=added_count))
         return dataclasses.replace(self, kind=SimpleQuestion(answers=answers))
+
+    def with_title(self, func: Callable[[str], str]) -> "Question":
+        return Question(
+            id=self.id,
+            year=self.year,
+            question=func(self.question),
+            total_responses=self.total_responses,
+            kind=self.kind
+        )
 
 
 def rating_to_simple_question(question: Question) -> Question:

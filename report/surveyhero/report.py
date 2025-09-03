@@ -1,4 +1,6 @@
-from typing import Dict, Optional, List
+from typing import Dict, Optional, List, Callable
+
+from plotly.graph_objs import Figure
 
 from .chart import make_bar_chart, make_pie_chart, make_wordcloud, make_matrix_chart
 from .survey import Question, normalize_open_answers, MatrixQuestion
@@ -45,8 +47,12 @@ class ChartReport:
     Container that aggregates charts under IDs (string names).
     It can be used to render these charts to a PDF report or a blog post (see `render.py`).
     """
+
     def __init__(self):
         self.charts: Dict[str, ChartRenderer] = {}
+
+    def keep(self, keys: List[str]):
+        self.charts = {k: v for (k, v) in self.charts.items() if k in keys}
 
     def add_bar_chart(self, name: str, question: Question, *baselines: Question, **kwargs):
         questions = [question] + list(baselines)
@@ -70,6 +76,12 @@ class ChartReport:
 
         def render_fn(**args):
             return make_matrix_chart(question=question, **join(kwargs, args))
+
+        self.add_renderer(name, PlotlyRenderer(name=name, render_fn=render_fn))
+
+    def add_custom_chart(self, name: str, func: Callable[[], Figure]):
+        def render_fn(**args):
+            return func(**args)
 
         self.add_renderer(name, PlotlyRenderer(name=name, render_fn=render_fn))
 
