@@ -138,6 +138,18 @@ class Question:
         return dataclasses.replace(self, kind=SimpleQuestion(answers=answers))
 
 
+def rating_to_simple_question(question: Question) -> Question:
+    assert isinstance(question.kind, RatingQuestion)
+    return Question(
+        id=question.id,
+        year=question.year,
+        total_responses=question.total_responses,
+        question=question.question,
+        kind=SimpleQuestion(answers=[Answer(answer=str(a.rating), count=a.answer.count) for a in
+                                     question.kind.answers])
+    )
+
+
 @dataclasses.dataclass
 class SurveyReport:
     year: int
