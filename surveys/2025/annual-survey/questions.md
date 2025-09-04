@@ -361,9 +361,7 @@ Features:
 
 - [Specialization](https://github.com/rust-lang/rust/issues/31844)
 - [Generators/coroutines](https://github.com/rust-lang/rust/issues/43122)
-- [Async closures](https://github.com/rust-lang/rust/issues/62290)
 - [Async generators/coroutines](https://github.com/rust-lang/rust/pull/118420)
-- [If/while let chains](https://github.com/rust-lang/rust/issues/53667)
 - [Try blocks](https://github.com/rust-lang/rust/issues/31436)
 - [Never type](https://github.com/rust-lang/rust/issues/35121)
 - [Trait aliases](https://github.com/rust-lang/rfcs/blob/master/text/1733-trait-alias.md)
@@ -448,20 +446,13 @@ Type: matrix (optional)
 
 Features:
 
-- [async fn in traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
-- [Return position impl Trait in traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
-- [C-string literals](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#c-string-literals) (1.77)
-- [Recursion in async fn](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#support-for-recursion-in-async-fn) (1.77)
-- [offset_of! macro](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#offset_of) (1.77)
-- [#[diagnostic] attribute](https://blog.rust-lang.org/2024/05/02/Rust-1.78.0.html#diagnostic-attributes) (1.78)
-- [Inline const expressions](https://blog.rust-lang.org/2024/06/13/Rust-1.79.0.html#inline-const-expressions) (1.79)
-- [Bounds in associated type position](https://blog.rust-lang.org/2024/06/13/Rust-1.79.0.html#bounds-in-associated-type-position) (1.79)
-- [LazyCell and LazyLock](https://blog.rust-lang.org/2024/07/25/Rust-1.80.0.html#lazycell-and-lazylock) (1.80)
-- [Exclusive ranges in patterns](https://blog.rust-lang.org/2024/07/25/Rust-1.80.0.html#exclusive-ranges-in-patterns) (1.80)
-- [Error trait in core](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#coreerrorerror) (1.81)
-- [#[expect(lint)] and lint reasons](https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html#expectlint) (1.81)
-- [Precise capturing syntax](https://blog.rust-lang.org/2024/10/17/Rust-1.82.0.html#precise-capturing-use-syntax) (1.82)
-- [&raw pointers](https://blog.rust-lang.org/2024/10/17/Rust-1.82.0.html#native-syntax-for-creating-a-raw-pointer) (1.82)
+- [Strict provenance API](https://blog.rust-lang.org/2025/01/09/Rust-1.84.0/#strict-provenance-apis) (1.84)
+- [Async closures](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/#async-closures) (1.85)
+- [diagnostic::do_not_recommend](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/#hiding-trait-implementations-from-diagnostics) (1.85)
+- [Trait upcasting](https://blog.rust-lang.org/2025/04/03/Rust-1.86.0/#trait-upcasting) (1.86)
+- [Anonymous pipes](https://blog.rust-lang.org/2025/05/15/Rust-1.87.0/#anonymous-pipes) (1.87)
+- [Let chains](https://blog.rust-lang.org/2025/06/26/Rust-1.88.0/#let-chains) (1.88)
+- [Naked functions](https://blog.rust-lang.org/2025/06/26/Rust-1.88.0/#naked-functions) (1.88)
 
 Usage:
 
