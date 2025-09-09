@@ -23,18 +23,12 @@ class RenderedChart:
     to_replace: str
 
 
-def make_rel_path(image_dir: Path, path: Path) -> str:
-    path = path.relative_to(image_dir.parent)
-    return f"../../../images/{path}"
-
-
-def render_png(image_dir: Path, renderer: ChartRenderer, chart_id: str) -> Path:
+def render_png(image_dir: Path, renderer: ChartRenderer, chart_id: str) -> str:
     png_bytes = renderer.to_image_bytes(format="png")
     png_bytes = optimize_png_image(png_bytes)
-    png_path = image_dir / f"{chart_id}.png"
-    with open(png_path, "wb") as f:
-        f.write(png_bytes)
-    return png_path
+    png_filename = f"{chart_id}.png"
+    write_if_unchanged(image_dir / png_filename, png_bytes)
+    return png_filename
 
 
 def render_blog_chart(arg) -> RenderedChart:
@@ -47,7 +41,10 @@ def render_blog_chart(arg) -> RenderedChart:
     chart = report.get_chart(chart_id)
 
     def normalize_arg(key, value) -> Tuple[str, Any]:
-        value = int(value)
+        if value == "None":
+            value = None
+        else:
+            value = int(value)
         if key == "xrange":
             key = "layout_args"
             value = dict(xaxis_range=(-1, value))
@@ -62,12 +59,12 @@ def render_blog_chart(arg) -> RenderedChart:
     height = args.get("height", 600)
 
     # Render the chart as PNG and SVG
-    png_path = render_png(image_dir=image_dir, renderer=chart, chart_id=chart_id)
+    png_filename = render_png(image_dir=image_dir, renderer=chart, chart_id=chart_id)
 
     svg_bytes = chart.to_image_bytes(format="svg")
-    svg_path = image_dir / f"{chart_id}.svg"
-    with open(svg_path, "wb") as f:
-        f.write(svg_bytes)
+    svg_filename = f"{chart_id}.svg"
+    svg_path = image_dir / svg_filename
+    write_if_unchanged(svg_path, svg_bytes)
 
     if isinstance(chart, PlotlyRenderer):
         figure = chart.render_fn(**args)
@@ -96,7 +93,7 @@ def render_blog_chart(arg) -> RenderedChart:
         div.append(
             BeautifulSoup(
                 f"""<noscript>
-    <img src="{make_rel_path(image_dir=image_dir, path=png_path)}" height="{height}" alt="{chart_id}" />
+    <img src="{png_filename}" height="{height}" alt="{chart_id}" />
 </noscript>""",
                 "html.parser",
             )
@@ -104,12 +101,12 @@ def render_blog_chart(arg) -> RenderedChart:
 
         links = [
             (
-                make_rel_path(image_dir=image_dir, path=png_path),
+                png_filename,
                 "Download chart as PNG",
                 "PNG",
             ),
             (
-                make_rel_path(image_dir=image_dir, path=svg_path),
+                svg_filename,
                 "Download chart as SVG",
                 "SVG",
             ),
@@ -118,12 +115,12 @@ def render_blog_chart(arg) -> RenderedChart:
         wordcloud_id = f"{chart_id}-wordcloud"
         wordcloud = report.get_chart(wordcloud_id)
         if wordcloud is not None:
-            wc_png_path = render_png(
+            wc_png_filename = render_png(
                 image_dir=image_dir, renderer=wordcloud, chart_id=wordcloud_id
             )
             links.append(
                 (
-                    make_rel_path(image_dir=image_dir, path=wc_png_path),
+                    wc_png_filename,
                     "Download open answers as wordcloud PNG",
                     "Wordcloud of open answers",
                 )
@@ -153,7 +150,7 @@ def render_blog_chart(arg) -> RenderedChart:
 
 
 def render_blog_post(
-    template: Path, blog_root: Path, resource_dir: str, report: ChartReport
+        template: Path, blog_dir: Path, report: ChartReport
 ):
     """
     Render a Rust Blog post containing special placeholders that will render as SurveyHero charts from the given `report`.
@@ -168,19 +165,13 @@ def render_blog_post(
     at the end of the template.
 
     :param template: Blog post Markdown template. Its filename will be used to name the generated blog post file.
-    :param blog_root: Local checkout of the https://github.com/rust-lang/blog.rust-lang.org repository
-    :param resource_dir: Name of a directory in <blog_root/static/images> where the rendered charts will be stored.
+    :param blog_dir: A directory of the blog contained in a local checkout of the https://github.com/rust-lang/blog.rust-lang.org repository
     :param report: `ChartReport` containing charts that can be rendered.
     """
-    output_path = blog_root / "posts" / template.name
+    blog_dir.mkdir(parents=True, exist_ok=True)
+    output_path = blog_dir / "index.md"
 
-    image_dir = blog_root / "static" / "images" / resource_dir
-    image_dir.mkdir(parents=True, exist_ok=True)
-    script_dir = blog_root / "static" / "scripts" / resource_dir
-    script_dir.mkdir(parents=True, exist_ok=True)
-    print(
-        f"Generating blog post to {output_path}, image directory {image_dir}, scripts directory {script_dir}"
-    )
+    print(f"Generating blog post to {output_path}")
 
     with open(template) as f:
         document = f.read()
@@ -188,7 +179,7 @@ def render_blog_post(
     matches = list(CHART_MARKER_REGEX.finditer(document))
 
     args = [
-        (image_dir, report, (match.group(0), match.group(1), match.group(2)))
+        (blog_dir, report, (match.group(0), match.group(1), match.group(2)))
         for match in matches
     ]
 
@@ -240,19 +231,20 @@ function relayoutCharts() {
 window.addEventListener("resize", relayoutCharts);
 document.addEventListener("DOMContentLoaded", relayoutCharts);
 """
-    script_path = script_dir / "charts.js"
-    with open(script_path, "w") as f:
-        f.write(script_text)
+    script_filename = "charts.js"
+    script_path = blog_dir / script_filename
+    write_if_unchanged(script_path, script_text.encode())
 
-    plotly_script_path = script_dir.parent / "plotly-basic-2.29.0.min.js"
+    # Go from <blog-root>/content/<blog-dir> to <blog-root>/static/scripts
+    plotly_script_path = blog_dir.parent.parent / "static/scripts" / "plotly-basic-2.29.0.min.js"
     if not os.path.isfile(plotly_script_path):
         urllib.request.urlretrieve(
             "https://cdn.plot.ly/plotly-basic-2.29.0.min.js", plotly_script_path
         )
 
     scripts = [
-        '<script charset="utf-8" src="../../../scripts/plotly-basic-2.29.0.min.js"></script>',
-        f'<script src="../../../scripts/{script_path.relative_to(script_dir.parent)}"></script>',
+        '<script charset="utf-8" src="/scripts/plotly-basic-2.29.0.min.js"></script>',
+        f'<script src="{script_filename}"></script>',
     ]
 
     script_marker = "<!-- scripts -->"
@@ -263,8 +255,7 @@ document.addEventListener("DOMContentLoaded", relayoutCharts);
     script_str = "<!-- Chart scripts -->\n\n" + "\n\n".join(scripts)
     document = document.replace(script_marker, script_str)
 
-    with open(output_path, "w") as f:
-        f.write(document)
+    write_if_unchanged(output_path, document.encode())
 
 
 def render_pdf_page(args) -> Tuple[str, str, Union[str, bytes]]:
@@ -283,18 +274,17 @@ def render_pdf_page(args) -> Tuple[str, str, Union[str, bytes]]:
 
 
 def render_report_to_pdf(
-    report: ChartReport, output: Path, title: str, include_labels=False
+        report: ChartReport, output: Path, title: str, include_labels=False
 ):
     """
     Renders a PDF report containing all charts from the given `report` into the `output` path.
     """
-    import elsie
-    from elsie.render.backends.cairo.backend import CairoBackend
+    import nelsie
 
     # A4 format
-    slides = elsie.SlideDeck(backend=CairoBackend(), width=595, height=842)
+    slides = nelsie.SlideDeck(width=595, height=842)
     slide = slides.new_slide()
-    slide.box().text(title)
+    slide.text(title, align="center")
 
     print("Rendering charts")
 
@@ -303,26 +293,25 @@ def render_report_to_pdf(
     args = [(report, name) for name in report.charts.keys()]
     with mp.Pool() as pool:
         for name, format, result in tqdm.tqdm(
-            pool.imap(render_pdf_page, args), total=len(args)
+                pool.imap(render_pdf_page, args), total=len(args)
         ):
             slide = slides.new_slide()
 
             if name.endswith("-wordcloud"):
                 slide.box(y=150).text(
                     "Wordcloud of open answers for the previous chart:",
-                    style=elsie.TextStyle(size=20),
+                    style=nelsie.TextStyle(size=20),
                 )
 
-            box = slide.box(width="95%")
             if format == "png":
-                box.image(result, image_type="png")
+                slide.image((result, "png"), width="90%")
             elif format == "svg":
-                box.image(result)
+                slide.image(result, width="90%")
                 os.unlink(result)
             else:
                 assert False
             if include_labels:
-                slide.box(x=5, y=5).text(name, style=elsie.TextStyle(size=10))
+                slide.box(x=5, y=5).text(name, style=nelsie.TextStyle(size=10))
     print("Rendering PDF")
     slides.render(str(output))
 
@@ -338,3 +327,21 @@ def pillow_to_png_bytes(image: Image.Image) -> bytes:
         image.save(buffer, format="png", optimize=True)
         buffer.seek(0)
         return buffer.getvalue()
+
+
+def write_if_unchanged(path: Path, content: bytes):
+    """
+    Writes `content` into the file at `path`.
+    If the file existed before and had the exact same content, nothing will be written.
+    This serves as an optimization for notify/watch tooling, to avoid reloading too much state
+    each time a file is updated with the same content.
+    """
+    try:
+        with open(path, "rb") as f:
+            existing = f.read()
+            if existing == content:
+                return
+    except:
+        pass
+    with open(path, "wb") as f:
+        f.write(content)

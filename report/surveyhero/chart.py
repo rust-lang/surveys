@@ -19,7 +19,12 @@ def format_title(question: Question, include_kind: bool = False) -> str:
         kind = "single answer" if question.is_single_answer() else "multiple answers"
         kind = f", {kind}"
 
-    return f'<b>{wrap_text(question.question, max_width=75)}</b><br /><span style="font-size: 0.8em;">(total responses = {question.total_responses}{kind})</span>'
+    title = question.question
+    if "\n" in title:
+        title = title.replace("\n", "<br />")
+    else:
+        title = wrap_text(title, max_width=75)
+    return f'<b>{title}</b><br /><span style="font-size: 0.8em;">(total responses = {question.total_responses}{kind})</span>'
 
 
 def wrap_text(text: str, max_width: int, override_line_size: Optional[str] = None) -> str:
@@ -39,7 +44,14 @@ def make_bar_chart(
         legend_order: Optional[List[str]] = None,
         layout_args: Optional[Dict[str, Any]] = None,
         legend_params: Optional[Dict[str, Any]] = None,
+        sort_by_pct=True,
+        range=(0, 119)
 ) -> Figure:
+    """
+    By default, the X axis is sorted in decreasing order by percentage counts.
+    If `sort_by_pct` is `False`, the original order of answers in the first
+    question is kept.
+    """
     assert len(questions) > 0
     assert len(set(question.year for question in questions)) == len(questions)
 
@@ -55,6 +67,9 @@ def make_bar_chart(
     # font size be the same as before applying the hack.
     xaxis_font_size = 9
     override_line_size = f"{12 / xaxis_font_size:.1f}em"
+
+    if legend_order is None and not sort_by_pct:
+        legend_order = [a.answer for a in questions[0].kind.answers]
 
     if legend_order is not None:
         # We need to apply the size hack also to the legend, otherwise the answers won't match
@@ -168,7 +183,7 @@ def make_bar_chart(
         # See usage of `override_line_size` above
         xaxis_tickfont=dict(size=xaxis_font_size),
         yaxis_title="Percent out of all responses (%)",
-        yaxis_range=[0, 119],
+        yaxis_range=range,
         yaxis_ticksuffix="%",
         yaxis_fixedrange=True,
         title_text=format_title(questions[0], include_kind=True),
@@ -276,20 +291,25 @@ def make_pie_chart(
 
 def make_matrix_chart(
         question: Question,
-        categories: List[str],
-        category_label: str,
+        categories: Optional[List[str]] = None,
+        category_label: Optional[str] = None,
         option_label: Optional[str] = None,
         height: Optional[int] = None,
         horizontal: bool = False,
         max_label_width=20,
         legend_params: Optional[Dict[str, Any]] = None,
-        textposition = "outside"
+        textposition="outside"
 ) -> Figure:
     """
     Create a matrix chart with different categories.
     `categories`: List of categories, sorted from most to least important
     """
     assert isinstance(question.kind, MatrixQuestion)
+
+    if categories is None:
+        categories = [a.answer for a in next(iter(question.kind.answer_groups.values()))]
+    if category_label is None:
+        category_label = "Response"
 
     mapping = dict(zip(categories[::-1], range(1, len(categories) + 1)))
 

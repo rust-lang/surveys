@@ -1,0 +1,19 @@
+[project]
+name = "report"
+version = "0.1.0"
+description = "Helper scripts for survey reports"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "beautifulsoup4>=4.13.4",
+    "kaleido==0.2.1",
+    "matplotlib==3.7.5",
+    "multiprocess>=0.70.18",
+    "nelsie==0.16",
+    "pandas==2.3.1",
+    "pillow>=11.3.0",
+    "plotly>=6",
+    "pyarrow==21.0.0",
+    "tqdm==4.66.1",
+    "wordcloud==1.9.3",
+]
