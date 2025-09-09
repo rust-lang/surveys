@@ -79,9 +79,9 @@ class ChartReport:
 
         self.add_renderer(name, PlotlyRenderer(name=name, render_fn=render_fn))
 
-    def add_custom_chart(self, name: str, func: Callable[[], Figure]):
+    def add_custom_chart(self, name: str, func: Callable[[], Figure], **kwargs):
         def render_fn(**args):
-            return func(**args)
+            return func(**join(kwargs, args))
 
         self.add_renderer(name, PlotlyRenderer(name=name, render_fn=render_fn))
 

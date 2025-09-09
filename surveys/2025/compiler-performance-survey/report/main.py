@@ -1,25 +1,26 @@
+import itertools
 import random
 import sys
-from collections import defaultdict
 from pathlib import Path
-from typing import List
+from typing import List, Any, Callable
 
 import numpy as np
 import pandas as pd
 import plotly.express as px
+from collections import defaultdict
 from plotly.graph_objs import Figure
 
-from surveyhero.utils import print_question_index
-
-ROOT_DIR = Path(__file__).absolute().parent.parent.parent.parent.parent
+CURRENT_DIR = Path(__file__).absolute().parent
+ROOT_DIR = CURRENT_DIR.parent.parent.parent.parent
 REPORT_SCRIPT_DIR = ROOT_DIR / "report"
 
 sys.path.insert(0, str(REPORT_SCRIPT_DIR))
 
 from surveyhero.parser import parse_surveyhero_report, parse_surveyhero_answers
-from surveyhero.render import render_report_to_pdf
+from surveyhero.render import render_blog_post, render_report_to_pdf
 from surveyhero.report import ChartReport
 from surveyhero.survey import Question, SurveyFullAnswers, SurveyReport, rating_to_simple_question
+from surveyhero.utils import print_question_index
 
 
 def print_answers(a: Question, b: Question):
@@ -53,23 +54,26 @@ def inspect_open_answers(answers: List[str]):
         print(f"{value}: {count}")
 
 
-def group_by_pct(df: pd.DataFrame, col: str, row: str) -> pd.DataFrame:
-    filtered_df = df[~df[col].isna()]
-    assert len(filtered_df) > 0
-    grouped_count = filtered_df.groupby([col, row]).agg({
+def group_by_pct(df: pd.DataFrame, group_by_columns: List[str]) -> pd.DataFrame:
+    grouped_count = df.groupby(group_by_columns).agg({
         "id": "count"
     }).rename(columns={"id": "pct"})
 
-    grouped_pct = grouped_count.groupby(level=0).apply(lambda x: 100 * x / x.sum())
-    return grouped_pct.reset_index(level=0)["pct"].reset_index()
+    reset_level = tuple(itertools.islice(range(len(group_by_columns)), len(group_by_columns) - 1))
+    grouped_pct = grouped_count.groupby(level=reset_level).apply(lambda x: 100 * x / x.sum())
+    return grouped_pct.reset_index(level=reset_level)["pct"].reset_index()
 
 
 def render_stacked_bar_chart(
-        df: pd.DataFrame, col: str, row: str,
+        df: pd.DataFrame,
+        col: str,
+        row: str,
         title: str,
         col_title: str,
         row_title: str,
         pct=True,
+        height=600,
+        grid=None,
         **kwargs
 ) -> Figure:
     """
@@ -79,7 +83,9 @@ def render_stacked_bar_chart(
     groups.
     """
     assert col in df.columns
+    assert col != col_title
     assert row in df.columns
+    assert row != row_title
 
     if pct:
         title += " (%)"
@@ -87,56 +93,44 @@ def render_stacked_bar_chart(
         title += " (absolute counts)"
 
     df = df.rename(columns={
-        row: row_title
+        row: row_title,
+        col: col_title
     })
     if "category_orders" in kwargs and row in kwargs["category_orders"]:
         kwargs["category_orders"][row_title] = kwargs["category_orders"][row]
-        assert row != row_title
         del kwargs["category_orders"][row]
+    if "category_orders" in kwargs and col in kwargs["category_orders"]:
+        kwargs["category_orders"][col_title] = kwargs["category_orders"][col]
+        del kwargs["category_orders"][col]
 
+    row = row_title
+    col = col_title
+
+    group_by_columns = [col, row]
+    if grid is not None:
+        group_by_columns = [grid] + group_by_columns
+
+    title = f"<b>{title}</b>"
     if pct:
-        data = group_by_pct(df, col, row_title)
-        subtitle = "The percentages are relative to each individual group on the X axis"
+        df = df[~df[col].isna()]
+        assert len(df) > 0
+        data = group_by_pct(df, group_by_columns)
+        title += '<br /><span style="font-size: 0.8em;">The percentages are relative to each individual group on the X axis</span>'
     else:
-        data = df.groupby([col, row_title])["id"].count().reset_index().rename(
+        data = df.groupby(group_by_columns)["id"].count().reset_index().rename(
             columns=dict(id="count"))
-        subtitle = None
 
+    data = data.rename(columns=dict(pct="Percentage (%)"))
     fig = px.bar(data,
                  x=col,
-                 y="pct" if pct else "count",
-                 color=row_title,
-                 title=format(f"<b>{title}</b>"),
-                 subtitle=subtitle,
+                 y="Percentage (%)" if pct else "count",
+                 color=row,
+                 facet_col=grid,
+                 facet_col_wrap=3,
+                 title=title,
+                 height=height,
                  **kwargs)
-
-    def update_yaxis(axis):
-        if axis.title.text == "pct":
-            axis.update(title="Percentage (%)")
-
-    if pct:
-        fig.for_each_yaxis(update_yaxis)
-
-    fig.for_each_annotation(lambda a: a.update(text=a.text.split('=')[-1]))
-
-    fig.update_xaxes(title="")
-
-    fig.update_layout(
-        title=dict(y=1, font=dict(weight=True))
-    )
-    fig.add_annotation(
-        yref="paper",
-        yanchor="top",
-        y=-0.1,
-        text=col_title,
-
-        xref="paper",
-        xanchor="center",
-        x=0.5,
-
-        showarrow=False,
-        font=dict(size=18)
-    )
+    fig.for_each_annotation(lambda a: a.update(text=a.text.split("=")[-1]))
 
     return fig
 
@@ -211,30 +205,40 @@ def compiler_performance_2025_report(df: pd.DataFrame) -> ChartReport:
     )
 
     rebuild_time_order = [
-        "Less than a second",
-        "Between 1 and 5 seconds",
-        "Between 5 and 10 seconds",
-        "Between 10 and 30 seconds",
-        "Between 30 seconds and 1 minute",
-        "Between 1 and 5 minutes",
-        "More than 5 minutes"
+        "<1s",
+        "1-5s",
+        "5-10s",
+        "10-30s",
+        "30s-1m",
+        "1-5m",
+        ">5m"
     ]
 
     os_order = ["Linux", "macOS", "Windows", "Windows Subsystem for Linux", "Other"]
-    report.add_custom_chart("rebuild-wait-time-os", lambda: render_stacked_bar_chart(
-        df,
-        col="os",
-        row="rebuild-time",
-        col_title="Operating system",
-        row_title="Rebuild time",
-        title="Average rebuild time based on OS",
-        height=800,
-        category_orders={
-            "os": os_order,
-            "rebuild-time": rebuild_time_order
-        },
-    ))
+    report.add_custom_chart("rebuild-wait-time-os",
+                            lambda **kwargs: render_stacked_bar_chart(
+                                df,
+                                col="os",
+                                row="rebuild-time",
+                                col_title="Operating system",
+                                row_title="Rebuild time",
+                                title="Average rebuild time based on OS",
+                                category_orders={
+                                    "os": os_order,
+                                    "rebuild-time": rebuild_time_order
+                                },
+                                **kwargs
+                            ),
+                            height=800)
 
+    core_count_order = [
+        "1",
+        "2-4",
+        "5-8",
+        "9-16",
+        "17-32",
+        "More than 32 cores"
+    ]
     code_size_order = [
         "Less than 2 thousand lines",
         "2-10 thousand lines",
@@ -243,41 +247,70 @@ def compiler_performance_2025_report(df: pd.DataFrame) -> ChartReport:
         "101-500 thousand lines",
         "More than 500 thousand lines of code"
     ]
-    report.add_custom_chart("rebuild-wait-time-code-size", lambda: render_stacked_bar_chart(
-        df,
-        col="code-size",
-        row="rebuild-time",
-        col_title="",
-        row_title="Rebuild time",
-        title="Average rebuild time based on project size",
-        height=800,
-        category_orders={
-            "code-size": code_size_order,
-            "rebuild-time": rebuild_time_order
-        },
-    ))
-    report.add_custom_chart("rebuild-wait-time-dep-count", lambda: render_stacked_bar_chart(
-        df,
-        col="dep-count",
-        row="rebuild-time",
-        col_title="",
-        row_title="Rebuild time",
-        title="Average rebuild time based on dependency count",
-        height=800,
-        category_orders={
-            "dep-count": [
-                "No dependencies",
-                "1-10 dependencies",
-                "11-50 dependencies",
-                "51-100 dependencies",
-                "101-200 dependencies",
-                "201-300 dependencies",
-                "301-500 dependencies",
-                "More than 500 dependencies"
-            ],
-            "rebuild-time": rebuild_time_order
-        },
-    ))
+    report.add_custom_chart("rebuild-wait-time-code-size",
+                            lambda **kwargs: render_stacked_bar_chart(
+                                df,
+                                col="code-size",
+                                row="rebuild-time",
+                                col_title="Codebase size",
+                                row_title="Rebuild time",
+                                title="Average rebuild time based on project size",
+                                category_orders={
+                                    "code-size": code_size_order,
+                                    "rebuild-time": rebuild_time_order
+                                },
+                                **kwargs
+                            ), height=800)
+
+    df["lines-of-code-est"] = df["code-size"].apply(lambda v: {
+        "2-10 thousand lines": 5000,
+        "11-50 thousand lines": 25000,
+        "51-100 thousand lines": 75000,
+        "101-500 thousand lines": 250000,
+    }.get(v, np.nan))
+    df["rebuild-time-est"] = df["rebuild-time"].apply(lambda v: {
+        "Less than a second": 0.5,
+        "Between 1 and 5 seconds": 2.5,
+        "Between 5 and 10 seconds": 7.5,
+        "Between 10 and 30 seconds": 20,
+        "Between 30 seconds and 1 minute": 45,
+        "Between 1 and 5 minutes": 150,
+    }.get(v, np.nan))
+    df["build-perf-est"] = df["lines-of-code-est"] / df["rebuild-time-est"]
+    group = df.groupby("core-count")["build-perf-est"].mean().reset_index()
+    # report.add_custom_chart("rebuild-wait-time-code-size-hw-cores",
+    #                         lambda **kwargs: px.bar(group,
+    #                                                 x="core-count",
+    #                                                 y="build-perf-est",
+    #                                                 category_orders={
+    #                                                     "core-count": core_count_order
+    #                                                 }))
+    report.add_custom_chart("rebuild-wait-time-dep-count",
+                            lambda **kwargs: render_stacked_bar_chart(
+                                df,
+                                col="dep-count",
+                                row="rebuild-time",
+                                col_title="",
+                                row_title="Rebuild time",
+                                grid="code-size",
+                                title="Average rebuild time based on project size and dependency count",
+                                facet_col_spacing=0.05,
+                                category_orders={
+                                    "dep-count": [
+                                        "No dependencies",
+                                        "1-10 dependencies",
+                                        "11-50 dependencies",
+                                        "51-100 dependencies",
+                                        "101-200 dependencies",
+                                        "201-300 dependencies",
+                                        "301-500 dependencies",
+                                        "More than 500 dependencies"
+                                    ],
+                                    "rebuild-time": rebuild_time_order,
+                                    "code-size": code_size_order
+                                },
+                                **kwargs
+                            ), height=800)
 
     report.add_matrix_chart(
         "problems",
@@ -348,7 +381,7 @@ def compiler_performance_2025_report(df: pd.DataFrame) -> ChartReport:
         "alternative-linker",
         res.q(16),
     )
-    report.add_custom_chart("alternative-linker-os", lambda: render_stacked_bar_chart(
+    report.add_custom_chart("alternative-linker-os", lambda **kwargs: render_stacked_bar_chart(
         df,
         col="os",
         row="linker",
@@ -358,7 +391,8 @@ def compiler_performance_2025_report(df: pd.DataFrame) -> ChartReport:
         pct=False,
         category_orders={
             "os": os_order
-        }
+        },
+        **kwargs
     ))
 
     report.add_wordcloud("alternative-linker-wordcloud", answers.answers[87])
@@ -392,32 +426,34 @@ def compiler_performance_2025_report(df: pd.DataFrame) -> ChartReport:
     debuginfo_order = ["Yes", "Only for my code", "No"]
     report.add_custom_chart(
         "required-debuginfo-debugger",
-        lambda: render_stacked_bar_chart(
+        lambda **kwargs: render_stacked_bar_chart(
             df,
             "how-often-do-you-use-debugger",
             "require-debuginfo",
-            col_title="Do you require debuginfo?",
-            row_title="Do you use a debugger?",
+            col_title="Do you use a debugger?",
+            row_title="Do you require debuginfo?",
             title="Debuginfo requirement based on the usage of a debugger",
             category_orders={
                 "how-often-do-you-use-debugger": frequency_order,
                 "require-debuginfo": debuginfo_order
-            }
+            },
+            **kwargs
         )
     )
     report.add_custom_chart(
         "required-debuginfo-profiler",
-        lambda: render_stacked_bar_chart(
+        lambda **kwargs: render_stacked_bar_chart(
             df,
             "how-often-do-you-use-profiler",
             "require-debuginfo",
-            col_title="Do you require debuginfo?",
-            row_title="Do you use a profiler?",
+            col_title="Do you use a profiler?",
+            row_title="Do you require debuginfo?",
             title="Debuginfo requirement based on the usage of a profiler",
             category_orders={
-                "how-often-do-you-use-debugger": frequency_order,
+                "how-often-do-you-use-profiler": frequency_order,
                 "require-debuginfo": debuginfo_order
-            }
+            },
+            **kwargs
         )
     )
 
@@ -428,7 +464,7 @@ def compiler_performance_2025_report(df: pd.DataFrame) -> ChartReport:
     )
     report.add_custom_chart(
         "rebuild-wait-time-hw-cores",
-        lambda: render_stacked_bar_chart(
+        lambda **kwargs: render_stacked_bar_chart(
             df,
             col="core-count",
             row="rebuild-time",
@@ -437,15 +473,9 @@ def compiler_performance_2025_report(df: pd.DataFrame) -> ChartReport:
             title="Rebuild time based on core count",
             category_orders={
                 "rebuild-time": rebuild_time_order,
-                "core-count": [
-                    "1",
-                    "2-4",
-                    "5-8",
-                    "9-16",
-                    "17-32",
-                    "More than 32 cores"
-                ]
-            }
+                "core-count": core_count_order
+            },
+            **kwargs
         )
     )
 
@@ -463,7 +493,7 @@ def compiler_performance_2025_report(df: pd.DataFrame) -> ChartReport:
     )
     report.add_custom_chart(
         "satisfaction-code-size",
-        lambda: render_stacked_bar_chart(
+        lambda **kwargs: render_stacked_bar_chart(
             df,
             col="code-size",
             row="satisfaction",
@@ -472,12 +502,13 @@ def compiler_performance_2025_report(df: pd.DataFrame) -> ChartReport:
             title="Overall satisfaction based on project size",
             category_orders={
                 "code-size": code_size_order
-            }
+            },
+            **kwargs
         )
     )
     report.add_custom_chart(
         "satisfaction-os",
-        lambda: render_stacked_bar_chart(
+        lambda **kwargs: render_stacked_bar_chart(
             df,
             col="os",
             row="satisfaction",
@@ -487,7 +518,8 @@ def compiler_performance_2025_report(df: pd.DataFrame) -> ChartReport:
             category_orders={
                 "os": os_order,
                 "code-size": code_size_order
-            }
+            },
+            **kwargs
         )
     )
 
@@ -500,7 +532,21 @@ def create_df(path: Path) -> pd.DataFrame:
     def remap(df, col, mapping):
         return df[col].map(lambda v: mapping.get(v, v))
 
-    def reconstruct_col(name: str, answer_count: int):
+    def find_single_value_or_nan(row):
+        nonnan_value = row.last_valid_index()
+        if nonnan_value is None:
+            return np.nan
+        if nonnan_value.startswith("Other"):
+            return "Other"
+        return nonnan_value
+
+    def find_any_or_nan(row, needles: List[str]):
+        nonnan_value = row.last_valid_index()
+        if nonnan_value is None:
+            return np.nan
+        return any(v in needles for v in row if v is not np.nan)
+
+    def reconstruct_col(name: str, answer_count: int, map_value: Callable[[Any], Any]):
         """
         Reconstructs answers from a wide format to a long format.
         For example, if `name` is `foo` and there are three answers:
@@ -516,14 +562,6 @@ def create_df(path: Path) -> pd.DataFrame:
         col_index = data.columns.get_loc(name)
         col_data = data.iloc[:, col_index + 1:col_index + answer_count + 1]
 
-        def map_value(row):
-            valid = row.last_valid_index()
-            if valid is None:
-                return np.nan
-            if valid.startswith("Other"):
-                return "Other"
-            return valid
-
         return col_data.apply(map_value, axis=1)
 
     frequency_mapping = {
@@ -535,7 +573,16 @@ def create_df(path: Path) -> pd.DataFrame:
         "id": data["ID"],
         "core-count": data["How many cores does your computer have?"],
         "rebuild-time": data[
-            'How long do you need to wait for the compiler to rebuild your code after making a change?'],
+            'How long do you need to wait for the compiler to rebuild your code after making a change?'].apply(
+            lambda v: {
+                "Less than a second": "<1s",
+                "Between 1 and 5 seconds": "1-5s",
+                "Between 5 and 10 seconds": "5-10s",
+                "Between 10 and 30 seconds": "10-30s",
+                "Between 30 seconds and 1 minute": "30s-1m",
+                "Between 1 and 5 minutes": "1-5m",
+                "More than 5 minutes": ">5m",
+            }.get(v, v)),
         "how-often-do-you-use-debugger": remap(
             data,
             "How often do you use a debugger to debug your Rust code?",
@@ -554,14 +601,38 @@ def create_df(path: Path) -> pd.DataFrame:
             }
         ),
         "os": reconstruct_col("Which operating systems do you use regularly for Rust development?",
-                              5),
+                              5, find_single_value_or_nan),
         "code-size": data[
             "How large is the Rust project that you work on in terms of lines of Rust code?"],
         "dep-count": data[
             "How large is the Rust project that you work on in terms of (Cargo) dependencies?"],
-        "linker": reconstruct_col("If you use an alternative linker, which one do you use?", 5),
-        "satisfaction": data["Overall, how satisfied are you with Rust compilation performance?"]
+        "linker": reconstruct_col("If you use an alternative linker, which one do you use?", 5,
+                                  find_single_value_or_nan),
+        "satisfaction": data["Overall, how satisfied are you with Rust compilation performance?"],
+        "used-workarounds": reconstruct_col(
+            "Have you used any of the following mechanisms to improve compilation performance?", 13,
+            lambda row: find_any_or_nan(row,
+                                        ["It helps me to improve compile times",
+                                         "I tried it, but it didn't help"])),
+        "uses-ci": ~data["On CI (Continuous Integration) infrastructure"].isna(),
+        "uses-ci-caching": ~reconstruct_col("Do you use any caching to speed up CI builds?", 4,
+                                            lambda row: find_single_value_or_nan(row)).isna(),
+        "ci-is-blocker": data["CI (Continuous Integration) builds"].isin(
+            ("Big problem for me",))  # "Could be improved, but does not limit me"))
     })
+    print(f"Used workaround: {df['used-workarounds'].value_counts()}")
+
+    uses_ci = df["uses-ci"].sum()
+    uses_ci_is_blocker = (df["uses-ci"] & df["ci-is-blocker"]).sum()
+    uses_ci_is_blocker_no_caching = (
+            df["uses-ci"] & df["ci-is-blocker"] & ~df["uses-ci-caching"]).sum()
+    print(f"Uses CI: {uses_ci}")
+    print(
+        f"Uses CI, CI is blocker: {uses_ci_is_blocker} ({(uses_ci_is_blocker / uses_ci) * 100:.2f}%)")
+    print(f"Uses CI, CI is blocker, no caching: {uses_ci_is_blocker_no_caching}")
+    print(
+        f"No cache blocking ratio: {(uses_ci_is_blocker_no_caching / uses_ci_is_blocker) * 100:.2f}%")
+
     return df
 
 
@@ -577,5 +648,14 @@ if __name__ == "__main__":
         report,
         Path(__file__).parent / "compiler-performance-2025-report.pdf",
         "Compiler performance survey\n2025 report",
-        include_labels=True
+        include_labels=False
+    )
+
+    blog_dir = Path(
+        "/projects/personal/rust/blog.rust-lang.org/content/rust-compiler-performance-survey-2025-results")
+    template_path = Path(CURRENT_DIR / "blog.md")
+    render_blog_post(
+        template=template_path,
+        blog_dir=blog_dir,
+        report=report
     )

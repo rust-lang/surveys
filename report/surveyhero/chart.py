@@ -44,7 +44,8 @@ def make_bar_chart(
         legend_order: Optional[List[str]] = None,
         layout_args: Optional[Dict[str, Any]] = None,
         legend_params: Optional[Dict[str, Any]] = None,
-        sort_by_pct=True
+        sort_by_pct=True,
+        range=(0, 119)
 ) -> Figure:
     """
     By default, the X axis is sorted in decreasing order by percentage counts.
@@ -182,7 +183,7 @@ def make_bar_chart(
         # See usage of `override_line_size` above
         xaxis_tickfont=dict(size=xaxis_font_size),
         yaxis_title="Percent out of all responses (%)",
-        yaxis_range=[0, 119],
+        yaxis_range=range,
         yaxis_ticksuffix="%",
         yaxis_fixedrange=True,
         title_text=format_title(questions[0], include_kind=True),
