@@ -106,7 +106,7 @@ The following section refers to "non-linear" variadic generics.
 
 All the examples so far have been linear variadics.
 
-"Non-linear" variadics generics mean things like filtering a tuple of types to only keeps those that implement a trait, or reversing a list of types, or finding the first type in a list that implements a trait.
+"Non-linear" variadics generics mean things like filtering a tuple of types to only keeps those that implement a trait, or reversing a tuple of types, or finding the first type in a tuple that implements a trait.
 
 ```rust
 fn get_children<...Ts>(parents: (...Ts)) -> (for <T of ...Ts where T: Parent> T::Child) {
