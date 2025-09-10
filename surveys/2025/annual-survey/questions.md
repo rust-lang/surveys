@@ -482,8 +482,9 @@ Type: select all that apply (optional)
 - crates.io
 - Custom/local/company registry
 - Mirror of crates.io
-- git repositories
+- Git repositories
 - I don't know
+- Other
 
 > **justification**
 >
