@@ -617,8 +617,10 @@ def create_df(path: Path) -> pd.DataFrame:
         "uses-ci": ~data["On CI (Continuous Integration) infrastructure"].isna(),
         "uses-ci-caching": ~reconstruct_col("Do you use any caching to speed up CI builds?", 4,
                                             lambda row: find_single_value_or_nan(row)).isna(),
-        "ci-is-blocker": data["CI (Continuous Integration) builds"].isin(
-            ("Big problem for me",))  # "Could be improved, but does not limit me"))
+        "ci-is-blocker": data["CI (Continuous Integration) builds"] == "Big problem for me",
+        "uses-ide": ~data["Using code editor (e.g. inline annotations)"].isna(),
+        "ide-is-blocker": data[
+                              "Waiting for an IDE to show me inline error/warning annotations"] == "Big problem for me"
     })
     print(f"Used workaround: {df['used-workarounds'].value_counts()}")
 
@@ -632,7 +634,9 @@ def create_df(path: Path) -> pd.DataFrame:
     print(f"Uses CI, CI is blocker, no caching: {uses_ci_is_blocker_no_caching}")
     print(
         f"No cache blocking ratio: {(uses_ci_is_blocker_no_caching / uses_ci_is_blocker) * 100:.2f}%")
-
+    uses_ide = df["uses-ide"].sum()
+    ide_is_blocker = df["ide-is-blocker"].sum()
+    print(f"IDE is blocker: {ide_is_blocker}/{uses_ide} = {(ide_is_blocker / uses_ide) * 100:.2f}%")
     return df
 
 
