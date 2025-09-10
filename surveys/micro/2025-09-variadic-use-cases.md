@@ -28,7 +28,7 @@ This survey is fully anonymous. The Rust survey team will go through the answers
 
 ### Have you heard about variadic generics before?
 
-Type: select one
+Type: select all that apply
 
 - Yes, through Pre-RFCs and discussions on `internals.rust-lang.org`.
 - Yes, through discussions on Reddit.
@@ -41,7 +41,7 @@ Type: select one
 ### Are there cases where variadic generics would have made your project easier?
 
 If you knew about variadics, are there cases where you've wanted them to be implemented in Rust?
-If you haven't heard about variadics before, are there cases where you've wanted to be able to iterate on lists of different types?
+If you haven't heard about variadics before, are there cases where you've wanted to be able to iterate over lists of different types?
 
 Type: select one
 
@@ -50,7 +50,8 @@ Type: select one
 
 ### Can you give more details about the project?
 
-A Github link would be ideal. Otherwise, a description of the projects and what you would have needed variadics for.
+Please write a description of the project and what you would have needed variadics for.
+Be as detailed as you like, more detail is better.
 
 Type: free text
 
@@ -59,7 +60,7 @@ Type: free text
 
 The following section refers to "mappings" of variadic generics.
 
-In this context, variadic mappings refer to code take N-tuples of types as generic parameters, and declare N-tuples of types, where each type in the tuple is transformed in the same way.
+In this context, variadic mappings refer to code that takes N-tuples of types as generic parameters, and refers to N-tuples of types derived from those parameters, where each type in the tuple is transformed in the same way.
 
 For example:
 
@@ -90,7 +91,7 @@ Type: select one
 
 ### Can you give more details about the project?
 
-Please include Github link and/or description.
+Be as detailed as you like, more detail is better.
 
 If it's the same project as before, you can include more details about how you would have used variadic mappings specifically.
 
@@ -125,7 +126,7 @@ Type: select one
 
 ### Can you give more details about the project?
 
-Please include Github link and/or description.
+Be as detailed as you like, more detail is better.
 
 If it's the same project as before, you can include more details about how you would have used non-linear variadics specifically.
 
