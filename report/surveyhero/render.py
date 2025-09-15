@@ -56,8 +56,6 @@ def render_blog_chart(arg) -> RenderedChart:
     args = args.split(",")
     args = dict(normalize_arg(*tuple(arg.split("="))) for arg in args if arg.strip())
 
-    height = args.get("height", 600)
-
     # Render the chart as PNG and SVG
     png_filename = render_png(image_dir=image_dir, renderer=chart, chart_id=chart_id)
 
@@ -90,10 +88,13 @@ def render_blog_chart(arg) -> RenderedChart:
         ).div
         div = element.find("div")
         div["class"] = chart_type
+
+        # The style makes the chart have weird dimensions when JavaScript is disabled
+        del div["style"]
         div.append(
             BeautifulSoup(
                 f"""<noscript>
-    <img src="{png_filename}" height="{height}" alt="{chart_id}" />
+    <img src="{png_filename}" alt="{chart_id}" />
 </noscript>""",
                 "html.parser",
             )
