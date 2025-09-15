@@ -522,6 +522,18 @@ def compiler_performance_2025_report(df: pd.DataFrame) -> ChartReport:
             **kwargs
         )
     )
+    report.add_custom_chart(
+        "satisfaction-workarounds",
+        lambda **kwargs: render_stacked_bar_chart(
+            df,
+            col="used-workarounds",
+            row="satisfaction",
+            row_title="Satisfaction (10 = best)",
+            col_title="Used a workaround",
+            title="Overall satisfaction based on whether a workaround was used",
+            **kwargs
+        )
+    )
 
     return report
 
@@ -623,6 +635,12 @@ def create_df(path: Path) -> pd.DataFrame:
                               "Waiting for an IDE to show me inline error/warning annotations"] == "Big problem for me"
     })
     print(f"Used workaround: {df['used-workarounds'].value_counts()}")
+
+    workarounds = df['used-workarounds'].fillna(0).astype('bool')
+    print(
+        f"Used workaround satisfaction mean: {df[workarounds]['satisfaction'].mean()}")
+    print(
+        f"Not used a workaround satisfaction mean: {df[~workarounds]['satisfaction'].mean()}")
 
     uses_ci = df["uses-ci"].sum()
     uses_ci_is_blocker = (df["uses-ci"] & df["ci-is-blocker"]).sum()
