@@ -500,7 +500,7 @@ Activities:
 
 - Produce informational content about Rust (e.g., blogged, live streamed, made a YouTube video, presented at a conference/meetup, etc.)
 - Consume informational content about Rust (e.g., blogs, live streams, YouTube videos, etc.)
-- Read official Rust communication channels (e.g., This Week in Rust, the official Rust blog, the Rust Twitter account, etc.)
+- Read official Rust communication channels (e.g., This Week in Rust, the official Rust blog, the Rust Bluesky account, etc.)
 - Participate in conversations about Rust on social media or websites (Hacker News, r/rust, Twitter, LinkedIn, etc.)
 - Attend a Rust meetup or conference (virtual or in-person)
 - Write, comment on, contribute to discussion of, or provide edits to an open RFC
