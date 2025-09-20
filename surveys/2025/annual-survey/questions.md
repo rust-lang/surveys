@@ -369,6 +369,7 @@ Features:
 - [Associated type defaults](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)
 - [Generic const expressions](https://github.com/rust-lang/rust/issues/76560)
 - [Const trait methods](https://github.com/rust-lang/rust/issues/67792)
+- [Declarative (macro_rules!) attributes (#[attr]) and derives (#[derive(Trait)])](https://github.com/rust-lang/rust/issues/143549)
 - Compile time reflection
 - Variadic generics
 - [Arbitrary self types](https://github.com/rust-lang/rfcs/blob/master/text/3519-arbitrary-self-types-v2.md)
@@ -384,7 +385,7 @@ Priority:
 - Don't need it
 - Don't know what it is
 
-### Are there any features not mentioned above that you would like to be prioritised?
+### Are there any features not mentioned above that you would like to be prioritized?
 
 Type: free form (optional)
 
