@@ -26,6 +26,17 @@ See [Analysing variadics, and how to add them to Rust](https://poignardazur.gith
 This survey is fully anonymous. The Rust survey team will go through the answers and release a summary on the Rust blog after the survey is complete. It's fairly short and should take less than 10 minutes to complete.
 
 
+### How long have you been using Rust?
+
+Type: select one (optional)
+
+    Never
+    Zero to two years
+    Two to four years
+    Four to six years
+    More than six years
+
+
 ### Have you heard about variadic generics before?
 
 Type: select all that apply
