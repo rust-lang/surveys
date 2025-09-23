@@ -493,7 +493,7 @@ Type: select all that apply (optional)
 
 ### Do you make use of compiler error codes?
 
-The Rust compiler assigns error codes to certain compiler errors (e.g. *E0308* or *E0509*). There is a [Rust error codes index](https://doc.rust-lang.org/error_codes/error-index.html) that gathers these errors and provides a general description of them. You can access these error descriptions using e.g. `rustc --explain <error-code>`.
+The Rust compiler assigns error codes to certain compiler errors (e.g. *E0308* or *E0509*). There is a [Rust error codes index](https://doc.rust-lang.org/error_codes/error-index.html) that gathers these errors and provides a general description of them. You can access these error descriptions using e.g. `rustc --explain <error-code>`, in the [documentation](https://doc.rust-lang.org/error_codes/error-index.html) or through the [Rust Playground](https://play.rust-lang.org).
 
 Type: select one (optional)
 
