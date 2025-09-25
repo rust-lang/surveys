@@ -23,18 +23,18 @@ let value: u32 = (0, 0.5, "hello", Some("hello"), false).do_stuff();
 
 See [Analysing variadics, and how to add them to Rust](https://poignardazur.github.io/2021/01/30/variadic-generics/) for a full overview of features associated with variadic generics, and possible use-cases.
 
-This survey is fully anonymous. The Rust survey team will go through the answers and release a summary on the Rust blog after the survey is complete. It's fairly short and should take less than 10 minutes to complete.
+This survey is fully anonymous and should take you approximately 5 minutes to complete.
 
 
 ### How long have you been using Rust?
 
 Type: select one (optional)
 
-    Never
-    Zero to two years
-    Two to four years
-    Four to six years
-    More than six years
+- Never
+- Zero to two years
+- Two to four years
+- Four to six years
+- More than six years
 
 
 ### Have you heard about variadic generics before?
@@ -59,7 +59,7 @@ Type: select one
 - Yes
 - No [`NEXT`](#variadic-type-mappings)
 
-### Can you give more details about the project?
+### Can you give more details about the use-case?
 
 Please write a description of the project and what you would have needed variadics for.
 Be as detailed as you like, more detail is better.
@@ -90,7 +90,7 @@ let opened_gifts = my_gift_boxes.unwrap_all();
 assert_eq!(opened_gifts, (1, true, "hello"));
 ```
 
-In that example, the trait `UnwrapAll` maps `u32, bool, &str` to `Option<u32>, Option<bool>, Option<&str>`.
+In the above example, the trait `UnwrapAll` maps `(Option<u32>, Option<bool>, Option<&str>)` to `(u32, bool, &str)`.
 
 ### Are there cases where variadic mappings would have made your project easier?
 
@@ -104,7 +104,9 @@ Type: select one
 
 Be as detailed as you like, more detail is better.
 
-If it's the same project as before, you can include more details about how you would have used variadic mappings specifically.
+If it is the same project as before, you can include more details about how you would have used variadic mappings specifically.
+
+If you do not have anything to add, leave the answer empty.
 
 Type: free text (optional)
 
@@ -140,6 +142,8 @@ Type: select one
 Be as detailed as you like, more detail is better.
 
 If it's the same project as before, you can include more details about how you would have used non-linear variadics specifically.
+
+If you do not have anything to add, leave the answer empty.
 
 Type: free text (optional)
 
