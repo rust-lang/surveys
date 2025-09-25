@@ -491,6 +491,21 @@ Type: select all that apply (optional)
 >
 > It could be interesting to know how many people use crates.io vs some custom/local/company registry, and how many people are even aware of what registry do they use. See issue surveys#236.
 
+### Do you make use of compiler error codes?
+
+The Rust compiler assigns error codes to certain compiler errors (e.g. *E0308* or *E0509*). There is a [Rust error codes index](https://doc.rust-lang.org/error_codes/error-index.html) that gathers these errors and provides a general description of them. You can access these error descriptions using e.g. `rustc --explain <error-code>`, in the [documentation](https://doc.rust-lang.org/error_codes/error-index.html) or through the [Rust Playground](https://play.rust-lang.org).
+
+Type: select one (optional)
+
+- I read the compiler error index descriptions and find them useful
+- I examined the compiler error index descriptions but did not find them useful
+- I did not know there is a compiler error index
+- Other (open response)
+
+> **justification**
+>
+> We are currently discussing whether we should keep error codes in the compiler or not. This would be useful as a way to gauge general interest in this feature.
+
 ## The Rust community
 
 ### Roughly how often do you engage in the following Rust community activities?
