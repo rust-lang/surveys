@@ -112,8 +112,7 @@ We want to find out whether the entity/entities that pay for your contributions 
 Type: select one (optional)
 
 - Yes, my source of funding tells me what contributions I should make
-- Somewhat, my work is useful to my source of my funding, but I mostly decide what to contribute
-- No, I fully decide what I will contribute to
+- No, I decide what I will contribute to
 - Other (open response)
 
 ### Would you appreciate being paid for contributing to the Rust Project?
