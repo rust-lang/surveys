@@ -21,7 +21,7 @@ Type: select one (optional)
 
 Type: select one
 
-- Yes, I am currently funded for (at least some of) my contributions [`NEXT`](#how-much-of-your-time-spent-on-rust-project-contributions-is-funded)
+- Yes, I am currently funded for (at least some of) my contributions [`NEXT`](#how-much-time-do-you-spend-contributing-to-the-rust-project-monthly)
 - No, but I was funded before [`NEXT`](#why-are-you-not-funded-anymore)
 - No, I never received any funding for them [`NEXT`](#would-you-appreciate-being-paid-for-contributing-to-the-rust-project)
 
@@ -36,6 +36,16 @@ Type: select all that apply (optional)
 - Individual sponsors (e.g. GitHub sponsors) stopped sponsoring me
 - I cannot receive funds anymore due to legislation (e.g. visa or student status) 
 - Other (open response)
+
+### How much time do you spend contributing to the Rust Project monthly?
+
+Estimate how many hours do you spend on Rust Project contributions each month. If this varies wildly, try to provide an average monthly duration over the past 12 months.
+
+This includes all kinds of contributions, such as programming, writing tests or documentation, triaging issues, investigating bugs, discussing on Zulip on GitHub, doing code reviews, etc.
+
+Enter the value as an integer, e.g. *50*.
+
+Type: free form (optional)
 
 ### How much of your time spent on Rust Project contributions is funded?
 
