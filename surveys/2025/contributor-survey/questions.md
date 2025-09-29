@@ -43,7 +43,7 @@ Type: select all that apply (optional)
 
 Estimate how many hours do you spend on Rust Project contributions each month. If this varies wildly, try to provide an average monthly duration over the past 12 months.
 
-This includes all kinds of contributions, such as programming, writing tests or documentation, triaging issues, investigating bugs, discussing on Zulip or GitHub, doing code reviews, etc.
+This includes all kinds of contributions, such as programming, writing tests or documentation, triaging issues, investigating bugs, discussing on Zulip or GitHub, meetings, doing code reviews, etc. Include also work indirectly related to the Rust Project; for example, if you are employed to work on Rust and attend periodic internal meetings related to your work, this time should also be included. 
 
 Enter the value as an integer, e.g. *50*.
 
