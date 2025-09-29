@@ -6,6 +6,8 @@ This survey is only aimed at Rust Project members. If you are not a member of an
 
 Note that when we ask about contributions in this survey, we always mean contributions to the Rust Project repositories, so essentially any repository under the `rust-lang` GitHub organization, plus any other related organizations, such as `rust-lang-nursery`.
 
+This survey is anonymous. You can optionally choose to answer selected personal questions at the end of the survey.
+
 ### When have you started contributing to the Rust Project?
 
 Type: select one (optional)
@@ -13,9 +15,9 @@ Type: select one (optional)
 - During 2025
 - During 2023 or 2024
 - During 2021 or 2022
-- During 2020 or 2019
+- During 2019 or 2020
 - During 2018 or before
-- I do not contribute to the Rust Project [`NEXT`](<END>)
+- I did not ever contribute to the Rust Project [`NEXT`](<END>)
 
 ### Are you funded for your Rust Project contributions?
 
@@ -61,7 +63,7 @@ Type: free form (optional)
 
 ### How are you funded for your Rust Project contributions?
 
-Please select all sources of funds that were paid to you **for your Rust Project contributions** in the past 12 months.
+Please select all sources of funds that paid **for your Rust Project contributions** in the past 12 months.
 
 Type: select all that apply (optional)
 
@@ -89,7 +91,7 @@ Type: select one (optional)
 
 ### When does your contract/employment end?
 
-If you have a contract or if you are employed to work on Rust, please tell us when is your contract/employment ending (even if it might get refreshed at/after that date).
+If you have a contract or if you are employed to work on Rust, please tell us when is your contract/employment ending (even if it might get refreshed for another term).
 
 Type: select one (optional)
 
@@ -105,12 +107,12 @@ Type: select one (optional)
 
 ### Are your contributions directed by your source of funding?
 
-SoF = source of funding
+We want to find out whether the entity/entities that pay for your contributions determine what contributions you make.
 
 Type: select one (optional)
 
-- Yes, my SoF tells me what I should contribute to
-- Somewhat, my work is useful to the source of my funding
+- Yes, my source of funding tells me what contributions I should make
+- Somewhat, my work is useful to my source of my funding, but I mostly decide what to contribute
 - No, I fully decide what I will contribute to
 - Other (open response)
 
@@ -122,6 +124,7 @@ Type: select one (optional)
 - Receiving more funds would allow me to increase my current level of contributions [`NEXT`](#what-rust-teams-are-you-a-part-of)
 - I am happy with the current funding that I have at the moment [`NEXT`](#what-rust-teams-are-you-a-part-of)
 - I do not require/want any funding for my contributions
+- Other (open response)
 
 ### What allows you to contribute without any funding?
 
@@ -140,7 +143,7 @@ Type: free form (optional)
 
 ## Optional detailed questions
 
-The following questions are OPTIONAL. If you provide answers to them, they will NOT be shared publicly, and will be made available only to the Leadership Council and Rust Foundation staff that facilitates this survey.
+The following questions are FULLY OPTIONAL. If you provide answers to them, they will NOT be shared publicly, and will be made available only to the Leadership Council and Rust Foundation staff that facilitates this survey.
 
 ### Which companies/organizations fund your contributions to the Rust Project?
 
@@ -154,7 +157,7 @@ Type: free form (optional)
 
 Estimate your average **yearly** income that is specifically being paid for your Rust Project contributions.
 
-Please provide the value in $USD (US Dollars).
+Please provide the value as an integer in $USD (US Dollars).
 
 **THIS ANSWER IS OPTIONAL**
 
@@ -170,12 +173,14 @@ Type: free form (optional)
 
 ### What is your GitHub username?
 
+You can enter your GitHub handle here (without the leading @).
+
 **THIS ANSWER IS OPTIONAL**
 
 Type: free form (optional)
 
 ### Do you have any other comments regarding Rust Project contributor funding and its sustainability?
 
-You can describe your funding situation in more detail, or express your wishes for funding Rust Project work, or anything else.
+You can describe your funding situation in more detail or express your wishes for funding Rust Project work, or anything else.
 
 Type: free form (optional)
