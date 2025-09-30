@@ -241,6 +241,7 @@ Type: select all that apply (optional)
 - Xcode
 - Atom
 - Helix
+- Zed
 - Other (open response)
 
 > **justification**
