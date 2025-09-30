@@ -100,7 +100,7 @@ Type: select all that apply (optional)
 
 - Книги ("The Rust Programming Language", "Rust for Rustaceans", інші)
 - Онлайн вправи (Rustlings, 100 Exercises To Learn Rust, інші)
-- Відео чи трансляції наживо
+- Відео або трансляції наживо
 - Блог-пости
 - Документація
 - Оригінальний код крейтів Rust
