@@ -125,20 +125,23 @@ Type: select one (optional)
 - I do not require/want any funding for my contributions
 - Other (open response)
 
-### What allows you to contribute without any funding?
-
-Type: select all that apply (optional)
-
-- I make enough money on the side and have enough free time for contributions
-- I am a student and have enough free time for contributions
-- I am an academic and have enough free time for contributions
-- Other (open response)
-
 ### What Rust teams are you a part of?
 
 Enter up to five Rust teams or working groups (separated by commas) that you are a part of and that are the most relevant to the Rust Project contributions that you make. If you receive funding for work in some of these teams specifically, order them by how much funding you receive for work in a given team. For example, if you are a member of t-compiler and t-infra, but you are only funded for your work on t-compiler, enter "compiler,infra".
 
 Type: free form (optional)
+
+### What is your occupation?
+
+Type: select all that apply (optional)
+
+- I am employed
+- I do contract work
+- I run a business
+- I am a student
+- I am an academic (e.g. professor)
+- I am not studying, and I am unemployed or without a job
+- Other (open response)
 
 ## Optional detailed questions
 
