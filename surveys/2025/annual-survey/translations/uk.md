@@ -445,7 +445,7 @@ Type: select all that apply (optional)
 
 - crates.io
 - Власний/локальний/корпоративний регістр крейтів
-- Зеркало crates.io
+- Дзеркало crates.io
 - Git-репозиторії
 - Не знаю
 - Інше
