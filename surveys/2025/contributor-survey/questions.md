@@ -119,9 +119,9 @@ Type: select one (optional)
 
 Type: select one (optional)
 
-- Receiving more funds would allow me to keep my current level of contributions [`NEXT`](#what-rust-teams-are-you-a-part-of)
-- Receiving more funds would allow me to increase my current level of contributions [`NEXT`](#what-rust-teams-are-you-a-part-of)
-- I am happy with the current funding that I have at the moment [`NEXT`](#what-rust-teams-are-you-a-part-of)
+- Receiving more funds would allow me to keep my current level of contributions
+- Receiving more funds would allow me to increase my current level of contributions
+- I am happy with the current funding that I have at the moment
 - I do not require/want any funding for my contributions
 - Other (open response)
 
