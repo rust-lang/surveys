@@ -135,6 +135,18 @@ Please provide the value as an integer in $USD (US Dollars).
 
 Type: free form (optional)
 
+### Would you potentially like to be included on a public list of contributors looking for funding?
+
+If we ever had something like a public list of Rust Project contributors looking for funding, what would you think of that?
+
+Type: select one (optional)
+
+- That sounds like a good idea, and I would potentially like to be on that list
+- That sounds like a good idea, but I do not want to be on such a list
+- I'm neutral/I don't know
+- That sounds like a bad idea
+- Other (open response)
+
 ### What kind of work do you do within the Rust Project?
 
 Type: select all that apply (optional)
