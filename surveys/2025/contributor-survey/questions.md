@@ -155,9 +155,9 @@ If there are more than one, separate them by commas.
 
 Type: free form (optional)
 
-### How much money do you receive for your Rust Project contributions per year?
+### How much money do you receive for your Rust Project contributions?
 
-Estimate your average **yearly** income that is specifically being paid for your Rust Project contributions.
+Estimate your average **hourly** income that is specifically being paid for your Rust Project contributions.
 
 Please provide the value as an integer in $USD (US Dollars).
 
