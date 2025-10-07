@@ -125,6 +125,36 @@ Type: select one (optional)
 - I do not require/want any funding for my contributions
 - Other (open response)
 
+### How much money would you like to be paid for contributing to the Rust Project?
+
+What is a minimum **hourly** rate that could comfortably sustain your contributions to the Rust Project, assuming that it would be your only source of funding, and you would be working full-time on Rust?
+
+Note: we ask for a minimum to establish some baseline. Of course, everyone would like to get paid as much as possible :)
+
+Please provide the value as an integer in $USD (US Dollars).
+
+Type: free form (optional)
+
+### What kind of work do you do within the Rust Project?
+
+Type: select all that apply (optional)
+
+- Documentation
+- Code Review (PRs)
+- Submitting rollups
+- Design Review (RFCs/MCPs/FCPs)
+- Issue Triage
+- Issue Reporting
+- Moderation
+- Implementing new Features
+- Fixing bugs
+- Performance enhancements
+- Communication (e.g. writing blog posts, release notes, preparing for meetings or taking minutes)
+- Supporting/mentoring/guiding other contributors
+- Governance
+- Infrastructure work (CI, releases, ...)
+- Other (open response)
+
 ### What Rust teams are you a part of?
 
 Enter up to five Rust teams or working groups (separated by commas) that you are a part of and that are the most relevant to the Rust Project contributions that you make. If you receive funding for work in some of these teams specifically, order them by how much funding you receive for work in a given team. For example, if you are a member of t-compiler and t-infra, but you are only funded for your work on t-compiler, enter "compiler,infra".
