@@ -21,8 +21,7 @@ it should nevertheless be helpful as a guide.
    - SurveyHero can generate the questionnaire in other languages, uses some machine translation which often leaves a bit to desire
    - Find translators for reviewing the survey and the auto-generated translations
    - You can ask around on the `#rust-survey` or `#general` Zulip streams for assistance.
-   - Be aware that the SurveyHero export feature is currently broken (breaks non Latin alphabets) and importing the translations is not allowed. Correcting the translations is therefore a manual work both for the translator and for the operator that has access to the SurveyHero backoffice.
-   - Translators can take advantage of [this small guide](https://rust-lang.zulipchat.com/#narrow/stream/402479-t-community.2Frust-survey/topic/Translation.20guide/near/406836813)
+   - See [How translations work](#how-translations-work) for further details.
 7. Double-check the survey flow in SurveyHero
    - Go through all the possible paths through the survey, and check that the questions and answers in SurveyHero are
    the same as in `questions.md`.
@@ -36,6 +35,18 @@ it should nevertheless be helpful as a guide.
 8. Prepare a PR to https://blog.rust-lang.org/ with a blog post notifying about the survey
    - See [this PR](https://github.com/rust-lang/blog.rust-lang.org/pull/1178) for an example
    - Make sure to communicate the deadline of the survey, and include the survey link multiple times in the blog post!
+
+## How translations work
+
+We sadly cannot import translations into SurveyHero, so they all have to be entered there manually. The easiest process for that looks something like this:
+
+1. Wait until the English version is finalized on SurveyHero, to avoid duplicate work  
+2. For each translated language, generate a translation link on SurveyHero
+3. Share the translated link with the corresponding translator for the given language
+   - To make their work easier, you can generate a diff between the <last year> and <current year> Enligsh version of the survey, to let the translator more easily find out which parts of the survey have changed, and where will the translations need an update. 
+4. Let the translator update the survey on SurveyHero.
+5. Once it is done, download the translated versions from SH to local Markdown files using the `verifier` binary (`verifier download`), and check the translated Markdown diff. If the diff is ok, backport it back into the `surveys` repository with a PR.
+6. Remove access for the translation link before the survey starts!
 
 ## After the survey finishes
 1. Analyze the results and publish a blog post
