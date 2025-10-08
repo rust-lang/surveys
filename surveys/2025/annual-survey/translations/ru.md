@@ -66,11 +66,11 @@ Type: select one
 Type: select one
 
 - Я всё ещё *активно* пытаюсь изучать Rust
-- В течение 2024 года
-- В течение 2022 или 2023 года
-- В течение 2020 или 2021 года
-- В течение 2018 или 2019 года
-- В течение 2017 года или ранее
+- В течение 2025 года
+- В течение 2023 или 2024 года
+- В течение 2021 или 2022 года
+- В течение 2019 или 2020 года
+- В течение 2018 года или ранее
 
 ### Если вы потребляли учебные материалы по Rust, какие материалы вы использовали?
 
@@ -101,7 +101,7 @@ Type: select all that apply
 
 - Linux
 - Windows 10/11
-- Windows 8 или старше
+- Windows 8.1 или старше
 - Windows Subsystem for Linux (WSL)
 - macOS
 - Другое
@@ -112,7 +112,7 @@ Type: select all that apply
 
 - Linux (настольный или серверный)
 - Windows 10/11
-- Windows 8 или старше
+- Windows 8.1 или старше
 - macOS
 - iOS
 - Android
@@ -137,7 +137,7 @@ Type: select all that apply
 - Xcode
 - Atom
 - Helix
-- 
+- Zed
 - Другое
 
 ### Какие версии Rust вы используете для локальной разработки?
@@ -146,8 +146,8 @@ Type: select all that apply
 
 - Текущая стабильная версия
 - Предыдущая стабильная версия
-- Стабильная версия Rust 1.75 или новее
-- Стабильная версия Rust старше 1.75
+- Стабильная версия Rust 1.83 или новее
+- Стабильная версия Rust старше 1.83
 - Бета-версия
 - Последняя nightly версия
 - Определённая nightly версия
@@ -175,16 +175,15 @@ Type: select all that apply
 
 Type: select one
 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 1.84 (beta)
+- 1.92 (nightly)
+- 1.91 (beta)
+- 1.90
+- 1.89
+- 1.88
+- 1.87
+- 1.86
+- 1.85
+- 1.84
 - 1.83
 - 1.82
 - 1.81
@@ -314,12 +313,12 @@ Rows:
 - [Associated type defaults](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)
 - [Generic const expressions](https://github.com/rust-lang/rust/issues/76560)
 - [Const trait methods](https://github.com/rust-lang/rust/issues/67792)
-- 
+- [Declarative (macro_rules!) attributes (#[attr]) and derives (#[derive(Trait)])](https://github.com/rust-lang/rust/issues/143549)
 - Compile time reflection
 - Variadic generics
 - [Arbitrary self types](https://github.com/rust-lang/rfcs/blob/master/text/3519-arbitrary-self-types-v2.md)
 - [Enum variant types](https://github.com/rust-lang/lang-team/issues/122)
-- [Allocator trait and better OOM handling](https://github.com/rust-lang/rust/issues/32838)[](https://github.com/rust-lang/rust/issues/32838)
+- [Allocator trait and better OOM handling](https://github.com/rust-lang/rust/issues/32838)
 - [Stable ABI](https://github.com/rust-lang/rust/issues/111423)
 - [Portable SIMD](https://github.com/rust-lang/portable-simd)
 
@@ -376,17 +375,17 @@ Type: matrix
 
 Rows:
 
-- [async fn in traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
-- [Return position impl Trait in traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
-- [C-string literals](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#c-string-literals) (1.77)
-- [Recursion in async fn](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#support-for-recursion-in-async-fn) (1.77)
-- [offset_of! macro](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#offset_of) (1.77)
-- [#[diagnostic] attribute](https://blog.rust-lang.org/2024/05/02/Rust-1.78.0.html#diagnostic-attributes) (1.78)
-- [Inline const expressions](https://blog.rust-lang.org/2024/06/13/Rust-1.79.0.html#inline-const-expressions) (1.79)
+- [Strict provenance API](https://blog.rust-lang.org/2025/01/09/Rust-1.84.0/#strict-provenance-apis) (1.84)
+- [Async closures](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/#async-closures) (1.85)
+- [diagnostic::do_not_recommend](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/#hiding-trait-implementations-from-diagnostics) (1.85)
+- [Trait upcasting](https://blog.rust-lang.org/2025/04/03/Rust-1.86.0/#trait-upcasting) (1.86)
+- [Anonymous pipes](https://blog.rust-lang.org/2025/05/15/Rust-1.87.0/#anonymous-pipes) (1.87)
+- [Let chains](https://blog.rust-lang.org/2025/06/26/Rust-1.88.0/#let-chains) (1.88)
+- [Naked functions](https://blog.rust-lang.org/2025/06/26/Rust-1.88.0/#naked-functions) (1.88)
 
 Columns:
 
-- Я использую эту возможность
+- Я использую или планирую использовать эту возможность
 - Я еще не могу использовать эту возможность
 - Мне не нужна эта возможность
 - Я не знал что эта возможность уже стабилизировна
@@ -405,21 +404,23 @@ Type: select all that apply
 
 Type: select all that apply
 
-- Я использую crates.io
-- Я использую собственный/локальный/корпоративный реестр
-- Я использую зеркало crates.io
+- crates.io
+- Собственный/локальный/корпоративный реестр
+- Зеркало crates.io
+- Git репозитории
 - Я не знаю
-- 
-- Other
+- Другое
 
-### 
+### Используете ли вы коды ошибок компиляции?
 
-Type: select one
+ Компилятор Rust присваивает коды определённым ошибкам компиляции (например, *E0308* или *E0509*). Существует [индекс кодов ошибок Rust](https://doc.rust-lang.org/error_codes/error-index.html), который перечисляет эти ошибки и предоставляет их общее описание. Вы можете получить доступ к этим описаниям ошибок, используя, например, `rustc --explain <код-ошибки>`, в [документации](https://doc.rust-lang.org/error_codes/error-index.html) или через [Rust Playground](https://play.rust-lang.org).
 
-- 
-- 
-- 
-- Other
+Type: select one (optional)
+
+ - Я смотрю индекс ошибок компилятора и считаю его полезным
+ - Я посмотел индекс ошибок компилятора, но не нашёл его полезным
+ - Я не знал о существовании индекса ошибок компилятора
+ - Другое (свой ответ)
 
 ### Примерно как часто вы общаетесь с сообществом Rust?
 
@@ -429,7 +430,7 @@ Rows:
 
 - Создаю информационные материалы о Rust (например, пишу в блог, делаю стрим, публикую видео в YouTube, выступаю докладчиком на конференциях/встречах и т.д.
 - Потребляю информационные материалы о Rust (например, блоги, стримы, видео в YouTube и т.д.)
-- Читаю официальные каналы связи Rust (например, This Week in Rust, официальный блог Rust, аккаунт Rust в Twitter и т.д.)
+- Читаю официальные каналы связи Rust (например, This Week in Rust, официальный блог Rust, аккаунт Rust в Bluesky и т.д.)
 - Участвую в обсуждании Rust в соцсетях или на сайтах (Hacker News, r/rust, Twitter, LinkedIn и т.д.)
 - Принимаю участие во встрече или конференции по Rust (виртуально или очно)
 - Пишу, комментирую, участвую в дискуссии или предоставляю редактуру для открытого RFC-документа
@@ -902,7 +903,7 @@ Type: select all that apply
 
 Type: select all that apply
 
-- 
+- Украинский
 - Английский
 - Испанский
 - Китайский
