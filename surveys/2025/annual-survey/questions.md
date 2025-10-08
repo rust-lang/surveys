@@ -123,7 +123,7 @@ Type: select one (optional)
 - During 2025
 - During 2023 or 2024
 - During 2021 or 2022
-- During 2020 or 2019
+- During 2019 or 2020
 - During 2018 or before
 
 > **justification**
