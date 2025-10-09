@@ -105,6 +105,16 @@ Type: select one (optional)
 - Not applicable to my source of funding
 - Other (open response)
 
+### How likely is it that you will lose your funding in the near future?
+
+Type: select one (optional)
+
+- I'm not worried, I'm confident in my funding
+- I'm slightly worried, the situation is uncertain
+- I think that I'm going to lose funding in the near future
+- My funding is definitely ending soon
+- Other (open response)
+
 ### Are your contributions directed by your source of funding?
 
 We want to find out whether the entity/entities that pay for your contributions determine what contributions you make.
