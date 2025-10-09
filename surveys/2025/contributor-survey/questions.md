@@ -177,6 +177,22 @@ Type: select all that apply (optional)
 - Infrastructure work (CI, releases, ...)
 - Other (open response)
 
+### What parts of the Rust Project do you contribute to?
+
+Type: select all that apply (optional)
+
+- Compiler
+- Standard library
+- Cargo
+- Rust Analyzer
+- Clippy
+- Rustfmt
+- Miri
+- Rustup
+- Bootstrap and related in-tree tools (compiletest, ...)
+- Other tooling (bors, rfcbot, triagebot, rustc-perf, ...)
+- Other (open response)
+
 ### What Rust teams are you a part of?
 
 Enter up to five Rust teams or working groups (separated by commas) that you are a part of and that are the most relevant to the Rust Project contributions that you make. If you receive funding for work in some of these teams specifically, order them by how much funding you receive for work in a given team. For example, if you are a member of t-compiler and t-infra, but you are only funded for your work on t-compiler, enter "compiler,infra".
