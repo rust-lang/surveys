@@ -183,6 +183,7 @@ Type: select all that apply (optional)
 
 - Compiler
 - Standard library
+- Rustdoc
 - Cargo
 - Rust Analyzer
 - Clippy
