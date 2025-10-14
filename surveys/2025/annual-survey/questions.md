@@ -4,8 +4,6 @@ Whether or not you use the Rust Programming Language <https://rust-lang.org> tod
 
 The Rust Community Team has created this survey to help us gauge how we're doing, what can be improved, and how we can best engage with all of you as we move forward.
 
-This is your chance to have a say in the development priorities of Rust.
-
 Your answers will be anonymous. Any personal data you submit as a part of this survey will be handled in accordance with our policy as described in our [Frequently Asked Questions](https://github.com/rust-lang/surveys/blob/main/documents/Community-Survey-FAQ.md).
 
 We estimate it will take about 10-25 minutes to complete.
@@ -108,7 +106,7 @@ Type: select one
 > Useful for cohort analysis, i.e., for other questions we can query if answers are significantly different for beginners vs advanced users.
 >
 > Previously this question was a 1-10 ranking. Having specific labels can help with consistency across responses. Additionally, having 10 choices
-> was too specific (i.e., what's the difference between a 7 and 8?) where as with the new answers, we have a better idea of what the differences 
+> was too specific (i.e., what's the difference between a 7 and 8?) where as with the new answers, we have a better idea of what the differences
 > between answers actually mean.
 
 ### When did you learn to program in Rust?
@@ -172,7 +170,7 @@ Type: select one (optional)
 
 ### Which operating systems do you use regularly for Rust development?
 
-**Note**: this is specifically about which systems you personally use for development, *not* all the 
+**Note**: this is specifically about which systems you personally use for development, *not* all the
 systems you target.
 
 Type: select all that apply (optional)
@@ -218,7 +216,7 @@ Type: select all that apply (optional)
 
 > **justification**
 >
-> This question can be used to figure out roughly what systems are being targeted as well as 
+> This question can be used to figure out roughly what systems are being targeted as well as
 > what OS stack is being developed against (i.e., desktop/server OS, mobile OS, embedded OS, bare metal)
 >
 > We're using "Linux" here rather than "*nix" or similar, with the same
@@ -273,9 +271,9 @@ Type: select all that apply (optional)
 
 > **justification**
 >
-> Together with the following question, we can better determine what the spread of 
+> Together with the following question, we can better determine what the spread of
 > version usage is across the community.
-> We ask specifically about version 1.83 since it is, at the time of the survey, the 
+> We ask specifically about version 1.83 since it is, at the time of the survey, the
 > version that was released ~1 year prior. Additionally, at the time of this writing
 > all major Linux distros have a version equal to or newer than this version.
 
@@ -306,7 +304,7 @@ Type: select all that apply (optional)
 
 Type: select one (optional)
 
-- 1.92 (nightly), and then every version from 1.91 to 1.0 in descending order, and "a pre-1.0 version"
+- 1.93 (nightly), and then every version from 1.92 to 1.0 in descending order, and "a pre-1.0 version"
 
 > **justification**
 >
@@ -568,8 +566,8 @@ Choices:
 Type: free form (optional)
 
 > **justification**
-> 
-> More detail on the type of situations where people have felt unwelcome can let us better 
+>
+> More detail on the type of situations where people have felt unwelcome can let us better
 > address these issues in the future.
 
 ## Rust at work
@@ -719,7 +717,7 @@ Type: select one (optional)
 - Over 10,000
 
 > **justification**
-> 
+>
 > This question is not that interesting on its own, but it can be used as a sort of cohort for understanding how answers
 > change depending on the size of the development effort at a company.
 >
@@ -810,7 +808,7 @@ Type: select all that apply (optional)
 
 See [who](./design/who.md).
 
-Your responses to the following questions will help our reviewers conduct cohort analyses and help us better understand the Rust community. Please answer according to your comfort level.  
+Your responses to the following questions will help our reviewers conduct cohort analyses and help us better understand the Rust community. Please answer according to your comfort level.
 
 ### Do you consider yourself a member of a group that is underrepresented or marginalized in technology?
 
@@ -931,7 +929,7 @@ Type: free form (optional)
 
 > **justification**
 >
-> While it's unlikely we'll receive any one piece of feedback from this question that will prove to be super useful, 
+> While it's unlikely we'll receive any one piece of feedback from this question that will prove to be super useful,
 > having it in the survey can still be useful. It can help us decide on new questions or perspectives that we want to
 > try to capture in future surveys. It also gives respondents a place to give thanks or share a particular opinion they
 > hold which can be useful in and of itself.
