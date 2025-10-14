@@ -40,13 +40,14 @@ it should nevertheless be helpful as a guide.
 
 We sadly cannot import translations into SurveyHero, so they all have to be entered there manually. The easiest process for that looks something like this:
 
-1. Wait until the English version is finalized on SurveyHero, to avoid duplicate work  
-2. For each translated language, generate a translation link on SurveyHero
-3. Share the translated link with the corresponding translator for the given language
+1. Wait until the English version is finalized on SurveyHero, to avoid duplicate work
+2. Download the current versions of the translations from SurveyHero using the `verifier` binary, to have a baseline for follow-up diffs
+3. For each translated language, generate a translation link on SurveyHero
+4. Share the translated link with the corresponding translator for the given language
    - To make their work easier, you can generate a diff between the <last year> and <current year> English version of the survey, to let the translator more easily find out which parts of the survey have changed, and where will the translations need an update. 
-4. Let the translator update the survey on SurveyHero.
-5. Once it is done, download the translated versions from SH to local Markdown files using the `verifier` binary (`verifier download`), and check the translated Markdown diff. If the diff is ok, backport it back into the `surveys` repository with a PR.
-6. Remove access for the translation link before the survey starts!
+5. Let the translator update the survey on SurveyHero.
+6. Once it is done, download the translated versions from SH to local Markdown files using the `verifier` binary (`verifier download`), and check the translated Markdown diff. If the diff is ok, backport it back into the `surveys` repository with a PR.
+7. Remove access for the translation link before the survey starts!
 
 ## After the survey finishes
 1. Analyze the results and publish a blog post
