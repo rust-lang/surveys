@@ -2,7 +2,7 @@
 
 Whether or not you use the Rust Programming Language <https://rust-lang.org> today, we want to hear from you!
 
-The Rust Community Team has created this survey to help us gauge how we're doing, what can be improved, and how we can best engage with all of you as we move forward.
+The Rust Survey Team created this survey to help us understand how the Rust community looks like, how we're doing, what can be improved, and how we can best engage with all of you as we move forward.
 
 Your answers will be anonymous. Any personal data you submit as a part of this survey will be handled in accordance with our policy as described in our [Frequently Asked Questions](https://github.com/rust-lang/surveys/blob/main/documents/Community-Survey-FAQ.md).
 
