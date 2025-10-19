@@ -33,7 +33,7 @@ Type: select all that apply
 - Нехватка библиотек
 - Нехватка инструментов
 - Слишком трудно изучать или изучение займет слишком много времени
-- Сообщество было грубым, неприветливым или отталкивающим иным образом
+- Сообщество было грубым, неприветливым или иным образом произвело отталкивающее впечатление
 - Предпочитаю использовать другой язык
 - У меня больше нет возможности пользоваться Rust по причинам, на которые я не в состоянии повлиять
 - Ещё не успел
@@ -175,8 +175,9 @@ Type: select all that apply
 
 Type: select one
 
-- 1.92 (nightly)
-- 1.91 (beta)
+- 1.93 (nightly)
+- 1.92 (beta)
+- 1.91
 - 1.90
 - 1.89
 - 1.88
@@ -318,7 +319,7 @@ Rows:
 - Variadic generics
 - [Arbitrary self types](https://github.com/rust-lang/rfcs/blob/master/text/3519-arbitrary-self-types-v2.md)
 - [Enum variant types](https://github.com/rust-lang/lang-team/issues/122)
-- [Allocator trait and better OOM handling](https://github.com/rust-lang/rust/issues/32838)
+- [Allocator trait and better OOM handling](https://github.com/rust-lang/rust/issues/32838)[](https://github.com/rust-lang/rust/issues/32838)
 - [Stable ABI](https://github.com/rust-lang/rust/issues/111423)
 - [Portable SIMD](https://github.com/rust-lang/portable-simd)
 
@@ -375,8 +376,8 @@ Type: matrix
 
 Rows:
 
-- [Strict provenance API](https://blog.rust-lang.org/2025/01/09/Rust-1.84.0/#strict-provenance-apis) (1.84)
-- [Async closures](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/#async-closures) (1.85)
+- [Strict provenance API](https://blog.rust-lang.org/2025/01/09/Rust-1.84.0/#strict-provenance-apis) [(1.84)](https://blog.rust-lang.org/2025/01/09/Rust-1.84.0/#strict-provenance-apis)
+- [Async closures](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/#async-closures) [(1.85)](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/#async-closures)
 - [diagnostic::do_not_recommend](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/#hiding-trait-implementations-from-diagnostics) (1.85)
 - [Trait upcasting](https://blog.rust-lang.org/2025/04/03/Rust-1.86.0/#trait-upcasting) (1.86)
 - [Anonymous pipes](https://blog.rust-lang.org/2025/05/15/Rust-1.87.0/#anonymous-pipes) (1.87)
@@ -413,14 +414,12 @@ Type: select all that apply
 
 ### Используете ли вы коды ошибок компиляции?
 
- Компилятор Rust присваивает коды определённым ошибкам компиляции (например, *E0308* или *E0509*). Существует [индекс кодов ошибок Rust](https://doc.rust-lang.org/error_codes/error-index.html), который перечисляет эти ошибки и предоставляет их общее описание. Вы можете получить доступ к этим описаниям ошибок, используя, например, `rustc --explain <код-ошибки>`, в [документации](https://doc.rust-lang.org/error_codes/error-index.html) или через [Rust Playground](https://play.rust-lang.org).
+Type: select one
 
-Type: select one (optional)
-
- - Я смотрю индекс ошибок компилятора и считаю его полезным
- - Я посмотел индекс ошибок компилятора, но не нашёл его полезным
- - Я не знал о существовании индекса ошибок компилятора
- - Другое (свой ответ)
+- Я смотрю индекс ошибок компилятора и считаю его полезным
+- Я посмотел индекс ошибок компилятора, но не нашёл его полезным
+- Я не знал о существовании индекса ошибок компилятора
+- Другое
 
 ### Примерно как часто вы общаетесь с сообществом Rust?
 
@@ -903,7 +902,6 @@ Type: select all that apply
 
 Type: select all that apply
 
-- Украинский
 - Английский
 - Испанский
 - Китайский
@@ -911,6 +909,7 @@ Type: select all that apply
 - Немецкий
 - Португальский
 - Русский
+- Украинский
 - Французский
 - Хинди
 - Японский
