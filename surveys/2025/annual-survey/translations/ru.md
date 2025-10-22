@@ -376,8 +376,8 @@ Type: matrix
 
 Rows:
 
-- [Strict provenance API](https://blog.rust-lang.org/2025/01/09/Rust-1.84.0/#strict-provenance-apis) [(1.84)](https://blog.rust-lang.org/2025/01/09/Rust-1.84.0/#strict-provenance-apis)
-- [Async closures](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/#async-closures) [(1.85)](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/#async-closures)
+- [Strict provenance API](https://blog.rust-lang.org/2025/01/09/Rust-1.84.0/#strict-provenance-apis) (1.84)
+- [Async closures](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/#async-closures) (1.85)
 - [diagnostic::do_not_recommend](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/#hiding-trait-implementations-from-diagnostics) (1.85)
 - [Trait upcasting](https://blog.rust-lang.org/2025/04/03/Rust-1.86.0/#trait-upcasting) (1.86)
 - [Anonymous pipes](https://blog.rust-lang.org/2025/05/15/Rust-1.87.0/#anonymous-pipes) (1.87)
