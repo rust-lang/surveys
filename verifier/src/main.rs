@@ -260,23 +260,46 @@ impl From<&markdown::Question<'_>> for QuestionType {
     }
 }
 
+#[derive(Debug)]
+struct SHCreds {
+    username: String,
+    password: String,
+}
+
+fn get_creds_from_env() -> SHCreds {
+    let username = match std::env::var("SH_API_USER") {
+        Ok(v) => v,
+        _ => {
+            panic!("Please ensure SH_API_USER env var is set.");
+        }
+    };
+
+    let password = match std::env::var("SH_API_TOKEN") {
+        Ok(v) => v,
+        _ => {
+            panic!("Please ensure SH_API_TOKEN env var is set.");
+        }
+    };
+
+    SHCreds { username, password }
+}
+
 fn fetch_surveyhero_data(args: &SharedArgs) -> anyhow::Result<SurveyData> {
-    let mut client = api::Client::new(args.username.clone(), args.password.clone());
+    let creds = get_creds_from_env();
+    let mut client = api::Client::new(creds.username, creds.password);
     let surveys = client.fetch_surveys()?;
-    let survey_name = &args.survey_name;
     let survey = surveys
         .iter()
-        .find(|s| s.title.as_str() == survey_name)
+        .find(|s| s.survey_id == args.survey_id)
         .ok_or_else(|| {
             anyhow::anyhow!(
-                "no survey with the name '{}' in the account. Available surveys: {}",
-                survey_name,
+                "no survey with ID {} in the account. Available surveys:\n{}",
+                args.survey_id,
                 surveys
                     .iter()
-                    .map(|s| &s.title)
-                    .cloned()
+                    .map(|s| format!("id= {} name= {}", s.survey_id, &s.title))
                     .collect::<Vec<_>>()
-                    .join(", ")
+                    .join("\n")
             )
         })?;
     let languages = client.fetch_secondary_languages(survey.survey_id)?;
@@ -314,28 +337,22 @@ struct Args {
 
 #[derive(clap::Parser, Clone)]
 struct SharedArgs {
-    /// SurveyHero API key username.
+    /// ID of the survey.
     #[clap(long)]
-    username: String,
-    /// SurveyHero API key token.
-    #[clap(long)]
-    password: String,
-    /// Name of the survey.
-    #[clap(long)]
-    survey_name: String,
-    /// Survey path. Corresponds to a Markdown file or a directory at `surveys/<path>`.
+    survey_id: usize,
+    /// Survey path. Corresponds to a Markdown file or a directory relative to `../surveys/`.
     #[clap(long)]
     path: String,
 }
 
 #[derive(clap::Parser, Clone)]
 enum VerifierCmd {
-    /// Check that whatever the contents on SurveyHero match the local Markdown files.
+    /// Shows a diff with the local Markdown files and the SurveyHero content.
     Check {
         #[clap(flatten)]
         shared: SharedArgs,
     },
-    /// Create or overwrite local Markdown files with the contents on SurveyHero.
+    /// Downloads all Markdown files from SurveyHero (overwrites without asking)
     Download {
         #[clap(flatten)]
         shared: SharedArgs,
