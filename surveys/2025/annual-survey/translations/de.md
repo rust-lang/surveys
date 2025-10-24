@@ -77,7 +77,7 @@ Type: select one
 Type: select all that apply
 
 - Bücher („The Rust Programming Language“, „Rust for Rustaceans“ usw.)
-- Online-Übungen (Rustlings, Rust by Example, usw.
+- Online-Übungen (Rustlings, Rust by Example, usw.)
 - Videos oder Livestreams
 - Blogs
 - Dokumentation
@@ -101,7 +101,7 @@ Type: select all that apply
 
 - Linux
 - Windows 10/11
-- Windows 8 oder älter
+- Windows 8.1 oder älter
 - Windows Subsystem for Linux
 - Mac OS
 - Andere
@@ -112,7 +112,7 @@ Type: select all that apply
 
 - Linux (Desktop oder Server)
 - Windows 10/11
-- Windows 8 oder älter
+- Windows 8.1 oder älter
 - Mac OS
 - iOS
 - Android
@@ -137,7 +137,7 @@ Type: select all that apply
 - Xcode
 - Atom
 - Helix
-- 
+- Zed
 - Andere
 
 ### Welche Rust-Versionen nutzen Sie lokal für die Entwicklung?
@@ -146,8 +146,8 @@ Type: select all that apply
 
 - Die derzeitige stabile Version
 - Die vorige stabile Version
-- Eine spezifische stabile Rust-Version gleich oder neuer als 1.67
-- Eine spezifische stabile Rust-Version vor 1.67
+- Eine spezifische stabile Rust-Version gleich oder neuer als 1.83
+- Eine spezifische stabile Rust-Version vor 1.83
 - Die Beta Version
 - Aktuelle Nightly Version
 - Eine spezifische Nightly-Version
@@ -175,16 +175,16 @@ Type: select all that apply
 
 Type: select one
 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 1.84 (beta)
+- 1.93 (nightly)
+- 1.92 (beta)
+- 1.91
+- 1.90
+- 1.89
+- 1.88
+- 1.87
+- 1.86
+- 1.85
+- 1.84
 - 1.83
 - 1.82
 - 1.81
@@ -314,7 +314,7 @@ Rows:
 - Assoziierte Default-Typen
 - Generische Const-Ausdrücke
 - Const Trait-Methoden
-- 
+- Deklarative (macro_rules!) Attribut- (#[attr]) und Derive- (#[derive(Trait)]) Makros
 - Reflektion zur Compilierzeit
 - Variadische Generics
 - Beliebige Self-Typen
@@ -376,17 +376,17 @@ Type: matrix
 
 Rows:
 
-- Async Funktionen in Traits (1.75)
-- impl Trait in Return Position in Traits (1.75)
-- C-String-Ausdrücke (1.77)
-- Rekursion in Async Funktionen (1.77)
-- offset_of! Makro (1.77)(
-- #[diagnostic] Attribut (1.78)
-- Inline const Ausdrücke (1.79)
+- Strikte provenance API (1.84)
+- Async closures (1.85)
+- diagnostic::do_not_recomment (1.85)
+- Trait upcasting (1.86)
+- Anonyme pipes (1.87)
+- Let chains (1.88)
+- Nackte Funktionen (1.88)
 
 Columns:
 
-- Ich nutze dieses Feature
+- Ich nutze dieses Feature oder plane es zu nutzen
 - Ich kann dieses Feature noch nicht nutzen
 - Ich brauche dieses Feature nicht
 - Ich wusste nicht, dass dies stabilisiert wurde
@@ -408,18 +408,18 @@ Type: select all that apply
 - Ich verwende crates.io
 - Ich verwende eine benutzerdefinierte/lokale/Firmenregistrierung
 - Ich verwende einen Mirror von crates.io
-- Ich weiß nicht
-- 
-- Other
+- Git Repositories
+- Ich weiß es nicht
+- Anderes
 
-### 
+### Nutzen Sie die Fehlercodes des Compilers?
 
 Type: select one
 
-- 
-- 
-- 
-- Other
+- Ich habe die Fehlercode-Beschreibunugen gelesen und finde sie nützlich
+- Ich habe die Fehlercode-Beschreibunugen gelesen, fand sie aber nicht nützlich
+- Ich wusste nicht, dass es einen Fehlercode Index gibt
+- Anderes
 
 ### Ungefähr wie oft sind Sie wie folgt in der Rust Community aktiv?
 
@@ -902,7 +902,6 @@ Type: select all that apply
 
 Type: select all that apply
 
-- 
 - Chinesisch
 - Deutsch
 - Englisch
@@ -913,6 +912,7 @@ Type: select all that apply
 - Portugiesisch
 - Russisch
 - Spanisch
+- Ukrainisch
 - Eine andere Sprache
 
 ### Möchten Sie uns darüber hinaus noch etwas mitteilen?
