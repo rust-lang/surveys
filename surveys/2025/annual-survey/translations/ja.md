@@ -8,6 +8,8 @@ Type: select one
 
 ### Rustを使わなくなったとのことですが、なぜRustを使わなくなったのでしょうか？
 
+複数回答を選択できます。
+
 Type: select all that apply
 
 - 言語機能が欠落している
@@ -25,6 +27,8 @@ Type: select all that apply
 Type: free form
 
 ### なぜ、Rustを使わないのですか？
+
+複数回答を選択できます
 
 Type: select all that apply
 
@@ -63,6 +67,8 @@ Type: select one
 
 ### Rustでのプログラミングをいつ学びましたか？
 
+注：Rustのスキル向上に今後も努めることは可能ですが、この質問においては「Rustのプログラミング学習」とは、学習教材の利用や学習目的でのコーディングに多くの時間を費やすこと（他の目標達成とは対照的に）とみなしてください。学習プロセスが複数の期間にまたがる場合は、最も学習が進んだと感じた期間を選んでください。
+
 Type: select one
 
 - まだ*積極的に*Rustを学ぼうとしているところです
@@ -73,6 +79,8 @@ Type: select one
 - 2017年以前
 
 ### Rust に関する学習教材を利用した場合、どのような種類の教材を利用しましたか?
+
+該当するものをすべて選択してください
 
 Type: select all that apply
 
@@ -97,6 +105,8 @@ Type: select one
 
 ### 普段Rustの開発に使用しているOSはどれですか？
 
+注：ターゲットとしているOS（Rustプログラムを最終的に実行するOS）ではなく、特に開発に使用しているOSを答えてください。複数回答を選択できます。
+
 Type: select all that apply
 
 - Linux
@@ -107,6 +117,8 @@ Type: select all that apply
 - その他
 
 ### 開発したRustソフトウェアを、どのOSやランタイムで実行しますか？
+
+注：この質問はターゲットとするOSまたはランタイムに関するものであり、開発に使用するOSやターゲットとする特定のアーキテクチャ（x86とARMなど）に関するものではありません。複数回答を選択できます。
 
 Type: select all that apply
 
@@ -125,6 +137,8 @@ Type: select all that apply
 
 ### Rustコードを書く際、日常的に使用しているエディタまたはIDEのセットアップはどれですか？
 
+複数回答を選択できます。
+
 Type: select all that apply
 
 - VS Code
@@ -142,6 +156,8 @@ Type: select all that apply
 
 ### ローカル開発で使用するRustのバージョンはどれですか？
 
+複数回答を選択できます。
+
 Type: select all that apply
 
 - 現在のstableバージョン
@@ -156,6 +172,8 @@ Type: select all that apply
 - その他
 
 ### （あなたがnightlyを利用している場合） それはなぜですか？
+
+複数回答を選択できます。
 
 Type: select all that apply
 
@@ -172,6 +190,8 @@ Type: select all that apply
 - その他
 
 ### あなたが開発業務のために使用した一番古いバージョンのRustは何ですか？
+
+(コードがそのコンパイラ バージョンで動作することを確認するテストを除く)
 
 Type: select one
 
@@ -289,6 +309,8 @@ Columns:
 
 ### Rustの進化の速さについてあなたの意見をお聞かせください。
 
+Rust言語の開発スピードをどのように感じているか知りたいです。
+
 Type: select one
 
 - Rustはすでに複雑すぎるため、より重要な機能を追加したり安定化したりするべきではない
@@ -299,6 +321,8 @@ Type: select one
 - その他
 
 ### 未実装の機能、または (夜間のみ) 安定化を求めている機能はどれですか?
+
+現在機能ゲートの背後にある *Rust コンパイラ* の機能 (Rust コンパイラの不安定版/ナイトリー リリースを使用する場合にのみ利用可能)、または欠落していて Rust エコシステムやあなたの仕事。このリストには、cargo、rustup、rustfmt などのコンパイラ関連の他のツールは含まれていません。ご意見のある点のみを選択してください
 
 Type: matrix
 
@@ -336,6 +360,8 @@ Type: free form
 
 ### Rust の次の側面にどのように優先的に取り組むべきだと思いますか?
 
+ご意見のある点のみを選択してください
+
 Type: matrix
 
 Rows:
@@ -372,6 +398,8 @@ Type: free form
 
 ### 過去 12 か月間に安定化した機能のうち、最もよく使用するものはどれですか?
 
+括弧内のテキストは、どの Rust バージョンで機能が安定化されたかを示します。
+
 Type: matrix
 
 Rows:
@@ -394,6 +422,8 @@ Columns:
 
 ### Rustプロジェクトをどのように構築しますか
 
+複数回答を選択できます。
+
 Type: select all that apply
 
 - Cargo を使用しています
@@ -402,6 +432,8 @@ Type: select all that apply
 - カーゴを他のビルド・システムと一緒に使っている（あるいは単に使っている）場合、どのビルド・システムを使っていますか？
 
 ### Rustプロジェクトをビルドするためのクレートのダウンロードはどうしていますか?
+
+複数回答を選択できます。
 
 Type: select all that apply
 
@@ -413,6 +445,8 @@ Type: select all that apply
 - その他
 
 ### コンパイラのエラーコードは活用していますか？
+
+Rustコンパイラは、特定のコンパイラエラー（例: E0308 や E0509）にエラーコードを割り当てています。 これらのエラーを集め、一般的な説明を提供する[Rustエラーコードインデックス](https://doc.rust-lang.org/error_codes/error-index.html)が存在します。 これらのエラー説明は、例えば rustc --explain <エラーコード> コマンド、[ドキュメント](https://doc.rust-lang.org/error_codes/error-index.html)、または[Rust Playground](https://play.rust-lang.org/)を通じてアクセスできます。
 
 Type: select one
 
@@ -506,6 +540,8 @@ Type: select one
 
 ### 仕事で Rust を使用した経験に関して、以下のうち、どれが当てはまりますか？
 
+複数回答を選択できます。
+
 Type: select all that apply
 
 - Rustの使用は、目標達成に役立った
@@ -515,6 +551,8 @@ Type: select all that apply
 - 将来的に、再びRustを使用する可能性が高い
 
 ### あなたが仕事でRustを使用する理由は、以下のうちのどれですか?
+
+複数回答を選択できます。
 
 Type: select all that apply
 
@@ -532,6 +570,8 @@ Type: select all that apply
 Type: free form
 
 ### あなたの会社では、どの技術領域でRustが使用されていますか？
+
+複数回答を選択できます。
 
 Type: select all that apply
 
@@ -565,6 +605,8 @@ Type: select all that apply
 - その他
 
 ### あなたの会社にはおよそ何人の開発者がいますか？
+
+注: ここでは正確であることを心配する必要はありません。直感に従ってください。
 
 Type: select one
 
@@ -603,6 +645,8 @@ Columns:
 
 ### Rustに対するあなたの感想は、以下のうちのどれですか？
 
+複数回答を選択できます。
+
 Type: select all that apply
 
 - Rustは、他のプログラミング言語と比較して、本当にメリットがある
@@ -614,6 +658,8 @@ Type: select all that apply
 - Rustを使用するのは楽しい
 
 ### Rustの将来について、あなたが最も心配していることは何ですか？
+
+複数回答を選択できます。
 
 Type: select all that apply
 
@@ -890,6 +936,8 @@ Type: free form
 
 ### 技術的なトピックについて英語でコミュニケーションをとることに関して、どのように感じますか？
 
+複数回答を選択できます。
+
 Type: select all that apply
 
 - 英語で技術的な会話をすることができると感じています
@@ -899,6 +947,8 @@ Type: select all that apply
 - 英語で書かれた技術的な教材（技術書、ブログ記事など）を読むことができると感じています
 
 ### あなたにとって、技術的なコミュニケーションに適した言語は何ですか？
+
+重要：この回答は、あなたがコミュニケーションできる言語ではなく、あなたの好みを反映している必要があります。たとえば、英語と韓国語の両方で快適に技術的コミュニケーションができると感じているが、常に韓国語を好む場合は、韓国語のみを答えてください。
 
 Type: select all that apply
 

@@ -8,6 +8,8 @@ Type: select one
 
 ### Como você indicou que atualmente não está mais usando Rust, por que não?
 
+Você pode selecionar várias opções.
+
 Type: select all that apply
 
 - Faltam recursos de linguagem
@@ -25,6 +27,8 @@ Type: select all that apply
 Type: free form
 
 ### Por que você não usa Rust?
+
+Você pode selecionar várias opções.
 
 Type: select all that apply
 
@@ -63,6 +67,8 @@ Type: select one
 
 ### Quando você aprendeu a programar em Rust?
 
+Observação: embora você possa continuar tentando melhorar suas habilidades em Rust, para esta pergunta assuma que "aprender a programar em Rust" significa passar a maior parte do seu tempo com Rust consumindo materiais de aprendizagem ou programando para aprender (em vez de atingir algum outro objetivo). Se seu processo de aprendizagem abranger vários dos períodos de tempo listados, escolha aquele em que você sentir que aprendeu mais.
+
 Type: select one
 
 - Ainda estou *ativamente* tentando aprender Rust
@@ -73,6 +79,8 @@ Type: select one
 - Durante 2018 ou antes
 
 ### Se você consumiu material de aprendizagem sobre Rust, que tipo de material você consumiu?
+
+Por favor, marque todas as opções que se aplicam
 
 Type: select all that apply
 
@@ -97,6 +105,8 @@ Type: select one
 
 ### Quais sistemas operacionais você usa regularmente para o desenvolvimento em Rust?
 
+Observação: isto é especificamente sobre quais sistemas você usa pessoalmente para desenvolvimento, não sobre todos os sistemas que você usa como alvo de compilação.Você pode selecionar várias opções.
+
 Type: select all that apply
 
 - Linux
@@ -107,6 +117,8 @@ Type: select all that apply
 - Outro
 
 ### Para quais sistemas operacionais ou ambientes de execução você desenvolve software em Rust?
+
+Observação: isto é especificamente sobre qual sistema operacional ou ambiente de execução você tem como alvo de compilação, não sobre qual sistema você usa para desenvolvimento, nem sobre quais arquiteturas específicas (por exemplo, x86 vs ARM) você tem como alvo de compilação.Você pode selecionar várias opções.
 
 Type: select all that apply
 
@@ -125,6 +137,8 @@ Type: select all that apply
 
 ### Qual editor ou IDE você usa regularmente para programar em Rust?
 
+Você pode selecionar várias opções.
+
 Type: select all that apply
 
 - VS Code
@@ -142,6 +156,8 @@ Type: select all that apply
 
 ### Qual(is) versão(ões) do Rust você usa para desenvolvimento?
 
+Você pode selecionar várias opções.
+
 Type: select all that apply
 
 - Versão estável atual
@@ -156,6 +172,8 @@ Type: select all that apply
 - Outro
 
 ### Se você usa a versão nightly, por quê?
+
+Você pode selecionar várias opções.
 
 Type: select all that apply
 
@@ -172,6 +190,8 @@ Type: select all that apply
 - Outro
 
 ### Qual é a versão mais antiga do Rust que você usa para qualquer tarefa de desenvolvimento?
+
+(Excluindo testes para garantir que seu código funcione nessa versão do compilador)
 
 Type: select one
 
@@ -289,6 +309,8 @@ Columns:
 
 ### Qual é a sua opinião sobre a velocidade com que Rust evolui?
 
+Queremos saber como você percebe a velocidade de desenvolvimento da linguagem Rust.
+
 Type: select one
 
 - Rust já é complexo demais; não deveria adicionar nem estabilizar mais recursos significativos
@@ -299,6 +321,8 @@ Type: select one
 - Outro
 
 ### Quais recursos não implementados (ou apenas *nightly*) você gostaria que fossem estabilizados?
+
+Por favor, mencione recursos do <strong>compilador Rust ou da biblioteca padrão</strong> que atualmente são instáveis (disponíveis apenas usando uma versão nightly do compilador Rust) ou que estejam ausentes e que, na sua opinião, seriam benéficos para o ecossistema Rust ou para você. Esta lista exclui outras ferramentas em torno do compilador, como cargo, rustup, rustfmt, etc.
 
 Type: matrix
 
@@ -336,6 +360,8 @@ Type: free form
 
 ### Quais dos seguintes aspectos do Rust apresentam problemas não triviais para sua produtividade em programação?
 
+Avalie apenas os desafios que você considera que estão impactando o seu trabalho. Se você não selecionar nada em uma determinada linha, assumiremos que você não sabe ou não se importa com esse aspecto.
+
 Type: matrix
 
 Rows:
@@ -372,6 +398,8 @@ Type: free form
 
 ### Quais recursos foram estabilizados nos últimos 12 meses você usa com mais frequência?
 
+O texto entre parênteses mostra em qual versão do Rust o recurso foi estabilizado.
+
 Type: matrix
 
 Rows:
@@ -394,6 +422,8 @@ Columns:
 
 ### Qual é o seu processo de build para projetos Rust?
 
+Você pode selecionar várias opções.
+
 Type: select all that apply
 
 - Eu uso Cargo
@@ -402,6 +432,8 @@ Type: select all that apply
 - Se você usa Cargo com (ou apenas usa) outros sistemas de build, quais você usa?
 
 ### De onde você baixa crates para fazer o build de projetos em Rust?
+
+Você pode selecionar várias opções.
 
 Type: select all that apply
 
@@ -413,6 +445,8 @@ Type: select all that apply
 - Outro
 
 ### Você faz uso dos códigos de erro do compilador?
+
+O compilador Rust atribui códigos de erro a certos erros do compilador (por exemplo, E0308 ou E0509). Há um [índice de códigos de erro do Rust](https://doc.rust-lang.org/error_codes/error-index.html) que reúne esses erros e fornece uma descrição geral deles. Você pode acessar essas descrições de erro usando, por exemplo, `rustc --explain <error-code>`, na [documentação](https://doc.rust-lang.org/error_codes/error-index.html) ou através do [Rust Playground](https://play.rust-lang.org/).
 
 Type: select one
 
@@ -506,6 +540,8 @@ Type: select one
 
 ### Quais das seguintes afirmações se aplicam à sua experiência ao usar Rust no trabalho?
 
+Você pode selecionar várias opções.
+
 Type: select all that apply
 
 - Usar Rust nos ajudou a alcançar nossos objetivos
@@ -515,6 +551,8 @@ Type: select all that apply
 - É provável que usemos o Rust novamente no futuro
 
 ### Quais das seguintes afirmações são motivos pelos quais você usa Rust no trabalho?
+
+Você pode selecionar várias opções.
 
 Type: select all that apply
 
@@ -532,6 +570,8 @@ Type: select all that apply
 Type: free form
 
 ### Em qual(is) domínio(s) de tecnologia o Rust é usado na sua organização?
+
+Você pode selecionar várias opções.
 
 Type: select all that apply
 
@@ -565,6 +605,8 @@ Type: select all that apply
 - Outro
 
 ### Aproximadamente quantos desenvolvedores sua organização emprega no total?
+
+Observação: Não se preocupe em ser preciso aqui! Siga seu instinto.
 
 Type: select one
 
@@ -603,6 +645,8 @@ Columns:
 
 ### Quais das seguintes afirmações sobre Rust você considera verdadeiras?
 
+Você pode selecionar várias opções.
+
 Type: select all that apply
 
 - Rust oferece um benefício real em relação a outras linguagens de programação
@@ -614,6 +658,8 @@ Type: select all that apply
 - Rust é divertido de usar
 
 ### Quais são suas maiores preocupações com o futuro do Rust?
+
+Você pode selecionar várias opções.
 
 Type: select all that apply
 
@@ -890,6 +936,8 @@ Type: free form
 
 ### De que maneiras você se sente confortável em comunicar-se sobre tópicos técnicos em inglês?
 
+Você pode selecionar várias opções.
+
 Type: select all that apply
 
 - Eu me sinto confortável e capaz de ter uma conversa técnica falada em inglês
@@ -899,6 +947,8 @@ Type: select all that apply
 - Eu me sinto confortável e capaz de consumir material educativo técnico escrito (por exemplo, livros técnicos, posts de blog, etc.) em inglês
 
 ### Em quais língua(s) você se sente mais à vontade ao consumir conteúdo técnico existente (por exemplo, posts de blog, documentação, etc.)?
+
+IMPORTANTE: Sua resposta deve refletir sua preferência e não qual você é capaz de comunicar. Por exemplo, se você se sente confortável e capaz de consumir comunicação técnica tanto em inglês quanto em coreano, mas você sempre prefere coreano, você deve responder apenas coreano, pois essa é sua preferência.
 
 Type: select all that apply
 
