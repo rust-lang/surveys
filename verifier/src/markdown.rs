@@ -1,7 +1,7 @@
 use anyhow::bail;
 use std::vec;
 
-pub fn parse(markdown: &str) -> anyhow::Result<Vec<Question>> {
+pub fn parse(markdown: &str) -> anyhow::Result<Vec<Question<'_>>> {
     let mut questions = Vec::new();
     let mut state = ParserState::None;
     for line in markdown

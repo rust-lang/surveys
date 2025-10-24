@@ -4,7 +4,7 @@ Great that you want to help with the State of Rust survey! The State of Rust sur
 
 The survey platform of choice is currently [Survey Hero](https://www.surveyhero.com). We have reached a general consensus that, while not perfect, it works rather well for us therefore we are not looking into alternatives for the time being.
 
-The State of Rust survey is published usually in the first half of December. Contributions are tipically needed once a year as we approach to the deadline. The initial work to kickoff the survey is taken care of by the [Survey Team](https://github.com/rust-lang/team/blob/master/teams/community-survey.toml). Contributions are welcome to translate the survey into multiple languages. The more, the merrier.
+The State of Rust survey is published usually in the first half of December. Contributions are tipically needed once a year as we approach to the deadline. The initial work to kickoff the survey is taken care of by the [Survey Team]. Contributions are welcome to translate the survey into multiple languages. The more, the merrier.
 
 Here's a rough timeline of the work:
 - The State of Rust survey is discussed on Zulip (in [#t-community/survey](https://rust-lang.zulipchat.com/#narrow/channel/402479-t-community.2Frust-survey)). We gather feedback about the previous year's survey, we ask the main teams if they have specific wishes and we draft the English survey
@@ -13,12 +13,14 @@ Here's a rough timeline of the work:
 
 Here's how the translation effort is coordinated:
 - The Survey Team will first generate translation drafts by using a Survey Hero tool to machine-translate the English survey into other languages. The team will generate drafts only for languages we know will be reviewed by a human.
-- Contributors will Keep an eye on the Zulip topic and will be contacted to receive an access token to access Survey hero and be able to work on a specific translation.
+- Contributors will keep an eye on the Zulip topic and will be contacted to receive an access token to access Survey Hero and be able to work on a specific translation.
 - Once the human review on Survey Hero is complete, the Survey Team will download the machine-translated drafts (Markdown files) and open pull requests on this repository
 - Contributors will review again the pull request, proof-reading and fixing all inconsistencies
 - Once the translation pull request is merged will be merged back into Survey Hero by the Survey Team
 
 Thanks for helping us making the State of Rust survey more accessible!
+
+[Survey Team]: https://github.com/rust-lang/team/blob/HEAD/teams/survey.toml
 
 ## A few notes
 
