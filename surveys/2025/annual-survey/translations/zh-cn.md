@@ -8,6 +8,8 @@ Type: select one
 
 ### 很遗憾听到您已不再使用 Rust，是什么原因使您停止使用它？
 
+您可以选择多个选项。
+
 Type: select all that apply
 
 - 缺少语言功能
@@ -25,6 +27,8 @@ Type: select all that apply
 Type: free form
 
 ### 您为什么不使用 Rust？
+
+您可以选择多个选项。
 
 Type: select all that apply
 
@@ -63,6 +67,8 @@ Type: select one
 
 ### 您是在什么时候开始学习用 Rust 编程的？
 
+注：虽然您可能会继续尝试提高您的 Rust 技能，但对于这个问题 , “学习 Rust 编程”指的是您使用 Rust 的大多数时间是在查看学习资料或为学习而写代码，而不是用 Rust 去实现其他目标。如果您的学习过程跨越列出的几个时间段，请选择您认为自己学习最多的时间段。
+
 Type: select one
 
 - 我仍然在积极地学习 Rust
@@ -73,6 +79,8 @@ Type: select one
 - 2018年或之前
 
 ### 如果您使用了有关 Rust 的学习资料，您使用的是哪类资料？
+
+请选择所有适用的选项
 
 Type: select all that apply
 
@@ -97,6 +105,8 @@ Type: select one
 
 ### 您经常使用哪些操作系统进行 Rust 开发?
 
+请注意：这是在问您个人用于进行开发的系统，而不是您的所有目标系统。您可以选择多个选项。
+
 Type: select all that apply
 
 - Linux
@@ -107,6 +117,8 @@ Type: select all that apply
 - 其他
 
 ### 您经常以哪些操作系统作为目标系统进行 Rust 开发？
+
+请注意：这是在询问您的目标操作系统或目标运行环境，而非您用于开发的系统，也非您的目标架构（例如 x86 或 ARM）。
 
 Type: select all that apply
 
@@ -125,6 +137,8 @@ Type: select all that apply
 
 ### 您通常使用什么编辑器或 IDE 配置来编写 Rust 代码？
 
+您可以选择多个选项。
+
 Type: select all that apply
 
 - VS Code
@@ -142,6 +156,8 @@ Type: select all that apply
 
 ### 您在本地开发中使用什么版本的 Rust？
 
+您可以选择多个选项。
+
 Type: select all that apply
 
 - 当前稳定版
@@ -156,6 +172,8 @@ Type: select all that apply
 - 其他
 
 ### 如果您使用 Nightly 版，请问原因是什么？
+
+您可以选择多个选项。
 
 Type: select all that apply
 
@@ -172,6 +190,8 @@ Type: select all that apply
 - 其他
 
 ### 您在开发任务中使用的最旧版本的 Rust 是什么？
+
+（不包括为了确保您的代码是否兼容旧版本而使用旧版本进行测试的用途）
 
 Type: select one
 
@@ -289,6 +309,8 @@ Columns:
 
 ### 请问您对于 Rust 的发展速度有何评价？
 
+我们希望知道您对于 Rust 语言发展速度的感受。
+
 Type: select one
 
 - 我认为 Rust 已经过于复杂，不应添加新的显著功能或使更多非稳定显著功能稳定化
@@ -299,6 +321,10 @@ Type: select one
 - 其他（请注明）
 
 ### 您希望哪些目前处于未实现状态（或非稳定、仅 Nightly 可用）的功能进行稳定化？
+
+请在此处选择或注明您认为对 Rust 生态系统或者您个人有益的 **Rust 编译器和标准库**中缺失或者仅非稳定版本可用的功能。
+
+请注意：这个问题的回答不应包含非编译器或非标准库的功能，例如 cargo、rustfmt、rustup 等工具的功能。
 
 Type: matrix
 
@@ -336,6 +362,8 @@ Type: free form
 
 ### 您认为以下列出的哪些 Rust 的方面对于您的编程效率造成了显著的负面影响？
 
+请注意：请仅选择对造成您的编程效率造成负面影响的选项。如果某一行没有选择，我们会假设您对这方面不了解或不在乎。
+
 Type: matrix
 
 Rows:
@@ -372,6 +400,8 @@ Type: free form
 
 ### 请问在过去12个月内晋升为稳定版本可用功能（即“稳定功能”）的一系列功能中，哪些功能是您使用最频繁的？
 
+请注意，每个功能名称后面括号内展现的是功能稳定化的相对应 Rust 版本号
+
 Type: matrix
 
 Rows:
@@ -394,6 +424,8 @@ Columns:
 
 ### 您如何构建您的 Rust 项目？
 
+您可以选择多个选项。
+
 Type: select all that apply
 
 - 我使用 Cargo
@@ -402,6 +434,8 @@ Type: select all that apply
 - 若您将 Cargo 与其他构建系统结合使用（或仅使用其他构建系统），您使用的是哪些？
 
 ### 您构建 Rust 项目时是如何下载 crates 的？
+
+您可以选择多个选项。
 
 Type: select all that apply
 
@@ -413,6 +447,8 @@ Type: select all that apply
 - 其他
 
 ### 您是否使用编译器错误代码？
+
+Rust 编译器给某些特定的编译错误分配错误代码（例如 E0308、E0509）。[Rust 编译器错误代码索引（Rust Error Codes Index）](https://doc.rust-lang.org/error_codes/error-index.html)收集这些错误代码并且提供关于这些错误代码的描述。您可通过 `rustc --explain <error-code>` 、[错误代码索引](https://doc.rust-lang.org/error_codes/error-index.html)、[Rust Playground](https://play.rust-lang.org/) 等方式访问相应描述。
 
 Type: select one
 
@@ -456,8 +492,8 @@ Rows:
 - 专注于特定开发特定领域（例如游戏开发、音频等）的 Rust 软件开发社区
 - Rust 会议
 - Rust 聚会或本地社区活动
-- 在 rust-lang GitHub 组织<strong>之内</strong>的仓库中进行讨论（问题、PR等）
-- 在 GitHub 的 rust-lang 组织<strong>之外</strong>的仓库中的讨论（问题、PR等）
+- 在 rust-lang GitHub 组织**之内**的仓库中进行讨论（问题、PR等）
+- 在 GitHub 的 rust-lang 组织**之外**的仓库中的讨论（问题、PR等）
 
 Columns:
 
@@ -506,6 +542,8 @@ Type: select one
 
 ### 以下哪些陈述适用于您在工作中使用 Rust 的体验？
 
+您可以选择多个选项。
+
 Type: select all that apply
 
 - 使用 Rust 帮助我们实现了目标
@@ -515,6 +553,8 @@ Type: select all that apply
 - 我们在未来很可能会继续使用 Rust
 
 ### 以下哪些陈述是您在工作中使用 Rust 的原因？
+
+您可以选择多个选项。
 
 Type: select all that apply
 
@@ -532,6 +572,10 @@ Type: select all that apply
 Type: free form
 
 ### 贵公司或组织在哪些技术领域使用 Rust ？
+
+如果您在之前的问题回答您的公司或组织没有在积极地使用 Rust，您可以将此问题留空。
+
+您可以选择多个选项。
 
 Type: select all that apply
 
@@ -565,6 +609,8 @@ Type: select all that apply
 - 其他
 
 ### 贵公司或组织总共雇用了大约多少开发者？
+
+请注意，不需要担心这里的精确性，跟随你的直觉即可
 
 Type: select one
 
@@ -603,6 +649,8 @@ Columns:
 
 ### 您觉得以下对 Rust 的陈述哪些是符合实际情况的？
 
+您可以选择多个选项。
+
 Type: select all that apply
 
 - Rust 比其他编程语言提供了真正的优势
@@ -614,6 +662,8 @@ Type: select all that apply
 - Rust 使用起来很有趣
 
 ### 您对 Rust 的未来的最大的担忧是什么？
+
+您可以选择多个选项。
 
 Type: select all that apply
 
@@ -890,6 +940,8 @@ Type: free form
 
 ### 您在哪些方面能自如地用英语交流技术话题?
 
+您可以选择多个选项。
+
 Type: select all that apply
 
 - 我能自如地用英语进行口语技术对话
@@ -899,6 +951,8 @@ Type: select all that apply
 - 我能够自如地阅读英语书面教育材料（如技术书籍、博客文章等）
 
 ### 您阅读技术文档、博客的首选语言是什么？
+
+请注意：您的回答应应反映您的**意愿**，而非您的能力。假如您能自如地使用英语和韩语进行技术交流，但是您总是倾向于选用韩语，您在这里只应选择韩语作为您倾向使用的语言。
 
 Type: select all that apply
 

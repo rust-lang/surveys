@@ -8,6 +8,8 @@ Type: select one
 
 ### 很遺憾聽到您目前沒有使用 Rust，是什麼原因使您停止使用它呢？
 
+多選題，可複選。
+
 Type: select all that apply
 
 - 缺少語言功能
@@ -25,6 +27,8 @@ Type: select all that apply
 Type: free form
 
 ### 您為什麼不使用 Rust？
+
+多選題，可複選。
 
 Type: select all that apply
 
@@ -63,9 +67,11 @@ Type: select one
 
 ### 您是在什麽時候開始學習 Rust ？
 
+註：雖然您可以繼續提升自己的 Rust 技能，但這個問題主要將「學習用 Rust 寫程式」定位在「花費大量時間消化 Rust 教材」，或者是「為學習而撰寫程式」（與「達成某個其他目標」不同）。如果您的學習過程跨越以下這幾個時間區間，請選擇您覺得學習最積極的階段。
+
 Type: select one
 
-- 我還在<strong>積極</strong>嘗試學習 Rust。
+- 我還在**積極**嘗試學習 Rust。
 - 2025 年期間
 - 2023 年或 2024 年期間
 - 2021 年或 2022 年期間
@@ -73,6 +79,8 @@ Type: select one
 - 2018 年或之前
 
 ### 如果您曾使用過 Rust 的學習資源，主要使用的是哪種類型的資源？
+
+請選擇所有適用的選項
 
 Type: select all that apply
 
@@ -97,6 +105,10 @@ Type: select one
 
 ### 您經常使用哪些作業系統進行 Rust 開發?
 
+注意：此問題主要是詢問您用於開發的作業系統，而非目標系統。
+
+多選題，可複選。
+
 Type: select all that apply
 
 - Linux
@@ -108,6 +120,10 @@ Type: select all that apply
 
 ### 您主要為哪些作業系統或執行環境（runtime）開發 Rust 軟體？
 
+注意：此問題特別詢問您作業系統或執行環境（runtime）的目標平台；而不是您開發使用的環境，也不是特定的架構（如 x86 vs ARM）。
+
+多選題，可複選。
+
 Type: select all that apply
 
 - Linux（桌面環境或伺服器）
@@ -118,12 +134,15 @@ Type: select all that apply
 - Android
 - 嵌入式平台（有作業系統）
 - 嵌入式平台（裸機）
+
 - WebAssembly（用於瀏覽器）
 - WebAssembly（用於其他主機）
 - 與平台完全無關（比如：不會與作業系統互動的函式庫）
 - 其他
 
 ### 您通常使用什麽編輯器或 IDE 撰寫 Rust 程式碼呢？
+
+多選題，可複選。
 
 Type: select all that apply
 
@@ -142,6 +161,8 @@ Type: select all that apply
 
 ### 您在本機開發中使用什麽版本的 Rust？
 
+多選題，可複選。
+
 Type: select all that apply
 
 - 當前的 stable
@@ -156,6 +177,8 @@ Type: select all that apply
 - 其他
 
 ### 如果您使用 nightly 版，為什麽？
+
+多選題，可複選。
 
 Type: select all that apply
 
@@ -172,6 +195,8 @@ Type: select all that apply
 - 其他
 
 ### 您在開發任務中使用的最舊版本的 Rust 是什麽？
+
+（不包含為了測試程式碼在該編譯器版本上是否可運行的情況）
 
 Type: select one
 
@@ -277,10 +302,10 @@ Type: matrix
 
 Rows:
 
-- 我可以升級<strong> stable </strong>編譯器版本，而不必擔心我的程式碼無法編譯
-- 我可以升級 <strong>nightly</strong> 編譯器版本，而不必擔心我的程式碼無法編譯
-- 升級到新的 <strong>stable</strong> 編譯器版本不需要任何更改，或對我的程式碼進行極小且簡單的更改
-- 升級到新的 <strong>nightly</strong> 編譯器版本不需要任何更改，或對我的程式碼進行極小且簡單的更改
+- 我可以升級** stable **編譯器版本，而不必擔心我的程式碼無法編譯
+- 我可以升級 **nightly** 編譯器版本，而不必擔心我的程式碼無法編譯
+- 升級到新的 **stable** 編譯器版本不需要任何更改，或對我的程式碼進行極小且簡單的更改
+- 升級到新的 **nightly** 編譯器版本不需要任何更改，或對我的程式碼進行極小且簡單的更改
 
 Columns:
 
@@ -288,6 +313,8 @@ Columns:
 - 不同意
 
 ### 您對 Rust 語言的發展速度有何看法？
+
+我們想了解您對 Rust 語言開發速度的看法。
 
 Type: select one
 
@@ -300,21 +327,26 @@ Type: select one
 
 ### 您希望哪些目前處於未實現（或僅能在 nightly 使用）的功能進行穩定化？
 
+請列出您認為對 Rust 生態系統或您自己有益，但目前仍不穩定（僅能在 nightly 版本使用）或缺少的 **Rust 編譯器或標準函式庫功能**。此清單不包括編譯器相關的其他工具，例如 cargo、rustup、rustfmt 等。
+
 Type: matrix
 
 Rows:
 
-- [特化 (Specialization)](https://github.com/rust-lang/rust/issues/31844)
-- [生成器/共常式 (Generators/coroutines)](https://github.com/rust-lang/rust/issues/43122)
+- <a href="https://github.com/rust-lang/rust/issues/31844" rel="noopener noreferrer" target="_blank">特化 (Specialization)
+</a>
+- [生成器/共常式 (Generators/coroutines)](https://github.com/rust-lang/rust/issues/43122)​​​​
 - [非同步生成器/共常式 (Async generators/coroutines)](https://github.com/rust-lang/rust/pull/118420)
 - [try 區塊 (Try blocks)](https://github.com/rust-lang/rust/issues/31436)
 - [永不型別 (Never type)](https://github.com/rust-lang/rust/issues/35121)
 - [特徵別名 (Trait aliases)](http://Trait%20aliases)
-- [型別別名中的 impl Trait (Type Alias Impl Trait (TAIT) )](https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html)
+- <a href="https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html" rel="noopener noreferrer" target="_blank">型別別名中的 impl Trait (Type Alias Impl Trait (TAIT) )
+</a>
 - [](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)[預設](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)[關聯](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)[](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)型別 (Associated type defaults)
 - [泛型編譯時期求值表達式 (Generic const expressions)](https://github.com/rust-lang/rust/issues/76560)
 - [編譯時期的特徵方法 (Const trait methods)](https://github.com/rust-lang/rust/issues/67792)
-- [宣告式巨集、屬性和推導  (Declarative (macro_rules!) attributes (#[attr]) and derives (#[derive(Trait)]))](https://github.com/rust-lang/rust/issues/143549)
+- <a href="https://github.com/rust-lang/rust/issues/143549" rel="nofollow noopener" target="_blank">宣告式巨集、屬性和推導  (Declarative (macro_rules!) attributes (#[attr]) and derives (#[derive(Trait)]))
+</a>
 - 編譯時期反射機制 (Compile time reflection)
 - 可變泛型 (Variadic generics)
 - [任意方法接受型別 (Arbitrary Self Types)](https://github.com/rust-lang/rfcs/blob/master/text/3519-arbitrary-self-types-v2.md)
@@ -336,6 +368,8 @@ Type: free form
 
 ### 在下列哪些 Rust 面向，會對您的程式開發效率造成較大影響？
 
+請僅評估您認為會影響工作效率的挑戰。如果您對某一項未做選擇，我們將假設您不清楚或不在意該面向。
+
 Type: matrix
 
 Rows:
@@ -353,7 +387,7 @@ Rows:
 - 執行速度緩慢
 - 編譯速度緩慢
 - 編譯產物占用儲存空間大
-- 磁碟空間使用量大（例如 target 資料夾的大小)
+- 磁碟空間使用量大（例如 target 資料夾的大小)​​​​
 - 遇到編譯器錯誤（例如 ICE，又稱編譯器內部錯誤或錯誤編譯）
 - 遇到不清楚的編譯器錯誤訊息
 - IDE 支援不足（例如部分錯誤無法顯示或分析速度緩慢）
@@ -371,6 +405,8 @@ Columns:
 Type: free form
 
 ### 在過去 12 個月中，您最常使用哪些已穩定的功能？
+
+括號內的文字顯示該功能在哪個 Rust 版本中穩定。
 
 Type: matrix
 
@@ -394,6 +430,8 @@ Columns:
 
 ### 您如何建構您的 Rust 專案？
 
+多選題，可複選。
+
 Type: select all that apply
 
 - 我使用 Cargo
@@ -402,6 +440,8 @@ Type: select all that apply
 - 若您將 Cargo 與其他建構系統結合使用（或僅使用其他建構系統），您使用的是哪些？
 
 ### 您建構 Rust 專案時如何下載 crate？
+
+多選題，可複選。
 
 Type: select all that apply
 
@@ -413,6 +453,8 @@ Type: select all that apply
 - 其他
 
 ### 您是否使用編譯器的錯誤代碼？
+
+Rust 編譯器會為某些編譯器錯誤（例如 E0308* *或* *E0509）指派錯誤代碼。 Rust [錯誤代碼索引](https://doc.rust-lang.org/error_codes/error-index.html)會收集這些錯誤並提供其一般描述。您可以使用例如 `rustc --explain <error-code>` 命令，在[文件](https://doc.rust-lang.org/error_codes/error-index.html)中或透過 [Rust Playground](https://play.rust-lang.org) 取得這些錯誤描述。
 
 Type: select one
 
@@ -451,13 +493,13 @@ Type: matrix
 
 Rows:
 
-- Rust <strong>官方</strong>社群論壇或聊天 (users.rust-lang.org、internals.rust-lang.org、Rust 官方 Discord 或 Rust Zulip)
-- Rust <strong>非官方</strong>社群論壇或聊天 (reddit.com/r/rust、Hacker News、Rust 社群 Discord 等)
-- 社群專注於 Rust 軟體開發的特定領域（例如遊戲開發、音訊等）
+- Rust **官方**社群論壇或聊天 (users.rust-lang.org、internals.rust-lang.org、Rust 官方 Discord 或 Rust Zulip)
+- Rust **非官方**社群論壇或聊天 (reddit.com/r/rust、Hacker News、Rust 社群 Discord 等)
+- ​​​​社群專注於 Rust 軟體開發的特定領域（例如遊戲開發、音訊等）
 - 參加 Rust 研討會
 - 參加 Rust 聚會或當地社群活動
-- 參與 rust-lang GitHub <strong>組織內</strong>任何專案的討論（issue 或是 pull requests 等）
-- 參加 rust-lang GitHub <strong>組織外</strong>任何專案的討論（issue 或是 pull requests 等）
+- 參與 rust-lang GitHub **組織內**任何專案的討論（issue 或是 pull requests 等）
+- 參加 rust-lang GitHub **組織外**任何專案的討論（issue 或是 pull requests 等）
 
 Columns:
 
@@ -506,6 +548,8 @@ Type: select one
 
 ### 以下哪些描述適用於您在工作中使用 Rust 的體驗？
 
+多選題，可複選。
+
 Type: select all that apply
 
 - 採用 Rust 幫助我們達成目標
@@ -515,6 +559,8 @@ Type: select all that apply
 - 我們在未來很可能繼續採用 Rust
 
 ### 以下哪些描述是您在工作中採用 Rust 的原因？
+
+多選題，可複選。
 
 Type: select all that apply
 
@@ -532,6 +578,8 @@ Type: select all that apply
 Type: free form
 
 ### 貴社是在哪些技術領域採用 Rust？
+
+多選題，可複選。
 
 Type: select all that apply
 
@@ -565,6 +613,8 @@ Type: select all that apply
 - 其他
 
 ### 貴社總共雇用大約多少開發者？
+
+注意：不需要太精確！請依直覺作答。
 
 Type: select one
 
@@ -603,6 +653,8 @@ Columns:
 
 ### 您覺得以下對 Rust 的描述哪些符合實際情況？
 
+多選題，可複選。
+
 Type: select all that apply
 
 - Rust 相較於其他程式語言具有實際的優勢
@@ -614,6 +666,8 @@ Type: select all that apply
 - Rust 使用起來很有趣
 
 ### 您對 Rust 的未來的最大的擔憂是什麽？
+
+多選題，可複選。
 
 Type: select all that apply
 
@@ -890,6 +944,8 @@ Type: free form
 
 ### 您在哪些方面能自如地用英語交流技術話題?
 
+多選題，可複選。
+
 Type: select all that apply
 
 - 我能夠自如地用英語進行口語技術對話
@@ -899,6 +955,8 @@ Type: select all that apply
 - 我能夠自如地閱讀英語書面教育材料（如技術書籍、部落格文章等）
 
 ### 您用於技術交流的首選語言是什麽？
+
+重點提醒：請根據您的**喜好**來回答此問題，而不是您會什麼語言。例如：您有能力且輕鬆地使用英語及韓語討論技術議題，但您總是選擇使用韓語，則請您在此只回答韓語。
 
 Type: select all that apply
 
