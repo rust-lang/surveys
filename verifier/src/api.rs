@@ -79,6 +79,33 @@ impl Client {
         Ok(elements.questions().collect())
     }
 
+    // TODO: Get all elements from survey
+    // filter "text" and "question" type
+    fn fetch_elements(
+        &mut self,
+        survey_id: usize,
+        language: Option<String>,
+    ) -> anyhow::Result<Vec<Element>> {
+        self.rate_limit();
+        let response = self
+            .inner
+            .get(format!(
+                "https://api.surveyhero.com/v1/surveys/{}/elements{}",
+                survey_id,
+                language.map(|l| format!("?lang={l}")).unwrap_or_default()
+            ))
+            .basic_auth(&self.username, Some(&self.password))
+            .send()?
+            .error_for_status()?;
+
+        let elements: Elements = response.json()?;
+
+        let elements = vec![Element::Text {
+            text: "TODO".to_string(),
+        }];
+        Ok(elements)
+    }
+
     // Try to avoid 429 errors by rate limiting the client
     fn rate_limit(&mut self) {
         if let Some(last) = self.last_request {
@@ -124,6 +151,8 @@ impl Elements {
 #[derive(Debug, Deserialize)]
 #[serde(tag = "type")]
 pub enum Element {
+    #[serde(rename = "text")]
+    Text { text: String },
     #[serde(rename = "question")]
     Question { question: Question },
     #[serde(other)]
@@ -136,17 +165,25 @@ pub enum Question {
     #[serde(rename = "choice_list")]
     ChoiceList {
         question_text: String,
+        description_text: String,
         choice_list: ChoiceList,
     },
     #[serde(rename = "input")]
-    Input { question_text: String },
+    Input {
+        question_text: String,
+        description_text: String,
+    },
     #[serde(rename = "choice_table")]
     ChoiceTable {
         question_text: String,
+        description_text: String,
         choice_table: ChoiceTable,
     },
     #[serde(rename = "rating_scale")]
-    RatingScale { question_text: String },
+    RatingScale {
+        question_text: String,
+        description_text: String,
+    },
 }
 
 impl Question {
@@ -155,7 +192,24 @@ impl Question {
             Self::ChoiceList { question_text, .. } => question_text,
             Self::Input { question_text, .. } => question_text,
             Self::ChoiceTable { question_text, .. } => question_text,
-            Self::RatingScale { question_text } => question_text,
+            Self::RatingScale { question_text, .. } => question_text,
+        })
+    }
+
+    pub fn description_text(&self) -> String {
+        normalize_surveyhero_text(match self {
+            Self::ChoiceList {
+                description_text, ..
+            } => &description_text,
+            Self::Input {
+                description_text, ..
+            } => description_text,
+            Self::ChoiceTable {
+                description_text, ..
+            } => description_text,
+            Self::RatingScale {
+                description_text, ..
+            } => description_text,
         })
     }
 
