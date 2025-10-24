@@ -12,6 +12,9 @@ pub fn render_questions(questions: &[Question], file: &Path) -> io::Result<()> {
     let mut file = std::fs::File::create(file)?;
     for question in questions {
         writeln!(file, "### {}\n", question.text())?;
+        if !question.description_text().is_empty() {
+            writeln!(file, "{}\n", question.description_text())?;
+        }
         match question {
             Question::Input { .. } => {
                 writeln!(file, "Type: free form")?;
