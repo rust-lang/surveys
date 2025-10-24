@@ -10,8 +10,8 @@ Type: select one
 
 Type: select all that apply
 
-- Fonctions linguistiques manquantes
-- Bibliothèques manquantes
+- Fonctionnalités manquantes dans le langage
+- Librairies manquantes
 - Outils manquants
 - Trop difficile à apprendre
 - La communauté s’est montrée impolie, peu accueillante ou rébarbative
@@ -29,14 +29,14 @@ Type: free form
 Type: select all that apply
 
 - Rust ne m’a pas permis d’atteindre mes objectifs
-- Fonctions linguistiques manquantes
-- Bibliothèques manquantes
+- Fonctionnalités manquantes dans le langage
+- Librairies manquantes
 - Outils manquants
 - Trop difficile à apprendre
 - La communauté s’est montrée impolie, peu accueillante ou rébarbative
 - Je préfère utiliser un autre langage
 - Je ne peux plus utiliser Rust en raison de facteurs indépendants de ma volonté
-- Je ne l’ai pas encore fait
+- Je n'y suis pas encore parvenu
 - Autre
 
 ### Veuillez nous en dire plus :
@@ -47,9 +47,9 @@ Type: free form
 
 Type: select one
 
-- Quotidiennement ou presque
-- Hebdomadairement ou presque
-- Mensuellement ou presque
+- Chaque jour ou presque
+- Chaque semaine ou presque
+- Chaque mois ou presque
 - Rarement
 
 ### Comment évaluez-vous votre expertise en Rust ?
@@ -58,7 +58,7 @@ Type: select one
 
 - Je ne peux pas écrire de code Rust
 - Je peux écrire des programmes simples en Rust
-- Je peux écrire du code utile, prêt à être mis en production, mais c’est compliqué
+- Je peux écrire du code utile, prêt à être mis en production, mais je trouve ça difficile
 - Je suis productif en codant en Rust
 
 ### Quand avez-vous appris à programmer en Rust ?
@@ -66,11 +66,11 @@ Type: select one
 Type: select one
 
 - J’essaie toujours activement d’apprendre Rust
-- Courant 2024
-- Courant 2022 ou 2023
-- Courant 2020 ou 2021
-- Courant 2018 ou 2019
-- Courant 2017 ou avant
+- Courant 2025
+- Courant 2023 ou 2024
+- Courant 2021 ou 2022
+- Courant 2019 ou 2020
+- Courant 2018 ou avant
 
 ### Si vous avez consommé du matériel d’apprentissage sur Rust, quel type de matériel avez-vous consommé ?
 
@@ -81,9 +81,9 @@ Type: select all that apply
 - Vidéos ou diffusions en direct
 - Blogs
 - Documentation
-- Code source de cagettes (crates) Rust
+- Code source de crates Rust
 - Cours en ligne, webinaires
-- Cours en personne
+- Formation sur place
 - Études supérieures (université, grande école, etc.)
 - Autre (veuillez préciser)
 
@@ -146,8 +146,8 @@ Type: select all that apply
 
 - Version stable actuelle
 - Version stable précédente
-- Une version spécifique de la version stable de Rust égale ou supérieure à 1.75
-- Une version spécifique de la version stable de Rust plus ancienne que 1.75
+- Une version spécifique de la version stable de Rust égale ou supérieure à 1.83
+- Une version spécifique de la version stable de Rust plus ancienne que 1.83
 - Version bêta
 - Dernière version nightly
 - Une version nightly spécifique
@@ -175,16 +175,16 @@ Type: select all that apply
 
 Type: select one
 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 1.84 (bêta)
+- 1.93 (nightly)
+- 1.92 (beta)
+- 1.91
+- 1.90
+- 1.89
+- 1.88
+- 1.87
+- 1.86
+- 1.85
+- 1.84
 - 1.83
 - 1.82
 - 1.81
@@ -298,7 +298,7 @@ Type: select one
 - Je ne sais pas ou je m’en fiche
 - Autre
 
-### Quelles fonctionnalités non implémentées (ou uniquement nightly) souhaitez-vous stabiliser ?
+### Quelles fonctionnalités non implémentées (ou uniquement nightly) souhaitez-vous voire stabilisées ?
 
 Type: matrix
 
@@ -314,7 +314,7 @@ Rows:
 - [Valeurs par défaut des types associés](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)
 - Expressions constantes génériques
 - [Méthodes de trait constantes](https://github.com/rust-lang/rust/issues/67792)
-- 
+- [Attributs (#[attr]) déclaratifs (macro_rules!) et dérivés (#[derive(Trait)])](https://github.com/rust-lang/rust/issues/143549)
 - Réflexion au moment de la compilation
 - Génériques variadiques
 - [Types `self` arbitraires](https://github.com/rust-lang/rfcs/blob/master/text/3519-arbitrary-self-types-v2.md)
@@ -341,8 +341,8 @@ Type: matrix
 Rows:
 
 - Implémentation de la logique pour des tuples de différentes tailles
-- Répartition du code entre les cagettes (crates) (par exemple, règle de l’orphelin)
-- Devoir implémenter le trait Iterator manuellement
+- Répartition du code entre les crates (par exemple, règle de l’orphelin)
+- Devoir implémenter les itérateurs manuellement
 - Ne pas pouvoir en faire assez dans les const fn
 - Implémentation de plugins de bibliothèque dynamique
 - Interopérabilité avec d’autres langages (par exemple C ou C++)
@@ -355,7 +355,7 @@ Rows:
 - Grande taille binaire des artefacts compilés
 - Utilisation de l’espace disque (par exemple, la taille du dossier target)
 - Bogues dans le compilateur (c’est-à-dire, les ICE, ou erreurs internes du compilateur, les mauvaises compilations, etc.)
-- Rencontre avec des messages d’erreur de compilateur opaques/peu clairs
+- Tomber sur des messages d’erreur de compilateur opaques/peu clairs
 - Prise en charge IDE inférieure à la moyenne (par exemple, certaines erreurs ne sont pas affichées ou l’analyse est lente)
 - Expérience de débogage inférieure à la moyenne (par exemple, visualisations de valeurs manquantes ou traces de pile asynchrones)
 - Manque de documentation sur le langage Rust ou la bibliothèque standard
@@ -376,13 +376,13 @@ Type: matrix
 
 Rows:
 
-- [Fonction asynchrone dans les traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
-- [impl Trait comme type de retour de fonctions de traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
-- [Chaîne de caractères C littérales](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#c-string-literals) (1.77)
-- [Récursivité dans la fonction asynchrone](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#support-for-recursion-in-async-fn) (1.77)
-- [macro offset_of!](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#offset_of) (1.77)
-- [Attribut #[diagnostic]](https://blog.rust-lang.org/2024/05/02/Rust-1.78.0.html#diagnostic-attributes) (1.78)
-- [Expressions constantes en ligne](https://blog.rust-lang.org/2024/06/13/Rust-1.79.0.html#inline-const-expressions) (1.79)
+- [Strict provenance API (1.84)](https://blog.rust-lang.org/2025/01/09/Rust-1.84.0/#strict-provenance-apis)
+- [Closures asynchrones (1.85)](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/#async-closures)
+- [diagnostic::do_not_recommend (1.85)](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/#hiding-trait-implementations-from-diagnostics)
+- [Trait upcasting (1.86)](https://blog.rust-lang.org/2025/04/03/Rust-1.86.0/#trait-upcasting)
+- [Anonymous pipes (1.87)](https://blog.rust-lang.org/2025/05/15/Rust-1.87.0/#anonymous-pipes)
+- [Chainage de let (1.88)](https://blog.rust-lang.org/2025/06/26/Rust-1.88.0/#let-chains)
+- [Fonctiones "nues" (1.88)](https://blog.rust-lang.org/2025/06/26/Rust-1.88.0/#naked-functions)
 
 Columns:
 
@@ -398,7 +398,7 @@ Type: select all that apply
 
 - J’utilise Cargo
 - J’utilise un autre système de compilation
-- Je combine Cargo et un autre système de construction
+- Je combine Cargo et un autre système de compilation
 - Si vous utilisez Cargo avec (ou utilisez simplement) d’autres systèmes de compilation, lesquels utilisez-vous ?
 
 ### Comment téléchargez-vous des bibliothèques pour construire des projets Rust ?
@@ -408,18 +408,18 @@ Type: select all that apply
 - J’utilise crates.io
 - J’utilise un registre personnalisé/local/d’entreprise
 - J’utilise un miroir de crates.io
+- J'utilise des dépôts git
 - Je ne sais pas
-- 
-- Other
+- Autre
 
-### 
+### Avez vous fait usage des codes d'erreur du compilateur ?
 
 Type: select one
 
-- 
-- 
-- 
-- Other
+- J'ai lu la liste des erreurs de compilation et je les ai trouvées utiles
+- J'ai examiné la liste des erreurs de compilation mais ne les ai pas trouvées utiles
+- Je ne connaissais pas l'existence de cette liste
+- Autre
 
 ### À quelle fréquence participez-vous aux activités communautaires Rust suivantes ?
 
@@ -440,12 +440,12 @@ Rows:
 
 Columns:
 
-- Plus fréquemment qu’une fois par semaine
-- Hebdomadairement
+- Plus d’une fois par semaine
+- Toute les semaines
 - Tous les mois ou moins fréquemment
 - Jamais
 
-### Combien de fois vous êtes-vous senti expressément bienvenu dans la communauté Rust ?
+### Quelle a été vos expérience jusqu'à présent dans les communautés Rust suivantes ?
 
 Type: matrix
 
@@ -541,12 +541,12 @@ Type: select all that apply
 - Applications informatique dans le cloud
 - Infrastructure ou services informatique dans le cloud
 - Infographie
-- Jeux d’ordinateur
+- Jeux vidéos
 - Réseaux informatiques
 - Sécurité informatique
 - Science des données
 - Implémentation de la base de données
-- Partie graphique d’une application bureau
+- Application de bureau
 - Services, ordinateurs de bureau ou de téléphones portables
 - Systèmes distribués
 - Dispositifs embarqués (avec systèmes d’exploitation)
@@ -554,7 +554,7 @@ Type: select all that apply
 - Superordinateur
 - Internet des objets
 - Apprentissage automatique
-- Partie graphique d’une application mobile
+- Application mobile
 - Langages de programmation et outils associés (y compris les compilateurs, les IDE, les bibliothèques standard, etc.)
 - Robotique
 - Calcul scientifique et/ou numérique
@@ -606,7 +606,7 @@ Columns:
 Type: select all that apply
 
 - Rust présente un avantage réel par rapport aux autres langages de programmation
-- Le langage Rust est nettement plus compliqué à programmer que les autres langages de programmation
+- Le langage Rust est nettement plus compliqué à utiliser pour développer que les autres langages de programmation
 - Apprendre à utiliser Rust demande beaucoup plus d’efforts que pour d’autres langages de programmation
 - Le code Rust a tendance à contenir beaucoup moins de bogues qu’un code équivalent écrit dans un autre langage de programmation
 - Il est risqué d’utiliser Rust en production
@@ -902,7 +902,6 @@ Type: select all that apply
 
 Type: select all that apply
 
-- 
 - Allemand
 - Anglais
 - Chinois
@@ -913,6 +912,7 @@ Type: select all that apply
 - Japonais
 - Portugais
 - Russe
+- Ukrainien
 - Autre
 
 ### Y a-t-il autre chose que vous aimeriez nous dire ?

@@ -137,7 +137,7 @@ Type: select all that apply
 - Xcode
 - Atom
 - Helix
-- 
+- Zed
 - その他
 
 ### ローカル開発で使用するRustのバージョンはどれですか？
@@ -146,8 +146,8 @@ Type: select all that apply
 
 - 現在のstableバージョン
 - 以前のstableバージョン
-- 1.75以上の特定のstableバージョン
-- 1.75より古い特定のstableバージョン
+- 1.83以上の特定のstableバージョン
+- 1.83より古い特定のstableバージョン
 - Beta
 - 最新のnightly
 - nightlyの特定バージョン
@@ -175,15 +175,15 @@ Type: select all that apply
 
 Type: select one
 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
+- 1.93 (nightly)
+- 1.92 (beta)
+- 1.91
+- 1.90
+- 1.89
+- 1.88
+- 1.87
+- 1.86
+- 1.85
 - 1.84 (beta)
 - 1.83
 - 1.82
@@ -314,7 +314,7 @@ Rows:
 - Associated type defaults
 - Generic const expressions
 - Const trait methods
-- 
+- Declarative (macro_rules!) attributes (#[attr]) and derives (#[derive(Trait)])
 - Compile time reflection
 - Variadic generics
 - Arbitrary self types
@@ -376,13 +376,13 @@ Type: matrix
 
 Rows:
 
-- async fn in traits (1.75)
-- Return position impl Trait in traits (1.75)
-- C-string literals (1.77)
-- Recursion in async fn (1.77)
-- offset_of! macro (1.77)
-- #[diagnostic] attribute (1.78)
-- Inline const expressions (1.79)
+- async fn in traits (1.84)
+- Return position impl Trait in traits (1.85)
+- C-string literals (1.85)
+- Recursion in async fn (1.86)
+- offset_of! macro (1.87)
+- #[diagnostic] attribute (1.88)
+- Inline const expressions (1.88)
 
 Columns:
 
@@ -408,18 +408,18 @@ Type: select all that apply
 - crates.ioを使用しています
 - カスタム/ローカル/会社レジストリを使用しています
 - crates.ioのミラーを使用しています
+- Gitリポジトリを利用しています
 - わからない
-- 
-- Other
+- その他
 
-### 
+### コンパイラのエラーコードは活用していますか？
 
 Type: select one
 
-- 
-- 
-- 
-- Other
+- コンパイラのエラーインデックスの説明を読んで役に立った
+- コンパイラーエラーのインデックスの説明を調べたが役に立たなかった
+- コンパイラエラーのインデックスがあるなんて知らなかった
+- その他
 
 ### Rustのコミュニティには、どれくらい頻繁に参加していますか？
 
@@ -443,7 +443,7 @@ Columns:
 - 週1回以上の頻度
 - 毎週
 - 毎月またはそれ以下の頻度
-- 度もない
+- 一度もない
 
 ### Rustのコミュニティに参加した印象は？
 
@@ -502,7 +502,7 @@ Type: select one
 - 私の会社は、Rustで実験的に使用した、または使用を検討している
 - 私の会社は、Rust の使用を真剣には検討していない
 - 私の会社がRustの使用を検討したことがあるか、または現在使用しているかについて、私はよく知らない
-- 私は会社に勤めていない。または、自分の会社がソフトウェアの開発をしていない　
+- 私は会社に勤めていない。または、自分の会社がソフトウェアの開発をしていない
 
 ### 仕事で Rust を使用した経験に関して、以下のうち、どれが当てはまりますか？
 
@@ -902,7 +902,7 @@ Type: select all that apply
 
 Type: select all that apply
 
-- 
+- ウクライナ語
 - スペイン語
 - ドイツ語
 - ヒンディー語
