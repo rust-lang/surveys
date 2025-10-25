@@ -24,7 +24,7 @@ Type: select one (optional)
 Type: select one
 
 - Yes, I am currently funded for (at least some of) my contributions [`NEXT`](#how-much-time-do-you-spend-contributing-to-the-rust-project-monthly)
-- No, but I was funded before [`NEXT`](#why-are-you-not-funded-anymore)
+- No, but I was funded before
 - No, I never received any funding for them [`NEXT`](#would-you-appreciate-being-paid-for-contributing-to-the-rust-project)
 
 ### Why are you not funded anymore?
@@ -129,8 +129,8 @@ Type: select one (optional)
 
 Type: select one (optional)
 
-- Receiving more funds would allow me to keep my current level of contributions
-- Receiving more funds would allow me to increase my current level of contributions
+- Receiving (more) funds would allow me to keep my current level of contributions
+- Receiving (more) funds would allow me to increase my current level of contributions
 - I am happy with the current funding that I have at the moment
 - I do not require/want any funding for my contributions
 - Other (open response)
@@ -144,6 +144,20 @@ Note: we ask for a minimum to establish some baseline. Of course, everyone would
 Please provide the value as an integer in $USD (US Dollars).
 
 Type: free form (optional)
+
+### What funding arrangement would you prefer?
+
+Regardless of whether you are currently funded or not, assume that some entity would fund your Rust Project contributions. What kind of arrangement would you prefer?
+
+Rank only those arrangements that would work for you, and order them by preference (the most preferred arrangement should be at the top).
+
+Type: ranking (optional)
+
+- Full-time employment
+- Part-time employment
+- Full-time contracting
+- Part-time contracting
+- Grants
 
 ### Would you potentially like to be included on a public list of contributors looking for funding?
 
@@ -168,7 +182,7 @@ Type: select all that apply (optional)
 - Issue Triage
 - Issue Reporting
 - Moderation
-- Implementing new Features
+- Implementing new features
 - Fixing bugs
 - Performance enhancements
 - Communication (e.g. writing blog posts, release notes, preparing for meetings or taking minutes)
