@@ -184,6 +184,12 @@ pub enum Question {
         question_text: String,
         description_text: String,
     },
+    #[serde(rename = "ranking")]
+    Ranking {
+        question_text: String,
+        description_text: String,
+        ranking: RankingChoices,
+    },
 }
 
 impl Question {
@@ -193,6 +199,7 @@ impl Question {
             Self::Input { question_text, .. } => question_text,
             Self::ChoiceTable { question_text, .. } => question_text,
             Self::RatingScale { question_text, .. } => question_text,
+            Self::Ranking { question_text, .. } => question_text,
         })
     }
 
@@ -210,6 +217,7 @@ impl Question {
             Self::RatingScale {
                 description_text, ..
             } => description_text,
+            Self::Ranking { description_text, .. } => description_text,
         })
     }
 
@@ -220,6 +228,7 @@ impl Question {
     pub fn is_select_many(&self) -> bool {
         match self {
             Self::ChoiceList { choice_list, .. } => choice_list.settings.allows_multiple_choices,
+            Self::Ranking { .. } => true,
             _ => false,
         }
     }
@@ -299,6 +308,31 @@ pub struct Choice {
 #[derive(Debug, Deserialize)]
 pub struct Settings {
     allows_multiple_choices: bool,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct RankingChoices {
+    choices: Vec<RankingChoice>,
+}
+
+impl RankingChoices {
+    pub fn as_strs(&self) -> impl Iterator<Item = String> + '_ {
+        self.choices
+            .iter()
+            .map(|c| normalize_surveyhero_text(c.label.as_str()))
+    }
+
+    pub fn mismatched_answers<'a>(&'a self, answers: &'a [&str]) -> Vec<(String, &'a str)> {
+        self.as_strs()
+            .zip(answers.iter().map(|s| normalize_markdown_text(s)))
+            .filter(|(s1, s2)| s1 != s2)
+            .collect()
+    }
+}
+
+#[derive(Debug, Deserialize)]
+pub struct RankingChoice {
+    label: String,
 }
 
 #[derive(Debug, Deserialize)]

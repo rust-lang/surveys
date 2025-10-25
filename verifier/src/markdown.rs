@@ -54,6 +54,11 @@ pub fn parse(markdown: &str) -> anyhow::Result<Vec<Question<'_>>> {
                         text,
                         answers: Answers::RatingScale,
                     })
+                } else if typ.starts_with("ranking") {
+                    ParserState::Question(Question {
+                        text,
+                        answers: Answers::Ranking(vec![]),
+                    })
                 } else {
                     bail!("illegal question type: type='{}' question='{}'", typ, text);
                 }
@@ -71,6 +76,10 @@ pub fn parse(markdown: &str) -> anyhow::Result<Vec<Question<'_>>> {
                 }) => a.push(trim_answer(line[1..].trim())),
                 ParserState::Question(Question {
                     answers: Answers::SelectMany(ref mut a),
+                    ..
+                })
+                | ParserState::Question(Question {
+                    answers: Answers::Ranking(ref mut a),
                     ..
                 }) => a.push(trim_answer(line[1..].trim())),
                 ParserState::Question(Question {
@@ -188,6 +197,7 @@ impl<'a> Question<'a> {
 pub enum Answers<'a> {
     FreeForm,
     RatingScale,
+    Ranking(Vec<&'a str>),
     SelectOne(Vec<&'a str>),
     SelectMany(Vec<&'a str>),
     Matrix {
@@ -202,6 +212,7 @@ impl Answers<'_> {
         match self {
             Self::SelectOne(a) => a.is_empty(),
             Self::SelectMany(a) => a.is_empty(),
+            Self::Ranking(a) => a.is_empty(),
             Self::Matrix {
                 answers1, answers2, ..
             } => answers1.is_empty() || answers2.is_empty(),
