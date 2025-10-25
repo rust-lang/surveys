@@ -75,7 +75,10 @@ impl Client {
             .send()?
             .error_for_status()?;
 
-        let elements: Elements = response.json()?;
+        let text = response.text()?;
+        let elements: Elements = serde_json::from_str(&text).map_err(|e| {
+            anyhow::anyhow!("Cannot deserialize questions from:\n{text}\nError:{e:?}")
+        })?;
         Ok(elements.questions().collect())
     }
 
