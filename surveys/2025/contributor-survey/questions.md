@@ -168,19 +168,18 @@ Type: select one (optional)
 - That sounds like a good idea, and I would potentially like to be on that list
 - That sounds like a good idea, but I do not want to be on such a list
 - I'm neutral/I don't know
-- That sounds like a bad idea
-- Other (open response)
+- That sounds like a bad idea (please explain) or I have other thoughts (open response)
 
 ### What kind of work do you do within the Rust Project?
 
 Type: select all that apply (optional)
 
 - Documentation
-- Code Review (PRs)
+- Code review
 - Submitting rollups
-- Design Review (RFCs/MCPs/FCPs)
-- Issue Triage
-- Issue Reporting
+- Design review (RFCs/MCPs/FCPs)
+- Issue triage
+- Issue reporting
 - Moderation
 - Implementing new features
 - Fixing bugs
@@ -188,7 +187,7 @@ Type: select all that apply (optional)
 - Communication (e.g. writing blog posts, release notes, preparing for meetings or taking minutes)
 - Supporting/mentoring/guiding other contributors
 - Governance
-- Infrastructure work (CI, releases, ...)
+- Infrastructure work (CI, releases, bots, ...)
 - Other (open response)
 
 ### What parts of the Rust Project do you contribute to?
@@ -204,7 +203,7 @@ Type: select all that apply (optional)
 - Rustfmt
 - Miri
 - Rustup
-- Bootstrap and related in-tree tools (compiletest, ...)
+- Bootstrap or related in-tree tools (compiletest, ...)
 - Other tooling (bors, rfcbot, triagebot, rustc-perf, ...)
 - Other (open response)
 
