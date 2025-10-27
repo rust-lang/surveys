@@ -25,7 +25,7 @@ Type: select one
 
 - Yes, I am currently funded for (at least some of) my contributions [`NEXT`](#how-much-time-do-you-spend-contributing-to-the-rust-project-monthly)
 - No, but I was funded before
-- No, I never received any funding for them [`NEXT`](#would-you-appreciate-being-paid-for-contributing-to-the-rust-project)
+- No, I never received any funding for them [`NEXT`](#how-much-money-would-you-like-to-be-paid-for-contributing-to-the-rust-project)
 
 ### Why are you not funded anymore?
 
@@ -125,25 +125,24 @@ Type: select one (optional)
 - No, I decide what I will contribute to
 - Other (open response)
 
-### Would you appreciate being paid for contributing to the Rust Project?
-
-Type: select one (optional)
-
-- Receiving (more) funds would allow me to keep my current level of contributions
-- Receiving (more) funds would allow me to increase my current level of contributions
-- I am happy with the current funding that I have at the moment
-- I do not require/want any funding for my contributions
-- Other (open response)
-
 ### How much money would you like to be paid for contributing to the Rust Project?
 
-What is a minimum **hourly** rate that could comfortably sustain your contributions to the Rust Project, assuming that it would be your only source of funding, and you would be working full-time on Rust?
+Please enter the **minimum monthly compensation** in USD that would allow you to contribute to Rust for the given number of days per week.
 
-Note: we ask for a minimum to establish some baseline. Of course, everyone would like to get paid as much as possible :)
+If you do not **need** any compensation for the given contribution workload, and you are fine doing it on a volunteer basis, please enter **0**.
+If you do not **want** to work on Rust for so many days per week, please enter **never**.
 
-Please provide the value as an integer in $USD (US Dollars).
+Type: matrix (optional)
 
-Type: free form (optional)
+Contribution levels:
+
+- 4-5 days per week (full-time)
+- 2-3 days per week (part-time)
+- 1 day per week or less
+
+Compensation:
+
+- Open response
 
 ### What funding arrangement would you prefer?
 
