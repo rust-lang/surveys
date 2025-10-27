@@ -6,7 +6,7 @@ This survey is only aimed at Rust Project members. If you are not a member of an
 
 Note that when we ask about contributions in this survey, we always mean contributions to the Rust Project repositories, so essentially any repository under the `rust-lang` GitHub organization, plus any other related organizations, such as `rust-lang-nursery`.
 
-This survey is anonymous. You can optionally choose to answer selected personal questions at the end of the survey.
+This survey is anonymous. Summarized statistics of the survey results might be published publicly. You can optionally choose to answer selected personal questions at the end of the survey, which will only be made available to the Rust Leadership Council and Rust Foundation staff.
 
 ### When have you started contributing to the Rust Project?
 
@@ -161,6 +161,8 @@ Type: ranking (optional)
 ### Would you potentially like to be included on a public list of contributors looking for funding?
 
 If we ever had something like a public list of Rust Project contributors looking for funding, what would you think of that?
+
+For example, we could have a page that lists Rust contributors that receive funds from GitHub Sponsors.
 
 Type: select one (optional)
 
