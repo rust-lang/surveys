@@ -45,6 +45,12 @@ pub fn render_questions(questions: &[Question], file: &Path) -> io::Result<()> {
             Question::RatingScale { .. } => {
                 writeln!(file, "Type: rating scale\n")?;
             }
+            Question::Ranking { ranking, .. } => {
+                writeln!(file, "Type: ranking\n")?;
+                for variant in ranking.as_strs() {
+                    writeln!(file, "- {variant}")?;
+                }
+            }
         }
         writeln!(file)?;
     }

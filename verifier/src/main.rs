@@ -186,6 +186,20 @@ impl markdown::Question<'_> {
                 }
             }
             (markdown::Answers::RatingScale, Question::RatingScale { .. }) => {}
+            (markdown::Answers::Ranking(answers), Question::Ranking { ranking, .. }) => {
+                let mismatched = ranking.mismatched_answers(&answers);
+                if !mismatched.is_empty() {
+                    return Comparison::AnswersDiffer(
+                        mismatched
+                            .into_iter()
+                            .map(|(s1, s2)| AnswerDiff {
+                                sh: s1,
+                                md: s2.to_string(),
+                            })
+                            .collect(),
+                    );
+                }
+            }
             _ => {
                 return Comparison::QuestionTypesDiffer {
                     question: self.text.to_owned(),
@@ -230,6 +244,7 @@ enum QuestionType {
     SelectMany,
     Matrix,
     RatingScale,
+    Ranking,
 }
 
 impl<'a> From<&'a Question> for QuestionType {
@@ -244,7 +259,11 @@ impl<'a> From<&'a Question> for QuestionType {
             return QuestionType::FreeForm;
         }
 
-        QuestionType::Matrix
+        match q {
+            Question::RatingScale { .. } => QuestionType::RatingScale,
+            Question::Ranking { .. } => QuestionType::Ranking,
+            _ => QuestionType::Matrix,
+        }
     }
 }
 
@@ -256,6 +275,7 @@ impl From<&markdown::Question<'_>> for QuestionType {
             markdown::Answers::SelectMany(_) => Self::SelectMany,
             markdown::Answers::Matrix { .. } => Self::Matrix,
             markdown::Answers::RatingScale => Self::RatingScale,
+            markdown::Answers::Ranking(_) => Self::Ranking,
         }
     }
 }
