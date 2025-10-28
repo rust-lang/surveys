@@ -317,13 +317,17 @@ pub fn normalize_surveyhero_text(text: &str) -> String {
         LazyLock::new(|| Regex::new(r#"<a href="(?<link>.*?)".*?>(?<text>.*?)</a>"#).unwrap());
     static ITALICS_REGEX: LazyLock<Regex> =
         LazyLock::new(|| Regex::new(r"<em>(?<text>.*?)</em>").unwrap());
+    static BOLD_REGEX: LazyLock<Regex> =
+        LazyLock::new(|| Regex::new(r"<strong>(?<text>.*?)</strong>").unwrap());
 
     let text = text
         .replace("&amp;", "&")
         .replace("&nbsp;", " ")
         .replace("&lt;", "<")
         .replace("&gt;", ">")
-        .replace("<br>", "")
+        // Note: we leave manually inserted newlines
+        // Unwanted newlines should be fixed on SurveyHero
+        .replace("<br>", "\n")
         .replace("\u{202f}", " ")
         .replace("&#39;", "’")
         .replace(" ", " ");
@@ -331,8 +335,10 @@ pub fn normalize_surveyhero_text(text: &str) -> String {
     // Replace <a href="$link" ...>$text</a> with [$text]($link)
     let text = LINK_REGEX.replace_all(&text, "[$text]($link)");
 
-    // Replace <em>$text</em> with *$text*
-    ITALICS_REGEX.replace_all(&text, "*$text*").to_string()
+    // Replace <em>$text</em> with *$text* and
+    // Replace <strong>$text</strong> with **$text**
+    let text = ITALICS_REGEX.replace_all(&text, "*$text*").to_string();
+    BOLD_REGEX.replace_all(&text, "**$text**").to_string()
 }
 
 fn normalize_markdown_text(text: &str) -> &str {
