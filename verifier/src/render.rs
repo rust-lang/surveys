@@ -51,6 +51,12 @@ pub fn render_questions(questions: &[Question], file: &Path) -> io::Result<()> {
                     writeln!(file, "- {variant}")?;
                 }
             }
+            Question::InputList { input_list, .. } => {
+                writeln!(file, "Type: input list\n")?;
+                for input in input_list.as_strs() {
+                    writeln!(file, "- {input}")?;
+                }
+            }
         }
         writeln!(file)?;
     }
