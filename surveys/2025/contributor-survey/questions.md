@@ -132,17 +132,11 @@ Please enter the **minimum monthly compensation** in USD that would allow you to
 If you do not **need** any compensation for the given contribution workload, and you are fine doing it on a volunteer basis, please enter **0**.
 If you do not **want** to work on Rust for so many days per week, please enter **never**.
 
-Type: matrix (optional)
-
-Contribution levels:
+Type: input list (optional)
 
 - 4-5 days per week (full-time)
 - 2-3 days per week (part-time)
 - 1 day per week or less
-
-Compensation:
-
-- Open response
 
 ### What funding arrangement would you prefer?
 
