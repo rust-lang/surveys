@@ -193,6 +193,12 @@ pub enum Question {
         description_text: String,
         ranking: RankingChoices,
     },
+    #[serde(rename = "input_list")]
+    InputList {
+        question_text: String,
+        description_text: String,
+        input_list: InputListInputs,
+    },
 }
 
 impl Question {
@@ -203,6 +209,7 @@ impl Question {
             Self::ChoiceTable { question_text, .. } => question_text,
             Self::RatingScale { question_text, .. } => question_text,
             Self::Ranking { question_text, .. } => question_text,
+            Self::InputList { question_text, .. } => question_text,
         })
     }
 
@@ -220,7 +227,12 @@ impl Question {
             Self::RatingScale {
                 description_text, ..
             } => description_text,
-            Self::Ranking { description_text, .. } => description_text,
+            Self::Ranking {
+                description_text, ..
+            } => description_text,
+            Self::InputList {
+                description_text, ..
+            } => description_text,
         })
     }
 
@@ -315,7 +327,7 @@ pub struct Settings {
 
 #[derive(Debug, Deserialize)]
 pub struct RankingChoices {
-    choices: Vec<RankingChoice>,
+    choices: Vec<ChoiceWithLabel>,
 }
 
 impl RankingChoices {
@@ -334,8 +346,28 @@ impl RankingChoices {
 }
 
 #[derive(Debug, Deserialize)]
-pub struct RankingChoice {
+pub struct ChoiceWithLabel {
     label: String,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct InputListInputs {
+    inputs: Vec<ChoiceWithLabel>,
+}
+
+impl InputListInputs {
+    pub fn as_strs(&self) -> impl Iterator<Item = String> + '_ {
+        self.inputs
+            .iter()
+            .map(|c| normalize_surveyhero_text(c.label.as_str()))
+    }
+
+    pub fn mismatched_answers<'a>(&'a self, answers: &'a [&str]) -> Vec<(String, &'a str)> {
+        self.as_strs()
+            .zip(answers.iter().map(|s| normalize_markdown_text(s)))
+            .filter(|(s1, s2)| s1 != s2)
+            .collect()
+    }
 }
 
 #[derive(Debug, Deserialize)]

@@ -1,4 +1,5 @@
 use crate::api::Question;
+use crate::markdown::Answers;
 use crate::render::render_questions;
 use anyhow::Context;
 use clap::Parser;
@@ -200,6 +201,20 @@ impl markdown::Question<'_> {
                     );
                 }
             }
+            (Answers::InputList(answers), Question::InputList { input_list, .. }) => {
+                let mismatched = input_list.mismatched_answers(&answers);
+                if !mismatched.is_empty() {
+                    return Comparison::AnswersDiffer(
+                        mismatched
+                            .into_iter()
+                            .map(|(s1, s2)| AnswerDiff {
+                                sh: s1,
+                                md: s2.to_string(),
+                            })
+                            .collect(),
+                    );
+                }
+            }
             _ => {
                 return Comparison::QuestionTypesDiffer {
                     question: self.text.to_owned(),
@@ -245,6 +260,7 @@ enum QuestionType {
     Matrix,
     RatingScale,
     Ranking,
+    InputList,
 }
 
 impl<'a> From<&'a Question> for QuestionType {
@@ -262,6 +278,7 @@ impl<'a> From<&'a Question> for QuestionType {
         match q {
             Question::RatingScale { .. } => QuestionType::RatingScale,
             Question::Ranking { .. } => QuestionType::Ranking,
+            Question::InputList { .. } => QuestionType::InputList,
             _ => QuestionType::Matrix,
         }
     }
@@ -276,6 +293,7 @@ impl From<&markdown::Question<'_>> for QuestionType {
             markdown::Answers::Matrix { .. } => Self::Matrix,
             markdown::Answers::RatingScale => Self::RatingScale,
             markdown::Answers::Ranking(_) => Self::Ranking,
+            markdown::Answers::InputList(_) => Self::InputList,
         }
     }
 }

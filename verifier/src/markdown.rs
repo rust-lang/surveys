@@ -59,6 +59,11 @@ pub fn parse(markdown: &str) -> anyhow::Result<Vec<Question<'_>>> {
                         text,
                         answers: Answers::Ranking(vec![]),
                     })
+                } else if typ.starts_with("input list") {
+                    ParserState::Question(Question {
+                        text,
+                        answers: Answers::InputList(vec![]),
+                    })
                 } else {
                     bail!("illegal question type: type='{}' question='{}'", typ, text);
                 }
@@ -80,6 +85,10 @@ pub fn parse(markdown: &str) -> anyhow::Result<Vec<Question<'_>>> {
                 })
                 | ParserState::Question(Question {
                     answers: Answers::Ranking(ref mut a),
+                    ..
+                })
+                | ParserState::Question(Question {
+                    answers: Answers::InputList(ref mut a),
                     ..
                 }) => a.push(trim_answer(line[1..].trim())),
                 ParserState::Question(Question {
@@ -198,6 +207,7 @@ pub enum Answers<'a> {
     FreeForm,
     RatingScale,
     Ranking(Vec<&'a str>),
+    InputList(Vec<&'a str>),
     SelectOne(Vec<&'a str>),
     SelectMany(Vec<&'a str>),
     Matrix {
@@ -213,6 +223,7 @@ impl Answers<'_> {
             Self::SelectOne(a) => a.is_empty(),
             Self::SelectMany(a) => a.is_empty(),
             Self::Ranking(a) => a.is_empty(),
+            Self::InputList(a) => a.is_empty(),
             Self::Matrix {
                 answers1, answers2, ..
             } => answers1.is_empty() || answers2.is_empty(),
