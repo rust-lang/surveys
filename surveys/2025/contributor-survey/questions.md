@@ -1,10 +1,10 @@
 # Survey questions
 
-This survey is organized by the Rust Leadership Council. Its goal is to figure out how much Rust Project contributions/work done by Rust Project members is funded vs. how much is volunteer-based. We want to use the results of this survey to secure more funding sources for Rust Project contributions in the future.
+This survey is organized by the Rust Leadership Council. Its goal is to figure out how much Rust Project contributions/work done by Rust Project members is funded vs. how much is volunteer-based. We want to use the results of this survey to secure more funding sources for Rust Project contributors and maintainers in the future.
 
-This survey is only aimed at Rust Project members. If you are not a member of any Rust team/working group/project group/etc., please do not fill this survey. It is also primarily aimed at "active" contributors, who made at least some contribution in the past 12 months.
+This survey is only aimed at Rust Project members. **If you are not a member of any Rust team/working group/project group/etc., please DO NOT fill this survey**. It is also primarily aimed at "active" contributors, who made at least some contribution in the past 12 months.
 
-Note that when we ask about contributions in this survey, we always mean contributions to the Rust Project repositories, so essentially any repository under the `rust-lang` GitHub organization, plus any other related organizations, such as `rust-lang-nursery`.
+Note that when we ask about contributions in this survey, we always mean contributions to the Rust Project repositories, so essentially any repository under the `rust-lang` GitHub organization, plus any other related organizations, such as `rust-lang-nursery` or `rust-analyzer`.
 
 This survey is anonymous. Summarized statistics of the survey results might be published publicly. You can optionally choose to answer selected personal questions at the end of the survey, which will only be made available to the Rust Leadership Council and Rust Foundation staff.
 
@@ -185,7 +185,7 @@ Type: select all that apply (optional)
 - Infrastructure work (CI, releases, bots, ...)
 - Other (open response)
 
-### What parts of the Rust Project do you contribute to?
+### What parts of the Rust Project do you typically contribute to?
 
 Type: select all that apply (optional)
 
@@ -222,7 +222,7 @@ Type: select all that apply (optional)
 
 ## Optional detailed questions
 
-The following questions are FULLY OPTIONAL. If you provide answers to them, they will NOT be shared publicly, and will be made available only to the Leadership Council and Rust Foundation staff that facilitates this survey.
+The following questions are **FULLY OPTIONAL**. If you provide answers to them, they will NOT be shared publicly, and will be made available only to the Leadership Council and Rust Foundation staff that facilitates this survey.
 
 ### Which companies/organizations fund your contributions to the Rust Project?
 
