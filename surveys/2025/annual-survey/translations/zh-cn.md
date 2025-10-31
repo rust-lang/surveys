@@ -2,11 +2,13 @@
 
 Type: select one
 
-- 是的，我使用 Rust（用于任何目的，即使您只是在学习）
+- 是的，我使用 Rust（用于任何目的，即使您只是在学习 Rust 语言）
 - 不，我目前不使用 Rust，但我曾经使用过
 - 不，我从未使用过 Rust
 
 ### 很遗憾听到您已不再使用 Rust，是什么原因使您停止使用它？
+
+您可以选择多个选项。
 
 Type: select all that apply
 
@@ -14,10 +16,10 @@ Type: select all that apply
 - 缺少库
 - 缺少工具
 - 学习太难
-- 社区不太礼貌、不受欢迎或令人不快
+- 社区不礼貌、不欢迎或令人不快
 - 我更喜欢使用其他语言
-- 由于无法控制的因素，我不再有机会使用Rust
-- 如果将来有机会，我打算重新使用Rust
+- 由于我无法控制的因素，我不再有机会使用 Rust
+- 如果将来有机会，我打算重新使用 Rust
 - 其他
 
 ### 请告诉我们更多信息:
@@ -26,14 +28,16 @@ Type: free form
 
 ### 您为什么不使用 Rust？
 
+您可以选择多个选项。
+
 Type: select all that apply
 
-- Rust 不能帮助我达成目标
+- Rust 不能帮助我达成我期望的目标
 - 缺少语言功能
 - 缺少库
 - 缺少工具
 - 学习太难或者会花太多时间
-- 社区不太礼貌、不受欢迎或令人不快
+- 社区不礼貌、不欢迎或令人不快
 - 我更喜欢使用其他语言
 - 由于我无法控制的因素，我无法使用 Rust
 - 我没有时间
@@ -57,37 +61,41 @@ Type: select one
 Type: select one
 
 - 我不会写 Rust 代码
-- 我可以用Rust编写简单的程序
+- 我可以用 Rust 编写简单的程序
 - 我可以写有用的、产品级的代码，但很艰难
-- 我写Rust很有效率
+- 我写 Rust 时很有效率
 
-### 您是在什么时候开始学习用Rust编程的？
+### 您是在什么时候开始学习用 Rust 编程的？
+
+注：虽然您可能会继续尝试提高您的 Rust 技能，但对于这个问题 , “学习 Rust 编程”指的是您使用 Rust 的大多数时间是在查看学习资料或为学习而写代码，而不是用 Rust 去实现其他目标。如果您的学习过程跨越列出的几个时间段，请选择您认为自己学习最多的时间段。
 
 Type: select one
 
-- 我*仍然在*积极地学习 Rust。
-- 2024年期间
-- 2022年或2023年期间
-- 2020年或2021年期间
-- 2018年或2019年期间
-- 2017年或之前
+- 我仍然在积极地学习 Rust
+- 2025年期间
+- 2023年或2024年期间
+- 2021年或2022年期间
+- 2019年或2020年期间
+- 2018年或之前
 
-### 如果您使用了有关 Rust 的学习资料，您使用的是哪种资料？
+### 如果您使用了有关 Rust 的学习资料，您使用的是哪类资料？
+
+请选择所有适用的选项
 
 Type: select all that apply
 
-- 书籍（例如《The Rust 编程语言》、《Rust for Rustaceans》等）
-- 在线练习（例如Rustlings、Rust by Examples 等）
+- 书籍（例如《The Rust Programming Language》、《Rust for Rustaceans》等）
+- 在线练习（例如 Rustlings、100个练习学习 Rust 等）
 - 视频或者直播
 - 博客
 - 文档
-- crate的源代码
+- crate 源代码
 - 在线课程、网络研讨会
 - 面对面训练
 - 大学教学资料
 - 其他（请注明）
 
-### 您在今年或去年是否参加过（或仍在参加）使用或教授Rust的课程或培训？
+### 您在今年或去年是否参加过（或仍在参加）使用 Rust 或教授 Rust 的课程或培训？
 
 Type: select one
 
@@ -97,33 +105,39 @@ Type: select one
 
 ### 您经常使用哪些操作系统进行 Rust 开发?
 
+请注意：这是在问您个人用于进行开发的系统，而不是您的所有目标系统。您可以选择多个选项。
+
 Type: select all that apply
 
 - Linux
 - Windows 10/11
-- Windows 8 或更早版本
-- 适用于 Linux 的Windows 子系统（WSL）
+- Windows 8.1 或更早版本
+- Windows Subsystem for Linux (WSL)
 - macOS
 - 其他
 
 ### 您经常以哪些操作系统作为目标系统进行 Rust 开发？
 
+请注意：这是在询问您的目标操作系统或目标运行环境，而非您用于开发的系统，也非您的目标架构（例如 x86 或 ARM）。
+
 Type: select all that apply
 
 - Linux（桌面或服务器）
 - Windows 10/11
-- Windows 8 或更早版本
+- Windows 8.1 或更早版本
 - macOS
 - iOS
 - 安卓（Android）
-- 嵌入式平台（带操作系统）
+- 嵌入式平台（有操作系统的）
 - 嵌入式平台（裸机）
 - WebAssembly（浏览器环境）
 - WebAssembly（非浏览器环境）
 - 明确平台独立（如不与操作系统交互的库）
 - 其他
 
-### 您通常使用什么编辑器或IDE配置来编写Rust代码？
+### 您通常使用什么编辑器或 IDE 配置来编写 Rust 代码？
+
+您可以选择多个选项。
 
 Type: select all that apply
 
@@ -137,17 +151,19 @@ Type: select all that apply
 - Xcode
 - Atom
 - Helix
-- 
+- Zed
 - 其他
 
 ### 您在本地开发中使用什么版本的 Rust？
+
+您可以选择多个选项。
 
 Type: select all that apply
 
 - 当前稳定版
 - 之前的稳定版
-- 不低于 1.75 的特定稳定版本
-- 低于 1.75 的特定稳定版本
+- 不低于 1.83 的特定稳定版本
+- 低于 1.83 的特定稳定版本
 - Beta 版
 - 最新的 Nightly
 - 特定版本的 Nightly
@@ -155,7 +171,9 @@ Type: select all that apply
 - 我不知道
 - 其他
 
-### 如果您使用Nightly版，为什么？
+### 如果您使用 Nightly 版，请问原因是什么？
+
+您可以选择多个选项。
 
 Type: select all that apply
 
@@ -163,28 +181,30 @@ Type: select all that apply
 - 出于习惯
 - 为了我需要的特定语言功能
 - 我喜欢能用上所有最新功能
-- 帮助测试；检测 Nightly 版本是否含有缺陷
-- 提供有关Nightly功能的设计反馈
+- 帮助测试、检测 Nightly 版本是否含有缺陷
+- 提供有关 Nightly 功能的设计反馈
 - 用于持续集成中测试
-- 我使用的一个 crate 依赖需要Nightly
-- 我使用的一个工具需要Nightly
+- 我使用的一个 crate 依赖需要 Nightly
+- 我使用的一个工具需要 Nightly
 - 为获得更快的编译时间
 - 其他
 
 ### 您在开发任务中使用的最旧版本的 Rust 是什么？
 
+（不包括为了确保您的代码是否兼容旧版本而使用旧版本进行测试的用途）
+
 Type: select one
 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 1.84 (beta)
+- 1.93（Nightly 版本）
+- 1.92（Beta 版本）
+- 1.91
+- 1.90
+- 1.89
+- 1.88
+- 1.87
+- 1.86
+- 1.85
+- 1.84
 - 1.83
 - 1.82
 - 1.81
@@ -269,94 +289,102 @@ Type: select one
 - 1.2
 - 1.1
 - 1.0
-- 比1.0更早的旧版本
+- 比 1.0 更早的旧版本
 
-### 请问您同意以下对于Rust 稳定性的描述吗？
+### 请问您同意以下对于 Rust 稳定性的描述吗？
 
 Type: matrix
 
 Rows:
 
-- 我可以升级*稳定*编译器版本，而不必担心我的代码无法编译
-- 我可以升级*Nightly*编译器版本，而不必担心我的代码无法编译
-- 升级到新的*稳定*编译器版本不需要任何更改，或只需对我的代码进行极小且简单的更改
-- 升级到新的*Nightly*编译器版本不需要任何更改，或只需对我的代码进行极小且简单的更改
+- 我可以升级稳定（stable）编译器版本，而不必担心我的代码无法编译
+- 我可以升级 Nightly 编译器版本，而不必担心我的代码无法编译
+- 升级到新的稳定（stable）编译器版本不需要任何更改，或只需对我的代码进行极小且简单的更改
+- 升级到新的 Nightly 编译器版本不需要任何更改，或只需对我的代码进行极小且简单的更改
 
 Columns:
 
 - 同意
 - 不同意
 
-### 请问您对于Rust的发展有何评价？
+### 请问您对于 Rust 的发展速度有何评价？
+
+我们希望知道您对于 Rust 语言发展速度的感受。
 
 Type: select one
 
-- 我认为Rust已经过于复杂，不应添加新的显著功能或使更多仅Nightly可用的显著功能稳定化
-- 我认为Rust发展太快，我希望Rust能减慢发展速度
-- 我对Rust目前的发展速度感到满意
-- 我认为Rust发展太慢，我希望Rust能更快地添加新的功能或更快地使仅Nightly可用的功能稳定化
+- 我认为 Rust 已经过于复杂，不应添加新的显著功能或使更多非稳定显著功能稳定化
+- 我认为 Rust 发展太快，我希望 Rust 能减慢发展速度
+- 我对 Rust 目前的发展速度感到满意
+- 我认为 Rust 发展太慢，我希望 Rust 能更快地添加新的功能或更快地使非稳定功能稳定化
 - 我不了解或不在意
 - 其他（请注明）
 
-### 您希望哪些目前处于未实现状态（或仅Nightly可用）的功能进行稳定化？
+### 您希望哪些目前处于未实现状态（或非稳定、仅 Nightly 可用）的功能进行稳定化？
+
+请在此处选择或注明您认为对 Rust 生态系统或者您个人有益的 **Rust 编译器和标准库**中缺失或者仅非稳定版本可用的功能。
+
+请注意：这个问题的回答不应包含非编译器或非标准库的功能，例如 cargo、rustfmt、rustup 等工具的功能。
 
 Type: matrix
 
 Rows:
 
-- 特化 (Specialization)
-- 生成器/协程 (Generators/coroutines)
-- 异步生成器/协程 (Async generators/coroutines)
-- try 表达式块 (Try blocks)
-- 永无(never)类型 (Never type)
-- 特质别名 (Trait aliases)
-- 类型别名中的impl Trait (Type Alias Impl Trait (TAIT) )
-- 默认关联类型 (Associated type defaults)
-- 泛型编译时求值表达式 (Generic const expressions)
-- 编译时可用的特质方法 (Const trait methods)
-- 
+- [特异化 (Specialization)](https://github.com/rust-lang/rust/issues/31844)
+- [生成器/协程 (Generators/coroutines)](https://github.com/rust-lang/rust/issues/43122)
+- [异步生成器/异步协程 (Async generators/coroutines)](https://github.com/rust-lang/rust/pull/118420)
+- [try 表达式块 (Try blocks)](https://github.com/rust-lang/rust/issues/31436)
+- [永无（never）类型 (Never type)](https://github.com/rust-lang/rust/issues/35121)
+- [Trait 别名 (Trait aliases)](https://github.com/rust-lang/rfcs/blob/master/text/1733-trait-alias.md)
+- [类型别名中的 impl Trait (Type Alias Impl Trait (TAIT) )](https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html)
+- [默认关联类型 (Associated type defaults)](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)
+- [泛型编译时求值表达式 (Generic const expressions)](https://github.com/rust-lang/rust/issues/76560)
+- [编译时可用的 Trait 方法 (Const trait methods)](https://github.com/rust-lang/rust/issues/67792)
+- [声明式属性/derive宏 (Declarative (macro_rules!) attributes (#[attr]) and derives (#[derive(Trait)]) )](https://github.com/rust-lang/rust/issues/143549)
 - 编译时反射机制 (Compile-time reflection)
 - 可变泛型 (Variadic generics)
-- 任意方法接受类型 (Arbitrary Self Types)
-- 枚举成员类型 (Enum Variant Types)
-- 分配器特质、更优的内存溢出处理 (Allocator trait and better OOM handling)
-- 稳定应用程序二进制接口
-- 可移植SIMD（单指令、多数据流）
+- [任意方法接受类型 (Arbitrary Self Types)](https://github.com/rust-lang/rfcs/blob/master/text/3519-arbitrary-self-types-v2.md)
+- [枚举成员类型 (Enum Variant Types)](https://github.com/rust-lang/lang-team/issues/122)
+- [分配器 Trait、更优的内存溢出处理 (Allocator trait and better OOM handling)](https://github.com/rust-lang/rust/issues/32838)
+- [稳定应用程序二进制接口（Stable ABI）](https://github.com/rust-lang/rust/issues/111423)
+- [可移植SIMD（单指令、多数据流）（Portable SIMD）](https://github.com/rust-lang/portable-simd)
 
 Columns:
 
-- 如果稳定版本中本功能可用，则会解决想用Rust适用我的用例时遇到的障碍
+- 如果稳定版本中本功能可用，则会解决想用 Rust 适用我的用例时遇到的障碍
 - 如果稳定版本中本功能可用，则会改进我的代码
 - 我不需要这个功能
 - 我不了解这个功能
 
-### 有没有什么未在上面提及的功能是您希望优先开发的？
+### 有没有什么以上未提及的功能是您希望优先开发的？
 
 Type: free form
 
-### 您认为以下列出的哪些Rust的方面对于您的编程效率造成了显著的负面影响？
+### 您认为以下列出的哪些 Rust 的方面对于您的编程效率造成了显著的负面影响？
+
+请注意：请仅选择对造成您的编程效率造成负面影响的选项。如果某一行没有选择，我们会假设您对这方面不了解或不在乎。
 
 Type: matrix
 
 Rows:
 
 - 给不同长度的元组实现逻辑 (Implementing logic for tuples of various sizes)
-- 代码拆分至多个crates以及orphan rule的限制 (Splitting code across crates (e.g. orphan rule))
-- 需要手动实现Iterator (Having to implement Iterator manually)
-- 编译时函数 (const fn) 的限制 (Not being able to do enough in const fn)
-- 实现动态库插件 （Implementing dynamic library plugins）
-- 和其他语言（例如C和C++）的交互、协作（Interoperating with other languages (e.g. C or C++) ）
-- 异步代码中的结构化并发 (Achieving structured concurrency with async code)
+- 代码拆分至多个 crates 以及 orphan rule 的限制 (Splitting code across crates (e.g. orphan rule))
+- 需要手动实现 Iterator (Having to implement Iterator manually)
+- 编译时函数 (const fn) 不够强大 (Not being able to do enough in const fn)
+- 实现动态库插件（Implementing dynamic library plugins）
+- 和其他语言（例如 C 和 C++）的交互、协作（Interoperating with other languages (e.g. C or C++) ）
+- 通过异步代码达到结构化并发 (Achieving structured concurrency with async code)
 - 编写不限于特定异步执行引擎的异步代码 (Writing executor-agnostic async code)
-- 编写正确的不安全代码 (Writing correct unsafe code)
-- 借用检查器的限制、不允许部分语义上正确的代码 (Borrow checker not allowing valid code)
-- 运行慢
-- 编译慢
-- 编译产物占用储存空间大 (Large binary size of compiled artifacts)
-- Rust 语言文档与标准库文档
-- 编辑器自身错误（即内部错误Internal Compiler Errors或者代码生成错误）(Encountering compiler bugs (e.g. ICEs a.k.a. internal compiler errors or miscompilations))
-- 难懂的或者令人困惑的编译错误信息
-- IDE支持不到位（例如缺乏某些错误信息的显示、分析慢等）
+- 编写正确的 unsafe 代码 (Writing correct unsafe code)
+- 借用检查器的限制、不允许部分功能性正确的代码 (Borrow checker not allowing valid code)
+- 运行速度慢
+- 编译速度慢
+- 编译二进制产物大小较大 (Large binary size of compiled artifacts)
+- 占用储存空间大
+- 编辑器自身错误（即内部错误 Internal Compiler Errors 或者 miscompilations）(Encountering compiler bugs (e.g. ICEs a.k.a. internal compiler errors or miscompilations))
+- 难懂或者令人困惑的编译错误信息
+- IDE 支持不到位（例如缺乏某些错误信息的显示、分析慢等）
 - 调试体验支持不到位（例如缺乏数值可视化或者异步堆栈轨迹）
 - 语言或标准库文档不充分
 
@@ -366,33 +394,37 @@ Columns:
 - 这方面可以改进但不限制我
 - 这方面对我来说不是问题
 
-### 是否还有其他问题限制您的Rust编程效率？
+### 是否还有其他以上未提及的问题限制您的 Rust 编程效率？
 
 Type: free form
 
-### 请问在过去12个月内晋升为稳定版本可用功能（称为“稳定功能”）的一系列功能中，哪些功能是您使用最频繁的？
+### 请问在过去12个月内晋升为稳定版本可用功能（即“稳定功能”）的一系列功能中，哪些功能是您使用最频繁的？
+
+请注意，每个功能名称后面括号内展现的是功能稳定化的相对应 Rust 版本号
 
 Type: matrix
 
 Rows:
 
-- 特质中的异步函数 (async fn in traits, 1.75)
-- 特质中返回位置的impl Trait (Return position impl Trait in traits,1.75)
-- C字符串字面量 (C-string literals, 1.77)
-- 异步函数中的递归 (Recursion in async fn, 1.77)
-- offset_of! 宏 (offset_of! macro, 1.77)
-- #[diagnostic] 属性 (#[diagnostic] attribute, 1.78)
-- 内联编译时运算表达式 (Inline const expressions, 1.79)
+- [Strict Provenance API](https://blog.rust-lang.org/2025/01/09/Rust-1.84.0/#strict-provenance-apis)（1.84）
+- [异步闭包 Async Closures](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/#async-closures)（1.85)
+- [diagnostic::do_not_recommend](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/#hiding-trait-implementations-from-diagnostics) (1.85)
+- [Trait 向上转型 Trait upcasting (1.86)](https://blog.rust-lang.org/2025/04/03/Rust-1.86.0/#trait-upcasting)
+- [匿名管道 Anonymous pipes (1.87) ](https://blog.rust-lang.org/2025/05/15/Rust-1.87.0/#anonymous-pipes)
+- [Let 链 Let chains (1.88) ](https://blog.rust-lang.org/2025/06/26/Rust-1.88.0/#let-chains)
+- [裸函数 Naked functions (1.88) ](https://blog.rust-lang.org/2025/06/26/Rust-1.88.0/#naked-functions)
 
 Columns:
 
 - 我使用这个功能
 - 我还不能使用这个功能
 - 我不需要这个功能
-- 我不知道这个功能已经在稳定版本上可用了
+- 我不知道这个功能已经稳定化了
 - 我不知道这个功能是什么
 
 ### 您如何构建您的 Rust 项目？
+
+您可以选择多个选项。
 
 Type: select all that apply
 
@@ -401,25 +433,29 @@ Type: select all that apply
 - 我将 Cargo 与其他构建系统结合使用
 - 若您将 Cargo 与其他构建系统结合使用（或仅使用其他构建系统），您使用的是哪些？
 
-### 您构建 Rust 项目时如何下载 crate？
+### 您构建 Rust 项目时是如何下载 crates 的？
+
+您可以选择多个选项。
 
 Type: select all that apply
 
 - 我使用 crates.io
 - 我使用自定义/本地/公司注册库(registry)
 - 我使用 crates.io 的镜像
+- git 仓库
 - 我不知道
-- 
-- Other
+- 其他
 
-### 
+### 您是否使用编译器错误代码？
+
+Rust 编译器给某些特定的编译错误分配错误代码（例如 E0308、E0509）。[Rust 编译器错误代码索引（Rust Error Codes Index）](https://doc.rust-lang.org/error_codes/error-index.html)收集这些错误代码并且提供关于这些错误代码的描述。您可通过 `rustc --explain <error-code>` 、[错误代码索引](https://doc.rust-lang.org/error_codes/error-index.html)、[Rust Playground](https://play.rust-lang.org/) 等方式访问相应描述。
 
 Type: select one
 
-- 
-- 
-- 
-- Other
+- 我阅读过这些编译器错误代码描述并且认为这些描述对我是有帮助的
+- 我阅读过这些编译器错误代码描述但是认为这些描述对我没有帮助
+- 我不知道[编译器错误代码索引](https://doc.rust-lang.org/error_codes/error-index.html)的存在
+- 其他
 
 ### 您大致以什么频次参与 Rust 社区活动？
 
@@ -427,13 +463,13 @@ Type: matrix
 
 Rows:
 
-- 制作关于 Rust 的信息内容（如博客、直播、制作 YouTube 视频、在会议/聚会上展示等
+- 制作关于 Rust 的信息内容（如博客、直播、制作 YouTube 视频、在会议/聚会上展示等）
 - 接收有关 Rust 的信息内容（如博客、直播、YouTube 视频等）
-- 阅读 Rust 官方沟通渠道（如 This Week in Rust、Rust 官方博客、Rust 推特账户等）
+- 阅读 Rust 官方沟通渠道（如 This Week in Rust、Rust 官方博客、Rust BlueSky 账户等）
 - 参与社交媒体或网站（Hacker News、r/rust、Twitter、LinkedIn等）上关于Rust的讨论
 - 参加 Rust 聚会或会议（虚拟或面对面）
 - 撰写、评论、参与讨论或编辑公开的 RFC
-- 在官方聊天室（internals.rust-lang.org, rust-lang Zulip 或 Discord）中讨论 Rust 项目
+- 在官方维护的聊天室（internals.rust-lang.org, rust-lang Zulip）中讨论 Rust 官方项目
 - 在 rust-lang GitHub 组织中的任何仓库报告问题
 - 为 rust-lang GitHub 组织里的任何项目贡献代码变更（包括测试）
 - 为 rust-lang GitHub 组织里的任何项目贡献非代码的变更（如文档、注释等）
@@ -451,19 +487,19 @@ Type: matrix
 
 Rows:
 
-- Rust 官方社区论坛或聊天室（users.rust-lang.org、internals.rust-lang.org、官方 Rust Discord 或 Rust Zulip)
-- Rust 非官方社区论坛或聊天室（如reddit.com/r/rust、Hacker News 或 Rust Community Discord 等等)
-- 专注于 Rust 软件开发特定领域（例如游戏开发、音频等）的社区
+- Rust 官方社区论坛或聊天室（users.rust-lang.org、internals.rust-lang.org、Rust 官方 Discord、 Rust Zulip)
+- Rust 非官方社区论坛或聊天室（如 reddit.com/r/rust、Hacker News 或 Rust 社区 Discord 等)
+- 专注于特定开发特定领域（例如游戏开发、音频等）的 Rust 软件开发社区
 - Rust 会议
-- Rust 聚会或当地社区活动
-- 在 rust-lang GitHub 组织<strong>之内</strong>的仓库中进行讨论（问题、PR等）
-- 在 GitHub 的 rust-lang 组织<strong>之外</strong>的仓库中的讨论（问题、PR等）
+- Rust 聚会或本地社区活动
+- 在 rust-lang GitHub 组织**之内**的仓库中进行讨论（问题、PR等）
+- 在 GitHub 的 rust-lang 组织**之外**的仓库中的讨论（问题、PR等）
 
 Columns:
 
-- 我感到欢迎
-- 我不觉得特别受欢迎或不受欢迎
-- 我觉得不受欢迎
+- 我觉得社区欢迎我的参与
+- 我没觉得社区特别欢迎或特别不欢迎我的参与
+- 我觉得社区不欢迎我的参与
 - 我从来没有参加过这个活动
 
 ### 如果您表示自己在 Rust 社区中感到不受欢迎，是否有任何关于您的经历的详细信息愿意与我们分享？
@@ -490,31 +526,35 @@ Type: select one
 Type: select one
 
 - 我大部分的编码工作都在用 Rust
-- 有使用，一周数次
-- 有使用，但我仅偶尔使用
+- 有使用，平均一周数次
+- 有使用，但仅偶尔使用
 - 不使用
 
-### 贵公司目前使用 Rust 的程度如何？
+### 贵公司或组织目前使用 Rust 的程度如何？
 
 Type: select one
 
-- 我的公司对 Rust 有实质性的使用（例如，用于生产或重要工具）
-- 我的公司已经试验过 Rust 或者正在考虑使用它
-- 我的公司还没有认真考虑过 Rust 的任何用途
-- 我不确定我的公司是否考虑过使用或目前正在使用 Rust
-- 我不为任何公司工作，或者我的公司不开发任何类型的软件
+- 我的公司或组织对 Rust 有实质性的使用（例如，用于生产或重要工具）
+- 我的公司或组织已经试验过 Rust 或者正在考虑使用它
+- 我的公司或组织未认真考虑过 Rust 的任何用途
+- 我不确定我的公司或组织是否考虑过使用或目前正在使用 Rust
+- 我不为任何公司或组织工作，或者我的公司或组织不开发任何类型的软件
 
 ### 以下哪些陈述适用于您在工作中使用 Rust 的体验？
+
+您可以选择多个选项。
 
 Type: select all that apply
 
 - 使用 Rust 帮助我们实现了目标
-- 采用 Rust 是一项挑战
+- 采用 Rust 挑战性较大
 - 总的来说，采用 Rust 降低了我们团队的速度
 - 使用 Rust 值得采用 Rust 所需要的成本
 - 我们在未来很可能会继续使用 Rust
 
 ### 以下哪些陈述是您在工作中使用 Rust 的原因？
+
+您可以选择多个选项。
 
 Type: select all that apply
 
@@ -531,7 +571,11 @@ Type: select all that apply
 
 Type: free form
 
-### 贵公司在哪些技术领域使用 Rust ？
+### 贵公司或组织在哪些技术领域使用 Rust ？
+
+如果您在之前的问题回答您的公司或组织没有在积极地使用 Rust，您可以将此问题留空。
+
+您可以选择多个选项。
 
 Type: select all that apply
 
@@ -539,7 +583,7 @@ Type: select all that apply
 - 机动车应用
 - 区块链
 - 云计算应用
-- 云计算设施或工具
+- 云计算基础设施或工具
 - 计算机图形
 - 电脑游戏
 - 计算机网络
@@ -557,18 +601,20 @@ Type: select all that apply
 - 手机应用前端
 - 编程语言和相关工具（包括编译器、IDE、标准库等）
 - 机器人
-- 科学和/或数值计算
+- 科学或数值计算
 - 服务端或后端应用
 - 模拟运算
 - Web 应用前端
 - WebAssembly
 - 其他
 
-### 贵司总共雇用了大约多少开发者？
+### 贵公司或组织总共雇用了大约多少开发者？
+
+请注意，不需要担心这里的精确性，跟随你的直觉即可
 
 Type: select one
 
-- 10名或更少
+- 10名及以下
 - 11~49
 - 50~99
 - 100~500
@@ -576,12 +622,12 @@ Type: select one
 - 1,000~10,000
 - 超过10,000名
 
-### 贵司明年是否有计划招聘 Rust 开发者？
+### 贵公司或组织明年是否有计划招聘 Rust 开发者？
 
 Type: select one
 
 - 是
-- 否（打算招聘其他的开发者）
+- 否（但打算招聘其他的开发者）
 - 不打算招聘任何开发者
 - 我不知道
 
@@ -603,17 +649,21 @@ Columns:
 
 ### 您觉得以下对 Rust 的陈述哪些是符合实际情况的？
 
+您可以选择多个选项。
+
 Type: select all that apply
 
 - Rust 比其他编程语言提供了真正的优势
-- Rust 的编程比其他编程语言复杂得多
-- Rust 比其他编程语言需要花费更多的精力来学习
-- 与用其他编程语言编写的等效代码相比，Rust 代码包含的错误要少得多
+- Rust 比其他编程语言显著地复杂
+- Rust 比其他编程语言需要花费显著地更多的精力来学习
+- 与用其他编程语言编写的等效代码相比，Rust 代码包含的错误要显著地少得多
 - Rust 在生产中使用有风险
 - Rust 让我更有效率
 - Rust 使用起来很有趣
 
 ### 您对 Rust 的未来的最大的担忧是什么？
+
+您可以选择多个选项。
 
 Type: select all that apply
 
@@ -646,7 +696,7 @@ Type: select all that apply
 
 - 文化信仰
 - 残疾（身体、精神或其他方面）
-- 大脑功能异于常人的
+- 神经多样性
 - 教育背景
 - 语言
 - 同性恋、双性恋、酷儿或其他非异性恋
@@ -884,11 +934,13 @@ Type: select one
 - 黎巴嫩
 - 黑山
 
-### 若您从上述列表中选择了”其他“，请在下面输入您的居住地。
+### 若您从上述列表中选择了”其他“，请在下面输入您的居住地区。
 
 Type: free form
 
 ### 您在哪些方面能自如地用英语交流技术话题?
+
+您可以选择多个选项。
 
 Type: select all that apply
 
@@ -898,11 +950,13 @@ Type: select all that apply
 - 我能够自如地听英语技术演讲（如在会议或聚会上）
 - 我能够自如地阅读英语书面教育材料（如技术书籍、博客文章等）
 
-### 您用于技术交流的首选语言是什么？
+### 您阅读技术文档、博客的首选语言是什么？
+
+请注意：您的回答应应反映您的**意愿**，而非您的能力。假如您能自如地使用英语和韩语进行技术交流，但是您总是倾向于选用韩语，您在这里只应选择韩语作为您倾向使用的语言。
 
 Type: select all that apply
 
-- 
+- 乌克兰语
 - 俄语
 - 印地语
 - 德语
