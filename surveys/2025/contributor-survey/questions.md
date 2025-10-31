@@ -93,6 +93,8 @@ Type: select one (optional)
 
 If you have a contract or if you are employed to work on Rust, please tell us when is your contract/employment ending (even if it might get refreshed for another term).
 
+If you have multiple contracts/employments currently, enter the latest date at which one of them ends. For example, if you have a contract ending in 2025 and another ending in 2026, enter 2026.
+
 Type: select one (optional)
 
 - This year (2025)
