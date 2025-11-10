@@ -8,16 +8,18 @@ Type: select one
 
 ### Vous avez indiqué que vous n’utilisez plus Rust, pour quelle(s) raison(s) avez-vous arrêté d’utiliser Rust ?
 
+Vous pouvez sélectionner plusieurs options.
+
 Type: select all that apply
 
-- Fonctions linguistiques manquantes
-- Bibliothèques manquantes
+- Fonctionnalités manquantes dans le langage
+- Librairies manquantes
 - Outils manquants
 - Trop difficile à apprendre
 - La communauté s’est montrée impolie, peu accueillante ou rébarbative
 - Je préfère utiliser un autre langage
 - Je ne peux plus utiliser Rust en raison de facteurs indépendants de ma volonté
-- Je prévois de l’utiliser dans le futur, lorsqu’une opportunité se présentera
+- Je prévois de l’utiliser dans le futur, lorsqu’une opportunité se présentera​​​​
 - Autre
 
 ### Veuillez nous en dire plus :
@@ -26,17 +28,19 @@ Type: free form
 
 ### Comme vous avez indiqué que vous n’utilisez pas Rust, qu’est-ce qui vous a incité à participer à cette enquête ?
 
+Vous pouvez sélectionner plusieurs options.
+
 Type: select all that apply
 
 - Rust ne m’a pas permis d’atteindre mes objectifs
-- Fonctions linguistiques manquantes
-- Bibliothèques manquantes
+- Fonctionnalités manquantes dans le langage
+- Librairies manquantes
 - Outils manquants
 - Trop difficile à apprendre
 - La communauté s’est montrée impolie, peu accueillante ou rébarbative
 - Je préfère utiliser un autre langage
 - Je ne peux plus utiliser Rust en raison de facteurs indépendants de ma volonté
-- Je ne l’ai pas encore fait
+- Je n'y suis pas encore parvenu
 - Autre
 
 ### Veuillez nous en dire plus :
@@ -47,9 +51,9 @@ Type: free form
 
 Type: select one
 
-- Quotidiennement ou presque
-- Hebdomadairement ou presque
-- Mensuellement ou presque
+- Chaque jour ou presque
+- Chaque semaine ou presque
+- Chaque mois ou presque
 - Rarement
 
 ### Comment évaluez-vous votre expertise en Rust ?
@@ -58,32 +62,36 @@ Type: select one
 
 - Je ne peux pas écrire de code Rust
 - Je peux écrire des programmes simples en Rust
-- Je peux écrire du code utile, prêt à être mis en production, mais c’est compliqué
+- Je peux écrire du code utile, prêt à être mis en production, mais je trouve ça difficile
 - Je suis productif en codant en Rust
 
 ### Quand avez-vous appris à programmer en Rust ?
 
+Remarque : bien que vous puissiez continuer à essayer d’améliorer vos compétences en Rust, pour cette question, supposez que « apprendre à programmer en Rust » signifie passer la majorité de votre temps en Rust à consommer des supports d’apprentissage ou à coder dans le but d’apprendre (par opposition à atteindre un autre objectif). Si votre processus d'apprentissage s’étend sur plusieurs des périodes énumérées, choisissez celle où vous pensez avoir le plus appris.
+
 Type: select one
 
 - J’essaie toujours activement d’apprendre Rust
-- Courant 2024
-- Courant 2022 ou 2023
-- Courant 2020 ou 2021
-- Courant 2018 ou 2019
-- Courant 2017 ou avant
+- Courant 2025
+- Courant 2023 ou 2024
+- Courant 2021 ou 2022
+- Courant 2019 ou 2020
+- Courant 2018 ou avant
 
 ### Si vous avez consommé du matériel d’apprentissage sur Rust, quel type de matériel avez-vous consommé ?
+
+Veuillez sélectionner tout ceux qui s’appliquent
 
 Type: select all that apply
 
 - Livres (« Le langage de programmation Rust », « Rust for Rustaceans », etc.)
 - Exercices en ligne (Rustlings, 100 Exercises To Learn Rust, etc.)
 - Vidéos ou diffusions en direct
-- Blogs
+- Blogs​​​​
 - Documentation
-- Code source de cagettes (crates) Rust
+- Code source de crates Rust
 - Cours en ligne, webinaires
-- Cours en personne
+- Formation sur place
 - Études supérieures (université, grande école, etc.)
 - Autre (veuillez préciser)
 
@@ -97,6 +105,10 @@ Type: select one
 
 ### Quels systèmes d’exploitation utilisez-vous régulièrement quand vous développez en Rust ?
 
+Remarque : il s’agit spécifiquement des systèmes que vous utilisez pour le développement et non de tous les systèmes que vous ciblez.
+
+Vous pouvez sélectionner plusieurs options.
+
 Type: select all that apply
 
 - Linux
@@ -107,6 +119,10 @@ Type: select all that apply
 - Autre
 
 ### Pour quels systèmes d’exploitation ou environnements d’exécution développez-vous des logiciels en Rust ?
+
+Remarque : il s’agit spécifiquement du **système d’exploitation** ou des **environnements d’exécution** que vous **ciblez**, et non du système que vous utilisez pour le développement ou des architectures spécifiques (par exemple, x86 ou ARM) que vous ciblez.
+
+Vous pouvez sélectionner plusieurs options.
 
 Type: select all that apply
 
@@ -125,6 +141,8 @@ Type: select all that apply
 
 ### Quel éditeur ou IDE utilisez-vous régulièrement pour coder en Rust ?
 
+Vous pouvez sélectionner plusieurs options.
+
 Type: select all that apply
 
 - VS Code
@@ -142,12 +160,14 @@ Type: select all that apply
 
 ### Quelle(s) version(s) de Rust utilisez-vous sur votre machine ?
 
+Vous pouvez sélectionner plusieurs options.
+
 Type: select all that apply
 
 - Version stable actuelle
 - Version stable précédente
-- Une version spécifique de la version stable de Rust égale ou supérieure à 1.75
-- Une version spécifique de la version stable de Rust plus ancienne que 1.75
+- Une version spécifique de la version stable de Rust égale ou supérieure à 1.83
+- Une version spécifique de la version stable de Rust plus ancienne que 1.83
 - Version bêta
 - Dernière version nightly
 - Une version nightly spécifique
@@ -156,6 +176,8 @@ Type: select all that apply
 - Autre
 
 ### Si vous utilisez une version nightly, veuillez préciser le(s) motif(s).
+
+Vous pouvez sélectionner plusieurs options.
 
 Type: select all that apply
 
@@ -173,18 +195,20 @@ Type: select all that apply
 
 ### Quelle est la plus ancienne version de Rust que vous utilisez pour toute tâche de développement ?
 
+(À l’exclusion des tests pour garantir que votre code fonctionne sur cette version du compilateur)
+
 Type: select one
 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 1.84 (bêta)
+- 1.93 (nightly)
+- 1.92 (beta)
+- 1.91
+- 1.90
+- 1.89
+- 1.88
+- 1.87
+- 1.86
+- 1.85
+- 1.84
 - 1.83
 - 1.82
 - 1.81
@@ -289,6 +313,8 @@ Columns:
 
 ### Quelle est votre opinion sur la vitesse d’évolution de Rust ?
 
+Nous voulons savoir comment vous percevez la vitesse de développement du langage Rust.
+
 Type: select one
 
 - Rust est déjà trop complexe, il ne devrait pas ajouter ou stabiliser des fonctionnalités plus importantes
@@ -298,7 +324,9 @@ Type: select one
 - Je ne sais pas ou je m’en fiche
 - Autre
 
-### Quelles fonctionnalités non implémentées (ou uniquement nightly) souhaitez-vous stabiliser ?
+### Quelles fonctionnalités non implémentées (ou uniquement nightly) souhaitez-vous voir stabilisées ?
+
+Veuillez mentionner ici les fonctionnalités du *compilateur Rust* qui sont actuellement instables (disponible uniquement en utilisant une version nightly du compilateur Rust) ou une fonctionnalité qui manque et qui, à votre avis, serait bénéfique à l'écosystème Rust ou à votre travail. Cette liste exclut les autres outils autour du compilateur tels que cargo, rustup, rustfmt, etc.
 
 Type: matrix
 
@@ -314,7 +342,7 @@ Rows:
 - [Valeurs par défaut des types associés](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)
 - Expressions constantes génériques
 - [Méthodes de trait constantes](https://github.com/rust-lang/rust/issues/67792)
-- 
+- [Attributs (#[attr]) déclaratifs (macro_rules!) et dérivés (#[derive(Trait)])](https://github.com/rust-lang/rust/issues/143549)
 - Réflexion au moment de la compilation
 - Génériques variadiques
 - [Types `self` arbitraires](https://github.com/rust-lang/rfcs/blob/master/text/3519-arbitrary-self-types-v2.md)
@@ -336,13 +364,15 @@ Type: free form
 
 ### Lequel des aspects suivants de Rust présente des problèmes non triviaux pour votre productivité de programmation ?
 
+Évaluez uniquement les défis qui, selon vous, ont un impact sur votre travail. Si vous ne sélectionnez rien pour une ligne donnée, nous supposerons que vous ne connaissez pas cet aspect ou que vous ne vous en souciez pas.
+
 Type: matrix
 
 Rows:
 
 - Implémentation de la logique pour des tuples de différentes tailles
-- Répartition du code entre les cagettes (crates) (par exemple, règle de l’orphelin)
-- Devoir implémenter le trait Iterator manuellement
+- Répartition du code entre les crates (par exemple, règle de l’orphelin)
+- Devoir implémenter les itérateurs manuellement
 - Ne pas pouvoir en faire assez dans les const fn
 - Implémentation de plugins de bibliothèque dynamique
 - Interopérabilité avec d’autres langages (par exemple C ou C++)
@@ -355,7 +385,7 @@ Rows:
 - Grande taille binaire des artefacts compilés
 - Utilisation de l’espace disque (par exemple, la taille du dossier target)
 - Bogues dans le compilateur (c’est-à-dire, les ICE, ou erreurs internes du compilateur, les mauvaises compilations, etc.)
-- Rencontre avec des messages d’erreur de compilateur opaques/peu clairs
+- Tomber sur des messages d’erreur de compilateur opaques/peu clairs
 - Prise en charge IDE inférieure à la moyenne (par exemple, certaines erreurs ne sont pas affichées ou l’analyse est lente)
 - Expérience de débogage inférieure à la moyenne (par exemple, visualisations de valeurs manquantes ou traces de pile asynchrones)
 - Manque de documentation sur le langage Rust ou la bibliothèque standard
@@ -372,17 +402,23 @@ Type: free form
 
 ### Quelles fonctionnalités stabilisées au cours des 12 derniers mois utilisez-vous le plus ?
 
+Le texte entre parenthèses indique dans quelle version de Rust la fonctionnalité a été stabilisée.
+
 Type: matrix
 
 Rows:
 
-- [Fonction asynchrone dans les traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
-- [impl Trait comme type de retour de fonctions de traits](https://blog.rust-lang.org/2023/12/21/async-fn-rpit-in-traits.html) (1.75)
-- [Chaîne de caractères C littérales](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#c-string-literals) (1.77)
-- [Récursivité dans la fonction asynchrone](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#support-for-recursion-in-async-fn) (1.77)
-- [macro offset_of!](https://blog.rust-lang.org/2024/03/21/Rust-1.77.0.html#offset_of) (1.77)
-- [Attribut #[diagnostic]](https://blog.rust-lang.org/2024/05/02/Rust-1.78.0.html#diagnostic-attributes) (1.78)
-- [Expressions constantes en ligne](https://blog.rust-lang.org/2024/06/13/Rust-1.79.0.html#inline-const-expressions) (1.79)
+- <a href="https://blog.rust-lang.org/2025/01/09/Rust-1.84.0/#strict-provenance-apis" rel="noopener noreferrer" target="_blank">Strict provenance API (1.84)
+</a>
+- [Closures asynchrones (1.85)](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/#async-closures)
+- <a href="https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/#hiding-trait-implementations-from-diagnostics" rel="noopener noreferrer" target="_blank">diagnostic::do_not_recommend (1.85)
+</a>
+- <a href="https://blog.rust-lang.org/2025/04/03/Rust-1.86.0/#trait-upcasting" rel="noopener noreferrer" target="_blank">Trait upcasting (1.86)
+</a>
+- <a href="https://blog.rust-lang.org/2025/05/15/Rust-1.87.0/#anonymous-pipes" rel="noopener noreferrer" target="_blank">Anonymous pipes (1.87)
+</a>
+- [Chainage de let (1.88)](https://blog.rust-lang.org/2025/06/26/Rust-1.88.0/#let-chains)
+- [Fonctiones "nues" (1.88)](https://blog.rust-lang.org/2025/06/26/Rust-1.88.0/#naked-functions)
 
 Columns:
 
@@ -394,32 +430,38 @@ Columns:
 
 ### Comment compilez-vous vos projets Rust ?
 
+Vous pouvez sélectionner plusieurs options.
+
 Type: select all that apply
 
 - J’utilise Cargo
 - J’utilise un autre système de compilation
-- Je combine Cargo et un autre système de construction
+- Je combine Cargo et un autre système de compilation
 - Si vous utilisez Cargo avec (ou utilisez simplement) d’autres systèmes de compilation, lesquels utilisez-vous ?
 
 ### Comment téléchargez-vous des bibliothèques pour construire des projets Rust ?
+
+Vous pouvez sélectionner plusieurs options.
 
 Type: select all that apply
 
 - J’utilise crates.io
 - J’utilise un registre personnalisé/local/d’entreprise
 - J’utilise un miroir de crates.io
+- J'utilise des dépôts git
 - Je ne sais pas
-- 
-- Other
+- Autre
 
-### 
+### Avez vous fait usage des codes d'erreur du compilateur ?
+
+Le compilateur Rust assigne des codes à certaines erreurs de compilation (par exemple E0308 ou E0509). Il existe [une liste des codes d'erreur Rust](https://doc.rust-lang.org/error_codes/error-index.html) qui regroupe ces erreurs et donne une description générale de celles-ci. Vous pouvez accéder à ces descriptions d'erreur en utilisant  `rustc --explain <error-code>`, dans [la documentation](https://doc.rust-lang.org/error_codes/error-index.html), ou encore le [Rust Playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2024).
 
 Type: select one
 
-- 
-- 
-- 
-- Other
+- J'ai lu la liste des erreurs de compilation et je les ai trouvées utiles
+- J'ai examiné la liste des erreurs de compilation mais ne les ai pas trouvées utiles
+- Je ne connaissais pas l'existence de cette liste
+- Autre
 
 ### À quelle fréquence participez-vous aux activités communautaires Rust suivantes ?
 
@@ -440,12 +482,12 @@ Rows:
 
 Columns:
 
-- Plus fréquemment qu’une fois par semaine
-- Hebdomadairement
+- Plus d’une fois par semaine
+- Toute les semaines
 - Tous les mois ou moins fréquemment
 - Jamais
 
-### Combien de fois vous êtes-vous senti expressément bienvenu dans la communauté Rust ?
+### Quelle a été vos expérience jusqu'à présent dans les communautés Rust suivantes ?
 
 Type: matrix
 
@@ -453,7 +495,7 @@ Rows:
 
 - Forums ou chats *officiels* de la communauté Rust (users.rust-lang.org, internals.rust-lang.org, le Discord officiel Rust ou le Zulip Rust).
 - Forums ou chats *non officiels* de la communauté Rust (par exemple, reddit.com/r/rust, Hacker News, le Discord *communautaire* de Rust, etc.)
-- Communauté axée sur un domaine spécifique du développement de logiciels Rust (par exemple, développement de jeux, audio, etc.)
+- ​​​​Communauté axée sur un domaine spécifique du développement de logiciels Rust (par exemple, développement de jeux, audio, etc.)
 - Assister à une conférence sur Rust
 - Assister à une rencontre Rust ou à un événement communautaire local
 - Participer aux discussions (tickets, pull requests, etc.) sur un dépôt au sein de l’organisation GitHub rust-lang.
@@ -506,6 +548,8 @@ Type: select one
 
 ### Parmi les affirmations suivantes, lesquelles correspondent à votre utilisation de Rust au travail ?
 
+Vous pouvez sélectionner plusieurs options.
+
 Type: select all that apply
 
 - L’utilisation de Rust nous a permis d’atteindre nos objectifs
@@ -515,6 +559,8 @@ Type: select all that apply
 - Nous utiliserons probablement Rust à nouveau à l’avenir
 
 ### Parmi les affirmations suivantes, lesquelles correspondent aux raisons pour lesquelles vous utilisez Rust au travail ?
+
+Vous pouvez sélectionner plusieurs options.
 
 Type: select all that apply
 
@@ -533,6 +579,8 @@ Type: free form
 
 ### Dans quel(s) domaine(s) technologique(s) Rust est-il utilisé dans votre entreprise ?
 
+Vous pouvez sélectionner plusieurs options.
+
 Type: select all that apply
 
 - Programmation audio
@@ -541,12 +589,12 @@ Type: select all that apply
 - Applications informatique dans le cloud
 - Infrastructure ou services informatique dans le cloud
 - Infographie
-- Jeux d’ordinateur
+- Jeux vidéos
 - Réseaux informatiques
 - Sécurité informatique
 - Science des données
 - Implémentation de la base de données
-- Partie graphique d’une application bureau
+- Application de bureau
 - Services, ordinateurs de bureau ou de téléphones portables
 - Systèmes distribués
 - Dispositifs embarqués (avec systèmes d’exploitation)
@@ -554,7 +602,7 @@ Type: select all that apply
 - Superordinateur
 - Internet des objets
 - Apprentissage automatique
-- Partie graphique d’une application mobile
+- Application mobile
 - Langages de programmation et outils associés (y compris les compilateurs, les IDE, les bibliothèques standard, etc.)
 - Robotique
 - Calcul scientifique et/ou numérique
@@ -565,6 +613,8 @@ Type: select all that apply
 - Autre
 
 ### Approximativement, combien de développeurs votre entreprise emploie-t-elle au total ?
+
+Remarque : Ne vous souciez pas d'être précis ici ! Suivez votre instinct.
 
 Type: select one
 
@@ -603,10 +653,12 @@ Columns:
 
 ### Parmi les affirmations suivantes, laquelle traduit votre opinion de Rust ?
 
+Vous pouvez sélectionner plusieurs options.
+
 Type: select all that apply
 
 - Rust présente un avantage réel par rapport aux autres langages de programmation
-- Le langage Rust est nettement plus compliqué à programmer que les autres langages de programmation
+- Le langage Rust est nettement plus compliqué à utiliser pour développer que les autres langages de programmation
 - Apprendre à utiliser Rust demande beaucoup plus d’efforts que pour d’autres langages de programmation
 - Le code Rust a tendance à contenir beaucoup moins de bogues qu’un code équivalent écrit dans un autre langage de programmation
 - Il est risqué d’utiliser Rust en production
@@ -614,6 +666,8 @@ Type: select all that apply
 - L’utilisation de Rust est amusante
 
 ### Quelles sont vos plus grandes inquiétudes pour l’avenir du Rust ?
+
+Vous pouvez sélectionner plusieurs options.
 
 Type: select all that apply
 
@@ -675,7 +729,7 @@ Type: select one
 
 Type: select one
 
-- < 1 an
+- < 1 an​​​​
 - < 3 ans
 - < 5 ans
 - < 10 ans
@@ -890,6 +944,8 @@ Type: free form
 
 ### Dans quelle mesure êtes-vous à l’aise pour communiquer sur des sujets techniques en anglais ?
 
+Vous pouvez sélectionner plusieurs options.
+
 Type: select all that apply
 
 - Je me sens à l’aise et capable de tenir une conversation technique orale en anglais
@@ -900,9 +956,10 @@ Type: select all that apply
 
 ### Quelle(s) langue(s) préférez-vous pour la communication technique ?
 
+IMPORTANT : Votre réponse doit refléter votre préférence et non ce que vous êtes capable de communiquer. Par exemple, si vous vous sentez à l'aise et capable de consommer des communications techniques en anglais et en coréen, mais que vous préférez toujours le coréen, vous devez répondre uniquement en coréen car c’est votre préférence.
+
 Type: select all that apply
 
-- 
 - Allemand
 - Anglais
 - Chinois
@@ -913,6 +970,7 @@ Type: select all that apply
 - Japonais
 - Portugais
 - Russe
+- Ukrainien
 - Autre
 
 ### Y a-t-il autre chose que vous aimeriez nous dire ?

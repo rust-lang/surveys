@@ -8,6 +8,8 @@ Type: select one
 
 ### Вы указали, что в данный момент вы не используете Rust. Почему?
 
+Вы можете выбрать несколько вариантов.
+
 Type: select all that apply
 
 - Отсутствие нужных возможностей в языке
@@ -20,11 +22,13 @@ Type: select all that apply
 - Я планирую использовать его в будущем, как только представится возможность
 - Другое
 
-### Расскажите подробнее:
+### Расскажите подробнее:​​​​
 
 Type: free form
 
 ### Почему вы не используете Rust?
+
+Вы можете выбрать несколько вариантов.
 
 Type: select all that apply
 
@@ -39,7 +43,7 @@ Type: select all that apply
 - Ещё не успел
 - Другое
 
-### Расскажите подробнее:
+### Расскажите подробнее:​​​​
 
 Type: free form
 
@@ -63,6 +67,8 @@ Type: select one
 
 ### Когда вы научились программировать на Rust?
 
+Примечание: в то время, как вы можете продолжать улучшать свои навыки владения Rust, для ответа на этот вопрос под «обучением программированию на Rust» понимается трата большей части вашего времени на Rust, используя учебные материалы или программируя в целях обучения (в отличие от достижения какой-либо другой цели). Если ваш процесс учёбы распространяется на несколько указанных промежутков времени, выберите тот, во время которого вы усвоили больше всего.
+
 Type: select one
 
 - Я всё ещё *активно* пытаюсь изучать Rust
@@ -73,6 +79,8 @@ Type: select one
 - В течение 2018 года или ранее
 
 ### Если вы потребляли учебные материалы по Rust, какие материалы вы использовали?
+
+Пожалуйста, выберите все, что подходит
 
 Type: select all that apply
 
@@ -97,6 +105,10 @@ Type: select one
 
 ### Какие операционные системы вы регулярно используете для разработки на Rust?
 
+Примечание: речь идет конкретно о том, какие системы вы лично используете для разработки, а не о системах под которые вы собираете проект.
+
+Вы можете выбрать несколько вариантов.
+
 Type: select all that apply
 
 - Linux
@@ -107,6 +119,10 @@ Type: select all that apply
 - Другое
 
 ### Для каких операционных систем или сред выполнения вы разрабатываете на Rust?
+
+Примечание: речь идет именно о том, на какую операционную систему, среду выполнения и на какие конкретные архитектуры (например, x86 или ARM) вы собираете проект, а не о том, что вы используете для разработки.
+
+Вы можете выбрать несколько вариантов.
 
 Type: select all that apply
 
@@ -125,6 +141,8 @@ Type: select all that apply
 
 ### Какой редактор или IDE вы регулярно используете для работы с кодом на Rust?
 
+Вы можете выбрать несколько вариантов.
+
 Type: select all that apply
 
 - VS Code
@@ -142,6 +160,8 @@ Type: select all that apply
 
 ### Какие версии Rust вы используете для локальной разработки?
 
+Вы можете выбрать несколько вариантов.
+
 Type: select all that apply
 
 - Текущая стабильная версия
@@ -156,6 +176,8 @@ Type: select all that apply
 - Другое
 
 ### Если используете nightly версию, почему?
+
+Вы можете выбрать несколько вариантов.
 
 Type: select all that apply
 
@@ -172,6 +194,8 @@ Type: select all that apply
 - Другое
 
 ### Какую самую старую версию Rust вы используете для разработки?
+
+(Исключая тестирование, чтобы убедиться, что ваш код работает на этой версии компилятора)
 
 Type: select one
 
@@ -289,6 +313,8 @@ Columns:
 
 ### Каково ваше мнение о том, как быстро развивается Rust?
 
+Мы хотим узнать, как вы оцениваете скорость развития языка Rust.
+
 Type: select one
 
 - Rust уже слишком сложен, ему не следует добавлять или стабилизировать более значимые функции
@@ -300,28 +326,40 @@ Type: select one
 
 ### Какие нереализованные (или находящиеся в nightly) возможности вы хотели бы видеть стабилизированными?
 
+Пожалуйста, укажите здесь возможности **компилятора Rust**, которые в настоящее время недоступны (доступны только в nightly версии компилятора Rust) или функцию, которая отсутствует и, по вашему мнению, была бы полезна для экосистемы Rust или для вашей работа. В этот список не включены другие инструменты компилятора, такие как Cargo, Rustup, Rustfmt и т.д.
+
 Type: matrix
 
 Rows:
 
-- [Specialization](https://github.com/rust-lang/rust/issues/31844)
-- [Generators/coroutines](https://github.com/rust-lang/rust/issues/43122)
-- [Async generators/coroutines](https://github.com/rust-lang/rust/pull/118420)
+- <a href="https://github.com/rust-lang/rust/issues/31844" rel="noopener noreferrer" target="_blank">Specialization
+</a>
+- <a href="https://github.com/rust-lang/rust/issues/43122" rel="noopener noreferrer" target="_blank">Generators/coroutines
+</a>
+- <a href="https://github.com/rust-lang/rust/pull/118420" rel="noopener noreferrer" target="_blank">Async generators/coroutines
+</a>
 - [Try blocks](https://github.com/rust-lang/rust/issues/31436)
 - [Never type](https://github.com/rust-lang/rust/issues/35121)
-- [Trait aliases](https://github.com/rust-lang/rfcs/blob/master/text/1733-trait-alias.md)
+- <a href="https://github.com/rust-lang/rfcs/blob/master/text/1733-trait-alias.md" rel="nofollow noopener" target="_blank">Trait aliases
+</a>
 - [Type Alias Impl Trait (TAIT)](https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html)
-- [Associated type defaults](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)
-- [Generic const expressions](https://github.com/rust-lang/rust/issues/76560)
-- [Const trait methods](https://github.com/rust-lang/rust/issues/67792)
+- <a href="https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html" rel="noopener noreferrer" target="_blank">Associated type defaults
+</a>
+- <a href="https://github.com/rust-lang/rust/issues/76560" rel="noopener noreferrer" target="_blank">Generic const expressions
+</a>
+- <a href="https://github.com/rust-lang/rust/issues/67792" rel="noopener noreferrer" target="_blank">Const trait methods
+</a>
 - [Declarative (macro_rules!) attributes (#[attr]) and derives (#[derive(Trait)])](https://github.com/rust-lang/rust/issues/143549)
 - Compile time reflection
 - Variadic generics
-- [Arbitrary self types](https://github.com/rust-lang/rfcs/blob/master/text/3519-arbitrary-self-types-v2.md)
+- <a href="https://github.com/rust-lang/rfcs/blob/master/text/3519-arbitrary-self-types-v2.md" rel="noopener noreferrer" target="_blank">Arbitrary self types
+</a>
 - [Enum variant types](https://github.com/rust-lang/lang-team/issues/122)
-- [Allocator trait and better OOM handling](https://github.com/rust-lang/rust/issues/32838)[](https://github.com/rust-lang/rust/issues/32838)
+- [Allocator trait and better OOM handling](https://github.com/rust-lang/rust/issues/32838)<a href="https://github.com/rust-lang/rust/issues/32838" rel="nofollow noopener" target="_blank">
+</a>
 - [Stable ABI](https://github.com/rust-lang/rust/issues/111423)
-- [Portable SIMD](https://github.com/rust-lang/portable-simd)
+- <a href="https://github.com/rust-lang/portable-simd" rel="noopener noreferrer" target="_blank">Portable SIMD
+</a>
 
 Columns:
 
@@ -335,6 +373,8 @@ Columns:
 Type: free form
 
 ### Какие из перечисленных ниже аспектов Rust создают нетривиальные проблемы для вашей продуктивности программирования?
+
+Оцените только те проблемы, которые, по вашему мнению, влияют на вашу работу. Если вы ничего не выберете в данной строке, мы будем считать, что вы не знаете или не заботитесь об этом аспекте.
 
 Type: matrix
 
@@ -372,6 +412,8 @@ Type: free form
 
 ### Какие возможности, стабилизированные за последние 12 месяцев, вы используете чаще всего?
 
+Текст в скобках показывает, в какой версии Rust была стабилизирована данная функция.
+
 Type: matrix
 
 Rows:
@@ -394,6 +436,8 @@ Columns:
 
 ### Как вы собираете свои проекты Rust?
 
+Вы можете выбрать несколько вариантов.
+
 Type: select all that apply
 
 - Я использую Cargo
@@ -402,6 +446,8 @@ Type: select all that apply
 - Если вы используете Cargo с другими системами сборки (или просто используете их), какие из них вы используете?
 
 ### Откуда вы загружаете зависимости (crates) для сборки проектов на Rust?
+
+Вы можете выбрать несколько вариантов.
 
 Type: select all that apply
 
@@ -508,6 +554,8 @@ Type: select one
 
 ### Какое из приведенных ниже утверждений соответствует вашему опыту использования Rust на работе?
 
+Можно выбрать несколько вариантов ответа.
+
 Type: select all that apply
 
 - Использование Rust позволило нам достичь своих целей
@@ -517,6 +565,8 @@ Type: select all that apply
 - Мы с большой вероятностью будем снова использовать Rust в будущем
 
 ### Какие из приведенных ниже утверждений соответствуют причинам, по которым вы используете Rust на работе?
+
+Можно выбрать несколько вариантов ответа.
 
 Type: select all that apply
 
@@ -534,6 +584,8 @@ Type: select all that apply
 Type: free form
 
 ### В какой технологической области (областях) Rust используется в вашей организации?
+
+Вы можете выбрать несколько вариантов.
 
 Type: select all that apply
 
@@ -567,6 +619,8 @@ Type: select all that apply
 - Другое
 
 ### Сколько примерно разработчиков в вашей компании?
+
+Примечание. Не беспокойтесь о точности! Положитесь на свою интуициюю.
 
 Type: select one
 
@@ -605,6 +659,8 @@ Columns:
 
 ### Какие из приведённых ниже утверждений соответствует вашему мнению о Rust?
 
+Можно выбрать несколько вариантов ответа.
+
 Type: select all that apply
 
 - Rust обладает реальными преимуществами над другими языками программирования
@@ -616,6 +672,8 @@ Type: select all that apply
 - Работать на Rust увлекательно
 
 ### Что вас больше всего беспокоит в будущем Rust?
+
+Вы можете выбрать несколько вариантов.
 
 Type: select all that apply
 
@@ -634,7 +692,9 @@ Type: select all that apply
 - Я не обеспокоен
 - Другое
 
-### Ваши ответы на следующие вопросы помогут нашим рецензентам провести когортный анализ и лучше понять сообщество Rust. Пожалуйста, ответьте в соответствии с уровнем вашего комфорта. Считаете ли вы себя членом группы, которая недостаточно представлена или маргинализирована в сфере технологий?
+### Ваши ответы на следующие вопросы помогут нашим рецензентам провести когортный анализ и лучше понять сообщество Rust. Пожалуйста, ответьте в соответствии с уровнем вашего комфорта.
+
+ Считаете ли вы себя членом группы, которая недостаточно представлена или маргинализирована в сфере технологий?
 
 Type: select one
 
@@ -892,6 +952,8 @@ Type: free form
 
 ### Каким способом вам удобнее общаться на технические темы на английском языке?
 
+Вы можете выбрать несколько вариантов.
+
 Type: select all that apply
 
 - Я уверенно могу общаться на технические темы на английском устно
@@ -901,6 +963,8 @@ Type: select all that apply
 - Я уверенно могу читать технические обучающие материалы (например, технические книги, блоги, прочее) на английском
 
 ### Какие языки вы предпочитаете для технического общения?
+
+ВАЖНО: Ваш ответ должен отражать ваши предпочтения, а не языки, которыми вы владеете. Например, если вам комфортно и способны вести диалог на технические темы на английском и корейском, но всегда предпочитаете корейский, вы должны указать *только* корейский, так как он является предпочтительным.
 
 Type: select all that apply
 
