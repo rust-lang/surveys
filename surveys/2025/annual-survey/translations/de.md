@@ -67,15 +67,15 @@ Type: select one
 
 ### Wann haben Sie Rust gelernt?
 
-Anmerkung: Während Sie womöglich Ihr Studium der Sprache fortsetzen, definieren wir im Rahmen dieser Frage "Rust zu lernen" als die Zeit, die Sie vor allem mit Lehrmaterialien oder Programmieren zu Lernzwecken verbracht haben (und nicht um ein anderes Ziel zu erreichen). Wenn Ihr Lernprozess mehrere der Zeiträume einschließt, bitte wählen Sie den, in dem Sie am meisten gelernt haben.
+Anmerkung: Auch wenn Sie womöglich Ihr Studium der Sprache fortsetzen, definieren wir im Rahmen dieser Frage "Rust zu lernen" als die Zeit, die Sie vor allem mit Lehrmaterialien oder Programmieren zu Lernzwecken verbracht haben (und nicht um ein anderes Ziel zu erreichen). Wenn Ihr Lernprozess mehrere der Zeiträume einschließt, bitte wählen Sie den, in dem Sie am meisten gelernt haben.
 
 Type: select one
 
 - Ich versuche immer noch *aktiv*, Rust zu lernen
-- Im Jahr 2023
+- Im Jahr 2025
+- Im Jahr 2023 oder 2024
 - Im Jahr 2021 oder 2022
 - Im Jahr 2019 oder 2020
-- Im Jahr 2017 oder 2018
 - Im Jahr 2016 oder früher
 
 ### Wenn Sie Lernmaterial über Rust konsumiert haben, welche Art von Material haben Sie konsumiert?
@@ -120,7 +120,7 @@ Type: select all that apply
 
 ### Für welche Betriebssysteme entwickeln Sie Software in Rust?​​​​
 
-Anmerkung: Hier geht es darum, für welches Betriebssystem oder welche Laufzeitumgebung Sie Ihren Code kompilieren, nicht welches System Sie zur Entwicklung verwenden oder auf welche Architektur (zum Beispiel x86 oder ARM) Sie zielen.
+Anmerkung: Hier geht es darum, für welche Betriebssysteme oder welche Laufzeitumgebungen Sie Ihren Code kompilieren, nicht welches System Sie zur Entwicklung verwenden oder welche Architektur (zum Beispiel x86 oder ARM) Sie unterstützen.
 
 Sie können mehrere Optionen auswählen.
 
@@ -326,9 +326,9 @@ Type: select one
 
 ### Welche nicht implementierten oder (nur nächtlichen) Funktionen möchten Sie stabilisieren?
 
-Bitte erwähnen Sie hier Funktionen für den *Rust-Compiler*, die sich derzeit hinter einem Feature-Gate befinden (nur verfügbar mit einer instabilen/nächtlichen Veröffentlichung des Rust-Compilers) oder eine Funktion, die fehlt und Ihrer Meinung nach für das Rust-Ökosystem von Vorteil wäre Ihre Arbeit. Diese Liste schließt andere Tools rund um den Compiler wie Cargo, Rustup, Rustfmt usw. aus.
+Bitte erwähnen Sie hier Funktionen für den *Rust-Compiler*, die sich derzeit hinter einem Feature-Gate befinden (nur verfügbar mit einer instabilen/nächtlichen Veröffentlichung des Rust-Compilers) oder Funktionen, die fehlen und Ihrer Meinung nach für das Rust-Ökosystem oder für Ihre Arbeit von Vorteil wären. Diese Liste schließt andere Tools rund um den Compiler wie Cargo, Rustup, Rustfmt usw. aus.
 
- Bitte wählen Sie nur die Aspekte aus, zu denen Sie eine Meinung haben
+Bitte wählen Sie nur die Aspekte aus, zu denen Sie eine Meinung haben
 
 Type: matrix
 
@@ -366,7 +366,7 @@ Type: free form
 
 ### Welche der folgenden Aspekte präsentieren nicht triviale Probleme bezüglich Ihrer Produktivität in der Sprache?
 
-Bitte wählen Sie nur Herausforderungen aus, die Ihre Arbeit beeinträchtigen. Wenn Sie zu einer Zeile keine Auswahl treffen, gehen wir davon aus, dass sie diesen Aspekt nicht kennen oder keine Meinung dazu haben.
+Bitte wählen Sie nur Herausforderungen aus, die Ihre Arbeit beeinträchtigen. Wenn Sie zu einer Zeile keine Auswahl treffen, gehen wir davon aus, dass Sie diesen Aspekt nicht kennen oder keine Meinung dazu haben.
 
 Type: matrix
 
@@ -375,7 +375,7 @@ Rows:
 - Logik für Tupel variabler Länge implementieren
 - Quelltext über mehrere crates verteilen (Orphan Rule)
 - Iteratoren manuell implementieren
-- Nicht genug in konstanten funktionen tun können
+- Nicht genug in konstanten Funktionen tun können
 - Dynamische Bibliotheken/Plugins implementieren
 - Mit anderen Sprachen zusammenarbeiten (z.B. C oder C++)
 - Strukturierte Nebenläufigkeit mit Async Code erreichen
@@ -386,8 +386,8 @@ Rows:
 - Langsame Kompilierung​​​​
 - Große Binärdateien der kompilierten Programme​​​​
 - Hoher Speicherplatzverbrauch (der Dateien im target-Verzeichnis)​​​​
-- Kompilierfehler (z.B. intener Kompilerfehler, auch genannt ICE, oder Fehlkompilationen)​​​​
-- Unklare oder undurchsichtige Fehlermeldungen des Kompilers​​​​
+- Kompilierfehler (z.B. interner Kompilerfehler, auch ICE genannt, oder Fehlkompilationen)
+- Unklare oder undurchsichtige Fehlermeldungen des Kompilers
 - Unterdurchschnittliche IDE-Unterstützung (z.B. fehlende Fehlermeldungen oder langsame Analyse)​​​​
 - Unterdurchschnittliche Debugging-Erfahrung (z.B. fehlende Visualisierungen oder async Stacktraces)​​​​
 - Fehlende Dokumentation der Rust Sprache oder Standardbibliothek​​​​
@@ -412,11 +412,11 @@ Rows:
 
 - Strikte provenance API (1.84)
 - Async closures (1.85)
-- diagnostic::do_not_recomment (1.85)
+- diagnostic::do_not_recommend (1.85)
 - Trait upcasting (1.86)
 - Anonyme pipes (1.87)
 - Let chains (1.88)
-- Nackte Funktionen (1.88)
+- Naked Funktionen (1.88)
 
 Columns:
 
@@ -452,12 +452,12 @@ Type: select all that apply
 
 ### Nutzen Sie die Fehlercodes des Compilers?
 
-Der Rust compiler weist bestimmten Kompilierfehlern Fehlercodes zu (z.B. E0308 oder E0509). Es gibt einen [Rust Fehlercode Index](https://doc.rust-lang.org/error_codes/error-index.html), der diese Fehler auflistet und eine grundlegende Beschreibung anbietet. Man kann diese Beschreibungen auch mittels `rustc --explain <error-code>`, in der Dokumentation oder durch den [Rust Playground](https://play.rust-lang.org) erreichen.
+Der Rust Compiler weist bestimmten Kompilierfehlern Fehlercodes zu (z.B. E0308 oder E0509). Es gibt einen [Rust Fehlercode Index](https://doc.rust-lang.org/error_codes/error-index.html), der diese Fehler auflistet und eine grundlegende Beschreibung anbietet. Man kann diese Beschreibungen auch mittels `rustc --explain <error-code>`, in der Dokumentation oder durch den [Rust Playground](https://play.rust-lang.org) erreichen.
 
 Type: select one
 
-- Ich habe die Fehlercode-Beschreibunugen gelesen und finde sie nützlich
-- Ich habe die Fehlercode-Beschreibunugen gelesen, fand sie aber nicht nützlich
+- Ich habe die Fehlercode-Beschreibungen gelesen und finde sie nützlich
+- Ich habe die Fehlercode-Beschreibungen gelesen, fand sie aber nicht nützlich
 - Ich wusste nicht, dass es einen Fehlercode Index gibt
 - Anderes
 
@@ -956,7 +956,7 @@ Type: select all that apply
 
 ### Welche Sprache(n) bevorzugten Sie, um technische Inhalte zu konsumieren (z.B. Blogs, Dokumentation, usw.)
 
-WICHTIG: Ihre Antwort sollte Ihre Präferenz widerspiegeln und nicht das, was Sie sprachlich beherrschen. Wenn Sie sich beispielsweise ohne Schwierigkeiten technische Kommunikation sowohl auf Englisch als auch auf Koreanisch lesen können, Sie aber immer Koreanisch bevorzugen, sollten Sie nur Koreanisch als Ihre Präferenz angeben.
+WICHTIG: Ihre Antwort sollte Ihre Präferenz widerspiegeln und nicht das, was Sie sprachlich beherrschen. Wenn Sie beispielsweise ohne Schwierigkeiten technische Kommunikation sowohl auf Englisch als auch auf Koreanisch lesen können, Sie aber immer Koreanisch bevorzugen, sollten Sie nur Koreanisch als Ihre Präferenz angeben.
 
 Type: select all that apply
 
