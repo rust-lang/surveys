@@ -3,6 +3,9 @@ name = "verifier"
 version = "0.1.0"
 edition = "2018"
 
+[[bin]]
+name = "rust-survey-verifier"
+
 [dependencies]
 anyhow = "1"
 clap = { version = "4.5", features = ["derive"] }
