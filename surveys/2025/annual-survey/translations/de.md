@@ -1,4 +1,4 @@
-### Nutzen Sie Rust?​​​​
+### Nutzen Sie Rust?
 
 Type: select one
 
@@ -60,8 +60,8 @@ Type: select one
 
 Type: select one
 
-- ​​​​Ich kann keinen Rust-Code schreiben
-- ​​​​Ich kann einfache Programme in Rust schreiben
+- Ich kann keinen Rust-Code schreiben
+- Ich kann einfache Programme in Rust schreiben
 - Ich kann produktionsreifen Code schreiben, aber es fällt mir schwer
 - Ich bin in Rust produktiv
 
@@ -118,7 +118,7 @@ Type: select all that apply
 - Mac OS
 - Andere
 
-### Für welche Betriebssysteme entwickeln Sie Software in Rust?​​​​
+### Für welche Betriebssysteme entwickeln Sie Software in Rust?
 
 Anmerkung: Hier geht es darum, für welche Betriebssysteme oder welche Laufzeitumgebungen Sie Ihren Code kompilieren, nicht welches System Sie zur Entwicklung verwenden oder welche Architektur (zum Beispiel x86 oder ARM) Sie unterstützen.
 
@@ -351,7 +351,7 @@ Rows:
 - Enum Varianten Typen
 - Allokator trait, bessere OOM-Verwaltung
 - Stabile ABI
-- ​​​​Portables SIMD
+- Portables SIMD
 
 Columns:
 
@@ -381,20 +381,20 @@ Rows:
 - Strukturierte Nebenläufigkeit mit Async Code erreichen
 - Async-Laufzeit-agnostischen Code schreiben
 - Korrekten unsafe Code schreiben
-- ​​​​Der Borrow Checker lehnt meinen validen Code ab
-- ​​​​Schlechte Performance zur Programmlaufzeit
-- Langsame Kompilierung​​​​
-- Große Binärdateien der kompilierten Programme​​​​
-- Hoher Speicherplatzverbrauch (der Dateien im target-Verzeichnis)​​​​
+- Der Borrow Checker lehnt meinen validen Code ab
+- Schlechte Performance zur Programmlaufzeit
+- Langsame Kompilierung
+- Große Binärdateien der kompilierten Programme
+- Hoher Speicherplatzverbrauch (der Dateien im target-Verzeichnis)
 - Kompilierfehler (z.B. interner Kompilerfehler, auch ICE genannt, oder Fehlkompilationen)
 - Unklare oder undurchsichtige Fehlermeldungen des Kompilers
-- Unterdurchschnittliche IDE-Unterstützung (z.B. fehlende Fehlermeldungen oder langsame Analyse)​​​​
-- Unterdurchschnittliche Debugging-Erfahrung (z.B. fehlende Visualisierungen oder async Stacktraces)​​​​
-- Fehlende Dokumentation der Rust Sprache oder Standardbibliothek​​​​
+- Unterdurchschnittliche IDE-Unterstützung (z.B. fehlende Fehlermeldungen oder langsame Analyse)
+- Unterdurchschnittliche Debugging-Erfahrung (z.B. fehlende Visualisierungen oder async Stacktraces)
+- Fehlende Dokumentation der Rust Sprache oder Standardbibliothek
 
 Columns:
 
-- Ist ein großes Problem für mich​​​​
+- Ist ein großes Problem für mich
 - Könnte verbessert werden, hindert mich aber nicht
 - Kein Problem für mich
 
@@ -504,7 +504,7 @@ Columns:
 - Ich fühle mich willkommen
 - Ich fühle mich weder besonders willkommen noch unwillkommen
 - Ich fühle mich unerwünscht
-- Ich habe noch nie an dieser Aktivität teilgenommen​​​​
+- Ich habe noch nie an dieser Aktivität teilgenommen
 
 ### Falls Sie angegeben haben, dass Sie sich in der Rust-Community nicht willkommen gefühlt haben, gibt es Details zu Ihren Erfahrungen, die Sie uns mitteilen möchten?
 
