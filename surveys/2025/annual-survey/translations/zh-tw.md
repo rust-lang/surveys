@@ -134,7 +134,6 @@ Type: select all that apply
 - Android
 - 嵌入式平台（有作業系統）
 - 嵌入式平台（裸機）
-
 - WebAssembly（用於瀏覽器）
 - WebAssembly（用於其他主機）
 - 與平台完全無關（比如：不會與作業系統互動的函式庫）
@@ -335,7 +334,7 @@ Rows:
 
 - <a href="https://github.com/rust-lang/rust/issues/31844" rel="noopener noreferrer" target="_blank">特化 (Specialization)
 </a>
-- [生成器/共常式 (Generators/coroutines)](https://github.com/rust-lang/rust/issues/43122)​​​​
+- [生成器/共常式 (Generators/coroutines)](https://github.com/rust-lang/rust/issues/43122)    
 - [非同步生成器/共常式 (Async generators/coroutines)](https://github.com/rust-lang/rust/pull/118420)
 - [try 區塊 (Try blocks)](https://github.com/rust-lang/rust/issues/31436)
 - [永不型別 (Never type)](https://github.com/rust-lang/rust/issues/35121)
@@ -387,7 +386,7 @@ Rows:
 - 執行速度緩慢
 - 編譯速度緩慢
 - 編譯產物占用儲存空間大
-- 磁碟空間使用量大（例如 target 資料夾的大小)​​​​
+- 磁碟空間使用量大（例如 target 資料夾的大小)    
 - 遇到編譯器錯誤（例如 ICE，又稱編譯器內部錯誤或錯誤編譯）
 - 遇到不清楚的編譯器錯誤訊息
 - IDE 支援不足（例如部分錯誤無法顯示或分析速度緩慢）
@@ -495,7 +494,7 @@ Rows:
 
 - Rust **官方**社群論壇或聊天 (users.rust-lang.org、internals.rust-lang.org、Rust 官方 Discord 或 Rust Zulip)
 - Rust **非官方**社群論壇或聊天 (reddit.com/r/rust、Hacker News、Rust 社群 Discord 等)
-- ​​​​社群專注於 Rust 軟體開發的特定領域（例如遊戲開發、音訊等）
+-     社群專注於 Rust 軟體開發的特定領域（例如遊戲開發、音訊等）
 - 參加 Rust 研討會
 - 參加 Rust 聚會或當地社群活動
 - 參與 rust-lang GitHub **組織內**任何專案的討論（issue 或是 pull requests 等）

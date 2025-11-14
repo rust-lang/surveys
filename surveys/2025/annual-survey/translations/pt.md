@@ -13,7 +13,7 @@ Você pode selecionar várias opções.
 Type: select all that apply
 
 - Faltam recursos de linguagem
-- Faltam bibliotecas​​​​
+- Faltam bibliotecas    
 - Faltam ferramentas
 - Muito difícil de aprender
 - A comunidade foi rude, hostil ou desanimadora
@@ -34,7 +34,7 @@ Type: select all that apply
 
 - Rust não me ajuda a atingir meus objetivos
 - Faltam recursos de linguagem
-- Faltam bibliotecas​​​​
+- Faltam bibliotecas    
 - Faltam ferramentas
 - Muito difícil de aprender ou aprender levará muito tempo
 - A comunidade foi rude, hostil ou desanimadora
@@ -84,7 +84,7 @@ Por favor, marque todas as opções que se aplicam
 
 Type: select all that apply
 
-- Livros ("The Rust Programming Language", "Rust for Rustaceans", etc.)​​​​
+- Livros ("The Rust Programming Language", "Rust for Rustaceans", etc.)    
 - Exercícios online (Rustlings, 100 Exercises To Learn Rust, etc.)
 - Vídeos ou transmissões ao vivo
 - Posts de blog
@@ -452,7 +452,7 @@ Type: select all that apply
 
 - crates.io
 - Registro personalizado/local/da empresa
-- Mirror​​​​ do crates.io
+- Mirror     do crates.io
 - Repositórios git
 - Eu não sei
 - Outro
@@ -487,7 +487,7 @@ Rows:
 
 Columns:
 
-- Mais de uma vez por semana​​​​
+- Mais de uma vez por semana    
 - Semanalmente
 - Uma vez por mês ou menos
 - Nunca

@@ -19,7 +19,7 @@ Type: select all that apply
 - La communauté s’est montrée impolie, peu accueillante ou rébarbative
 - Je préfère utiliser un autre langage
 - Je ne peux plus utiliser Rust en raison de facteurs indépendants de ma volonté
-- Je prévois de l’utiliser dans le futur, lorsqu’une opportunité se présentera​​​​
+- Je prévois de l’utiliser dans le futur, lorsqu’une opportunité se présentera    
 - Autre
 
 ### Veuillez nous en dire plus :
@@ -87,7 +87,7 @@ Type: select all that apply
 - Livres (« Le langage de programmation Rust », « Rust for Rustaceans », etc.)
 - Exercices en ligne (Rustlings, 100 Exercises To Learn Rust, etc.)
 - Vidéos ou diffusions en direct
-- Blogs​​​​
+- Blogs    
 - Documentation
 - Code source de crates Rust
 - Cours en ligne, webinaires
@@ -495,7 +495,7 @@ Rows:
 
 - Forums ou chats *officiels* de la communauté Rust (users.rust-lang.org, internals.rust-lang.org, le Discord officiel Rust ou le Zulip Rust).
 - Forums ou chats *non officiels* de la communauté Rust (par exemple, reddit.com/r/rust, Hacker News, le Discord *communautaire* de Rust, etc.)
-- ​​​​Communauté axée sur un domaine spécifique du développement de logiciels Rust (par exemple, développement de jeux, audio, etc.)
+-     Communauté axée sur un domaine spécifique du développement de logiciels Rust (par exemple, développement de jeux, audio, etc.)
 - Assister à une conférence sur Rust
 - Assister à une rencontre Rust ou à un événement communautaire local
 - Participer aux discussions (tickets, pull requests, etc.) sur un dépôt au sein de l’organisation GitHub rust-lang.
@@ -729,7 +729,7 @@ Type: select one
 
 Type: select one
 
-- < 1 an​​​​
+- < 1 an    
 - < 3 ans
 - < 5 ans
 - < 10 ans
