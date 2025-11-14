@@ -332,7 +332,7 @@ Type: matrix
 
 Rows:
 
-- [Спеціалізація](https://github.com/rust-lang/rust/issues/31844)​​​​
+- [Спеціалізація](https://github.com/rust-lang/rust/issues/31844)    
 - [Генератори/співпрограми](https://github.com/rust-lang/rust/issues/43122)
 - [Асинхронні генератори/співпрограми](https://github.com/rust-lang/rust/pull/118420)
 - [Try-блоки](https://github.com/rust-lang/rust/issues/31436)

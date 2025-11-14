@@ -1,4 +1,4 @@
-### Nutzen Sie Rust?​​​​
+### Nutzen Sie Rust?
 
 Type: select one
 
@@ -60,8 +60,8 @@ Type: select one
 
 Type: select one
 
-- ​​​​Ich kann keinen Rust-Code schreiben
-- ​​​​Ich kann einfache Programme in Rust schreiben
+- Ich kann keinen Rust-Code schreiben
+- Ich kann einfache Programme in Rust schreiben
 - Ich kann produktionsreifen Code schreiben, aber es fällt mir schwer
 - Ich bin in Rust produktiv
 
@@ -118,7 +118,7 @@ Type: select all that apply
 - Mac OS
 - Andere
 
-### Für welche Betriebssysteme entwickeln Sie Software in Rust?​​​​
+### Für welche Betriebssysteme entwickeln Sie Software in Rust?    
 
 Anmerkung: Hier geht es darum, für welche Betriebssysteme oder welche Laufzeitumgebungen Sie Ihren Code kompilieren, nicht welches System Sie zur Entwicklung verwenden oder welche Architektur (zum Beispiel x86 oder ARM) Sie unterstützen.
 
@@ -326,7 +326,7 @@ Type: select one
 
 ### Welche nicht implementierten oder (nur Nightly) Funktionen wünschen Sie sich?
 
-Bitte erwähnen Sie hier Funktionen für den *Rust-Compiler oder die Standardbibliothek*, die sich derzeit hinter einem Feature-Gate befinden (nur verfügbar mit einer instabilen/Nightly Veröffentlichung des Rust-Compilers) oder Funktionen, die fehlen und Ihrer Meinung nach für das Rust-Ökosystem oder für Ihre Arbeit von Vorteil wären. Diese Liste schließt andere Tools rund um den Compiler wie Cargo, Rustup, Rustfmt usw. aus.
+Bitte erwähnen Sie hier Funktionen für den *Rust-Compiler oder die Standardbibliothek*, die sich derzeit hinter einem Feature-Gate befinden (nur verfügbar mit einer instabilen/nightly Veröffentlichung des Rust-Compilers) oder Funktionen, die fehlen und Ihrer Meinung nach für das Rust-Ökosystem oder für Ihre Arbeit von Vorteil wären. Diese Liste schließt andere Tools rund um den Compiler wie Cargo, Rustup, Rustfmt usw. aus.
 
 Bitte wählen Sie nur die Aspekte aus, zu denen Sie eine Meinung haben
 
@@ -351,7 +351,7 @@ Rows:
 - Enum Varianten Typen
 - Allokator Trait, bessere OOM-Verwaltung
 - Stabile ABI
-- ​​​​Portables SIMD
+-     Portables SIMD
 
 Columns:
 
@@ -373,7 +373,7 @@ Type: matrix
 Rows:
 
 - Logik für Tupel variabler Länge implementieren
-- Quelltext über mehrere crates verteilen (z.B. Orphan Rule)
+- Quelltext über mehrere crates verteilen (z. B. Orphan Rule)
 - Iteratoren manuell implementieren
 - Nicht genug in konstanten Funktionen tun können
 - Dynamische Bibliotheken Plugins implementieren
@@ -381,20 +381,20 @@ Rows:
 - Strukturierte Nebenläufigkeit mit Async Code erreichen
 - Async-Laufzeit-agnostischen Code schreiben
 - Korrekten unsafe Code schreiben
-- ​​​​Der Borrow Checker lehnt meinen validen Code ab
+- Der Borrow Checker lehnt meinen validen Code ab
 - Langsame Performance zur Programmlaufzeit
-- Langsame Kompilierung​​​​
-- Große Binärdateien der kompilierten Programme​​​​
-- Hoher Speicherplatzverbrauch (z.B. der Dateien im target-Verzeichnis)​​​​
+- Langsame Kompilierung
+- Große Binärdateien der kompilierten Programme
+- Hoher Speicherplatzverbrauch (z. B. der Dateien im target-Verzeichnis)
 - Kompilierfehler (z.B. interner Kompilierfehler, auch ICE genannt, oder Fehlkompilationen)
 - Unklare oder undurchsichtige Fehlermeldungen des Compilers
-- Unterdurchschnittliche IDE-Unterstützung (z.B. fehlende Fehlermeldungen oder langsame Analyse)​​​​
-- Unterdurchschnittliche Debugging-Erfahrung (z.B. fehlende Visualisierungen oder async Stacktraces)​​​​
-- Fehlende Dokumentation der Rust Sprache oder Standardbibliothek​​​​
+- Unterdurchschnittliche IDE-Unterstützung (z.B. fehlende Fehlermeldungen oder langsame Analyse)    
+- Unterdurchschnittliche Debugging-Erfahrung (z.B. fehlende Visualisierungen oder async Stacktraces)    
+- Fehlende Dokumentation der Rust Sprache oder Standardbibliothek    
 
 Columns:
 
-- Ist ein großes Problem für mich​​​​
+- Ist ein großes Problem für mich    
 - Könnte verbessert werden, hindert mich aber nicht
 - Kein Problem für mich
 
@@ -472,8 +472,8 @@ Rows:
 - Offizielle Kommunikationskanälen lesen (z.B. This Week in Rust, den offiziellen Rust Blog, den Bluesky Account von Rust, …)
 - An Unterhaltungen auf Social Media über Rust teilnehmen (z.B. auf Hacker News, r/rust, Twitter, LinkedIn, …)
 - Ein Rust Meetup oder eine Konferenz (virtuell oder vor Ort) besuchen
-- Einen RFC schreiben, kommentieren, zu der Diskussion beitragen, oder Änderungen an einem RFC vorschlagen
-- Das Rust-Projekt in einem offiziellen Chat oder Forum besprechen (z.B. internals.rust-lang.org, Rust Zulip, …)
+- Einen RFC schreiben, kommentieren, zu der Diskussion beitragen, oder Änderungen an dem RFC vorschlagen
+- Das Rust-Projekt in einem offiziellen Chat oder Forum besprechen (z. B. internals.rust-lang.org, Rust Zulip, …)
 - Ein Issue in einem beliebigen Repository in der rust-lang GitHub-Organisation eröffnen
 - Code-Änderungen (einschließlich Tests) zu einem beliebigen Open-Source Rust Projekt beitragen
 - Nicht-Code-Änderungen (Dokumentation, Kommentare usw.) zu einem beliebigen Open-Source Rust Projekt beitragen
@@ -504,7 +504,7 @@ Columns:
 - Ich fühle mich willkommen
 - Ich fühle mich weder besonders willkommen noch unwillkommen
 - Ich fühle mich unerwünscht
-- Ich habe noch nie an dieser Aktivität teilgenommen​​​​
+- Ich habe noch nie an dieser Aktivität teilgenommen    
 
 ### Falls Sie angegeben haben, dass Sie sich in der Rust-Community nicht willkommen gefühlt haben, gibt es Details zu Ihren Erfahrungen, die Sie uns mitteilen möchten?
 
@@ -954,7 +954,7 @@ Type: select all that apply
 - Ich fühle mich wohl und in der Lage, einen technischen Vortrag (z.B. bei einer Konferenz oder einem Treffen) auf Englisch zu hören
 - Ich fühle mich wohl und in der Lage, schriftliches technisches Lehrmaterial (z.B. Fachbücher, Blog-Posts usw.) auf Englisch zu lesen
 
-### Welche Sprache(n) bevorzugen Sie, um technische Inhalte zu konsumieren (z.B. Blogs, Dokumentation, usw.)?
+### Welche Sprache(n) bevorzugen Sie, um technische Inhalte zu konsumieren (z.B. Blogs, Dokumentation, usw.)
 
 WICHTIG: Ihre Antwort sollte Ihre Präferenz widerspiegeln und nicht das, was Sie sprachlich beherrschen. Wenn Sie beispielsweise ohne Schwierigkeiten technische Kommunikation sowohl auf Englisch als auch auf Koreanisch lesen können, Sie aber immer Koreanisch bevorzugen, sollten Sie nur Koreanisch als Ihre Präferenz angeben.
 
