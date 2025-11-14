@@ -390,6 +390,7 @@ pub fn normalize_surveyhero_text(text: &str) -> String {
         LazyLock::new(|| Regex::new(r"<strong>(?<text>.*?)</strong>").unwrap());
 
     let text = text
+        .replace("&quot;", "\"")
         .replace("&amp;", "&")
         .replace("&nbsp;", " ")
         .replace("&lt;", "<")
@@ -398,6 +399,7 @@ pub fn normalize_surveyhero_text(text: &str) -> String {
         // Unwanted newlines should be fixed on SurveyHero
         .replace("<br>", "\n")
         .replace("\u{202f}", " ")
+        .replace("\u{200b}", " ")
         .replace("&#39;", "’")
         .replace(" ", " ");
 
