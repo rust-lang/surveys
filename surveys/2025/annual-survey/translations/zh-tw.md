@@ -301,7 +301,7 @@ Type: matrix
 
 Rows:
 
-- 我可以升級** stable **編譯器版本，而不必擔心我的程式碼無法編譯
+- 我可以升級 **stable** 編譯器版本，而不必擔心我的程式碼無法編譯
 - 我可以升級 **nightly** 編譯器版本，而不必擔心我的程式碼無法編譯
 - 升級到新的 **stable** 編譯器版本不需要任何更改，或對我的程式碼進行極小且簡單的更改
 - 升級到新的 **nightly** 編譯器版本不需要任何更改，或對我的程式碼進行極小且簡單的更改
@@ -492,13 +492,13 @@ Type: matrix
 
 Rows:
 
-- Rust **官方**社群論壇或聊天 (users.rust-lang.org、internals.rust-lang.org、Rust 官方 Discord 或 Rust Zulip)
-- Rust **非官方**社群論壇或聊天 (reddit.com/r/rust、Hacker News、Rust 社群 Discord 等)
+- Rust **官方** 社群論壇或聊天 (users.rust-lang.org、internals.rust-lang.org、Rust 官方 Discord 或 Rust Zulip)
+- Rust **非官方** 社群論壇或聊天 (reddit.com/r/rust、Hacker News、Rust 社群 Discord 等)
 - 社群專注於 Rust 軟體開發的特定領域（例如遊戲開發、音訊等）
 - 參加 Rust 研討會
 - 參加 Rust 聚會或當地社群活動
-- 參與 rust-lang GitHub **組織內**任何專案的討論（issue 或是 pull requests 等）
-- 參加 rust-lang GitHub **組織外**任何專案的討論（issue 或是 pull requests 等）
+- 參與 rust-lang GitHub **組織內** 任何專案的討論（issue 或是 pull requests 等）
+- 參加 rust-lang GitHub **組織外** 任何專案的討論（issue 或是 pull requests 等）
 
 Columns:
 
