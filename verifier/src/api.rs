@@ -399,9 +399,8 @@ pub fn normalize_surveyhero_text(text: &str) -> String {
         // Unwanted newlines should be fixed on SurveyHero
         .replace("<br>", "\n")
         .replace("\u{202f}", " ")
-        .replace("\u{200b}", " ")
-        .replace("&#39;", "’")
-        .replace(" ", " ");
+        .replace("\u{200b}", "")
+        .replace("&#39;", "’");
 
     // Replace <a href="$link" ...>$text</a> with [$text]($link)
     let text = LINK_REGEX.replace_all(&text, "[$text]($link)");
