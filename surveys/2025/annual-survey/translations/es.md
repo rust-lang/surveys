@@ -14,7 +14,7 @@ Type: select all that apply
 
 - Falta funcionalidad en el lenguaje
 - Faltan librerías
-- Faltan herramientas    
+- Faltan herramientas
 - Demasiado difícil de aprender
 - La comunidad fue grosera, poco acogedora o desagradable
 - Prefiero utilizar otro lenguaje
@@ -35,7 +35,7 @@ Type: select all that apply
 - Rust no me ayuda a lograr mis objetivos
 - Falta de funcionalidad en el lenguaje
 - Faltan librerías
-- Faltan herramientas    
+- Faltan herramientas
 - Demasiado difícil de aprender o el aprendizaje me va a llevar demasiado tiempo
 - La comunidad fue grosera, poco acogedora o desagradable
 - Prefiero utilizar otro lenguaje
@@ -303,7 +303,7 @@ Rows:
 
 - Puedo actualizar la versión del compilador *estable* sin temor a que mi código no se pueda compilar
 - Puedo actualizar la versión del compilador *nightly* sin temor a que mi código no se pueda compilar
-- Actualizar a una nueva versión *estable* del compilador no requiere cambios o cambios extremadamente pequeños y fáciles en mi código    
+- Actualizar a una nueva versión *estable* del compilador no requiere cambios o cambios extremadamente pequeños y fáciles en mi código
 - Actualizar a una nueva versión del compilador *nightly* no requiere cambios o cambios extremadamente pequeños y fáciles en mi código
 
 Columns:
@@ -502,7 +502,7 @@ Columns:
 - Me siento bienvenido/a
 - No me siento ni bienvenido/a ni no deseado/a
 - Me siento rechazado/a
--     Nunca he participado en esta actividad
+- Nunca he participado en esta actividad
 
 ### Si ha indicado que no se sintió bienvenido en la comunidad Rust, ¿hay algún detalle de su experiencia que le gustaría compartir con nosotros?
 
@@ -588,7 +588,7 @@ Type: select all that apply
 - Juegos de computadora
 - Redes de computadoras
 - Seguridad de computadoras
-- Ciencia de datos    
+- Ciencia de datos
 - Implementación de base de datos
 - Interfaz de usuario de aplicaciones de escritorio
 - Librerías o servicios para aplicaciones de escritorio o móviles
@@ -600,7 +600,7 @@ Type: select all that apply
 - Machine learning
 - Aplicaciones para teléfonos móviles
 - Lenguajes de programación y herramientas relacionadas (incluyendo compiladores, IDEs, librerías standard, etc.)
--  Robótica 
+- Robótica
 - Cómputo científico o numérico
 - Aplicaciones del lado del servidor o "backend"
 - Simulación
@@ -674,7 +674,7 @@ Type: select all that apply
 - Rust no evoluciona suficientemente rápido
 - Inestabilidad del lenguaje
 - Que sea reemplazado por una alternativa
-- Que se vuelva demasiado complejo    
+- Que se vuelva demasiado complejo
 - Las herramientas y la documentación no son suficientemente accesibles (por ejemplo debido al lenguaje o la incompatibilidad con lectores de pantalla)
 - La Fundación Rust no apoya adecuadamente el proyecto Rust (por ejemplo, en aspectos financieros, de infraestructura y legales)
 - La gestión del proyecto no evoluciona para cubrir el tamaño y las necesidades de la comunidad
