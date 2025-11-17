@@ -301,7 +301,7 @@ Type: matrix
 
 Rows:
 
-- 我可以升級** stable **編譯器版本，而不必擔心我的程式碼無法編譯
+- 我可以升級 **stable** 編譯器版本，而不必擔心我的程式碼無法編譯
 - 我可以升級 **nightly** 編譯器版本，而不必擔心我的程式碼無法編譯
 - 升級到新的 **stable** 編譯器版本不需要任何更改，或對我的程式碼進行極小且簡單的更改
 - 升級到新的 **nightly** 編譯器版本不需要任何更改，或對我的程式碼進行極小且簡單的更改
@@ -332,20 +332,17 @@ Type: matrix
 
 Rows:
 
-- <a href="https://github.com/rust-lang/rust/issues/31844" rel="noopener noreferrer" target="_blank">特化 (Specialization)
-</a>
+- [特化 (Specialization)](https://github.com/rust-lang/rust/issues/31844)
 - [生成器/共常式 (Generators/coroutines)](https://github.com/rust-lang/rust/issues/43122)
 - [非同步生成器/共常式 (Async generators/coroutines)](https://github.com/rust-lang/rust/pull/118420)
 - [try 區塊 (Try blocks)](https://github.com/rust-lang/rust/issues/31436)
 - [永不型別 (Never type)](https://github.com/rust-lang/rust/issues/35121)
-- [特徵別名 (Trait aliases)](http://Trait%20aliases)
-- <a href="https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html" rel="noopener noreferrer" target="_blank">型別別名中的 impl Trait (Type Alias Impl Trait (TAIT) )
-</a>
-- [](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)[預設](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)[關聯](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)[](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)型別 (Associated type defaults)
+- [特徵別名 (Trait aliases)](https://github.com/rust-lang/rfcs/blob/master/text/1733-trait-alias.md)
+- [型別別名中的 impl Trait (Type Alias Impl Trait (TAIT))](https://rust-lang.github.io/rfcs/2515-type_alias_impl_trait.html)
+- [預設關聯型別 (Associated type defaults)](https://rust-lang.github.io/rfcs/2532-associated-type-defaults.html)
 - [泛型編譯時期求值表達式 (Generic const expressions)](https://github.com/rust-lang/rust/issues/76560)
 - [編譯時期的特徵方法 (Const trait methods)](https://github.com/rust-lang/rust/issues/67792)
-- <a href="https://github.com/rust-lang/rust/issues/143549" rel="nofollow noopener" target="_blank">宣告式巨集、屬性和推導  (Declarative (macro_rules!) attributes (#[attr]) and derives (#[derive(Trait)]))
-</a>
+- [宣告式巨集、屬性和推導](https://github.com/rust-lang/rust/issues/143549) (Declarative (macro_rules!) attributes (#[attr]) and derives (#[derive(Trait)]))
 - 編譯時期反射機制 (Compile time reflection)
 - 可變泛型 (Variadic generics)
 - [任意方法接受型別 (Arbitrary Self Types)](https://github.com/rust-lang/rfcs/blob/master/text/3519-arbitrary-self-types-v2.md)
@@ -492,13 +489,13 @@ Type: matrix
 
 Rows:
 
-- Rust **官方**社群論壇或聊天 (users.rust-lang.org、internals.rust-lang.org、Rust 官方 Discord 或 Rust Zulip)
-- Rust **非官方**社群論壇或聊天 (reddit.com/r/rust、Hacker News、Rust 社群 Discord 等)
+- Rust **官方** 社群論壇或聊天 (users.rust-lang.org、internals.rust-lang.org、Rust 官方 Discord 或 Rust Zulip)
+- Rust **非官方** 社群論壇或聊天 (reddit.com/r/rust、Hacker News、Rust 社群 Discord 等)
 - 社群專注於 Rust 軟體開發的特定領域（例如遊戲開發、音訊等）
 - 參加 Rust 研討會
 - 參加 Rust 聚會或當地社群活動
-- 參與 rust-lang GitHub **組織內**任何專案的討論（issue 或是 pull requests 等）
-- 參加 rust-lang GitHub **組織外**任何專案的討論（issue 或是 pull requests 等）
+- 參與 rust-lang GitHub **組織內** 任何專案的討論（issue 或是 pull requests 等）
+- 參加 rust-lang GitHub **組織外** 任何專案的討論（issue 或是 pull requests 等）
 
 Columns:
 
