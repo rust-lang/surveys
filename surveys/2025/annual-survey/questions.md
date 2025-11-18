@@ -609,6 +609,7 @@ Type: select one
 - My organisation makes non-trivial use of Rust (e.g., used in production or in significant tooling)
 - My organisation has experimented with Rust or is considering using it
 - My organisation has not seriously considered Rust for any use [`NEXT`](#approximately-how-many-total-developers-does-your-organisation-employ)
+- My organisation has considered Rust but decided not to use it [`NEXT`](#approximately-how-many-total-developers-does-your-organisation-employ)
 - I am unsure whether my organisation has considered using or currently uses Rust [`NEXT`](#approximately-how-many-total-developers-does-your-organisation-employ)
 - I don't work for an organisation or my organisation does not develop software of any kind [`NEXT`](#please-share-your-assessment-of-the-following-statements-on-rust-employment)
 
