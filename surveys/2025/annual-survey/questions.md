@@ -376,6 +376,7 @@ Features:
 - [Allocator trait and better OOM handling](https://github.com/rust-lang/rust/issues/32838)
 - [Stable ABI](https://github.com/rust-lang/rust/issues/111423)
 - [Portable SIMD](https://github.com/rust-lang/portable-simd)
+- [Explicit Tail Calls](https://github.com/rust-lang/rust/issues/112788)
 
 Priority:
 
