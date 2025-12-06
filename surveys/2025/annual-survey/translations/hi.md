@@ -471,4 +471,464 @@ Type: select all that apply (optional)
 
 > **justification**
 >
-> cargo team expressed 
+> cargo team expressed interest in this, see https://rust-lang.zulipchat.com/#narrow/stream/246057-t-cargo/topic/Rust.20survery.202023/near/393816653
+
+### आप Rust projects बनाने के लिए crates कहाँ से डाउनलोड करते हैं?
+
+Type: select all that apply (optional)
+
+- crates.io
+- Custom/local/company registry
+- Mirror of crates.io
+- Git repositories
+- मुझे नहीं पता
+- अन्य
+
+> **justification**
+>
+> It could be interesting to know how many people use crates.io vs some custom/local/company registry, and how many people are even aware of what registry do they use. See issue surveys#236.
+
+### क्या आप compiler error codes का उपयोग करते हैं?
+
+Rust compiler कुछ compiler errors को error codes निर्दिष्ट करता है (उदाहरण के लिए *E0308* या *E0509*)। एक [Rust error codes index](https://doc.rust-lang.org/error_codes/error-index.html) है जो इन errors को एकत्र करता है और उनका एक सामान्य विवरण प्रदान करता है। आप इन error descriptions तक पहुंच सकते हैं, उदाहरण के लिए `rustc --explain <error-code>` का उपयोग करके, [documentation](https://doc.rust-lang.org/error_codes/error-index.html) में या [Rust Playground](https://play.rust-lang.org) के माध्यम से।
+
+Type: select one (optional)
+
+- मैं compiler error index descriptions पढ़ता हूँ और उन्हें उपयोगी पाता हूँ
+- मैंने compiler error index descriptions की जांच की लेकिन उन्हें उपयोगी नहीं पाया
+- मुझे नहीं पता था कि एक compiler error index है
+- अन्य (खुला उत्तर)
+
+> **justification**
+>
+> We are currently discussing whether we should keep error codes in the compiler or not. This would be useful as a way to gauge general interest in this feature.
+
+## Rust समुदाय
+
+### आप निम्नलिखित Rust समुदाय गतिविधियों में लगभग कितनी बार संलग्न होते हैं?
+
+Type: matrix (optional)
+
+Activities:
+
+- Rust के बारे में सूचनात्मक सामग्री का निर्माण करना (उदाहरण के लिए, ब्लॉग लिखना, live stream करना, YouTube video बनाना, conference/meetup में प्रस्तुत करना, आदि)
+- Rust के बारे में सूचनात्मक सामग्री का उपभोग करना (उदाहरण के लिए, ब्लॉग, live streams, YouTube videos, आदि)
+- आधिकारिक Rust communication channels पढ़ना (उदाहरण के लिए, This Week in Rust, आधिकारिक Rust blog, Rust Bluesky account, आदि)
+- सोशल मीडिया या वेबसाइटों पर Rust के बारे में बातचीत में भाग लेना (Hacker News, r/rust, Twitter, LinkedIn, आदि)
+- एक Rust meetup या conference में भाग लेना (virtual या in-person)
+- एक open RFC पर लिखना, टिप्पणी करना, चर्चा में योगदान देना, या संपादन प्रदान करना
+- एक आधिकारिक chat या forum में Rust project पर चर्चा करना (internals.rust-lang.org, Rust Zulip, आदि)
+- rust-lang GitHub organization में किसी भी repo पर एक issue खोलना
+- किसी भी open-source Rust project में code changes (tests सहित) का योगदान करना
+- किसी भी open-source Rust project में non-code changes (documentation, comments, आदि) का योगदान करना
+
+Frequency:
+
+- साप्ताहिक से अधिक बार
+- साप्ताहिक
+- मासिक या कम बार
+- कभी नहीं
+
+> **justification**
+>
+> We want to understand the nature of contribution to the Rust project both
+> to better understand the shape of community involvement and for cohort analysis.
+
+### निम्नलिखित Rust समुदाय स्थानों में आपका अनुभव कैसा रहा है?
+
+Type: matrix
+
+Community Spaces:
+
+- *आधिकारिक* Rust community forums या chats (users.rust-lang.org, internals.rust-lang.org, आधिकारिक Rust Discord, या Rust Zulip)
+- *गैर-आधिकारिक* Rust community forums या chats (उदाहरण के लिए, reddit.com/r/rust, Hacker News, Rust *Community* Discord, आदि)
+- Rust software development के एक विशिष्ट क्षेत्र पर केंद्रित समुदाय (उदाहरण के लिए game development, audio, आदि)
+- Rust conferences
+- Rust meetups या स्थानीय community events
+- rust-lang GitHub organization के *अंदर* एक repository पर discussions (issues, pull requests, आदि)
+- rust-lang GitHub organization के *बाहर* एक repository पर discussions (issues, pull requests, आदि)
+
+Choices:
+
+- मैं स्वागत महसूस करता हूँ
+- मैं विशेष रूप से स्वागत या अप्रिय महसूस नहीं करता
+- मैं अप्रिय महसूस करता हूँ
+- मैंने कभी इस गतिविधि में भाग नहीं लिया है
+
+> **justification**
+>
+> We'd like to know where people are feeling welcome and the degree to which they are feeling welcome.
+
+### यदि आपने संकेत दिया है कि आप Rust समुदाय में स्वागत महसूस नहीं करते हैं, तो क्या आप अपने अनुभव के बारे में कोई विवरण हमारे साथ साझा करना चाहेंगे?
+
+Type: free form (optional)
+
+> **justification**
+>
+> More detail on the type of situations where people have felt unwelcome can let us better
+> address these issues in the future.
+
+## काम पर Rust
+
+### क्या आप full- या part-time नियोजित हैं (paid internships सहित)?
+
+Type: select one
+
+- हाँ
+- नहीं [`NEXT`](#please-share-your-assessment-of-the-following-statements-on-rust-employment)
+
+### क्या आप अपने काम में software लिखते या डिज़ाइन करते हैं?
+
+Type: select one (optional)
+
+- हाँ, मुख्य रूप से एक individual contributor के रूप में (अर्थात, non-manager)
+- मैं मुख्य रूप से दूसरों का प्रबंधन करता हूँ जो करते हैं
+- नहीं [`NEXT`](#to-what-extent-is-rust-currently-being-used-by-your-organisation)
+
+### क्या आप व्यक्तिगत रूप से काम पर Rust का उपयोग कर रहे हैं?
+
+Type: select one
+
+- हाँ, मेरे coding के अधिकांश हिस्से के लिए
+- हाँ, औसतन सप्ताह में कुछ बार
+- हाँ, लेकिन मैं इसे केवल कभी-कभी उपयोग करता हूँ
+- नहीं
+
+> **justification**
+>
+> We want to establish what percentage of those who could possibly use Rust in a professional setting
+> are using Rust in a professional setting. This is most interesting over time.
+> Answers to this question should be combined with whether the respondent has ever used Rust.
+
+### आपकी organisation द्वारा Rust का वर्तमान में किस हद तक उपयोग किया जा रहा है?
+
+Type: select one
+
+- मेरी organisation Rust का non-trivial उपयोग करती है (उदाहरण के लिए, production में या महत्वपूर्ण tooling में उपयोग किया गया)
+- मेरी organisation ने Rust के साथ प्रयोग किया है या इसका उपयोग करने पर विचार कर रही है
+- मेरी organisation ने किसी भी उपयोग के लिए Rust पर गंभीरता से विचार नहीं किया है [`NEXT`](#approximately-how-many-total-developers-does-your-organisation-employ)
+- मेरी organisation ने Rust पर विचार किया लेकिन इसका उपयोग नहीं करने का निर्णय लिया [`NEXT`](#approximately-how-many-total-developers-does-your-organisation-employ)
+- मुझे यकीन नहीं है कि मेरी organisation ने Rust का उपयोग करने पर विचार किया है या वर्तमान में इसका उपयोग करती है [`NEXT`](#approximately-how-many-total-developers-does-your-organisation-employ)
+- मैं किसी organisation के लिए काम नहीं करता या मेरी organisation किसी भी प्रकार का software विकसित नहीं करती [`NEXT`](#please-share-your-assessment-of-the-following-statements-on-rust-employment)
+
+> **justification**
+>
+> We want to establish how reliant companies are on Rust.
+
+### निम्नलिखित statements में से कौन से काम पर Rust का उपयोग करने के आपके अनुभव पर लागू होते हैं?
+
+Type: select all that apply (optional)
+
+Statements:
+
+- Rust का उपयोग करने से हमें अपने लक्ष्यों को प्राप्त करने में मदद मिली है
+- Rust को अपनाना चुनौतीपूर्ण रहा है
+- कुल मिलाकर, Rust को अपनाने ने हमारी team को धीमा कर दिया है
+- Rust का उपयोग करना adoption की लागत के लायक रहा है
+- हम भविष्य में फिर से Rust का उपयोग करने की संभावना रखते हैं
+
+> **justification**
+>
+> Future potential adopters may want to know how often other's have encountered success.
+
+### निम्नलिखित statements में से कौन से कारण हैं कि आप काम पर Rust का उपयोग क्यों करते हैं?
+
+Type: select all that apply (optional)
+
+Statements:
+
+- इसके performance (अर्थात, गति, memory footprint, आदि) characteristics के लिए
+- हमें अपने software के चलने के तरीके पर सटीक नियंत्रण की आवश्यकता है
+- इसके security और safety properties हमारे लिए महत्वपूर्ण हैं
+- यह हमें अपेक्षाकृत सही और bug-free software बनाने की अनुमति देता है
+- हमें Rust में प्रोग्रामिंग करना आनंददायक या मजेदार लगता है
+- हम पहले से ही Rust जानते हैं इसलिए यह हमारा default choice है
+- हम इसे prototype करने में आसान पाते हैं
+- हमें existing Rust code के साथ interact करना होगा
+
+> **justification**
+>
+> The Rust community and potential adopters of Rust have a lot of assumptions of why one would choose Rust for a project.
+> This question can help confirm or challenge our assumptions and see how they change over time.
+
+### आपके Rust के उपयोग में क्या चुनौतीपूर्ण रहा है?
+
+Type: free form (optional)
+
+> **justification**
+>
+> This an opportunity to learn from adopters at companies what they struggle with when adopting Rust.
+
+### आपकी organisation में किस technology domain(s) में Rust का उपयोग किया जाता है?
+
+Type: select all that apply (optional)
+
+- Audio programming
+- Automotive
+- Blockchain
+- Cloud computing applications
+- Cloud computing infrastructure या utilities
+- Computer graphics
+- Computer games
+- Computer networking
+- Computer security
+- Data science
+- Database implementation
+- Desktop computer application frontend
+- Desktop computer या mobile phone libraries या services
+- Distributed systems
+- Embedded devices (ऑपरेटिंग सिस्टम के साथ)
+- Embedded devices (bare metal)
+- HPC (High-performance [Super]Computing)
+- IoT (Internet of Things)
+- Machine learning
+- Mobile phone application frontend
+- Programming languages और संबंधित tools (compilers, IDEs, standard libraries, आदि सहित)
+- Robotics
+- Scientific और/या numerical computing
+- Server-side या "backend" application
+- Simulation
+- Web application frontend
+- WebAssembly
+- अन्य (खुला उत्तर)
+
+> **justification**
+>
+> We want to know roughly what technology stacks are being most often used.
+>
+> This can be ambiguous and hard to answer. For example, if you're building an operating
+> system for a mobile phone, is that embedded, mobile, or something else?
+> We want to understand the "shape" of Rust usage, and this question tries to get at that
+> by allowing the respondent to select multiple answers.
+
+### आपकी organisation में लगभग कितने कुल developers कार्यरत हैं?
+
+**नोट**: यहाँ सटीक होने की चिंता न करें! अपनी instinct के साथ जाएं।
+
+Type: select one (optional)
+
+- 10 से कम
+- 11-49
+- 50-99
+- 100-500
+- 500-1,000
+- 1,000-10,000
+- 10,000 से अधिक
+
+> **justification**
+>
+> This question is not that interesting on its own, but it can be used as a sort of cohort for understanding how answers
+> change depending on the size of the development effort at a company.
+>
+> Previously this question used "employees" instead of "developers". It is more appropriate for us to ask about the amount
+> of developers at a company vs. the amount of people employed in total.
+
+### क्या आपकी organisation अगले वर्ष Rust developers को नियुक्त करने की योजना बना रही है?
+
+Type: select one (optional)
+
+- हाँ
+- नहीं (यह अन्य developers को नियुक्त करने की योजना बना रही है)
+- नहीं (यह किसी भी developers को नियुक्त करने की योजना नहीं बना रही है)
+- मुझे नहीं पता
+
+> **justification**
+>
+> This question assess hiring sentiment. Although there is intrinsic uncertainty, it is easy to answer and forward looking.
+> It will also be interesting to see what the demand for Rust skills from companies is over time.
+
+### कृपया Rust employment पर निम्नलिखित statements के बारे में अपना assessment साझा करें
+
+Type: matrix (optional)
+
+Statements:
+
+- Junior programmers के लिए ऐसी jobs ढूंढना आसान है जो programming के अधिकांश हिस्से के लिए Rust का उपयोग करती हैं
+- Senior programmers के लिए ऐसी jobs ढूंढना आसान है जो programming के अधिकांश हिस्से के लिए Rust का उपयोग करती हैं
+- Existing Rust jobs आकर्षक हैं
+
+Rating:
+
+- Agree
+- Neither agree nor disagree
+- Disagree
+
+> **justification**
+>
+> The flip side of the question asking whether the respondent's company plans on hiring Rust developers, we
+> want to know how respondents feel the level of demand for and quality of Rust jobs are.
+
+## Rust के बारे में आपकी राय
+
+### निम्नलिखित statements में से कौन से Rust के बारे में आपको सच लगते हैं?
+
+Type: select all that apply (optional)
+
+Statements:
+
+- Rust अन्य programming languages पर एक वास्तविक लाभ प्रदान करता है
+- Rust अन्य programming languages की तुलना में प्रोग्रामिंग करने में काफी अधिक जटिल है
+- Rust को सीखने के लिए अन्य programming languages की तुलना में काफी अधिक प्रयास की आवश्यकता होती है
+- Rust code में आमतौर पर काफी कम bugs होते हैं जो किसी अन्य programming language में लिखे गए समकक्ष code में होंगे
+- Production में Rust का उपयोग करना जोखिम भरा है
+- Rust मुझे अधिक उत्पादक बनाता है
+- Rust का उपयोग करना मजेदार है
+
+> **justification**
+>
+> There are several "truisms" about Rust that we'd like to get perspective on how true these are for users of Rust.
+>
+> Note that answers here can be subject to survivorship bias and so extra care should be taken with interpreting results.
+
+### Rust के भविष्य के लिए आपकी सबसे बड़ी चिंताएँ क्या हैं?
+
+Type: select all that apply (optional)
+
+- Tech industry में पर्याप्त उपयोग नहीं
+- बड़ी companies से बहुत अधिक रुचि
+- Ecosystem में पर्याप्त open source contributions नहीं
+- एक विशिष्ट feature जो मैं चाहता हूँ उसे नहीं जोड़ता
+- Rust पर्याप्त तेज़ी से विकसित नहीं होता
+- भाषा की अस्थिरता
+- एक alternative द्वारा प्रतिस्थापित
+- बहुत जटिल हो जाता है
+- Tools और documentation पर्याप्त accessible नहीं हैं (उदाहरण के लिए, भाषा के कारण या screen readers के साथ असंगतता)
+- Rust Foundation Rust project को ठीक से support नहीं कर रहा है (उदाहरण के लिए financial, infrastructure, legal aspects में)
+- Project governance समुदाय के आकार/आवश्यकताओं से मेल खाने के लिए scale नहीं करता
+- भाषा के developers/maintainers को ठीक से support नहीं मिल रहा है
+- मैं चिंतित नहीं हूँ
+- अन्य (खुला उत्तर)
+
+> **justification**
+>
+> Would be useful for leadership to understand the community's fears.
+
+## आपके बारे में
+
+See [who](./design/who.md).
+
+निम्नलिखित प्रश्नों के आपके उत्तर हमारे reviewers को cohort analyses आयोजित करने में मदद करेंगे और हमें Rust समुदाय को बेहतर ढंग से समझने में मदद करेंगे। कृपया अपने comfort level के अनुसार उत्तर दें।
+
+### क्या आप अपने आप को technology में एक ऐसे समूह का सदस्य मानते हैं जो underrepresented या marginalized है?
+
+Type: select one
+
+- हाँ
+- नहीं [`NEXT`](#are-you-a-full--or-part-time-student)
+- मैं नहीं कहना चाहूंगा [`NEXT`](#are-you-a-full--or-part-time-student)
+
+### Technology में निम्नलिखित underrepresented या marginalized groups में से आप अपने आप को किसका हिस्सा मानते हैं?
+
+Type: select all that apply (optional)
+
+- Cultural beliefs
+- Disabled (शारीरिक, मानसिक, या अन्यथा)
+- Neurodivergent
+- Educational background
+- Language
+- Lesbian, gay, bisexual, queer या अन्यथा non-heterosexual
+- Non-binary gender
+- औसत developers की तुलना में बड़े या छोटे जिन्हें मैं जानता हूँ
+- Political beliefs
+- Racial या ethnic minority
+- Religious beliefs
+- Trans
+- Woman या woman के रूप में माना जाता है
+- अन्य (खुला उत्तर)
+
+### क्या आप एक full- या part-time student हैं?
+
+Type: select one (optional)
+
+- नहीं
+- हाँ, secondary/high school में
+- हाँ, bachelor's/undergraduate program में
+- हाँ, master's program में
+- हाँ, doctorate program में
+- हाँ, vocational program में
+- हाँ, अन्य (खुला उत्तर)
+
+> **justification**
+>
+> This will be important for cohort analysis. In particular, we want to
+> understand how students at different points in their education view
+> topics related to Rust.
+
+### आप कितने समय से प्रोग्रामिंग कर रहे हैं (किसी भी भाषा में, किसी भी कारण से)?
+
+Type: select one (optional)
+
+- < 1 वर्ष
+- < 3 वर्ष
+- < 5 वर्ष
+- < 10 वर्ष
+- > 10 वर्ष
+
+### आप कहाँ रहते हैं?
+
+Type: select one (optional)
+
+- देशों की सूची [`NEXT`](#in-what-ways-are-you-comfortable-communicating-about-technical-topics-in-english)
+- अन्य
+
+> **justification**
+>
+> We'd like to get a geographic understanding of where the community is. To have more structure, a free-form answer
+> is not used, and instead we use the country definition according to UN.
+
+### जैसा कि आपने ऊपर देशों की सूची से "अन्य" चुना है, कृपया नीचे अपने निवास के क्षेत्र को दर्ज करें:
+
+Type: free form
+
+### आप English में technical topics के बारे में किन तरीकों से communicate करने में सहज हैं?
+
+Type: select all that apply (optional)
+
+- मैं English में spoken technical conversation करने में सहज और सक्षम महसूस करता हूँ
+- मैं English में written technical conversation करने में सहज और सक्षम महसूस करता हूँ
+- मैं English में technical documentation पढ़ने में सहज और सक्षम महसूस करता हूँ
+- मैं English में एक technical talk (उदाहरण के लिए, conference या meetup में) consume करने में सहज और सक्षम महसूस करता हूँ
+- मैं English में written technical educational material (उदाहरण के लिए, technical books, blog posts, आदि) consume करने में सहज और सक्षम महसूस करता हूँ
+
+> **justification**
+>
+> We want to understand self reported feeling of comfort and capability of communication
+> of English since a large portion of the Rust community is and likely will always be in English.
+
+### आप existing technical content (उदाहरण के लिए blog posts, documentation, आदि) consume करते समय किस भाषा(ओं) में सबसे सहज हैं?
+
+**महत्वपूर्ण**: आपका उत्तर आपकी **preference** को दर्शाना चाहिए और **नहीं** जिसमें आप communicate करने में सक्षम हैं। उदाहरण के लिए, यदि आप English और Korean दोनों में technical communication consume करने में सहज और सक्षम महसूस करते हैं, लेकिन आप हमेशा Korean पसंद करते हैं, तो आपको *केवल* Korean का उत्तर देना चाहिए क्योंकि वह आपकी preference है।
+
+Type: select all that apply (optional)
+
+- Chinese
+- English
+- French
+- German
+- Hindi
+- Japanese
+- Korean
+- Portuguese
+- Russian
+- Spanish
+- Ukrainian
+- अन्य (खुला उत्तर)
+
+> **justification**
+>
+> We want to understand *preference* of technical communication and how that differs
+> from their abilities to consume technical communication in English.
+> The languages selected are those which got 50 or more responses in 2021.
+
+## और कुछ?
+
+### क्या आप हमें कुछ और बताना चाहेंगे?
+
+Type: free form (optional)
+
+> **justification**
+>
+> While it's unlikely we'll receive any one piece of feedback from this question that will prove to be super useful,
+> having it in the survey can still be useful. It can help us decide on new questions or perspectives that we want to
+> try to capture in future surveys. It also gives respondents a place to give thanks or share a particular opinion they
+> hold which can be useful in and of itself. 
