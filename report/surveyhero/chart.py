@@ -259,6 +259,7 @@ def make_pie_chart(
         textinfo="percent",
         hovertemplate="Answer: %{label}<br />Count: %{value} <br />Percent: %{customdata:.2f}%"
     )
+    return fig
 
 
 def make_matrix_chart(

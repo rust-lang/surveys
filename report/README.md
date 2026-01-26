@@ -9,19 +9,17 @@ It is best to take a look at their usage from previous surveys, and start with t
 
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
-Then run `uv sync` to initialize a virtual environment, and add this directory to the `PYTHONPATH` of your main Python script, and then use e.g. `from surveyhero.parser import parse_surveyhero_report`.
+Then run `uv sync` to initialize a virtual environment, and add this directory to the `PYTHONPATH` of your main Python script, and then use e.g. `from surveyhero.parser import parse_surveyhero_summary`.
 
-You can then execute your analysis scripts using `uv run <script>`.
+You can then activate the created virtual environment using `source .venv/bin/activate` and then run analysis scripts using `python3 <script>`.
 
 ## Useful functions
 First, you will probably want to export data from SurveyHero into two CSV files - one containing the aggregated data from
 the report, and a second one that contains the individual answers from all the respondents.
 
-Then you should use `parser.py:parse_surveyhero_report` to parse the report CSV, and `parser.py:parse_surveyhero_answers`
-to parse the full answer CSV (if needed). Once you do that, you can start to build a `ChartReport` (located in `report.py`),
-by adding various charts to it with the provided helper methods. The charts are created out of `Question`s that you can
-access from the parsed CSVs.
+Then you should use `parser.py:parse_surveyhero_summary` to parse the summary CSV, and `parser.py:parse_surveyhero_answers`
+to parse the full answer CSV. Once you do that, you can start to build a `ChartReport` (located in `report.py`),
+by adding various charts to it with the provided helper methods. The charts are created out of `Question`s that you can access from the parsed CSVs.
 
 Once you create fill a `ChartReport` with charts, you can use it to render a PDF report using the `render.py:render_report_to_pdf`
-function, or to render a Rust Blog post template using the `render.py:render_blog_post` function. See the documentation
-of these two functions for more details.
+function, or to render a Rust Blog post template using the `render.py:render_blog_post` function. See the documentation of these two functions for more details.

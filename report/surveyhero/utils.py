@@ -1,12 +1,13 @@
+from collections import defaultdict
 from pathlib import Path
-from typing import Optional, Any
+from typing import Optional, Any, List
 
 import numpy as np
 
-from .survey import SurveyReport, SurveyFullAnswers
+from .survey import SurveySummary, SurveyFullAnswers
 
 
-def print_question_index(path: Path, new: SurveyReport, old: Optional[SurveyReport] = None):
+def print_question_index(path: Path, new: SurveySummary, old: Optional[SurveySummary] = None):
     if old is not None:
         old_index = 0
         new_index = 0
@@ -28,12 +29,22 @@ def print_question_index(path: Path, new: SurveyReport, old: Optional[SurveyRepo
                 print(f"{new.year}/{index} ({kind}): {question.question}", file=f)
 
 
-def print_answer_index(answers: SurveyFullAnswers, report: SurveyReport, path: Path):
+def print_answer_index(answers: SurveyFullAnswers, report: SurveySummary, path: Path):
     with open(path, "w") as f:
         for (index, question) in enumerate(answers.questions):
             if any(question == q.question for q in report.questions) and index > 0:
                 print(file=f)
             print(f"{index}: {question}", file=f)
+
+
+def inspect_open_answers(answers: List[str]):
+    normalized = defaultdict(int)
+    for answer in answers:
+        answer = answer.strip().lower()
+        normalized[answer] += 1
+    items = sorted(normalized.items(), key=lambda x: x[1], reverse=True)
+    for (value, count) in items:
+        print(f"{value}: {count}")
 
 
 def is_nan(value: Any) -> bool:
