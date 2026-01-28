@@ -6,8 +6,6 @@ from typing import List
 
 import numpy as np
 
-from surveyhero.utils import print_question_index, print_answer_index, inspect_open_answers
-
 ROOT_DIR = Path(__file__).absolute().parent.parent.parent.parent.parent
 REPORT_SCRIPT_DIR = ROOT_DIR / "report"
 
@@ -17,6 +15,7 @@ from surveyhero.parser import parse_surveyhero_summary, parse_surveyhero_answers
 from surveyhero.render import render_blog_post, render_report_to_pdf
 from surveyhero.report import ChartReport
 from surveyhero.survey import Question, SurveyFullAnswers, SurveySummary, normalize_open_answers
+from surveyhero.utils import print_question_index, print_answer_index, inspect_open_answers
 
 
 def annual_survey_2025_report() -> ChartReport:
