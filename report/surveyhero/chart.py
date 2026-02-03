@@ -56,6 +56,8 @@ def make_bar_chart(
     assert len(questions) > 0
     assert len(set(question.year for question in questions)) == len(questions)
 
+    main_question = questions[0]
+
     # Sort questions by year to have a left-to-right reading order
     questions = sorted(questions, key=lambda q: q.year)
 
@@ -70,7 +72,7 @@ def make_bar_chart(
     override_line_size = f"{12 / xaxis_font_size:.1f}em"
 
     if legend_order is None and not sort_by_pct:
-        legend_order = [a.answer for a in questions[0].kind.answers]
+        legend_order = [a.answer for a in main_question.kind.answers]
 
     if legend_order is not None:
         # We need to apply the size hack also to the legend, otherwise the answers won't match
@@ -188,7 +190,7 @@ def make_bar_chart(
         yaxis_range=range,
         yaxis_ticksuffix="%",
         yaxis_fixedrange=True,
-        title_text=format_title(questions[0], include_kind=True),
+        title_text=format_title(main_question, include_kind=True),
         plot_bgcolor="rgb(255, 255, 255)",
         showlegend=multiyear,
         uniformtext=dict(
