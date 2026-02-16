@@ -42,7 +42,7 @@ Type: select all that apply
 
 ### Tell us more:
 
-Type: free text
+Type: free form
 
 > **SURVEY FLOW**
 >
@@ -68,7 +68,7 @@ Type: select all that apply
 
 ### Tell us more:
 
-Type: free text
+Type: free form
 
 > **SURVEY FLOW**
 >

@@ -157,8 +157,8 @@ Type: select one (optional)
 
 ### Are there areas of the Leadership Council that you think are going well?
 
-Type: free text (optional)
+Type: free form (optional)
 
 ### Are there areas of the Leadership Council that you think could be improved or efforts that should be prioritized?
 
-Type: free text (optional)
+Type: free form (optional)
