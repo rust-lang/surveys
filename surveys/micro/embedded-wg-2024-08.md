@@ -115,13 +115,13 @@ Type: select all that apply (optional)
 
 ### What are the most common crates or libraries you use in your embedded projects?
 
-Type: free text (optional)
+Type: free form (optional)
 
 ## Personal feedback
 
 ### What are your biggest complaints or blockers for using Rust in your embedded projects?
 
-Type: free text (optional)
+Type: free form (optional)
 
 ### How happy are you with using Rust for embedded projects?
 
@@ -135,4 +135,4 @@ Type: select one (optional)
 
 ### Is there anything else you would like the Embedded Working Group to know?
 
-Type: free text (optional)
+Type: free form (optional)

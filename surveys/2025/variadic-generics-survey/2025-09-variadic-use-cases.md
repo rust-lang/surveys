@@ -64,7 +64,7 @@ Type: select one
 Please write a description of the project and what you would have needed variadics for.
 Be as detailed as you like, more detail is better.
 
-Type: free text
+Type: free form
 
 
 ## Variadic type mappings
@@ -108,7 +108,7 @@ If it is the same project as before, you can include more details about how you 
 
 If you do not have anything to add, leave the answer empty.
 
-Type: free text (optional)
+Type: free form (optional)
 
 
 ## Non-linear variadic generics
@@ -145,7 +145,7 @@ If it's the same project as before, you can include more details about how you w
 
 If you do not have anything to add, leave the answer empty.
 
-Type: free text (optional)
+Type: free form (optional)
 
 
 ## How high a priority would you say variadics are for you?

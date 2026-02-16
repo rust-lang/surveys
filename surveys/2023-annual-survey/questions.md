@@ -41,7 +41,7 @@ Type: select all that apply
 
 ### Tell us more:
 
-Type: free text
+Type: free form
 
 > **SURVEY FLOW**
 >
@@ -67,7 +67,7 @@ Type: select all that apply
 
 ### Tell us more:
 
-Type: free text
+Type: free form
 
 > **SURVEY FLOW**
 >
@@ -363,7 +363,7 @@ Priority:
 
 ### Are there any features not mentioned above that you would like to be prioritised?
 
-Type: free text
+Type: free form
 
 > **justification**
 >
@@ -835,7 +835,7 @@ Type: select one (optional)
 
 ### As you selected "Other" from the list of countries above, please enter your territory of residence below:
 
-Type: free text
+Type: free form
 
 ### In what ways are you comfortable communicating about technical topics in English?
 

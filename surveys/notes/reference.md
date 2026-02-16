@@ -54,11 +54,11 @@ We use the SurveyHero system for running surveys, which supports several questio
     - macOS
     ```
     You can also mark one answer as an open response, e.g. `- Other (open response)`
-- Free text (`free text`). The user fills an open answer into a text area.
+- Open answer (`free form`). The user fills an open answer into a text area.
     ```markdown
     ### Is there anything else you'd like to tell us?
 
-    Type: free text
+    Type: free form
     ```
 - Matrix (`matrix`). The user assigns a selected column for each row of this question. For example, they
    might assign "Not at all"/"A little"/"A lot" category to each answer. You specify also the labels that represent what do the rows and columns mean. In the example below, each row is an "aspect" and each column is a "priority".
