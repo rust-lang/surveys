@@ -1,0 +1,13 @@
+[package]
+name = "typst_gen"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4.5.54", features = ["derive"] }
+anyhow = "1.0.100"
+surveyhero = { path = "../../surveyhero/" }
+typst = "0.14.2"
+typst-kit = "0.14.2"
+time = "0.3.45"
+typst-pdf = "0.14.2"

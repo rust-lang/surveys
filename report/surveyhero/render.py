@@ -346,3 +346,50 @@ def write_if_unchanged(path: Path, content: bytes):
         pass
     with open(path, "wb") as f:
         f.write(content)
+
+
+def render_all_charts(report: ChartReport, output_dir: Path) -> Path:
+    """
+    Renders all charts from the given `report` as separate PNG and SVG files in the `output_dir`.
+    Creates a file listing all created files with their corresponding question details.
+
+    :param report: `ChartReport` containing charts that can be rendered.
+    :param output_dir: Directory where chart files will be saved.
+    :return: Path to the created listing file.
+    """
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    listing = []
+    print(f"Rendering charts to {output_dir}")
+
+    for chart_id in tqdm.tqdm(report.charts.keys()):
+        chart = report.get_chart(chart_id)
+        if chart is None:
+            continue
+
+        chart_info = {"question_id": chart_id, "name": chart.name}
+
+        png_filename = render_png(image_dir=output_dir, renderer=chart, chart_id=chart_id)
+        chart_info["png_file"] = png_filename
+
+        svg_bytes = chart.to_image_bytes(format="svg")
+        if svg_bytes is not None:
+            svg_filename = f"{chart_id}.svg"
+            svg_path = output_dir / svg_filename
+            write_if_unchanged(svg_path, svg_bytes)
+            chart_info["svg_file"] = svg_filename
+
+        listing.append(chart_info)
+
+    listing_path = output_dir / "chart_listing.txt"
+    with open(listing_path, "w") as f:
+        for item in listing:
+            f.write(f"Question ID: {item['question_id']}\n")
+            f.write(f"  Name: {item['name']}\n")
+            f.write(f"  PNG: {item['png_file']}\n")
+            if "svg_file" in item:
+                f.write(f"  SVG: {item['svg_file']}\n")
+            f.write("\n")
+
+    print(f"Chart listing written to {listing_path}")
+    return listing_path
