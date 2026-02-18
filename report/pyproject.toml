@@ -17,3 +17,7 @@ dependencies = [
     "tqdm==4.66.1",
     "wordcloud==1.9.3",
 ]
+
+optional-dependencies = [
+    "pudb>=2025.1.5",
+]

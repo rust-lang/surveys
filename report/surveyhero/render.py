@@ -151,7 +151,7 @@ def render_blog_chart(arg) -> RenderedChart:
 
 
 def render_blog_post(
-        template: Path, blog_dir: Path, report: ChartReport
+        template: Path, blog_dir: Path, blog_post_rel_path: Path, report: ChartReport
 ):
     """
     Render a Rust Blog post containing special placeholders that will render as SurveyHero charts from the given `report`.
@@ -162,15 +162,19 @@ def render_blog_post(
     ```
     <!-- chart: my-chart-1 (height=400) -->
     ```
+    Supported optional parameters: height
+    (possibly others, see `make_matrix_chart` in charts.py but code is a bit flaky)
+
     2) A line containing `<!-- scripts -->`, which will be replaced with all the generated JavaScript. It should be ideally
     at the end of the template.
 
-    :param template: Blog post Markdown template. Its filename will be used to name the generated blog post file.
+    :param template: Absolute path to the blog post Markdown template. Its filename will be used to name the generated blog post file.
     :param blog_dir: A directory of the blog contained in a local checkout of the https://github.com/rust-lang/blog.rust-lang.org repository
+    :param blog_post_rel_path: A sub-directoty relative to `blog_dir` where the blog post and its assets will be saved
     :param report: `ChartReport` containing charts that can be rendered.
     """
     blog_dir.mkdir(parents=True, exist_ok=True)
-    output_path = blog_dir / "index.md"
+    output_path = blog_dir / blog_post_rel_path / "index.md"
 
     print(f"Generating blog post to {output_path}")
 
@@ -180,7 +184,7 @@ def render_blog_post(
     matches = list(CHART_MARKER_REGEX.finditer(document))
 
     args = [
-        (blog_dir, report, (match.group(0), match.group(1), match.group(2)))
+        (blog_dir / blog_post_rel_path, report, (match.group(0), match.group(1), match.group(2)))
         for match in matches
     ]
 
@@ -233,11 +237,11 @@ window.addEventListener("resize", relayoutCharts);
 document.addEventListener("DOMContentLoaded", relayoutCharts);
 """
     script_filename = "charts.js"
-    script_path = blog_dir / script_filename
+    script_path = blog_dir / blog_post_rel_path / script_filename
     write_if_unchanged(script_path, script_text.encode())
 
     # Go from <blog-root>/content/<blog-dir> to <blog-root>/static/scripts
-    plotly_script_path = blog_dir.parent.parent / "static/scripts" / "plotly-basic-2.29.0.min.js"
+    plotly_script_path = blog_dir / "static/scripts" / "plotly-basic-2.29.0.min.js"
     if not os.path.isfile(plotly_script_path):
         urllib.request.urlretrieve(
             "https://cdn.plot.ly/plotly-basic-2.29.0.min.js", plotly_script_path
@@ -256,6 +260,7 @@ document.addEventListener("DOMContentLoaded", relayoutCharts);
     script_str = "<!-- Chart scripts -->\n\n" + "\n\n".join(scripts)
     document = document.replace(script_marker, script_str)
 
+    # copy all assets to destination
     write_if_unchanged(output_path, document.encode())
 
 

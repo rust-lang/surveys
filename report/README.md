@@ -5,13 +5,32 @@ surveys created in SurveyHero.
 Note that these scripts are intended to be used as a library, so you will need to write your own script to leverage them.
 It is best to take a look at their usage from previous surveys, and start with that. The scripts will change over time, they are only kept compatible with the latest version of the annual survey. If you need to re-render the reports from an older survey, you should use an older version of these scripts from the corresponding year.
 
-# Build and install
+Requirement to run these scripts are the CSV files with the survey actual data:
+- The `summary.csv` in `./data/data-YYYY.csv`
+- The `responses.csv` in `./data/data-full-YYYY.csv`
 
+# Build and install
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
 Then run `uv sync` to initialize a virtual environment, and add this directory to the `PYTHONPATH` of your main Python script, and then use e.g. `from surveyhero.parser import parse_surveyhero_report`.
 
 You can then execute your analysis scripts using `uv run <script>`.
+
+Here's a practical list of commands to run:
+```
+$ cd report
+$ uv venv --clear
+$ source .venv/bin/activate
+(report) $ uv sync
+(report) $ cd ../surveys/2025/annual-survey/report
+(report) $ python3 main.py [ --skip-pdf ]
+```
+
+The parameter `--skip-pdf` will skip creating the PDF report and will only build the blog post.
+
+Note: the blog post will embed Plotly Basic v2.29 (downloaded when you run the `main.py` script). Upgrading this library is not supported and may cause breaking changes.
+Documentation for the Plotly Python library (used in `report/surveyhero/chart.py`): https://plotly.com/python-api-reference
+Documentation for the Plotly JavaScript library: https://plotly.com/javascript
 
 ## Useful functions
 First, you will probably want to export data from SurveyHero into two CSV files - one containing the aggregated data from
