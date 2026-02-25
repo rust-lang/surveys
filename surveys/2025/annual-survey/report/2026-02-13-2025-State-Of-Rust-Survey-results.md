@@ -95,7 +95,7 @@ We're happy to meet again those 11 developers still using Atom (hey 👋!) and w
 
 <!-- chart: what-ide-do-you-use (height=500) -->
 
-And finally a small group photo (17%) of what some respondents wanted to share about themselves. These numbers should be read in context: 58% of LGBTQ+ folks are about 8% of all respondents, 35% of self-identified women are about 6% and so on. Even if these numbers are just slighly better than last year, taken in context they show a picture that a very *very* small percentage of marginalized groups of people make it to our project (we are doing still *better* than other tech communities!) and is a reminder that one of our core values is to strive to be a diverse and welcoming FOSS community **for everyone**. But this only comes if we work hard on *effective* outreach programs.
+And finally a small group photo (17%) of what some respondents wanted to share about themselves. These numbers should be read in context: 8% of the respondents to this survey identify as LGBTQ+ folks, 6% as women and so on. Even if these numbers are just slighly better than last year, taken in context they show a picture that a very *very* small percentage of marginalized groups of people make it to our project (we are doing still *better* than other tech communities!) and is a reminder that one of our core values is to strive to be a diverse and welcoming FOSS community **for everyone**. But this only comes if we work hard on *effective* outreach programs.
 
 <!-- chart: which-marginalized-group (height=500) -->
 
