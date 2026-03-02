@@ -7,11 +7,11 @@ from typing import Optional
 import pandas as pd
 
 from .survey import SurveyFullAnswers, Question, MatrixQuestion, Answer, SimpleQuestion, \
-    SurveyReport, RatingQuestion, RatingAnswer
+    SurveySummary, RatingQuestion, RatingAnswer
 
 
 def parse_surveyhero_answers(path: Path, year: int,
-                             summary: Optional[SurveyReport] = None) -> SurveyFullAnswers:
+                             summary: Optional[SurveySummary] = None) -> SurveyFullAnswers:
     """
     Parses the full CSV from SurveyHero,
     which contains all responses from individual respondents (except
@@ -21,7 +21,7 @@ def parse_surveyhero_answers(path: Path, year: int,
     answers = defaultdict(list)
     with open(path) as f:
         reader = csv.reader(f)
-        questions = next(reader)
+        questions = [q.strip() for q in next(reader)]
         total_respondents = 0
 
         for line in reader:
@@ -30,12 +30,14 @@ def parse_surveyhero_answers(path: Path, year: int,
                 answer = answer.strip()
                 if answer:
                     answers[id].append(answer)
+    df = pd.read_csv(path)
+    df.columns = df.columns.str.strip()
     return SurveyFullAnswers(
         year=year,
         answers=answers,
         questions=questions,
         total_respondents=total_respondents,
-        df=pd.read_csv(path),
+        df=df,
         summary=summary
     )
 
@@ -43,9 +45,9 @@ def parse_surveyhero_answers(path: Path, year: int,
 COUNT_REGEX = re.compile(r" \(n = (\d+)\)$")
 
 
-def parse_surveyhero_report(path: Path, year: int) -> SurveyReport:
+def parse_surveyhero_summary(path: Path, year: int) -> SurveySummary:
     """
-    Parses the report CSV from SurveyHero,
+    Parses the summary report CSV from SurveyHero,
     which contains aggregated response counts for individual answers.
     """
     with open(path) as f:
@@ -54,6 +56,7 @@ def parse_surveyhero_report(path: Path, year: int) -> SurveyReport:
 
         for row in csv.reader(f):
             if row and ("Answer" in row or "Rating" in row):
+                # This row is a question
                 if active_question is not None:
                     questions.append(active_question)
                 question = row[0]
@@ -73,6 +76,7 @@ def parse_surveyhero_report(path: Path, year: int) -> SurveyReport:
                     kind=kind
                 )
             else:
+                # This row is an answer to the latest parsed question
                 assert active_question is not None
 
                 if all(r == "" for r in row):
@@ -112,7 +116,7 @@ def parse_surveyhero_report(path: Path, year: int) -> SurveyReport:
                         assert False
         if active_question is not None:
             questions.append(active_question)
-    return SurveyReport(
+    return SurveySummary(
         questions=questions,
         year=year
     )

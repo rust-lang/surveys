@@ -1,7 +1,7 @@
 import dataclasses
 import re
 from collections import defaultdict
-from typing import List, Union, Dict, Optional, Callable, Iterable
+from typing import List, Union, Dict, Optional, Callable, Iterable, Set
 
 import numpy as np
 import pandas as pd
@@ -77,6 +77,9 @@ class Question:
 
     def is_simple(self) -> bool:
         return isinstance(self.kind, SimpleQuestion)
+
+    def is_matrix(self) -> bool:
+        return isinstance(self.kind, MatrixQuestion)
 
     def is_single_answer(self) -> bool:
         if isinstance(self.kind, SimpleQuestion):
@@ -156,15 +159,21 @@ class Question:
 
         answers = []
         replaced = False
+        added = False
         for answer in self.kind.answers:
             count = answer.count
             if answer.answer == replace:
                 count -= added_count
                 assert not replaced
                 replaced = True
+            elif answer.answer == label:
+                assert not added
+                count += added_count
+                added = True
             answers.append(dataclasses.replace(answer, count=count))
         assert replaced
-        answers.append(Answer(answer=label, count=added_count))
+        if not added:
+            answers.append(Answer(answer=label, count=added_count))
         return dataclasses.replace(self, kind=SimpleQuestion(answers=answers))
 
     def with_title(self, func: Callable[[str], str]) -> "Question":
@@ -190,12 +199,18 @@ def rating_to_simple_question(question: Question) -> Question:
 
 
 @dataclasses.dataclass
-class SurveyReport:
+class SurveySummary:
     year: int
     questions: List[Question]
 
     def q(self, index: int) -> Question:
         return self.questions[index]
+
+    def q_by_text(self, question_text: str) -> Question:
+        for question in self.questions:
+            if question.question == question_text:
+                return question
+        raise Exception(f"Question with text `{question_text}` not found")
 
 
 @dataclasses.dataclass()
@@ -213,7 +228,7 @@ class SurveyFullAnswers:
     questions: List[str]
     total_respondents: int
     df: pd.DataFrame
-    summary: Optional[SurveyReport] = None
+    summary: Optional[SurveySummary] = None
 
     def q_simple_single(self, question_or_id: int | str,
                         treat_unknown_answers_as: Optional[str] = "Other") -> Question:
@@ -247,14 +262,16 @@ class SurveyFullAnswers:
                        answer_count: Optional[int] = None) -> Question:
         col = self.get_column(question_or_id)
         answer_data = self.get_answer_columns(col, answer_count=answer_count)
-        for c in answer_data.columns:
-            assert not c.endswith("?")
+        if answer_count is None:
+            for c in answer_data.columns:
+                assert not c.endswith("?")
         non_na_answers = answer_data.apply(lambda r: r.count(), axis=1)
         response_count = len(non_na_answers[non_na_answers != 0])
 
         ref_question = self.get_summary_question(col.name)
         if ref_question is not None:
             assert ref_question.is_simple() and not ref_question.is_single_answer()
+            answer_data = normalize_answers(ref_question, answer_data)
 
         counts = dict(answer_data.count())
         answers = self.sort_answers(counts, col)
@@ -271,20 +288,21 @@ class SurveyFullAnswers:
     def open_answers(self, question_or_id: int | str) -> List[str]:
         col = self.get_column(question_or_id)
         ref_question = self.get_summary_question(col.name)
-        assert ref_question is not None
-        assert ref_question.is_simple()
 
-        if ref_question.is_single_answer():
-            known_answers = set(answer.answer for answer in ref_question.kind.answers)
-            answer_data = list(self.df[col.name].dropna())
-            return [answer for answer in answer_data if answer not in known_answers]
+        if ref_question is not None:
+            if ref_question.is_single_answer():
+                known_answers = set(answer.answer for answer in ref_question.kind.answers)
+                answer_data = list(col.data.dropna())
+                return [answer for answer in answer_data if answer not in known_answers]
+            else:
+                answer_data = self.get_answer_columns(col, answer_count=None)
+                answer_data = answer_data.rename(columns={
+                    k: normalize_answer_other(k)
+                    for k in answer_data.columns.values
+                })
+                return list(answer_data["Other"].dropna())
         else:
-            answer_data = self.get_answer_columns(col, answer_count=None)
-            answer_data = answer_data.rename(columns={
-                k: normalize_answer_other(k)
-                for k in answer_data.columns.values
-            })
-            return list(answer_data["Other"].dropna())
+            return list(col.data.dropna())
 
     def open_answers_raw(self, question_or_id: int | str, dropna=True) -> List[str]:
         df = self.df[self.get_column(question_or_id).name]
@@ -321,8 +339,12 @@ class SurveyFullAnswers:
             if ref_question is None:
                 raise Exception(
                     f"Must provide either `answer_count` or a summary thas has the question `{col.name}`")
-            assert ref_question.is_simple()
-            answer_count = len(ref_question.kind.answers)
+            if ref_question.is_simple():
+                answer_count = len(ref_question.kind.answers)
+            elif ref_question.is_matrix():
+                answer_count = len(ref_question.kind.answer_groups)
+            else:
+                raise Exception(f"Unsupported question type: {ref_question}")
 
         return self.df.iloc[:, col.index + 1:col.index + 1 + answer_count]
 
@@ -366,7 +388,35 @@ OTHER_REGEX = re.compile("^Other(\.\d+)?$")
 def normalize_answer_other(answer: str) -> str:
     if OTHER_REGEX.match(answer) is not None:
         return "Other"
+    if answer.startswith("Other "):
+        return "Other"
     return answer
+
+
+RENUMBERED_ANSWER_REGEX = re.compile("^(.+?)\.\d+$")
+
+
+def normalize_answers(ref_question: Question, answer_data: pd.DataFrame) -> pd.DataFrame:
+    """
+    When multiple questions have the same answers, the answers will be parsed as `<answer>.1`,
+    `<answer.2>`, etc. by pandas.
+    If we have the reference question available, try to normalize the answers based on it.
+    """
+    answers: Set[str] = set(answer.answer for answer in ref_question.kind.answers)
+    data = defaultdict(list)
+    for col in answer_data.columns:
+        answer_col = answer_data[col]
+        if col not in answers:
+            match = RENUMBERED_ANSWER_REGEX.match(col)
+            if match:
+                col = match.group(1)
+            else:
+                raise Exception(
+                    f"Answer `{col}` not found in answers `{sorted(answers)}`\nof question {ref_question}")
+
+        data[col] = answer_col
+
+    return pd.DataFrame(data)
 
 
 def normalize_open_answers(answers: List[str], replace_spaces=False) -> List[str]:

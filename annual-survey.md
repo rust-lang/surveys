@@ -44,7 +44,7 @@ We sadly cannot import translations into SurveyHero, so they all have to be ente
 2. Download the current versions of the translations from SurveyHero using the `verifier` binary, to have a baseline for follow-up diffs
 3. For each translated language, generate a translation link on SurveyHero
 4. Share the translated link with the corresponding translator for the given language
-   - To make their work easier, you can generate a diff between the <last year> and <current year> English version of the survey, to let the translator more easily find out which parts of the survey have changed, and where will the translations need an update. 
+   - To make their work easier, you can generate a diff between the <last year> and <current year> English version of the survey, to let the translator more easily find out which parts of the survey have changed, and where will the translations need an update.
 5. Let the translator update the survey on SurveyHero.
 6. Once it is done, download the translated versions from SH to local Markdown files using the `verifier` binary (`verifier download`), and check the translated Markdown diff. If the diff is ok, backport it back into the `surveys` repository with a PR.
 7. Remove access for the translation link before the survey starts!
@@ -61,14 +61,9 @@ After the survey finishes, we should generate a PDF with a report and a blog pos
 
 To do that, we first need to get the filtered data from the Rust Foundation staff. This comes in the form of two CSV files (one with aggregated answer counts per each question, and another that contains the specific answers per each respondent).
 
-To generate the PDF report and the blog post we use a Python script (e.g. `surveys/2023-annual-survey/report/main.py`) that extracts data from the CSV files and renders charts using the [`report`](report) Python library. You will thus need a Python environment:
+To generate the PDF report and the blog post we use a Python script (e.g. `surveys/YYYY/annual-survey/report/main.py`) that extracts data from the CSV files and renders charts using the [`report`](report) Python library. See documentation about this workflow under `./report/README.md`.
 
-```bash
-$ python3.8 -m venv venv
-$ source venv/bin/activate
-(venv) $ pip install -r report/requirements.txt
-(venv) $ pip install -U pillow # this might be needed if the code fails
-```
+Note: commit https://github.com/rust-lang/surveys/commit/1d04c635565a89e7efd6494843b8a2f7e7712151 broke the Python scripts to build the reports for year 2024 and earlier. The current version of the code will only build for year 2025 (and following). To build reports for year 2024 and earlier, you need to look into before that commit (sorry about that - patches to fix building old annual survey reports are welcome).
 
 #### Blog post
 To generate the blog post, copy the `main.py` file from the previous year, go through all questions and patch up the question IDs to match the contents of the actual survey (questions can move around, be added or removed, so it needs manual analysis). After the questions are patched, run the python script. Optionally with `--skip-pdf` to skip the PDF report generation.
