@@ -1,3 +1,4 @@
 target/
 answers.txt
 questions.*
+__pycache__/
