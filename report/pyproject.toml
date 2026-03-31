@@ -18,6 +18,4 @@ dependencies = [
     "wordcloud==1.9.3",
 ]
 
-optional-dependencies = [
-    "pudb>=2025.1.5",
-]
+optional-dependencies = { debug = ["pudb>=2025.1.5"] }
