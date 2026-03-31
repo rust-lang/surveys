@@ -6,65 +6,9 @@ Its goal is to help the Rust Infrastructure team understand what it should focus
 
 Please, answer only if you are a Rust Project member.
 
-### Your GitHub username
+The survey is anonymous, though you can optionally provide information about your GitHub username and Rust teams you are a part of.
 
-Type: free form (optional)
-
-### Teams you are part of
-
-Check all that apply.
-
-Type: select all that apply (optional)
-
-- book
-- bootstrap
-- cargo
-- clippy
-- codegen-c-maintainers
-- community
-- compiler
-- content
-- cookbook
-- crate-maintainers
-- crates-io
-- devtools
-- docker
-- docs-rs
-- edition
-- fls
-- foundation-board-project-directors
-- goals
-- internal-sites
-- lang
-- launching-pad
-- leadership-council
-- libs
-- mentorship
-- miri
-- mods
-- opsem
-- regex
-- release
-- rust-analyzer
-- rust-by-example
-- rustc-dev-guide
-- rustdoc
-- rustfmt
-- rustlings
-- rustup
-- security-response
-- social-media
-- spec
-- style
-- survey
-- testing-devex
-- triage
-- triagebot
-- twir
-- types
-- web-presence
-- website
-- Other (open response)
+## Satisfaction with Rust infrastructure
 
 ### How satisfied are you with the current state of Rust Infrastructure?
 
@@ -77,7 +21,7 @@ Type: select one (optional)
 - 3
 - 4
 
-### How satisfied are you with the support provided by the Infra team?
+### How satisfied are you with the support provided by the Rust Infra team?
 
 (1 = Very Dissatisfied, 4 = Very Satisfied)
 
@@ -91,6 +35,8 @@ Type: select one (optional)
 ### Please rate the following aspects of Rust Infrastructure
 
 (1 = Very Dissatisfied, 4 = Very Satisfied)
+
+If the given aspect is not relevant to you, you can skip rating it.
 
 Type: matrix (optional)
 
@@ -125,3 +71,67 @@ Type: free form (optional)
 ### Do you have any other comments or suggestions for the Rust Infrastructure team?
 
 Type: free form (optional)
+
+
+## Optional personal information
+
+### Your GitHub username
+
+Type: free form (optional)
+
+### Rust teams you are part of
+
+Check all that apply.
+
+Type: select all that apply (optional)
+
+- book
+- bootstrap
+- cargo
+- clippy
+- codegen-c-maintainers
+- community
+- compiler
+- content
+- cookbook
+- crate-maintainers
+- crates-io
+- devtools
+- docker
+- docs-rs
+- edition
+- fls
+- foundation-board-project-directors
+- goals
+- infra
+- internal-sites
+- lang
+- launching-pad
+- leadership-council
+- libs
+- mentorship
+- miri
+- mods
+- opsem
+- regex
+- release
+- rust-analyzer
+- rust-by-example
+- rustc-dev-guide
+- rustdoc
+- rustfmt
+- rustlings
+- rustup
+- security-response
+- social-media
+- spec
+- style
+- survey
+- testing-devex
+- triage
+- triagebot
+- twir
+- types
+- web-presence
+- website
+- Other (open response)
