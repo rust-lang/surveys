@@ -2,7 +2,7 @@
 
 This survey is organized by the Rust Infrastructure Team.
 
-Its goal is to help the Rust Infrastructure team understand what it should focus on next.
+Its goal is to help the Rust Infrastructure Team understand what to focus on next.
 
 Please, answer only if you are a Rust Project member.
 
@@ -21,7 +21,7 @@ Type: select one (optional)
 - 3
 - 4
 
-### How satisfied are you with the support provided by the Rust Infra team?
+### How satisfied are you with the support provided by the Rust Infrastructure Team?
 
 (1 = Very Dissatisfied, 4 = Very Satisfied)
 
