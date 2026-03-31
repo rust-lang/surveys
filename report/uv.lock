@@ -681,10 +681,14 @@ dependencies = [
     { name = "pandas" },
     { name = "pillow" },
     { name = "plotly" },
-    { name = "pudb" },
     { name = "pyarrow" },
     { name = "tqdm" },
     { name = "wordcloud" },
+]
+
+[package.optional-dependencies]
+debug = [
+    { name = "pudb" },
 ]
 
 [package.metadata]
@@ -697,11 +701,12 @@ requires-dist = [
     { name = "pandas", specifier = "==2.3.1" },
     { name = "pillow", specifier = ">=11.3.0" },
     { name = "plotly", specifier = ">=6" },
-    { name = "pudb", specifier = ">=2025.1.5" },
+    { name = "pudb", marker = "extra == 'debug'", specifier = ">=2025.1.5" },
     { name = "pyarrow", specifier = "==21.0.0" },
     { name = "tqdm", specifier = "==4.66.1" },
     { name = "wordcloud", specifier = "==1.9.3" },
 ]
+provides-extras = ["debug"]
 
 [[package]]
 name = "six"
