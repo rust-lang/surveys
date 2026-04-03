@@ -262,7 +262,7 @@ def analyze(including_secret_data: bool) -> ChartReport:
     report.add_bar_chart(
         "what-are-you-using-debuggers-for",
         db.q_simple_multi(debugger_used_for).rename_answers(
-            debugger_used_for_diff  # ty:ignore[invalid-argument-type] I think this is a mistake in the type signature of the method.
+            debugger_used_for_diff  # ty:ignore[invalid-argument-type] TODO: I think this is a mistake in the type signature of `SimpleQuestion.rename_answers`.
         ),
         xaxis_tickangle=45,
     )
