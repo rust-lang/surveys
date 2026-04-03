@@ -434,9 +434,8 @@ def analyze(including_secret_data: bool) -> ChartReport:
         xaxis_tickangle=45,
     )
 
-    final_open = db.open_answers_raw(
-        "Is there anything else you would like to tell us about debugging support in Rust?"
-    )
+    final_open_question = "Is there anything else you would like to tell us about debugging support in Rust?"
+    final_open = db.open_answers_raw(final_open_question)
     with open(
         Path(__file__).parent / "open-response-final-anything-else.txt", "w"
     ) as f:
@@ -448,7 +447,7 @@ def analyze(including_secret_data: bool) -> ChartReport:
     # maybe add_wordcloud should be patched to allow overriding this?
     report.add_wordcloud(
         "is-there-anything-else-you-would-like-to-tell-us-about-debugging-support-in-rust-wordcloud",
-        db.open_answers(visualizer_attribute_avoided),
+        db.open_answers(final_open_question),
     )
 
     return report
