@@ -116,7 +116,7 @@ def inspect_open_answers(answers: List[str]):
 # on `is_simple` to ensure both questions are the same kind, which only really
 # works if there are only two kinds of question. There seem to be a lot of
 # mistakes of this variety in the report library itself, where the `Question`
-# type is treated as through `MatrixQuestion` does not exist. Maybe those should
+# type is treated as though `MatrixQuestion` does not exist. Maybe those should
 # be fixed?
 def assert_same(q_summary: Question, q_answers: Question):
     assert q_summary.question == q_answers.question
