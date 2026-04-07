@@ -341,8 +341,6 @@ def analyze() -> ChartReport:
         db.q_simple_single(step_through_issues_bool),
     )
 
-    # TODO: Could these be relabeled without the leading "When" and trailing
-    # "are involved" without confusing people?
     step_through_issues_when = "When do you experience issues with trying to step through code with your debugger?"
     report.add_bar_chart(
         "when-do-you-experience-issues-with-trying-to-step-through-code-with-your-debugger",
