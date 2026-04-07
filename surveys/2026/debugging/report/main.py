@@ -324,10 +324,6 @@ def analyze() -> ChartReport:
 
     report = ChartReport()
 
-    # TODO: Should this be a bar chart instead? One of the responses makes up a
-    # very small percentage of the total responses, so the label is very small.
-    # On the one hand, this hurts readability. On the other hand, I feel like a
-    # pie chart does a very good job of visually conveying the data.
     expertise = "How would you rate your Rust expertise?"
     report.add_pie_chart(
         "how-would-you-rate-your-rust-expertise",
