@@ -435,10 +435,6 @@ def analyze() -> ChartReport:
         ),
     )
 
-    # TODO: Some of the most prominent words produced in the wordcloud are very
-    # generic, especially given the context of the survey and question ("use",
-    # "debugger", "debugging", etc.). Is this something we want to filter for?
-    # If so, how should we go about it?
     other_debuggers = "What other debuggers or workflows do you use?"
     other_debuggers_responses = db.open_answers_raw(other_debuggers)
     with open(
@@ -468,9 +464,6 @@ def analyze() -> ChartReport:
     ) as f:
         for answer in debugger_used_for_responses:
             f.write(f"{answer}\n---\n\n")
-    # TODO: Similarly to the previous wordcloud related TODO, does it really
-    # provide any value to know that one of the most prominent words in answers
-    # to a question about "what you use debuggers for" is "debugging"?
     report.add_wordcloud(
         "what-are-you-using-debuggers-for-wordcloud",
         db.open_answers(debugger_used_for),
@@ -523,9 +516,6 @@ def analyze() -> ChartReport:
     ) as f:
         for answer in debugger_difficulties_responses:
             f.write(f"{answer}\n---\n\n")
-    # TODO: Similarly to the previous wordcloud related TODO, does it really
-    # provide any value to know that one of the most prominent words in answers
-    # to a question about "why you don't use debuggers" is "debugger"?
     report.add_wordcloud(
         "when-you-dont-use-a-debugger-why-dont-you-wordcloud",
         db.open_answers(debugger_difficulties),
@@ -552,10 +542,6 @@ def analyze() -> ChartReport:
     ) as f:
         for answer in step_through_issues_when_responses:
             f.write(f"{answer}\n---\n\n")
-    # TODO: Similarly to the previous wordcloud related TODO, does it really
-    # provide any value to know that one of the most prominent words in answers
-    # to a question about "when you experience issues stepping through code with
-    # your debugger" is "debugger"?
     report.add_wordcloud(
         "when-do-you-experience-issues-with-trying-to-step-through-code-with-your-debugger-wordcloud",
         db.open_answers(step_through_issues_when),
@@ -613,10 +599,6 @@ def analyze() -> ChartReport:
     ) as f:
         for answer in visualizer_attribute_avoided_responses:
             f.write(f"{answer}\n---\n\n")
-    # TODO: Similarly to most of the previous wordcloud related TODOs, does it
-    # really provide any value to know that some of the most prominent words in
-    # answers to a question about "why you don't use the debugger visualizer
-    # attribute" are "debugger", "visualiser", "script", and "use"?
     report.add_wordcloud(
         "why-dont-you-use-the-debugger-visualizer-attribute-wordcloud",
         db.open_answers(visualizer_attribute_avoided),
