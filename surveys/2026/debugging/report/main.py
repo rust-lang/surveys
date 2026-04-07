@@ -39,6 +39,7 @@ try:
         SimpleQuestion,
         SurveyFullAnswers,
         SurveySummary,
+        normalize_open_answers,
     )
 except ModuleNotFoundError:
     from surveyhero.parser import (  # ty:ignore[unresolved-import]
@@ -56,6 +57,7 @@ except ModuleNotFoundError:
         SimpleQuestion,
         SurveyFullAnswers,
         SurveySummary,
+        normalize_open_answers,
     )
 
 
@@ -279,12 +281,15 @@ def analyze() -> ChartReport:
     )
 
     multilingual = "Do you debug programs that combine Rust with any of the following languages?"
+    multilingual_open = normalize_open_answers(db.open_answers(multilingual))
     report.add_bar_chart(
         "do-you-debug-programs-that-combine-rust-with-any-of-the-following-languages",
-        db.q_simple_multi(multilingual),
+        db.q_simple_multi(multilingual).add_open(
+            multilingual_open, "assembly", "Assembly"
+        ),
         xaxis_tickangle=45,
     )
-    multilingual_responses = db.open_answers(multilingual)
+    multilingual_responses = multilingual_open
     with open(
         Path(__file__).parent / "open-response-multilingual.txt", "w"
     ) as f:
@@ -292,7 +297,7 @@ def analyze() -> ChartReport:
             f.write(f"{answer}\n---\n\n")
     report.add_wordcloud(
         "do-you-debug-programs-that-combine-rust-with-any-of-the-following-languages-wordcloud",
-        db.open_answers(multilingual),
+        multilingual_open,
     )
 
     # Because the answers to the question ended in periods, the report library
