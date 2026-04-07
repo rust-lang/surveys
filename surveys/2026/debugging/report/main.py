@@ -2,9 +2,12 @@ import random
 import sys
 from collections import defaultdict
 from pathlib import Path
-from typing import List
+from typing import List, Optional
 
 import numpy as np
+import pandas as pd
+import plotly.express as px
+from plotly.graph_objs import Figure
 
 ROOT_DIR = Path(__file__).absolute().parent.parent.parent.parent.parent
 """
@@ -26,6 +29,7 @@ sys.path.insert(0, str(REPORT_SCRIPT_DIR))
 # find a way to set things up in the project such that imports "just work", at
 # runtime and in editors, without dynamically adding the import path.
 try:
+    from report.surveyhero.chart import format_title, wrap_text
     from report.surveyhero.parser import (
         parse_surveyhero_answers,
         parse_surveyhero_summary,
@@ -42,6 +46,10 @@ try:
         normalize_open_answers,
     )
 except ModuleNotFoundError:
+    from surveyhero.chart import (  # ty:ignore[unresolved-import]
+        format_title,
+        wrap_text,
+    )
     from surveyhero.parser import (  # ty:ignore[unresolved-import]
         parse_surveyhero_answers,
         parse_surveyhero_summary,
@@ -111,6 +119,170 @@ def inspect_open_answers(answers: List[str]):
     items = sorted(normalized.items(), key=lambda x: x[1], reverse=True)
     for value, count in items:
         print(f"{value}: {count}")
+
+
+def make_easy_matrix_df(
+    question: Question,
+    response_label: str = "Response",
+    category_label: str = "Category",
+    max_label_width: int = 20,
+) -> tuple[pd.DataFrame, list[str], list[str]]:
+    assert isinstance(question.kind, MatrixQuestion)
+
+    items = question.kind.answer_groups.items()
+    items = [
+        (wrap_text(group, max_width=max_label_width), value)
+        for (group, value) in items
+    ]
+
+    response_total: dict[str, int] = {}
+    category_total: dict[str, int] = {}
+    data = defaultdict(list)
+    for _, levels in items:
+        for answer in levels:
+            if answer.answer not in response_total:
+                response_total[answer.answer] = 0
+            response_total[answer.answer] += answer.count
+    for category, levels in items:
+        category_total[category] = sum(answer.count for answer in levels)
+        for answer in levels:
+            data[category_label].append(category)
+            data[response_label].append(answer.answer)
+            pair = f"({category}, {answer.answer})"
+            data["Pair"].append(pair)
+
+            response_out_of_category = (
+                answer.count / category_total[category]
+            ) * 100
+            category_out_of_response = (
+                answer.count / response_total[answer.answer]
+            ) * 100
+            pair_out_of_total = (answer.count / question.total_responses) * 100
+            data["Count"].append(answer.count)
+            data[f"Percent ({response_label} out of {category_label})"].append(
+                f"{response_out_of_category:.2f}%"
+            )
+            data[f"Percent ({category_label} out of {response_label})"].append(
+                f"{category_out_of_response:.2f}%"
+            )
+            data["Percent (Pair out of Total)"].append(
+                f"{pair_out_of_total:.2f}%"
+            )
+
+    category_keys = sorted(
+        category_total.keys(), key=lambda k: category_total[k], reverse=True
+    )
+
+    response_keys = sorted(
+        response_total.keys(), key=lambda k: response_total[k], reverse=True
+    )
+
+    df = pd.DataFrame(data)
+    return (df, category_keys, response_keys)
+
+
+def matrix_category_by_response(
+    question: Question,
+    response_label: str = "Response",
+    category_label: str = "Category",
+    height: Optional[int] = None,
+    horizontal: bool = False,
+    max_label_width: int = 20,
+) -> Figure:
+    (df, category_keys, _response_keys) = make_easy_matrix_df(
+        question, response_label, category_label, max_label_width
+    )
+
+    keys = dict(x="Count", y=category_label)
+    if not horizontal:
+        keys = dict(y="Count", x=category_label)
+
+    if height is None:
+        if horizontal:
+            height = 600
+        else:
+            height = 1000
+
+    fig = px.bar(
+        df,
+        **keys,
+        color=response_label,
+        text=f"Percent ({response_label} out of {category_label})",
+        category_orders={category_label: category_keys},
+        title=format_title(question),
+        height=height,
+    )
+
+    return fig
+
+
+def matrix_response_by_category(
+    question: Question,
+    response_label: str = "Response",
+    category_label: str = "Category",
+    height: Optional[int] = None,
+    horizontal: bool = False,
+    max_label_width=20,
+) -> Figure:
+    (df, _category_keys, response_keys) = make_easy_matrix_df(
+        question, response_label, category_label, max_label_width
+    )
+
+    keys = dict(x="Count", y=response_label)
+    if not horizontal:
+        keys = dict(y="Count", x=response_label)
+
+    if height is None:
+        if horizontal:
+            height = 600
+        else:
+            height = 1000
+
+    fig = px.bar(
+        df,
+        **keys,
+        color=category_label,
+        text=f"Percent ({category_label} out of {response_label})",
+        category_orders={response_label: response_keys},
+        title=format_title(question),
+        height=height,
+    )
+
+    return fig
+
+
+def matrix_top_n(
+    question: Question,
+    n: int,
+    response_label: str = "Response",
+    category_label: str = "Category",
+    height: Optional[int] = None,
+    horizontal: bool = False,
+    max_label_width: int = 20,
+) -> Figure:
+    (df, _category_keys, _response_keys) = make_easy_matrix_df(
+        question, response_label, category_label, max_label_width
+    )
+
+    keys = dict(x="Count", y="Pair")
+    if not horizontal:
+        keys = dict(y="Count", x="Pair")
+
+    if height is None:
+        if horizontal:
+            height = 600
+        else:
+            height = 1000
+
+    fig = px.bar(
+        df.sort_values(by=["Count"], ascending=False).head(n),
+        **keys,
+        text="Percent (Pair out of Total)",
+        title=format_title(question),
+        height=height,
+    )
+
+    return fig
 
 
 # TODO: The original copied version of this function assumed any `Question.kind`
@@ -223,6 +395,7 @@ def analyze() -> ChartReport:
     # are, I think it'd be "Of all responses for 'Debugger', X% of users did so
     # on 'OS'".
     os_and_debugger = "What tools and workflows do you use to debug Rust programs on which operating systems?"
+    os_and_debugger_question = summary.q_by_text(os_and_debugger)
     report.add_matrix_chart(
         "what-tools-and-workflows-do-you-use-to-debug-rust-programs-on-which-operating-systems",
         summary.q_by_text(os_and_debugger),
@@ -236,6 +409,33 @@ def analyze() -> ChartReport:
         legend_params=dict(
             orientation="h",
             y=-0.05,
+        ),
+    )
+    n = 10
+    report.add_custom_chart(
+        f"what-tools-and-workflows-do-you-use-to-debug-rust-programs-on-which-operating-systems-top-{n}",
+        lambda **_kwargs: matrix_top_n(
+            os_and_debugger_question,
+            n,
+            response_label="OS",
+            category_label="Debugger",
+            horizontal=True,
+        ),
+    )
+    report.add_custom_chart(
+        "what-tools-and-workflows-do-you-use-to-debug-rust-programs-on-which-operating-systems-debugger-by-os",
+        lambda **_kwargs: matrix_category_by_response(
+            os_and_debugger_question,
+            response_label="OS",
+            category_label="Debugger",
+        ),
+    )
+    report.add_custom_chart(
+        "what-tools-and-workflows-do-you-use-to-debug-rust-programs-on-which-operating-systems-os-by-debugger",
+        lambda **_kwargs: matrix_response_by_category(
+            os_and_debugger_question,
+            response_label="OS",
+            category_label="Debugger",
         ),
     )
 
