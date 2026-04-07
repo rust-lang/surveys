@@ -138,9 +138,7 @@ def assert_same(q_summary: Question, q_answers: Question):
     assert q_summary.is_single_answer() == q_answers.is_single_answer()
 
 
-# TODO: including_secret_data is currently unused. Figure out what information
-# qualifies as "secret data" and decide if it can be removed.
-def analyze(including_secret_data: bool) -> ChartReport:
+def analyze() -> ChartReport:
     summary = parse_surveyhero_summary(
         Path(ROOT_DIR / "data/2026/debugging-summary.csv"), year=2026
     )
@@ -457,7 +455,7 @@ if __name__ == "__main__":
     random.seed(0x0D15EA5E)
     np.random.seed(0x0D15EA5E)
 
-    report = analyze(including_secret_data=False)
+    report = analyze()
 
     render_report_to_pdf(
         report,
