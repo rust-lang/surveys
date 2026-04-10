@@ -2,3 +2,4 @@ target/
 answers.txt
 __pycache__/
 /data/
+.env
