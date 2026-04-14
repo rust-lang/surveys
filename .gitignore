@@ -3,3 +3,4 @@ answers.txt
 __pycache__/
 /data/
 .env
+/open_responses/
