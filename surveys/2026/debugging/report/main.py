@@ -21,6 +21,13 @@ This is typically the directory that contains `.venv` after `uv sync`, and is
 also typically where the `pyproject.toml` is contained.
 """
 
+OPEN_RESPONSES_DIR = ROOT_DIR / "open_responses/2026/debugging"
+"""
+This should resolve to the path of the directory used to store open response
+answers extracted from the raw data. Typically, this is the `open_responses`
+directory at the repository root or some path within.
+"""
+
 sys.path.insert(0, str(REPORT_SCRIPT_DIR))
 
 # TODO: At runtime, only the `surveyhero.*` imports work. In my editor (VSCodium
@@ -322,6 +329,8 @@ def analyze() -> ChartReport:
         summary=summary,
     )
 
+    OPEN_RESPONSES_DIR.mkdir(parents=True, exist_ok=True)
+
     report = ChartReport()
 
     expertise = "How would you rate your Rust expertise?"
@@ -437,9 +446,7 @@ def analyze() -> ChartReport:
 
     other_debuggers = "What other debuggers or workflows do you use?"
     other_debuggers_responses = db.open_answers_raw(other_debuggers)
-    with open(
-        Path(__file__).parent / "open-response-other-debuggers.txt", "w"
-    ) as f:
+    with open(OPEN_RESPONSES_DIR / "other-debuggers.txt", "w") as f:
         for answer in other_debuggers_responses:
             f.write(f"{answer}\n---\n\n")
     report.add_wordcloud(
@@ -459,9 +466,7 @@ def analyze() -> ChartReport:
         xaxis_tickangle=45,
     )
     debugger_used_for_responses = db.open_answers(debugger_used_for)
-    with open(
-        Path(__file__).parent / "open-response-debugger-used-for.txt", "w"
-    ) as f:
+    with open(OPEN_RESPONSES_DIR / "debugger-used-for.txt", "w") as f:
         for answer in debugger_used_for_responses:
             f.write(f"{answer}\n---\n\n")
     report.add_wordcloud(
@@ -479,9 +484,7 @@ def analyze() -> ChartReport:
         xaxis_tickangle=45,
     )
     multilingual_responses = multilingual_open
-    with open(
-        Path(__file__).parent / "open-response-multilingual.txt", "w"
-    ) as f:
+    with open(OPEN_RESPONSES_DIR / "multilingual.txt", "w") as f:
         for answer in multilingual_responses:
             f.write(f"{answer}\n---\n\n")
     report.add_wordcloud(
@@ -511,9 +514,7 @@ def analyze() -> ChartReport:
         xaxis_tickangle=45,
     )
     debugger_difficulties_responses = db.open_answers(debugger_difficulties)
-    with open(
-        Path(__file__).parent / "open-response-debugger-difficulties.txt", "w"
-    ) as f:
+    with open(OPEN_RESPONSES_DIR / "debugger-difficulties.txt", "w") as f:
         for answer in debugger_difficulties_responses:
             f.write(f"{answer}\n---\n\n")
     report.add_wordcloud(
@@ -537,7 +538,7 @@ def analyze() -> ChartReport:
         step_through_issues_when
     )
     with open(
-        Path(__file__).parent / "open-response-step-through-issues-when.txt",
+        OPEN_RESPONSES_DIR / "step-through-issues-when.txt",
         "w",
     ) as f:
         for answer in step_through_issues_when_responses:
@@ -555,9 +556,7 @@ def analyze() -> ChartReport:
         "What standard library types are hard to work with when debugging?"
     )
     std_lib_pain_responses = db.open_answers_raw(std_lib_pain)
-    with open(
-        Path(__file__).parent / "open-response-std-lib-pain.txt", "w"
-    ) as f:
+    with open(OPEN_RESPONSES_DIR / "std-lib-pain.txt", "w") as f:
         for answer in std_lib_pain_responses:
             f.write(f"{answer}\n---\n\n")
     report.add_wordcloud(
@@ -593,8 +592,7 @@ def analyze() -> ChartReport:
         visualizer_attribute_avoided
     )
     with open(
-        Path(__file__).parent
-        / "open-response-visualizer-attribute-avoided.txt",
+        OPEN_RESPONSES_DIR / "visualizer-attribute-avoided.txt",
         "w",
     ) as f:
         for answer in visualizer_attribute_avoided_responses:
@@ -615,9 +613,7 @@ def analyze() -> ChartReport:
 
     final_open_question = "Is there anything else you would like to tell us about debugging support in Rust?"
     final_open = db.open_answers_raw(final_open_question)
-    with open(
-        Path(__file__).parent / "open-response-final-anything-else.txt", "w"
-    ) as f:
+    with open(OPEN_RESPONSES_DIR / "final-anything-else.txt", "w") as f:
         for answer in final_open:
             f.write(f"{answer}\n---\n\n")
     # TODO: When making a wordcloud, the report automatically titles it,
