@@ -39,7 +39,7 @@ Type: select one (required)
 
 Note that these are the top-level teams for lack of better project "areas". Select "I don't know" if you don't know which top-level team(s) represent the team(s) that you are a part of.
 
-Type: select one or more (optional)
+Type: select all that apply (optional)
 
 - Compiler
 - Dev Tools
@@ -62,14 +62,13 @@ Type: select one (optional)
 - Unsure
 - Disagree
 - Strongly Disagree
-- Not enough information to comment.
+- Not enough information to comment
 
 ## Leadership Council Effectiveness
 
-We would like your input on how well is the Council performing its [duties], as outlined by
-RFC 3392.
+We would like your input on how well is the Council performing its [duties], as outlined by [RFC 3392](https://rust-lang.github.io/rfcs/3392-leadership-council.html).
 
-Here are a few highlights from our past year's work:
+**Here are a few highlights from our past year's work:**
 
 - We hired a second Program Manager (Nurzhan) and set aside funds to renew the contract of the first PM (Tomáš).
 - We allocated $100k for travel grants, most of which was spent on RustWeek and the 2026 All Hands.
@@ -80,10 +79,10 @@ Here are a few highlights from our past year's work:
 
 You may want to (re)read the last ~year of regular updates from the Council to learn more:
 
-* [2025 Q2](https://blog.rust-lang.org/inside-rust/2025/06/11/leadership-council-update/)
-* [2025 Q3](https://blog.rust-lang.org/inside-rust/2025/09/10/leadership-council-update/)
-* [2025 Q4](https://blog.rust-lang.org/inside-rust/2025/12/10/leadership-council-update/)
-* [2026 Q1](https://blog.rust-lang.org/inside-rust/2026/04/06/leadership-council-update/)
+- [2025 Q2](https://blog.rust-lang.org/inside-rust/2025/06/11/leadership-council-update/)
+- [2025 Q3](https://blog.rust-lang.org/inside-rust/2025/09/10/leadership-council-update/)
+- [2025 Q4](https://blog.rust-lang.org/inside-rust/2025/12/10/leadership-council-update/)
+- [2026 Q1](https://blog.rust-lang.org/inside-rust/2026/04/06/leadership-council-update/)
 
 See also our current [budget](https://github.com/rust-lang/leadership-council/blob/main/minutes/sync-meeting/2026-06-05.md#budget-report).
 
@@ -93,12 +92,10 @@ See also our current [budget](https://github.com/rust-lang/leadership-council/bl
 
 Did we perform the following duty well in the past year?
 
-> Identifying, prioritizing, and tracking work that goes undone due to lack of
-> clear ownership (and not due to the owners’ explicit de-prioritization,
-> placement in a backlog, etc.).
->
-> Delegating this work, potentially establishing new (and possibly temporary)
-> teams to own this work.
+*Identifying, prioritizing, and tracking work that goes undone due to lack of
+clear ownership (and not due to the owners’ explicit de-prioritization,
+placement in a backlog, etc.). Delegating this work, potentially establishing new (and possibly temporary)
+teams to own this work.*
 
 Type: select one (optional)
 
@@ -107,13 +104,13 @@ Type: select one (optional)
 - Unsure
 - Disagree
 - Strongly Disagree
-- Not enough information to comment.
+- Not enough information to comment
 
 ### Project-wide coordination
 
 Did we perform the following duty well in the past year?
 
-> Coordinating Project-wide changes to teams, structures, or processes.
+*Coordinating Project-wide changes to teams, structures, or processes.*
 
 Type: select one (optional)
 
@@ -122,14 +119,13 @@ Type: select one (optional)
 - Unsure
 - Disagree
 - Strongly Disagree
-- Not enough information to comment.
+- Not enough information to comment
 
 ### Accountability
 
 Did we perform the following duty well in the past year?
 
-> Ensuring top-level teams are accountable to their purviews, to other teams,
-> and to the Project.
+*Ensuring top-level teams are accountable to their purviews, to other teams, and to the Project.*
 
 Type: select one (optional)
 
@@ -138,14 +134,13 @@ Type: select one (optional)
 - Unsure
 - Disagree
 - Strongly Disagree
-- Not enough information to comment.
+- Not enough information to comment
 
 ### Providing resources for teams
 
 Did we perform the following duty well in the past year?
 
-> Ensuring where possible that teams have the people and resources they need to
-> accomplish their work.
+*Ensuring where possible that teams have the people and resources they need to accomplish their work.*
 
 Type: select one (optional)
 
@@ -154,14 +149,13 @@ Type: select one (optional)
 - Unsure
 - Disagree
 - Strongly Disagree
-- Not enough information to comment.
+- Not enough information to comment
 
 ### Taking official positions
 
 Did we perform the following duty well in the past year?
 
-> Establishing the official position, opinion, or will of the Rust Project as a
-> whole. 
+*Establishing the official position, opinion, or will of the Rust Project as a whole.*
 
 Type: select one (optional)
 
@@ -170,7 +164,7 @@ Type: select one (optional)
 - Unsure
 - Disagree
 - Strongly Disagree
-- Not enough information to comment.
+- Not enough information to comment
 
 ## General feedback
 
