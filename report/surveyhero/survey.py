@@ -308,10 +308,6 @@ class SurveyFullAnswers:
                 return [answer for answer in answer_data if answer not in known_answers]
             else:
                 answer_data = self.get_answer_columns(col, answer_count=None)
-                answer_data = answer_data.rename(columns={
-                    k: normalize_answer_other(k)
-                    for k in answer_data.columns.values
-                })
                 return list(answer_data["Other"].dropna())
         else:
             return list(col.data.dropna())
@@ -358,7 +354,13 @@ class SurveyFullAnswers:
             else:
                 raise Exception(f"Unsupported question type: {ref_question}")
 
-        return self.df.iloc[:, col.index + 1:col.index + 1 + answer_count]
+        df = self.df.iloc[:, col.index + 1:col.index + 1 + answer_count]
+        df = df.rename(columns={
+            k: normalize_duplicated_column(k)
+            for k in df.columns.values
+        })
+        return df
+
 
     def get_column(self, question_or_id: int | str) -> Column:
         if isinstance(question_or_id, int):
@@ -385,7 +387,7 @@ class SurveyFullAnswers:
             assert isinstance(ref_question.kind, SimpleQuestion)
             answer_map = {a.answer: i for (i, a) in enumerate(ref_question.kind.answers)}
 
-        answers = [(normalize_answer_other(str(answer)), count) for (answer, count) in
+        answers = [(normalize_duplicated_column(str(answer)), count) for (answer, count) in
                    counts.items()]
         for (index, (answer, _)) in enumerate(answers):
             if answer not in answer_map:
@@ -394,18 +396,16 @@ class SurveyFullAnswers:
         return [Answer(answer=str(answer), count=count) for (answer, count) in answers]
 
 
-OTHER_REGEX = re.compile("^Other(\.\d+)?$")
+RENUMBERED_ANSWER_REGEX = re.compile("^(.*\D)\.\d+$")
 
 
-def normalize_answer_other(answer: str) -> str:
-    if OTHER_REGEX.match(answer) is not None:
-        return "Other"
+def normalize_duplicated_column(answer: str) -> str:
+    match = RENUMBERED_ANSWER_REGEX.match(answer)
+    if match is not None:
+        return match.group(1)
     if answer.startswith("Other "):
         return "Other"
     return answer
-
-
-RENUMBERED_ANSWER_REGEX = re.compile("^(.+?)\.\d+$")
 
 
 def normalize_answers(ref_question: Question, answer_data: pd.DataFrame) -> pd.DataFrame:
