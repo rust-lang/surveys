@@ -419,10 +419,13 @@ def normalize_answers(ref_question: Question, answer_data: pd.DataFrame) -> pd.D
     `<answer.2>`, etc. by pandas.
     If we have the reference question available, try to normalize the answers based on it.
     """
+    from .parser import normalize_answer
+
     answers: Set[str] = set(answer.answer for answer in ref_question.kind.answers)
     data = defaultdict(list)
     for col in answer_data.columns:
         answer_col = answer_data[col]
+        col = normalize_answer(col)
         if col not in answers:
             match = RENUMBERED_ANSWER_REGEX.match(col)
             if match:
