@@ -185,6 +185,18 @@ class Question:
             kind=self.kind
         )
 
+    def with_kind(self, kind: QuestionKind) -> "Question":
+        return Question(
+            id=self.id,
+            year=self.year,
+            question=self.question,
+            total_responses=self.total_responses,
+            kind=kind
+        )
+
+    def shallow_copy(self) -> "Question":
+        return dataclasses.replace(self)
+
 
 def rating_to_simple_question(question: Question) -> Question:
     assert isinstance(question.kind, RatingQuestion)
