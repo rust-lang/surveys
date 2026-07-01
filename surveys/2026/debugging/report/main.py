@@ -21,24 +21,53 @@ also typically where the `pyproject.toml` is contained.
 
 sys.path.insert(0, str(REPORT_SCRIPT_DIR))
 
-from surveyhero.analysis import at_least_one_col
-from surveyhero.chart import (
-    make_chart,
-)
-from surveyhero.parser import (
-    parse_surveyhero_answers,
-    parse_surveyhero_summary,
-)
-from surveyhero.render import (
-    render_report_to_pdf,
-)
-from surveyhero.report import ChartReport
-from surveyhero.survey import (
-    Answer,
-    SimpleQuestion,
-    normalize_open_answers,
-)
-from surveyhero.utils import shorten_annotations
+# TODO: At runtime, only the `surveyhero.*` imports work. In my editor (VSCodium
+# + `ty` extension), only the `report.surveyhero.*` imports work. The below hack
+# is ugly, but it gets me the best of both worlds. Ideally, I think we should
+# find a way to set things up in the project such that imports "just work", at
+# runtime and in editors, without dynamically adding the import path.
+try:
+    from report.surveyhero.analysis import at_least_one_col
+    from report.surveyhero.chart import (
+        make_chart,
+    )
+    from report.surveyhero.parser import (
+        parse_surveyhero_answers,
+        parse_surveyhero_summary,
+    )
+    from report.surveyhero.render import (
+        render_report_to_pdf,
+    )
+    from report.surveyhero.report import ChartReport
+    from report.surveyhero.survey import (
+        Answer,
+        SimpleQuestion,
+        normalize_open_answers,
+    )
+    from report.surveyhero.utils import shorten_annotations
+except ModuleNotFoundError:
+    from surveyhero.analysis import (  # ty:ignore[unresolved-import]
+        at_least_one_col,
+    )
+    from surveyhero.chart import (  # ty:ignore[unresolved-import]
+        make_chart,
+    )
+    from surveyhero.parser import (  # ty:ignore[unresolved-import]
+        parse_surveyhero_answers,
+        parse_surveyhero_summary,
+    )
+    from surveyhero.render import (  # ty:ignore[unresolved-import]
+        render_report_to_pdf,
+    )
+    from surveyhero.report import ChartReport  # ty:ignore[unresolved-import]
+    from surveyhero.survey import (  # ty:ignore[unresolved-import]
+        Answer,
+        SimpleQuestion,
+        normalize_open_answers,
+    )
+    from surveyhero.utils import (  # ty:ignore[unresolved-import]
+        shorten_annotations,
+    )
 
 
 def analyze() -> ChartReport:
