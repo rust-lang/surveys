@@ -457,6 +457,8 @@ def make_chart(
     """
     Expects a long DataFrame.
     """
+    x_name = "x"
+    y_name = "y"
     if kind == "scatter":
         func = px.scatter
     elif kind == "box":
@@ -467,15 +469,20 @@ def make_chart(
         func = px.bar
     elif kind == "cdf":
         func = px.ecdf
+    elif kind == "pie":
+        func = px.pie
+        x_name = "names"
+        y_name = "values"
     else:
         raise Exception(f"Unknown chart kind `{kind}`")
 
     assert x is not None or y is not None
 
+    chart_kwargs[x_name] = x
+    chart_kwargs[y_name] = y
+
     fig = func(
         df,
-        x=x,
-        y=y,
         title=format_title(question),
         height=height,
         **chart_kwargs
