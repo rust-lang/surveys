@@ -21,11 +21,10 @@ also typically where the `pyproject.toml` is contained.
 
 sys.path.insert(0, str(REPORT_SCRIPT_DIR))
 
+from surveyhero.analysis import at_least_one_col
 from surveyhero.chart import (
     make_chart,
 )
-from surveyhero.analysis import at_least_one_col
-from surveyhero.utils import shorten_annotations
 from surveyhero.parser import (
     parse_surveyhero_answers,
     parse_surveyhero_summary,
@@ -35,9 +34,11 @@ from surveyhero.render import (
 )
 from surveyhero.report import ChartReport
 from surveyhero.survey import (
+    Answer,
     SimpleQuestion,
-    normalize_open_answers, Answer,
+    normalize_open_answers,
 )
+from surveyhero.utils import shorten_annotations
 
 
 def analyze() -> ChartReport:
@@ -79,31 +80,37 @@ def analyze() -> ChartReport:
 
     do_you_use_debugger_df = {
         "use": db.df[debugger_user],
-        "expertise": db.df[expertise]
+        "expertise": db.df[expertise],
     }
     do_you_use_debugger_df = pd.DataFrame(do_you_use_debugger_df)
     do_you_use_debugger_df = do_you_use_debugger_df.dropna()
 
     def draw_debugger_usage_per_rust_expertise() -> Figure:
-        fig = make_chart(do_you_use_debugger_q.with_title(lambda t: f"{t} (based on expertise)"),
-                         do_you_use_debugger_df,
-                         x="use",
-                         kind="pie",
-                         facet_col="expertise",
-                         category_orders={
-                             "expertise": ["Beginner", "Intermediate", "Advanced"],
-                             "use": ["No, I have never used debuggers in Rust",
-                                     "No, I don't currently use debuggers in Rust, but I have in the past",
-                                     "Yes"]
-                         },
-                         height=450)
-        fig.update_layout(legend=dict(
-            orientation="h"
-        ))
+        fig = make_chart(
+            do_you_use_debugger_q.with_title(
+                lambda t: f"{t} (based on expertise)"
+            ),
+            do_you_use_debugger_df,
+            x="use",
+            kind="pie",
+            facet_col="expertise",
+            category_orders={
+                "expertise": ["Beginner", "Intermediate", "Advanced"],
+                "use": [
+                    "No, I have never used debuggers in Rust",
+                    "No, I don't currently use debuggers in Rust, but I have in the past",
+                    "Yes",
+                ],
+            },
+            height=450,
+        )
+        fig.update_layout(legend=dict(orientation="h"))
         return shorten_annotations(fig)
 
-    report.add_custom_chart("do-you-use-debuggers-in-rust-per-expertise",
-                            draw_debugger_usage_per_rust_expertise)
+    report.add_custom_chart(
+        "do-you-use-debuggers-in-rust-per-expertise",
+        draw_debugger_usage_per_rust_expertise,
+    )
 
     debugger_user_past = "Did you use debuggers in Rust?"
     report.add_pie_chart(
@@ -115,7 +122,8 @@ def analyze() -> ChartReport:
     report.add_pie_chart(
         "were-issues-with-debugging-support-the-primary-reason-why-you-stopped-using-rust",
         db.q_simple_single(quit_because_of_debuggers).with_title(
-            lambda t: t.replace("reason why", "reason\nwhy")),
+            lambda t: t.replace("reason why", "reason\nwhy")
+        ),
     )
 
     other_languages_diff = {
@@ -134,12 +142,16 @@ def analyze() -> ChartReport:
     os_and_debugger_q = summary.q_by_text(os_and_debugger)
 
     # Combined answers throughout all OSes
-    answer_count = len(next(iter(os_and_debugger_q.kind.answer_groups.values())))
+    answer_count = len(
+        next(iter(os_and_debugger_q.kind.answer_groups.values()))
+    )
     keys = sorted(os_and_debugger_q.kind.answer_groups.keys())
     answers_at_least_one_col = defaultdict()
     answers_per_os = defaultdict(list)
     for key in keys:
-        data = db.get_answer_columns(db.get_column(key), answer_count=answer_count)
+        data = db.get_answer_columns(
+            db.get_column(key), answer_count=answer_count
+        )
         # Find entries where at least one column in the row is not nan
         at_least_one_col_data = data.notna().any(axis=1).sum()
         for os in data.columns:
@@ -151,16 +163,23 @@ def analyze() -> ChartReport:
 
     debuger_q_agg = os_and_debugger_q.with_title(
         lambda t: "What tools and workflows do you use to debug Rust programs?"
-    ).with_kind(SimpleQuestion(answers=[
-        Answer(answer=k, count=v) for (k, v) in answers_at_least_one_col.items()
-    ]))
+    ).with_kind(
+        SimpleQuestion(
+            answers=[
+                Answer(answer=k, count=v)
+                for (k, v) in answers_at_least_one_col.items()
+            ]
+        )
+    )
     report.add_bar_chart(
         "what-tools-and-workflows-do-you-use-to-debug-rust-programs",
         debuger_q_agg,
-        xaxis_tickangle=45
+        xaxis_tickangle=45,
     )
     answers_per_os = pd.DataFrame(answers_per_os)
-    answers_per_os["os"] = answers_per_os["os"].replace("Windows Subsystem for Linux", "WSL")
+    answers_per_os["os"] = answers_per_os["os"].replace(
+        "Windows Subsystem for Linux", "WSL"
+    )
 
     def debuggers_per_os(**kwargs) -> Figure:
         fig = make_chart(
@@ -173,23 +192,19 @@ def analyze() -> ChartReport:
             facet_col_wrap=3,
             facet_col_spacing=0.05,
             facet_row_spacing=0.15,
-            height=900
+            height=900,
         )
-        fig.update_layout(legend=dict(
-            orientation="h",
-            y=-0.15
-        ))
+        fig.update_layout(legend=dict(orientation="h", y=-0.15))
         return shorten_annotations(fig)
 
     report.add_custom_chart(
         "what-tools-and-workflows-do-you-use-to-debug-rust-programs-per-os-1",
-        debuggers_per_os
+        debuggers_per_os,
     )
 
     def os_per_debugger(**kwargs) -> Figure:
         answers = answers_per_os.replace(
-            """I don't know, I just hit "Debug" in my IDE""",
-            "I don't know"
+            """I don't know, I just hit "Debug" in my IDE""", "I don't know"
         ).replace("Print debugging (e.g. println!)", "Print debugging")
         fig = make_chart(
             os_and_debugger_q,
@@ -201,11 +216,13 @@ def analyze() -> ChartReport:
             facet_col_wrap=4,
             facet_col_spacing=0.1,
             facet_row_spacing=0.05,
-            height=800
+            height=800,
         )
-        fig.update_layout(legend=dict(
-            orientation="h",
-        ))
+        fig.update_layout(
+            legend=dict(
+                orientation="h",
+            )
+        )
         fig = shorten_annotations(fig)
         for ann in fig["layout"]["annotations"]:
             if "WinDbg" in ann.text:
@@ -214,7 +231,7 @@ def analyze() -> ChartReport:
 
     report.add_custom_chart(
         "what-tools-and-workflows-do-you-use-to-debug-rust-programs-per-os-2",
-        os_per_debugger
+        os_per_debugger,
     )
 
     other_debuggers = "What other debuggers or workflows do you use?"
@@ -228,43 +245,55 @@ def analyze() -> ChartReport:
     )
 
     debugger_use_cases = "What are you using debuggers for?"
-    debugger_use_cases_q = db.q_simple_multi(debugger_use_cases).rename_answers({
-        "Getting stack traces from hung/crashed processes": "Stack traces",
-    })
+    debugger_use_cases_q = db.q_simple_multi(debugger_use_cases).rename_answers(
+        {
+            "Getting stack traces from hung/crashed processes": "Stack traces",
+        }
+    )
     report.add_bar_chart(
         "what-are-you-using-debuggers-for",
         debugger_use_cases_q,
         xaxis_tickangle=45,
     )
 
-    debugger_use_cases_df = db.get_answer_columns(db.get_column(debugger_use_cases),
-                                                  len(debugger_use_cases_q.kind.answers))
+    debugger_use_cases_df = db.get_answer_columns(
+        db.get_column(debugger_use_cases),
+        len(debugger_use_cases_q.kind.answers),
+    )
     debugger_use_cases_df["expertise"] = db.df[expertise]
 
     def draw_debugger_use_cases_per_expertise() -> Figure:
         # Gather use-case long format by expertise
-        df = pd.melt(
-            debugger_use_cases_df, id_vars=["expertise"],
-            value_vars=debugger_use_cases_df.columns[:-1], var_name="use-case",
-            value_name="value"
-        ).dropna(subset=["value"]).drop(columns=["value"])
-        fig = make_chart(debugger_use_cases_q.with_title(lambda t: f"{t} (based on expertise)"),
-                         df,
-                         x="use-case",
-                         kind="pie",
-                         facet_col="expertise",
-                         category_orders={
-                             "expertise": ["Beginner", "Intermediate", "Advanced"],
-                         },
-                         height=600)
-        fig.update_layout(legend=dict(
-            orientation="h"
-        ))
+        df = (
+            pd.melt(
+                debugger_use_cases_df,
+                id_vars=["expertise"],
+                value_vars=debugger_use_cases_df.columns[:-1],
+                var_name="use-case",
+                value_name="value",
+            )
+            .dropna(subset=["value"])
+            .drop(columns=["value"])
+        )
+        fig = make_chart(
+            debugger_use_cases_q.with_title(
+                lambda t: f"{t} (based on expertise)"
+            ),
+            df,
+            x="use-case",
+            kind="pie",
+            facet_col="expertise",
+            category_orders={
+                "expertise": ["Beginner", "Intermediate", "Advanced"],
+            },
+            height=600,
+        )
+        fig.update_layout(legend=dict(orientation="h"))
         return shorten_annotations(fig)
 
     report.add_custom_chart(
         "what-are-you-using-debuggers-for-per-expertise",
-        draw_debugger_use_cases_per_expertise
+        draw_debugger_use_cases_per_expertise,
     )
 
     debugger_used_for_responses = db.open_answers(debugger_use_cases)
@@ -279,14 +308,24 @@ def analyze() -> ChartReport:
     multilingual = "Do you debug programs that combine Rust with any of the following languages?"
     multilingual_open = normalize_open_answers(db.open_answers(multilingual))
     multilingual_q = db.q_simple_multi(multilingual)
-    multilingual_counts = at_least_one_col(db.get_df_for_question(multilingual_q)).value_counts()
+    multilingual_counts = at_least_one_col(
+        db.get_df_for_question(multilingual_q)
+    ).value_counts()
 
     multilingual_q2 = multilingual_q.shallow_copy()
     multilingual_q2.total_responses = multilingual_counts.sum()
-    multilingual_q2 = multilingual_q2.with_kind(SimpleQuestion(answers=[
-        Answer("yes", int(multilingual_counts["Yes"])),
-        Answer("no", int(multilingual_counts["No"])),
-    ])).with_title(lambda _t: "Do you debug programs that combine Rust with other languages?")
+    multilingual_q2 = multilingual_q2.with_kind(
+        SimpleQuestion(
+            answers=[
+                Answer("yes", int(multilingual_counts["Yes"])),
+                Answer("no", int(multilingual_counts["No"])),
+            ]
+        )
+    ).with_title(
+        lambda _t: (
+            "Do you debug programs that combine Rust with other languages?"
+        )
+    )
     report.add_bar_chart(
         "do-you-debug-programs-that-combine-rust-with-other-languages",
         multilingual_q2,
@@ -333,7 +372,9 @@ def analyze() -> ChartReport:
 
     step_through_issues_when = "When do you experience issues with trying to step through code with your debugger?"
     step_through_issues_q = db.q_simple_multi(step_through_issues_when)
-    step_through_issues_q.total_responses = step_through_issues_bool_q.total_responses
+    step_through_issues_q.total_responses = (
+        step_through_issues_bool_q.total_responses
+    )
     report.add_bar_chart(
         "when-do-you-experience-issues-with-trying-to-step-through-code-with-your-debugger",
         step_through_issues_q,
@@ -344,8 +385,8 @@ def analyze() -> ChartReport:
         step_through_issues_when
     )
     with open(
-            "step-through-issues-when.txt",
-            "w",
+        "step-through-issues-when.txt",
+        "w",
     ) as f:
         for answer in step_through_issues_when_responses:
             f.write(f"{answer}\n---\n\n")
@@ -399,8 +440,8 @@ def analyze() -> ChartReport:
         visualizer_attribute_avoided
     )
     with open(
-            "visualizer-attribute-avoided.txt",
-            "w",
+        "visualizer-attribute-avoided.txt",
+        "w",
     ) as f:
         for answer in visualizer_attribute_avoided_responses:
             f.write(f"{answer}\n---\n\n")
