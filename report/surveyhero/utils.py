@@ -3,8 +3,22 @@ from pathlib import Path
 from typing import Optional, Any, List
 
 import numpy as np
+from plotly.graph_objs import Figure
 
-from .survey import SurveySummary, SurveyFullAnswers
+from .survey import SurveySummary, SurveyFullAnswers, Question, SimpleQuestion
+
+
+def print_answers(a: Question, b: Question):
+    assert isinstance(a.kind, SimpleQuestion)
+    assert isinstance(b.kind, SimpleQuestion)
+
+    a_answers = set(a.answer for a in a.kind.answers)
+    b_answers = set(a.answer for a in b.kind.answers)
+    answers = a_answers | b_answers
+    for answer in sorted(answers):
+        has_a = answer in a_answers
+        has_b = answer in b_answers
+        print(answer, has_a, has_b)
 
 
 def print_question_index(path: Path, new: SurveySummary, old: Optional[SurveySummary] = None):
@@ -49,3 +63,14 @@ def inspect_open_answers(answers: List[str]):
 
 def is_nan(value: Any) -> bool:
     return isinstance(value, float) and np.isnan(value)
+
+
+def update_facet_title(annotation):
+    original = annotation.text
+    new_text = original.split("=")[-1]
+    annotation.update(text=new_text)
+
+
+def shorten_annotations(fig: Figure) -> Figure:
+    fig.for_each_annotation(update_facet_title)
+    return fig
