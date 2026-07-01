@@ -361,6 +361,11 @@ class SurveyFullAnswers:
         })
         return df
 
+    def get_df_for_question(self, question: Question) -> pd.DataFrame:
+        assert isinstance(question.kind, SimpleQuestion)
+        answer_count = len(question.kind.answers)
+        col = self.get_column(question.question)
+        return self.get_answer_columns(col, answer_count=answer_count)
 
     def get_column(self, question_or_id: int | str) -> Column:
         if isinstance(question_or_id, int):
