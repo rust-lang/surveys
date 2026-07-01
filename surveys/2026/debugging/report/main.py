@@ -2,11 +2,9 @@ import random
 import sys
 from collections import defaultdict
 from pathlib import Path
-from typing import List, Optional
 
 import numpy as np
 import pandas as pd
-import plotly.express as px
 from plotly.graph_objs import Figure
 
 ROOT_DIR = Path(__file__).absolute().parent.parent.parent.parent.parent
@@ -21,315 +19,36 @@ This is typically the directory that contains `.venv` after `uv sync`, and is
 also typically where the `pyproject.toml` is contained.
 """
 
-OPEN_RESPONSES_DIR = ROOT_DIR / "open_responses/2026/debugging"
-"""
-This should resolve to the path of the directory used to store open response
-answers extracted from the raw data. Typically, this is the `open_responses`
-directory at the repository root or some path within.
-"""
-
 sys.path.insert(0, str(REPORT_SCRIPT_DIR))
 
-# TODO: At runtime, only the `surveyhero.*` imports work. In my editor (VSCodium
-# + `ty` extension), only the `report.surveyhero.*` imports work. The below hack
-# is ugly, but it gets me the best of both worlds. Ideally, I think we should
-# find a way to set things up in the project such that imports "just work", at
-# runtime and in editors, without dynamically adding the import path.
-try:
-    from report.surveyhero.chart import format_title, wrap_text
-    from report.surveyhero.parser import (
-        parse_surveyhero_answers,
-        parse_surveyhero_summary,
-    )
-    from report.surveyhero.render import render_report_to_pdf
-    from report.surveyhero.report import ChartReport
-    from report.surveyhero.survey import (
-        MatrixQuestion,
-        Question,
-        RatingQuestion,
-        SimpleQuestion,
-        SurveyFullAnswers,
-        SurveySummary,
-        normalize_open_answers,
-    )
-except ModuleNotFoundError:
-    from surveyhero.chart import (  # ty:ignore[unresolved-import]
-        format_title,
-        wrap_text,
-    )
-    from surveyhero.parser import (  # ty:ignore[unresolved-import]
-        parse_surveyhero_answers,
-        parse_surveyhero_summary,
-    )
-    from surveyhero.render import (  # ty:ignore[unresolved-import]
-        render_report_to_pdf,
-    )
-    from surveyhero.report import ChartReport  # ty:ignore[unresolved-import]
-    from surveyhero.survey import (  # ty:ignore[unresolved-import]
-        MatrixQuestion,
-        Question,
-        RatingQuestion,
-        SimpleQuestion,
-        SurveyFullAnswers,
-        SurveySummary,
-        normalize_open_answers,
-    )
-
-
-def print_answers(a: Question, b: Question):
-    assert isinstance(a.kind, SimpleQuestion)
-    assert isinstance(b.kind, SimpleQuestion)
-
-    a_answers = set(a.answer for a in a.kind.answers)
-    b_answers = set(a.answer for a in b.kind.answers)
-    answers = a_answers | b_answers
-    for answer in sorted(answers):
-        has_a = answer in a_answers
-        has_b = answer in b_answers
-        print(answer, has_a, has_b)
-
-
-def print_question_index(old: SurveySummary, new: SurveySummary, path: Path):
-    old_index = 0
-    new_index = 0
-
-    with open(path, "w") as f:
-        while old_index < len(old.questions) or new_index < len(new.questions):
-            if old_index < len(old.questions):
-                old_q = old.questions[old_index]
-                print(f"{old.year}/{old_index}: {old_q.question}", file=f)
-                old_index += 1
-            if new_index < len(new.questions):
-                new_q = new.questions[new_index]
-                print(f"{new.year}/{new_index}: {new_q.question}", file=f)
-                new_index += 1
-
-
-def print_answer_index(
-    answers: SurveyFullAnswers, report: SurveySummary, path: Path
-):
-    with open(path, "w") as f:
-        for index, question in enumerate(answers.questions):
-            if (
-                any(question == q.question for q in report.questions)
-                and index > 0
-            ):
-                print(file=f)
-            print(f"{index}: {question}", file=f)
-
-
-def inspect_open_answers(answers: List[str]):
-    normalized = defaultdict(int)
-    for answer in answers:
-        answer = answer.strip().lower()
-        normalized[answer] += 1
-    items = sorted(normalized.items(), key=lambda x: x[1], reverse=True)
-    for value, count in items:
-        print(f"{value}: {count}")
-
-
-def make_easy_matrix_df(
-    question: Question,
-    response_label: str = "Response",
-    category_label: str = "Category",
-    max_label_width: int = 20,
-) -> tuple[pd.DataFrame, list[str], list[str]]:
-    assert isinstance(question.kind, MatrixQuestion)
-
-    items = question.kind.answer_groups.items()
-    items = [
-        (wrap_text(group, max_width=max_label_width), value)
-        for (group, value) in items
-    ]
-
-    response_total: dict[str, int] = {}
-    category_total: dict[str, int] = {}
-    data = defaultdict(list)
-    for _, levels in items:
-        for answer in levels:
-            if answer.answer not in response_total:
-                response_total[answer.answer] = 0
-            response_total[answer.answer] += answer.count
-    for category, levels in items:
-        category_total[category] = sum(answer.count for answer in levels)
-        for answer in levels:
-            data[category_label].append(category)
-            data[response_label].append(answer.answer)
-            pair = f"({category}, {answer.answer})"
-            data["Pair"].append(pair)
-
-            response_out_of_category = (
-                answer.count / category_total[category]
-            ) * 100
-            category_out_of_response = (
-                answer.count / response_total[answer.answer]
-            ) * 100
-            pair_out_of_total = (answer.count / question.total_responses) * 100
-            data["Count"].append(answer.count)
-            data[f"Percent ({response_label} out of {category_label})"].append(
-                f"{response_out_of_category:.2f}%"
-            )
-            data[f"Percent ({category_label} out of {response_label})"].append(
-                f"{category_out_of_response:.2f}%"
-            )
-            data["Percent (Pair out of Total)"].append(
-                f"{pair_out_of_total:.2f}%"
-            )
-
-    category_keys = sorted(
-        category_total.keys(), key=lambda k: category_total[k], reverse=True
-    )
-
-    response_keys = sorted(
-        response_total.keys(), key=lambda k: response_total[k], reverse=True
-    )
-
-    df = pd.DataFrame(data)
-    return (df, category_keys, response_keys)
-
-
-def matrix_category_by_response(
-    question: Question,
-    response_label: str = "Response",
-    category_label: str = "Category",
-    height: Optional[int] = None,
-    horizontal: bool = False,
-    max_label_width: int = 20,
-) -> Figure:
-    (df, category_keys, _response_keys) = make_easy_matrix_df(
-        question, response_label, category_label, max_label_width
-    )
-
-    keys = dict(x="Count", y=category_label)
-    if not horizontal:
-        keys = dict(y="Count", x=category_label)
-
-    if height is None:
-        if horizontal:
-            height = 600
-        else:
-            height = 1000
-
-    fig = px.bar(
-        df,
-        **keys,
-        color=response_label,
-        text=f"Percent ({response_label} out of {category_label})",
-        category_orders={category_label: category_keys},
-        title=format_title(question),
-        height=height,
-    )
-
-    return fig
-
-
-def matrix_response_by_category(
-    question: Question,
-    response_label: str = "Response",
-    category_label: str = "Category",
-    height: Optional[int] = None,
-    horizontal: bool = False,
-    max_label_width=20,
-) -> Figure:
-    (df, _category_keys, response_keys) = make_easy_matrix_df(
-        question, response_label, category_label, max_label_width
-    )
-
-    keys = dict(x="Count", y=response_label)
-    if not horizontal:
-        keys = dict(y="Count", x=response_label)
-
-    if height is None:
-        if horizontal:
-            height = 600
-        else:
-            height = 1000
-
-    fig = px.bar(
-        df,
-        **keys,
-        color=category_label,
-        text=f"Percent ({category_label} out of {response_label})",
-        category_orders={response_label: response_keys},
-        title=format_title(question),
-        height=height,
-    )
-
-    return fig
-
-
-def matrix_top_n(
-    question: Question,
-    n: int,
-    response_label: str = "Response",
-    category_label: str = "Category",
-    height: Optional[int] = None,
-    horizontal: bool = False,
-    max_label_width: int = 20,
-) -> Figure:
-    (df, _category_keys, _response_keys) = make_easy_matrix_df(
-        question, response_label, category_label, max_label_width
-    )
-
-    keys = dict(x="Count", y="Pair")
-    if not horizontal:
-        keys = dict(y="Count", x="Pair")
-
-    if height is None:
-        if horizontal:
-            height = 600
-        else:
-            height = 1000
-
-    fig = px.bar(
-        df.sort_values(by=["Count"], ascending=False).head(n),
-        **keys,
-        text="Percent (Pair out of Total)",
-        title=format_title(question),
-        height=height,
-    )
-
-    return fig
-
-
-# TODO: The original copied version of this function assumed any `Question.kind`
-# has an `answers` field. This is not true of `MatrixQuestion`. It also relied
-# on `is_simple` to ensure both questions are the same kind, which only really
-# works if there are only two kinds of question. There seem to be a lot of
-# mistakes of this variety in the report library itself, where the `Question`
-# type is treated as though `MatrixQuestion` does not exist. Maybe those should
-# be fixed?
-def assert_same(q_summary: Question, q_answers: Question):
-    assert q_summary.question == q_answers.question
-    assert type(q_summary.kind) is type(q_answers.kind)
-    match q_summary.kind:
-        case SimpleQuestion() | RatingQuestion():
-            assert isinstance(q_answers.kind, SimpleQuestion) or isinstance(
-                q_answers.kind, RatingQuestion
-            )
-            assert q_summary.kind.answers == q_answers.kind.answers  # ty:ignore[unresolved-attribute] this is only thrown with the import hack
-        case MatrixQuestion():
-            assert isinstance(q_answers.kind, MatrixQuestion)
-            assert q_summary.kind.answer_groups == q_answers.kind.answer_groups
-        case _:
-            raise NotImplementedError(
-                f"assert_same doesn't know how to handle the QuestionKind {type(q_summary.kind)}"
-            )
-
-    assert q_summary.is_single_answer() == q_answers.is_single_answer()
+from surveyhero.chart import (
+    make_chart,
+)
+from surveyhero.analysis import at_least_one_col
+from surveyhero.utils import shorten_annotations
+from surveyhero.parser import (
+    parse_surveyhero_answers,
+    parse_surveyhero_summary,
+)
+from surveyhero.render import (
+    render_report_to_pdf,
+)
+from surveyhero.report import ChartReport
+from surveyhero.survey import (
+    SimpleQuestion,
+    normalize_open_answers, Answer,
+)
 
 
 def analyze() -> ChartReport:
     summary = parse_surveyhero_summary(
-        Path(ROOT_DIR / "data/2026/debugging-summary.csv"), year=2026
+        Path(ROOT_DIR / "data/2026/debugging/summary.csv"), year=2026
     )
     db = parse_surveyhero_answers(
-        Path(ROOT_DIR / "data/2026/debugging-responses.csv"),
+        Path(ROOT_DIR / "data/2026/debugging/responses.csv"),
         year=2026,
         summary=summary,
     )
-
-    OPEN_RESPONSES_DIR.mkdir(parents=True, exist_ok=True)
 
     report = ChartReport()
 
@@ -351,14 +70,40 @@ def analyze() -> ChartReport:
         db.q_simple_single(rust_user),
     )
 
-    # TODO: Figure out the best way, if any, to merge responses with those from
-    # the did-you-use-debuggers-in-rust variant. (Maybe these are best as
-    # separate charts?)
     debugger_user = "Do you use debuggers in Rust?"
+    do_you_use_debugger_q = db.q_simple_single(debugger_user)
     report.add_pie_chart(
         "do-you-use-debuggers-in-rust",
-        db.q_simple_single(debugger_user),
+        do_you_use_debugger_q,
     )
+
+    do_you_use_debugger_df = {
+        "use": db.df[debugger_user],
+        "expertise": db.df[expertise]
+    }
+    do_you_use_debugger_df = pd.DataFrame(do_you_use_debugger_df)
+    do_you_use_debugger_df = do_you_use_debugger_df.dropna()
+
+    def draw_debugger_usage_per_rust_expertise() -> Figure:
+        fig = make_chart(do_you_use_debugger_q.with_title(lambda t: f"{t} (based on expertise)"),
+                         do_you_use_debugger_df,
+                         x="use",
+                         kind="pie",
+                         facet_col="expertise",
+                         category_orders={
+                             "expertise": ["Beginner", "Intermediate", "Advanced"],
+                             "use": ["No, I have never used debuggers in Rust",
+                                     "No, I don't currently use debuggers in Rust, but I have in the past",
+                                     "Yes"]
+                         },
+                         height=450)
+        fig.update_layout(legend=dict(
+            orientation="h"
+        ))
+        return shorten_annotations(fig)
+
+    report.add_custom_chart("do-you-use-debuggers-in-rust-per-expertise",
+                            draw_debugger_usage_per_rust_expertise)
 
     debugger_user_past = "Did you use debuggers in Rust?"
     report.add_pie_chart(
@@ -369,7 +114,8 @@ def analyze() -> ChartReport:
     quit_because_of_debuggers = "Were issues with debugging support the primary reason why you stopped using Rust?"
     report.add_pie_chart(
         "were-issues-with-debugging-support-the-primary-reason-why-you-stopped-using-rust",
-        db.q_simple_single(quit_because_of_debuggers),
+        db.q_simple_single(quit_because_of_debuggers).with_title(
+            lambda t: t.replace("reason why", "reason\nwhy")),
     )
 
     other_languages_diff = {
@@ -380,73 +126,100 @@ def analyze() -> ChartReport:
     report.add_pie_chart(
         "do-you-use-debuggers-in-other-programming-languages",
         db.q_simple_single(other_languages).rename_answers(
-            other_languages_diff  # ty:ignore[invalid-argument-type] TODO: I think this is a mistake in the type signature of `SimpleQuestion.rename_answers`.
+            other_languages_diff
         ),
     )
 
-    # TODO: I find this chart difficult to interpret. I think this should either
-    # be replaced or accompanied by a bar chart or some other chart, possibly
-    # multiple. I want to better represent information such as:
-    # - Of all responses, X% of users use the specific combo "Debugger" + "OS"
-    # - Of all responses for "Debugger", X% of users did so on "OS"
-    # - Of all responses for "Debugger", X% of users selected more than one "OS"
-    # - Of all responses for "OS", X% of users used "Debugger"
-    # - Of all responses for "OS", X% of users selected more than one "Debugger"
-    # Where "Debugger" is a specific choice of the tool/debugger response and
-    # "OS" is a specific choice of the OS response. I don't think all of these
-    # questions absolutely need to be answered, but they are the kinds of
-    # questions I initially think of for this data, and I don't feel like most
-    # of these are represented well, if at all, by the existing chart. If any
-    # are, I think it'd be "Of all responses for 'Debugger', X% of users did so
-    # on 'OS'".
     os_and_debugger = "What tools and workflows do you use to debug Rust programs on which operating systems?"
-    os_and_debugger_question = summary.q_by_text(os_and_debugger)
-    report.add_matrix_chart(
-        "what-tools-and-workflows-do-you-use-to-debug-rust-programs-on-which-operating-systems",
-        summary.q_by_text(os_and_debugger),
-        horizontal=True,
-        # TODO: With textpositon="inside", I can't read the percentages for
-        # (IDK/OTHER) or (Visual Studio Debugger/OTHER), and can barely read
-        # (dbg!/OTHER), (lldb(IDE)/OTHER), and (WinDbg/WSL). Without it, I can't
-        # read the percentage for (WinDbg/WSL). Can I make them all fairly easy
-        # to read somehow?
-        # textposition="inside",
-        legend_params=dict(
+    os_and_debugger_q = summary.q_by_text(os_and_debugger)
+
+    # Combined answers throughout all OSes
+    answer_count = len(next(iter(os_and_debugger_q.kind.answer_groups.values())))
+    keys = sorted(os_and_debugger_q.kind.answer_groups.keys())
+    answers_at_least_one_col = defaultdict()
+    answers_per_os = defaultdict(list)
+    for key in keys:
+        data = db.get_answer_columns(db.get_column(key), answer_count=answer_count)
+        # Find entries where at least one column in the row is not nan
+        at_least_one_col_data = data.notna().any(axis=1).sum()
+        for os in data.columns:
+            os_data = data[os]
+            answers_per_os["os"].append(os)
+            answers_per_os["debugger"].append(key)
+            answers_per_os["count"].append(os_data.notna().sum())
+        answers_at_least_one_col[key] = at_least_one_col_data
+
+    debuger_q_agg = os_and_debugger_q.with_title(
+        lambda t: "What tools and workflows do you use to debug Rust programs?"
+    ).with_kind(SimpleQuestion(answers=[
+        Answer(answer=k, count=v) for (k, v) in answers_at_least_one_col.items()
+    ]))
+    report.add_bar_chart(
+        "what-tools-and-workflows-do-you-use-to-debug-rust-programs",
+        debuger_q_agg,
+        xaxis_tickangle=45
+    )
+    answers_per_os = pd.DataFrame(answers_per_os)
+    answers_per_os["os"] = answers_per_os["os"].replace("Windows Subsystem for Linux", "WSL")
+
+    def debuggers_per_os(**kwargs) -> Figure:
+        fig = make_chart(
+            os_and_debugger_q,
+            answers_per_os,
+            kind="pie",
+            x="debugger",
+            y="count",
+            facet_col="os",
+            facet_col_wrap=3,
+            facet_col_spacing=0.05,
+            facet_row_spacing=0.15,
+            height=900
+        )
+        fig.update_layout(legend=dict(
             orientation="h",
-            y=-0.05,
-        ),
-    )
-    n = 10
+            y=-0.15
+        ))
+        return shorten_annotations(fig)
+
     report.add_custom_chart(
-        f"what-tools-and-workflows-do-you-use-to-debug-rust-programs-on-which-operating-systems-top-{n}",
-        lambda **_kwargs: matrix_top_n(
-            os_and_debugger_question,
-            n,
-            response_label="OS",
-            category_label="Debugger",
-            horizontal=True,
-        ),
+        "what-tools-and-workflows-do-you-use-to-debug-rust-programs-per-os-1",
+        debuggers_per_os
     )
+
+    def os_per_debugger(**kwargs) -> Figure:
+        answers = answers_per_os.replace(
+            """I don't know, I just hit "Debug" in my IDE""",
+            "I don't know"
+        ).replace("Print debugging (e.g. println!)", "Print debugging")
+        fig = make_chart(
+            os_and_debugger_q,
+            answers,
+            kind="pie",
+            x="os",
+            y="count",
+            facet_col="debugger",
+            facet_col_wrap=4,
+            facet_col_spacing=0.1,
+            facet_row_spacing=0.05,
+            height=800
+        )
+        fig.update_layout(legend=dict(
+            orientation="h",
+        ))
+        fig = shorten_annotations(fig)
+        for ann in fig["layout"]["annotations"]:
+            if "WinDbg" in ann.text:
+                ann["x"] = ann["x"] + 0.05
+        return fig
+
     report.add_custom_chart(
-        "what-tools-and-workflows-do-you-use-to-debug-rust-programs-on-which-operating-systems-debugger-by-os",
-        lambda **_kwargs: matrix_category_by_response(
-            os_and_debugger_question,
-            response_label="OS",
-            category_label="Debugger",
-        ),
-    )
-    report.add_custom_chart(
-        "what-tools-and-workflows-do-you-use-to-debug-rust-programs-on-which-operating-systems-os-by-debugger",
-        lambda **_kwargs: matrix_response_by_category(
-            os_and_debugger_question,
-            response_label="OS",
-            category_label="Debugger",
-        ),
+        "what-tools-and-workflows-do-you-use-to-debug-rust-programs-per-os-2",
+        os_per_debugger
     )
 
     other_debuggers = "What other debuggers or workflows do you use?"
     other_debuggers_responses = db.open_answers_raw(other_debuggers)
-    with open(OPEN_RESPONSES_DIR / "other-debuggers.txt", "w") as f:
+    with open("other-debuggers.txt", "w") as f:
         for answer in other_debuggers_responses:
             f.write(f"{answer}\n---\n\n")
     report.add_wordcloud(
@@ -454,37 +227,81 @@ def analyze() -> ChartReport:
         db.open_answers(other_debuggers),
     )
 
-    debugger_used_for_diff = {
+    debugger_use_cases = "What are you using debuggers for?"
+    debugger_use_cases_q = db.q_simple_multi(debugger_use_cases).rename_answers({
         "Getting stack traces from hung/crashed processes": "Stack traces",
-    }
-    debugger_used_for = "What are you using debuggers for?"
+    })
     report.add_bar_chart(
         "what-are-you-using-debuggers-for",
-        db.q_simple_multi(debugger_used_for).rename_answers(
-            debugger_used_for_diff  # ty:ignore[invalid-argument-type] TODO: I think this is a mistake in the type signature of `SimpleQuestion.rename_answers`.
-        ),
+        debugger_use_cases_q,
         xaxis_tickangle=45,
     )
-    debugger_used_for_responses = db.open_answers(debugger_used_for)
-    with open(OPEN_RESPONSES_DIR / "debugger-used-for.txt", "w") as f:
+
+    debugger_use_cases_df = db.get_answer_columns(db.get_column(debugger_use_cases),
+                                                  len(debugger_use_cases_q.kind.answers))
+    debugger_use_cases_df["expertise"] = db.df[expertise]
+
+    def draw_debugger_use_cases_per_expertise() -> Figure:
+        # Gather use-case long format by expertise
+        df = pd.melt(
+            debugger_use_cases_df, id_vars=["expertise"],
+            value_vars=debugger_use_cases_df.columns[:-1], var_name="use-case",
+            value_name="value"
+        ).dropna(subset=["value"]).drop(columns=["value"])
+        fig = make_chart(debugger_use_cases_q.with_title(lambda t: f"{t} (based on expertise)"),
+                         df,
+                         x="use-case",
+                         kind="pie",
+                         facet_col="expertise",
+                         category_orders={
+                             "expertise": ["Beginner", "Intermediate", "Advanced"],
+                         },
+                         height=600)
+        fig.update_layout(legend=dict(
+            orientation="h"
+        ))
+        return shorten_annotations(fig)
+
+    report.add_custom_chart(
+        "what-are-you-using-debuggers-for-per-expertise",
+        draw_debugger_use_cases_per_expertise
+    )
+
+    debugger_used_for_responses = db.open_answers(debugger_use_cases)
+    with open("debugger-used-for.txt", "w") as f:
         for answer in debugger_used_for_responses:
             f.write(f"{answer}\n---\n\n")
     report.add_wordcloud(
         "what-are-you-using-debuggers-for-wordcloud",
-        db.open_answers(debugger_used_for),
+        db.open_answers(debugger_use_cases),
     )
 
     multilingual = "Do you debug programs that combine Rust with any of the following languages?"
     multilingual_open = normalize_open_answers(db.open_answers(multilingual))
+    multilingual_q = db.q_simple_multi(multilingual)
+    multilingual_counts = at_least_one_col(db.get_df_for_question(multilingual_q)).value_counts()
+
+    multilingual_q2 = multilingual_q.shallow_copy()
+    multilingual_q2.total_responses = multilingual_counts.sum()
+    multilingual_q2 = multilingual_q2.with_kind(SimpleQuestion(answers=[
+        Answer("yes", int(multilingual_counts["Yes"])),
+        Answer("no", int(multilingual_counts["No"])),
+    ])).with_title(lambda _t: "Do you debug programs that combine Rust with other languages?")
     report.add_bar_chart(
-        "do-you-debug-programs-that-combine-rust-with-any-of-the-following-languages",
-        db.q_simple_multi(multilingual).add_open(
+        "do-you-debug-programs-that-combine-rust-with-other-languages",
+        multilingual_q2,
+        xaxis_tickangle=45,
+    )
+
+    report.add_bar_chart(
+        "do-you-debug-programs-that-combine-rust-with-any-of-the-following-languages-",
+        multilingual_q.add_open(
             multilingual_open, "assembly", "Assembly"
-        ),
+        ).with_title(lambda t: "If you do, with which languages?"),
         xaxis_tickangle=45,
     )
     multilingual_responses = multilingual_open
-    with open(OPEN_RESPONSES_DIR / "multilingual.txt", "w") as f:
+    with open("multilingual.txt", "w") as f:
         for answer in multilingual_responses:
             f.write(f"{answer}\n---\n\n")
     report.add_wordcloud(
@@ -492,29 +309,14 @@ def analyze() -> ChartReport:
         multilingual_open,
     )
 
-    # Because the answers to the question ended in periods, the report library
-    # was unable to process these responses. The usual "rename" method did not
-    # resolve it, so this requires patching the dataframe directly.
-    debugger_difficulties_diff = {
-        "I don't need to debug because my code works.": "I don't need to debug because my code works",
-        "I don't know how to use debuggers.": "I don't know how to use debuggers",
-        "It's easier or faster to solve problems through print debugging or logs.": "It's easier or faster to solve problems through print debugging or logs",
-        "It's easier or faster to let an AI model debug my code.": "It's easier or faster to let an AI model debug my code",
-        "The types from external libraries I'm working with have poor debugger support.": "The types from external libraries I'm working with have poor debugger support",
-        "The types from the standard library I'm working with have poor debugger support.": "The types from the standard library I'm working with have poor debugger support",
-        "The language features I'm working with have poor debugger support.": "The language features I'm working with have poor debugger support",
-    }
-    # TODO: Figure out shorter labels that are easier to read without losing
-    # significant information.
     debugger_difficulties = "When you DON'T use a debugger, why don't you?"
-    db.df = db.df.rename(debugger_difficulties_diff, axis="columns")
     report.add_bar_chart(
         "when-you-dont-use-a-debugger-why-dont-you",
         db.q_simple_multi(debugger_difficulties),
         xaxis_tickangle=45,
     )
     debugger_difficulties_responses = db.open_answers(debugger_difficulties)
-    with open(OPEN_RESPONSES_DIR / "debugger-difficulties.txt", "w") as f:
+    with open("debugger-difficulties.txt", "w") as f:
         for answer in debugger_difficulties_responses:
             f.write(f"{answer}\n---\n\n")
     report.add_wordcloud(
@@ -523,23 +325,27 @@ def analyze() -> ChartReport:
     )
 
     step_through_issues_bool = "Do you experience any issues when trying to step through code with your debugger?"
+    step_through_issues_bool_q = db.q_simple_single(step_through_issues_bool)
     report.add_pie_chart(
         "do-you-experience-any-issues-when-trying-to-step-through-code-with-your-debugger",
-        db.q_simple_single(step_through_issues_bool),
+        step_through_issues_bool_q,
     )
 
     step_through_issues_when = "When do you experience issues with trying to step through code with your debugger?"
+    step_through_issues_q = db.q_simple_multi(step_through_issues_when)
+    step_through_issues_q.total_responses = step_through_issues_bool_q.total_responses
     report.add_bar_chart(
         "when-do-you-experience-issues-with-trying-to-step-through-code-with-your-debugger",
-        db.q_simple_multi(step_through_issues_when),
+        step_through_issues_q,
         xaxis_tickangle=45,
     )
+
     step_through_issues_when_responses = db.open_answers(
         step_through_issues_when
     )
     with open(
-        OPEN_RESPONSES_DIR / "step-through-issues-when.txt",
-        "w",
+            "step-through-issues-when.txt",
+            "w",
     ) as f:
         for answer in step_through_issues_when_responses:
             f.write(f"{answer}\n---\n\n")
@@ -556,7 +362,7 @@ def analyze() -> ChartReport:
         "What standard library types are hard to work with when debugging?"
     )
     std_lib_pain_responses = db.open_answers_raw(std_lib_pain)
-    with open(OPEN_RESPONSES_DIR / "std-lib-pain.txt", "w") as f:
+    with open("std-lib-pain.txt", "w") as f:
         for answer in std_lib_pain_responses:
             f.write(f"{answer}\n---\n\n")
     report.add_wordcloud(
@@ -588,12 +394,13 @@ def analyze() -> ChartReport:
         db.q_simple_multi(visualizer_attribute_avoided),
         xaxis_tickangle=45,
     )
+
     visualizer_attribute_avoided_responses = db.open_answers(
         visualizer_attribute_avoided
     )
     with open(
-        OPEN_RESPONSES_DIR / "visualizer-attribute-avoided.txt",
-        "w",
+            "visualizer-attribute-avoided.txt",
+            "w",
     ) as f:
         for answer in visualizer_attribute_avoided_responses:
             f.write(f"{answer}\n---\n\n")
@@ -613,7 +420,7 @@ def analyze() -> ChartReport:
 
     final_open_question = "Is there anything else you would like to tell us about debugging support in Rust?"
     final_open = db.open_answers_raw(final_open_question)
-    with open(OPEN_RESPONSES_DIR / "final-anything-else.txt", "w") as f:
+    with open("final-anything-else.txt", "w") as f:
         for answer in final_open:
             f.write(f"{answer}\n---\n\n")
     # TODO: When making a wordcloud, the report automatically titles it,
