@@ -41,6 +41,7 @@ try:
     from report.surveyhero.report import ChartReport
     from report.surveyhero.survey import (
         Answer,
+        MatrixQuestion,
         SimpleQuestion,
         normalize_open_answers,
     )
@@ -62,6 +63,7 @@ except ModuleNotFoundError:
     from surveyhero.report import ChartReport  # ty:ignore[unresolved-import]
     from surveyhero.survey import (  # ty:ignore[unresolved-import]
         Answer,
+        MatrixQuestion,
         SimpleQuestion,
         normalize_open_answers,
     )
@@ -163,7 +165,7 @@ def analyze() -> ChartReport:
     report.add_pie_chart(
         "do-you-use-debuggers-in-other-programming-languages",
         db.q_simple_single(other_languages).rename_answers(
-            other_languages_diff
+            other_languages_diff  # ty:ignore[invalid-argument-type] https://docs.astral.sh/ty/reference/typing-faq/#invariant-generics
         ),
     )
 
@@ -171,6 +173,7 @@ def analyze() -> ChartReport:
     os_and_debugger_q = summary.q_by_text(os_and_debugger)
 
     # Combined answers throughout all OSes
+    assert isinstance(os_and_debugger_q.kind, MatrixQuestion)
     answer_count = len(
         next(iter(os_and_debugger_q.kind.answer_groups.values()))
     )
@@ -182,7 +185,7 @@ def analyze() -> ChartReport:
             db.get_column(key), answer_count=answer_count
         )
         # Find entries where at least one column in the row is not nan
-        at_least_one_col_data = data.notna().any(axis=1).sum()
+        at_least_one_col_data = data.notna().any(axis=1).sum()  # ty:ignore[unresolved-attribute] Assumption: .any returns a Series, not a bool
         for os in data.columns:
             os_data = data[os]
             answers_per_os["os"].append(os)
@@ -285,6 +288,7 @@ def analyze() -> ChartReport:
         xaxis_tickangle=45,
     )
 
+    assert not isinstance(debugger_use_cases_q.kind, MatrixQuestion)
     debugger_use_cases_df = db.get_answer_columns(
         db.get_column(debugger_use_cases),
         len(debugger_use_cases_q.kind.answers),
