@@ -541,16 +541,6 @@ def analyze() -> ChartReport:
         db.q_simple_single(visualizer_attribute_known),
     )
 
-    # Because the answers to the question ended in periods, the report library
-    # was unable to process these responses. The usual "rename" method did not
-    # resolve it, so this requires patching the dataframe directly.
-    visualizer_attribute_avoided_diff = {
-        "I don't know how to write visualizer scripts.": "I don't know how to write visualizer scripts",
-        "My debugger is not supported.": "My debugger is not supported",
-        "My libraries' types do not need them.": "My libraries' types do not need them",
-        "I don't have time to maintain visualizer attributes.": "I don't have time to maintain visualizer attributes",
-    }
-    db.df = db.df.rename(visualizer_attribute_avoided_diff, axis="columns")
     visualizer_attribute_avoided = (
         "Why don't you use the debugger visualizer attribute?"
     )
