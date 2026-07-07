@@ -179,11 +179,14 @@ def analyze() -> ChartReport:
     )
     keys = sorted(os_and_debugger_q.kind.answer_groups.keys())
     answers_at_least_one_col = defaultdict()
+    debugger_used_on_any_os = defaultdict()
     answers_per_os = defaultdict(list)
     for key in keys:
         data = db.get_answer_columns(
             db.get_column(key), answer_count=answer_count
         )
+        debugger_used_on_any_os[key] = data.notna().any(axis=1)
+
         # Find entries where at least one column in the row is not nan
         at_least_one_col_data = data.notna().any(axis=1).sum()  # ty:ignore[unresolved-attribute] Assumption: .any returns a Series, not a bool
         for os in data.columns:
@@ -327,6 +330,94 @@ def analyze() -> ChartReport:
     report.add_custom_chart(
         "what-are-you-using-debuggers-for-per-expertise",
         draw_debugger_use_cases_per_expertise,
+    )
+
+    use_case_answer_cols = db.get_answer_columns(
+        db.get_column(debugger_use_cases), None
+    )
+    use_case_keys = use_case_answer_cols.keys()
+    for debugger in debugger_used_on_any_os.keys():
+        use_case_answer_cols[debugger] = debugger_used_on_any_os[debugger]
+    use_case_answer_cols = use_case_answer_cols.replace(False, np.nan)
+    use_case_answer_cols = use_case_answer_cols.replace(True, "x")
+    use_case_by_tool_intermediate = (
+        pd.melt(
+            use_case_answer_cols,
+            id_vars=[debugger for debugger in debugger_used_on_any_os.keys()],
+            value_vars=use_case_keys,
+            var_name="use-case",
+            value_name="value",
+        )
+        .dropna(subset=["value"])
+        .drop(columns=["value"])
+    )
+    use_case_by_tool = (
+        pd.melt(
+            use_case_by_tool_intermediate,
+            id_vars=["use-case"],
+            value_vars=[x for x in debugger_used_on_any_os.keys()],
+            var_name="debugger",
+            value_name="value",
+        )
+        .dropna(subset=["value"])
+        .drop(columns=["value"])
+    )
+
+    def draw_debugger_use_cases_per_tool() -> Figure:
+        df = use_case_by_tool.replace(
+            """I don't know, I just hit "Debug" in my IDE""", "I don't know"
+        ).replace("Print debugging (e.g. println!)", "Print debugging")
+        fig = make_chart(
+            debugger_use_cases_q.with_title(
+                lambda t: f"{t} (based on debugger)"
+            ),
+            df,
+            x="use-case",
+            kind="pie",
+            facet_col="debugger",
+            facet_col_wrap=4,
+            facet_col_spacing=0.1,
+            facet_row_spacing=0.05,
+            height=800,
+        )
+        fig.update_layout(legend=dict(orientation="h"))
+        return shorten_annotations(fig)
+
+    report.add_custom_chart(
+        "what-are-you-using-debuggers-for-per-tool",
+        draw_debugger_use_cases_per_tool,
+    )
+
+    def draw_debugger_use_cases_per_tool_other_way() -> Figure:
+        df = (
+            use_case_by_tool.replace(
+                """I don't know, I just hit "Debug" in my IDE""", "I don't know"
+            )
+            .replace("Print debugging (e.g. println!)", "Print debugging")
+            .replace(
+                "Getting stack traces from hung/crashed processes",
+                "Stack traces",
+            )
+        )
+        fig = make_chart(
+            debugger_use_cases_q.with_title(
+                lambda t: f"{t} (based on debugger)"
+            ),
+            df,
+            x="debugger",
+            kind="pie",
+            facet_col="use-case",
+            facet_col_wrap=3,
+            facet_col_spacing=0.1,
+            facet_row_spacing=0.15,
+            height=900,
+        )
+        fig.update_layout(legend=dict(orientation="h"))
+        return shorten_annotations(fig)
+
+    report.add_custom_chart(
+        "what-are-you-using-debuggers-for-per-tool-1",
+        draw_debugger_use_cases_per_tool_other_way,
     )
 
     debugger_used_for_responses = db.open_answers(debugger_use_cases)
