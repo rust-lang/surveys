@@ -574,12 +574,16 @@ def analyze() -> ChartReport:
         db.open_answers(visualizer_attribute_avoided),
     )
 
-    # TODO: Figure out shorter labels that are easier to read without losing
-    # significant information.
+    pain_points_diff = {
+        "Suboptimal representations of values (e.g. Vec<T> is shown as a pointer, length and capacity rather than the elements)": "Bad values repr. (e.g. Vec<T> is shown as a pointer)",
+        "Expression parser doesn't support expressions that you want to write": "Incomplete support for the Expression parser",
+        "Incorrect information displayed (i.e. line numbers, variable values)": "Incorrect info shown (i.e. line nums, var values)",
+        "Too much detail/irrelevant information (i.e. assembly views)": "Irrelevant details (i.e. assembly views)",
+    }
     pain_points = "Which of these pain points have you experienced using a debugger with Rust?"
     report.add_bar_chart(
         "which-of-these-pain-points-have-you-experienced-using-a-debugger-with-rust",
-        db.q_simple_multi(pain_points),
+        db.q_simple_multi(pain_points).rename_answers(pain_points_diff),  # ty:ignore[invalid-argument-type] https://docs.astral.sh/ty/reference/typing-faq/#invariant-generics
         xaxis_tickangle=45,
     )
 
