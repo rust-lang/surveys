@@ -171,7 +171,7 @@ Type: select all that apply
 - Beta 版
 - 最新的 nightly
 - 特定的 nightly
-- 自定義的 fork
+- 自訂的 fork
 - 我不知道
 - 其他
 
@@ -442,7 +442,7 @@ Type: select all that apply
 Type: select all that apply
 
 - 我使用 crates.io
-- 我使用自定義 / 本本機端 / 公司的 registry
+- 我使用自訂 / 本機 / 公司的 registry
 - 我使用 crates.io 的鏡像
 - 我使用 Git 儲存庫
 - 我不知道
