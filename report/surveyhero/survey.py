@@ -185,6 +185,18 @@ class Question:
             kind=self.kind
         )
 
+    def with_kind(self, kind: QuestionKind) -> "Question":
+        return Question(
+            id=self.id,
+            year=self.year,
+            question=self.question,
+            total_responses=self.total_responses,
+            kind=kind
+        )
+
+    def shallow_copy(self) -> "Question":
+        return dataclasses.replace(self)
+
 
 def rating_to_simple_question(question: Question) -> Question:
     assert isinstance(question.kind, RatingQuestion)
@@ -296,10 +308,6 @@ class SurveyFullAnswers:
                 return [answer for answer in answer_data if answer not in known_answers]
             else:
                 answer_data = self.get_answer_columns(col, answer_count=None)
-                answer_data = answer_data.rename(columns={
-                    k: normalize_answer_other(k)
-                    for k in answer_data.columns.values
-                })
                 return list(answer_data["Other"].dropna())
         else:
             return list(col.data.dropna())
@@ -346,7 +354,18 @@ class SurveyFullAnswers:
             else:
                 raise Exception(f"Unsupported question type: {ref_question}")
 
-        return self.df.iloc[:, col.index + 1:col.index + 1 + answer_count]
+        df = self.df.iloc[:, col.index + 1:col.index + 1 + answer_count]
+        df = df.rename(columns={
+            k: normalize_duplicated_column(k)
+            for k in df.columns.values
+        })
+        return df
+
+    def get_df_for_question(self, question: Question) -> pd.DataFrame:
+        assert isinstance(question.kind, SimpleQuestion)
+        answer_count = len(question.kind.answers)
+        col = self.get_column(question.question)
+        return self.get_answer_columns(col, answer_count=answer_count)
 
     def get_column(self, question_or_id: int | str) -> Column:
         if isinstance(question_or_id, int):
@@ -373,7 +392,7 @@ class SurveyFullAnswers:
             assert isinstance(ref_question.kind, SimpleQuestion)
             answer_map = {a.answer: i for (i, a) in enumerate(ref_question.kind.answers)}
 
-        answers = [(normalize_answer_other(str(answer)), count) for (answer, count) in
+        answers = [(normalize_duplicated_column(str(answer)), count) for (answer, count) in
                    counts.items()]
         for (index, (answer, _)) in enumerate(answers):
             if answer not in answer_map:
@@ -382,18 +401,16 @@ class SurveyFullAnswers:
         return [Answer(answer=str(answer), count=count) for (answer, count) in answers]
 
 
-OTHER_REGEX = re.compile("^Other(\.\d+)?$")
+RENUMBERED_ANSWER_REGEX = re.compile("^(.*\D)\.\d+$")
 
 
-def normalize_answer_other(answer: str) -> str:
-    if OTHER_REGEX.match(answer) is not None:
-        return "Other"
+def normalize_duplicated_column(answer: str) -> str:
+    match = RENUMBERED_ANSWER_REGEX.match(answer)
+    if match is not None:
+        return match.group(1)
     if answer.startswith("Other "):
         return "Other"
     return answer
-
-
-RENUMBERED_ANSWER_REGEX = re.compile("^(.+?)\.\d+$")
 
 
 def normalize_answers(ref_question: Question, answer_data: pd.DataFrame) -> pd.DataFrame:
@@ -402,10 +419,13 @@ def normalize_answers(ref_question: Question, answer_data: pd.DataFrame) -> pd.D
     `<answer.2>`, etc. by pandas.
     If we have the reference question available, try to normalize the answers based on it.
     """
+    from .parser import normalize_answer
+
     answers: Set[str] = set(answer.answer for answer in ref_question.kind.answers)
     data = defaultdict(list)
     for col in answer_data.columns:
         answer_col = answer_data[col]
+        col = normalize_answer(col)
         if col not in answers:
             match = RENUMBERED_ANSWER_REGEX.match(col)
             if match:
