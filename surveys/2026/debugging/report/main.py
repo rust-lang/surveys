@@ -626,7 +626,7 @@ if __name__ == "__main__":
         report,
         Path(__file__).parent / "debugging-survey-2026-report.pdf",
         "Rust Debugging survey 2026 report",
-        include_labels=True,
+        include_labels=False,
     )
 
     blog_dir = ROOT_DIR.parent / "blog.rust-lang.org"

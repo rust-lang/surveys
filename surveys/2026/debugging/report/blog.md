@@ -1,5 +1,5 @@
 +++
-path = "2026/08/31/rust-debugging-survey-2026-results"
+path = "2026/09/07/rust-debugging-survey-2026-results"
 title = "Rust debugging survey 2026 results"
 authors = ["Sam Kellam"]
 
@@ -118,8 +118,6 @@ The final bit of insight into how Rustaceans use debuggers is if they are
 debugging programs that use Rust alongside other programming languages. For 44%
 of respondents, the answer is "yes", which is a pretty high number!
 
-<!-- chart: do-you-debug-programs-that-combine-rust-with-other-languages -->
-
 As for which languages those are, C dominates the scene at a little over 70%,
 followed by C++ at about 43% and Python at about 20%:
 
@@ -163,14 +161,12 @@ We also directly asked respondents which types in the standard library were hard
 to work with, if any. This was an open-response question, and reading through
 the responses, some particularly common complaints were with `enum`s and
 collections, particularly `std::collections::HashMap` and `std::vec::Vec`. This
-is also visible in the wordcloud in the full report.
+is also visible in the word cloud in the [full report][report].
 
-As the survey was being created, we interviewed a few community members and did
-some brainstorming to think of a handful of pain points people might experience
-when using debuggers with Rust. We asked respondents to indicate which, if any,
-they have encountered. At slightly over 74%, poor representation of values was
-the most common pain point by a decent margin, followed by being unable to print
-variables at just over 55%:
+We asked respondents to indicate which pain points, if any, they have
+encountered when using debuggers with Rust. At slightly over 74%, poor
+representation of values was the most common pain point by a decent margin,
+followed by being unable to print variables at just over 55%:
 
 <!-- chart: which-of-these-pain-points-have-you-experienced-using-a-debugger-with-rust -->
 
@@ -212,21 +208,44 @@ are causing issues, knowing that many library authors haven't heard of the
 don't use it either don't know how or don't have time to maintain visualizer
 scripts.
 
+Looking to the future, the survey results have suggested that there are a few
+notable ways we could most significantly improve the debugging experience in
+Rust, such as:
+
+- Fixing the way `enum`s are represented by debuggers so they show actual
+  variants
+- Fixing the way collections (such as `HashMap`) are represented by debuggers so
+  they show their contents, rather than their implementation details
+- Fixing the way string types (such as `String` and `CString`) are represented
+  by debuggers so they render as text, rather than their implementation details
+- Improving the `async` debugging experience, particularly with stack traces
+- Improving stepping through certain state machines (such as iterators and
+  `Future`s)
+- Providing documentation on basic set up and use of some common debuggers
+
+A common suggestion that could resolve those first three points is to use the
+`Debug` implementation of types to display them in debuggers. There are
+challenges to that approach, such as the fact that the `Debug` implementation is
+not present in the final binary unless it is actually used somewhere in the
+program, but it isn't impossible. Notably, this is already supported by the
+[`BugStalker`] debugger (given the same condition that the `Debug`
+implementation must actually be used), which some of you first heard about from
+the survey! It also appears to have some support for `async`, with plans to
+expand.
+
 One notable way the debugger experience is currently being improved is through
 the [ongoing Google Summer of Code project] improving how we test debug info and
 visualizer scripts, making it easier to maintain and improve our own visualizer
 scripts and general compatibility with visualizer scripts without silent
 breakage or regressions.
 
-<!-- TODO: Citation needed; am I accurately representing the GSoC project? -->
-
 Once again, we'd like to thank everyone who took the time to participate in the
 survey!
 
 [state-of-rust-2025]: https://blog.rust-lang.org/2026/03/02/2025-State-Of-Rust-Survey-results/#challenges-and-wishes-about-rust
 [rust-debugging-survey]: https://blog.rust-lang.org/2026/02/23/rust-debugging-survey-2026/
-[report]: TODO-LINK-TO-REPORT
+[report]: https://raw.githubusercontent.com/rust-lang/surveys/main/surveys/2026/debugging/report/debugging-survey-2026-report.pdf
 [debugger-attributes]: https://doc.rust-lang.org/reference/attributes/debugger.html
+[`BugStalker`]: https://github.com/godzie44/BugStalker
 [ongoing Google Summer of Code project]: https://summerofcode.withgoogle.com/programs/2026/projects/gzkF5BG0
-<!-- TODO: Is this the best link to use for the GSoC project? -->
 <!-- scripts -->
