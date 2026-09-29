@@ -68,6 +68,8 @@ Properties:
 - LTS updates do not change the observed behavior of code with Undefined Behavior
 - LTS updates do not change the host tools' system requirements
 - LTS updates do not change the runtime's system requirements
+- LTS updates do not change compiler optimizations
+- LTS updates do not change the language's performance characteristics
 - LTS receives fixes for impactful issues with assigned CVEs
 - LTS receives fixes for impactful issues without assigned CVEs
 - LTS receives fixes for known soundness holes in the language
