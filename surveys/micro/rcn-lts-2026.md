@@ -1,6 +1,6 @@
 # Survey questions
 
-The goal of this survey is to gauge expectations around a potential fist-party Rust LTS offering. The results will help inform a potential initiative if the demand is there.
+The goal of this survey is to gauge expectations around a potential first-party Rust LTS offering. The results will help inform a potential initiative if the demand is there.
 
 ## Background
 
@@ -91,7 +91,7 @@ This objectively measures some of what goes into answering the previous question
 Type: free form
 
 > **justification**
-This is the second of the two main LTS axis; we want to gauge the expectation of how long LTS users expect to be able to stay on one LTS release before being *required* to upgrade. We deliberately do not say what units to respond in to avoid priming. Note that both the absolute support duration and the ratio to release frequency are both meaningful insights.
+This is the second of the two main LTS axes; we want to gauge the expectation of how long LTS users expect to be able to stay on one LTS release before being *required* to upgrade. We deliberately do not say what units to respond in to avoid priming. Note that both the absolute support duration and the ratio to release frequency are both meaningful insights.
 
 ### How often do you expect a new Rust LTS release?
 
@@ -102,7 +102,7 @@ A "new release" means a new 1.X version. There is a new Rust Stable 1.X release 
 Type: free form
 
 > **justification**
-This is the first of the two main LTS axis; we want to gauge the expectation of how frequently LTS users expect an LTS update to be available. We deliberately do not say what units to respond in to avoid priming.
+This is the first of the two main LTS axes; we want to gauge the expectation of how frequently LTS users expect an LTS update to be available. We deliberately do not say what units to respond in to avoid priming.
 
 ### What components do you expect support for as part of Rust LTS?
 
@@ -158,7 +158,7 @@ A lot of LTS schemes have baseline support and then extended support for an addi
 Type: free form (optional)
 
 > **justification**
-Rust's standard library is deliberately minimal, so "batteries" from the ecosystem are required for most applications. It would be great if there were a way to broker ecosystem LTS through the Rust Project; the biggest contributor to the funding problem in OSS is connecting users who want to throw money at the problem to the maintainers in a way that satisfies administrative expecations. (Units deliberately unspecified at risk of unitless answers.)
+Rust's standard library is deliberately minimal, so "batteries" from the ecosystem are required for most applications. It would be great if there were a way to broker ecosystem LTS through the Rust Project; the biggest contributor to the funding problem in OSS is connecting users who want to throw money at the problem to the maintainers in a way that satisfies administrative expectations. (Units deliberately unspecified at risk of unitless answers.)
 
 ## Feedback
 
