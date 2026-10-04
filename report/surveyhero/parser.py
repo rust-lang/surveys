@@ -19,7 +19,7 @@ def parse_surveyhero_answers(path: Path, year: int,
     from SH).
     """
     answers = defaultdict(list)
-    with open(path) as f:
+    with open(path, encoding="utf-8") as f:
         reader = csv.reader(f)
         questions = [q.strip() for q in next(reader)]
         total_respondents = 0
@@ -50,7 +50,7 @@ def parse_surveyhero_summary(path: Path, year: int) -> SurveySummary:
     Parses the summary report CSV from SurveyHero,
     which contains aggregated response counts for individual answers.
     """
-    with open(path) as f:
+    with open(path, encoding="utf-8") as f:
         active_question = None
         questions = []
 
