@@ -4,3 +4,4 @@ __pycache__/
 /data/
 .env
 /open_responses/
+*.egg-info

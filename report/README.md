@@ -12,18 +12,19 @@ Requirement to run these scripts are the CSV files with the survey actual data:
 # Build and install
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
-Then run `uv sync` to initialize a virtual environment, and add this directory to the `PYTHONPATH` of your main Python script, and then use e.g. `from surveyhero.parser import parse_surveyhero_report`.
+Then run `uv sync` from the repository root to initialize a virtual environment,
+and then use e.g. `from surveyhero.parser import parse_surveyhero_summary`.
 
 You can then execute your analysis scripts using `uv run <script>`.
 
 Here's a practical list of commands to run:
-```
-$ cd report
-$ uv venv --clear
+
+```bash
+$ cd surveys # The directory you cloned rust-lang/surveys to
+$ uv sync
 $ source .venv/bin/activate
-(report) $ uv sync
-(report) $ cd ../surveys/2025/annual-survey/report
-(report) $ python3 main.py [ --skip-pdf ]
+(surveys) $ cd ./surveys/2025/annual-survey/report
+(surveys) $ uv run ./main.py --skip-pdf
 ```
 
 The parameter `--skip-pdf` will skip creating the PDF report and will only build the blog post.
@@ -36,7 +37,7 @@ Documentation for the Plotly JavaScript library: https://plotly.com/javascript
 First, you will probably want to export data from SurveyHero into two CSV files - one containing the aggregated data from
 the report, and a second one that contains the individual answers from all the respondents.
 
-Then you should use `parser.py:parse_surveyhero_report` to parse the report CSV, and `parser.py:parse_surveyhero_answers`
+Then you should use `parser.py:parse_surveyhero_summary` to parse the report CSV, and `parser.py:parse_surveyhero_answers`
 to parse the full answer CSV (if needed). Once you do that, you can start to build a `ChartReport` (located in `report.py`),
 by adding various charts to it with the provided helper methods. The charts are created out of `Question`s that you can
 access from the parsed CSVs.
