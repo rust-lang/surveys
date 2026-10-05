@@ -178,7 +178,7 @@ def render_blog_post(
 
     print(f"Generating blog post to {output_path}")
 
-    with open(template) as f:
+    with open(template, encoding="utf-8") as f:
         document = f.read()
 
     matches = list(CHART_MARKER_REGEX.finditer(document))

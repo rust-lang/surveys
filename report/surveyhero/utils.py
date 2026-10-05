@@ -26,7 +26,7 @@ def print_question_index(path: Path, new: SurveySummary, old: Optional[SurveySum
         old_index = 0
         new_index = 0
 
-        with open(path, "w") as f:
+        with open(path, "w", encoding="utf-8") as f:
             while old_index < len(old.questions) or new_index < len(new.questions):
                 if old_index < len(old.questions):
                     old_q = old.questions[old_index]
@@ -37,14 +37,14 @@ def print_question_index(path: Path, new: SurveySummary, old: Optional[SurveySum
                     print(f"{new.year}/{new_index}: {new_q.question}", file=f)
                     new_index += 1
     else:
-        with open(path, "w") as f:
+        with open(path, "w", encoding="utf-8") as f:
             for (index, question) in enumerate(new.questions):
                 kind = question.kind.__class__.__name__
                 print(f"{new.year}/{index} ({kind}): {question.question}", file=f)
 
 
 def print_answer_index(answers: SurveyFullAnswers, report: SurveySummary, path: Path):
-    with open(path, "w") as f:
+    with open(path, "w", encoding="utf-8") as f:
         for (index, question) in enumerate(answers.questions):
             if any(question == q.question for q in report.questions) and index > 0:
                 print(file=f)
