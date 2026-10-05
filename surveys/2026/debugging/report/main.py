@@ -1,11 +1,34 @@
 import random
-import sys
 from collections import defaultdict
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 from plotly.graph_objs import Figure
+from surveyhero.analysis import (
+    at_least_one_col,
+)
+from surveyhero.chart import (
+    make_chart,
+)
+from surveyhero.parser import (
+    parse_surveyhero_answers,
+    parse_surveyhero_summary,
+)
+from surveyhero.render import (
+    render_blog_post,
+    render_report_to_pdf,
+)
+from surveyhero.report import ChartReport
+from surveyhero.survey import (
+    Answer,
+    MatrixQuestion,
+    SimpleQuestion,
+    normalize_open_answers,
+)
+from surveyhero.utils import (
+    shorten_annotations,
+)
 
 CURRENT_DIR = Path(__file__).absolute().parent
 """
@@ -17,70 +40,12 @@ ROOT_DIR = Path(__file__).absolute().parent.parent.parent.parent.parent
 This should resolve to the path of the surveys repository as a whole.
 """
 
-REPORT_SCRIPT_DIR = ROOT_DIR / "report"
-"""
-This should resolve to the path of the directory containing the report library.
-This is typically the directory that contains `.venv` after `uv sync`, and is
-also typically where the `pyproject.toml` is contained.
-"""
-
 OPEN_RESPONSES_DIR = ROOT_DIR / "open_responses/2026/debugging"
 """
 This should resolve to the path of the directory used to store open response
 answers extracted from the raw data. Typically, this is the `open_responses`
 directory at the repository root or some path within.
 """
-
-sys.path.insert(0, str(REPORT_SCRIPT_DIR))
-
-# TODO: At runtime, only the `surveyhero.*` imports work. In my editor (VSCodium
-# + `ty` extension), only the `report.surveyhero.*` imports work. The below hack
-# is ugly, but it gets me the best of both worlds. Ideally, I think we should
-# find a way to set things up in the project such that imports "just work", at
-# runtime and in editors, without dynamically adding the import path.
-try:
-    from report.surveyhero.analysis import at_least_one_col
-    from report.surveyhero.chart import (
-        make_chart,
-    )
-    from report.surveyhero.parser import (
-        parse_surveyhero_answers,
-        parse_surveyhero_summary,
-    )
-    from report.surveyhero.render import render_blog_post, render_report_to_pdf
-    from report.surveyhero.report import ChartReport
-    from report.surveyhero.survey import (
-        Answer,
-        MatrixQuestion,
-        SimpleQuestion,
-        normalize_open_answers,
-    )
-    from report.surveyhero.utils import shorten_annotations
-except ModuleNotFoundError:
-    from surveyhero.analysis import (  # ty:ignore[unresolved-import]
-        at_least_one_col,
-    )
-    from surveyhero.chart import (  # ty:ignore[unresolved-import]
-        make_chart,
-    )
-    from surveyhero.parser import (  # ty:ignore[unresolved-import]
-        parse_surveyhero_answers,
-        parse_surveyhero_summary,
-    )
-    from surveyhero.render import (  # ty:ignore[unresolved-import]
-        render_blog_post,
-        render_report_to_pdf,
-    )
-    from surveyhero.report import ChartReport  # ty:ignore[unresolved-import]
-    from surveyhero.survey import (  # ty:ignore[unresolved-import]
-        Answer,
-        MatrixQuestion,
-        SimpleQuestion,
-        normalize_open_answers,
-    )
-    from surveyhero.utils import (  # ty:ignore[unresolved-import]
-        shorten_annotations,
-    )
 
 
 def analyze() -> ChartReport:
