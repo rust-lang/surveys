@@ -1,0 +1,16 @@
+[project]
+name = "surveys"
+version = "0.1.0"
+description = "Workspace for rust-lang/surveys."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["report"]
+
+[tool.uv]
+exclude-newer = false
+
+[tool.uv.sources]
+report = { workspace = true }
+
+[tool.uv.workspace]
+members = ["report"]
