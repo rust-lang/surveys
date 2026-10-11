@@ -1,6 +1,6 @@
 # Survey questions
 
-This survey is organized by the Rust Leadership Council and the Funding team. Its goal is to figure out how much Rust Project contributions/work done by Rust Project members is funded vs. how much is volunteer-based. We want to use the results of this survey to gain long-term visibility into the sustainability of the development of Rust, and to help us secure more funding sources for Rust Project contributors and maintainers.
+This survey is organized by the Rust Leadership Council and the Funding team. Its goal is to figure out how many Rust Project contributions are/how much work done by Rust Project members is funded vs. how much is volunteer-based. We want to use the results of this survey to gain long-term visibility into the sustainability of the development of Rust, and to help us secure more funding sources for Rust Project contributors and maintainers.
 
 This survey is only aimed at Rust Project members. **If you are not a member of any Rust team/working group/project group/etc., please DO NOT fill this survey**. It is also primarily aimed at "active" contributors, who made at least some contribution in the past 12 months.
 
