@@ -218,7 +218,7 @@ Rows:
 - Crates.io
 - Docs.rs
 - rust-lang crates (regex, glob, cc-rs, ...)
-- Other (open response)
+- Somewhere else
 
 Columns:
 
