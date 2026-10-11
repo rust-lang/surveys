@@ -22,13 +22,15 @@ Type: select one (optional)
 
 ### Are you funded for your Rust Project contributions?
 
-Are you currently funded for (at least some of) your Rust Project contributions?
+Did you receive any funding for (at least some of) your Rust Project contributions in the past 12 months? Regardless whether it was one-time or recurring.
+
+Note: choose one of the first three answers if you received *any* funding for your contributions. The specific answer depends on how significant you consider it to be.
 
 Type: select one
 
-- Yes, significantly (e.g. it is my job) [`NEXT`](#how-much-time-do-you-spend-contributing-to-the-rust-project-monthly)
-- Yes, partially (e.g. it covers at least some expenses) [`NEXT`](#how-much-time-do-you-spend-contributing-to-the-rust-project-monthly)
-- Yes, symbolically (e.g. it buys me a cup of coffee each month) [`NEXT`](#how-much-time-do-you-spend-contributing-to-the-rust-project-monthly)
+- Yes, significant funding (e.g. it is my job) [`NEXT`](#how-much-time-do-you-spend-contributing-to-the-rust-project-monthly)
+- Yes, partial funding (e.g. it covers at least some expenses) [`NEXT`](#how-much-time-do-you-spend-contributing-to-the-rust-project-monthly)
+- Yes, symbolical funding (e.g. it buys me a cup of coffee) [`NEXT`](#how-much-time-do-you-spend-contributing-to-the-rust-project-monthly)
 - No, but I was funded before
 - No, I never received any funding for them [`NEXT`](#how-much-money-would-you-like-to-be-paid-for-contributing-to-the-rust-project)
 
