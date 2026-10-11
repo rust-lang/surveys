@@ -153,7 +153,7 @@ class Question:
         aggregated = pd.Series(open_answers).value_counts()
         added_count = 0
         for key in aggregated.index:
-            if id in key:
+            if id in key.lower():
                 added_count += int(aggregated[key])
         assert added_count > 0
 
@@ -300,7 +300,7 @@ class SurveyFullAnswers:
             )
         )
 
-    def open_answers(self, question_or_id: int | str) -> List[str]:
+    def open_answers(self, question_or_id: int | str, open_answer: str = "Other") -> List[str]:
         col = self.get_column(question_or_id)
         ref_question = self.get_summary_question(col.name)
 
@@ -311,7 +311,7 @@ class SurveyFullAnswers:
                 return [answer for answer in answer_data if answer not in known_answers]
             else:
                 answer_data = self.get_answer_columns(col, answer_count=None)
-                return list(answer_data["Other"].dropna())
+                return list(answer_data[open_answer].dropna())
         else:
             return list(col.data.dropna())
 
