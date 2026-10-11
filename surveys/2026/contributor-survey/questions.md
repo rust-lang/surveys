@@ -175,6 +175,7 @@ Type: matrix (optional)
 Rows:
 
 - Implementing new features
+- Refactoring
 - Fixing bugs
 - Performance enhancements
 - Code review
@@ -188,6 +189,7 @@ Rows:
 - Supporting/mentoring/guiding other contributors
 - Governance work
 - Infrastructure work (CI, releases, bots, ...)
+- Something else
 
 Columns:
 
