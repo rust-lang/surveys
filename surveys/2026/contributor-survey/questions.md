@@ -8,7 +8,7 @@ Note that when we ask about contributions in this survey, we always mean contrib
 
 This survey is anonymous. Summarized statistics of the survey results might be published publicly. You can optionally choose to answer selected personal questions at the end of the survey, which will only be made available to the Rust Leadership Council, Rust Funding team and Rust Foundation staff.
 
-### When have you started contributing to the Rust Project?
+### When did you start contributing to the Rust Project?
 
 Type: select one (optional)
 
@@ -48,7 +48,7 @@ Type: select all that apply (optional)
 
 ### How much time do you spend contributing to the Rust Project monthly?
 
-Estimate how many **hours** do you spend on Rust Project contributions **each month**. If this varies wildly, try to provide an average monthly duration over the past 12 months.
+Estimate how many **hours** you spend on Rust Project contributions **each month**. If this varies wildly, try to provide an average monthly duration over the past 12 months.
 
 This includes all kinds of contributions, such as programming, writing tests or documentation, triaging issues, investigating bugs, discussing on Zulip or GitHub, meetings, doing code reviews, etc. Include also work indirectly related to the Rust Project; for example, if you are employed to work on Rust and attend periodic internal meetings related to your work, this time should also be included.
 
@@ -98,7 +98,7 @@ Type: select one (optional)
 
 ### When does your contract/employment end?
 
-If you have a contract or if you are employed to work on Rust, please tell us when is your contract/employment ending (even if it might get refreshed for another term).
+If you have a contract or if you are employed to work on Rust, please tell us when your contract/employment is scheduled to end (even if it might get refreshed for another term).
 
 If you have multiple contracts/employments currently, enter the latest date at which one of them ends. For example, if you have a contract ending in 2026 and another ending in 2027, enter 2027.
 
