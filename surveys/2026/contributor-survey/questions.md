@@ -125,6 +125,7 @@ Type: select one (optional)
 - I'm slightly worried, the situation is uncertain
 - I think that I'm going to lose funding in the near future
 - My funding is definitely ending soon
+- I have no idea
 - Other (open response)
 
 ### Are your contributions directed by your source of funding?
