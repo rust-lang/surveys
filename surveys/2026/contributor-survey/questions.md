@@ -86,6 +86,9 @@ Type: select all that apply (optional)
 
 If you receive funds for your Rust Project contributions from a stable source, such as a contract or an employment, please tell us how long have you been *continuously* funded for (not necessarily from the same employer/contract).
 
+- If you only had a short break (e.g. <3 months) between different stable sources of funding, you can still treat that as continuous (up to you).
+- If you only received one-time funding, skip this question.
+
 Type: select one (optional)
 
 - My funding started this year
