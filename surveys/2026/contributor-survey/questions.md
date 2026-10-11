@@ -1,17 +1,18 @@
 # Survey questions
 
-This survey is organized by the Rust Leadership Council. Its goal is to figure out how much Rust Project contributions/work done by Rust Project members is funded vs. how much is volunteer-based. We want to use the results of this survey to secure more funding sources for Rust Project contributors and maintainers in the future.
+This survey is organized by the Rust Leadership Council and the Funding team. Its goal is to figure out how much Rust Project contributions/work done by Rust Project members is funded vs. how much is volunteer-based. We want to use the results of this survey to gain long-term visibility into the sustainability of the development of Rust, and to help us secure more funding sources for Rust Project contributors and maintainers.
 
 This survey is only aimed at Rust Project members. **If you are not a member of any Rust team/working group/project group/etc., please DO NOT fill this survey**. It is also primarily aimed at "active" contributors, who made at least some contribution in the past 12 months.
 
 Note that when we ask about contributions in this survey, we always mean contributions to the Rust Project repositories, so essentially any repository under the `rust-lang` GitHub organization, plus any other related organizations, such as `rust-lang-nursery` or `rust-analyzer`.
 
-This survey is anonymous. Summarized statistics of the survey results might be published publicly. You can optionally choose to answer selected personal questions at the end of the survey, which will only be made available to the Rust Leadership Council and Rust Foundation staff.
+This survey is anonymous. Summarized statistics of the survey results might be published publicly. You can optionally choose to answer selected personal questions at the end of the survey, which will only be made available to the Rust Leadership Council, Rust Funding team and Rust Foundation staff.
 
 ### When have you started contributing to the Rust Project?
 
 Type: select one (optional)
 
+- During 2026
 - During 2025
 - During 2023 or 2024
 - During 2021 or 2022
@@ -21,9 +22,13 @@ Type: select one (optional)
 
 ### Are you funded for your Rust Project contributions?
 
+Are you currently funded for (at least some of) your Rust Project contributions?
+
 Type: select one
 
-- Yes, I am currently funded for (at least some of) my contributions [`NEXT`](#how-much-time-do-you-spend-contributing-to-the-rust-project-monthly)
+- Yes, significantly (e.g. it is my job) [`NEXT`](#how-much-time-do-you-spend-contributing-to-the-rust-project-monthly)
+- Yes, partially (e.g. it covers at least some expenses) [`NEXT`](#how-much-time-do-you-spend-contributing-to-the-rust-project-monthly)
+- Yes, symbolically (e.g. it buys me a cup of coffee each month) [`NEXT`](#how-much-time-do-you-spend-contributing-to-the-rust-project-monthly)
 - No, but I was funded before
 - No, I never received any funding for them [`NEXT`](#how-much-money-would-you-like-to-be-paid-for-contributing-to-the-rust-project)
 
@@ -41,7 +46,7 @@ Type: select all that apply (optional)
 
 ### How much time do you spend contributing to the Rust Project monthly?
 
-Estimate how many hours do you spend on Rust Project contributions each month. If this varies wildly, try to provide an average monthly duration over the past 12 months.
+Estimate how many **hours** do you spend on Rust Project contributions **each month**. If this varies wildly, try to provide an average monthly duration over the past 12 months.
 
 This includes all kinds of contributions, such as programming, writing tests or documentation, triaging issues, investigating bugs, discussing on Zulip or GitHub, meetings, doing code reviews, etc. Include also work indirectly related to the Rust Project; for example, if you are employed to work on Rust and attend periodic internal meetings related to your work, this time should also be included.
 
@@ -82,26 +87,26 @@ If you receive funds for your Rust Project contributions from a stable source, s
 Type: select one (optional)
 
 - My funding started this year
+- Since 2025
 - Since 2024
 - Since 2023
 - Since 2022
 - Since 2021
-- Since 2020
-- Since 2019 or before
+- Since 2020 or before
 
 ### When does your contract/employment end?
 
 If you have a contract or if you are employed to work on Rust, please tell us when is your contract/employment ending (even if it might get refreshed for another term).
 
-If you have multiple contracts/employments currently, enter the latest date at which one of them ends. For example, if you have a contract ending in 2025 and another ending in 2026, enter 2026.
+If you have multiple contracts/employments currently, enter the latest date at which one of them ends. For example, if you have a contract ending in 2026 and another ending in 2027, enter 2027.
 
 Type: select one (optional)
 
-- This year (2025)
-- 2026
+- This year (2026)
 - 2027
 - 2028
-- 2029 or later
+- 2029
+- 2030 or later
 - My contract/employment has no end date
 - I don't know
 - Not applicable to my source of funding
@@ -119,26 +124,24 @@ Type: select one (optional)
 
 ### Are your contributions directed by your source of funding?
 
-We want to find out whether the entity/entities that pay for your contributions determine what contributions you make.
+We want to find out whether and how much the entity/entities that pay for your contributions determine what contributions you make.
 
-Type: select one (optional)
-
-- Yes, my source of funding tells me what contributions I should make
-- No, I decide what I will contribute to
-- Other (open response)
+Type: free form (optional)
 
 ### How much money would you like to be paid for contributing to the Rust Project?
 
 Please enter the **minimum monthly compensation** in USD that would allow you to contribute to Rust for the given number of days per week.
 
-If you do not **need** any compensation for the given contribution workload, and you are fine doing it on a volunteer basis, please enter **0**.
-If you do not **want** to work on Rust for so many days per week, please enter **never**.
+- If you are fine doing the given arrangement on a volunteer basis, enter **0**.
+- If the given arrangement does not fit you, enter **never** or leave the field empty.
 
 Type: input list (optional)
 
-- 4-5 days per week (full-time)
-- 2-3 days per week (part-time)
-- 1 day per week or less
+- 4-5 days per week (full-time employment)
+- 4-5 days per week (full-time contracting)
+- 2-3 days per week (part-time employment)
+- 2-3 days per week (part-time contracting)
+- 1 day per week or less (contracting or grants)
 
 ### What funding arrangement would you prefer?
 
@@ -154,42 +157,44 @@ Type: ranking (optional)
 - Part-time contracting
 - Grants
 
-### Would you potentially like to be included on a public list of contributors looking for funding?
+### What kind of work do you do in the Rust Project?
 
-If we ever had something like a public list of Rust Project contributors looking for funding, what would you think of that?
+Select all activities that you perform in the Rust Project, and whether you are (at least partially) funded for it or not.
 
-For example, we could have a page that lists Rust contributors that receive funds from GitHub Sponsors.
+- If you are both funded for an activity, but you also do it on a volunteer basis, select "I am funded for this".
+- If you do not perform the given activity, leave its row empty.
 
-Type: select one (optional)
+Type: matrix (optional)
 
-- That sounds like a good idea, and I would potentially like to be on that list
-- That sounds like a good idea, but I do not want to be on such a list
-- I'm neutral/I don't know
-- That sounds like a bad idea (please explain) or I have other thoughts (open response)
+Rows:
 
-### What kind of work do you do within the Rust Project?
-
-Type: select all that apply (optional)
-
-- Documentation
-- Code review
-- Submitting rollups
-- Design review (RFCs/MCPs/FCPs)
-- Issue triage
-- Issue reporting
-- Moderation
 - Implementing new features
 - Fixing bugs
 - Performance enhancements
+- Code review
+- Writing or updating documentation
+- Issue triage
+- Issue reporting
+- Submitting rollups
+- Design review (RFCs/MCPs/FCPs)
+- Moderation
 - Communication (e.g. writing blog posts, release notes, preparing for meetings or taking minutes)
 - Supporting/mentoring/guiding other contributors
-- Governance
+- Governance work
 - Infrastructure work (CI, releases, bots, ...)
-- Other (open response)
+
+Columns:
+
+- I am funded for this
+- I do it on a volunteer basis
 
 ### What parts of the Rust Project do you typically contribute to?
 
-Type: select all that apply (optional)
+Select which areas of Rust have you contributed to in the past 12 months, and whether you were at least partially funded for those contributions, or whether you did them fully on a volunteer basis.
+
+Type: matrix (optional)
+
+Rows:
 
 - Compiler
 - Standard library
@@ -202,7 +207,15 @@ Type: select all that apply (optional)
 - Rustup
 - Bootstrap or related in-tree tools (compiletest, ...)
 - Other tooling (bors, rfcbot, triagebot, rustc-perf, ...)
+- Crates.io
+- Docs.rs
+- rust-lang crates (regex, glob, cc-rs, ...)
 - Other (open response)
+
+Columns:
+
+- I am funded for this
+- I do it on a volunteer basis
 
 ### What Rust teams are you a part of?
 
@@ -224,7 +237,7 @@ Type: select all that apply (optional)
 
 ## Optional detailed questions
 
-The following questions are **FULLY OPTIONAL**. If you provide answers to them, they will NOT be shared publicly, and will be made available only to the Leadership Council and Rust Foundation staff that facilitates this survey.
+The following questions are **FULLY OPTIONAL**. If you provide answers to them, they will NOT be shared publicly, and will be made available only to the Leadership Council, the Rust Funding team and Rust Foundation staff that facilitates this survey.
 
 ### Which companies/organizations fund your contributions to the Rust Project?
 
