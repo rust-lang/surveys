@@ -157,10 +157,10 @@ Rank only those arrangements that would work for you, and order them by preferen
 
 Type: ranking (optional)
 
-- Full-time employment
-- Part-time employment
-- Full-time contracting
-- Part-time contracting
+- Full-time employment (4-5 days per week)
+- Full-time contracting (4-5 days per week)
+- Part-time employment (2-3 days per week)
+- Part-time contracting (2-3 days per week)
 - Grants
 
 ### What kind of work do you do in the Rust Project?
