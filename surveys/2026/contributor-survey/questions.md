@@ -229,6 +229,8 @@ Columns:
 
 Enter up to five Rust teams or working groups (separated by commas) that you are a part of and that are the most relevant to the Rust Project contributions that you make. If you receive funding for work in some of these teams specifically, order them by how much funding you receive for work in a given team. For example, if you are a member of t-compiler and t-infra, but you are only funded for your work on t-compiler, enter "compiler,infra".
 
+You can find out which teams you are a part of by visiting https://rust-lang.org/governance/people/<your-github-username>/.
+
 Type: free form (optional)
 
 ### What is your occupation?
