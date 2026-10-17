@@ -1,12 +1,35 @@
 # Survey questions
 
-This survey is organized by the Rust Leadership Council and the Funding team. Its goal is to figure out how many Rust Project contributions are/how much work done by Rust Project members is funded vs. how much is volunteer-based. We want to use the results of this survey to gain long-term visibility into the sustainability of the development of Rust, and to help us secure more funding sources for Rust Project contributors and maintainers.
+This survey is organized by the Rust Leadership Council and the Funding team. Its goal is to figure out how much work done by Rust Project members is funded vs. how much is volunteer-based. We want to use the results of this survey to gain long-term visibility into the sustainability of the development of Rust, and to help us secure more funding sources for Rust Project contributors and maintainers.
 
-This survey is only aimed at Rust Project members. **If you are not a member of any Rust team/working group/project group/etc., please DO NOT fill this survey**. It is also primarily aimed at "active" contributors, who made at least some contribution in the past 12 months.
+This survey is only aimed at Rust Project members and alumni. **If you are not a current or past member of any Rust team/working group/project group/etc., please DO NOT fill this survey**. If you find yourself on [this page](https://rust-lang.org/governance/people/), then you are the target audience of this survey.
 
-Note that when we ask about contributions in this survey, we always mean contributions to the Rust Project repositories, so essentially any repository under the `rust-lang` GitHub organization, plus any other related organizations, such as `rust-lang-nursery` or `rust-analyzer`.
+Note that when we ask about contributions in this survey, we always mean contributions to Rust Project repositories, so essentially any repository under the *rust-lang* GitHub organization, plus any other related organizations, such as *rust-lang-nursery* or *rust-analyzer*.
 
 This survey is anonymous. Summarized statistics of the survey results might be published publicly. You can optionally choose to answer selected personal questions at the end of the survey, which will only be made available to the Rust Leadership Council, Rust Funding team and Rust Foundation staff.
+
+### Are you currently contributing to the Rust Project?
+
+We are interested in any kind of contribution, i.e. creating or reviewing commits, pull requests or issues, leading discussions on Zulip or GitHub, etc.
+
+Type: select one (optional)
+
+- Yes, I made at least some contribution in the past 12 months
+- No, I used to contribute before, but stopped [`NEXT`](#why-did-you-stop-contributing)
+- I did not ever contribute to the Rust Project [`NEXT`](<END>)
+
+### Why did you start contributing to the Rust Project?
+
+Type: select all that apply (optional)
+
+- I wanted to improve my Rust skills and learn from the experts maintaining Rust
+- I wanted to implement features that I needed as a user of Rust
+- I noticed an issue in the project and wanted to fix it
+- I wanted to give back to the Rust community
+- I wanted to add to my portfolio of open source work for my resume
+- I was encouraged to contribute by an existing Rust contributor / maintainer
+- My work assigned open source contributions to me as part of my job
+- Other (open response)
 
 ### When did you start contributing to the Rust Project?
 
@@ -18,7 +41,6 @@ Type: select one (optional)
 - During 2021 or 2022
 - During 2019 or 2020
 - During 2018 or before
-- I did not ever contribute to the Rust Project [`NEXT`](<END>)
 
 ### Are you funded for your Rust Project contributions?
 
@@ -136,10 +158,12 @@ Type: free form (optional)
 
 ### How much money would you like to be paid for contributing to the Rust Project?
 
-Please enter the **minimum monthly compensation** in USD that would allow you to contribute to Rust for the given number of days per week.
+Please enter the **minimum MONTHLY compensation** in USD that would allow you to contribute to Rust for the given number of days per week.
 
-- If you are fine doing the given arrangement on a volunteer basis, enter **0**.
-- If the given arrangement does not fit you, enter **never** or leave the field empty.
+If you do not need any compensation for the given arrangement, and you are fine doing it on a volunteer basis, please enter **0**.
+If you do not want to work on Rust with the given arrangement, please enter **never** or don't fill anything.
+
+**THE COMPENSATION SHOULD BE PER MONTH, NOT PER YEAR!**
 
 Type: input list (optional)
 
@@ -167,6 +191,8 @@ Type: ranking (optional)
 
 Select all activities that you perform in the Rust Project, and whether you are (at least partially) funded for it or not.
 
+If you do not contribute to that area, do not fill anything in that row.
+
 - If you are both funded for an activity, but you also do it on a volunteer basis, select "I am funded for this".
 - If you do not perform the given activity, leave its row empty.
 
@@ -193,12 +219,14 @@ Rows:
 
 Columns:
 
-- I am funded for this
+- I am/was funded for this
 - I do it on a volunteer basis
 
 ### What parts of the Rust Project do you typically contribute to?
 
 Select which areas of Rust have you contributed to in the past 12 months, and whether you were at least partially funded for those contributions, or whether you did them fully on a volunteer basis.
+
+If you do not contribute to that area, do not fill anything in that row.
 
 Type: matrix (optional)
 
@@ -213,8 +241,8 @@ Rows:
 - Rustfmt
 - Miri
 - Rustup
-- Bootstrap or related in-tree tools (compiletest, ...)
-- Other tooling (bors, rfcbot, triagebot, rustc-perf, ...)
+- Bootstrap/compiletest/other rustc tools
+- Bots/tools (bors, triagebot, rustc-perf, etc.)
 - Crates.io
 - Docs.rs
 - rust-lang crates (regex, glob, cc-rs, ...)
@@ -222,7 +250,7 @@ Rows:
 
 Columns:
 
-- I am funded for this
+- I am/was funded for this
 - I do it on a volunteer basis
 
 ### What Rust teams are you a part of?
@@ -283,8 +311,21 @@ You can enter your GitHub handle here (without the leading @).
 
 Type: free form (optional)
 
+### Why did you stop contributing to the Rust Project?
+
+Type: select all that apply (optional)
+
+- I could not find funding for it
+- I experienced interpersonal conflicts
+- I burnt out because I was not funded
+- I burnt out because of other reasons
+- I lost interest
+- I did not have time for it anymore
+- I switched jobs
+- Other (open response)
+
 ### Do you have any other comments regarding Rust Project contributor funding and its sustainability?
 
-You can describe your funding situation in more detail or express your wishes for funding Rust Project work, or anything else.
+You can describe your funding situation in more detail or express your wishes for funding Rust Project work, or anything else. You can also describe what other forms of support (i.e. other than funding contributions) would benefit your Rust Project work.
 
 Type: free form (optional)
