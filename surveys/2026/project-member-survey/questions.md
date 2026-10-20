@@ -29,6 +29,7 @@ Type: select all that apply (optional)
 - I wanted to add to my portfolio of open source work for my resume
 - I was encouraged to contribute by an existing Rust contributor / maintainer
 - My work assigned open source contributions to me as part of my job
+- I don't remember
 - Other (open response)
 
 ### When did you start contributing to the Rust Project?
