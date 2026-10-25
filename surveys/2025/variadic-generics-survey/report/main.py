@@ -464,7 +464,7 @@ if __name__ == "__main__":
     template_path = Path(__file__).absolute().parent / "2025-09-variadic-use-cases-results.md"
 
     # Fill path to blog roost
-    blog_dir = Path("/home/olivier-faure/Documents/blog.rust-lang.org/content2/variadic_results/")
+    blog_dir = Path("")
     render_blog_post(
         template=template_path,
         blog_dir=blog_dir,
