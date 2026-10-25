@@ -486,7 +486,7 @@ if __name__ == "__main__":
     render_report_to_pdf(
         report,
         Path(__file__).parent / "variadic-use-cases-results.pdf",
-        "Variadic Generics Micro Survey results",
+        "Variadic Generics\nMicro Survey results",
         include_labels=False
     )
 
