@@ -70,7 +70,6 @@ def make_bar_group_chart(
     data["value"] = 0.0
     data["percent"] = 0.0
 
-
     # Calculate percent from all responses of that given year
     for (year, total_count) in totals.items():
         counts = data.loc[data["Year"] == year, "count"].astype(np.float32)
@@ -78,7 +77,6 @@ def make_bar_group_chart(
         data.loc[data["Year"] == year, "percent"] = (counts / total_count) * 100.0
 
     main_year = str(question.year)
-
 
     def sort_key(answer: str) -> int:
         return legend_order[::-1].index(answer)
@@ -174,11 +172,13 @@ def make_bar_group_chart(
 
     return fig
 
+
 # ===
 
 def total_answers(question: QuestionKind):
     assert isinstance(question, SimpleQuestion)
     return sum([answer.count for answer in question.answers])
+
 
 question1 = Question(
     id=1,
@@ -419,11 +419,13 @@ question13 = Question(
 )
 question13.total_responses = total_answers(question13.kind)
 
+
 # ===
 
 def write_file(path: Path, content: bytes):
     with open(path, "wb") as f:
         f.write(content)
+
 
 def write_chart(chart: Figure, filename: str):
     assert chart
@@ -438,19 +440,29 @@ def write_chart(chart: Figure, filename: str):
 def variadic_use_cases_report() -> ChartReport:
     report = ChartReport()
 
+    legend_order = ["Yes", "No"]
+
     report.add_custom_chart("how-long-rust", lambda: make_bar_group_chart(question1, range=(0, 60)))
-    report.add_pie_chart("heard-about-variadics", question2)
-    report.add_custom_chart("where-heard-about-variadics", lambda: make_bar_group_chart(question3, range=(0, 60)))
-    report.add_custom_chart("where-heard-about-variadics-open", lambda: make_bar_group_chart(question4, range=(0, 60)))
-    report.add_pie_chart("use-cases-variadic-generics", question5)
-    report.add_custom_chart("use-cases-variadic-generics-open", lambda: make_bar_group_chart(question6, range=(0, 35)))
-    report.add_custom_chart("specific-project", lambda: make_bar_group_chart(question7, range=(0, 100)))
-    report.add_custom_chart("disliked-macros", lambda: make_bar_group_chart(question8, range=(0, 60)))
-    report.add_pie_chart("use-cases-variadic-mappings", question9)
-    report.add_pie_chart("use-cases-variadic-nonlinear", question10)
-    report.add_custom_chart("use-cases-variadic-nonlinear-open", lambda: make_bar_group_chart(question11, range=(0, 60)))
-    report.add_custom_chart("variadics-priority-level", lambda: make_bar_group_chart(question12, range=(0, 60)))
-    report.add_custom_chart("last-comments", lambda: make_bar_group_chart(question13, range=(0, 60)))
+    report.add_pie_chart("heard-about-variadics", question2, legend_order=legend_order)
+    report.add_custom_chart("where-heard-about-variadics",
+                            lambda: make_bar_group_chart(question3, range=(0, 60)))
+    report.add_custom_chart("where-heard-about-variadics-open",
+                            lambda: make_bar_group_chart(question4, range=(0, 60)))
+    report.add_pie_chart("use-cases-variadic-generics", question5, legend_order=legend_order)
+    report.add_custom_chart("use-cases-variadic-generics-open",
+                            lambda: make_bar_group_chart(question6, range=(0, 35)))
+    report.add_custom_chart("specific-project",
+                            lambda: make_bar_group_chart(question7, range=(0, 100)))
+    report.add_custom_chart("disliked-macros",
+                            lambda: make_bar_group_chart(question8, range=(0, 60)))
+    report.add_pie_chart("use-cases-variadic-mappings", question9, legend_order=legend_order)
+    report.add_pie_chart("use-cases-variadic-nonlinear", question10, legend_order=legend_order)
+    report.add_custom_chart("use-cases-variadic-nonlinear-open",
+                            lambda: make_bar_group_chart(question11, range=(0, 60)))
+    report.add_custom_chart("variadics-priority-level",
+                            lambda: make_bar_group_chart(question12, range=(0, 60)))
+    report.add_custom_chart("last-comments",
+                            lambda: make_bar_group_chart(question13, range=(0, 60)))
 
     return report
 
@@ -477,6 +489,5 @@ if __name__ == "__main__":
         "Variadic Generics Micro Survey results",
         include_labels=False
     )
-
 
 # render_png requires Kaleido which requires Chrome
