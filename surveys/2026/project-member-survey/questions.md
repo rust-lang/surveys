@@ -193,10 +193,9 @@ Type: ranking (optional)
 
 Select all activities that you performed in the Rust Project in the past 12 months, and whether you were at least partially funded for each activity during that period.
 
-If you do not contribute to that area, do not fill anything in that row.
-
-- If you are both funded for an activity, but you also do it on a volunteer basis, select "I am funded for this".
-- If you do not perform the given activity, leave its row empty.
+If you did not contribute in that area, do not fill anything in that row.
+If you are both funded for an activity, but you also do it on a volunteer basis, select "I am/was funded for this".
+If you do not perform the given activity, do not fill anything in that row.
 
 Type: matrix (optional)
 
@@ -228,7 +227,7 @@ Columns:
 
 Select which areas of Rust have you contributed to in the past 12 months, and whether you were at least partially funded for those contributions, or whether you did them fully on a volunteer basis.
 
-If you do not contribute to that area, do not fill anything in that row.
+If you did not contribute to that area, do not fill anything in that row.
 
 Type: matrix (optional)
 
