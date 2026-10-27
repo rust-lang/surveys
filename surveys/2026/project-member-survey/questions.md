@@ -1,12 +1,12 @@
 # Survey questions
 
-This survey is organized by the Rust Leadership Council and the Funding team. Its goal is to figure out how much work done by Rust Project members is funded vs. how much is volunteer-based. We want to use the results of this survey to gain long-term visibility into the sustainability of the development of Rust, and to help us secure more funding sources for Rust Project contributors and maintainers.
+This survey is organized by the Rust Funding team. Its goal is to figure out how much work done by Rust Project members is funded vs. how much is volunteer-based, and what were the pathways of Rust Project members to their contributions. We want to use the results of this survey to gain long-term visibility into the sustainability of the development of Rust, and to help us secure more funding sources for Rust Project contributors and maintainers.
 
 This survey is only aimed at Rust Project members and alumni. **If you are not a current or past member of any Rust team/working group/project group/etc., please DO NOT fill this survey**. If you find yourself on [this page](https://rust-lang.org/governance/people/), then you are the target audience of this survey.
 
 Note that when we ask about contributions in this survey, we always mean contributions to Rust Project repositories, so essentially any repository under the *rust-lang* GitHub organization, plus any other related organizations, such as *rust-lang-nursery* or *rust-analyzer*.
 
-This survey is anonymous. Summarized statistics of the survey results might be published publicly. You can optionally choose to answer selected personal questions at the end of the survey, which will only be made available to the Rust Leadership Council, Rust Funding team and Rust Foundation staff.
+This survey is anonymous. Summarized statistics of the survey results might be published publicly. You can optionally choose to answer selected personal questions at the end of the survey, which will only be made available to the Rust Leadership Council, the Rust Funding team and Rust Foundation staff.
 
 ### Are you currently contributing to the Rust Project?
 
@@ -47,7 +47,7 @@ Type: select one (optional)
 
 Did you receive any funding for (at least some of) your Rust Project contributions in the past 12 months? Regardless whether it was one-time or recurring.
 
-Note: choose one of the first three answers if you received *any* funding for your contributions. The specific answer depends on how significant you consider it to be.
+Note: choose one of the first three answers if you received *any* funding for your contributions. The selected answer depends on how significant you consider it to be.
 
 Type: select one
 
@@ -58,6 +58,8 @@ Type: select one
 - No, I never received any funding for them [`NEXT`](#how-much-money-would-you-like-to-be-paid-for-contributing-to-the-rust-project)
 
 ### Why are you not funded anymore?
+
+You can select multiple options.
 
 Type: select all that apply (optional)
 
@@ -75,7 +77,7 @@ Estimate how many **hours** you spend on Rust Project contributions **each month
 
 This includes all kinds of contributions, such as programming, writing tests or documentation, triaging issues, investigating bugs, discussing on Zulip or GitHub, meetings, doing code reviews, etc. Include also work indirectly related to the Rust Project; for example, if you are employed to work on Rust and attend periodic internal meetings related to your work, this time should also be included.
 
-Enter the value as an integer, e.g. *50*.
+Enter the value as an integer, e.g. **50**.
 
 Type: free form (optional)
 
@@ -87,7 +89,7 @@ If you are not funded per-hour, but with a flat rate, attempt to convert the num
 
 If the ratio changes over time, try to estimate the average ratio over the past 12 months.
 
-Enter the value as an integer percentage, e.g. *50*.
+Enter the value as an integer percentage, e.g. **50**.
 
 Type: free form (optional)
 
@@ -109,8 +111,7 @@ Type: select all that apply (optional)
 
 If you receive funds for your Rust Project contributions from a stable source, such as a contract or an employment, please tell us how long have you been *continuously* funded for (not necessarily from the same employer/contract).
 
-- If you only had a short break (e.g. <3 months) between different stable sources of funding, you can still treat that as continuous (up to you).
-- If you only received one-time funding, skip this question.
+If you only had a short break (e.g. <3 months) between different stable sources of funding, you can still treat that as continuous (up to you). If you only received one-time funding, skip this question.
 
 Type: select one (optional)
 
@@ -264,6 +265,8 @@ Type: free form (optional)
 
 ### What is your occupation?
 
+You can select multiple options.
+
 Type: select all that apply (optional)
 
 - I am employed
@@ -298,7 +301,7 @@ Type: free form (optional)
 
 ### Where are you located?
 
-Enter a country or a continent where you are located. We ask this question to contextualize the cost of living and average developer salary of Rust Project contributors.
+Enter a country (or even just a continent) where you are located. We ask this question to contextualize the cost of living and average developer salary of Rust Project contributors.
 
 **THIS ANSWER IS OPTIONAL**
 
@@ -313,6 +316,8 @@ You can enter your GitHub handle here (without the leading @).
 Type: free form (optional)
 
 ### Why did you stop contributing to the Rust Project?
+
+You can select multiple options.
 
 Type: select all that apply (optional)
 
