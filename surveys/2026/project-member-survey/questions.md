@@ -4,7 +4,7 @@ This survey is organized by the Rust Funding team. Its goal is to figure out how
 
 This survey is only aimed at Rust Project members and alumni. **If you are not a current or past member of any Rust team/working group/project group/etc., please DO NOT fill this survey**. If you find yourself on [this page](https://rust-lang.org/governance/people/), then you are the target audience of this survey.
 
-Note that when we ask about contributions in this survey, we always mean contributions to Rust Project repositories, so essentially any repository under the *rust-lang* GitHub organization, plus any other related organizations, such as *rust-lang-nursery* or *rust-analyzer*.
+Note that when we ask about contributions in this survey, we always mean contributions related to the Rust Project, i.e. contributions to the *rust-lang*/*rust-analyzer*/*rust-lang-nursery* repositories, discussions on the Rust Zulip, governance, mentoring or moderation in Rust Project spaces, etc.
 
 This survey is anonymous. Summarized statistics of the survey results might be published publicly. You can optionally choose to answer selected personal questions at the end of the survey, which will only be made available to the Rust Leadership Council, the Rust Funding team and Rust Foundation staff.
 
