@@ -4,21 +4,27 @@ use std::vec;
 pub fn parse(markdown: &str) -> anyhow::Result<Vec<Question<'_>>> {
     let mut questions = Vec::new();
     let mut state = ParserState::None;
+
     for line in markdown
         .lines()
         .map(|l| l.trim())
-        .filter(|l| !l.is_empty())
         .filter(|l| !l.starts_with(">"))
     {
         if let Some(text) = line.strip_prefix("###") {
-            let old_state = std::mem::replace(&mut state, ParserState::Text(text.trim()));
+            let old_state = std::mem::replace(
+                &mut state,
+                ParserState::Text {
+                    title: text.trim(),
+                    description: String::new(),
+                },
+            );
             match old_state {
                 ParserState::Question(q) if !q.is_empty() => questions.push(q),
                 ParserState::None => {}
-                ParserState::Text(q) => bail!("question without answers '{}'", q),
+                ParserState::Text { title: q, .. } => bail!("question without answers '{q}'"),
                 ParserState::Question(q) => bail!("question without answers '{}'", q.text),
-                ParserState::HalfMatrixText(q) => {
-                    bail!("question without answers '{}'", q)
+                ParserState::HalfMatrixText { title: q, .. } => {
+                    bail!("question without answers '{q}'")
                 }
                 ParserState::HalfMatrix {
                     answers, text: q, ..
@@ -30,38 +36,51 @@ pub fn parse(markdown: &str) -> anyhow::Result<Vec<Question<'_>>> {
                 }
             }
         } else if let Some(stripped_text) = line.strip_prefix("Type: ") {
-            if let ParserState::Text(text) = state {
+            if let ParserState::Text {
+                title: text,
+                description,
+            } = state
+            {
                 let typ = stripped_text.trim();
                 state = if typ.starts_with("select one") {
                     ParserState::Question(Question {
                         text,
+                        description,
                         answers: Answers::SelectOne(vec![]),
                     })
                 } else if typ.starts_with("free form") {
                     ParserState::Question(Question {
                         text,
+                        description,
                         answers: Answers::FreeForm,
                     })
                 } else if typ.starts_with("select all that apply") {
                     ParserState::Question(Question {
                         text,
+                        description,
                         answers: Answers::SelectMany(vec![]),
                     })
                 } else if typ.starts_with("matrix") {
-                    ParserState::HalfMatrixText(text)
+                    ParserState::HalfMatrixText {
+                        title: text,
+                        description,
+                    }
                 } else if typ.starts_with("rating scale") {
                     ParserState::Question(Question {
                         text,
+                        description,
                         answers: Answers::RatingScale,
                     })
                 } else if typ.starts_with("ranking") {
                     ParserState::Question(Question {
                         text,
+                        description,
                         answers: Answers::Ranking(vec![]),
                     })
                 } else if typ.starts_with("input list") {
                     ParserState::Question(Question {
                         text,
+                        description,
                         answers: Answers::InputList(vec![]),
                     })
                 } else {
@@ -116,18 +135,23 @@ pub fn parse(markdown: &str) -> anyhow::Result<Vec<Question<'_>>> {
             })?;
             state = match (state, &previous.answers) {
                 (
-                    ParserState::HalfMatrixText(q),
+                    ParserState::HalfMatrixText {
+                        title: q,
+                        description,
+                    },
                     Answers::Matrix {
                         label1, answers1, ..
                     },
                 ) => ParserState::HalfMatrix {
                     text: q,
+                    description,
                     label: label1,
                     answers: answers1.clone(),
                 },
                 (
                     ParserState::HalfMatrix {
                         text,
+                        description,
                         label,
                         answers,
                     },
@@ -136,17 +160,20 @@ pub fn parse(markdown: &str) -> anyhow::Result<Vec<Question<'_>>> {
                     },
                 ) if answers.is_empty() && *label1 == label => ParserState::HalfMatrix {
                     text,
+                    description,
                     label,
                     answers: answers1.clone(),
                 },
                 (
                     ParserState::Question(Question {
                         text,
+                        description,
                         answers: Answers::SelectMany(a1),
                     }),
                     new,
                 ) if a1.is_empty() => ParserState::Question(Question {
                     text,
+                    description,
                     answers: new.clone(),
                 }),
                 (state, _) => bail!(
@@ -156,17 +183,23 @@ pub fn parse(markdown: &str) -> anyhow::Result<Vec<Question<'_>>> {
             };
         } else if line.ends_with(":") {
             state = match state {
-                ParserState::HalfMatrixText(q) => ParserState::HalfMatrix {
+                ParserState::HalfMatrixText {
+                    title: q,
+                    description,
+                } => ParserState::HalfMatrix {
                     text: q,
+                    description,
                     label: line,
                     answers: vec![],
                 },
                 ParserState::HalfMatrix {
                     text,
+                    description,
                     label,
                     answers,
                 } if !answers.is_empty() => ParserState::Question(Question {
                     text,
+                    description,
                     answers: Answers::Matrix {
                         label1: label,
                         answers1: answers,
@@ -178,6 +211,13 @@ pub fn parse(markdown: &str) -> anyhow::Result<Vec<Question<'_>>> {
                 }
                 _ => state,
             };
+        } else if let ParserState::Text {
+            title: _,
+            description,
+        } = &mut state
+        {
+            description.push_str(line);
+            description.push('\n');
         } else {
             log::warn!("Unhandled line: {}", line);
         }
@@ -193,12 +233,17 @@ pub fn parse(markdown: &str) -> anyhow::Result<Vec<Question<'_>>> {
 #[derive(Debug)]
 pub struct Question<'a> {
     pub text: &'a str,
+    description: String,
     pub answers: Answers<'a>,
 }
 
 impl<'a> Question<'a> {
     fn is_empty(&self) -> bool {
         self.answers.is_empty()
+    }
+
+    pub fn description(&self) -> String {
+        self.description.trim().to_string()
     }
 }
 
@@ -238,14 +283,21 @@ enum ParserState<'a> {
     // We are starting from nothing
     None,
     // We have the question text and now need answers
-    Text(&'a str),
+    Text {
+        title: &'a str,
+        description: String,
+    },
     // building up the question with answers
     Question(Question<'a>),
     // Got the text for a matrix question
-    HalfMatrixText(&'a str),
+    HalfMatrixText {
+        title: &'a str,
+        description: String,
+    },
     // On the first half of a matrix question
     HalfMatrix {
         text: &'a str,
+        description: String,
         label: &'a str,
         answers: Vec<&'a str>,
     },
@@ -255,9 +307,9 @@ impl<'a> ParserState<'a> {
     fn question_text(&self) -> Option<&'a str> {
         match self {
             Self::None => None,
-            Self::Text(t) => Some(t),
+            Self::Text { title, .. } => Some(title),
             Self::Question(q) => Some(q.text),
-            Self::HalfMatrixText(q) => Some(q),
+            Self::HalfMatrixText { title, .. } => Some(title),
             Self::HalfMatrix { text, .. } => Some(text),
         }
     }

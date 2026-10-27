@@ -10,7 +10,15 @@ impl markdown::Question<'_> {
         if self.text != other.text() {
             return Comparison::TitlesDiffer {
                 md: self.text.to_owned(),
-                sh: other.text().to_owned(),
+                sh: other.text(),
+            };
+        }
+
+        if self.description() != other.description_text() {
+            return Comparison::DescriptionsDiffer {
+                question: self.text.to_owned(),
+                md: self.description(),
+                sh: other.description_text(),
             };
         }
 
@@ -140,6 +148,11 @@ pub struct AnswerDiff {
 #[derive(Debug)]
 pub enum Comparison {
     TitlesDiffer {
+        md: String,
+        sh: String,
+    },
+    DescriptionsDiffer {
+        question: String,
         md: String,
         sh: String,
     },
