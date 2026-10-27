@@ -1,5 +1,6 @@
 use anyhow::Context;
 use clap::Parser;
+use similar::ChangeTag;
 use std::io::ErrorKind;
 use std::path::PathBuf;
 use surveyhero::api::Question;
@@ -75,7 +76,21 @@ fn check_questions(markdown_questions: &[markdown::Question], sh_questions: &[Qu
         let comparison = online.compare(markdown);
         if !matches!(comparison, Comparison::Equal) {
             println!("Q: '{}'", online.text);
-            println!("  {:#?}", comparison);
+            match comparison {
+                Comparison::DescriptionsDiffer { md, sh, .. } => {
+                    println!("(Old: Markdown, new: SurveyHero)\n");
+                    let diff = similar::TextDiff::configure().diff_lines(md, sh);
+                    for change in diff.iter_all_changes() {
+                        let sign = match change.tag() {
+                            ChangeTag::Delete => "-",
+                            ChangeTag::Insert => "+",
+                            ChangeTag::Equal => " ",
+                        };
+                        print!("{sign}{change}");
+                    }
+                }
+                c => println!("  {c:#?}"),
+            }
         }
     }
 
