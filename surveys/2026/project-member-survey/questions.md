@@ -122,6 +122,7 @@ Type: select one (optional)
 - Since 2022
 - Since 2021
 - Since 2020 or before
+- I don't remember
 
 ### When does your contract/employment end?
 
@@ -195,7 +196,7 @@ Select all activities that you performed in the Rust Project in the past 12 mont
 
 If you did not contribute in that area, do not fill anything in that row.
 If you are both funded for an activity, but you also do it on a volunteer basis, select "I am/was funded for this".
-If you do not perform the given activity, do not fill anything in that row.
+If you did not perform the given activity, do not fill anything in that row.
 
 Type: matrix (optional)
 
