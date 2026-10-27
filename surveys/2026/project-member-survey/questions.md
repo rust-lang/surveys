@@ -15,7 +15,7 @@ We are interested in any kind of contribution, i.e. creating or reviewing commit
 Type: select one (optional)
 
 - Yes, I made at least some contribution in the past 12 months
-- No, I used to contribute before, but stopped [`NEXT`](#why-did-you-stop-contributing)
+- No, I used to contribute before, but stopped [`NEXT`](#why-did-you-stop-contributing-to-the-rust-project)
 - I did not ever contribute to the Rust Project [`NEXT`](<END>)
 
 ### Why did you start contributing to the Rust Project?
