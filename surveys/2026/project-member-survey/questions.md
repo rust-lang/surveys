@@ -191,7 +191,7 @@ Type: ranking (optional)
 
 ### What kind of work do you do in the Rust Project?
 
-Select all activities that you perform in the Rust Project, and whether you are (at least partially) funded for it or not.
+Select all activities that you performed in the Rust Project in the past 12 months, and whether you were at least partially funded for each activity during that period.
 
 If you do not contribute to that area, do not fill anything in that row.
 
