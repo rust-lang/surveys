@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 5
 requires-python = ">=3.10"
 resolution-markers = [
     "python_full_version >= '3.12'",
@@ -700,17 +700,17 @@ debug = [
 [package.metadata]
 requires-dist = [
     { name = "beautifulsoup4", specifier = ">=4.13.4" },
-    { name = "kaleido", specifier = "==0.2.1" },
-    { name = "matplotlib", specifier = "==3.7.5" },
+    { name = "kaleido", specifier = "~=0.2.1" },
+    { name = "matplotlib", specifier = "~=3.7.5" },
     { name = "multiprocess", specifier = ">=0.70.18" },
-    { name = "nelsie", specifier = "==0.16" },
-    { name = "pandas", specifier = "==2.3.1" },
+    { name = "nelsie", specifier = "~=0.16" },
+    { name = "pandas", specifier = "~=2.3.1" },
     { name = "pillow", specifier = ">=11.3.0" },
     { name = "plotly", specifier = ">=6" },
     { name = "pudb", marker = "extra == 'debug'", specifier = ">=2025.1.5" },
-    { name = "pyarrow", specifier = "==21.0.0" },
-    { name = "tqdm", specifier = "==4.66.1" },
-    { name = "wordcloud", specifier = "==1.9.3" },
+    { name = "pyarrow", specifier = "~=21.0.0" },
+    { name = "tqdm", specifier = "~=4.66.1" },
+    { name = "wordcloud", specifier = "~=1.9.3" },
 ]
 provides-extras = ["debug"]
 
