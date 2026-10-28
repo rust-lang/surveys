@@ -330,8 +330,14 @@ Type: select all that apply (optional)
 - I switched jobs
 - Other (open response)
 
+### Do you have any thoughts on how the Rust Foundation Maintainers Fund has been operating so far?
+
+We would appreciate your thoughts about the Rust Foundation Maintainers Fund (RFMF) and the workings of the Rust Funding team.
+
+Type: free form (optional)
+
 ### Do you have any other comments regarding Rust Project contributor funding and its sustainability?
 
-You can describe your funding situation in more detail or express your wishes for funding Rust Project work, or anything else. You can also describe what other forms of support (i.e. other than funding contributions) would benefit your Rust Project work.
+You can describe your funding situation in more detail or express your wishes for funding Rust Project work, or anything else that is related to funding. You can also describe what other forms of support (i.e. other than funding contributions) would benefit your Rust Project work.
 
 Type: free form (optional)
