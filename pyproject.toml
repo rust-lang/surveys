@@ -3,7 +3,7 @@ name = "surveys"
 version = "0.1.0"
 description = "Workspace for rust-lang/surveys."
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = "~=3.11.18"
 dependencies = ["report"]
 
 [tool.uv]
