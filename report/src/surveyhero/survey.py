@@ -115,9 +115,12 @@ class Question:
         return dataclasses.replace(self, kind=SimpleQuestion(answers=answers))
 
     def integer_answers(self) -> "Question":
+        return self.map_answers(lambda a: str(int(float(a))))
+
+    def map_answers(self, func: Callable[[str], str]) -> "Question":
         assert self.is_simple()
         return dataclasses.replace(self, kind=SimpleQuestion(answers=[
-            Answer(answer=str(int(float(answer.answer))), count=answer.count) for answer in
+            Answer(answer=func(answer.answer), count=answer.count) for answer in
             self.kind.answers
         ]))
 
