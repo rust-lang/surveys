@@ -77,7 +77,7 @@ def parse_surveyhero_summary(path: Path, year: int) -> SurveySummary:
                 )
             else:
                 # This row is an answer to the latest parsed question
-                assert active_question is not None
+                assert active_question is not None, row
 
                 if all(r == "" for r in row):
                     # Empty row
@@ -127,4 +127,4 @@ def normalize_question(question: str) -> str:
 
 
 def normalize_answer(answer: str) -> str:
-    return answer.rstrip(".").strip()
+    return str(answer).rstrip(".").strip()
